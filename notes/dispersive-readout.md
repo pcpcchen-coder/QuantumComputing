@@ -5,7 +5,7 @@
 > 2. 讀取的物理原理是什麼？頻率偏移怎麼變成可量測的訊號？
 > 3. 做這個讀取需要哪些元件與設備？
 >
-> 配套教材：[3D 動畫 `animations/index.html`](../animations/index.html)（場景 9「色散讀取」、場景 10「IQ 判別」）、[周邊系統動畫 `animations/peripherals.html`](../animations/peripherals.html)（場景 5「低溫佈線」、場景 6「控制電子學」）、[簡報 `slides/JJ_Microwave_Readout_Talk.pptx`](../slides/JJ_Microwave_Readout_Talk.pptx)（微波讀取章節）
+> 配套教材：[3D 動畫 `animations/index.html`](../animations/index.html)（場景 9「色散讀取」、場景 10「IQ 判別」）、[周邊系統動畫 `animations/peripherals.html`](../animations/peripherals.html)（場景 5「低溫佈線」、場景 6「控制電子學」）、[操作動畫 `animations/operation.html`](../animations/operation.html)（場景 7「讀取與統計」：從 IQ 點到期望值與誤差緩解）、[簡報 `slides/JJ_Microwave_Readout_Talk.pptx`](../slides/JJ_Microwave_Readout_Talk.pptx)（微波讀取章節）
 > 前一篇：[Transmon：約瑟夫森電感、電路結構與量子位元機制](transmon-josephson-inductance.md)
 
 文中的數值範例統一使用 **ω_q/2π = 5 GHz、ω_r/2π = 7 GHz、g/2π = 100 MHz、α/2π = −250 MHz**。所有數字都可以用文末的程式重算。

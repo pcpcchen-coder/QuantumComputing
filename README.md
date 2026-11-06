@@ -4,7 +4,7 @@
 
 ## 筆記目錄
 
-> 所有簡報都另附 PDF 版：[`slides/pdf/`](slides/pdf/)（`JJ_Microwave_Readout_Talk.pdf`、`QC_Peripheral_Systems_Talk.pdf`、`transmon.pdf`）。
+> 所有簡報都另附 PDF 版：[`slides/pdf/`](slides/pdf/)（`JJ_Microwave_Readout_Talk.pdf`、`QC_Peripheral_Systems_Talk.pdf`、`QC_Operation_Talk.pdf`、`transmon.pdf`）。
 
 1. [約瑟夫森結（JJ）：巨觀量子波、相位差與「穿隧」的真正意義](notes/josephson-junction-wave-and-tunneling.md)
 2. [Transmon：約瑟夫森電感、電路結構與量子位元機制](notes/transmon-josephson-inductance.md)
@@ -21,7 +21,11 @@
    - 演講稿：[`speech/周邊系統演講稿.md`](speech/周邊系統演講稿.md)
    - 建置文件：[`docs/周邊系統連接與啟動指南.md`](docs/周邊系統連接與啟動指南.md)（連接清單、啟動流程、異常處置）
    - 3D 互動動畫：[`animations/peripherals.html`](animations/peripherals.html)（10 個場景，離線可用）
-6. [影片報告簡報：《量子超級英雄》影片轉 PPT](#影片報告簡報量子超級英雄影片轉-ppt)
+6. [技術分享（第三篇）：如何操作量子電腦——設定、計算、讀取與加速原理](#技術分享第三篇如何操作量子電腦)
+   - 簡報：[`slides/QC_Operation_Talk.pptx`](slides/QC_Operation_Talk.pptx)（56 頁，含講者備註）
+   - 演講稿：[`speech/量子電腦操作演講稿.md`](speech/量子電腦操作演講稿.md)
+   - 3D 互動動畫：[`animations/operation.html`](animations/operation.html)（12 個場景，離線可用）
+7. [影片報告簡報：《量子超級英雄》影片轉 PPT](#影片報告簡報量子超級英雄影片轉-ppt)
    - #049 超導量子位元：[`slides/output/ep049-superconducting-qubit.pptx`](slides/output/ep049-superconducting-qubit.pptx)（16 頁，含講稿）
    - 製作流程與產生器：[`slides/README.md`](slides/README.md)
 
@@ -146,6 +150,63 @@ cd slides/build && node fix_ids.js ../transmon.pptx
 ```bash
 cd slides && soffice --headless --convert-to pdf --outdir pdf *.pptx
 ```
+
+---
+
+## 技術分享（第三篇）：如何操作量子電腦
+
+回答四個問題：量子電腦可以算什麼？怎麼算（設定、各種量子閘）？怎麼讀取？為什麼可以加速、快在哪？
+
+### 內容
+
+| 路徑 | 說明 |
+|---|---|
+| `slides/QC_Operation_Talk.pptx` | 56 頁簡報：基礎、設定、計算、讀取、加速原理、實務與總結；每頁有講者備註 |
+| `speech/量子電腦操作演講稿.md` | 與講者備註同步的演講稿、時間規劃、精簡版建議、Q&A 準備 |
+| `animations/operation.html` | 12 個 3D 場景（與 `index.html` 共用核心程式；背後是狀態向量模擬，可自由操作） |
+| `slides/figures/op/`、`slides/figures/3d_op/` | 簡報用圖表與 3D 場景截圖 |
+
+### 簡報架構
+
+1. **基礎**：古典位元 vs 量子位元、Bloch 球、Born 規則與 shots、2ⁿ 個振幅、糾纏
+2. **設定**：兩種操作者（使用者 / 系統工程師）、初始化（被動 / 主動重置）、9 步校準流程、後端校準資料、送出工作的參數（shots、最佳化等級、DD、錯誤緩解…）
+3. **計算**：單位元閘一覽、ZYZ 分解、微波脈衝（面積 → 角度、相位 → 軸）、DRAG 與虛擬 Z、兩位元閘（CNOT/CZ/SWAP/iSWAP）、CZ 與交叉共振的物理實現、各家原生閘、線路讀法、轉譯、Qiskit 範例、動態線路
+4. **讀取**：讀取流程、量測基底（量 X/Y 先旋轉）、shots 與統計誤差、混淆矩陣與讀取誤差緩解、取樣 vs 期望值
+5. **為什麼快**：常見誤解、三個資源（疊加、干涉、糾纏）、干涉、Deutsch–Jozsa、Grover、Shor、加速等級、古典模擬的極限、應用地圖、不會變快的事
+6. **實務與總結**：錯誤預算、錯誤緩解、表面碼、低於門檻（Willow）、發展路線、操作檢查表
+
+### 3D 場景
+
+| # | 代號 | 主題 |
+|---|---|---|
+| 1 | `qubit` | 狀態與測量：θ/φ、單次/連續測量、塌縮、P̂ 隨 shots 收斂 |
+| 2 | `gates` | 單位元閘：X Y Z H S T √X Rx/Ry/Rz，旋轉軸、矩陣、線路紀錄 |
+| 3 | `pulse` | 微波脈衝：面積、相位、失諧、閘長、方波/高斯/DRAG 頻譜、虛擬 Z |
+| 4 | `register` | 1–4 位元：2ⁿ 振幅、均勻疊加、Bell、GHZ、測量塌縮、模擬記憶體 |
+| 5 | `twoqubit` | CZ（\|11⟩–\|20⟩ 迴避交叉、條件相位）與交叉共振（ZX） |
+| 6 | `circuit` | 線路執行器：Bell、GHZ、干涉、Deutsch–Jozsa、Bernstein–Vazirani、Grover、隱形傳態、QFT；直方圖與雜訊 |
+| 7 | `readout` | 讀取：量測基底、IQ 平面、閾值、積分時間、T₁ 衰減、讀取誤差緩解 |
+| 8 | `interference` | 干涉：路徑振幅相加、偵測路徑破壞干涉、3 位元 Deutsch–Jozsa |
+| 9 | `grover` | Grover：振幅、Oracle、對平均反射、幾何圖、成功機率 |
+| 10 | `shor` | Shor 週期尋找：模指數、量測、QFT、連分數、gcd（N = 15 / 21） |
+| 11 | `qec` | 表面碼：錯誤、症狀、最小權重配對解碼、即時蒙地卡羅門檻曲線 |
+| 12 | `workflow` | 完整流程：程式 → 轉譯 → 脈衝 → 控制電子 → shots → 結果；時間預算 |
+
+### 重新產生
+
+```bash
+cd slides/build && python3 make_op_figures.py
+```
+
+```bash
+cd slides/build && node shoot_operation.js
+```
+
+```bash
+cd slides/build && node build_operation.js
+```
+
+`shoot_operation.js` 以 Playwright 擷取 3D 截圖；擷取後若場景版面有變，需重新計算 `op_crops.json`（各截圖的裁切範圍）。
 
 ---
 
