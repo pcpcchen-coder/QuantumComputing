@@ -175,6 +175,14 @@ function makeDeck(opt) {
   }
 
 
-  return { pres, C, HEX, THEME, SCENES, shadow, oname, ICONS, loadIcons, card, iconCircle, numCircle, runs, para, eqBox, fitImage, caption, animPill, table, chevrons };
+  /* 箭頭線：由 (x1,y1) 指向 (x2,y2)。PowerPoint 不接受負的寬高，方向改用 flipH / flipV 表示 */
+  function link(slide, x1, y1, x2, y2, o = {}) {
+    const line = { color: o.color || HEX.accent6, width: o.width || 1.75, endArrowType: o.end === false ? undefined : 'triangle' };
+    if (o.both) line.beginArrowType = 'triangle';
+    if (o.dash) line.dashType = o.dash;
+    slide.addShape(pres.shapes.LINE, { x: Math.min(x1, x2), y: Math.min(y1, y2), w: Math.abs(x2 - x1), h: Math.abs(y2 - y1), flipH: x2 < x1, flipV: y2 < y1, line, objectName: oname(o.name || 'link') });
+  }
+
+  return { pres, C, HEX, THEME, SCENES, link, shadow, oname, ICONS, loadIcons, card, iconCircle, numCircle, runs, para, eqBox, fitImage, caption, animPill, table, chevrons };
 }
 module.exports = { makeDeck };

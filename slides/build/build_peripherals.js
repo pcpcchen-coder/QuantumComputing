@@ -17,7 +17,7 @@ const SCENES = {
   electronics: [6, '控制電子學'], software: [7, '軟體堆疊'], infra: [8, '機房基礎設施'], monitor: [9, '監控與聯鎖'], bringup: [10, '啟動與校準'],
 };
 const D = makeDeck({ title: '超導量子電腦：周邊系統與整合', subject: '稀釋冷凍、佈線、控制電子、軟體與機房基礎設施', footer: '超導量子電腦 · 周邊系統與整合', scenes: SCENES, animRel: '../animations/peripherals.html' });
-const { pres, C, HEX, THEME, loadIcons, card, iconCircle, numCircle, runs, para, eqBox, fitImage, caption, animPill, table, chevrons, shadow, oname } = D;
+const { pres, C, HEX, THEME, link, loadIcons, card, iconCircle, numCircle, runs, para, eqBox, fitImage, caption, animPill, table, chevrons, shadow, oname } = D;
 const IMG = (n) => path.join(FIG, '3d_periph', n + '.jpg');
 const CROP = {
   overview: { left: 200, top: 180, width: 2150, height: 1100 }, pulsetube: { left: 380, top: 200, width: 1750, height: 1050 },
@@ -111,7 +111,7 @@ S({ sec: '開場', title: '系統方塊圖：誰連到誰', min: 3,
       s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x, y, w, h, rectRadius: 0.08, fill: { color: col }, line: { color: col, width: 0 }, shadow: shadow(), objectName: oname('block') });
       s.addText(runs(t), { x, y, w, h, fontSize: sz, bold: true, color: C.background1, align: 'center', valign: 'middle', margin: 2, isTextBox: true, objectName: oname('block-text') });
     };
-    const ln = (x, y, w, h, col, o = {}) => s.addShape(pres.shapes.LINE, { x, y, w, h, flipH: !!o.flipH, flipV: !!o.flipV, line: { color: col, width: 2.25, dashType: o.dash || 'solid', beginArrowType: o.both ? 'triangle' : undefined, endArrowType: 'triangle' }, objectName: oname('link') });
+    const ln = (x, y, w, h, col, o = {}) => link(s, x, y, x + w, y + h, { color: col, width: 2.25, dash: o.dash, both: o.both, name: 'link' });
     // 中央
     box(5.35, 2.55, 2.6, 2.2, '稀釋冷凍機\n（量子晶片 10 mK）', C.text2, 15);
     // 左：控制
@@ -428,8 +428,8 @@ S({ sec: '03 控制電子學', title: '時脈與同步：所有儀器踩同一�
     const nd = (x, y, w, t, col) => { s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x, y, w, h: 0.62, rectRadius: 0.08, fill: { color: col }, line: { color: col, width: 0 }, objectName: oname('clk-node') }); s.addText(runs(t), { x, y, w, h: 0.62, fontSize: 12.5, bold: true, color: C.background1, align: 'center', valign: 'middle', margin: 2, isTextBox: true }); };
     nd(2.4, 1.5, 2.6, '銣原子鐘 / GPS 馴服\n10 MHz 參考', C.accent1);
     nd(2.4, 2.75, 2.6, '時脈 / 觸發分配器', C.accent6);
-    ['AWG 1…N', 'LO 合成器', '讀取 ADC', 'FPGA 同步器'].forEach((t, i) => { nd(0.6 + i * 1.6, 4.05, 1.45, t, C.accent3); s.addShape(pres.shapes.LINE, { x: 3.7, y: 3.37, w: (0.6 + i * 1.6 + 0.72) - 3.7, h: 0.68, flipH: 0.6 + i * 1.6 + 0.72 < 3.7, line: { color: HEX.accent6, width: 1.5, endArrowType: 'triangle' }, objectName: oname('clk-line') }); });
-    s.addShape(pres.shapes.LINE, { x: 3.7, y: 2.12, w: 0, h: 0.63, line: { color: HEX.accent1, width: 2, endArrowType: 'triangle' }, objectName: oname('clk-line') });
+    ['AWG 1…N', 'LO 合成器', '讀取 ADC', 'FPGA 同步器'].forEach((t, i) => { nd(0.6 + i * 1.6, 4.05, 1.45, t, C.accent3); link(s, 3.7, 3.37, 0.6 + i * 1.6 + 0.72, 4.05, { color: HEX.accent6, width: 1.5, name: 'clk-line' }); });
+    link(s, 3.7, 2.12, 3.7, 2.75, { color: HEX.accent1, width: 2, name: 'clk-line' });
     para(s, ['**10 MHz 參考**：所有 LO、DAC、ADC 的頻率都由它倍頻而來 → 相位彼此鎖定', '**觸發 / 同步匯流排**：讓數十台儀器在同一個時鐘週期開始播放（例：100 MHz 同步時脈）', '**相位雜訊**：直接造成量子位元失相 → 選用低相位雜訊的參考與合成器'], 0.6, 4.95, 6.5, 1.8, { size: 13.5, bullet: true, space: 6 });
     card(s, 7.4, 1.45, 5.35, 5.25, 'FBF4E8');
     para(s, [{ t: '為什麼要這麼嚴格？', bold: true, color: C.accent1, size: 17 }, '量子閘的相位就是微波的相位：驅動 LO 與讀取 LO 若沒有鎖定，每次量測的參考相位都會漂移', '雙量子位元閘需要兩個通道的脈衝**奈秒級對齊**', '多台儀器擴展時，觸發抖動（jitter）必須遠小於脈衝寬度（~數十 ns）', '實務：參考時脈用低雜訊分配放大器、等長纜線，並在軟體中校正固定延遲'], 7.65, 1.6, 4.9, 5.0, { size: 14, space: 9 });
