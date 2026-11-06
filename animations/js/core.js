@@ -365,7 +365,7 @@
             const upd = () => { const v = parseFloat(inp.value); val.textContent = fmt(v); onChange(v); };
             inp.oninput = upd; w.appendChild(inp); $('controls').appendChild(w);
             val.textContent = fmt(value);
-            return { set(v) { inp.value = v; upd(); }, get: () => parseFloat(inp.value) };
+            return { set(v) { inp.value = v; upd(); }, show(v) { inp.value = v; val.textContent = fmt(v); }, get: () => parseFloat(inp.value) };
           },
           readout() { const d = document.createElement('div'); d.className = 'readout'; $('controls').appendChild(d); return d; },
         },
