@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JJ 與微波讀取 3D 動畫</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<canvas id="gl"></canvas>
+<div id="labels"></div>
+
+<header id="topbar">
+  <div class="brand">超導量子電腦 · JJ 元件與微波讀取 <span>3D 教學動畫</span></div>
+  <nav id="scene-nav" aria-label="場景"></nav>
+</header>
+
+<aside id="panel">
+  <div class="scene-num" id="scene-num"></div>
+  <h1 id="scene-title"></h1>
+  <div class="scene-sub" id="scene-sub"></div>
+  <div class="scene-desc" id="scene-desc"></div>
+  <div class="controls" id="controls"></div>
+  <div class="hint">拖曳旋轉 · 滾輪縮放 · 右鍵/Shift 拖曳平移<br>← → 切換場景 · 空白鍵 暫停 · H 隱藏面板 · F 全螢幕 · R 重設視角</div>
+</aside>
+
+<div id="inset-wrap"><div id="inset-title"></div><canvas id="inset" width="380" height="230"></canvas></div>
+<div id="paused-badge">⏸ 暫停中</div>
+
+<script src="lib/three.min.js"></script>
+<script src="js/core.js"></script>
+<script src="js/scenes/01_bloch.js"></script>
+<script src="js/scenes/02_cooper.js"></script>
+<script src="js/scenes/03_jj.js"></script>
+<script src="js/scenes/04_potential.js"></script>
+<script src="js/scenes/05_washboard.js"></script>
+<script src="js/scenes/06_squid.js"></script>
+<script src="js/scenes/07_fab.js"></script>
+<script src="js/scenes/08_chip.js"></script>
+<script src="js/scenes/09_dispersive.js"></script>
+<script src="js/scenes/10_iq.js"></script>
+<script src="js/scenes/11_fridge.js"></script>
+<script>App.start();</script>
+</body>
+</html>
