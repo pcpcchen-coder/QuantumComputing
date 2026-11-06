@@ -21,7 +21,7 @@ const { pres, C, HEX, THEME, link, loadIcons, card, iconCircle, numCircle, runs,
 const IMG = (n) => path.join(FIG, '3d_periph', n + '.jpg');
 const CROP = {
   overview: { left: 200, top: 180, width: 2150, height: 1100 }, pulsetube: { left: 380, top: 200, width: 1750, height: 1050 },
-  dilution: { left: 740, top: 60, width: 1150, height: 1300 }, cooldown: { left: 760, top: 40, width: 1150, height: 1240 },
+  dilution: { left: 860, top: 90, width: 900, height: 1270 }, cooldown: { left: 760, top: 40, width: 1150, height: 1240 },
   wiring: { left: 680, top: 0, width: 1050, height: 1340 }, electronics: { left: 380, top: 220, width: 1850, height: 1050 },
   software: { left: 420, top: 200, width: 1950, height: 1050 }, infra: { left: 330, top: 260, width: 1950, height: 1150 },
   monitor: { left: 560, top: 300, width: 1500, height: 860 }, bringup: { left: 330, top: 300, width: 2000, height: 800 },
@@ -219,6 +219,7 @@ S({ sec: '01 低溫系統', title: '稀釋冷凍原理：³He 溶入 ⁴He 時�
 氦有兩種同位素：³He 和 ⁴He。把兩者混合，在 0.87 K 以下會自動分成兩相：上層幾乎是純 ³He 的濃相，下層是 ³He 溶在超流 ⁴He 裡的稀相，即使到絕對零度，稀相裡還是會有 6.6% 的 ³He。
 【切換到 3D 場景 3】跟著顏色看 ³He 原子的旅程：第一步，從 GHS 送回來的 ³He 在 4 K 板凝結成液體，經過流阻維持凝結壓力；第二步，在熱交換器裡被回流的冷稀相預冷；第三步是關鍵，在混合腔裡，³He 從濃相越過相界面「溶入」稀相——就像液體蒸發需要吸熱一樣，這個溶解過程也要吸熱，這就是製冷的來源，畫面上相界面的閃光代表吸熱；第四步，稀相裡的 ³He 往上擴散到 Still，Still 加熱到約 0.8 K，³He 的蒸氣壓遠高於 ⁴He，所以優先蒸發；第五步，被室溫的渦輪泵抽走，經過冷阱淨化後再送回第一步，形成循環。
 冷卻功率是 84 乘以循環率乘以溫度平方。以典型的 0.5 mmol/s 計算，20 mK 時約 17 μW、100 mK 時約 420 μW，和商用 LD450 的規格非常吻合。面板上可以調循環率和熱負載，看平衡溫度怎麼變。
+畫面最下方是樣品區：量子晶片並不在混合腔裡，而是裝在樣品盒內，經銅支架鎖在 MXC 板下方，外面套紅外與磁屏蔽；晶片的熱經由固體傳導，依序經過樣品盒、支架、MXC 板，最後由混合液帶走。按「視角：樣品區」可以拉近看。
 最後一個實務重點：混合液裡的 ³He 非常昂貴且稀缺，一台 LD 約需 18 公升、XLD 約 40 公升，價格每公升可達數千到上萬美元，可能佔冷凍機成本的四分之一，所以系統設計上一定要確保它不會外洩。`,
 });
 S({ sec: '01 低溫系統', title: '冷卻功率與溫度的關係', min: 2,
