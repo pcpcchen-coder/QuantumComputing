@@ -496,6 +496,14 @@ async function applyTheme(file, theme) {
     const fixed = x.replace(/(<\/a:r>)<a:pPr\b[^>]*?(?:\/>|>[\s\S]*?<\/a:pPr>)/g, "$1");
     if (fixed !== x) zip.file(f, fixed, { createFolders: false });
   }
+  // pptxgenjs 會在同一頁寫出重複的 shape ID（PowerPoint 開檔時會要求修復），重新依序編號
+  for (const f of Object.keys(zip.files).filter((f) => /^ppt\/(slides|slideLayouts|slideMasters|notesSlides|notesMasters)\/[^/]+\.xml$/.test(f))) {
+    const x = await zip.file(f).async("string");
+    const ids = [...x.matchAll(/<p:cNvPr id="(\d+)"/g)].map((m) => m[1]);
+    if (new Set(ids).size === ids.length) continue;
+    let k = 0;
+    zip.file(f, x.replace(/<p:cNvPr id="\d+"/g, () => `<p:cNvPr id="${++k}"`), { createFolders: false });
+  }
   // pptxgenjs 會寫出 PowerPoint 不接受的 crossesAt="autoZero"
   for (const f of Object.keys(zip.files).filter((f) => /^ppt\/charts\/chart\d+\.xml$/.test(f))) {
     const c = await zip.file(f).async("string");

@@ -19,7 +19,6 @@
    - 演講稿：[`speech/周邊系統演講稿.md`](speech/周邊系統演講稿.md)
    - 建置文件：[`docs/周邊系統連接與啟動指南.md`](docs/周邊系統連接與啟動指南.md)（連接清單、啟動流程、異常處置）
    - 3D 互動動畫：[`animations/peripherals.html`](animations/peripherals.html)（10 個場景，離線可用）
-
 5. [影片報告簡報：《量子超級英雄》影片轉 PPT](#影片報告簡報量子超級英雄影片轉-ppt)
    - #049 超導量子位元：[`slides/output/ep049-superconducting-qubit.pptx`](slides/output/ep049-superconducting-qubit.pptx)（16 頁，含講稿）
    - 製作流程與產生器：[`slides/README.md`](slides/README.md)
