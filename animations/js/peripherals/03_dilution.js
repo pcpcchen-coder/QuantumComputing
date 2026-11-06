@@ -7,8 +7,9 @@ App.register({
 <p>③ 在 <b>Still</b>（~0.8 K）加熱，³He 比 ⁴He 更容易蒸發，被室溫的泵抽走 → 稀相中的 ³He 減少。<br>
 ④ <b>混合腔（MXC）</b>中的 ³He 便從濃相「溶入」稀相補充 —— 這像蒸發一樣需要能量，<b>從周圍吸熱</b>。<br>
 ① 被抽出的 ³He 經 <b>GHS</b> 淨化後送回，② 在 4 K 凝結、經流阻與<b>熱交換器</b>由回流的冷稀相預冷，再回到混合腔。</p>
-<p>冷卻功率 <span class="eq">Q̇ ≈ 84 ṅ T²</span>（W；ṅ：³He 循環率 mol/s）。溫度越低，冷卻功率以 T² 下降。</p>`,
-  camera: { pos: [8.5, 5.5, 13.5], target: [0, 4.3, 0] },
+<p>冷卻功率 <span class="eq">Q̇ ≈ 84 ṅ T²</span>（W；ṅ：³He 循環率 mol/s）。溫度越低，冷卻功率以 T² 下降。</p>
+<p><b>量子晶片在哪？</b>不在混合腔裡。晶片裝在<b>樣品盒</b>內，經<b>銅支架</b>鎖在 <b>MXC 板</b>下方，外面套紅外與磁屏蔽；熱量經固體傳導：晶片 → 樣品盒 → 支架 → MXC 板 → 混合液（橘色粒子）。</p>`,
+  camera: { pos: [9.5, 5.0, 16.5], target: [0, 3.2, 0] },
   build(ctx) {
     const { scene, U, THREE, ui } = ctx;
     const glassMat = (c, op = 0.2) => new THREE.MeshStandardMaterial({ color: c, transparent: true, opacity: op, side: THREE.DoubleSide, depthWrite: false, roughness: 0.3 });
@@ -62,6 +63,52 @@ App.register({
     const flashes = []; for (let i = 0; i < 6; i++) { const f = U.sphere(0.12, new THREE.MeshBasicMaterial({ color: 0xffd28a, transparent: true, opacity: 0 })); scene.add(f); flashes.push(f); }
     let fi = 0;
 
+    // ===== 樣品區：銅支架 + 樣品盒 + 晶片 + 屏蔽（位於 MXC 板下方）=====
+    const cu = U.metal(0xd08a3a, { roughness: 0.3 });
+    const finger = new THREE.Mesh(new THREE.CylinderGeometry(0.16, 0.16, 1.35, 20), cu); finger.position.set(0, -0.9, 0); scene.add(finger);
+    const flange = new THREE.Mesh(new THREE.CylinderGeometry(0.45, 0.45, 0.08, 28), cu); flange.position.set(0, -1.6, 0); scene.add(flange);
+    const SB = { y: -2.05, w: 1.3, h: 0.7, d: 1.0 };
+    const boxBase = U.box(SB.w, 0.12, SB.d, cu, 0, SB.y - SB.h / 2 + 0.06, 0); scene.add(boxBase);
+    [[-SB.w / 2 + 0.05, 0.1, SB.d], [SB.w / 2 - 0.05, 0.1, SB.d]].forEach(([x, w, d]) => scene.add(U.box(w, SB.h, d, cu, x, SB.y, 0)));
+    scene.add(U.box(SB.w, SB.h, 0.08, cu, 0, SB.y, -SB.d / 2 + 0.04));
+    const lid = U.box(SB.w, 0.08, SB.d, U.metal(0xd08a3a, { transparent: true, opacity: 0.25, depthWrite: false }), 0, SB.y + SB.h / 2 - 0.04, 0); scene.add(lid);
+    const pcb = U.box(1.05, 0.03, 0.8, U.mat(0x1f6b3a, { roughness: 0.7 }), 0, SB.y - SB.h / 2 + 0.135, 0); scene.add(pcb);
+    const die = U.box(0.42, 0.04, 0.42, U.mat(0x2a3446, { roughness: 0.4, metalness: 0.2 }), 0, SB.y - SB.h / 2 + 0.17, 0); scene.add(die);
+    const xm = U.mat(0xe6ecf5, { emissive: 0x4f8cff, emissiveIntensity: 0.6 });
+    const cross = new THREE.Group();
+    cross.add(U.box(0.26, 0.012, 0.04, xm), U.box(0.04, 0.012, 0.26, xm));
+    cross.position.set(-0.07, SB.y - SB.h / 2 + 0.197, 0.04); scene.add(cross);
+    const res = []; for (let k = 0; k < 7; k++) res.push([0.05 + (k % 2 ? 0.1 : 0), SB.y - SB.h / 2 + 0.196, -0.15 + k * 0.045]);
+    scene.add(U.tube(res, 0.006, U.glow(0x8ef0ff)));
+    // 打線（die → PCB）
+    for (let k = 0; k < 6; k++) { const z = -0.15 + k * 0.06; scene.add(U.smoothTube([[0.21, SB.y - SB.h / 2 + 0.19, z], [0.27, SB.y - SB.h / 2 + 0.23, z], [0.33, SB.y - SB.h / 2 + 0.155, z]], 0.004, U.metal(0xffd28a), false, 12)); }
+    // SMA 接頭與同軸線（往上接到各級）
+    const coaxM = U.metal(0xc0c8d4);
+    [-0.35, 0, 0.35].forEach((z, k) => {
+      const sma = new THREE.Mesh(new THREE.CylinderGeometry(0.05, 0.05, 0.18, 12), U.metal(0xffd28a)); sma.rotation.z = Math.PI / 2; sma.position.set(SB.w / 2 + 0.09, SB.y, z); scene.add(sma);
+      scene.add(U.tube([[SB.w / 2 + 0.18, SB.y, z], [SB.w / 2 + 0.45 + k * 0.08, SB.y, z], [SB.w / 2 + 0.45 + k * 0.08, -0.3, z], [0.85 + k * 0.08, -0.15, z * 0.5]], 0.02, coaxM));
+    });
+    // 屏蔽罐（紅外 + 磁屏蔽）
+    const shield = new THREE.Mesh(new THREE.CylinderGeometry(1.25, 1.25, 1.9, 40, 1, true), new THREE.MeshStandardMaterial({ color: 0x8fb3d9, transparent: true, opacity: 0.12, side: THREE.DoubleSide, depthWrite: false, metalness: 0.4, roughness: 0.4 }));
+    shield.position.set(0, -1.85, 0); scene.add(shield);
+    ctx.label('樣品支架（無氧銅，鍍金）', [-2.0, -0.75, 0], 'small');
+    ctx.label('樣品盒（銅／鋁）', [-1.9, SB.y + 0.2, 0], 'gold small');
+    const chipLbl = ctx.label('量子晶片（transmon）', [1.8, SB.y - 0.3, 0.6], 'q0');
+    ctx.label('紅外屏蔽 + 磁屏蔽', [-2.0, -2.6, 0], 'small');
+    ctx.label('同軸線（SMA）→ 往上接到各級', [2.6, -0.9, 0], 'small');
+    // 熱傳導路徑：晶片 → 樣品盒 → 支架 → MXC 板 → 混合液
+    const heatPath = [[-0.07, SB.y - SB.h / 2 + 0.2, 0.04], [-0.2, SB.y - SB.h / 2 + 0.08, 0.2], [-0.55, SB.y - SB.h / 2 + 0.08, 0.2], [-0.6, SB.y + 0.3, 0.2], [-0.1, SB.y + 0.38, 0.1], [0, -1.6, 0], [0, -0.2, 0], [0, -0.1, 0], [0.1, 0.3, 0.1]].map((p) => new THREE.Vector3(...p));
+    const hl = [0]; for (let i = 1; i < heatPath.length; i++) hl.push(hl[i - 1] + heatPath[i].distanceTo(heatPath[i - 1]));
+    const hTot = hl[hl.length - 1];
+    const hAt = (s) => { for (let i = 1; i < hl.length; i++) if (s <= hl[i]) return heatPath[i - 1].clone().lerp(heatPath[i], (s - hl[i - 1]) / (hl[i] - hl[i - 1])); return heatPath[heatPath.length - 1].clone(); };
+    const heatDots = []; const hg = new THREE.SphereGeometry(0.045, 10, 8);
+    for (let i = 0; i < 22; i++) { const m = new THREE.Mesh(hg, new THREE.MeshBasicMaterial({ color: 0xff9f43, transparent: true })); scene.add(m); heatDots.push({ m, s: (i / 22) * hTot }); }
+    const heatLbl = ctx.label('熱流：晶片 → 樣品盒 → 支架 → MXC 板 → 混合液', [0, -3.3, 0.6], 'gold small');
+    let showHeat = true;
+    const rowV = ui.row();
+    ui.button('視角：全景', () => ctx.app.orbit.reset(), rowV);
+    ui.button('視角：樣品區（晶片位置）', () => ctx.app.orbit.flyTo([3.2, -0.2, 4.6], [0, -1.4, 0], 1.4), rowV);
+    ui.toggle('顯示熱傳導路徑', true, (on) => { showHeat = on; heatDots.forEach((d) => (d.m.visible = on)); heatLbl.show(on); });
     let ndot = 0.5, qload = 10; // mmol/s, μW
     ui.slider('³He 循環率 ṅ (mmol/s)', 0.1, 1.5, 0.05, ndot, (v) => { ndot = v; }, (v) => v.toFixed(2));
     ui.slider('MXC 上的熱負載 (μW)', 0.5, 60, 0.5, qload, (v) => { qload = v; }, (v) => v.toFixed(1));
@@ -88,6 +135,11 @@ App.register({
         flashes.forEach((f) => { f.material.opacity = Math.max(0, f.material.opacity - dt * 1.8); f.scale.multiplyScalar(1 + dt * 2.5); });
         he4.forEach((a) => { a.ph += dt * 2; a.m.position.set(a.b.x + 0.02 * Math.sin(a.ph), a.b.y + 0.02 * Math.cos(a.ph * 1.3), a.b.z); });
         heater.material.emissiveIntensity = 0.5 + 0.4 * ndot + 0.2 * Math.sin(time * 6);
+        if (showHeat) heatDots.forEach((d) => {
+          d.s = (d.s + dt * 0.7) % hTot; d.m.position.copy(hAt(d.s));
+          const f = d.s / hTot; d.m.material.color.setHSL(0.08 + 0.5 * f, 0.9, 0.6); d.m.material.opacity = f > 0.9 ? (1 - f) * 10 : 1;
+        });
+        xm.emissiveIntensity = 0.45 + 0.25 * Math.sin(time * 3);
         const Tb = Math.sqrt((qload * 1e-6) / (84 * ndot * 1e-3)) * 1e3;
         ro.innerHTML = `平衡溫度 T = √(Q̇ / 84ṅ) ≈ <b>${Tb.toFixed(1)} mK</b><br>20 mK 時冷卻功率 ≈ ${(84 * ndot * 1e-3 * 4e-4 * 1e6).toFixed(1)} μW；100 mK 時 ≈ ${(84 * ndot * 1e-3 * 1e-2 * 1e6).toFixed(0)} μW<br>（實際機台因熱交換器效率等因素低於理想值）`;
       },
