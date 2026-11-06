@@ -1,0 +1,4 @@
+node_modules/
+slides/build/node_modules
+*.pdf
+__pycache__/
