@@ -19,7 +19,7 @@ const SCENES = {
 };
 const { makeDeck } = require('./deck_lib');
 const D = makeDeck({ title: '超導量子電腦：JJ 元件與微波讀取', subject: '約瑟夫森接面、transmon 與色散讀取技術分享', footer: '超導量子電腦 · JJ 元件與微波讀取', scenes: SCENES, animRel: ANIM_REL });
-const { pres, C, HEX, THEME, loadIcons, card, iconCircle, numCircle, runs, para, eqBox, fitImage, caption, animPill, table, chevrons, shadow, oname } = D;
+const { pres, C, HEX, THEME, link, loadIcons, card, iconCircle, numCircle, runs, para, eqBox, fitImage, caption, animPill, table, chevrons, shadow, oname } = D;
 /* ---------------- 投影片內容 ---------------- */
 const SLIDES = [];
 const S = (o) => SLIDES.push(o);
@@ -567,8 +567,8 @@ S({ sec: '03 微波讀取', title: '外差解調：從微波到 (I, Q)', min: 3,
     // LO
     s.addShape(pres.shapes.OVAL, { x: 3.55, y: 2.85, w: 1.0, h: 0.6, fill: { color: C.accent5 }, line: { color: C.accent5, width: 0 }, objectName: oname('lo') });
     s.addText('LO', { x: 3.55, y: 2.85, w: 1.0, h: 0.6, fontSize: 14, bold: true, color: C.background1, align: 'center', valign: 'middle', margin: 0, isTextBox: true });
-    s.addShape(pres.shapes.LINE, { x: 3.0, y: 2.55, w: 0.55, h: 0.6, flipH: true, line: { color: C.accent5, width: 1.5, endArrowType: 'triangle' }, objectName: oname('lo-line') });
-    s.addShape(pres.shapes.LINE, { x: 4.55, y: 2.55, w: 2.15, h: 0.6, flipV: true, line: { color: C.accent5, width: 1.5, endArrowType: 'triangle' }, objectName: oname('lo-line') });
+    link(s, 3.85, 2.85, 3.55, 2.5, { color: HEX.accent5, width: 1.5, name: 'lo-line' });
+    link(s, 4.55, 3.1, 7.7, 2.5, { color: HEX.accent5, width: 1.5, name: 'lo-line' });
     s.addText('同一個本地振盪源（ω_LO = ω_r − ω_IF）', { x: 4.75, y: 3.05, w: 4.4, h: 0.35, fontSize: 12, color: C.accent5, margin: 0, isTextBox: true });
     eqBox(s, ['I = ∫ s(t) w(t) cos(ω_{IF} t) dt', 'Q = ∫ s(t) w(t) sin(ω_{IF} t) dt'], 0.6, 3.85, 5.9, 1.65, { size: 19 });
     caption(s, 's(t)：數位化後的訊號；w(t)：積分權重（matched filter）', 0.6, 5.55, 5.9);

@@ -4,6 +4,8 @@
 
 ## 筆記目錄
 
+> 所有簡報都另附 PDF 版：[`slides/pdf/`](slides/pdf/)（`JJ_Microwave_Readout_Talk.pdf`、`QC_Peripheral_Systems_Talk.pdf`、`transmon.pdf`）。
+
 1. [約瑟夫森結（JJ）：巨觀量子波、相位差與「穿隧」的真正意義](notes/josephson-junction-wave-and-tunneling.md)
 2. [Transmon：約瑟夫森電感、電路結構與量子位元機制](notes/transmon-josephson-inductance.md)
    - 簡報：[`slides/transmon.pptx`](slides/transmon.pptx)（17 頁，PowerPoint）
@@ -121,3 +123,21 @@ cd slides/build && node build_peripherals.js
 ```
 
 數值來源：Krinner et al. (2019)、Bluefors／Oxford 規格與手冊、PT415/PT420 規格、Arute et al. (2019) 補充資料、各控制電子廠商公開規格等（詳見簡報參考資料頁與建置指南）。
+
+---
+
+## PDF 與相容性
+
+- `slides/pdf/` 中的 PDF 由 LibreOffice 轉出；中文字型以 Noto Sans CJK TC 代替微軟正黑體，版面與 PowerPoint 相近但字形略有不同。
+- 產生簡報時，`slides/build/apply_theme.js` 會為每頁的物件重新編號，修正 pptxgenjs 產生的重複 shape ID，否則 PowerPoint 開檔時會要求修復；箭頭線一律用 `deck_lib.js` 的 `link()` 繪製，不使用負的寬高。
+- 修正既有 .pptx 的重複 ID：
+
+```bash
+cd slides/build && node fix_ids.js ../transmon.pptx
+```
+
+- 重新產生 PDF（需安裝 LibreOffice 與 `fonts-noto-cjk`）：
+
+```bash
+cd slides && soffice --headless --convert-to pdf --outdir pdf *.pptx
+```
