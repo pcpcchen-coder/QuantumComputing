@@ -12,6 +12,11 @@
    - 簡報：[`slides/JJ_Microwave_Readout_Talk.pptx`](slides/JJ_Microwave_Readout_Talk.pptx)（43 頁，含講者備註）
    - 演講稿：[`speech/演講稿.md`](speech/演講稿.md)
    - 3D 互動動畫：[`animations/index.html`](animations/index.html)（11 個場景，離線可用）
+4. [技術分享（續篇）：量子電腦的周邊系統與整合](#技術分享續篇量子電腦的周邊系統與整合)
+   - 簡報：[`slides/QC_Peripheral_Systems_Talk.pptx`](slides/QC_Peripheral_Systems_Talk.pptx)（42 頁，含講者備註）
+   - 演講稿：[`speech/周邊系統演講稿.md`](speech/周邊系統演講稿.md)
+   - 建置文件：[`docs/周邊系統連接與啟動指南.md`](docs/周邊系統連接與啟動指南.md)（連接清單、啟動流程、異常處置）
+   - 3D 互動動畫：[`animations/peripherals.html`](animations/peripherals.html)（10 個場景，離線可用）
 
 ---
 
@@ -72,8 +77,47 @@ python3 slides/build/make_figures.py
 cd slides/build && node build_deck.js
 ```
 
-`build_deck.js` 同時輸出 `slides/JJ_Microwave_Readout_Talk.pptx` 與 `speech/演講稿.md`，修改講者備註只需改一處。3D 截圖（`slides/figures/3d/`）是以 Playwright 對 `animations/index.html?noui=1&clean=1#場景` 擷取。
+兩份簡報共用 `slides/build/deck_lib.js` 的版型。`build_deck.js` 同時輸出 `slides/JJ_Microwave_Readout_Talk.pptx` 與 `speech/演講稿.md`，修改講者備註只需改一處。3D 截圖（`slides/figures/3d/`）是以 Playwright 對 `animations/index.html?noui=1&clean=1#場景` 擷取。
 
 ### 字型
 
 簡報使用「微軟正黑體（Microsoft JhengHei）」，方程式使用 Cambria，Windows / Office 皆內建。
+
+---
+
+## 技術分享（續篇）：量子電腦的周邊系統與整合
+
+說明讓 10 mK 量子晶片真正運轉所需的所有周邊設備，以及它們如何連接、如何啟動到上線。
+
+### 內容
+
+| 路徑 | 說明 |
+|---|---|
+| `slides/QC_Peripheral_Systems_Talk.pptx` | 42 頁簡報：低溫系統、低溫佈線與封裝、控制電子學、軟體與運作、機房基礎設施、系統整合；每頁有講者備註 |
+| `speech/周邊系統演講稿.md` | 與講者備註同步的演講稿、時間規劃、60 分鐘精簡版、Q&A 準備 |
+| `docs/周邊系統連接與啟動指南.md` | 子系統規格、系統連接清單（冷卻／氣體／真空、訊號／資料／電力）、逐步啟動流程、日常監控、異常處置、升溫換樣 |
+| `animations/peripherals.html` | 10 個 3D 場景（與 `index.html` 共用核心程式） |
+| `slides/figures/3d_periph/` | 簡報用 3D 場景截圖 |
+
+### 3D 場景
+
+| # | 代號 | 主題 |
+|---|---|---|
+| 1 | `overview` | 機房全景：設備與 7 類連接（氦氣、冷卻水、混合氣、真空、微波/DC、資料/時脈、電力），可分類切換 |
+| 2 | `pulsetube` | 脈衝管冷卻器與氦壓縮機：旋轉閥、蓄冷器、溫度梯度、壓力波形 |
+| 3 | `dilution` | 稀釋冷凍原理：³He 循環路徑、相界面吸熱、Q̇ = 84ṅT² 互動計算 |
+| 4 | `cooldown` | 降溫流程：抽真空 → 預冷 → 凝結 → 循環，各級溫度隨時間 |
+| 5 | `wiring` | 低溫佈線：6 類線路與各級元件、依量子位元數估算熱負載 |
+| 6 | `electronics` | 控制電子學：上傳 → 觸發 → 驅動 → 讀取 → 判別 → 回饋；外差 vs 直接合成；10 MHz 時脈 |
+| 7 | `software` | 軟體堆疊：程式逐層下傳、結果回傳、校準資料庫 |
+| 8 | `infra` | 機房基礎設施：電力/UPS、冷卻水、接地、防振；停電模擬 |
+| 9 | `monitor` | 監控與聯鎖：冷卻水中斷、真空洩漏、流阻堵塞情境 |
+| 10 | `bringup` | 啟動與校準 11 步驟與典型量測圖 |
+
+### 重新產生
+
+```bash
+cd slides/build && node build_peripherals.js
+```
+
+數值來源：Krinner et al. (2019)、Bluefors／Oxford 規格與手冊、PT415/PT420 規格、Arute et al. (2019) 補充資料、各控制電子廠商公開規格等（詳見簡報參考資料頁與建置指南）。
