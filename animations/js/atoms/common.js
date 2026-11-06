@@ -155,7 +155,8 @@
     levels.forEach((L) => {
       const m = U.box(L.w || 1.2, 0.05, 0.25, U.mat(L.color || 0xdfe6f0, { emissive: L.color || 0x333333, emissiveIntensity: 0.25 }), L.x, L.y, 0);
       g.add(m); lv[L.key] = { ...L, mesh: m };
-      if (L.label) ctx.label(L.label, [L.x + (L.w || 1.2) / 2 + (L.ldx ?? 0.35), L.y, 0], L.cls || 'small');
+      const P0 = o.pos || [0, 0, 0];
+      if (L.label) ctx.label(L.label, [P0[0] + L.x + (L.w || 1.2) / 2 + (L.ldx ?? 0.35), P0[1] + L.y, P0[2]], L.cls || 'small');
     });
     if (o.pos) g.position.set(...o.pos);
     /* 兩能階間的躍遷箭頭（可開關、可閃爍） */

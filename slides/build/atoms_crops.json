@@ -1,0 +1,140 @@
+{
+ "ionsys": {
+  "left": 0,
+  "top": 206,
+  "width": 2560,
+  "height": 1234
+ },
+ "ionsys_laser": {
+  "left": 0,
+  "top": 206,
+  "width": 2560,
+  "height": 1234
+ },
+ "paul": {
+  "left": 382,
+  "top": 402,
+  "width": 1784,
+  "height": 712
+ },
+ "ionqubit": {
+  "left": 430,
+  "top": 368,
+  "width": 1616,
+  "height": 660
+ },
+ "modes": {
+  "left": 428,
+  "top": 350,
+  "width": 1702,
+  "height": 662
+ },
+ "modes_radial": {
+  "left": 428,
+  "top": 350,
+  "width": 1702,
+  "height": 662
+ },
+ "ms": {
+  "left": 310,
+  "top": 280,
+  "width": 1792,
+  "height": 872
+ },
+ "ms_half": {
+  "left": 310,
+  "top": 280,
+  "width": 1900,
+  "height": 872
+ },
+ "qccd": {
+  "left": 0,
+  "top": 350,
+  "width": 2560,
+  "height": 952
+ },
+ "qccd_detect": {
+  "left": 0,
+  "top": 350,
+  "width": 2560,
+  "height": 952
+ },
+ "atomsys": {
+  "left": 0,
+  "top": 244,
+  "width": 2560,
+  "height": 1196
+ },
+ "atomsys_laser": {
+  "left": 0,
+  "top": 244,
+  "width": 2560,
+  "height": 1196
+ },
+ "tweezer_before": {
+  "left": 852,
+  "top": 100,
+  "width": 934,
+  "height": 1152
+ },
+ "tweezer": {
+  "left": 748,
+  "top": 100,
+  "width": 1064,
+  "height": 1152
+ },
+ "atomqubit": {
+  "left": 218,
+  "top": 186,
+  "width": 2206,
+  "height": 1126
+ },
+ "rydberg": {
+  "left": 402,
+  "top": 106,
+  "width": 1706,
+  "height": 1080
+ },
+ "rydberg_far": {
+  "left": 402,
+  "top": 106,
+  "width": 1706,
+  "height": 1080
+ },
+ "zoned": {
+  "left": 0,
+  "top": 130,
+  "width": 2310,
+  "height": 1270
+ },
+ "zoned_measure": {
+  "left": 0,
+  "top": 130,
+  "width": 2310,
+  "height": 1270
+ },
+ "imaging": {
+  "left": 340,
+  "top": 144,
+  "width": 1896,
+  "height": 990
+ },
+ "imaging_push": {
+  "left": 186,
+  "top": 144,
+  "width": 2050,
+  "height": 990
+ },
+ "compare": {
+  "left": 76,
+  "top": 344,
+  "width": 2302,
+  "height": 1024
+ },
+ "compare_speed": {
+  "left": 76,
+  "top": 344,
+  "width": 2302,
+  "height": 1024
+ }
+}

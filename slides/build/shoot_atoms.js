@@ -1,7 +1,7 @@
 /* 擷取「離子阱與中性原子」3D 場景截圖，供簡報使用，並自動計算裁切範圍。
  * 用法：node shoot_atoms.js [名稱 ...]   （需要 Playwright + Chromium）
  * 操作計畫：atoms_plan_ion.json（場景 1–6）、atoms_plan_atom.json（場景 7–13）
- *   格式 { "<名稱>": { "id": "<場景代號，預設同名稱>", "act": [{"click":"按鈕文字開頭"}, {"slider":["標籤片段", 值]}], "wait": 毫秒 } }
+ *   格式 { "<名稱>": { "id": "<場景代號，預設同名稱>", "act": [{"click":"按鈕文字開頭"}, {"slider":["標籤片段", 值]}, {"wait": 毫秒}], "wait": 毫秒 } }
  * 輸出：../figures/3d_atoms/<名稱>.jpg（2560×1440）與 atoms_crops.json（去掉背景的裁切範圍）
  */
 const path = require('path');
@@ -51,8 +51,8 @@ async function autoCrop(file) {
     await p.goto(`${PAGE}?noui=1&clean=1#${id}`);
     await p.waitForTimeout(1200);
     for (const a of o.act || []) {
-      await p.evaluate(a.click ? click(a.click) : slide(a.slider[0], a.slider[1]));
-      await p.waitForTimeout(a.pause ?? 250);
+      if (a.click || a.slider) await p.evaluate(a.click ? click(a.click) : slide(a.slider[0], a.slider[1]));
+      await p.waitForTimeout(a.wait ?? a.pause ?? 250);
     }
     await p.waitForTimeout(o.wait ?? 1500);
     const file = path.join(OUT, name + '.jpg');
