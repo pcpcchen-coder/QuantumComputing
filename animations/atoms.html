@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>離子阱與中性原子量子電腦 3D</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<canvas id="gl"></canvas>
+<div id="labels"></div>
+
+<header id="topbar">
+  <div class="brand">離子阱與中性原子量子電腦 <span>系統 · 量子位元 · 操作 · 量測</span></div>
+  <nav id="scene-nav" aria-label="場景"></nav>
+</header>
+
+<aside id="panel">
+  <div class="scene-num" id="scene-num"></div>
+  <h1 id="scene-title"></h1>
+  <div class="scene-sub" id="scene-sub"></div>
+  <div class="scene-desc" id="scene-desc"></div>
+  <div class="controls" id="controls"></div>
+  <div class="hint">拖曳旋轉 · 滾輪縮放 · 右鍵/Shift 拖曳平移<br>← → 切換場景 · 空白鍵 暫停 · H 隱藏面板 · F 全螢幕 · R 重設視角<br>超導量子電腦：<a href="index.html" style="color:#8ef0ff">index.html</a>（JJ 與讀取）、<a href="peripherals.html" style="color:#8ef0ff">peripherals.html</a>（周邊系統）、<a href="operation.html" style="color:#8ef0ff">operation.html</a>（操作）</div>
+</aside>
+
+<div id="inset-wrap"><div id="inset-title"></div><canvas id="inset" width="380" height="230"></canvas></div>
+<div id="paused-badge">⏸ 暫停中</div>
+
+<script src="lib/three.min.js"></script>
+<script src="js/core.js"></script>
+<script src="js/peripherals/common.js"></script>
+<script src="js/atoms/common.js"></script>
+<script src="js/atoms/01_ionsys.js"></script>
+<script src="js/atoms/02_paul.js"></script>
+<script src="js/atoms/03_ionqubit.js"></script>
+<script src="js/atoms/04_modes.js"></script>
+<script src="js/atoms/05_ms.js"></script>
+<script src="js/atoms/06_qccd.js"></script>
+<script src="js/atoms/07_atomsys.js"></script>
+<script src="js/atoms/08_tweezer.js"></script>
+<script src="js/atoms/09_atomqubit.js"></script>
+<script src="js/atoms/10_rydberg.js"></script>
+<script src="js/atoms/11_zoned.js"></script>
+<script src="js/atoms/12_imaging.js"></script>
+<script src="js/atoms/13_compare.js"></script>
+<script>App.start();</script>
+</body>
+</html>
