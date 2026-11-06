@@ -20,6 +20,10 @@
    - 建置文件：[`docs/周邊系統連接與啟動指南.md`](docs/周邊系統連接與啟動指南.md)（連接清單、啟動流程、異常處置）
    - 3D 互動動畫：[`animations/peripherals.html`](animations/peripherals.html)（10 個場景，離線可用）
 
+5. [影片報告簡報：《量子超級英雄》影片轉 PPT](#影片報告簡報量子超級英雄影片轉-ppt)
+   - #049 超導量子位元：[`slides/output/ep049-superconducting-qubit.pptx`](slides/output/ep049-superconducting-qubit.pptx)（16 頁，含講稿）
+   - 製作流程與產生器：[`slides/README.md`](slides/README.md)
+
 ---
 
 ## 技術分享：超導量子電腦的 JJ 元件與微波讀取
@@ -140,4 +144,21 @@ cd slides/build && node fix_ids.js ../transmon.pptx
 
 ```bash
 cd slides && soffice --headless --convert-to pdf --outdir pdf *.pptx
+```
+
+---
+
+## 影片報告簡報：《量子超級英雄》影片轉 PPT
+
+把 QuBear 量子熊 ✕ 龍騰文化《量子超級英雄》的影片逐字稿整理成可以上台報告的簡報。每張投影片右上角標出對應的影片時間，備忘稿是講稿。
+
+| 路徑 | 說明 |
+|---|---|
+| `slides/output/ep049-superconducting-qubit.pptx` | #049 超導量子位元：用「JJ」做出二態系統（16 頁） |
+| `slides/episodes/ep049.js` | #049 的內容檔（文字、圖表資料、講稿） |
+| `slides/build_deck.js` | 影片簡報產生器（與 `slides/build/` 的技術分享產生器分開） |
+| `slides/README.md` | 每集的製作流程與投影片類型說明 |
+
+```bash
+cd slides && npm install && node build_deck.js episodes/ep049.js
 ```
