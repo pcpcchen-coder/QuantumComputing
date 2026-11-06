@@ -26,7 +26,7 @@
    - 演講稿：[`speech/量子電腦操作演講稿.md`](speech/量子電腦操作演講稿.md)
    - 3D 互動動畫：[`animations/operation.html`](animations/operation.html)（12 個場景，離線可用）
 7. [技術分享（第四篇）：離子阱與中性原子量子電腦——系統、量子位元、操作與量測](#技術分享第四篇離子阱與中性原子量子電腦)
-   - 簡報：[`slides/Ion_NeutralAtom_Talk.pptx`](slides/Ion_NeutralAtom_Talk.pptx)（48 頁，含講者備註）
+   - 簡報：[`slides/Ion_NeutralAtom_Talk.pptx`](slides/Ion_NeutralAtom_Talk.pptx)（49 頁，含講者備註）
    - 演講稿：[`speech/離子阱與中性原子演講稿.md`](speech/離子阱與中性原子演講稿.md)
    - 系統指南：[`docs/離子阱與中性原子系統指南.md`](docs/離子阱與中性原子系統指南.md)（子系統、連接清單、啟動校準流程、異常處置、設施與電力）
    - 3D 互動動畫：[`animations/atoms.html`](animations/atoms.html)（13 個場景，離線可用）
@@ -223,7 +223,7 @@ cd slides/build && node build_operation.js
 
 | 路徑 | 說明 |
 |---|---|
-| `slides/Ion_NeutralAtom_Talk.pptx` | 48 頁簡報：離子阱系統與操作、中性原子系統與操作、三平台比較、總結；每頁有講者備註 |
+| `slides/Ion_NeutralAtom_Talk.pptx` | 49 頁簡報：離子阱系統與操作、中性原子系統與操作、三平台比較（含供電切入分析）、總結；每頁有講者備註 |
 | `speech/離子阱與中性原子演講稿.md` | 與講者備註同步的演講稿、時間規劃、60 分鐘精簡版、Q&A 準備 |
 | `docs/離子阱與中性原子系統指南.md` | 兩個平台的子系統、連接清單、從開機到上線的步驟、日常監控與異常、設施與電力比較 |
 | `animations/atoms.html` | 13 個 3D 場景（與其他動畫共用核心程式；Paul 阱軌跡、離子鏈正規模、MS 閘、芮德堡阻斷等為即時數值計算） |
@@ -236,7 +236,7 @@ cd slides/build && node build_operation.js
 3. **離子阱：操作**：量子位元編碼、一個 shot 的流程、雷射冷卻、光泵浦與單位元閘、集體振動、Mølmer–Sørensen 閘、螢光讀取、QCCD、擴展路線
 4. **中性原子：系統**：系統全景、磁光阱、光鑷（SLM / AOD）、裝載成像與重排、雷射與光學（⁸⁷Rb）
 5. **中性原子：操作**：編碼、全域 + 局部單位元閘、芮德堡原子、芮德堡阻斷、CZ 閘、分區架構、成像讀取、原子損失與連續運轉、類比模擬
-6. **三平台比較**：綜合比較表、時間尺度、連接性與並行、錯誤率與錯誤更正進展、系統與設施需求、主要廠商
+6. **三平台比較**：綜合比較表、時間尺度、連接性與並行、錯誤率與錯誤更正進展、系統與設施需求、供電切入分析、主要廠商
 7. **總結**：重點回顧、3D 動畫導覽、參考資料、Q&A
 
 ### 3D 場景
