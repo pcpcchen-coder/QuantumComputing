@@ -1,0 +1,124 @@
+{
+ "ionsys": {
+  "act": [],
+  "wait": 3000
+ },
+ "ionsys_laser": {
+  "id": "ionsys",
+  "act": [
+   {
+    "click": "只看雷射"
+   }
+  ],
+  "wait": 2500
+ },
+ "paul": {
+  "act": [
+   {
+    "slider": [
+     "q 參數",
+     0.4
+    ]
+   }
+  ],
+  "wait": 5000
+ },
+ "ionqubit": {
+  "act": [
+   {
+    "click": "② 光泵浦"
+   },
+   {
+    "click": "③ 微波 π/2"
+   },
+   {
+    "click": "一次跑 1000"
+   },
+   {
+    "click": "③ 微波 π/2"
+   },
+   {
+    "click": "⑤ 偵測"
+   }
+  ],
+  "wait": 5200
+ },
+ "modes": {
+  "act": [
+   {
+    "slider": [
+     "離子數",
+     7
+    ]
+   },
+   {
+    "slider": [
+     "模式編號",
+     2
+    ]
+   }
+  ],
+  "wait": 2300
+ },
+ "modes_radial": {
+  "id": "modes",
+  "act": [
+   {
+    "click": "徑向模態"
+   },
+   {
+    "slider": [
+     "離子數",
+     7
+    ]
+   },
+   {
+    "slider": [
+     "模式編號",
+     1
+    ]
+   }
+  ],
+  "wait": 2300
+ },
+ "ms": {
+  "act": [
+   {
+    "click": "▶ 執行閘"
+   }
+  ],
+  "wait": 16000
+ },
+ "ms_half": {
+  "id": "ms",
+  "act": [
+   {
+    "slider": [
+     "停止時刻",
+     0.5
+    ]
+   },
+   {
+    "click": "▶ 執行閘"
+   }
+  ],
+  "wait": 4000
+ },
+ "qccd": {
+  "act": [
+   {
+    "click": "▶ 執行一段線路"
+   }
+  ],
+  "wait": 6000
+ },
+ "qccd_detect": {
+  "id": "qccd",
+  "act": [
+   {
+    "click": "▶ 執行一段線路"
+   }
+  ],
+  "wait": 11800
+ }
+}
