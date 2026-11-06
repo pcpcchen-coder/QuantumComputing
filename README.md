@@ -4,7 +4,7 @@
 
 ## 筆記目錄
 
-> 所有簡報都另附 PDF 版：[`slides/pdf/`](slides/pdf/)（`JJ_Microwave_Readout_Talk.pdf`、`QC_Peripheral_Systems_Talk.pdf`、`QC_Operation_Talk.pdf`、`transmon.pdf`）。
+> 所有簡報都另附 PDF 版：[`slides/pdf/`](slides/pdf/)（`JJ_Microwave_Readout_Talk.pdf`、`QC_Peripheral_Systems_Talk.pdf`、`QC_Operation_Talk.pdf`、`Ion_NeutralAtom_Talk.pdf`、`transmon.pdf`）。
 
 1. [約瑟夫森結（JJ）：巨觀量子波、相位差與「穿隧」的真正意義](notes/josephson-junction-wave-and-tunneling.md)
 2. [Transmon：約瑟夫森電感、電路結構與量子位元機制](notes/transmon-josephson-inductance.md)
@@ -25,7 +25,12 @@
    - 簡報：[`slides/QC_Operation_Talk.pptx`](slides/QC_Operation_Talk.pptx)（56 頁，含講者備註）
    - 演講稿：[`speech/量子電腦操作演講稿.md`](speech/量子電腦操作演講稿.md)
    - 3D 互動動畫：[`animations/operation.html`](animations/operation.html)（12 個場景，離線可用）
-7. [影片報告簡報：《量子超級英雄》影片轉 PPT](#影片報告簡報量子超級英雄影片轉-ppt)
+7. [技術分享（第四篇）：離子阱與中性原子量子電腦——系統、量子位元、操作與量測](#技術分享第四篇離子阱與中性原子量子電腦)
+   - 簡報：[`slides/Ion_NeutralAtom_Talk.pptx`](slides/Ion_NeutralAtom_Talk.pptx)（48 頁，含講者備註）
+   - 演講稿：[`speech/離子阱與中性原子演講稿.md`](speech/離子阱與中性原子演講稿.md)
+   - 系統指南：[`docs/離子阱與中性原子系統指南.md`](docs/離子阱與中性原子系統指南.md)（子系統、連接清單、啟動校準流程、異常處置、設施與電力）
+   - 3D 互動動畫：[`animations/atoms.html`](animations/atoms.html)（13 個場景，離線可用）
+8. [影片報告簡報：《量子超級英雄》影片轉 PPT](#影片報告簡報量子超級英雄影片轉-ppt)
    - #049 超導量子位元：[`slides/output/ep049-superconducting-qubit.pptx`](slides/output/ep049-superconducting-qubit.pptx)（16 頁，含講稿）
    - 製作流程與產生器：[`slides/README.md`](slides/README.md)
 
@@ -207,6 +212,66 @@ cd slides/build && node build_operation.js
 ```
 
 `shoot_operation.js` 以 Playwright 擷取 3D 截圖；擷取後若場景版面有變，需重新計算 `op_crops.json`（各截圖的裁切範圍）。
+
+---
+
+## 技術分享（第四篇）：離子阱與中性原子量子電腦
+
+用「真的原子」當量子位元的兩種平台：系統由哪些設備組成、量子位元怎麼實現、怎麼做閘、怎麼量測，以及與超導平台的差異。
+
+### 內容
+
+| 路徑 | 說明 |
+|---|---|
+| `slides/Ion_NeutralAtom_Talk.pptx` | 48 頁簡報：離子阱系統與操作、中性原子系統與操作、三平台比較、總結；每頁有講者備註 |
+| `speech/離子阱與中性原子演講稿.md` | 與講者備註同步的演講稿、時間規劃、60 分鐘精簡版、Q&A 準備 |
+| `docs/離子阱與中性原子系統指南.md` | 兩個平台的子系統、連接清單、從開機到上線的步驟、日常監控與異常、設施與電力比較 |
+| `animations/atoms.html` | 13 個 3D 場景（與其他動畫共用核心程式；Paul 阱軌跡、離子鏈正規模、MS 閘、芮德堡阻斷等為即時數值計算） |
+| `slides/figures/atoms/`、`slides/figures/3d_atoms/` | 簡報用物理圖表與 3D 場景截圖 |
+
+### 簡報架構
+
+1. **開場**：人造原子 vs 真的原子、DiVincenzo 五條件在兩個平台的實現
+2. **離子阱：系統**：系統全景、Paul 阱與 Mathieu 穩定條件、真空與裝載、雷射與光學（¹⁷¹Yb⁺）、電子與控制
+3. **離子阱：操作**：量子位元編碼、一個 shot 的流程、雷射冷卻、光泵浦與單位元閘、集體振動、Mølmer–Sørensen 閘、螢光讀取、QCCD、擴展路線
+4. **中性原子：系統**：系統全景、磁光阱、光鑷（SLM / AOD）、裝載成像與重排、雷射與光學（⁸⁷Rb）
+5. **中性原子：操作**：編碼、全域 + 局部單位元閘、芮德堡原子、芮德堡阻斷、CZ 閘、分區架構、成像讀取、原子損失與連續運轉、類比模擬
+6. **三平台比較**：綜合比較表、時間尺度、連接性與並行、錯誤率與錯誤更正進展、系統與設施需求、主要廠商
+7. **總結**：重點回顧、3D 動畫導覽、參考資料、Q&A
+
+### 3D 場景
+
+| # | 代號 | 主題 |
+|---|---|---|
+| 1 | `ionsys` | 離子阱系統全景：雷射、光學、真空腔、成像、RF/DC/微波電子、設施；連接分類顯示 |
+| 2 | `paul` | Paul 阱原理：旋轉鞍形位勢、Mathieu 軌跡（secular + micromotion）、q 參數與穩定性 |
+| 3 | `ionqubit` | ¹⁷¹Yb⁺ 量子位元：能階、冷卻、光泵浦、微波閘、螢光偵測與光子數直方圖 |
+| 4 | `modes` | 離子鏈集體振動：平衡位置與軸向 / 徑向正規模（數值求解） |
+| 5 | `ms` | Mølmer–Sørensen 閘：自旋相依力、相空間迴圈、族群演化 |
+| 6 | `qccd` | QCCD 搬運架構：分段電極、分區、接面、共冷、時間預算 |
+| 7 | `atomsys` | 中性原子系統全景：MOT、光鑷光路（SLM + AOD）、芮德堡雷射、相機與即時控制 |
+| 8 | `tweezer` | 光鑷裝載與重排：隨機裝載、成像、AOD 搬運成無缺陷陣列 |
+| 9 | `atomqubit` | ⁸⁷Rb 量子位元：能階、全域微波與局部定址 |
+| 10 | `rydberg` | 芮德堡阻斷：距離與阻斷半徑、四能階數值演化、CZ 協定 |
+| 11 | `zoned` | 分區架構：儲存 / 糾纏 / 讀取區、並行 CZ、中途量測 |
+| 12 | `imaging` | 螢光成像讀取：推出 \|1⟩、相機影像、直方圖與閾值 |
+| 13 | `compare` | 三平台比較：連接性、閘速度、相干時間、規模 |
+
+### 重新產生
+
+```bash
+cd slides/build && python3 make_atom_figures.py
+```
+
+```bash
+cd slides/build && node shoot_atoms.js
+```
+
+```bash
+cd slides/build && node build_atoms.js
+```
+
+`shoot_atoms.js` 依 `atoms_plan_ion.json`、`atoms_plan_atom.json` 的操作計畫擷取 3D 截圖，並自動計算裁切範圍寫入 `atoms_crops.json`。
 
 ---
 

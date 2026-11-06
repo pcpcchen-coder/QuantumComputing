@@ -1,0 +1,15 @@
+{
+  "atomsys": { "act": [], "wait": 2000 },
+  "atomsys_laser": { "id": "atomsys", "act": [{ "click": "只看雷射" }], "wait": 1500 },
+  "tweezer_before": { "id": "tweezer", "act": [{ "click": "① 裝載" }, { "wait": 8000 }, { "click": "② 成像" }], "wait": 1000 },
+  "tweezer": { "act": [{ "click": "① 裝載" }, { "wait": 8000 }, { "click": "② 成像" }, { "wait": 500 }, { "click": "③ 重排" }], "wait": 15000 },
+  "atomqubit": { "act": [{ "click": "示範" }], "wait": 8000 },
+  "rydberg": { "act": [], "wait": 2500 },
+  "rydberg_far": { "id": "rydberg", "act": [{ "slider": ["原子間距", 13] }], "wait": 2500 },
+  "zoned": { "act": [{ "slider": ["並行對數", 8] }, { "click": "▶ 執行一層" }], "wait": 4500 },
+  "zoned_measure": { "id": "zoned", "act": [{ "click": "中途量測" }], "wait": 6500 },
+  "imaging": { "act": [{ "click": "準備隨機態" }, { "click": "① 推出" }, { "wait": 3500 }, { "click": "② 成像" }], "wait": 3000 },
+  "imaging_push": { "id": "imaging", "act": [{ "click": "準備隨機態" }, { "click": "① 推出" }], "wait": 1200 },
+  "compare": { "act": [], "wait": 2000 },
+  "compare_speed": { "id": "compare", "act": [{ "click": "閘速度" }], "wait": 4000 }
+}
