@@ -8,6 +8,8 @@
 
 第一個樣本：`episodes/ep049.js` → `output/ep049-superconducting-qubit.pptx`（16 張，含講稿）
 
+引擎也可以用在非影片的報告：`reports/qc-power-delta.js` → `output/qc-power-supply-delta.pptx`（量子電腦供電設計，20 張，含講稿）。這類內容不需要 `time` 欄位。
+
 ## 每集的製作流程
 
 1. **取得逐字稿**：用電腦打開 YouTube 影片，展開說明欄，點「顯示轉錄稿」，全選複製（保留時間戳記）。
@@ -54,7 +56,7 @@
 | `table` | 對照表 | `headers[]`、`rows[][]`、`colW[]`、`callout` |
 | `junction` | 約瑟夫森接面結構圖 | `arrowLabel`、`middle`、`symbol`、`bullets[]` |
 | `summary` | 重點整理（深色） | `points[]` |
-| `closing` | 討論題＋延伸觀看（深色） | `question`、`prompts[]`、`refs[]` |
+| `closing` | 討論題＋延伸觀看（深色） | `question`、`prompts[]`、`refs[]`；可選 `questionKicker`、`refsHead` 改兩個小標 |
 
 共通欄位：`section`（PowerPoint 章節）、`time`、`notes`。
 
