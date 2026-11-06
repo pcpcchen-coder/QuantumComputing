@@ -1,8 +1,25 @@
-# 超導量子電腦：JJ 元件與微波讀取 — 技術分享素材
+# QuantumComputing
+
+量子計算學習筆記。
+
+## 筆記目錄
+
+1. [約瑟夫森結（JJ）：巨觀量子波、相位差與「穿隧」的真正意義](notes/josephson-junction-wave-and-tunneling.md)
+2. [Transmon：約瑟夫森電感、電路結構與量子位元機制](notes/transmon-josephson-inductance.md)
+   - 簡報：[`slides/transmon.pptx`](slides/transmon.pptx)（17 頁，PowerPoint）
+   - 3D 互動動畫：[`animations/transmon-3d.html`](animations/transmon-3d.html)（下載後用瀏覽器開啟；需連網載入 three.js）
+3. [技術分享：超導量子電腦的 JJ 元件與微波讀取](#技術分享超導量子電腦的-jj-元件與微波讀取)
+   - 簡報：[`slides/JJ_Microwave_Readout_Talk.pptx`](slides/JJ_Microwave_Readout_Talk.pptx)（43 頁，含講者備註）
+   - 演講稿：[`speech/演講稿.md`](speech/演講稿.md)
+   - 3D 互動動畫：[`animations/index.html`](animations/index.html)（11 個場景，離線可用）
+
+---
+
+## 技術分享：超導量子電腦的 JJ 元件與微波讀取
 
 給同仁的內部技術分享：約瑟夫森接面（Josephson Junction, JJ）的相關知識，以及如何用微波讀取量子位元狀態。內容包含簡報、完整演講稿與互動 3D 動畫。
 
-## 內容
+### 內容
 
 | 路徑 | 說明 |
 |---|---|
@@ -12,14 +29,14 @@
 | `slides/figures/` | 簡報用物理圖表（matplotlib）與 3D 場景截圖 |
 | `slides/build/` | 產生簡報與圖表的腳本 |
 
-## 簡報架構
+### 簡報架構
 
 1. **背景知識**：量子位元與 Bloch 球、品質指標（T1/T2）、超導與 Cooper pair、BCS 能隙、磁通量子化、為什麼需要非線性
 2. **JJ 元件**：SIS 結構、DC/AC Josephson 關係、非線性電感、E_J 與 E_C、RCSJ 洗衣板、SQUID、量子位元家族、transmon 與電荷色散、Dolan bridge 製程、頻率定位、JJ 的其他角色（耦合器、JPA、TWPA…）、退相干來源
 3. **微波讀取**：讀取需求、電路 QED、色散位移 χ、S21 振幅/相位、外差解調與 IQ、單發判別與保真度、稀釋冷凍機讀取鏈、輸入線衰減與熱光子、量子極限放大器、κ/χ/Purcell 設計權衡、多工與進階技術、數值範例
 4. **整合與總結**：全流程、重點回顧、3D 動畫導覽、參考文獻、Q&A
 
-## 3D 動畫
+### 3D 動畫
 
 用瀏覽器開啟 `animations/index.html` 即可（Chrome / Edge / Firefox，無需網路與伺服器）。網址加 `#場景代號` 可直接跳轉。
 
@@ -41,7 +58,7 @@
 
 > 從 PowerPoint 點按鈕開啟動畫時，請保持 `slides/` 與 `animations/` 的相對位置不變（連結為 `../animations/index.html#…`）。
 
-## 重新產生簡報與圖表
+### 重新產生簡報與圖表
 
 ```bash
 cd slides/build && npm install && pip install matplotlib numpy
@@ -57,6 +74,6 @@ cd slides/build && node build_deck.js
 
 `build_deck.js` 同時輸出 `slides/JJ_Microwave_Readout_Talk.pptx` 與 `speech/演講稿.md`，修改講者備註只需改一處。3D 截圖（`slides/figures/3d/`）是以 Playwright 對 `animations/index.html?noui=1&clean=1#場景` 擷取。
 
-## 字型
+### 字型
 
 簡報使用「微軟正黑體（Microsoft JhengHei）」，方程式使用 Cambria，Windows / Office 皆內建。
