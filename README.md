@@ -22,6 +22,7 @@
 5. [影片報告簡報：《量子超級英雄》影片轉 PPT](#影片報告簡報量子超級英雄影片轉-ppt)
    - #049 超導量子位元：[`slides/output/ep049-superconducting-qubit.pptx`](slides/output/ep049-superconducting-qubit.pptx)（16 頁，含講稿）
    - 製作流程與產生器：[`slides/README.md`](slides/README.md)
+6. [量子電腦供電設計：文獻回顧與台達電的切入點](docs/量子電腦供電設計文獻回顧與台達電切入點.md)（精密 DC 源、不斷電與備援、低干擾設計、能耗擴展、低溫電源轉換）
 
 ---
 
