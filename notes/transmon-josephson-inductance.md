@@ -7,6 +7,7 @@
 >
 > 配套教材：[簡報 `slides/transmon.pptx`](../slides/transmon.pptx)、[3D 動畫 `animations/transmon-3d.html`](../animations/transmon-3d.html)
 > 前一篇：[約瑟夫森結：巨觀量子波、相位差與穿隧](josephson-junction-wave-and-tunneling.md)
+> 下一篇：[色散讀取：用諧振腔頻率「看見」超導量子位元](dispersive-readout.md)
 
 文中的數值範例統一使用 **E_J/h = 15 GHz、E_C/h = 250 MHz（E_J/E_C = 60）**。這是典型的 transmon 參數，能階由電荷基底哈密頓量數值對角化求得（程式見文末）。
 

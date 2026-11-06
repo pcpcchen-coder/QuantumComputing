@@ -10,20 +10,22 @@
 2. [Transmon：約瑟夫森電感、電路結構與量子位元機制](notes/transmon-josephson-inductance.md)
    - 簡報：[`slides/transmon.pptx`](slides/transmon.pptx)（17 頁，PowerPoint）
    - 3D 互動動畫：[`animations/transmon-3d.html`](animations/transmon-3d.html)（下載後用瀏覽器開啟；需連網載入 three.js）
-3. [技術分享：超導量子電腦的 JJ 元件與微波讀取](#技術分享超導量子電腦的-jj-元件與微波讀取)
+3. [色散讀取：用諧振腔頻率「看見」超導量子位元](notes/dispersive-readout.md)（原理、IQ 判別、設計取捨、整條讀取鏈設備與校準流程）
+   - 對應動畫：[`animations/index.html`](animations/index.html) 場景 9、10；[`animations/peripherals.html`](animations/peripherals.html) 場景 5、6
+4. [技術分享：超導量子電腦的 JJ 元件與微波讀取](#技術分享超導量子電腦的-jj-元件與微波讀取)
    - 簡報：[`slides/JJ_Microwave_Readout_Talk.pptx`](slides/JJ_Microwave_Readout_Talk.pptx)（43 頁，含講者備註）
    - 演講稿：[`speech/演講稿.md`](speech/演講稿.md)
    - 3D 互動動畫：[`animations/index.html`](animations/index.html)（11 個場景，離線可用）
-4. [技術分享（續篇）：量子電腦的周邊系統與整合](#技術分享續篇量子電腦的周邊系統與整合)
+5. [技術分享（續篇）：量子電腦的周邊系統與整合](#技術分享續篇量子電腦的周邊系統與整合)
    - 簡報：[`slides/QC_Peripheral_Systems_Talk.pptx`](slides/QC_Peripheral_Systems_Talk.pptx)（42 頁，含講者備註）
    - 演講稿：[`speech/周邊系統演講稿.md`](speech/周邊系統演講稿.md)
    - 建置文件：[`docs/周邊系統連接與啟動指南.md`](docs/周邊系統連接與啟動指南.md)（連接清單、啟動流程、異常處置）
    - 3D 互動動畫：[`animations/peripherals.html`](animations/peripherals.html)（10 個場景，離線可用）
-5. [技術分享（第三篇）：如何操作量子電腦——設定、計算、讀取與加速原理](#技術分享第三篇如何操作量子電腦)
+6. [技術分享（第三篇）：如何操作量子電腦——設定、計算、讀取與加速原理](#技術分享第三篇如何操作量子電腦)
    - 簡報：[`slides/QC_Operation_Talk.pptx`](slides/QC_Operation_Talk.pptx)（56 頁，含講者備註）
    - 演講稿：[`speech/量子電腦操作演講稿.md`](speech/量子電腦操作演講稿.md)
    - 3D 互動動畫：[`animations/operation.html`](animations/operation.html)（12 個場景，離線可用）
-6. [影片報告簡報：《量子超級英雄》影片轉 PPT](#影片報告簡報量子超級英雄影片轉-ppt)
+7. [影片報告簡報：《量子超級英雄》影片轉 PPT](#影片報告簡報量子超級英雄影片轉-ppt)
    - #049 超導量子位元：[`slides/output/ep049-superconducting-qubit.pptx`](slides/output/ep049-superconducting-qubit.pptx)（16 頁，含講稿）
    - 製作流程與產生器：[`slides/README.md`](slides/README.md)
 
