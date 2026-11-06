@@ -1,0 +1,104 @@
+{
+"circuit": {
+"left": 396,
+"top": 225,
+"width": 1514,
+"height": 1024
+},
+"circuit_bv": {
+"left": 334,
+"top": 225,
+"width": 1546,
+"height": 1024
+},
+"gates": {
+"left": 751,
+"top": 23,
+"width": 1108,
+"height": 1250
+},
+"grover": {
+"left": 417,
+"top": 249,
+"width": 1726,
+"height": 739
+},
+"interference": {
+"left": 260,
+"top": 101,
+"width": 1500,
+"height": 989
+},
+"interference_dj": {
+"left": 233,
+"top": 39,
+"width": 1592,
+"height": 1061
+},
+"pulse": {
+"left": 330,
+"top": 261,
+"width": 1803,
+"height": 941
+},
+"qec": {
+"left": 563,
+"top": 85,
+"width": 1496,
+"height": 1322
+},
+"qubit": {
+"left": 514,
+"top": 235,
+"width": 1425,
+"height": 1120
+},
+"readout": {
+"left": 431,
+"top": 243,
+"width": 1328,
+"height": 976
+},
+"register": {
+"left": 619,
+"top": 171,
+"width": 1199,
+"height": 926
+},
+"register_bell": {
+"left": 771,
+"top": 171,
+"width": 895,
+"height": 926
+},
+"shor": {
+"left": 413,
+"top": 226,
+"width": 1482,
+"height": 829
+},
+"shor_comb": {
+"left": 435,
+"top": 226,
+"width": 1460,
+"height": 829
+},
+"twoqubit": {
+"left": 317,
+"top": 141,
+"width": 1897,
+"height": 993
+},
+"twoqubit_cr": {
+"left": 313,
+"top": 437,
+"width": 1807,
+"height": 697
+},
+"workflow": {
+"left": 276,
+"top": 449,
+"width": 1980,
+"height": 564
+}
+}
