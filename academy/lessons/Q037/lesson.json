@@ -1,0 +1,47 @@
+{
+  "lessonId": "Q037",
+  "sourceRow": {
+    "總課次": 37,
+    "學程": "量子電腦學程",
+    "階段": "第二階段 硬體怎麼做",
+    "模組": "QM03 讀取量子位元與周邊系統",
+    "模組內課次": 5,
+    "課程主題": "單發判別與保真度",
+    "對象與上課方式": "高中以上；用場景與估算把整台機器拼起來",
+    "學習目標": "用閾值判別單發讀取，計算保真度，認識 T₁ 造成的錯誤",
+    "2 小時課程流程": "00–10 任務開場：單發判別與保真度\n10–25 概念示範：用閾值判別單發讀取，計算保真度，認識 T₁ 造成的錯誤\n25–65 父子共同實作：在場景移動閾值，記錄兩種錯誤率並算保真度\n65–75 休息／走動／聊天\n75–105 孩子獨立改造：開啟 T₁ 效應與放大器，比較保真度變化\n105–115 角色互換：孩子教爸爸操作與原理\n115–120 錄音總結、作品命名、版本存檔",
+    "動手任務": "在場景移動閾值，記錄兩種錯誤率並算保真度",
+    "孩子獨立改造": "開啟 T₁ 效應與放大器，比較保真度變化",
+    "好玩機制": "盲測",
+    "作品／交付": "保真度計算表",
+    "生活技能支線": "兩種錯誤之間的取捨",
+    "家長課前準備": "index.html#iq；operation.html#readout",
+    "課後延伸": "15–30 分鐘自由改造；寫三句學習日誌：我做了什麼、哪裡卡住、下次想加什麼。",
+    "驗收標準": "完成「保真度計算表」；能不用看稿說出核心原理；能指出至少一個錯誤、限制或注意事項（例如：讀取時間拉長會改善分離度，但 T₁ 衰減也會增加）。",
+    "常見誤解與安全提醒": "讀取時間拉長會改善分離度，但 T₁ 衰減也會增加",
+    "錄音重點": "請孩子回答：1. 單發判別與保真度在解決什麼？2. 我怎麼做？3. 哪裡容易錯？4. 生活中或真實的量子電腦哪裡會用到？",
+    "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q037｜單發判別與保真度",
+    "難度 1–5": 4,
+    "沿用簡報頁": [
+      "超導量子電腦的核心：JJ 與微波讀取（slides/JJ_Microwave_Readout_Talk.pptx）p31"
+    ],
+    "沿用 3D 場景": [
+      "i:iq",
+      "o:readout"
+    ],
+    "需新增素材": [],
+    "YouTube 關鍵字 1": "單發判別與保真度 quantum computing explained beginner",
+    "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E5%96%AE%E7%99%BC%E5%88%A4%E5%88%A5%E8%88%87%E4%BF%9D%E7%9C%9F%E5%BA%A6+quantum+computing+explained+beginner",
+    "影片用途 1": "課前暖身",
+    "YouTube 關鍵字 2": "單發判別與保真度 用閾值判別單發讀取，計算保真度，認識 T hands on demo",
+    "YouTube 連結 2": "https://www.youtube.com/results?search_query=%E5%96%AE%E7%99%BC%E5%88%A4%E5%88%A5%E8%88%87%E4%BF%9D%E7%9C%9F%E5%BA%A6+%E7%94%A8%E9%96%BE%E5%80%BC%E5%88%A4%E5%88%A5%E5%96%AE%E7%99%BC%E8%AE%80%E5%8F%96%EF%BC%8C%E8%A8%88%E7%AE%97%E4%BF%9D%E7%9C%9F%E5%BA%A6%EF%BC%8C%E8%AA%8D%E8%AD%98+T+hands+on+demo",
+    "影片用途 2": "課中實作參考",
+    "YouTube 關鍵字 3": "單發判別與保真度 quantum computing lecture visualization",
+    "YouTube 連結 3": "https://www.youtube.com/results?search_query=%E5%96%AE%E7%99%BC%E5%88%A4%E5%88%A5%E8%88%87%E4%BF%9D%E7%9C%9F%E5%BA%A6+quantum+computing+lecture+visualization",
+    "影片用途 3": "課後延伸"
+  },
+  "curriculumSha256": "d1a7d86b4c8774e1a62b2a1095ed48a5ef66faa80ac7398d92c6faa05a3d34e6",
+  "episodePaths": [],
+  "minutes": 120,
+  "status": "planned"
+}

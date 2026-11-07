@@ -1,0 +1,46 @@
+{
+  "lessonId": "Q039",
+  "sourceRow": {
+    "總課次": 39,
+    "學程": "量子電腦學程",
+    "階段": "第二階段 硬體怎麼做",
+    "模組": "QM03 讀取量子位元與周邊系統",
+    "模組內課次": 7,
+    "課程主題": "讀取設計的取捨",
+    "對象與上課方式": "高中以上；用場景與估算把整台機器拼起來",
+    "學習目標": "權衡 κ、χ、Purcell 效應與讀取速度",
+    "2 小時課程流程": "00–10 任務開場：讀取設計的取捨\n10–25 概念示範：權衡 κ、χ、Purcell 效應與讀取速度\n25–65 父子共同實作：用讀取參數計算器設計一組參數並為它答辯\n65–75 休息／走動／聊天\n75–105 孩子獨立改造：在 Purcell 濾波器有／無兩種情況下重新設計\n105–115 角色互換：孩子教爸爸操作與原理\n115–120 錄音總結、作品命名、版本存檔",
+    "動手任務": "用讀取參數計算器設計一組參數並為它答辯",
+    "孩子獨立改造": "在 Purcell 濾波器有／無兩種情況下重新設計",
+    "好玩機制": "工程答辯",
+    "作品／交付": "讀取參數卡",
+    "生活技能支線": "在多個限制下找可行解",
+    "家長課前準備": "讀取參數計算器",
+    "課後延伸": "15–30 分鐘自由改造；寫三句學習日誌：我做了什麼、哪裡卡住、下次想加什麼。",
+    "驗收標準": "完成「讀取參數卡」；能不用看稿說出核心原理；能指出至少一個錯誤、限制或注意事項（例如：κ 大讀得快，但 Purcell 效應會讓 T₁ 變短）。",
+    "常見誤解與安全提醒": "κ 大讀得快，但 Purcell 效應會讓 T₁ 變短",
+    "錄音重點": "請孩子回答：1. 讀取設計的取捨在解決什麼？2. 我怎麼做？3. 哪裡容易錯？4. 生活中或真實的量子電腦哪裡會用到？",
+    "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q039｜讀取設計的取捨",
+    "難度 1–5": 5,
+    "沿用簡報頁": [
+      "超導量子電腦的核心：JJ 與微波讀取（slides/JJ_Microwave_Readout_Talk.pptx）p35–37"
+    ],
+    "沿用 3D 場景": [],
+    "需新增素材": [
+      "★ 讀取參數計算器（工具）"
+    ],
+    "YouTube 關鍵字 1": "讀取設計的取捨 quantum computing explained beginner",
+    "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E8%AE%80%E5%8F%96%E8%A8%AD%E8%A8%88%E7%9A%84%E5%8F%96%E6%8D%A8+quantum+computing+explained+beginner",
+    "影片用途 1": "課前暖身",
+    "YouTube 關鍵字 2": "讀取設計的取捨 權衡 κ、χ、Purcell 效應與讀取 hands on demo",
+    "YouTube 連結 2": "https://www.youtube.com/results?search_query=%E8%AE%80%E5%8F%96%E8%A8%AD%E8%A8%88%E7%9A%84%E5%8F%96%E6%8D%A8+%E6%AC%8A%E8%A1%A1+%CE%BA%E3%80%81%CF%87%E3%80%81Purcell+%E6%95%88%E6%87%89%E8%88%87%E8%AE%80%E5%8F%96+hands+on+demo",
+    "影片用途 2": "課中實作參考",
+    "YouTube 關鍵字 3": "讀取設計的取捨 quantum computing lecture visualization",
+    "YouTube 連結 3": "https://www.youtube.com/results?search_query=%E8%AE%80%E5%8F%96%E8%A8%AD%E8%A8%88%E7%9A%84%E5%8F%96%E6%8D%A8+quantum+computing+lecture+visualization",
+    "影片用途 3": "課後延伸"
+  },
+  "curriculumSha256": "d1a7d86b4c8774e1a62b2a1095ed48a5ef66faa80ac7398d92c6faa05a3d34e6",
+  "episodePaths": [],
+  "minutes": 120,
+  "status": "planned"
+}

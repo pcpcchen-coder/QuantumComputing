@@ -1,0 +1,47 @@
+{
+  "lessonId": "Q071",
+  "sourceRow": {
+    "總課次": 71,
+    "學程": "量子電腦學程",
+    "階段": "第三階段 操作、平台與未來",
+    "模組": "QM05 各種量子電腦平台",
+    "模組內課次": 7,
+    "課程主題": "螢光讀取與 QCCD",
+    "對象與上課方式": "高中理組／大學／工程同仁；比較不同物理系統",
+    "學習目標": "知道狀態相依螢光怎麼讀取，以及 QCCD 如何搬運離子擴大規模",
+    "2 小時課程流程": "00–10 任務開場：螢光讀取與 QCCD\n10–25 概念示範：知道狀態相依螢光怎麼讀取，以及 QCCD 如何搬運離子擴大規模\n25–65 父子共同實作：在場景選擇光子數閾值；觀察離子在分段電極間搬運\n65–75 休息／走動／聊天\n75–105 孩子獨立改造：算出一個線路的搬運時間占總時間多少\n105–115 角色互換：孩子教爸爸操作與原理\n115–120 錄音總結、作品命名、版本存檔",
+    "動手任務": "在場景選擇光子數閾值；觀察離子在分段電極間搬運",
+    "孩子獨立改造": "算出一個線路的搬運時間占總時間多少",
+    "好玩機制": "盲測",
+    "作品／交付": "讀取閾值選擇",
+    "生活技能支線": "物流也是系統效能",
+    "家長課前準備": "atoms.html#ionqubit、#qccd",
+    "課後延伸": "15–30 分鐘自由改造；寫三句學習日誌：我做了什麼、哪裡卡住、下次想加什麼。",
+    "驗收標準": "完成「讀取閾值選擇」；能不用看稿說出核心原理；能指出至少一個錯誤、限制或注意事項（例如：搬運會加熱離子，搬完要再冷卻）。",
+    "常見誤解與安全提醒": "搬運會加熱離子，搬完要再冷卻",
+    "錄音重點": "請孩子回答：1. 螢光讀取與 QCCD在解決什麼？2. 我怎麼做？3. 哪裡容易錯？4. 生活中或真實的量子電腦哪裡會用到？",
+    "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q071｜螢光讀取與 QCCD",
+    "難度 1–5": 4,
+    "沿用簡報頁": [
+      "離子阱與中性原子量子電腦（slides/Ion_NeutralAtom_Talk.pptx）p19–21"
+    ],
+    "沿用 3D 場景": [
+      "a:ionqubit",
+      "a:qccd"
+    ],
+    "需新增素材": [],
+    "YouTube 關鍵字 1": "螢光讀取與 QCCD quantum computing explained beginner",
+    "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E8%9E%A2%E5%85%89%E8%AE%80%E5%8F%96%E8%88%87+QCCD+quantum+computing+explained+beginner",
+    "影片用途 1": "課前暖身",
+    "YouTube 關鍵字 2": "螢光讀取與 QCCD 知道狀態相依螢光怎麼讀取，以及 QCCD hands on demo",
+    "YouTube 連結 2": "https://www.youtube.com/results?search_query=%E8%9E%A2%E5%85%89%E8%AE%80%E5%8F%96%E8%88%87+QCCD+%E7%9F%A5%E9%81%93%E7%8B%80%E6%85%8B%E7%9B%B8%E4%BE%9D%E8%9E%A2%E5%85%89%E6%80%8E%E9%BA%BC%E8%AE%80%E5%8F%96%EF%BC%8C%E4%BB%A5%E5%8F%8A+QCCD+hands+on+demo",
+    "影片用途 2": "課中實作參考",
+    "YouTube 關鍵字 3": "螢光讀取與 QCCD quantum computing lecture visualization",
+    "YouTube 連結 3": "https://www.youtube.com/results?search_query=%E8%9E%A2%E5%85%89%E8%AE%80%E5%8F%96%E8%88%87+QCCD+quantum+computing+lecture+visualization",
+    "影片用途 3": "課後延伸"
+  },
+  "curriculumSha256": "d1a7d86b4c8774e1a62b2a1095ed48a5ef66faa80ac7398d92c6faa05a3d34e6",
+  "episodePaths": [],
+  "minutes": 120,
+  "status": "planned"
+}

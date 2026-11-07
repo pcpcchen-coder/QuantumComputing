@@ -1,0 +1,46 @@
+{
+  "lessonId": "Q085",
+  "sourceRow": {
+    "總課次": 85,
+    "學程": "量子電腦學程",
+    "階段": "第三階段 操作、平台與未來",
+    "模組": "QM06 錯誤更正、應用與未來",
+    "模組內課次": 5,
+    "課程主題": "低於門檻",
+    "對象與上課方式": "高中理組／大學／工程同仁；畢業專題與 Teach-back",
+    "學習目標": "知道物理錯誤率低於門檻時，碼距越大邏輯錯誤越少",
+    "2 小時課程流程": "00–10 任務開場：低於門檻\n10–25 概念示範：知道物理錯誤率低於門檻時，碼距越大邏輯錯誤越少\n25–65 父子共同實作：用場景的蒙地卡羅跑不同碼距與錯誤率，畫門檻曲線\n65–75 休息／走動／聊天\n75–105 孩子獨立改造：解讀一份公開的「低於門檻」實驗結果圖\n105–115 角色互換：孩子教爸爸操作與原理\n115–120 錄音總結、作品命名、版本存檔",
+    "動手任務": "用場景的蒙地卡羅跑不同碼距與錯誤率，畫門檻曲線",
+    "孩子獨立改造": "解讀一份公開的「低於門檻」實驗結果圖",
+    "好玩機制": "效能競賽",
+    "作品／交付": "門檻曲線",
+    "生活技能支線": "看懂趨勢圖",
+    "家長課前準備": "operation.html#qec",
+    "課後延伸": "15–30 分鐘自由改造；寫三句學習日誌：我做了什麼、哪裡卡住、下次想加什麼。",
+    "驗收標準": "完成「門檻曲線」；能不用看稿說出核心原理；能指出至少一個錯誤、限制或注意事項（例如：高於門檻時，碼距越大反而越糟）。",
+    "常見誤解與安全提醒": "高於門檻時，碼距越大反而越糟",
+    "錄音重點": "請孩子回答：1. 低於門檻在解決什麼？2. 我怎麼做？3. 哪裡容易錯？4. 生活中或真實的量子電腦哪裡會用到？",
+    "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q085｜低於門檻",
+    "難度 1–5": 5,
+    "沿用簡報頁": [
+      "如何操作量子電腦（slides/QC_Operation_Talk.pptx）p50"
+    ],
+    "沿用 3D 場景": [
+      "o:qec"
+    ],
+    "需新增素材": [],
+    "YouTube 關鍵字 1": "低於門檻 quantum computing explained beginner",
+    "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E4%BD%8E%E6%96%BC%E9%96%80%E6%AA%BB+quantum+computing+explained+beginner",
+    "影片用途 1": "課前暖身",
+    "YouTube 關鍵字 2": "低於門檻 知道物理錯誤率低於門檻時，碼距越大邏輯錯 hands on demo",
+    "YouTube 連結 2": "https://www.youtube.com/results?search_query=%E4%BD%8E%E6%96%BC%E9%96%80%E6%AA%BB+%E7%9F%A5%E9%81%93%E7%89%A9%E7%90%86%E9%8C%AF%E8%AA%A4%E7%8E%87%E4%BD%8E%E6%96%BC%E9%96%80%E6%AA%BB%E6%99%82%EF%BC%8C%E7%A2%BC%E8%B7%9D%E8%B6%8A%E5%A4%A7%E9%82%8F%E8%BC%AF%E9%8C%AF+hands+on+demo",
+    "影片用途 2": "課中實作參考",
+    "YouTube 關鍵字 3": "低於門檻 quantum computing lecture visualization",
+    "YouTube 連結 3": "https://www.youtube.com/results?search_query=%E4%BD%8E%E6%96%BC%E9%96%80%E6%AA%BB+quantum+computing+lecture+visualization",
+    "影片用途 3": "課後延伸"
+  },
+  "curriculumSha256": "d1a7d86b4c8774e1a62b2a1095ed48a5ef66faa80ac7398d92c6faa05a3d34e6",
+  "episodePaths": [],
+  "minutes": 120,
+  "status": "planned"
+}

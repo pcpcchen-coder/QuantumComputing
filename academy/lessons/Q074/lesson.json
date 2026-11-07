@@ -1,0 +1,47 @@
+{
+  "lessonId": "Q074",
+  "sourceRow": {
+    "總課次": 74,
+    "學程": "量子電腦學程",
+    "階段": "第三階段 操作、平台與未來",
+    "模組": "QM05 各種量子電腦平台",
+    "模組內課次": 10,
+    "課程主題": "芮德堡阻斷與 CZ",
+    "對象與上課方式": "高中理組／大學／工程同仁；比較不同物理系統",
+    "學習目標": "知道距離小於阻斷半徑時兩顆原子不能同時被激發，進而做出 CZ",
+    "2 小時課程流程": "00–10 任務開場：芮德堡阻斷與 CZ\n10–25 概念示範：知道距離小於阻斷半徑時兩顆原子不能同時被激發，進而做出 CZ\n25–65 父子共同實作：在場景改變原子距離，記錄阻斷何時發生，再走一次 CZ 協定\n65–75 休息／走動／聊天\n75–105 孩子獨立改造：解釋為什麼 |00⟩ 經過協定後多一個負號\n105–115 角色互換：孩子教爸爸操作與原理\n115–120 錄音總結、作品命名、版本存檔",
+    "動手任務": "在場景改變原子距離，記錄阻斷何時發生，再走一次 CZ 協定",
+    "孩子獨立改造": "解釋為什麼 |00⟩ 經過協定後多一個負號",
+    "好玩機制": "闖關",
+    "作品／交付": "阻斷距離表",
+    "生活技能支線": "一個人的狀態影響另一個人",
+    "家長課前準備": "atoms.html#rydberg、#atomqubit",
+    "課後延伸": "15–30 分鐘自由改造；寫三句學習日誌：我做了什麼、哪裡卡住、下次想加什麼。",
+    "驗收標準": "完成「阻斷距離表」；能不用看稿說出核心原理；能指出至少一個錯誤、限制或注意事項（例如：芮德堡態壽命有限，閘要夠快）。",
+    "常見誤解與安全提醒": "芮德堡態壽命有限，閘要夠快",
+    "錄音重點": "請孩子回答：1. 芮德堡阻斷與 CZ在解決什麼？2. 我怎麼做？3. 哪裡容易錯？4. 生活中或真實的量子電腦哪裡會用到？",
+    "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q074｜芮德堡阻斷與 CZ",
+    "難度 1–5": 5,
+    "沿用簡報頁": [
+      "離子阱與中性原子量子電腦（slides/Ion_NeutralAtom_Talk.pptx）p31–33"
+    ],
+    "沿用 3D 場景": [
+      "a:rydberg",
+      "a:atomqubit"
+    ],
+    "需新增素材": [],
+    "YouTube 關鍵字 1": "芮德堡阻斷與 CZ quantum computing explained beginner",
+    "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E8%8A%AE%E5%BE%B7%E5%A0%A1%E9%98%BB%E6%96%B7%E8%88%87+CZ+quantum+computing+explained+beginner",
+    "影片用途 1": "課前暖身",
+    "YouTube 關鍵字 2": "芮德堡阻斷與 CZ 知道距離小於阻斷半徑時兩顆原子不能同時被 hands on demo",
+    "YouTube 連結 2": "https://www.youtube.com/results?search_query=%E8%8A%AE%E5%BE%B7%E5%A0%A1%E9%98%BB%E6%96%B7%E8%88%87+CZ+%E7%9F%A5%E9%81%93%E8%B7%9D%E9%9B%A2%E5%B0%8F%E6%96%BC%E9%98%BB%E6%96%B7%E5%8D%8A%E5%BE%91%E6%99%82%E5%85%A9%E9%A1%86%E5%8E%9F%E5%AD%90%E4%B8%8D%E8%83%BD%E5%90%8C%E6%99%82%E8%A2%AB+hands+on+demo",
+    "影片用途 2": "課中實作參考",
+    "YouTube 關鍵字 3": "芮德堡阻斷與 CZ quantum computing lecture visualization",
+    "YouTube 連結 3": "https://www.youtube.com/results?search_query=%E8%8A%AE%E5%BE%B7%E5%A0%A1%E9%98%BB%E6%96%B7%E8%88%87+CZ+quantum+computing+lecture+visualization",
+    "影片用途 3": "課後延伸"
+  },
+  "curriculumSha256": "d1a7d86b4c8774e1a62b2a1095ed48a5ef66faa80ac7398d92c6faa05a3d34e6",
+  "episodePaths": [],
+  "minutes": 120,
+  "status": "planned"
+}

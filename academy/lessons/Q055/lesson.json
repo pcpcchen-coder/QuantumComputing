@@ -1,0 +1,46 @@
+{
+  "lessonId": "Q055",
+  "sourceRow": {
+    "總課次": 55,
+    "學程": "量子電腦學程",
+    "階段": "第三階段 操作、平台與未來",
+    "模組": "QM04 操作量子電腦與演算法",
+    "模組內課次": 7,
+    "課程主題": "兩位元閘：CZ 與交叉共振",
+    "對象與上課方式": "高中理組／大學／工程同仁；本機模擬器實作",
+    "學習目標": "知道兩位元閘怎麼在硬體上做出來：CZ（磁通調頻）與交叉共振（ZX）",
+    "2 小時課程流程": "00–10 任務開場：兩位元閘：CZ 與交叉共振\n10–25 概念示範：知道兩位元閘怎麼在硬體上做出來：CZ（磁通調頻）與交叉共振（ZX）\n25–65 父子共同實作：在場景觀察 |11⟩–|20⟩ 迴避交叉產生條件相位，再看交叉共振\n65–75 休息／走動／聊天\n75–105 孩子獨立改造：整理各家原生兩位元閘對照表\n105–115 角色互換：孩子教爸爸操作與原理\n115–120 錄音總結、作品命名、版本存檔",
+    "動手任務": "在場景觀察 |11⟩–|20⟩ 迴避交叉產生條件相位，再看交叉共振",
+    "孩子獨立改造": "整理各家原生兩位元閘對照表",
+    "好玩機制": "角色扮演",
+    "作品／交付": "兩種實現對照表",
+    "生活技能支線": "同一目標有不同做法",
+    "家長課前準備": "operation.html#twoqubit",
+    "課後延伸": "15–30 分鐘自由改造；寫三句學習日誌：我做了什麼、哪裡卡住、下次想加什麼。",
+    "驗收標準": "完成「兩種實現對照表」；能不用看稿說出核心原理；能指出至少一個錯誤、限制或注意事項（例如：兩位元閘誤差通常比單位元閘高約十倍，是主要錯誤來源）。",
+    "常見誤解與安全提醒": "兩位元閘誤差通常比單位元閘高約十倍，是主要錯誤來源",
+    "錄音重點": "請孩子回答：1. 兩位元閘：CZ 與交叉共振在解決什麼？2. 我怎麼做？3. 哪裡容易錯？4. 生活中或真實的量子電腦哪裡會用到？",
+    "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q055｜兩位元閘：CZ 與交叉共振",
+    "難度 1–5": 4,
+    "沿用簡報頁": [
+      "如何操作量子電腦（slides/QC_Operation_Talk.pptx）p22–24"
+    ],
+    "沿用 3D 場景": [
+      "o:twoqubit"
+    ],
+    "需新增素材": [],
+    "YouTube 關鍵字 1": "兩位元閘：CZ 與交叉共振 quantum computing explained beginner",
+    "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E5%85%A9%E4%BD%8D%E5%85%83%E9%96%98%EF%BC%9ACZ+%E8%88%87%E4%BA%A4%E5%8F%89%E5%85%B1%E6%8C%AF+quantum+computing+explained+beginner",
+    "影片用途 1": "課前暖身",
+    "YouTube 關鍵字 2": "兩位元閘：CZ 與交叉共振 知道兩位元閘怎麼在硬體上做出來：CZ（磁 hands on demo",
+    "YouTube 連結 2": "https://www.youtube.com/results?search_query=%E5%85%A9%E4%BD%8D%E5%85%83%E9%96%98%EF%BC%9ACZ+%E8%88%87%E4%BA%A4%E5%8F%89%E5%85%B1%E6%8C%AF+%E7%9F%A5%E9%81%93%E5%85%A9%E4%BD%8D%E5%85%83%E9%96%98%E6%80%8E%E9%BA%BC%E5%9C%A8%E7%A1%AC%E9%AB%94%E4%B8%8A%E5%81%9A%E5%87%BA%E4%BE%86%EF%BC%9ACZ%EF%BC%88%E7%A3%81+hands+on+demo",
+    "影片用途 2": "課中實作參考",
+    "YouTube 關鍵字 3": "兩位元閘：CZ 與交叉共振 quantum computing lecture visualization",
+    "YouTube 連結 3": "https://www.youtube.com/results?search_query=%E5%85%A9%E4%BD%8D%E5%85%83%E9%96%98%EF%BC%9ACZ+%E8%88%87%E4%BA%A4%E5%8F%89%E5%85%B1%E6%8C%AF+quantum+computing+lecture+visualization",
+    "影片用途 3": "課後延伸"
+  },
+  "curriculumSha256": "d1a7d86b4c8774e1a62b2a1095ed48a5ef66faa80ac7398d92c6faa05a3d34e6",
+  "episodePaths": [],
+  "minutes": 120,
+  "status": "planned"
+}

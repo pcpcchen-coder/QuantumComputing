@@ -1,0 +1,46 @@
+{
+  "lessonId": "Q043",
+  "sourceRow": {
+    "總課次": 43,
+    "學程": "量子電腦學程",
+    "階段": "第二階段 硬體怎麼做",
+    "模組": "QM03 讀取量子位元與周邊系統",
+    "模組內課次": 11,
+    "課程主題": "稀釋冷凍原理",
+    "對象與上課方式": "高中以上；用場景與估算把整台機器拼起來",
+    "學習目標": "知道 ³He 溶入 ⁴He 時吸熱，冷卻功率與 T² 成正比",
+    "2 小時課程流程": "00–10 任務開場：稀釋冷凍原理\n10–25 概念示範：知道 ³He 溶入 ⁴He 時吸熱，冷卻功率與 T² 成正比\n25–65 父子共同實作：用場景的 Q̇ = 84ṅT² 計算不同溫度下的冷卻功率\n65–75 休息／走動／聊天\n75–105 孩子獨立改造：算出溫度減半時，可承受的熱負載剩多少\n105–115 角色互換：孩子教爸爸操作與原理\n115–120 錄音總結、作品命名、版本存檔",
+    "動手任務": "用場景的 Q̇ = 84ṅT² 計算不同溫度下的冷卻功率",
+    "孩子獨立改造": "算出溫度減半時，可承受的熱負載剩多少",
+    "好玩機制": "闖關（Q̇ 計算）",
+    "作品／交付": "冷卻功率計算",
+    "生活技能支線": "用公式預測趨勢",
+    "家長課前準備": "peripherals.html#dilution",
+    "課後延伸": "15–30 分鐘自由改造；寫三句學習日誌：我做了什麼、哪裡卡住、下次想加什麼。",
+    "驗收標準": "完成「冷卻功率計算」；能不用看稿說出核心原理；能指出至少一個錯誤、限制或注意事項（例如：越冷越難冷：冷卻功率隨溫度平方下降）。",
+    "常見誤解與安全提醒": "越冷越難冷：冷卻功率隨溫度平方下降",
+    "錄音重點": "請孩子回答：1. 稀釋冷凍原理在解決什麼？2. 我怎麼做？3. 哪裡容易錯？4. 生活中或真實的量子電腦哪裡會用到？",
+    "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q043｜稀釋冷凍原理",
+    "難度 1–5": 4,
+    "沿用簡報頁": [
+      "量子電腦的周邊系統（slides/QC_Peripheral_Systems_Talk.pptx）p9–11"
+    ],
+    "沿用 3D 場景": [
+      "p:dilution"
+    ],
+    "需新增素材": [],
+    "YouTube 關鍵字 1": "稀釋冷凍原理 quantum computing explained beginner",
+    "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E7%A8%80%E9%87%8B%E5%86%B7%E5%87%8D%E5%8E%9F%E7%90%86+quantum+computing+explained+beginner",
+    "影片用途 1": "課前暖身",
+    "YouTube 關鍵字 2": "稀釋冷凍原理 知道 ³He 溶入 ⁴He 時吸熱，冷卻 hands on demo",
+    "YouTube 連結 2": "https://www.youtube.com/results?search_query=%E7%A8%80%E9%87%8B%E5%86%B7%E5%87%8D%E5%8E%9F%E7%90%86+%E7%9F%A5%E9%81%93+%C2%B3He+%E6%BA%B6%E5%85%A5+%E2%81%B4He+%E6%99%82%E5%90%B8%E7%86%B1%EF%BC%8C%E5%86%B7%E5%8D%BB+hands+on+demo",
+    "影片用途 2": "課中實作參考",
+    "YouTube 關鍵字 3": "稀釋冷凍原理 quantum computing lecture visualization",
+    "YouTube 連結 3": "https://www.youtube.com/results?search_query=%E7%A8%80%E9%87%8B%E5%86%B7%E5%87%8D%E5%8E%9F%E7%90%86+quantum+computing+lecture+visualization",
+    "影片用途 3": "課後延伸"
+  },
+  "curriculumSha256": "d1a7d86b4c8774e1a62b2a1095ed48a5ef66faa80ac7398d92c6faa05a3d34e6",
+  "episodePaths": [],
+  "minutes": 120,
+  "status": "planned"
+}
