@@ -1,0 +1,37 @@
+{
+  "folder": "classroom/Q001_開學任務",
+  "files": [
+    "00_爸爸先讀.md",
+    "01_宣稱卡解答.md",
+    "02_列印包_開學任務.pdf",
+    "03_宣稱分類紀錄.csv",
+    "04_學程地圖.md",
+    "05_三維動畫導覽.md"
+  ],
+  "fileCount": 6,
+  "utf8TextReadable": true,
+  "sheet": {
+    "file": "03_宣稱分類紀錄.csv",
+    "rows": 12,
+    "columns": 7
+  },
+  "printPack": {
+    "file": "02_列印包_開學任務.pdf",
+    "pages": 4,
+    "allFontsEmbedded": true,
+    "renderedThisRun": true,
+    "source": "authoring/q001/print/print-pack.html"
+  },
+  "activityMinutes": 120,
+  "needsAccount": false,
+  "needsInstall": false,
+  "claimCards": 12,
+  "cardsPerPile": {
+    "有機會變快": 4,
+    "不會變快": 4,
+    "說錯了": 4
+  },
+  "factsFrom": "production/fact-check.md (Aaronson 2008/2015, Shor, Grover, Preskill)",
+  "privateData": "none",
+  "status": "PASS (structure); page-by-page visual review recorded separately"
+}

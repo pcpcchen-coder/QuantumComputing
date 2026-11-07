@@ -97,10 +97,10 @@ export XINEW_CHROME=/path/to/chrome-headless-shell   # 列印包用；完整版 
 
 ## 4. 收尾
 
-1. 把集數資料夾複製回本 repo（排除大型 MP4 與純旁白 MP3）：
+1. 把集數資料夾複製回本 repo，再刪掉大型 MP4 與純旁白 MP3（`.gitignore` 也擋住了）：
 
    ```bash
-   rsync -a --exclude 'output/*.mp4' --exclude 'output/narration-only.mp3' --exclude 'qc/clips/' --exclude 'qc/frames/' --exclude 'qc/subtitle-precheck/' $XINEW_ACADEMY/specials/qxxx-<slug>/ ~/QuantumComputing/academy/episodes/qxxx-<slug>/
+   cp -a $XINEW_ACADEMY/specials/qxxx-<slug> ~/QuantumComputing/academy/episodes/ && cd ~/QuantumComputing/academy/episodes/qxxx-<slug> && rm -f output/*.mp4 output/narration-only.mp3 && rm -rf qc/clips qc/frames qc/subtitle-precheck
    ```
 
 2. 在 `academy/episodes/qxxx-<slug>/delivery.json` 記錄 MP4 與交付 ZIP 的檔名、大小、SHA-256 與取得方式。
@@ -110,7 +110,10 @@ export XINEW_CHROME=/path/to/chrome-headless-shell   # 列印包用；完整版 
 ## 5. 做 Q001 時遇到的事
 
 - **Edge TTS 間歇性不給音訊**：2026-11-07 下午連續回 `NoAudioReceived`，連父子學院念過的句子也失敗，短句時好時壞。
-  合成腳本有逐句快取（`.build-tts-cache/`），失敗就隔兩分鐘重跑同一條命令，已通過的句子不會重做。不要換聲線。
+  正式管線每句最多試 7 次就整輪停下，三輪只過了 5 句。改用 `academy/authoring/fill_tts_cache.py`：它呼叫同一個合成函式（同樣的完整性檢查），
+  失敗就等 90 秒再試，逐句存進 `.build-tts-cache/`；36 句花了約一個半小時。之後正式管線一次跑完、全部從快取取回。不要換聲線。
+- **交付**：完整交付包約 152 MB，用 `pipeline/split_delivery.py` 切成 28 MiB 分段當對話附件；另用
+  `ffmpeg -crf 31 -tune stillimage` 壓一支 1080p 預覽版（約 24 MB）方便直接看，預覽版不是上傳用的檔案。
 - **列印包卡住**：完整版 Chromium 在容器裡 `--print-to-pdf` 會一直不結束；改用 Playwright 附的 `chrome-headless-shell` 立刻完成。
 - **列印原稿位置**：`classroom_pack.build()` 要求 `authoring_dir` 在 XiNewVideoGPT 的 academy 底下，所以 Q001 先寫到
   `$XINEW_ACADEMY/authoring/q001/print/`，再複製一份回本 repo 的 `academy/authoring/q001/print/`。

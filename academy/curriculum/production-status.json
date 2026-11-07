@@ -2,9 +2,10 @@
   "schemaVersion": 1,
   "lessons": {
     "Q001": {
-      "status": "planned",
-      "episodePath": null,
-      "evidence": null
+      "status": "verified",
+      "publication": "awaiting_user_upload",
+      "episodePath": "academy/episodes/q001-not-faster",
+      "evidence": "academy/episodes/q001-not-faster/delivery.json"
     },
     "Q002": {
       "status": "planned",

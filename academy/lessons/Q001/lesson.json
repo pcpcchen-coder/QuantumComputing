@@ -45,7 +45,9 @@
     "影片用途 3": "課後延伸"
   },
   "curriculumSha256": "d1a7d86b4c8774e1a62b2a1095ed48a5ef66faa80ac7398d92c6faa05a3d34e6",
-  "episodePaths": [],
+  "episodePaths": [
+    "academy/episodes/q001-not-faster"
+  ],
   "minutes": 120,
-  "status": "planned"
+  "status": "verified"
 }
