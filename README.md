@@ -4,7 +4,7 @@
 
 ## 筆記目錄
 
-> 所有簡報都另附 PDF 版：[`slides/pdf/`](slides/pdf/)（`JJ_Microwave_Readout_Talk.pdf`、`QC_Peripheral_Systems_Talk.pdf`、`QC_Operation_Talk.pdf`、`Ion_NeutralAtom_Talk.pdf`、`transmon.pdf`）。
+> 所有簡報都另附 PDF 版：[`slides/pdf/`](slides/pdf/)（`JJ_Microwave_Readout_Talk.pdf`、`QC_Peripheral_Systems_Talk.pdf`、`QC_Operation_Talk.pdf`、`Ion_NeutralAtom_Talk.pdf`、`transmon.pdf`、`QC_Power_Supply_Delta.pdf`）。
 
 1. [約瑟夫森結（JJ）：巨觀量子波、相位差與「穿隧」的真正意義](notes/josephson-junction-wave-and-tunneling.md)
 2. [Transmon：約瑟夫森電感、電路結構與量子位元機制](notes/transmon-josephson-inductance.md)
@@ -35,6 +35,9 @@
    - 製作流程與產生器：[`slides/README.md`](slides/README.md)
 9. [課程擴充規劃：量子電腦學院（參考父子科技學院格式，6 模組 × 16 堂）](docs/量子電腦學院_課程擴充規劃.md)（現有 223 頁簡報與 47 個 3D 場景的盤點、Q001–Q096 課表、新增動畫與簡報清單）
    - 學程資料夾：[`academy/`](academy/README.md)（96 堂課綱、每堂教案、製作指南、製作狀態）
+10. [量子電腦供電設計：文獻回顧與台達電的切入點](docs/量子電腦供電設計文獻回顧與台達電切入點.md)（精密 DC 源、不斷電與備援、低干擾設計、能耗擴展、低溫電源轉換）
+    - 簡報：[`slides/output/qc-power-supply-delta.pptx`](slides/output/qc-power-supply-delta.pptx)（20 頁，含講稿）；PDF：[`slides/pdf/QC_Power_Supply_Delta.pdf`](slides/pdf/QC_Power_Supply_Delta.pdf)
+    - 簡報內容檔：[`slides/reports/qc-power-delta.js`](slides/reports/qc-power-delta.js)（`cd slides && node build_deck.js reports/qc-power-delta.js` 重新產生）
 
 ---
 

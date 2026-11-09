@@ -469,11 +469,11 @@ R.closing = async (pres, s) => {
   timeChip(slide, s.time, true);
   const lw = 6.3;
   slide.addShape(pres.shapes.ROUNDED_RECTANGLE, { x: MX, y: TOP, w: lw, h: BOTTOM - TOP, rectRadius: 0.12, fill: { color: "1B3D5E" }, line: { type: "none" }, objectName: "question-bg" });
-  slide.addText("討論題", { x: MX + 0.35, y: TOP + 0.3, w: lw - 0.7, h: 0.45, fontSize: 16, bold: true, color: C().accent2, margin: 0, isTextBox: true, objectName: "question-kicker" });
+  slide.addText(s.questionKicker || "討論題", { x: MX + 0.35, y: TOP + 0.3, w: lw - 0.7, h: 0.45, fontSize: 16, bold: true, color: C().accent2, margin: 0, isTextBox: true, objectName: "question-kicker" });
   slide.addText(runs(s.question, { fontSize: 26, bold: true, color: C().background1 }), { x: MX + 0.35, y: TOP + 0.9, w: lw - 0.7, h: 1.5, valign: "top", margin: 0, isTextBox: true, objectName: "question" });
   if (s.prompts) slide.addText(paragraphs(s.prompts, { bullet: { indent: 16 }, paraSpaceAfter: 6 }, { fontSize: 14, color: C().background2 }), { x: MX + 0.35, y: TOP + 2.5, w: lw - 0.7, h: BOTTOM - TOP - 2.7, valign: "top", margin: 0, isTextBox: true, objectName: "question-prompts" });
   const rx = MX + lw + 0.5, rw = CW - lw - 0.5;
-  slide.addText("延伸觀看與資料來源", { x: rx, y: TOP, w: rw, h: 0.45, fontSize: 16, bold: true, color: C().accent2, margin: 0, isTextBox: true, objectName: "refs-head" });
+  slide.addText(s.refsHead || "延伸觀看與資料來源", { x: rx, y: TOP, w: rw, h: 0.45, fontSize: 16, bold: true, color: C().accent2, margin: 0, isTextBox: true, objectName: "refs-head" });
   slide.addText(paragraphs(s.refs, { bullet: { indent: 16 }, paraSpaceAfter: 8 }, { fontSize: 13, color: C().background1 }), { x: rx, y: TOP + 0.6, w: rw, h: BOTTOM - TOP - 0.6, valign: "top", margin: 0, isTextBox: true, objectName: "refs" });
   if (s.notes) slide.addNotes(s.notes);
 };
