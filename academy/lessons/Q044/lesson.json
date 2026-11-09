@@ -1,0 +1,46 @@
+{
+  "lessonId": "Q044",
+  "sourceRow": {
+    "總課次": 44,
+    "學程": "量子電腦學程",
+    "階段": "第二階段 硬體怎麼做",
+    "模組": "QM03 讀取量子位元與周邊系統",
+    "模組內課次": 12,
+    "課程主題": "降溫一次要幾天",
+    "對象與上課方式": "高中以上；用場景與估算把整台機器拼起來",
+    "學習目標": "認識抽真空 → 預冷 → 凝結 → 循環的流程與時間",
+    "2 小時課程流程": "00–10 任務開場：降溫一次要幾天\n10–25 概念示範：認識抽真空 → 預冷 → 凝結 → 循環的流程與時間\n25–65 父子共同實作：把降溫步驟排成時間軸，標出每一步在等什麼\n65–75 休息／走動／聊天\n75–105 孩子獨立改造：規劃一次換樣品的完整時程（升溫＋降溫）\n105–115 角色互換：孩子教爸爸操作與原理\n115–120 錄音總結、作品命名、版本存檔",
+    "動手任務": "把降溫步驟排成時間軸，標出每一步在等什麼",
+    "孩子獨立改造": "規劃一次換樣品的完整時程（升溫＋降溫）",
+    "好玩機制": "時間機器",
+    "作品／交付": "降溫時間軸",
+    "生活技能支線": "排專案時程",
+    "家長課前準備": "peripherals.html#cooldown；docs/周邊系統連接與啟動指南.md",
+    "課後延伸": "15–30 分鐘自由改造；寫三句學習日誌：我做了什麼、哪裡卡住、下次想加什麼。",
+    "驗收標準": "完成「降溫時間軸」；能不用看稿說出核心原理；能指出至少一個錯誤、限制或注意事項（例如：升溫和降溫都要時間；換一次樣品常要好幾天）。",
+    "常見誤解與安全提醒": "升溫和降溫都要時間；換一次樣品常要好幾天",
+    "錄音重點": "請孩子回答：1. 降溫一次要幾天在解決什麼？2. 我怎麼做？3. 哪裡容易錯？4. 生活中或真實的量子電腦哪裡會用到？",
+    "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q044｜降溫一次要幾天",
+    "難度 1–5": 3,
+    "沿用簡報頁": [
+      "量子電腦的周邊系統（slides/QC_Peripheral_Systems_Talk.pptx）p12"
+    ],
+    "沿用 3D 場景": [
+      "p:cooldown"
+    ],
+    "需新增素材": [],
+    "YouTube 關鍵字 1": "降溫一次要幾天 quantum computing explained beginner",
+    "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E9%99%8D%E6%BA%AB%E4%B8%80%E6%AC%A1%E8%A6%81%E5%B9%BE%E5%A4%A9+quantum+computing+explained+beginner",
+    "影片用途 1": "課前暖身",
+    "YouTube 關鍵字 2": "降溫一次要幾天 認識抽真空 → 預冷 → 凝結 → 循環 hands on demo",
+    "YouTube 連結 2": "https://www.youtube.com/results?search_query=%E9%99%8D%E6%BA%AB%E4%B8%80%E6%AC%A1%E8%A6%81%E5%B9%BE%E5%A4%A9+%E8%AA%8D%E8%AD%98%E6%8A%BD%E7%9C%9F%E7%A9%BA+%E2%86%92+%E9%A0%90%E5%86%B7+%E2%86%92+%E5%87%9D%E7%B5%90+%E2%86%92+%E5%BE%AA%E7%92%B0+hands+on+demo",
+    "影片用途 2": "課中實作參考",
+    "YouTube 關鍵字 3": "降溫一次要幾天 quantum computing lecture visualization",
+    "YouTube 連結 3": "https://www.youtube.com/results?search_query=%E9%99%8D%E6%BA%AB%E4%B8%80%E6%AC%A1%E8%A6%81%E5%B9%BE%E5%A4%A9+quantum+computing+lecture+visualization",
+    "影片用途 3": "課後延伸"
+  },
+  "curriculumSha256": "493446a21451c8a5c08a1723cfd04436e51cbfa4806049b55a765d22ecf2ba53",
+  "episodePaths": [],
+  "minutes": 120,
+  "status": "planned"
+}

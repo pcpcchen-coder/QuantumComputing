@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q001",
+  "program": "父子科技學院 量子電腦學程",
+  "episodePath": "academy/episodes/q001-not-faster",
+  "version": "Q001-v1",
+  "createdAt": "2026-11-07",
+  "producedBy": "Claude (cloud Linux session) via XiNewVideoGPT academy portable-runtime.sh + ooxml-template (special_builder route)",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "contentMode": "curriculum-based-preclass (no recording)",
+  "durationSeconds": 352.341,
+  "openingSeconds": 60.277,
+  "voice": "zh-TW-YunJheNeural",
+  "ttsEngine": "edge-tts 7.3.1",
+  "validation": {
+    "passed": 25,
+    "total": 25,
+    "integratedLufs": -17.0,
+    "sceneAudioMaxLagMs": 0.0,
+    "sceneAudioMinCorrelation": 0.989817,
+    "asrMinSimilarity": 0.769,
+    "asrMeanSimilarity": 0.945,
+    "asrMinSoundSimilarity": 0.909,
+    "asrMeanSoundSimilarity": 0.99,
+    "reviewRecords": [
+      "qc/report.md",
+      "qc/manual-review.md",
+      "qc/slide-visual-review.md"
+    ],
+    "notDone": [
+      "沒有真人整段聽審",
+      "沒有用 PowerPoint／Keynote 開啟",
+      "沒有 YouTube 版權檢查"
+    ]
+  },
+  "largeFiles": {
+    "narration-only.mp3": {
+      "bytes": 7010541,
+      "sha256": "6876e1877a42a74a45ee42c62dec9a96e2ea81a51d0c78bba657c6348bd67d85"
+    },
+    "q001-not-faster-master.mp4": {
+      "bytes": 76094007,
+      "sha256": "2ea44e1e1c290f157e6b617ac36fd341dc89cc529d83e7b9948f5e993e9b110b"
+    },
+    "q001-not-faster-zh-TW.mp4": {
+      "bytes": 72504299,
+      "sha256": "83dbdf196f9cf53dbce0288bd7497f4aa2e0234e3d7b67da5fda14b27b4268dd"
+    }
+  },
+  "package": {
+    "filename": "Q001-v1_量子電腦學程_開學任務_2026-11-07.zip",
+    "bytes": 158888855,
+    "sha256": "944bce215a2b875a854777401592fcb615299087712cac3e83ad097a842b9b98",
+    "parts": [
+      {
+        "name": "Q001-v1_量子電腦學程_開學任務_2026-11-07.zip.part01",
+        "bytes": 29360128,
+        "sha256": "8bea468dd1f17d893247e647a90605053f091abfde2e1cffeab738475e18f8a9"
+      },
+      {
+        "name": "Q001-v1_量子電腦學程_開學任務_2026-11-07.zip.part02",
+        "bytes": 29360128,
+        "sha256": "0597f86a34b956ae31b8fe672906ef1b907c7438ae08ad841762653d2097fba4"
+      },
+      {
+        "name": "Q001-v1_量子電腦學程_開學任務_2026-11-07.zip.part03",
+        "bytes": 29360128,
+        "sha256": "f8bc4217f2b3672dd923d015dfdded18eb0b1e7f87b36f57e1365c7d8516c246"
+      },
+      {
+        "name": "Q001-v1_量子電腦學程_開學任務_2026-11-07.zip.part04",
+        "bytes": 29360128,
+        "sha256": "3faf6363a207834dbb719de170b72da24694764ff11bcc899532844912e8c687"
+      },
+      {
+        "name": "Q001-v1_量子電腦學程_開學任務_2026-11-07.zip.part05",
+        "bytes": 29360128,
+        "sha256": "0d379ec3dc51666b2fe4621c34228f13709ececcd0d98d24765a0410163ef000"
+      },
+      {
+        "name": "Q001-v1_量子電腦學程_開學任務_2026-11-07.zip.part06",
+        "bytes": 12088215,
+        "sha256": "1504e2d38a454bd2ca4d631aba589d3bc5acaeac99403c4681294a3aeec7559b"
+      }
+    ],
+    "restore": "依序把 .part01–.part06 接成 Q001-v1_量子電腦學程_開學任務_2026-11-07.zip，再比對 sha256；詳見 Q001-v1_還原說明_RESTORE.txt",
+    "handedOver": "2026-11-07 以對話附件交給使用者（6 段＋還原說明），另附 1080p 重新壓縮的預覽版 MP4（約 23.7 MB，非上傳用）"
+  },
+  "notInGit": "MP4 與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔"
+}

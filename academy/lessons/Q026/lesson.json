@@ -1,0 +1,46 @@
+{
+  "lessonId": "Q026",
+  "sourceRow": {
+    "總課次": 26,
+    "學程": "量子電腦學程",
+    "階段": "第二階段 硬體怎麼做",
+    "模組": "QM02 超導量子位元：從超導到 transmon",
+    "模組內課次": 10,
+    "課程主題": "傾斜洗衣板",
+    "對象與上課方式": "高中以上；爸爸主講、孩子操作場景並提問",
+    "學習目標": "用相位粒子在洗衣板位勢中的運動理解 RCSJ 模型與 I–V 遲滯",
+    "2 小時課程流程": "00–10 任務開場：傾斜洗衣板\n10–25 概念示範：用相位粒子在洗衣板位勢中的運動理解 RCSJ 模型與 I–V 遲滯\n25–65 父子共同實作：在場景加大偏壓電流，記錄粒子何時從井中滑出；用彈珠與波浪紙板模擬\n65–75 休息／走動／聊天\n75–105 孩子獨立改造：解釋為什麼電流往下調時不會在同一點停下（遲滯）\n105–115 角色互換：孩子教爸爸操作與原理\n115–120 錄音總結、作品命名、版本存檔",
+    "動手任務": "在場景加大偏壓電流，記錄粒子何時從井中滑出；用彈珠與波浪紙板模擬",
+    "孩子獨立改造": "解釋為什麼電流往下調時不會在同一點停下（遲滯）",
+    "好玩機制": "科學實驗",
+    "作品／交付": "洗衣板觀察紀錄",
+    "生活技能支線": "同一條件、不同歷史，結果可能不同",
+    "家長課前準備": "波浪紙板、彈珠；index.html#washboard",
+    "課後延伸": "15–30 分鐘自由改造；寫三句學習日誌：我做了什麼、哪裡卡住、下次想加什麼。",
+    "驗收標準": "完成「洗衣板觀察紀錄」；能不用看稿說出核心原理；能指出至少一個錯誤、限制或注意事項（例如：相位粒子是數學上的類比，不是真的有一顆球在跑）。",
+    "常見誤解與安全提醒": "相位粒子是數學上的類比，不是真的有一顆球在跑",
+    "錄音重點": "請孩子回答：1. 傾斜洗衣板在解決什麼？2. 我怎麼做？3. 哪裡容易錯？4. 生活中或真實的量子電腦哪裡會用到？",
+    "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q026｜傾斜洗衣板",
+    "難度 1–5": 4,
+    "沿用簡報頁": [
+      "超導量子電腦的核心：JJ 與微波讀取（slides/JJ_Microwave_Readout_Talk.pptx）p16"
+    ],
+    "沿用 3D 場景": [
+      "i:washboard"
+    ],
+    "需新增素材": [],
+    "YouTube 關鍵字 1": "傾斜洗衣板 quantum computing explained beginner",
+    "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E5%82%BE%E6%96%9C%E6%B4%97%E8%A1%A3%E6%9D%BF+quantum+computing+explained+beginner",
+    "影片用途 1": "課前暖身",
+    "YouTube 關鍵字 2": "傾斜洗衣板 用相位粒子在洗衣板位勢中的運動理解 RC hands on demo",
+    "YouTube 連結 2": "https://www.youtube.com/results?search_query=%E5%82%BE%E6%96%9C%E6%B4%97%E8%A1%A3%E6%9D%BF+%E7%94%A8%E7%9B%B8%E4%BD%8D%E7%B2%92%E5%AD%90%E5%9C%A8%E6%B4%97%E8%A1%A3%E6%9D%BF%E4%BD%8D%E5%8B%A2%E4%B8%AD%E7%9A%84%E9%81%8B%E5%8B%95%E7%90%86%E8%A7%A3+RC+hands+on+demo",
+    "影片用途 2": "課中實作參考",
+    "YouTube 關鍵字 3": "傾斜洗衣板 quantum computing lecture visualization",
+    "YouTube 連結 3": "https://www.youtube.com/results?search_query=%E5%82%BE%E6%96%9C%E6%B4%97%E8%A1%A3%E6%9D%BF+quantum+computing+lecture+visualization",
+    "影片用途 3": "課後延伸"
+  },
+  "curriculumSha256": "493446a21451c8a5c08a1723cfd04436e51cbfa4806049b55a765d22ecf2ba53",
+  "episodePaths": [],
+  "minutes": 120,
+  "status": "planned"
+}

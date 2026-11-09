@@ -1,0 +1,110 @@
+[
+  {
+    "slide": 1,
+    "title": "一看就變：測量與重複次數",
+    "purpose": "開場：課前教學版揭露、測量時發生什麼",
+    "visual": "封面版型＋陳犀牛（L001 還原版型的原生可編輯文字與圖形）",
+    "activity": "回想上一堂的紙球",
+    "motion": "static + 0.55s fade",
+    "narrationSentences": 3
+  },
+  {
+    "slide": 2,
+    "title": "三個重點",
+    "purpose": "三個重點",
+    "visual": "三步流程卡＋黃字（L001 還原版型的原生可編輯文字與圖形）",
+    "activity": "認識今天的實驗",
+    "motion": "static + 0.55s fade",
+    "narrationSentences": 3
+  },
+  {
+    "slide": 3,
+    "title": "測量只得到零或一",
+    "purpose": "測量只得到零或一",
+    "visual": "三點條列＋陳犀牛（L001 還原版型的原生可編輯文字與圖形）",
+    "activity": "說出一次測量的限制",
+    "motion": "static + 0.55s fade",
+    "narrationSentences": 3
+  },
+  {
+    "slide": 4,
+    "title": "塌縮：測量前後",
+    "purpose": "塌縮：測量前後",
+    "visual": "面板四張卡＋黃字（L001 還原版型的原生可編輯文字與圖形）",
+    "activity": "說出塌縮",
+    "motion": "static + 0.55s fade",
+    "narrationSentences": 3
+  },
+  {
+    "slide": 5,
+    "title": "比一比：硬幣和量子位元",
+    "purpose": "比較：硬幣 vs 量子位元",
+    "visual": "雙框對照＋白字＋黃字（L001 還原版型的原生可編輯文字與圖形）",
+    "activity": "說出相同和不同",
+    "motion": "static + 0.55s fade",
+    "narrationSentences": 3
+  },
+  {
+    "slide": 6,
+    "title": "重複次數與誤差",
+    "purpose": "重複次數與誤差",
+    "visual": "三張步驟卡＋黃字（L001 還原版型的原生可編輯文字與圖形）",
+    "activity": "說出四倍次數誤差減半",
+    "motion": "static + 0.55s fade",
+    "narrationSentences": 3
+  },
+  {
+    "slide": 7,
+    "title": "實驗一：擲硬幣",
+    "purpose": "實驗一：擲硬幣",
+    "visual": "路徑一行＋三張卡＋黃字（L001 還原版型的原生可編輯文字與圖形）",
+    "activity": "擲一百次畫長條圖",
+    "motion": "static + 0.55s fade",
+    "narrationSentences": 3
+  },
+  {
+    "slide": 8,
+    "title": "實驗二：三維動畫",
+    "purpose": "實驗二：三維動畫",
+    "visual": "左三行＋右欄＋黃字（L001 還原版型的原生可編輯文字與圖形）",
+    "activity": "跑一千次",
+    "motion": "static + 0.55s fade",
+    "narrationSentences": 3
+  },
+  {
+    "slide": 9,
+    "title": "科學實驗：實驗員和檢查員",
+    "purpose": "遊戲：實驗員與檢查員",
+    "visual": "左右比較卡＋黃字（L001 還原版型的原生可編輯文字與圖形）",
+    "activity": "分工做實驗",
+    "motion": "static + 0.55s fade",
+    "narrationSentences": 3
+  },
+  {
+    "slide": 10,
+    "title": "換你設計實驗",
+    "purpose": "獨立改造：三個角度的實驗",
+    "visual": "三點條列＋陳犀牛（L001 還原版型的原生可編輯文字與圖形）",
+    "activity": "畫角度與比例",
+    "motion": "static + 0.55s fade",
+    "narrationSentences": 3
+  },
+  {
+    "slide": 11,
+    "title": "兩小時的測量實驗室",
+    "purpose": "120 分鐘安排",
+    "visual": "六列時間表＋黃字（L001 還原版型的原生可編輯文字與圖形）",
+    "activity": "照時間表進行",
+    "motion": "static + 0.55s fade",
+    "narrationSentences": 3
+  },
+  {
+    "slide": 12,
+    "title": "最後一關：教爸爸為什麼要重複",
+    "purpose": "驗收與結尾：規則、為什麼重複、限制；預告 Q004",
+    "visual": "三點條列＋陳犀牛＋結尾語（L001 還原版型的原生可編輯文字與圖形）",
+    "activity": "孩子教爸爸；錄音總結",
+    "motion": "static + 0.55s fade",
+    "narrationSentences": 3
+  }
+]

@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q003",
+  "program": "父子科技學院 量子電腦學程",
+  "episodePath": "academy/episodes/q003-measure-and-shots",
+  "version": "Q003-v1",
+  "createdAt": "2026-11-09",
+  "producedBy": "Claude (cloud Linux session) via XiNewVideoGPT academy portable-runtime.sh + ooxml-template (special_builder route)",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "contentMode": "curriculum-based-preclass (no recording)",
+  "durationSeconds": 322.709,
+  "openingSeconds": 60.277,
+  "voice": "zh-TW-YunJheNeural",
+  "ttsEngine": "edge-tts 7.3.1",
+  "validation": {
+    "passed": 25,
+    "total": 25,
+    "integratedLufsPredicted": -16.84,
+    "sceneAudioMaxLagMs": 0.0,
+    "sceneAudioMinCorrelation": 0.987628,
+    "minSimilarity": 0.636,
+    "meanSimilarity": 0.906,
+    "minSoundSimilarity": 0.884,
+    "meanSoundSimilarity": 0.989,
+    "reviewRecords": [
+      "qc/report.md",
+      "qc/manual-review.md",
+      "qc/slide-visual-review.md"
+    ],
+    "notDone": [
+      "沒有真人整段聽審",
+      "第 19 條（3:11）待真人確認",
+      "沒有用 PowerPoint／Keynote 開啟",
+      "沒有 YouTube 版權檢查"
+    ]
+  },
+  "largeFiles": {
+    "narration-only.mp3": {
+      "bytes": 6299181,
+      "sha256": "1257b7052a615a6eeedc4dddc9f69aa4ce2e0bd8ef33ef0b418f04f558512603"
+    },
+    "q003-measure-and-shots-master.mp4": {
+      "bytes": 74713650,
+      "sha256": "65d7daa6c58b420f4fd0f2416aaebc71ddf9b06073dd8f98231f4285ae6f9aca"
+    },
+    "q003-measure-and-shots-zh-TW.mp4": {
+      "bytes": 70811423,
+      "sha256": "159740edd100b1ada61a2968ec08437159dca6a1c9a44741acbc9c5a35304d9c"
+    }
+  },
+  "package": {
+    "filename": "Q003-v1_量子電腦學程_一看就變_2026-11-09.zip",
+    "bytes": 154908492,
+    "sha256": "14a2779c326c26a0e2c9dda899389e9c925c35519ef302de5076c9c23aa712f1",
+    "parts": [
+      {
+        "name": "Q003-v1_量子電腦學程_一看就變_2026-11-09.zip.part01",
+        "bytes": 29360128,
+        "sha256": "238d7df435550e849ecc451ddead9c8cab145989f3184fcc10d401be390c70a8"
+      },
+      {
+        "name": "Q003-v1_量子電腦學程_一看就變_2026-11-09.zip.part02",
+        "bytes": 29360128,
+        "sha256": "c091d6364d6ce3c8e33a35055bd8b0bfbb6891a82926425bace077a3b25d10f2"
+      },
+      {
+        "name": "Q003-v1_量子電腦學程_一看就變_2026-11-09.zip.part03",
+        "bytes": 29360128,
+        "sha256": "22b582c6b436c4fae61a3b0758b0709ad8614fc2895c75fd1dcb6913c5c40455"
+      },
+      {
+        "name": "Q003-v1_量子電腦學程_一看就變_2026-11-09.zip.part04",
+        "bytes": 29360128,
+        "sha256": "f007161ced329f9fdf67e77bd3c6fadcb04b037fe329fb21125a328b2a491074"
+      },
+      {
+        "name": "Q003-v1_量子電腦學程_一看就變_2026-11-09.zip.part05",
+        "bytes": 29360128,
+        "sha256": "bd6dbb0d08d5790d5e33b72618c93f3bc0ed492fe2cbac6917702fae65796697"
+      },
+      {
+        "name": "Q003-v1_量子電腦學程_一看就變_2026-11-09.zip.part06",
+        "bytes": 8107852,
+        "sha256": "baab8fe54590a65b64e95c51659f891885e7fce63b5987d3b77d2328dbad2668"
+      }
+    ],
+    "restore": "依序把 .part 檔接成 Q003-v1_量子電腦學程_一看就變_2026-11-09.zip，再比對 sha256；詳見 Q003-v1_還原說明_RESTORE.txt",
+    "handedOver": "2026-11-09 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（21.6 MiB，非上傳用）"
+  },
+  "notInGit": "MP4 與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔"
+}

@@ -1,0 +1,43 @@
+{
+  "folder": "classroom/Q002_硬幣與箭頭",
+  "files": [
+    "00_爸爸先讀.md",
+    "01_紙球做法.md",
+    "02_列印包_硬幣與箭頭.pdf",
+    "03_角度預測紀錄.csv",
+    "04_角度與機率解答.md",
+    "05_三維動畫導覽.md"
+  ],
+  "fileCount": 6,
+  "utf8TextReadable": true,
+  "sheet": {
+    "file": "03_角度預測紀錄.csv",
+    "rows": 12,
+    "columns": 6
+  },
+  "printPack": {
+    "file": "02_列印包_硬幣與箭頭.pdf",
+    "pages": 4,
+    "allFontsEmbedded": true,
+    "renderedThisRun": true,
+    "source": "authoring/q002/print/print-pack.html"
+  },
+  "activityMinutes": 120,
+  "needsAccount": false,
+  "needsInstall": false,
+  "commandCards": 12,
+  "angleTable": {
+    "0": 1.0,
+    "30": 0.933,
+    "45": 0.8536,
+    "60": 0.75,
+    "90": 0.5,
+    "120": 0.25,
+    "135": 0.1464,
+    "150": 0.067,
+    "180": 0.0
+  },
+  "factsFrom": "production/fact-check.md",
+  "privateData": "none",
+  "status": "PASS (structure); page-by-page visual review recorded separately"
+}

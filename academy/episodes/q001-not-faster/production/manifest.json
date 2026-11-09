@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "editorialStatus": "authored",
+  "recordingSource": null,
+  "slideCount": 12,
+  "transitionSeconds": 0.55,
+  "deckRenderer": "ooxml-template",
+  "templateEpisode": "episodes/academy/l001-mac-workstation",
+  "templateProvenance": "Original PPTX absent from v2 ZIP; restored from supplied build_l001.mjs and original assets.",
+  "layoutProfile": "academy-native-v1",
+  "seriesHeader": "父子科技學院 量子電腦學程  ·  QUANTUM 101",
+  "tts": {
+    "engine": "edge-tts",
+    "voice": "zh-TW-YunJheNeural",
+    "persona": "陳犀牛 Chen XiNew",
+    "rate": "+0%",
+    "pitch": "+0Hz"
+  },
+  "music": {
+    "backgroundMusic": "none — narration only under teaching slides",
+    "opening": "assets/opening/開場影片-v2.mp4"
+  },
+  "signoff": {
+    "text": "我是陳犀牛，保持好奇，我們下次見！"
+  },
+  "contentMode": "curriculum-based-preclass",
+  "publicationMode": "manual-user-upload",
+  "autoPublish": false,
+  "episode": "Q001",
+  "slug": "q001-not-faster",
+  "lessonIds": [],
+  "title": "開學任務：量子電腦不是更快的電腦",
+  "subtitle": "父子科技學院 量子電腦學程 第一堂｜依課綱製作的課前教學版",
+  "renderOptions": {
+    "asianLatinAutoSpace": false,
+    "captionLineBreak": "kinsoku"
+  },
+  "sources": {
+    "curriculum": "pcpcchen-coder/QuantumComputing academy/lessons/Q001/lesson.json",
+    "op_talk": "pcpcchen-coder/QuantumComputing slides/QC_Operation_Talk.pptx（第 3–4、8、36–37、42、45 頁）",
+    "aaronson_limits": "https://www.scottaaronson.com/papers/limitsam.pdf",
+    "aaronson_qml": "https://www.scottaaronson.com/papers/qml.pdf",
+    "shor": "https://arxiv.org/abs/quant-ph/9508027",
+    "grover": "https://arxiv.org/abs/quant-ph/9605043",
+    "preskill": "https://arxiv.org/abs/2106.10522",
+    "workflow": "pcpcchen-coder/QuantumComputing animations/operation.html#workflow"
+  },
+  "deliveryLabel": "量子電腦學程・依課綱製作的課前教學版（無課堂錄音）",
+  "classroomNote": "classroom.zip 是 Q001 的課堂教材（宣稱卡、分類板、問題清單、解答）。課堂 120 分鐘與影片片長分開。",
+  "factCheck": {
+    "checkedAt": "2026-11-07",
+    "record": "production/fact-check.md",
+    "sources": "production/sources.json"
+  },
+  "authorization": {
+    "produceQ001": true,
+    "ttsConsent": {
+      "grantedBy": "user",
+      "grantedAt": "2026-11-07",
+      "service": "Microsoft Edge TTS",
+      "voice": "zh-TW-YunJheNeural",
+      "scope": "Q001 public narration script only",
+      "basis": "On 2026-11-07 the user asked to make one episode of the new quantum computing track with the academy opening and voice; the public narration script goes to Edge TTS on the same basis as the academy lessons.",
+      "excluded": "private recordings or any other private data"
+    },
+    "paidLlmApi": false,
+    "uploadToYouTube": false,
+    "publish": false
+  },
+  "program": {
+    "name": "量子電腦學程",
+    "lessonId": "Q001",
+    "repo": "pcpcchen-coder/QuantumComputing",
+    "lessonRecord": "academy/lessons/Q001/lesson.json"
+  }
+}

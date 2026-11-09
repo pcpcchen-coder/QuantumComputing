@@ -1,0 +1,49 @@
+{
+  "lessonId": "Q003",
+  "sourceRow": {
+    "總課次": 3,
+    "學程": "量子電腦學程",
+    "階段": "第一階段 量子直覺",
+    "模組": "QM01 量子直覺：不用公式看懂量子",
+    "模組內課次": 3,
+    "課程主題": "一看就變：測量與 shots",
+    "對象與上課方式": "親子共學，不用公式，只用 3D 場景、紙筆和遊戲",
+    "學習目標": "理解測量只會得到 0 或 1、測量後狀態改變，以及為什麼要跑很多次",
+    "2 小時課程流程": "00–10 任務開場：一看就變：測量與 shots\n10–25 概念示範：理解測量只會得到 0 或 1、測量後狀態改變，以及為什麼要跑很多次\n25–65 父子共同實作：擲硬幣 100 次和場景跑 1000 shots，比較統計結果與預測機率\n65–75 休息／走動／聊天\n75–105 孩子獨立改造：改變角度做三組實驗，畫出「角度 vs 0 的比例」\n105–115 角色互換：孩子教爸爸操作與原理\n115–120 錄音總結、作品命名、版本存檔",
+    "動手任務": "擲硬幣 100 次和場景跑 1000 shots，比較統計結果與預測機率",
+    "孩子獨立改造": "改變角度做三組實驗，畫出「角度 vs 0 的比例」",
+    "好玩機制": "科學實驗",
+    "作品／交付": "shots 統計表與長條圖",
+    "生活技能支線": "用重複實驗降低運氣的影響",
+    "家長課前準備": "硬幣、計數表；operation.html#qubit 的連續測量模式",
+    "課後延伸": "15–30 分鐘自由改造；寫三句學習日誌：我做了什麼、哪裡卡住、下次想加什麼。",
+    "驗收標準": "完成「shots 統計表與長條圖」；能不用看稿說出核心原理；能指出至少一個錯誤、限制或注意事項（例如：一次測量得到 1，不代表原本「就是 1」；要看很多次的比例）。",
+    "常見誤解與安全提醒": "一次測量得到 1，不代表原本「就是 1」；要看很多次的比例",
+    "錄音重點": "請孩子回答：1. 一看就變：測量與 shots在解決什麼？2. 我怎麼做？3. 哪裡容易錯？4. 生活中或真實的量子電腦哪裡會用到？",
+    "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q003｜一看就變：測量與 shots",
+    "難度 1–5": 1,
+    "沿用簡報頁": [
+      "如何操作量子電腦（slides/QC_Operation_Talk.pptx）p8",
+      "如何操作量子電腦（slides/QC_Operation_Talk.pptx）p32"
+    ],
+    "沿用 3D 場景": [
+      "o:qubit"
+    ],
+    "需新增素材": [],
+    "YouTube 關鍵字 1": "一看就變：測量與 shots quantum computing explained beginner",
+    "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E4%B8%80%E7%9C%8B%E5%B0%B1%E8%AE%8A%EF%BC%9A%E6%B8%AC%E9%87%8F%E8%88%87+shots+quantum+computing+explained+beginner",
+    "影片用途 1": "課前暖身",
+    "YouTube 關鍵字 2": "一看就變：測量與 shots 理解測量只會得到 0 或 1、測量後狀態 hands on demo",
+    "YouTube 連結 2": "https://www.youtube.com/results?search_query=%E4%B8%80%E7%9C%8B%E5%B0%B1%E8%AE%8A%EF%BC%9A%E6%B8%AC%E9%87%8F%E8%88%87+shots+%E7%90%86%E8%A7%A3%E6%B8%AC%E9%87%8F%E5%8F%AA%E6%9C%83%E5%BE%97%E5%88%B0+0+%E6%88%96+1%E3%80%81%E6%B8%AC%E9%87%8F%E5%BE%8C%E7%8B%80%E6%85%8B+hands+on+demo",
+    "影片用途 2": "課中實作參考",
+    "YouTube 關鍵字 3": "一看就變：測量與 shots quantum computing lecture visualization",
+    "YouTube 連結 3": "https://www.youtube.com/results?search_query=%E4%B8%80%E7%9C%8B%E5%B0%B1%E8%AE%8A%EF%BC%9A%E6%B8%AC%E9%87%8F%E8%88%87+shots+quantum+computing+lecture+visualization",
+    "影片用途 3": "課後延伸"
+  },
+  "curriculumSha256": "493446a21451c8a5c08a1723cfd04436e51cbfa4806049b55a765d22ecf2ba53",
+  "episodePaths": [
+    "academy/episodes/q003-measure-and-shots"
+  ],
+  "minutes": 120,
+  "status": "verified"
+}

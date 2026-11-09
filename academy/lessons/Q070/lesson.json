@@ -1,0 +1,46 @@
+{
+  "lessonId": "Q070",
+  "sourceRow": {
+    "總課次": 70,
+    "學程": "量子電腦學程",
+    "階段": "第三階段 操作、平台與未來",
+    "模組": "QM05 各種量子電腦平台",
+    "模組內課次": 6,
+    "課程主題": "Mølmer–Sørensen 閘",
+    "對象與上課方式": "高中理組／大學／工程同仁；比較不同物理系統",
+    "學習目標": "理解自旋相依力讓運動在相空間繞一圈，留下糾纏",
+    "2 小時課程流程": "00–10 任務開場：Mølmer–Sørensen 閘\n10–25 概念示範：理解自旋相依力讓運動在相空間繞一圈，留下糾纏\n25–65 父子共同實作：在場景觀察相空間迴圈與族群演化，記錄閘完成的時間點\n65–75 休息／走動／聊天\n75–105 孩子獨立改造：改變失諧，觀察迴圈沒有閉合時發生什麼\n105–115 角色互換：孩子教爸爸操作與原理\n115–120 錄音總結、作品命名、版本存檔",
+    "動手任務": "在場景觀察相空間迴圈與族群演化，記錄閘完成的時間點",
+    "孩子獨立改造": "改變失諧，觀察迴圈沒有閉合時發生什麼",
+    "好玩機制": "解鎖成就",
+    "作品／交付": "MS 閘說明圖",
+    "生活技能支線": "繞一圈回到原點的設計",
+    "家長課前準備": "atoms.html#ms",
+    "課後延伸": "15–30 分鐘自由改造；寫三句學習日誌：我做了什麼、哪裡卡住、下次想加什麼。",
+    "驗收標準": "完成「MS 閘說明圖」；能不用看稿說出核心原理；能指出至少一個錯誤、限制或注意事項（例如：迴圈沒閉合時，運動與自旋仍糾纏，會造成錯誤）。",
+    "常見誤解與安全提醒": "迴圈沒閉合時，運動與自旋仍糾纏，會造成錯誤",
+    "錄音重點": "請孩子回答：1. Mølmer–Sørensen 閘在解決什麼？2. 我怎麼做？3. 哪裡容易錯？4. 生活中或真實的量子電腦哪裡會用到？",
+    "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q070｜Mølmer–Sørensen 閘",
+    "難度 1–5": 5,
+    "沿用簡報頁": [
+      "離子阱與中性原子量子電腦（slides/Ion_NeutralAtom_Talk.pptx）p18"
+    ],
+    "沿用 3D 場景": [
+      "a:ms"
+    ],
+    "需新增素材": [],
+    "YouTube 關鍵字 1": "Mølmer–Sørensen 閘 quantum computing explained beginner",
+    "YouTube 連結 1": "https://www.youtube.com/results?search_query=M%C3%B8lmer%E2%80%93S%C3%B8rensen+%E9%96%98+quantum+computing+explained+beginner",
+    "影片用途 1": "課前暖身",
+    "YouTube 關鍵字 2": "Mølmer–Sørensen 閘 理解自旋相依力讓運動在相空間繞一圈，留下 hands on demo",
+    "YouTube 連結 2": "https://www.youtube.com/results?search_query=M%C3%B8lmer%E2%80%93S%C3%B8rensen+%E9%96%98+%E7%90%86%E8%A7%A3%E8%87%AA%E6%97%8B%E7%9B%B8%E4%BE%9D%E5%8A%9B%E8%AE%93%E9%81%8B%E5%8B%95%E5%9C%A8%E7%9B%B8%E7%A9%BA%E9%96%93%E7%B9%9E%E4%B8%80%E5%9C%88%EF%BC%8C%E7%95%99%E4%B8%8B+hands+on+demo",
+    "影片用途 2": "課中實作參考",
+    "YouTube 關鍵字 3": "Mølmer–Sørensen 閘 quantum computing lecture visualization",
+    "YouTube 連結 3": "https://www.youtube.com/results?search_query=M%C3%B8lmer%E2%80%93S%C3%B8rensen+%E9%96%98+quantum+computing+lecture+visualization",
+    "影片用途 3": "課後延伸"
+  },
+  "curriculumSha256": "493446a21451c8a5c08a1723cfd04436e51cbfa4806049b55a765d22ecf2ba53",
+  "episodePaths": [],
+  "minutes": 120,
+  "status": "planned"
+}

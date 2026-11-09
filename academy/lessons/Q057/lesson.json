@@ -1,0 +1,48 @@
+{
+  "lessonId": "Q057",
+  "sourceRow": {
+    "總課次": 57,
+    "學程": "量子電腦學程",
+    "階段": "第三階段 操作、平台與未來",
+    "模組": "QM04 操作量子電腦與演算法",
+    "模組內課次": 9,
+    "課程主題": "Qiskit 實作：Bell 與 GHZ",
+    "對象與上課方式": "高中理組／大學／工程同仁；本機模擬器實作",
+    "學習目標": "用 Python 與本機模擬器寫出 Bell、GHZ 線路並解讀結果",
+    "2 小時課程流程": "00–10 任務開場：Qiskit 實作：Bell 與 GHZ\n10–25 概念示範：用 Python 與本機模擬器寫出 Bell、GHZ 線路並解讀結果\n25–65 父子共同實作：照 notebook 建立 Bell 態、加入雜訊模型，比較理想與有雜訊的直方圖\n65–75 休息／走動／聊天\n75–105 孩子獨立改造：把 GHZ 擴充到 5 個位元，觀察雜訊造成的變化\n105–115 角色互換：孩子教爸爸操作與原理\n115–120 錄音總結、作品命名、版本存檔",
+    "動手任務": "照 notebook 建立 Bell 態、加入雜訊模型，比較理想與有雜訊的直方圖",
+    "孩子獨立改造": "把 GHZ 擴充到 5 個位元，觀察雜訊造成的變化",
+    "好玩機制": "Release 任務",
+    "作品／交付": "可執行的 notebook",
+    "生活技能支線": "寫程式要可以重跑、可以驗證",
+    "家長課前準備": "安裝 Python 與 qiskit、qiskit-aer（只用本機模擬器，不需帳號）",
+    "課後延伸": "15–30 分鐘自由改造；寫三句學習日誌：我做了什麼、哪裡卡住、下次想加什麼。",
+    "驗收標準": "完成「可執行的 notebook」；能不用看稿說出核心原理；能指出至少一個錯誤、限制或注意事項（例如：套件版本會改；notebook 要記錄版本號）。",
+    "常見誤解與安全提醒": "套件版本會改；notebook 要記錄版本號",
+    "錄音重點": "請孩子回答：1. Qiskit 實作：Bell 與 GHZ在解決什麼？2. 我怎麼做？3. 哪裡容易錯？4. 生活中或真實的量子電腦哪裡會用到？",
+    "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q057｜Qiskit 實作：Bell 與 GHZ",
+    "難度 1–5": 4,
+    "沿用簡報頁": [
+      "如何操作量子電腦（slides/QC_Operation_Talk.pptx）p27"
+    ],
+    "沿用 3D 場景": [
+      "o:circuit"
+    ],
+    "需新增素材": [
+      "◆ notebook 範例（本機模擬器）"
+    ],
+    "YouTube 關鍵字 1": "Qiskit 實作：Bell 與 GHZ quantum computing explained beginner",
+    "YouTube 連結 1": "https://www.youtube.com/results?search_query=Qiskit+%E5%AF%A6%E4%BD%9C%EF%BC%9ABell+%E8%88%87+GHZ+quantum+computing+explained+beginner",
+    "影片用途 1": "課前暖身",
+    "YouTube 關鍵字 2": "Qiskit 實作：Bell 與 GHZ 用 Python 與本機模擬器寫出 Be hands on demo",
+    "YouTube 連結 2": "https://www.youtube.com/results?search_query=Qiskit+%E5%AF%A6%E4%BD%9C%EF%BC%9ABell+%E8%88%87+GHZ+%E7%94%A8+Python+%E8%88%87%E6%9C%AC%E6%A9%9F%E6%A8%A1%E6%93%AC%E5%99%A8%E5%AF%AB%E5%87%BA+Be+hands+on+demo",
+    "影片用途 2": "課中實作參考",
+    "YouTube 關鍵字 3": "Qiskit 實作：Bell 與 GHZ quantum computing lecture visualization",
+    "YouTube 連結 3": "https://www.youtube.com/results?search_query=Qiskit+%E5%AF%A6%E4%BD%9C%EF%BC%9ABell+%E8%88%87+GHZ+quantum+computing+lecture+visualization",
+    "影片用途 3": "課後延伸"
+  },
+  "curriculumSha256": "493446a21451c8a5c08a1723cfd04436e51cbfa4806049b55a765d22ecf2ba53",
+  "episodePaths": [],
+  "minutes": 120,
+  "status": "planned"
+}

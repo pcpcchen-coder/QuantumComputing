@@ -3,3 +3,7 @@ slides/build/node_modules
 *.pdf
 __pycache__/
 !slides/pdf/*.pdf
+
+# 量子電腦學程：每集大型成品不進 Git（記錄在 delivery.json）
+academy/episodes/*/output/*.mp4
+academy/episodes/*/output/narration-only.mp3

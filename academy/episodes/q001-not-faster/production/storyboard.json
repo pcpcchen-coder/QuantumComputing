@@ -1,0 +1,110 @@
+[
+  {
+    "slide": 1,
+    "title": "開學任務：量子電腦不是更快的電腦",
+    "purpose": "開場：學程與課前教學版揭露、今天要檢查的說法",
+    "visual": "封面版型＋陳犀牛（L001 還原版型的原生可編輯文字與圖形）",
+    "activity": "聽一句常見說法",
+    "motion": "static + 0.55s fade",
+    "narrationSentences": 3
+  },
+  {
+    "slide": 2,
+    "title": "學程地圖：九十六堂",
+    "purpose": "學程地圖：96 堂、三階段",
+    "visual": "三步流程卡＋黃字（L001 還原版型的原生可編輯文字與圖形）",
+    "activity": "認識學程",
+    "motion": "static + 0.55s fade",
+    "narrationSentences": 3
+  },
+  {
+    "slide": 3,
+    "title": "最常聽到的說法",
+    "purpose": "迷思：同時試所有答案",
+    "visual": "三點條列＋陳犀牛（L001 還原版型的原生可編輯文字與圖形）",
+    "activity": "找出說法的漏洞",
+    "motion": "static + 0.55s fade",
+    "narrationSentences": 3
+  },
+  {
+    "slide": 4,
+    "title": "量子工具箱",
+    "purpose": "概念：量子工具箱四樣",
+    "visual": "面板四張卡＋黃字（L001 還原版型的原生可編輯文字與圖形）",
+    "activity": "說出四樣工具",
+    "motion": "static + 0.55s fade",
+    "narrationSentences": 3
+  },
+  {
+    "slide": 5,
+    "title": "比一比：普通電腦和量子電腦",
+    "purpose": "比較：普通電腦與量子電腦",
+    "visual": "雙框對照＋白字＋黃字（L001 還原版型的原生可編輯文字與圖形）",
+    "activity": "說出專門工具的意思",
+    "motion": "static + 0.55s fade",
+    "narrationSentences": 3
+  },
+  {
+    "slide": 6,
+    "title": "有機會變快的三種問題",
+    "purpose": "例子：有機會變快的三種問題",
+    "visual": "三張步驟卡＋黃字（L001 還原版型的原生可編輯文字與圖形）",
+    "activity": "比較加速大小",
+    "motion": "static + 0.55s fade",
+    "narrationSentences": 3
+  },
+  {
+    "slide": 7,
+    "title": "不會變快的事",
+    "purpose": "例子：不會變快的事",
+    "visual": "路徑一行＋三張卡＋黃字（L001 還原版型的原生可編輯文字與圖形）",
+    "activity": "說出三個原因",
+    "motion": "static + 0.55s fade",
+    "narrationSentences": 3
+  },
+  {
+    "slide": 8,
+    "title": "活動：宣稱卡分類",
+    "purpose": "活動：宣稱卡分類",
+    "visual": "左三行＋右欄＋黃字（L001 還原版型的原生可編輯文字與圖形）",
+    "activity": "分三堆、說理由",
+    "motion": "static + 0.55s fade",
+    "narrationSentences": 3
+  },
+  {
+    "slide": 9,
+    "title": "冒險任務",
+    "purpose": "遊戲：冒險任務",
+    "visual": "左右比較卡＋黃字（L001 還原版型的原生可編輯文字與圖形）",
+    "activity": "探險家與守門人",
+    "motion": "static + 0.55s fade",
+    "narrationSentences": 3
+  },
+  {
+    "slide": 10,
+    "title": "換你出題",
+    "purpose": "獨立改造：換你出題",
+    "visual": "三點條列＋陳犀牛（L001 還原版型的原生可編輯文字與圖形）",
+    "activity": "寫問題清單、查新聞、看動畫",
+    "motion": "static + 0.55s fade",
+    "narrationSentences": 3
+  },
+  {
+    "slide": 11,
+    "title": "兩小時的開學任務",
+    "purpose": "120 分鐘安排",
+    "visual": "六列時間表＋黃字（L001 還原版型的原生可編輯文字與圖形）",
+    "activity": "照時間表進行",
+    "motion": "static + 0.55s fade",
+    "narrationSentences": 3
+  },
+  {
+    "slide": 12,
+    "title": "最後一關：教爸爸量子快在哪",
+    "purpose": "驗收與結尾：迷思、例子、限制；預告 Q002",
+    "visual": "三點條列＋陳犀牛＋結尾語（L001 還原版型的原生可編輯文字與圖形）",
+    "activity": "孩子教爸爸；錄音總結",
+    "motion": "static + 0.55s fade",
+    "narrationSentences": 3
+  }
+]

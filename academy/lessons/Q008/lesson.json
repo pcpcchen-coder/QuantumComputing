@@ -1,0 +1,48 @@
+{
+  "lessonId": "Q008",
+  "sourceRow": {
+    "總課次": 8,
+    "學程": "量子電腦學程",
+    "階段": "第一階段 量子直覺",
+    "模組": "QM01 量子直覺：不用公式看懂量子",
+    "模組內課次": 8,
+    "課程主題": "糾纏：一對神祕骰子",
+    "對象與上課方式": "親子共學，不用公式，只用 3D 場景、紙筆和遊戲",
+    "學習目標": "知道糾纏是「結果之間的關聯」，不能用來比光還快地傳訊息",
+    "2 小時課程流程": "00–10 任務開場：糾纏：一對神祕骰子\n10–25 概念示範：知道糾纏是「結果之間的關聯」，不能用來比光還快地傳訊息\n25–65 父子共同實作：玩 CHSH 合作遊戲：父子分開回答，比較古典策略和量子策略的勝率\n65–75 休息／走動／聊天\n75–105 孩子獨立改造：自己想一個古典策略，算算看最高勝率\n105–115 角色互換：孩子教爸爸操作與原理\n115–120 錄音總結、作品命名、版本存檔",
+    "動手任務": "玩 CHSH 合作遊戲：父子分開回答，比較古典策略和量子策略的勝率",
+    "孩子獨立改造": "自己想一個古典策略，算算看最高勝率",
+    "好玩機制": "角色交換",
+    "作品／交付": "CHSH 遊戲勝率表",
+    "生活技能支線": "合作遊戲中先約定好策略",
+    "家長課前準備": "列印題目卡；operation.html#register 的 Bell 態",
+    "課後延伸": "15–30 分鐘自由改造；寫三句學習日誌：我做了什麼、哪裡卡住、下次想加什麼。",
+    "驗收標準": "完成「CHSH 遊戲勝率表」；能不用看稿說出核心原理；能指出至少一個錯誤、限制或注意事項（例如：糾纏不能傳訊息；單看一邊的結果永遠是隨機的）。",
+    "常見誤解與安全提醒": "糾纏不能傳訊息；單看一邊的結果永遠是隨機的",
+    "錄音重點": "請孩子回答：1. 糾纏：一對神祕骰子在解決什麼？2. 我怎麼做？3. 哪裡容易錯？4. 生活中或真實的量子電腦哪裡會用到？",
+    "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q008｜糾纏：一對神祕骰子",
+    "難度 1–5": 2,
+    "沿用簡報頁": [
+      "如何操作量子電腦（slides/QC_Operation_Talk.pptx）p10"
+    ],
+    "沿用 3D 場景": [
+      "o:register"
+    ],
+    "需新增素材": [
+      "★ CHSH 遊戲場景"
+    ],
+    "YouTube 關鍵字 1": "糾纏：一對神祕骰子 quantum computing explained beginner",
+    "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E7%B3%BE%E7%BA%8F%EF%BC%9A%E4%B8%80%E5%B0%8D%E7%A5%9E%E7%A5%95%E9%AA%B0%E5%AD%90+quantum+computing+explained+beginner",
+    "影片用途 1": "課前暖身",
+    "YouTube 關鍵字 2": "糾纏：一對神祕骰子 知道糾纏是「結果之間的關聯」，不能用來比 hands on demo",
+    "YouTube 連結 2": "https://www.youtube.com/results?search_query=%E7%B3%BE%E7%BA%8F%EF%BC%9A%E4%B8%80%E5%B0%8D%E7%A5%9E%E7%A5%95%E9%AA%B0%E5%AD%90+%E7%9F%A5%E9%81%93%E7%B3%BE%E7%BA%8F%E6%98%AF%E3%80%8C%E7%B5%90%E6%9E%9C%E4%B9%8B%E9%96%93%E7%9A%84%E9%97%9C%E8%81%AF%E3%80%8D%EF%BC%8C%E4%B8%8D%E8%83%BD%E7%94%A8%E4%BE%86%E6%AF%94+hands+on+demo",
+    "影片用途 2": "課中實作參考",
+    "YouTube 關鍵字 3": "糾纏：一對神祕骰子 quantum computing lecture visualization",
+    "YouTube 連結 3": "https://www.youtube.com/results?search_query=%E7%B3%BE%E7%BA%8F%EF%BC%9A%E4%B8%80%E5%B0%8D%E7%A5%9E%E7%A5%95%E9%AA%B0%E5%AD%90+quantum+computing+lecture+visualization",
+    "影片用途 3": "課後延伸"
+  },
+  "curriculumSha256": "493446a21451c8a5c08a1723cfd04436e51cbfa4806049b55a765d22ecf2ba53",
+  "episodePaths": [],
+  "minutes": 120,
+  "status": "planned"
+}

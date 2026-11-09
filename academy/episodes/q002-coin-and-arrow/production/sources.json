@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q002",
+  "checkedAt": "2026-11-08",
+  "method": "Bloch sphere and superposition claims from Wikipedia pages fetched by a research sub-agent (verbatim quotes in production/source-notes.md); repo slides and the 3D scene source read by the producing agent.",
+  "sources": [
+    {
+      "id": "curriculum",
+      "title": "量子電腦學程 Q002 課綱",
+      "publisher": "pcpcchen-coder/QuantumComputing",
+      "url": "pcpcchen-coder/QuantumComputing academy/lessons/Q002/lesson.json",
+      "usedFor": "主題、學習目標、動手任務、好玩機制、作品、120 分鐘流程、驗收"
+    },
+    {
+      "id": "op_talk",
+      "title": "如何操作量子電腦（內部技術分享簡報）第 6–8 頁",
+      "publisher": "pcpcchen-coder/QuantumComputing",
+      "url": "pcpcchen-coder/QuantumComputing slides/QC_Operation_Talk.pptx（第 6–8 頁）",
+      "usedFor": "古典位元與量子位元比較、Bloch 球位置、θ 決定機率、φ 在 Z 測量看不見、P(0)=cos²(θ/2)、θ=60° 約 750/1000"
+    },
+    {
+      "id": "bloch",
+      "title": "Bloch sphere",
+      "publisher": "Wikipedia（2026-10-25 版，oldid=1381941389）",
+      "url": "https://en.wikipedia.org/wiki/Bloch_sphere",
+      "usedFor": "球面上的點對應所有純態；南北極通常選為基底態；θ、φ 參數化；相對兩點是正交態"
+    },
+    {
+      "id": "superposition",
+      "title": "Quantum superposition",
+      "publisher": "Wikipedia（oldid=1383426501）",
+      "url": "https://en.wikipedia.org/wiki/Quantum_superposition",
+      "usedFor": "測量得到 0 或 1 的機率由係數平方決定；疊加不是古典意義的狀態"
+    },
+    {
+      "id": "scene",
+      "title": "3D 場景 1：量子位元的狀態與測量",
+      "publisher": "pcpcchen-coder/QuantumComputing",
+      "url": "pcpcchen-coder/QuantumComputing animations/operation.html#qubit",
+      "usedFor": "θ、φ 滑桿、預設位置按鈕、一次跑 1000 次測量"
+    }
+  ],
+  "notVerified": [
+    "「比較好的說法」是教學上的說法選擇；維基百科本身寫的是 superposition of both states，並引用 Dirac 說明疊加不是古典概念",
+    "「晶片裡沒有真的箭頭」只對超導量子位元成立；電子自旋的布洛赫向量對應空間中的方向",
+    "課綱的三組 YouTube 搜尋入口本次未挑選或觀看"
+  ]
+}

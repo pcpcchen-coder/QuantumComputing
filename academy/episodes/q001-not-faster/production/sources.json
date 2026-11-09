@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q001",
+  "checkedAt": "2026-11-07",
+  "method": "Claims mapped to primary papers and the author PDFs of two Scott Aaronson articles; a research sub-agent fetched the pages and returned verbatim quotes (production/source-notes.md). Repo slides were read by the producing agent.",
+  "sources": [
+    {
+      "id": "curriculum",
+      "title": "量子電腦學程 Q001 課綱",
+      "publisher": "pcpcchen-coder/QuantumComputing",
+      "url": "pcpcchen-coder/QuantumComputing academy/lessons/Q001/lesson.json",
+      "usedFor": "主題、學習目標、動手任務、好玩機制、作品、120 分鐘流程、驗收"
+    },
+    {
+      "id": "op_talk",
+      "title": "如何操作量子電腦：設定、計算、讀取與加速原理",
+      "publisher": "pcpcchen-coder/QuantumComputing（內部技術分享簡報）",
+      "url": "pcpcchen-coder/QuantumComputing slides/QC_Operation_Talk.pptx（第 3–4、8、36–37、42、45 頁）",
+      "usedFor": "測量只得到一個結果、三個資源（疊加、干涉、糾纏）、常見誤解、加速等級、不會變快的事"
+    },
+    {
+      "id": "aaronson_limits",
+      "title": "The Limits of Quantum Computers",
+      "publisher": "Scott Aaronson, Scientific American (March 2008), author PDF",
+      "url": "https://www.scottaaronson.com/papers/limitsam.pdf",
+      "usedFor": "量子電腦不是同時試所有答案；加速靠干涉，只對特殊結構的問題"
+    },
+    {
+      "id": "aaronson_qml",
+      "title": "Read the fine print",
+      "publisher": "Scott Aaronson, Nature Physics 11, 291–293 (2015), author PDF",
+      "url": "https://www.scottaaronson.com/papers/qml.pdf",
+      "usedFor": "把大量古典資料載入量子態本身很花時間，可能吃掉加速"
+    },
+    {
+      "id": "shor",
+      "title": "Polynomial-Time Algorithms for Prime Factorization and Discrete Logarithms on a Quantum Computer",
+      "publisher": "Peter W. Shor, arXiv:quant-ph/9508027",
+      "url": "https://arxiv.org/abs/quant-ph/9508027",
+      "usedFor": "量子電腦可在多項式時間分解大數；古典沒有已知的有效方法"
+    },
+    {
+      "id": "grover",
+      "title": "A fast quantum mechanical algorithm for database search",
+      "publisher": "Lov K. Grover, arXiv:quant-ph/9605043",
+      "url": "https://arxiv.org/abs/quant-ph/9605043",
+      "usedFor": "無序搜尋約 √N 步，古典平均約 N/2 步"
+    },
+    {
+      "id": "preskill",
+      "title": "Quantum computing 40 years later",
+      "publisher": "John Preskill, arXiv:2106.10522",
+      "url": "https://arxiv.org/abs/2106.10522",
+      "usedFor": "費曼 1981 年演講提出用量子系統模擬量子物理"
+    },
+    {
+      "id": "workflow",
+      "title": "3D 場景 12：完整流程",
+      "publisher": "pcpcchen-coder/QuantumComputing animations/operation.html",
+      "url": "pcpcchen-coder/QuantumComputing animations/operation.html#workflow",
+      "usedFor": "課後打開三維動畫，看一次量子計算從程式到結果"
+    }
+  ],
+  "notVerified": [
+    "「一百萬筆約不到一千次」由 (π/4)√N ≈ 785 推算，Grover 原文寫的是 O(√N)",
+    "「快非常多」是對超多項式差距的口語說法，沒有給具體倍數",
+    "課綱的三組 YouTube 搜尋入口本次未挑選或觀看"
+  ]
+}
