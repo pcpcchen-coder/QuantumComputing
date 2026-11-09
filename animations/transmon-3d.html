@@ -601,36 +601,65 @@ nav.chapters {
   const ghostLabel = bTag("反例路徑", 0, 0, "mono small red");
 
   // =====================================================================
+  // 第 7 章：振幅長條——糾纏與 Grover 搜尋（兩顆位元，|q1 q2⟩，索引 = 2·q1 + q2）
+  // =====================================================================
+  const G7X = -44, G7Z = -44, S7 = 2.4;        // S7：振幅 1 對應的長條高度
+  const g7 = new THREE.Group(); g7.position.set(G7X, 0, G7Z); scene.add(g7);
+  const BX = [-3.6, -1.2, 1.2, 3.6], BASIS = ["00", "01", "10", "11"];
+  // 刻度線
+  [-1, -0.5, 0, 0.5, 1].forEach(v => g7.add(lineFrom([V(-4.9, v * S7, -0.6), V(4.9, v * S7, -0.6)], v === 0 ? COL.white : COL.muted, v === 0 ? 0.55 : 0.25)));
+  g7.add(lineFrom([V(-4.9, 0, 0.5), V(4.9, 0, 0.5)], COL.white, 0.4));
+  const barMat = BX.map(() => new THREE.MeshStandardMaterial({ color: COL.gold, roughness: 0.35, metalness: 0.25, emissive: new THREE.Color(COL.gold), emissiveIntensity: 0.15 }));
+  const bars = BX.map((x, k) => { const m = new THREE.Mesh(new THREE.BoxGeometry(1.2, 1, 0.8), barMat[k]); m.position.set(x, 0, 0); g7.add(m); return m; });
+  const meanMat = new THREE.MeshBasicMaterial({ color: COL.gold, transparent: true, opacity: 0, depthWrite: false });
+  const meanLine = new THREE.Mesh(new THREE.BoxGeometry(9.8, 0.05, 0.05), meanMat); meanLine.position.z = 0.48; g7.add(meanLine);
+  // 電路圖（畫在 canvas 上，當貼圖）
+  const cvs = document.createElement("canvas"); cvs.width = 1200; cvs.height = 280;
+  const cctx = cvs.getContext("2d");
+  const circTex = new THREE.CanvasTexture(cvs); circTex.encoding = THREE.sRGBEncoding; circTex.anisotropy = 4;
+  const circuitP = new THREE.Mesh(new THREE.PlaneGeometry(8.6, 8.6 * 280 / 1200), new THREE.MeshBasicMaterial({ map: circTex, transparent: true, depthWrite: false }));
+  circuitP.position.set(0.4, 4.55, -1.0); circuitP.rotation.x = -0.12; g7.add(circuitP);
+  // 標籤
+  const gTag = (t, p, cls = "") => tag(t, new THREE.Vector3(...p).add(g7.position), [6], cls);
+  [["+1", 1], ["+½", 0.5], ["0", 0], ["−½", -0.5], ["−1", -1]].forEach(([t, v]) => gTag(t, [-5.35, v * S7, -0.6], "flat mono small detail"));
+  BX.forEach((x, k) => gTag(`|${BASIS[k]}⟩`, [x, -S7 - 0.5, 0.4], "flat mono"));
+  const ampTags = BX.map(x => gTag("", [x, 0, 0.45], "flat mono small"));
+  const meanTag = gTag("平均", [5.45, 0, 0.48], "flat mono small gold");
+  const ansTag = gTag("★ 答案", [0, -S7 - 0.95, 0.4], "flat mono small gold");
+  const entTags = [0, 1, 2].map(i => gTag("", [5.75, 2.55 - i * 0.5, 0], "flat mono small" + (i === 2 ? "" : " detail")));
+  gTag("振幅（高度，可正可負）；機率 = 振幅²", [0, S7 + 0.55, -0.6], "flat small detail");
+
+  // =====================================================================
   // 章節定義
   // =====================================================================
   const CH = [
-    { id: "chip", short: "晶片", kicker: "第 1 章 / 6", title: "一顆 transmon 的俯視圖",
+    { id: "chip", short: "晶片", kicker: "第 1 章 / 7", title: "一顆 transmon 的俯視圖",
       target: [0, -0.6, 0.6], pos: [8.5, 13.5, 15],
       html: `<p>灰色是<b>接地面</b>，深色細縫是蝕刻掉金屬、露出基板的間隙。中央的<b>十字金屬板</b>就是 transmon 的大電容，下端經由 <b>SQUID</b>（兩個約瑟夫森結）接地。</p>
       <p>三條線各司其職：<b>XY 線</b>送微波脈衝控制狀態，<b>Z 線</b>送磁通調頻率，蜿蜒的<b>讀取共振腔</b>透過饋線把狀態讀出來。</p>
       <dl class="stats"><dt>電容 C_Σ</dt><dd>≈ 77.5 fF</dd><dt>充電能 E_C/h</dt><dd>250 MHz</dd><dt>約瑟夫森能 E_J/h</dt><dd>15 GHz</dd><dt>實際尺寸</dt><dd>數百 μm（示意，未按比例）</dd></dl>
       <div class="controls"><button class="btn primary" id="c1pulse" type="button">送出 π 脈衝</button><label class="check"><input type="checkbox" id="c1tags" checked> 顯示標籤</label></div>
       <p class="note">送出脈衝後，十字板發出金光代表位元被激發到 |1⟩，之後依 T₁ 慢慢衰減回 |0⟩。</p>` },
-    { id: "junction", short: "約瑟夫森結", kicker: "第 2 章 / 6", title: "約瑟夫森結：非線性電感的本體",
+    { id: "junction", short: "約瑟夫森結", kicker: "第 2 章 / 7", title: "約瑟夫森結：非線性電感的本體",
       target: [JX + 0.3, 1.0, 0], pos: [JX + 4.5, 6.2, 12],
       html: `<p>下層 Al、中間 1–2 nm 的 AlOx、上層 Al。兩邊的超導波函數（後方截面圖）在絕緣層裡<b>指數衰減並重疊</b>，庫柏對因此能穿隧過去。</p>
       <p>拖動相位差 φ：電流 <b>I = I_c sin φ</b>，等效電感 <b>L_J = L_J0 / cos φ</b>。勾選「施加電壓」時 φ 以 2eV/ħ 的速率轉動，電流變成交流。</p>
       <dl class="stats"><dt>相位差 φ</dt><dd id="r2phi">—</dd><dt>電流 I / I_c</dt><dd id="r2I">—</dd><dt>電感 L_J / L_J0</dt><dd id="r2L">—</dd><dt>L_J0（I_c ≈ 30 nA）</dt><dd>≈ 10.9 nH</dd></dl>
       <div class="controls"><label class="row" for="c2phi">φ <input type="range" id="c2phi" min="0" max="180" step="1" value="35"></label><label class="check"><input type="checkbox" id="c2v"> 施加電壓 V ≠ 0（交流約瑟夫森效應）</label></div>` },
-    { id: "potential", short: "位能井", kicker: "第 3 章 / 6", title: "cos 位能井：能階不再等距",
+    { id: "potential", short: "位能井", kicker: "第 3 章 / 7", title: "cos 位能井：能階不再等距",
       target: [PX + 2.2, 3.6, 0], pos: [PX + 2.6, 5.2, 20],
       html: `<p>JJ 的位能是 <b>−E_J cos φ</b>（銅色），線性電感是<b>拋物線</b>（灰色）。cos 井的邊緣比拋物線平坦，量子化後能階<b>越往上越密</b>。</p>
       <p>右邊的單擺有完全相同的位能形狀。E_J/E_C = 60 時，相位擾動只有約 0.43 rad，所以只「有一點點」不簡諧。</p>
       <dl class="stats" id="r3"></dl>
       <div class="controls" role="group" aria-label="比較"><button class="btn" id="c3tr" type="button" aria-pressed="true">Transmon 能階</button><button class="btn" id="c3lc" type="button" aria-pressed="false">線性 LC 能階</button></div>` },
-    { id: "control", short: "操控", kicker: "第 4 章 / 6", title: "用微波轉動布洛赫球",
+    { id: "control", short: "操控", kicker: "第 4 章 / 7", title: "用微波轉動布洛赫球",
       target: [-1.6, 0.6, BZ], pos: [3.5, 4.5, BZ + 13.5],
       html: `<p><b>|0⟩、|1⟩</b> 是 cos 井最低的兩個能階。以 <b>f₀₁ = 5.21 GHz</b> 的微波脈衝驅動，狀態在布洛赫球上繞 X 或 Y 軸旋轉（Rabi 振盪）。</p>
       <p>|1⟩→|2⟩ 的頻率低了 283 MHz，所以同一道微波不會把狀態推上 |2⟩。實務上脈衝長 20–50 ns，並用 DRAG 整形進一步抑制洩漏。</p>
       <dl class="stats"><dt>P(|1⟩)</dt><dd id="r4p">0.000</dd></dl>
       <div class="meter" aria-hidden="true"><i id="r4bar"></i></div>
       <div class="controls" style="margin-top:12px"><button class="btn primary" id="c4xpi" type="button">X 軸 π</button><button class="btn" id="c4xh" type="button">X 軸 π/2</button><button class="btn" id="c4yh" type="button">Y 軸 π/2</button><button class="btn" id="c4r" type="button">重設 |0⟩</button></div>` },
-    { id: "readout", short: "讀取", kicker: "第 5 章 / 6", title: "色散讀取：從頻移讀出狀態",
+    { id: "readout", short: "讀取", kicker: "第 5 章 / 7", title: "色散讀取：從頻移讀出狀態",
       target: [-0.4, 2.0, -4.6], pos: [1.0, 7.0, 7.6],
       html: `<p>量子位元與 7 GHz 共振腔失諧約 1.8 GHz，兩者不直接交換能量，但共振腔頻率會依位元狀態偏移 <b>χ/2π ≈ ±0.77 MHz</b>。</p>
       <p>在兩個頻率中間送入探測微波，反射訊號的相位因狀態而不同，在 <b>IQ 平面</b>上落在兩個點群。量測結果依第 4 章的機率隨機出現，量測後狀態塌縮。</p>
@@ -638,7 +667,7 @@ nav.chapters {
       <div class="controls"><button class="btn primary" id="c5m" type="button">量測一次</button><button class="btn" id="c5m20" type="button">量測 20 次</button><button class="btn" id="c5plus" type="button">準備疊加態</button><button class="btn" id="c5one" type="button">準備 |1⟩</button></div>
       <div class="hist" style="margin-top:12px"><span>結果 0：<b id="h0">0</b></span><span>結果 1：<b id="h1">0</b></span></div>
       <p class="note">「量測 20 次」每次都先重新準備同一個疊加態，所以統計會接近 P(|1⟩)。</p>` },
-    { id: "case", short: "案例", kicker: "第 6 章 / 6", title: "案例：三顆可調 transmon 的頻率配置",
+    { id: "case", short: "案例", kicker: "第 6 章 / 7", title: "案例：三顆可調 transmon 的頻率配置",
       target: [0.6, 2.3, CZ0 - 1.2], pos: [1.2, 12.2, CZ0 + 16.0],
       html: `<p>把前五章串起來：<b>XY 線寫入狀態、SQUID＋Z 線決定頻率</b>，再看多顆位元放在一起時，頻率要怎麼排才不會互相碰撞。動畫會邊演示邊在左上方跳出說明。</p>
       <div class="steps" id="c6steps" role="group" aria-label="步驟"></div>
@@ -647,9 +676,18 @@ nav.chapters {
       <dl class="stats"><dt style="color:${QHEX[0]}">Q1</dt><dd id="c6q0">—</dd><dt style="color:${QHEX[1]}">Q2</dt><dd id="c6q1">—</dd><dt style="color:${QHEX[2]}">Q3</dt><dd id="c6q2">—</dd></dl>
       <div class="col-list" id="c6col"></div>
       <p class="note">各欄依序是 f₀₁、Z 線磁通 Φ、激發機率 P(|1⟩)。碰撞判定窗與串擾比例為示意值；頻率由 f₀₁ ≈ √(8E_J E_C) − E_C 與 E_J(Φ) = E_J,max|cos(πΦ/Φ₀)| 計算。</p>` },
+    { id: "grover", short: "振幅長條", kicker: "第 7 章 / 7", title: "振幅長條：糾纏與 Grover 搜尋",
+      target: [G7X - 0.6, 1.75, G7Z], pos: [G7X + 0.2, 4.9, G7Z + 16.5],
+      html: `<p>兩顆位元有四個振幅 |00⟩、|01⟩、|10⟩、|11⟩。長條<b>高度是振幅（可正可負）</b>，機率是振幅的平方。上方電路圖高亮的是正在送的閘，左上方字幕說明對應的硬體脈衝。</p>
+      <div class="steps" id="g7steps" role="group" aria-label="步驟"></div>
+      <div class="controls"><button class="btn" id="g7prev" type="button">◀ 上一步</button><button class="btn" id="g7play" type="button">暫停</button><button class="btn" id="g7re" type="button">重播</button><button class="btn primary" id="g7next" type="button">下一步 ▶</button><label class="check"><input type="checkbox" id="g7auto" checked> 自動接續</label></div>
+      <h3 id="g7title"></h3><div id="g7body"></div><div id="g7extra"></div>
+      <dl class="stats"><dt>a₀₀ · a₁₁</dt><dd id="g7p1">—</dd><dt>a₀₁ · a₁₀</dt><dd id="g7p2">—</dd><dt>判定</dt><dd id="g7ent">—</dd></dl>
+      <div id="g7hist"></div>
+      <p class="note">糾纏判定：兩者相等就能拆成兩顆各自的狀態（乘積態），不相等就是糾纏。糾纏度 C = 2|a₀₀a₁₁ − a₀₁a₁₀|，0 為乘積態、1 為最大糾纏。</p>` },
   ];
-  const groupsFor = [[chip], [jj], [pot], [bl], [chip, readout], [cs]];
-  const allGroups = [chip, jj, pot, bl, readout, cs];
+  const groupsFor = [[chip], [jj], [pot], [bl], [chip, readout], [cs], [g7]];
+  const allGroups = [chip, jj, pot, bl, readout, cs, g7];
 
   // ---------- 章節 UI ----------
   const rail = document.getElementById("rail"), panel = document.getElementById("panel");
@@ -673,7 +711,7 @@ nav.chapters {
     view.yaw = 0; view.pitch = 0; view.zoom = 1;
     desired.target.set(...c.target);
     if (!fromHash) { try { history.replaceState(null, "", "#" + c.id); } catch (e) { location.hash = c.id; } }
-    capEl.hidden = i !== 5; capEl.classList.remove("show");
+    capEl.hidden = i !== 5 && i !== 6; capEl.classList.remove("show");
     bindChapter(i);
   }
   function bindChapter(i) {
@@ -716,6 +754,20 @@ nav.chapters {
       };
       $("c6auto").checked = csS.auto; $("c6auto").onchange = e => { csS.auto = e.target.checked; };
       setStep(csS.step);
+    }
+    if (i === 6) {
+      const sp = $("g7steps");
+      G7STEPS.forEach((s, k) => { const b = document.createElement("button"); b.type = "button"; b.textContent = k + 1; b.title = s.name; b.setAttribute("aria-label", `步驟 ${k + 1}：${s.name}`); b.onclick = () => g7Step(k); sp.appendChild(b); });
+      $("g7prev").onclick = () => g7Step(g7S.step - 1);
+      $("g7next").onclick = () => g7Step(g7S.step + 1);
+      $("g7re").onclick = () => g7Step(g7S.step);
+      $("g7play").onclick = () => {
+        const st = G7STEPS[g7S.step];
+        if (!g7S.playing && st.dur && g7S.t >= st.dur) { g7Step(g7S.step); return; }
+        g7S.playing = !g7S.playing; g7UpdPlay();
+      };
+      $("g7auto").checked = g7S.auto; $("g7auto").onchange = e => { g7S.auto = e.target.checked; };
+      g7Step(g7S.step);
     }
   }
   function prepPlus() { queue.length = 0; anim = null; state.set(0, 0, 1); /* Rx(π/2)|0⟩ → −Y 方向（世界 +z） */ trailN = 0; }
@@ -778,10 +830,12 @@ nav.chapters {
     pair(0, 1, false); pair(1, 2, false); pair(0, 2, true);
     return out;
   }
-  function showCaption(text, i, n) {
+  function capShow(k, text) {
     capEl.classList.remove("show"); void capEl.offsetWidth;
-    capK.textContent = `步驟 ${csS.step + 1} / ${STEPS.length} ・ ${STEPS[csS.step].name} ・ ${i + 1}/${n}`;
-    capP.textContent = text; capEl.classList.add("show");
+    capK.textContent = k; capP.textContent = text; capEl.classList.add("show");
+  }
+  function showCaption(text, i, n) {
+    capShow(`步驟 ${csS.step + 1} / ${STEPS.length} ・ ${STEPS[csS.step].name} ・ ${i + 1}/${n}`, text);
   }
 
   const CZHTML = `<dl class="stats"><dt>P(|20⟩)（Q3 在 |2⟩）</dt><dd id="c6p20">0.00</dd><dt>|11⟩ 累積相位</dt><dd id="c6ph">0°</dd></dl><div class="meter" aria-hidden="true"><i id="c6bar"></i></div>`;
@@ -1015,6 +1069,278 @@ nav.chapters {
     if (st.free) syncSliders();
   }
 
+  // =====================================================================
+  // 第 7 章：振幅模擬、閘動畫、電路圖、步驟腳本
+  // =====================================================================
+  const g7S = { step: 0, t: 0, cue: 0, playing: true, auto: true,
+    amp: [1, 0, 0, 0], queue: [], op: null, hist: [0, 0, 0, 0], flash: [0, 0, 0, 0],
+    answer: -1, showMean: false, meanVis: 0, cols: [], done: -1, active: -1, free: false };
+  const R2 = Math.SQRT1_2;
+  const DUR = { H: 1.0, X: 0.9, CZ: 1.0, O: 1.0, D: 2.4, RESET: 0.6 };
+  function g7Apply(a0, op) {
+    const a = a0.slice();
+    const bit = op.q === 0 ? 2 : 1;   // Q1 是高位
+    if (op.t === "H") for (let i = 0; i < 4; i++) if (!(i & bit)) { const x = a[i], y = a[i | bit]; a[i] = R2 * (x + y); a[i | bit] = R2 * (x - y); }
+    if (op.t === "X") for (let i = 0; i < 4; i++) if (!(i & bit)) { const x = a[i]; a[i] = a[i | bit]; a[i | bit] = x; }
+    if (op.t === "CZ") a[3] = -a[3];
+    if (op.t === "O") a[op.w] = -a[op.w];
+    if (op.t === "D") { const m = (a[0] + a[1] + a[2] + a[3]) / 4; for (let i = 0; i < 4; i++) a[i] = 2 * m - a[i]; }
+    if (op.t === "RESET") return [1, 0, 0, 0];
+    return a.map(v => Math.abs(v) < 1e-12 ? 0 : v);
+  }
+  const g7Push = (...ops) => g7S.queue.push(...ops);
+  const H = (q, col) => ({ t: "H", q, col }), Xg = (q, col) => ({ t: "X", q, col }), CZg = col => ({ t: "CZ", col });
+  const Og = (w, col) => ({ t: "O", w, col }), Dg = col => ({ t: "D", col }), Mg = (n, col) => ({ t: "M", n, col });
+  const probs = a => a.map(v => v * v);
+
+  // 電路圖：欄位 {g:[q1,q2]} 單位元閘、{cz:1}、{blk:"擴散"} 兩位元方塊、{m:1} 量測
+  const C_BELL = [{ g: ["H", "H"] }, { cz: 1 }, { g: [null, "H"] }, { m: 1 }];
+  const C_GROV = [{ g: ["H", "H"] }, { g: [null, "X"] }, { cz: 1 }, { g: [null, "X"] }, { blk: "擴散" }, { m: 1 }];
+  const C_OVER = [{ g: ["H", "H"] }, { blk: "Oracle" }, { blk: "擴散" }, { blk: "Oracle" }, { blk: "擴散" }, { m: 1 }];
+  let circKey = "";
+  function drawCircuit() {
+    const S = g7S, key = JSON.stringify([S.cols, S.done, S.active]);
+    if (key === circKey) return; circKey = key;
+    const c = cctx, W = 1200, Hh = 280;
+    c.clearRect(0, 0, W, Hh);
+    c.fillStyle = "rgba(14,18,25,0.86)"; c.strokeStyle = "rgba(232,235,240,0.14)"; c.lineWidth = 2;
+    c.beginPath(); c.roundRect ? c.roundRect(2, 2, W - 4, Hh - 4, 18) : c.rect(2, 2, W - 4, Hh - 4); c.fill(); c.stroke();
+    const yQ = [105, 205], x0 = 150, n = Math.max(S.cols.length, 1), dx = Math.min(150, (W - 60 - x0) / n);
+    c.fillStyle = "#98a1b0"; c.font = "500 22px 'Noto Sans TC', sans-serif"; c.textBaseline = "middle"; c.textAlign = "left";
+    c.fillText("電路", 28, 40);
+    c.font = "600 26px 'JetBrains Mono', monospace";
+    yQ.forEach((y, q) => { c.fillStyle = "#cfd5de"; c.fillText(`Q${q + 1}`, 28, y); c.strokeStyle = "rgba(232,235,240,0.45)"; c.beginPath(); c.moveTo(90, y); c.lineTo(W - 30, y); c.stroke(); });
+    const style = i => i === S.active ? { f: "#d6b04a", s: "#d6b04a", t: "#17140a" } : i <= S.done ? { f: "#1d2430", s: "#cfd5de", t: "#e8ebf0" } : { f: "#12161d", s: "rgba(152,161,176,0.45)", t: "rgba(152,161,176,0.7)" };
+    const boxAt = (x, y, w, h, st, label, font) => {
+      c.fillStyle = st.f; c.strokeStyle = st.s; c.lineWidth = 2.5;
+      c.beginPath(); c.roundRect ? c.roundRect(x - w / 2, y - h / 2, w, h, 8) : c.rect(x - w / 2, y - h / 2, w, h); c.fill(); c.stroke();
+      c.fillStyle = st.t; c.font = font; c.textAlign = "center"; c.fillText(label, x, y + 1);
+    };
+    S.cols.forEach((col, i) => {
+      const x = x0 + dx * (i + 0.5), st = style(i), mono = "700 30px 'JetBrains Mono', monospace";
+      if (col.g) col.g.forEach((g, q) => { if (g) boxAt(x, yQ[q], 62, 58, st, g, mono); });
+      if (col.cz) {
+        c.strokeStyle = st.s; c.fillStyle = st.s === "#d6b04a" ? "#d6b04a" : st.t; c.lineWidth = 4;
+        c.beginPath(); c.moveTo(x, yQ[0]); c.lineTo(x, yQ[1]); c.stroke();
+        yQ.forEach(y => { c.beginPath(); c.arc(x, y, 11, 0, Math.PI * 2); c.fill(); });
+        c.font = "600 20px 'JetBrains Mono', monospace"; c.textAlign = "center"; c.fillText("CZ", x, yQ[1] + 40);
+      }
+      if (col.blk) boxAt(x, (yQ[0] + yQ[1]) / 2, Math.min(dx - 14, 118), 150, st, col.blk, "700 24px 'Noto Sans TC', sans-serif");
+      if (col.m) yQ.forEach(y => {
+        boxAt(x, y, 62, 58, st, "", mono);
+        c.strokeStyle = st.t; c.lineWidth = 2.5; c.beginPath(); c.arc(x, y + 12, 18, Math.PI * 1.15, Math.PI * 1.85); c.stroke();
+        c.beginPath(); c.moveTo(x, y + 12); c.lineTo(x + 12, y - 12); c.stroke();
+      });
+    });
+    circTex.needsUpdate = true;
+  }
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => { circKey = ""; });
+
+  const G7STEPS = [
+    { name: "糾纏", title: "① 糾纏：CZ 只翻一個負號", circuit: C_BELL,
+      body: `<p>兩顆都做 H 之後，四個振幅都是 +½，這時 a₀₀·a₁₁ = a₀₁·a₁₀，可以拆成兩顆各自的狀態（<b>乘積態</b>）。</p>
+      <p>CZ（Z 線磁通脈衝）只把 |11⟩ 翻成負號，四個機率都沒變，但等式不再成立：兩顆位元<b>糾纏</b>了。Q2 再做一次 H，就得到 <b>Bell 態 (|00⟩+|11⟩)/√2</b>：單看一顆是 50/50 隨機，兩顆一起看永遠相同。</p>`,
+      setup() { g7Reset([1, 0, 0, 0]); g7S.answer = -1; },
+      cues: [
+        [0.3, "四根長條是 |00⟩、|01⟩、|10⟩、|11⟩ 的振幅；機率是振幅的平方。一開始全部在 |00⟩。"],
+        [4.5, "兩顆都做 H（XY 線各送一個 π/2 脈衝）：四個振幅都變成 +½，各 25%。", () => g7Push(H(0, 0), H(1, 0))],
+        [9.5, "這時還是乘積態：a₀₀·a₁₁ = a₀₁·a₁₀ = ¼（右側面板）。"],
+        [13.5, "送 CZ（Z 線磁通脈衝）：只有 |11⟩ 翻成負號，四個機率一個都沒變……", () => g7Push(CZg(1))],
+        [18, "……但 a₀₀·a₁₁ = −¼ ≠ a₀₁·a₁₀ = ¼：拆不開了，兩顆位元糾纏在一起（C = 1）。"],
+        [23, "Q2 再做一次 H：得到 Bell 態 (|00⟩ + |11⟩)/√2。", () => g7Push(H(1, 2))],
+        [27.5, "量測 40 次（每次都重跑電路）：只會出現 00 或 11。單看一顆隨機，兩顆一起看永遠相同。", () => g7Push(Mg(40, 3))],
+      ], dur: 36 },
+    { name: "Grover 題目", title: "② Grover：四個選項，只查詢一次", circuit: C_GROV,
+      body: `<p>四個選項 00、01、10、11 裡藏著一個答案（★ 10）。我們有一個只會回答「是／不是」的檢查器（oracle）。</p>
+      <p><b>古典做法</b>最壞要檢查 3 次、平均 2.25 次；<b>Grover</b> 只查詢 1 次就能 100% 找到。第一步和前面一樣：兩顆都做 H，進入均勻疊加。</p>`,
+      setup() { g7Reset([1, 0, 0, 0]); g7S.answer = 2; },
+      cues: [
+        [0.3, "新題目：四個選項裡藏著一個答案（★ 10）。古典做法最壞要檢查 3 次。"],
+        [5, "Grover 只查詢一次。第一步一樣是兩顆都做 H：均勻疊加，每個選項 25%。", () => g7Push(H(0, 0), H(1, 0))],
+        [10, "這時直接量測，只是隨機猜一個：光有疊加沒有用，接下來要靠相位與干涉。"],
+      ], dur: 15 },
+    { name: "Oracle", title: "③ Oracle：把答案的振幅翻成負號", circuit: C_GROV,
+      body: `<p>Oracle 的工作是「答案的振幅變號，其他不動」。硬體上 CZ 只會翻 |11⟩，所以要標記 10，就在 CZ 前後各對 Q2 做一次 X（翻轉）。</p>
+      <p>標記完成後機率仍然各 25%，直接量看不出差別，但答案已經寫進相位了。這一刻兩顆位元是<b>糾纏</b>的。</p>`,
+      setup() { g7Reset([0.5, 0.5, 0.5, 0.5], 0); g7S.answer = 2; },
+      cues: [
+        [0.3, "CZ 只會翻 |11⟩，所以先對 Q2 做 X：|10⟩ 和 |11⟩ 交換位置（均勻疊加看起來沒變）。", () => g7Push(Xg(1, 1))],
+        [5, "送 CZ（Z 線磁通脈衝）：|11⟩ 翻成負號……", () => g7Push(CZg(2))],
+        [9.5, "再對 Q2 做一次 X，換回來：負號從 |11⟩ 移到 |10⟩，答案被標記了。", () => g7Push(Xg(1, 3))],
+        [14.5, "機率仍然各 25%，直接量看不出來；但 a₀₀·a₁₁ ≠ a₀₁·a₁₀，此刻兩顆位元是糾纏的。"],
+      ], dur: 19.5 },
+    { name: "擴散", title: "④ 擴散：對平均值翻轉", circuit: C_GROV,
+      body: `<p>金色橫線是四個振幅的平均：(½ + ½ − ½ + ½)/4 = <b>¼</b>。擴散把每個振幅以平均線為鏡子翻過去：<b>新振幅 = 2 × 平均 − 原振幅</b>。</p>
+      <p>非答案：2×¼ − ½ = 0；答案：2×¼ + ½ = 1。原本被「挖成洞」的答案，翻過去就變成最高的。電路上是 H⊗H → X⊗X → CZ → X⊗X → H⊗H（差一個整體相位 −1，不影響量測）。</p>`,
+      setup() { g7Reset([0.5, 0.5, -0.5, 0.5], 3); g7S.answer = 2; },
+      cues: [
+        [0.3, "金色橫線是四個振幅的平均：(½ + ½ − ½ + ½)/4 = ¼。", () => { g7S.showMean = true; }],
+        [5, "擴散：每個振幅都以平均線為鏡子翻過去，新振幅 = 2 × 平均 − 原振幅。", () => g7Push(Dg(4))],
+        [10, "三個非答案：2×¼ − ½ = 0；答案：2×¼ + ½ = 1。答案的機率從 25% 變成 100%。"],
+        [15, "電路上，擴散是 H⊗H → X⊗X → CZ → X⊗X → H⊗H：又用到一次 CZ。"],
+      ], dur: 20 },
+    { name: "量測", title: "⑤ 量測：答案一次就出現", circuit: C_GROV,
+      body: `<p>每個 shot 都重跑一次整個電路（約 0.5 μs，遠短於 T₁），再讀取兩顆位元。理想情況下每次都是 <b>10</b>。</p>
+      <p>整個演算法只用了一次 oracle、2 個 CZ。實機上 CZ 和讀取都有誤差，所以 10 不會剛好 100%，但會明顯突出；跑很多 shot 就是為了在雜訊中確認這件事。</p>`,
+      setup() { g7Reset([0, 0, 1, 0], 4); g7S.answer = 2; },
+      cues: [
+        [0.3, "量測 50 次：每個 shot 都重跑一次整個電路（約 0.5 μs），結果都是 10。", () => g7Push(Mg(50, 5))],
+        [6, "只用了一次 oracle、2 個 CZ。實機上有閘與讀取誤差，10 不會剛好 100%，但會明顯突出。"],
+      ], dur: 12 },
+    { name: "轉過頭", title: "⑥ 再多做一次：轉過頭了", circuit: C_OVER,
+      body: `<p>如果再做一次 Oracle + 擴散：答案先變成 −1，平均變成 −¼，翻轉後四個振幅都是 −½，又回到各 25%。</p>
+      <p>N 個選項大約要做 <b>(π/4)√N</b> 次。N = 4 時剛好 1 次就是 100%；N 更大時要算準次數，<b>做太多反而會變差</b>。</p>`,
+      setup() { g7Reset([0, 0, 1, 0], 2); g7S.answer = 2; },
+      cues: [
+        [0.3, "如果再多做一次 Oracle + 擴散呢？先標記：答案變成 −1。", () => g7Push(Og(2, 3))],
+        [5, "平均變成 −¼，再對平均翻轉……", () => { g7S.showMean = true; g7Push(Dg(4)); }],
+        [10.5, "四個振幅都變成 −½：又回到各 25%，轉過頭了！"],
+        [14.5, "N 個選項要做約 (π/4)√N 次，N = 4 時剛好 1 次。量 40 次看看：又變成隨機了。", () => g7Push(Mg(40, 5))],
+      ], dur: 22 },
+    { name: "自由實驗", title: "⑦ 換你操作", free: true,
+      body: `<p>選一個答案後按「一鍵 Grover」，或自己一個一個送閘，觀察振幅、平均線和糾纏判定怎麼變。可以試試：</p>
+      <p>・H₁ → H₂ → CZ：最大糾纏。・H₁ → CZ：不會糾纏（為什麼？Q2 還在 |0⟩）。・一鍵 Grover 之後再按 Oracle、擴散：轉過頭。</p>`,
+      extra: `<div class="controls" style="margin:8px 0 4px" role="group" aria-label="選答案"><span class="qn" style="width:auto;color:var(--muted)">答案</span>${BASIS.map((b, k) => `<button class="btn" type="button" data-ans="${k}" aria-pressed="false">${b}</button>`).join("")}</div>
+      <div class="controls" style="margin:6px 0"><button class="btn" type="button" data-op="H0">H₁</button><button class="btn" type="button" data-op="H1">H₂</button><button class="btn" type="button" data-op="X0">X₁</button><button class="btn" type="button" data-op="X1">X₂</button><button class="btn" type="button" data-op="CZ">CZ</button><button class="btn" type="button" data-op="O">Oracle</button><button class="btn" type="button" data-op="D">擴散</button></div>
+      <div class="controls" style="margin:6px 0 10px"><button class="btn primary" type="button" id="g7run">一鍵 Grover</button><button class="btn" type="button" id="g7meas">量測 50 次</button><button class="btn" type="button" id="g7reset">重設 |00⟩</button></div>`,
+      setup() { g7Reset([1, 0, 0, 0]); g7S.answer = 2; g7S.free = true; },
+      cues: [[0.3, "換你操作：選答案後按「一鍵 Grover」，或自己一個一個送閘。"]], dur: 0 },
+  ];
+
+  function g7Reset(amp, done = -1) {
+    const S = g7S; S.amp = amp.slice(); S.queue.length = 0; S.op = null; S.hist = [0, 0, 0, 0]; S.flash = [0, 0, 0, 0];
+    S.showMean = false; S.done = done; S.active = -1; S.free = false;
+  }
+  function g7Step(i) {
+    i = Math.max(0, Math.min(G7STEPS.length - 1, i));
+    const S = g7S; S.step = i; S.t = 0; S.cue = 0; S.playing = true;
+    const st = G7STEPS[i];
+    st.setup(); S.cols = st.circuit ? st.circuit.slice() : [];
+    capEl.classList.remove("show");
+    if (cur === 6) {
+      $("g7title").textContent = st.title; $("g7body").innerHTML = st.body; $("g7extra").innerHTML = st.extra || "";
+      [...$("g7steps").children].forEach((b, k) => b.setAttribute("aria-current", k === i ? "true" : "false"));
+      if (st.free) g7BindFree();
+    }
+    g7UpdPlay();
+  }
+  function g7UpdPlay() {
+    const b = $("g7play"); if (!b) return;
+    const st = G7STEPS[g7S.step], done = st.dur && g7S.t >= st.dur;
+    b.textContent = g7S.playing ? "暫停" : done ? "再看一次" : "播放";
+    b.disabled = !!st.free; $("g7prev").disabled = g7S.step === 0; $("g7next").disabled = g7S.step === G7STEPS.length - 1;
+  }
+  // 自由模式：每按一次就在電路圖尾端加一欄
+  function g7FreeOp(kind) {
+    const S = g7S;
+    if (S.cols.length >= 10) { S.cols = []; S.done = -1; }
+    const col = S.cols.length;
+    if (kind === "H0" || kind === "H1" || kind === "X0" || kind === "X1") { const q = +kind[1], g = [null, null]; g[q] = kind[0]; S.cols.push({ g }); g7Push(kind[0] === "H" ? H(q, col) : Xg(q, col)); }
+    if (kind === "CZ") { S.cols.push({ cz: 1 }); g7Push(CZg(col)); }
+    if (kind === "O") { S.cols.push({ blk: "Oracle" }); g7Push(Og(S.answer, col)); }
+    if (kind === "D") { S.cols.push({ blk: "擴散" }); S.showMean = true; g7Push(Dg(col)); }
+    if (kind === "M") { S.cols.push({ m: 1 }); g7Push(Mg(50, col)); }
+  }
+  function g7BindFree() {
+    const S = g7S;
+    const markAns = () => document.querySelectorAll("[data-ans]").forEach(b => b.setAttribute("aria-pressed", +b.dataset.ans === S.answer ? "true" : "false"));
+    document.querySelectorAll("[data-ans]").forEach(b => { b.onclick = () => { S.answer = +b.dataset.ans; markAns(); }; });
+    document.querySelectorAll("[data-op]").forEach(b => { b.onclick = () => g7FreeOp(b.dataset.op); });
+    $("g7meas").onclick = () => g7FreeOp("M");
+    $("g7reset").onclick = () => { g7Reset([1, 0, 0, 0]); S.free = true; S.cols = []; };
+    $("g7run").onclick = () => {
+      g7Reset([1, 0, 0, 0]); S.free = true; S.cols = [];
+      const w = S.answer, flips = [w & 2 ? null : 0, w & 1 ? null : 1].filter(v => v !== null);   // oracle：對該位元為 0 的位元夾 X
+      S.cols.push({ g: ["H", "H"] }); g7Push(H(0, 0), H(1, 0));
+      const xcol = () => { const g = [null, null]; flips.forEach(q => g[q] = "X"); return { g }; };
+      let c = 1;
+      if (flips.length) { S.cols.push(xcol()); flips.forEach(q => g7Push(Xg(q, c))); c++; }
+      S.cols.push({ cz: 1 }); g7Push(CZg(c)); c++;
+      if (flips.length) { S.cols.push(xcol()); flips.forEach(q => g7Push(Xg(q, c))); c++; }
+      S.cols.push({ blk: "擴散" }); g7Push({ t: "D", col: c, mean: true }); c++;
+      S.cols.push({ m: 1 }); g7Push(Mg(50, c));
+    };
+    markAns();
+  }
+
+  function updateG7(dt) {
+    const S = g7S, st = G7STEPS[S.step];
+    // 時間軸
+    if (S.playing) S.t += dt;
+    while (S.cue < st.cues.length && S.t >= st.cues[S.cue][0]) {
+      const c = st.cues[S.cue];
+      capShow(`步驟 ${S.step + 1} / ${G7STEPS.length} ・ ${st.name} ・ ${S.cue + 1}/${st.cues.length}`, c[1]);
+      if (c[2]) c[2](); S.cue++;
+    }
+    capBar.style.width = (st.dur ? Math.min(100, S.t / st.dur * 100) : 100).toFixed(1) + "%";
+    if (st.dur && S.playing && S.t >= st.dur) {
+      if (S.auto && S.step < G7STEPS.length - 1) { g7Step(S.step + 1); return; }
+      S.playing = false; g7UpdPlay();
+    }
+
+    // 閘佇列
+    if (!S.op && S.queue.length) {
+      const op = S.queue.shift();
+      S.op = { op, t: 0, from: S.amp.slice(), to: op.t === "M" ? S.amp.slice() : g7Apply(S.amp, op), shots: 0 };
+      if (op.t === "D") S.showMean = true;
+      S.active = op.col;
+    }
+    let disp = S.amp;
+    if (S.op) {
+      const o = S.op; o.t += dt;
+      if (o.op.t === "M") {
+        const want = Math.min(o.op.n, Math.floor(o.t * 20));
+        const p = probs(S.amp);
+        while (o.shots < want) {
+          let r = Math.random(), k = 0; while (k < 3 && r >= p[k]) { r -= p[k]; k++; }
+          S.hist[k]++; S.flash[k] = 1; o.shots++;
+        }
+        if (o.shots >= o.op.n && o.t > o.op.n / 20 + 0.3) { S.op = null; S.done = Math.max(S.done, o.op.col); S.active = -1; }
+      } else {
+        const d = DUR[o.op.t] || 1, lead = o.op.t === "D" ? 0.7 : 0;   // 擴散：先讓平均線出現
+        const u = smooth(Math.min(1, Math.max(0, (o.t - lead) / (d - lead))));
+        disp = o.from.map((v, i) => v + (o.to[i] - v) * u);
+        if (o.t >= d) { S.amp = o.to; disp = S.amp; S.op = null; S.done = Math.max(S.done, o.op.col); S.active = -1; }
+      }
+    }
+    if (!S.op && !S.queue.length && S.active !== -1) S.active = -1;
+
+    // 長條
+    const mean = (disp[0] + disp[1] + disp[2] + disp[3]) / 4;
+    S.meanVis += ((S.showMean ? 1 : 0) - S.meanVis) * (1 - Math.exp(-dt * 5));
+    for (let k = 0; k < 4; k++) {
+      const a = disp[k], h = Math.max(0.004, Math.abs(a) * S7);
+      bars[k].scale.y = h; bars[k].position.y = a * S7 / 2;
+      const neg = a < -1e-3, col = neg ? RED : COL.gold;
+      barMat[k].color.setHex(col); barMat[k].emissive.setHex(col);
+      S.flash[k] = Math.max(0, S.flash[k] - dt * 3);
+      barMat[k].emissiveIntensity = 0.15 + 0.7 * S.flash[k] + (k === S.answer ? 0.08 + 0.06 * Math.sin(T * 3) : 0);
+      const t = ampTags[k];
+      const sg = a < -0.005 ? "−" : "+";
+      t.el.textContent = innerWidth < 760 ? `${sg}${Math.abs(a).toFixed(2)}` : `${sg}${Math.abs(a).toFixed(2)} ・ ${(a * a * 100).toFixed(0)}%`;
+      t.pos.set(BX[k], (a >= 0 ? a * S7 + 0.32 : a * S7 - 0.32), 0.45).add(g7.position);
+      t.el.classList.toggle("red", neg);
+    }
+    meanLine.position.y = mean * S7; meanMat.opacity = 0.9 * S.meanVis;
+    meanTag.on = S.meanVis > 0.3; meanTag.el.textContent = `平均 ${mean >= 0 ? "+" : "−"}${Math.abs(mean).toFixed(2)}`;
+    meanTag.pos.set(5.45, mean * S7, 0.48).add(g7.position);
+    ansTag.on = S.answer >= 0 && S.step > 0; ansTag.pos.set(BX[Math.max(0, S.answer)], -S7 - 0.95, 0.4).add(g7.position);
+
+    // 糾纏判定
+    const p1 = disp[0] * disp[3], p2 = disp[1] * disp[2], C = 2 * Math.abs(p1 - p2), ent = C > 0.01;
+    const fmt = v => (v < -0.0005 ? "−" : "+") + Math.abs(v).toFixed(3);
+    entTags[0].el.textContent = `a₀₀·a₁₁ = ${fmt(p1)}`; entTags[1].el.textContent = `a₀₁·a₁₀ = ${fmt(p2)}`;
+    entTags[2].el.textContent = ent ? `→ 糾纏（C = ${C.toFixed(2)}）` : "→ 乘積態"; entTags[2].el.classList.toggle("red", ent); entTags[2].el.classList.toggle("teal", !ent);
+    const e1 = $("g7p1");
+    if (e1) {
+      e1.textContent = fmt(p1); $("g7p2").textContent = fmt(p2);
+      $("g7ent").innerHTML = ent ? `<span style="color:#ef7a73">糾纏（C = ${C.toFixed(2)}）</span>` : `<span style="color:var(--teal)">乘積態（C = 0）</span>`;
+      const n = S.hist.reduce((x, y) => x + y, 0);
+      $("g7hist").innerHTML = `<div class="note" style="margin:0 0 6px">量測結果（${n} 次）</div>` + BASIS.map((b, k) => `<div class="controls" style="flex-wrap:nowrap;margin-bottom:4px"><span class="qn">${b}</span><div class="meter" style="flex:1"><i style="width:${n ? (S.hist[k] / n * 100).toFixed(1) : 0}%;transition:none"></i></div><output>${S.hist[k]}</output></div>`).join("");
+    }
+    drawCircuit();
+  }
+
   // ---------- 相機（拖曳 / 縮放） ----------
   const view = { yaw: 0, pitch: 0, zoom: 1 };
   const desired = { target: new THREE.Vector3() };
@@ -1158,6 +1484,7 @@ nav.chapters {
 
     // 第 6 章：案例
     if (cur === 5) updateCase(dt);
+    if (cur === 6) updateG7(dt);
 
     // 標籤投影
     const w = stage.clientWidth, h = stage.clientHeight;
