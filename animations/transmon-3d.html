@@ -630,36 +630,72 @@ nav.chapters {
   gTag("振幅（高度，可正可負）；機率 = 振幅²", [0, S7 + 0.55, -0.6], "flat small detail");
 
   // =====================================================================
+  // 第 8 章：Shor 演算法——計數暫存器的振幅長條（最多 32 根）
+  // =====================================================================
+  const G8X = 44, G8Z = -44, S8 = 3.4, QMAX = 32;
+  const g8 = new THREE.Group(); g8.position.set(G8X, 0, G8Z); scene.add(g8);
+  g8.add(lineFrom([V(-7.6, 0, 0.45), V(7.6, 0, 0.45)], COL.white, 0.45));
+  [0.25, 0.5, 1].forEach(v => g8.add(lineFrom([V(-7.6, v * S8, -0.45), V(7.6, v * S8, -0.45)], COL.muted, 0.22)));
+  const b8Mat = [], b8 = [], t8Mat = [], t8 = [], h8 = [];
+  for (let i = 0; i < QMAX; i++) {
+    const m = new THREE.MeshStandardMaterial({ color: COL.gold, roughness: 0.35, metalness: 0.25, emissive: new THREE.Color(COL.gold), emissiveIntensity: 0.15 });
+    const bar = new THREE.Mesh(new THREE.BoxGeometry(1, 1, 0.6), m); g8.add(bar); b8Mat.push(m); b8.push(bar);
+    const tm = new THREE.MeshStandardMaterial({ color: COL.teal, roughness: 0.4, metalness: 0.2, emissive: new THREE.Color(COL.teal), emissiveIntensity: 0.35, transparent: true, opacity: 0 });
+    const tile = new THREE.Mesh(new THREE.BoxGeometry(1, 0.32, 0.6), tm); tile.position.y = -0.45; g8.add(tile); t8Mat.push(tm); t8.push(tile);
+    const hb = new THREE.Mesh(new THREE.BoxGeometry(1, 1, 0.12), new THREE.MeshBasicMaterial({ color: COL.teal, transparent: true, opacity: 0.45, depthWrite: false }));
+    hb.position.z = -1.0; g8.add(hb); h8.push(hb);
+  }
+  const brGeo = new THREE.BufferGeometry(); brGeo.setAttribute("position", new THREE.BufferAttribute(new Float32Array((QMAX * 2 + 2) * 3), 3)); brGeo.setDrawRange(0, 0);
+  const bracket = new THREE.LineSegments(brGeo, new THREE.LineBasicMaterial({ color: COL.gold })); g8.add(bracket);
+  const cvs8 = document.createElement("canvas"); cvs8.width = 1400; cvs8.height = 340;
+  const c8 = cvs8.getContext("2d");
+  const tex8 = new THREE.CanvasTexture(cvs8); tex8.encoding = THREE.sRGBEncoding; tex8.anisotropy = 4;
+  const board8 = new THREE.Mesh(new THREE.PlaneGeometry(13, 13 * 340 / 1400), new THREE.MeshBasicMaterial({ map: tex8, transparent: true, depthWrite: false }));
+  board8.position.set(0, 6.0, -1.6); board8.rotation.x = -0.12; g8.add(board8);
+  const g8Tag = (t, p, cls = "") => tag(t, new THREE.Vector3(...p).add(g8.position), [7], cls);
+  const x8Tags = [], f8Tags = [], a8Tags = [];
+  for (let i = 0; i < QMAX; i++) {
+    x8Tags.push(g8Tag(String(i), [0, -1.05, 0.45], "flat mono small"));
+    f8Tags.push(g8Tag("", [0, -0.45, 0.62], "flat mono small"));
+    a8Tags.push(g8Tag("", [0, 0, 0.45], "flat mono small detail"));
+  }
+  g8Tag("x =", [-7.75, -1.05, 0.45], "flat mono small detail");
+  g8Tag("f(x) =", [-7.85, -0.45, 0.62], "flat mono small detail");
+  g8Tag("長條高度＝振幅大小 ｜ 顏色＝相位（金 0°・青 90°・紅 180°・紫 270°）｜ 後方青色＝量測次數", [0, S8 + 0.45, -0.45], "flat small detail");
+  const brTag = g8Tag("", [0, 0, 0.45], "flat mono small gold");
+  const resTag = g8Tag("", [0, 3.0, 0.6], "gold");
+
+  // =====================================================================
   // 章節定義
   // =====================================================================
   const CH = [
-    { id: "chip", short: "晶片", kicker: "第 1 章 / 7", title: "一顆 transmon 的俯視圖",
+    { id: "chip", short: "晶片", kicker: "第 1 章 / 8", title: "一顆 transmon 的俯視圖",
       target: [0, -0.6, 0.6], pos: [8.5, 13.5, 15],
       html: `<p>灰色是<b>接地面</b>，深色細縫是蝕刻掉金屬、露出基板的間隙。中央的<b>十字金屬板</b>就是 transmon 的大電容，下端經由 <b>SQUID</b>（兩個約瑟夫森結）接地。</p>
       <p>三條線各司其職：<b>XY 線</b>送微波脈衝控制狀態，<b>Z 線</b>送磁通調頻率，蜿蜒的<b>讀取共振腔</b>透過饋線把狀態讀出來。</p>
       <dl class="stats"><dt>電容 C_Σ</dt><dd>≈ 77.5 fF</dd><dt>充電能 E_C/h</dt><dd>250 MHz</dd><dt>約瑟夫森能 E_J/h</dt><dd>15 GHz</dd><dt>實際尺寸</dt><dd>數百 μm（示意，未按比例）</dd></dl>
       <div class="controls"><button class="btn primary" id="c1pulse" type="button">送出 π 脈衝</button><label class="check"><input type="checkbox" id="c1tags" checked> 顯示標籤</label></div>
       <p class="note">送出脈衝後，十字板發出金光代表位元被激發到 |1⟩，之後依 T₁ 慢慢衰減回 |0⟩。</p>` },
-    { id: "junction", short: "約瑟夫森結", kicker: "第 2 章 / 7", title: "約瑟夫森結：非線性電感的本體",
+    { id: "junction", short: "約瑟夫森結", kicker: "第 2 章 / 8", title: "約瑟夫森結：非線性電感的本體",
       target: [JX + 0.3, 1.0, 0], pos: [JX + 4.5, 6.2, 12],
       html: `<p>下層 Al、中間 1–2 nm 的 AlOx、上層 Al。兩邊的超導波函數（後方截面圖）在絕緣層裡<b>指數衰減並重疊</b>，庫柏對因此能穿隧過去。</p>
       <p>拖動相位差 φ：電流 <b>I = I_c sin φ</b>，等效電感 <b>L_J = L_J0 / cos φ</b>。勾選「施加電壓」時 φ 以 2eV/ħ 的速率轉動，電流變成交流。</p>
       <dl class="stats"><dt>相位差 φ</dt><dd id="r2phi">—</dd><dt>電流 I / I_c</dt><dd id="r2I">—</dd><dt>電感 L_J / L_J0</dt><dd id="r2L">—</dd><dt>L_J0（I_c ≈ 30 nA）</dt><dd>≈ 10.9 nH</dd></dl>
       <div class="controls"><label class="row" for="c2phi">φ <input type="range" id="c2phi" min="0" max="180" step="1" value="35"></label><label class="check"><input type="checkbox" id="c2v"> 施加電壓 V ≠ 0（交流約瑟夫森效應）</label></div>` },
-    { id: "potential", short: "位能井", kicker: "第 3 章 / 7", title: "cos 位能井：能階不再等距",
+    { id: "potential", short: "位能井", kicker: "第 3 章 / 8", title: "cos 位能井：能階不再等距",
       target: [PX + 2.2, 3.6, 0], pos: [PX + 2.6, 5.2, 20],
       html: `<p>JJ 的位能是 <b>−E_J cos φ</b>（銅色），線性電感是<b>拋物線</b>（灰色）。cos 井的邊緣比拋物線平坦，量子化後能階<b>越往上越密</b>。</p>
       <p>右邊的單擺有完全相同的位能形狀。E_J/E_C = 60 時，相位擾動只有約 0.43 rad，所以只「有一點點」不簡諧。</p>
       <dl class="stats" id="r3"></dl>
       <div class="controls" role="group" aria-label="比較"><button class="btn" id="c3tr" type="button" aria-pressed="true">Transmon 能階</button><button class="btn" id="c3lc" type="button" aria-pressed="false">線性 LC 能階</button></div>` },
-    { id: "control", short: "操控", kicker: "第 4 章 / 7", title: "用微波轉動布洛赫球",
+    { id: "control", short: "操控", kicker: "第 4 章 / 8", title: "用微波轉動布洛赫球",
       target: [-1.6, 0.6, BZ], pos: [3.5, 4.5, BZ + 13.5],
       html: `<p><b>|0⟩、|1⟩</b> 是 cos 井最低的兩個能階。以 <b>f₀₁ = 5.21 GHz</b> 的微波脈衝驅動，狀態在布洛赫球上繞 X 或 Y 軸旋轉（Rabi 振盪）。</p>
       <p>|1⟩→|2⟩ 的頻率低了 283 MHz，所以同一道微波不會把狀態推上 |2⟩。實務上脈衝長 20–50 ns，並用 DRAG 整形進一步抑制洩漏。</p>
       <dl class="stats"><dt>P(|1⟩)</dt><dd id="r4p">0.000</dd></dl>
       <div class="meter" aria-hidden="true"><i id="r4bar"></i></div>
       <div class="controls" style="margin-top:12px"><button class="btn primary" id="c4xpi" type="button">X 軸 π</button><button class="btn" id="c4xh" type="button">X 軸 π/2</button><button class="btn" id="c4yh" type="button">Y 軸 π/2</button><button class="btn" id="c4r" type="button">重設 |0⟩</button></div>` },
-    { id: "readout", short: "讀取", kicker: "第 5 章 / 7", title: "色散讀取：從頻移讀出狀態",
+    { id: "readout", short: "讀取", kicker: "第 5 章 / 8", title: "色散讀取：從頻移讀出狀態",
       target: [-0.4, 2.0, -4.6], pos: [1.0, 7.0, 7.6],
       html: `<p>量子位元與 7 GHz 共振腔失諧約 1.8 GHz，兩者不直接交換能量，但共振腔頻率會依位元狀態偏移 <b>χ/2π ≈ ±0.77 MHz</b>。</p>
       <p>在兩個頻率中間送入探測微波，反射訊號的相位因狀態而不同，在 <b>IQ 平面</b>上落在兩個點群。量測結果依第 4 章的機率隨機出現，量測後狀態塌縮。</p>
@@ -667,7 +703,7 @@ nav.chapters {
       <div class="controls"><button class="btn primary" id="c5m" type="button">量測一次</button><button class="btn" id="c5m20" type="button">量測 20 次</button><button class="btn" id="c5plus" type="button">準備疊加態</button><button class="btn" id="c5one" type="button">準備 |1⟩</button></div>
       <div class="hist" style="margin-top:12px"><span>結果 0：<b id="h0">0</b></span><span>結果 1：<b id="h1">0</b></span></div>
       <p class="note">「量測 20 次」每次都先重新準備同一個疊加態，所以統計會接近 P(|1⟩)。</p>` },
-    { id: "case", short: "案例", kicker: "第 6 章 / 7", title: "案例：三顆可調 transmon 的頻率配置",
+    { id: "case", short: "案例", kicker: "第 6 章 / 8", title: "案例：三顆可調 transmon 的頻率配置",
       target: [0.6, 2.3, CZ0 - 1.2], pos: [1.2, 12.2, CZ0 + 16.0],
       html: `<p>把前五章串起來：<b>XY 線寫入狀態、SQUID＋Z 線決定頻率</b>，再看多顆位元放在一起時，頻率要怎麼排才不會互相碰撞。動畫會邊演示邊在左上方跳出說明。</p>
       <div class="steps" id="c6steps" role="group" aria-label="步驟"></div>
@@ -676,18 +712,27 @@ nav.chapters {
       <dl class="stats"><dt style="color:${QHEX[0]}">Q1</dt><dd id="c6q0">—</dd><dt style="color:${QHEX[1]}">Q2</dt><dd id="c6q1">—</dd><dt style="color:${QHEX[2]}">Q3</dt><dd id="c6q2">—</dd></dl>
       <div class="col-list" id="c6col"></div>
       <p class="note">各欄依序是 f₀₁、Z 線磁通 Φ、激發機率 P(|1⟩)。碰撞判定窗與串擾比例為示意值；頻率由 f₀₁ ≈ √(8E_J E_C) − E_C 與 E_J(Φ) = E_J,max|cos(πΦ/Φ₀)| 計算。</p>` },
-    { id: "grover", short: "振幅長條", kicker: "第 7 章 / 7", title: "振幅長條：糾纏與 Grover 搜尋",
+    { id: "grover", short: "振幅長條", kicker: "第 7 章 / 8", title: "振幅長條：糾纏、Grover 與 Deutsch",
       target: [G7X - 0.6, 1.75, G7Z], pos: [G7X + 0.2, 4.9, G7Z + 16.5],
-      html: `<p>兩顆位元有四個振幅 |00⟩、|01⟩、|10⟩、|11⟩。長條<b>高度是振幅（可正可負）</b>，機率是振幅的平方。上方電路圖高亮的是正在送的閘，左上方字幕說明對應的硬體脈衝。</p>
+      html: `<p>兩顆位元有四個振幅 |00⟩、|01⟩、|10⟩、|11⟩（左邊那位是 Q1／q0，右邊是 Q2／q1）。長條<b>高度是振幅（可正可負，負的是紅色）</b>，機率是振幅的平方。上方電路圖高亮的是正在送的閘，左上方字幕說明對應的硬體脈衝。步驟 1 講糾纏、2–6 講 Grover 搜尋、7 講 Deutsch，8 是自由實驗。</p>
       <div class="steps" id="g7steps" role="group" aria-label="步驟"></div>
       <div class="controls"><button class="btn" id="g7prev" type="button">◀ 上一步</button><button class="btn" id="g7play" type="button">暫停</button><button class="btn" id="g7re" type="button">重播</button><button class="btn primary" id="g7next" type="button">下一步 ▶</button><label class="check"><input type="checkbox" id="g7auto" checked> 自動接續</label></div>
       <h3 id="g7title"></h3><div id="g7body"></div><div id="g7extra"></div>
       <dl class="stats"><dt>a₀₀ · a₁₁</dt><dd id="g7p1">—</dd><dt>a₀₁ · a₁₀</dt><dd id="g7p2">—</dd><dt>判定</dt><dd id="g7ent">—</dd></dl>
       <div id="g7hist"></div>
       <p class="note">糾纏判定：兩者相等就能拆成兩顆各自的狀態（乘積態），不相等就是糾纏。糾纏度 C = 2|a₀₀a₁₁ − a₀₁a₁₀|，0 為乘積態、1 為最大糾纏。</p>` },
+    { id: "shor", short: "Shor", kicker: "第 8 章 / 8", title: "Shor 演算法：用 QFT 找週期，分解 15",
+      target: [G8X - 1.0, 3.0, G8Z], pos: [G8X - 0.2, 6.3, G8Z + 18.5],
+      html: `<p>Shor 演算法把「分解 N」轉成「找 f(x) = aˣ mod N 的週期 r」，量子電腦只負責找週期，前後都是古典計算。這裡用 <b>N = 15、a = 7</b> 走完整個流程。</p>
+      <p>畫面說明：<b>長條是計數暫存器每個 x 的振幅</b>（高度＝大小、顏色＝相位：金 0°、青 90°、紅 180°、紫 270°）；下方色塊是工作暫存器裡綁定的 f(x)（同色＝同值）；後方青色細長條是量測次數；上方看板是電路（高亮＝目前步驟）與推導。</p>
+      <div class="steps" id="g8steps" role="group" aria-label="步驟"></div>
+      <div class="controls"><button class="btn" id="g8prev" type="button">◀ 上一步</button><button class="btn" id="g8play" type="button">暫停</button><button class="btn" id="g8re" type="button">重播</button><button class="btn primary" id="g8next" type="button">下一步 ▶</button><label class="check"><input type="checkbox" id="g8auto" checked> 自動接續</label></div>
+      <h3 id="g8title"></h3><div id="g8body"></div><div id="g8extra"></div>
+      <dl class="stats"><dt>設定</dt><dd id="g8na">—</dd><dt>真實週期（古典驗算）</dt><dd id="g8r">—</dd><dt>最近量到的 y</dt><dd id="g8y">—</dd><dt>連分數 → 週期</dt><dd id="g8cf">—</dd><dt>分解結果</dt><dd id="g8f">—</dd></dl>
+      <p class="note">量測工作暫存器只是為了方便理解：不量它，計數暫存器最後的結果分布完全相同（延遲量測原理）。振幅由完整的離散傅立葉轉換計算，量測依 |振幅|² 隨機取樣。</p>` },
   ];
-  const groupsFor = [[chip], [jj], [pot], [bl], [chip, readout], [cs], [g7]];
-  const allGroups = [chip, jj, pot, bl, readout, cs, g7];
+  const groupsFor = [[chip], [jj], [pot], [bl], [chip, readout], [cs], [g7], [g8]];
+  const allGroups = [chip, jj, pot, bl, readout, cs, g7, g8];
 
   // ---------- 章節 UI ----------
   const rail = document.getElementById("rail"), panel = document.getElementById("panel");
@@ -711,7 +756,7 @@ nav.chapters {
     view.yaw = 0; view.pitch = 0; view.zoom = 1;
     desired.target.set(...c.target);
     if (!fromHash) { try { history.replaceState(null, "", "#" + c.id); } catch (e) { location.hash = c.id; } }
-    capEl.hidden = i !== 5 && i !== 6; capEl.classList.remove("show");
+    capEl.hidden = i < 5; capEl.classList.remove("show");
     bindChapter(i);
   }
   function bindChapter(i) {
@@ -768,6 +813,20 @@ nav.chapters {
       };
       $("g7auto").checked = g7S.auto; $("g7auto").onchange = e => { g7S.auto = e.target.checked; };
       g7Step(g7S.step);
+    }
+    if (i === 7) {
+      const sp = $("g8steps");
+      G8STEPS.forEach((s, k) => { const b = document.createElement("button"); b.type = "button"; b.textContent = k + 1; b.title = s.name; b.setAttribute("aria-label", `步驟 ${k + 1}：${s.name}`); b.onclick = () => g8Step(k); sp.appendChild(b); });
+      $("g8prev").onclick = () => g8Step(g8S.step - 1);
+      $("g8next").onclick = () => g8Step(g8S.step + 1);
+      $("g8re").onclick = () => g8Step(g8S.step);
+      $("g8play").onclick = () => {
+        const st = G8STEPS[g8S.step];
+        if (!g8S.playing && st.dur && g8S.t >= st.dur) { g8Step(g8S.step); return; }
+        g8S.playing = !g8S.playing; g8UpdPlay();
+      };
+      $("g8auto").checked = g8S.auto; $("g8auto").onchange = e => { g8S.auto = e.target.checked; };
+      g8Step(g8S.step);
     }
   }
   function prepPlus() { queue.length = 0; anim = null; state.set(0, 0, 1); /* Rx(π/2)|0⟩ → −Y 方向（世界 +z） */ trailN = 0; }
@@ -1074,9 +1133,11 @@ nav.chapters {
   // =====================================================================
   const g7S = { step: 0, t: 0, cue: 0, playing: true, auto: true,
     amp: [1, 0, 0, 0], queue: [], op: null, hist: [0, 0, 0, 0], flash: [0, 0, 0, 0],
-    answer: -1, showMean: false, meanVis: 0, cols: [], done: -1, active: -1, free: false };
+    answer: -1, showMean: false, meanVis: 0, cols: [], done: -1, active: -1, free: false, fn: 2, fnHidden: false };
   const R2 = Math.SQRT1_2;
-  const DUR = { H: 1.0, X: 0.9, CZ: 1.0, O: 1.0, D: 2.4, RESET: 0.6 };
+  const DUR = { H: 1.0, X: 0.9, CZ: 1.0, O: 1.0, D: 2.4, UF: 1.3, RESET: 0.6 };
+  // Deutsch 的四種黑盒子：f₁ 常數 0、f₂ 常數 1、f₃ f(x)=x、f₄ f(x)=NOT x
+  const FN = [{ s: "₁", name: "f₁：常數 0", kind: "常數" }, { s: "₂", name: "f₂：常數 1", kind: "常數" }, { s: "₃", name: "f₃：f(x) = x", kind: "平衡" }, { s: "₄", name: "f₄：f(x) = NOT x", kind: "平衡" }];
   function g7Apply(a0, op) {
     const a = a0.slice();
     const bit = op.q === 0 ? 2 : 1;   // Q1 是高位
@@ -1085,17 +1146,24 @@ nav.chapters {
     if (op.t === "CZ") a[3] = -a[3];
     if (op.t === "O") a[op.w] = -a[op.w];
     if (op.t === "D") { const m = (a[0] + a[1] + a[2] + a[3]) / 4; for (let i = 0; i < 4; i++) a[i] = 2 * m - a[i]; }
+    if (op.t === "UF") {   // U_f|x⟩|y⟩ = |x⟩|y ⊕ f(x)⟩；x = q0（高位），y = q1（低位）
+      const sw = (i, j) => { const t = a[i]; a[i] = a[j]; a[j] = t; };
+      if (op.f === 1) { sw(0, 1); sw(2, 3); }           // f₁ ≡ 1：q1 一律翻轉（X）
+      if (op.f === 2) sw(2, 3);                          // f₃ = x：CNOT(q0→q1)
+      if (op.f === 3) sw(0, 1);                          // f₄ = NOT x：q0 = 0 時翻 q1
+    }
     if (op.t === "RESET") return [1, 0, 0, 0];
     return a.map(v => Math.abs(v) < 1e-12 ? 0 : v);
   }
   const g7Push = (...ops) => g7S.queue.push(...ops);
   const H = (q, col) => ({ t: "H", q, col }), Xg = (q, col) => ({ t: "X", q, col }), CZg = col => ({ t: "CZ", col });
-  const Og = (w, col) => ({ t: "O", w, col }), Dg = col => ({ t: "D", col }), Mg = (n, col) => ({ t: "M", n, col });
+  const UFg = (f, col, deutsch) => ({ t: "UF", f, col, deutsch }), Og = (w, col) => ({ t: "O", w, col }), Dg = col => ({ t: "D", col }), Mg = (n, col) => ({ t: "M", n, col });
   const probs = a => a.map(v => v * v);
 
   // 電路圖：欄位 {g:[q1,q2]} 單位元閘、{cz:1}、{blk:"擴散"} 兩位元方塊、{m:1} 量測
   const C_BELL = [{ g: ["H", "H"] }, { cz: 1 }, { g: [null, "H"] }, { m: 1 }];
   const C_GROV = [{ g: ["H", "H"] }, { g: [null, "X"] }, { cz: 1 }, { g: [null, "X"] }, { blk: "擴散" }, { m: 1 }];
+  const C_DEU = [{ g: [null, "X"] }, { g: ["H", "H"] }, { blk: "U_f" }, { g: ["H", null] }, { m: 1 }];
   const C_OVER = [{ g: ["H", "H"] }, { blk: "Oracle" }, { blk: "擴散" }, { blk: "Oracle" }, { blk: "擴散" }, { m: 1 }];
   let circKey = "";
   function drawCircuit() {
@@ -1197,14 +1265,32 @@ nav.chapters {
         [10.5, "四個振幅都變成 −½：又回到各 25%，轉過頭了！"],
         [14.5, "N 個選項要做約 (π/4)√N 次，N = 4 時剛好 1 次。量 40 次看看：又變成隨機了。", () => g7Push(Mg(40, 5))],
       ], dur: 22 },
-    { name: "自由實驗", title: "⑦ 換你操作", free: true,
-      body: `<p>選一個答案後按「一鍵 Grover」，或自己一個一個送閘，觀察振幅、平均線和糾纏判定怎麼變。可以試試：</p>
-      <p>・H₁ → H₂ → CZ：最大糾纏。・H₁ → CZ：不會糾纏（為什麼？Q2 還在 |0⟩）。・一鍵 Grover 之後再按 Oracle、擴散：轉過頭。</p>`,
+    { name: "Deutsch", title: "⑦ Deutsch：只問一次，判斷常數或平衡", circuit: C_DEU,
+      body: `<p><b>題目</b>：黑盒子 f 吃 1 個位元、吐 1 個位元，只有 4 種可能——f₁ 永遠 0、f₂ 永遠 1（<b>常數</b>），f₃ = x、f₄ = NOT x（<b>平衡</b>）。要判斷 f(0) 和 f(1) 是否相等，古典電腦一定要問 2 次。</p>
+      <p><b>量子版黑盒子</b>必須可逆，所以寫成 U_f|x⟩|y⟩ = |x⟩|y ⊕ f(x)⟩：x 不動，f(x) 用 XOR 加到 y。若 y 準備在 |−⟩ = (|0⟩ − |1⟩)/√2，f(x) = 1 時 y 翻轉變成 −|−⟩，於是 <b>U_f|x⟩|−⟩ = (−1)^f(x)|x⟩|−⟩</b>：f 的值變成負號「回踢」到 x 身上，這叫 <b>phase kickback</b>。</p>
+      <p>q0 先做 H 變成 |+⟩，查詢後變成 (−1)^f(0)|0⟩ + (−1)^f(1)|1⟩：常數時兩項同號（|+⟩），平衡時異號（|−⟩）。最後再一個 H，|+⟩ → |0⟩、|−⟩ → |1⟩，<b>量 q0：0 = 常數、1 = 平衡</b>，100% 確定。過程中 q1 一直停在 |−⟩，所以全程是乘積態，不需要糾纏。</p>`,
+      setup() { g7Reset([1, 0, 0, 0]); g7S.answer = -1; g7S.fn = 2; g7S.fnHidden = false; },
+      cues: [
+        [0.3, "Deutsch 問題：黑盒子 f 只有 4 種可能。f(0) = f(1) 叫常數，不相等叫平衡。古典電腦一定要問 2 次才知道。"],
+        [6, "準備：q0 = |0⟩、q1 = |1⟩（XY 線對 q1 送一個 π 脈衝）。長條跑到 |01⟩。", () => g7Push(Xg(1, 0))],
+        [10.5, "兩顆都做 H：q0 → |+⟩，q1 → |−⟩ = (|0⟩ − |1⟩)/√2。四個振幅變成 +½、−½、+½、−½。", () => g7Push(H(0, 1), H(1, 1))],
+        [16.5, "查詢黑盒子一次。這次是 f(x) = x（平衡），硬體上就是 CNOT = H–CZ–H：q0 = 1 時翻轉 q1。", () => g7Push(UFg(2, 2))],
+        [21.5, "|10⟩ 和 |11⟩ 交換，負號移到 |10⟩：f(1) = 1 變成負號「回踢」到 q0 上，q0 從 |+⟩ 變成 |−⟩（phase kickback）。"],
+        [28, "注意右側判定一直是「乘積態」：q1 停在 |−⟩ 不受影響，所以 Deutsch 靠的是相位與干涉，不需要糾纏。"],
+        [33.5, "q0 再做一次 H：|−⟩ → |1⟩。振幅只剩 |10⟩、|11⟩（q1 仍是 |−⟩，所以一正一負）。", () => g7Push(H(0, 3))],
+        [39, "量測 30 次：第一位 q0 永遠是 1 → 平衡。若黑盒子是常數，q0 會永遠是 0。整個過程只查詢了 1 次！", () => g7Push(Mg(30, 4))],
+      ], dur: 47 },
+    { name: "自由實驗", title: "⑧ 換你操作：Grover 與 Deutsch", free: true,
+      body: `<p><b>Grover</b>：選一個答案後按「一鍵 Grover」，或自己一個一個送閘，觀察振幅、平均線和糾纏判定怎麼變。</p>
+      <p><b>Deutsch</b>：選一個黑盒子（或「隨機隱藏」來猜謎），按「一鍵 Deutsch」。它會依序做 X(q1) → H⊗H → U_f → H(q0) → 量測，只看第一位 q0：<b>0 = 常數、1 = 平衡</b>。也可以手動按 X₂、H₁、H₂、U_f、H₁ 一步一步來。</p>
+      <p>值得試試：・H₁ → H₂ → CZ：最大糾纏（C = 1）。・H₁ → CZ：不會糾纏，因為 Q2 還在 |0⟩，CZ 只在 |11⟩ 起作用。・一鍵 Grover 後再按 Oracle、擴散：轉過頭。・Deutsch 四種黑盒子都試一次：常數的 U_f 根本沒碰 q0，平衡的才需要 CZ。</p>`,
       extra: `<div class="controls" style="margin:8px 0 4px" role="group" aria-label="選答案"><span class="qn" style="width:auto;color:var(--muted)">答案</span>${BASIS.map((b, k) => `<button class="btn" type="button" data-ans="${k}" aria-pressed="false">${b}</button>`).join("")}</div>
       <div class="controls" style="margin:6px 0"><button class="btn" type="button" data-op="H0">H₁</button><button class="btn" type="button" data-op="H1">H₂</button><button class="btn" type="button" data-op="X0">X₁</button><button class="btn" type="button" data-op="X1">X₂</button><button class="btn" type="button" data-op="CZ">CZ</button><button class="btn" type="button" data-op="O">Oracle</button><button class="btn" type="button" data-op="D">擴散</button></div>
-      <div class="controls" style="margin:6px 0 10px"><button class="btn primary" type="button" id="g7run">一鍵 Grover</button><button class="btn" type="button" id="g7meas">量測 50 次</button><button class="btn" type="button" id="g7reset">重設 |00⟩</button></div>`,
+      <div class="controls" style="margin:6px 0 10px"><button class="btn primary" type="button" id="g7run">一鍵 Grover</button><button class="btn" type="button" id="g7meas">量測 50 次</button><button class="btn" type="button" id="g7reset">重設 |00⟩</button></div>
+      <div class="controls" style="margin:4px 0 4px" role="group" aria-label="Deutsch 黑盒子"><span class="qn" style="width:auto;color:var(--muted)">黑盒子</span>${FN.map((f, k) => `<button class="btn" type="button" data-fn="${k}" aria-pressed="false">${f.name}</button>`).join("")}<button class="btn" type="button" data-fn="hide" aria-pressed="false">隨機（隱藏）</button></div>
+      <div class="controls" style="margin:6px 0 10px"><button class="btn" type="button" data-op="UF">U_f</button><button class="btn primary" type="button" id="g7deu">一鍵 Deutsch</button></div>`,
       setup() { g7Reset([1, 0, 0, 0]); g7S.answer = 2; g7S.free = true; },
-      cues: [[0.3, "換你操作：選答案後按「一鍵 Grover」，或自己一個一個送閘。"]], dur: 0 },
+      cues: [[0.3, "換你操作：Grover 選答案後按「一鍵 Grover」；Deutsch 選黑盒子（或隨機隱藏）後按「一鍵 Deutsch」，看 q0 是 0 還是 1。"]], dur: 0 },
   ];
 
   function g7Reset(amp, done = -1) {
@@ -1240,6 +1326,7 @@ nav.chapters {
     if (kind === "O") { S.cols.push({ blk: "Oracle" }); g7Push(Og(S.answer, col)); }
     if (kind === "D") { S.cols.push({ blk: "擴散" }); S.showMean = true; g7Push(Dg(col)); }
     if (kind === "M") { S.cols.push({ m: 1 }); g7Push(Mg(50, col)); }
+    if (kind === "UF") { S.cols.push({ blk: S.fnHidden ? "U_f ?" : "U_f" + FN[S.fn].s }); g7Push(UFg(S.fn, col)); }
   }
   function g7BindFree() {
     const S = g7S;
@@ -1248,6 +1335,19 @@ nav.chapters {
     document.querySelectorAll("[data-op]").forEach(b => { b.onclick = () => g7FreeOp(b.dataset.op); });
     $("g7meas").onclick = () => g7FreeOp("M");
     $("g7reset").onclick = () => { g7Reset([1, 0, 0, 0]); S.free = true; S.cols = []; };
+    const markFn = () => document.querySelectorAll("[data-fn]").forEach(b => b.setAttribute("aria-pressed", (b.dataset.fn === "hide" ? S.fnHidden : (!S.fnHidden && +b.dataset.fn === S.fn)) ? "true" : "false"));
+    document.querySelectorAll("[data-fn]").forEach(b => { b.onclick = () => {
+      if (b.dataset.fn === "hide") { S.fn = Math.floor(Math.random() * 4); S.fnHidden = true; capShow("自由實驗 ・ Deutsch", "已隨機選好一個黑盒子（隱藏）。按「一鍵 Deutsch」只查詢一次，看能不能判斷它是常數還是平衡。"); }
+      else { S.fn = +b.dataset.fn; S.fnHidden = false; }
+      markFn();
+    }; });
+    $("g7deu").onclick = () => {
+      g7Reset([1, 0, 0, 0]); S.free = true; S.answer = -1;
+      S.cols = [{ g: [null, "X"] }, { g: ["H", "H"] }, { blk: S.fnHidden ? "U_f ?" : "U_f" + FN[S.fn].s }, { g: ["H", null] }, { m: 1 }];
+      g7Push(Xg(1, 0), H(0, 1), H(1, 1), UFg(S.fn, 2), H(0, 3), { t: "M", n: 30, col: 4, deutsch: true });
+      capShow("自由實驗 ・ Deutsch", "X(q1) → H⊗H → U_f（只查詢一次）→ H(q0) → 量測。注意 U_f 之後負號落在哪裡、q0 最後是 0 還是 1。");
+    };
+    markFn();
     $("g7run").onclick = () => {
       g7Reset([1, 0, 0, 0]); S.free = true; S.cols = [];
       const w = S.answer, flips = [w & 2 ? null : 0, w & 1 ? null : 1].filter(v => v !== null);   // oracle：對該位元為 0 的位元夾 X
@@ -1295,7 +1395,14 @@ nav.chapters {
           let r = Math.random(), k = 0; while (k < 3 && r >= p[k]) { r -= p[k]; k++; }
           S.hist[k]++; S.flash[k] = 1; o.shots++;
         }
-        if (o.shots >= o.op.n && o.t > o.op.n / 20 + 0.3) { S.op = null; S.done = Math.max(S.done, o.op.col); S.active = -1; }
+        if (o.shots >= o.op.n && o.t > o.op.n / 20 + 0.3) {
+          S.op = null; S.done = Math.max(S.done, o.op.col); S.active = -1;
+          if (o.op.deutsch) {   // 揭曉：只看 q0
+            const q0 = S.hist[2] + S.hist[3] > S.hist[0] + S.hist[1] ? 1 : 0, f = FN[S.fn];
+            capShow("自由實驗 ・ Deutsch 結果", `q0 量到 ${q0} → ${q0 ? "平衡" : "常數"}。黑盒子${S.fnHidden ? "揭曉" : ""}是 ${f.name}（${f.kind}）${(q0 ? "平衡" : "常數") === f.kind ? "，判斷正確 ✓" : ""}；整個過程只查詢了一次。`);
+            if (S.fnHidden) { S.cols[2] = { blk: "U_f" + f.s }; S.fnHidden = false; document.querySelectorAll("[data-fn]").forEach(b => b.setAttribute("aria-pressed", (b.dataset.fn !== "hide" && +b.dataset.fn === S.fn) ? "true" : "false")); }
+          }
+        }
       } else {
         const d = DUR[o.op.t] || 1, lead = o.op.t === "D" ? 0.7 : 0;   // 擴散：先讓平均線出現
         const u = smooth(Math.min(1, Math.max(0, (o.t - lead) / (d - lead))));
@@ -1336,9 +1443,397 @@ nav.chapters {
       e1.textContent = fmt(p1); $("g7p2").textContent = fmt(p2);
       $("g7ent").innerHTML = ent ? `<span style="color:#ef7a73">糾纏（C = ${C.toFixed(2)}）</span>` : `<span style="color:var(--teal)">乘積態（C = 0）</span>`;
       const n = S.hist.reduce((x, y) => x + y, 0);
-      $("g7hist").innerHTML = `<div class="note" style="margin:0 0 6px">量測結果（${n} 次）</div>` + BASIS.map((b, k) => `<div class="controls" style="flex-wrap:nowrap;margin-bottom:4px"><span class="qn">${b}</span><div class="meter" style="flex:1"><i style="width:${n ? (S.hist[k] / n * 100).toFixed(1) : 0}%;transition:none"></i></div><output>${S.hist[k]}</output></div>`).join("");
+      const q1c = S.hist[2] + S.hist[3];
+      $("g7hist").innerHTML = `<div class="note" style="margin:0 0 6px">量測結果（${n} 次）${n ? `・第一位 q0：0 有 ${n - q1c} 次、1 有 ${q1c} 次` : ""}</div>` + BASIS.map((b, k) => `<div class="controls" style="flex-wrap:nowrap;margin-bottom:4px"><span class="qn">${b}</span><div class="meter" style="flex:1"><i style="width:${n ? (S.hist[k] / n * 100).toFixed(1) : 0}%;transition:none"></i></div><output>${S.hist[k]}</output></div>`).join("");
     }
     drawCircuit();
+  }
+
+  // =====================================================================
+  // 第 8 章：Shor 演算法——狀態、運算、後處理、步驟腳本
+  // =====================================================================
+  const modpow = (b, e, m) => { let r = 1; b %= m; while (e > 0) { if (e & 1) r = r * b % m; b = b * b % m; e >>= 1; } return r; };
+  const gcd = (x, y) => { while (y) { const t = x % y; x = y; y = t; } return x; };
+  const PAL8 = [0x35b8ac, 0xd6b04a, 0xd77b45, 0x9b7be0, 0x5aa0e6, 0xe06aa8, 0x8fd16a, 0xc9c9c9, 0x6fd3c7, 0xe8c46a];
+  const PH_ANCH = [0xd6b04a, 0x35b8ac, 0xf0625a, 0x9b7be0];   // 相位 0°、90°、180°、270°
+  const tmpC = new THREE.Color(), tmpC2 = new THREE.Color();
+  function phaseColor(re, im, out) {
+    let t = Math.atan2(im, re) / (2 * Math.PI); if (t < 0) t += 1;
+    const k = Math.floor(t * 4) % 4, f = t * 4 - Math.floor(t * 4);
+    return out.setHex(PH_ANCH[k]).lerp(tmpC2.setHex(PH_ANCH[(k + 1) % 4]), f);
+  }
+  const g8S = { step: 0, t: 0, cue: 0, playing: true, auto: true, N: 15, a: 7, Q: 16, fv: [], orbit: [], rTrue: 0,
+    re: new Float64Array(QMAX), im: new Float64Array(QMAX), stage: "zero", wm: null,
+    tileOn: new Array(QMAX).fill(false), seq: null, op: null, queue: [], hist: new Array(QMAX).fill(0), flash: new Array(QMAX).fill(0),
+    hiY: -1, bracket: false, math: [], active: -1, done: -1, lastY: null, post: null, result: "", free: false };
+  // 顯示用的振幅（動畫中）
+  const d8re = new Float64Array(QMAX), d8im = new Float64Array(QMAX);
+
+  function g8Config(N, a, Q) {
+    const S = g8S; S.N = N; S.a = a; S.Q = Q;
+    S.fv = Array.from({ length: Q }, (_, x) => modpow(a, x, N));
+    S.orbit = []; for (let x = 0; ; x++) { const v = modpow(a, x, N); if (S.orbit.includes(v)) break; S.orbit.push(v); }
+    S.rTrue = S.orbit.length;
+  }
+  function g8Amp(kind) {   // 回傳 [re, im]
+    const S = g8S, Q = S.Q, re = new Float64Array(QMAX), im = new Float64Array(QMAX);
+    if (kind === "init") re[0] = 1;
+    if (kind === "uni") for (let x = 0; x < Q; x++) re[x] = 1 / Math.sqrt(Q);
+    if (kind === "comb") { const xs = S.fv.map((v, x) => v === S.wm ? x : -1).filter(x => x >= 0); xs.forEach(x => re[x] = 1 / Math.sqrt(xs.length)); }
+    return [re, im];
+  }
+  function dft(re0, im0) {   // QFT：|x⟩ → (1/√Q) Σ_y e^{2πi xy/Q} |y⟩
+    const Q = g8S.Q, re = new Float64Array(QMAX), im = new Float64Array(QMAX);
+    for (let y = 0; y < Q; y++) {
+      let sr = 0, si = 0;
+      for (let x = 0; x < Q; x++) { const th = 2 * Math.PI * x * y / Q, c = Math.cos(th), s = Math.sin(th); sr += re0[x] * c - im0[x] * s; si += re0[x] * s + im0[x] * c; }
+      re[y] = Math.abs(sr) < 1e-9 ? 0 : sr / Math.sqrt(Q); im[y] = Math.abs(si) < 1e-9 ? 0 : si / Math.sqrt(Q);
+    }
+    return [re, im];
+  }
+  function g8Set(kind, extra = {}) {
+    const S = g8S; Object.assign(S, extra);
+    if (kind === "zero") { S.re.fill(0); S.im.fill(0); }
+    else if (kind === "qft") { const [r0, i0] = g8Amp("comb"); const [r, i] = dft(r0, i0); S.re.set(r); S.im.set(i); }
+    else { const [r, i] = g8Amp(kind); S.re.set(r); S.im.set(i); }
+    S.stage = kind; S.op = null; S.queue.length = 0;
+  }
+  // 連分數：y/Q 的漸近分數
+  function convergents(y, Q) {
+    const out = []; let n = y, d = Q, p1 = 1, p2 = 0, q1 = 0, q2 = 1;
+    while (d !== 0) { const ai = Math.floor(n / d), p = ai * p1 + p2, q = ai * q1 + q2; out.push([p, q]); p2 = p1; p1 = p; q2 = q1; q1 = q; const t = n - ai * d; n = d; d = t; }
+    return out;
+  }
+  function postProcess(y) {
+    const S = g8S, N = S.N, a = S.a, Q = S.Q, L = [];
+    L.push(`量到 y = ${y}，y / Q = ${y} / ${Q}`);
+    if (y === 0) { L.push("y = 0 → k = 0，沒有週期資訊"); L.push("→ 重跑一次量子電路"); return { ok: false, lines: L, short: "y = 0，重跑" }; }
+    // 漸近分數 k/r：分母 ≤ N、分子 ≠ 0；由最精確（分母最大）的開始試，並只試很小的倍數（k 與 r 可能有公因數）
+    const cv = convergents(y, Q).filter(([p, q]) => q <= N && p > 0);
+    L.push(`連分數漸近分數：${cv.map(([p, q]) => `${p}/${q}`).join("、") || "（無）"}`);
+    let r = 0, used = "";
+    outer: for (const [p, q] of cv.slice().reverse()) for (let m = 1; m <= 4 && m * q <= N; m++) if (modpow(a, m * q, N) === 1) { r = m * q; used = m > 1 ? `${p}/${q} 的分母 ${q} × ${m}` : `${p}/${q} 的分母 ${q}`; break outer; }
+    if (!r) { L.push(`沒有候選分母滿足 ${a}^r mod ${N} = 1：Q 太小，y/Q 不夠接近 k/r`); L.push("→ 再量一次，或加大 Q（理論上要 Q ≥ N²）"); return { ok: false, lines: L, short: "找不到 r，重跑或加大 Q" }; }
+    L.push(`候選 r = ${r}（${used}），驗算 ${a}^${r} mod ${N} = 1 ✓`);
+    if (r % 2) { L.push(`r = ${r} 是奇數 → 換一個 a`); return { ok: false, r, lines: L, short: `r = ${r} 為奇數` }; }
+    const h = modpow(a, r / 2, N);
+    if (h === N - 1) { L.push(`${a}^${r / 2} ≡ −1 (mod ${N}) → 換一個 a`); return { ok: false, r, lines: L, short: `a^(r/2) ≡ −1` }; }
+    const p = gcd(h - 1, N), q = gcd(h + 1, N);
+    L.push(`${a}^${r / 2} mod ${N} = ${h} → gcd(${h - 1}, ${N}) = ${p}，gcd(${h + 1}, ${N}) = ${q}`);
+    L.push(`${N} = ${p} × ${q} ✓`);
+    return { ok: true, r, p, q, lines: L, short: `${N} = ${p} × ${q}` };
+  }
+
+  const D8 = { H: 1.2, U: 1.4, MW: 1.6, QFT: 2.6, RESET: 0.6 };
+  function g8Run(op) {   // 開始一個運算；回傳動畫物件
+    const S = g8S, fr = [S.re.slice(), S.im.slice()];
+    let to = fr;
+    if (op.t === "H") { to = g8Amp("uni"); S.stage = "uni"; }
+    if (op.t === "U") { S.tileOn.fill(true); S.stage = "ent"; }
+    if (op.t === "MW") {
+      if (op.w == null) { const x = Math.floor(Math.random() * S.Q); op.w = S.fv[x]; }
+      S.wm = op.w; to = g8Amp("comb"); S.stage = "comb";
+    }
+    if (op.t === "QFT") { to = dft(S.re, S.im); S.stage = "qft"; S.bracket = false; }
+    if (op.t === "RESET") { to = g8Amp("init"); S.stage = "init"; S.wm = null; S.tileOn.fill(false); S.bracket = false; }
+    return { op, t: 0, fr, to, shots: 0 };
+  }
+  const g8Push = (...ops) => g8S.queue.push(...ops);
+
+  const G8STEPS = [
+    { name: "古典歸約", title: "① 把「分解」轉成「找週期」",
+      body: `<p><b>目標</b>：分解 N = 15。Shor 先用數論把問題轉換：隨機選一個和 N 互質的 a（這裡 a = 7），看序列 <b>f(x) = aˣ mod N</b>。它一定會週期性重複，最小週期 r 滿足 aʳ ≡ 1 (mod N)。</p>
+      <p>若 r 是偶數，aʳ − 1 = (a^(r/2) − 1)(a^(r/2) + 1) 被 N 整除，所以 <b>gcd(a^(r/2) ± 1, N)</b> 就是 N 的因數。gcd 用輾轉相除法很快。</p>
+      <p>難的是找 r：N 有 2048 位元時，r 可能大到 2²⁰⁴⁸ 量級，序列看起來完全隨機，古典電腦只能一個一個算。<b>量子電腦只負責「找週期」這一段。</b></p>`,
+      setup() { g8Config(15, 7, 16); g8Set("zero", { wm: null, bracket: false, math: ["分解 N = 15：隨機選 a = 7", "f(x) = 7^x mod 15"] }); g8S.tileOn.fill(false); },
+      cues: [
+        [0.3, "目標：分解 N = 15。Shor 先把「分解」轉成「找週期」：隨機選一個和 15 互質的 a，這裡選 a = 7。"],
+        [5, "古典電腦一個一個算 f(x) = 7ˣ mod 15：1, 7, 4, 13, 1, 7, 4, 13…（下方色塊，同色＝同值）。", () => { g8S.seq = { t: 0 }; }],
+        [11, "每 4 個重複一次：週期 r = 4。", () => { g8S.math = ["f(x) = 7^x mod 15：1, 7, 4, 13, 1, 7, 4, 13 …", "週期 r = 4（7^4 = 2401 = 160×15 + 1）"]; }],
+        [15, "有了 r：7² = 49 ≡ 4 (mod 15)，gcd(4 − 1, 15) = 3、gcd(4 + 1, 15) = 5，分解完成。", () => { g8S.math.push("7^2 mod 15 = 4 → gcd(3, 15) = 3，gcd(5, 15) = 5"); g8S.math = g8S.math.slice(); }],
+        [21, "但 N 有 2048 位元時，週期可能大到 2²⁰⁴⁸，一個一個算永遠算不完。接下來看量子電腦怎麼「一次」看出週期。"],
+      ], dur: 27 },
+    { name: "均勻疊加", title: "② 計數暫存器：16 個 x 同時存在",
+      body: `<p>量子電路有兩組暫存器：<b>計數暫存器</b>（這裡 4 顆位元，可表示 x = 0～15）和<b>工作暫存器</b>（存放 f(x)）。畫面上 16 根長條就是計數暫存器每個 x 的振幅。</p>
+      <p>一開始是 |0000⟩，只有 x = 0 這根。4 顆都做 H（XY 線各送一個 π/2 脈衝）後，16 個 x 同時存在，每個振幅 ¼、機率 1/16，全部同相位（金色）。</p>`,
+      setup() { g8Config(15, 7, 16); g8Set("init", { wm: null, bracket: false, math: ["計數暫存器 4 顆：x = 0 … 15", "工作暫存器：存放 f(x) = 7^x mod 15"] }); g8S.tileOn.fill(false); },
+      cues: [
+        [0.3, "計數暫存器有 4 顆位元，可以表示 x = 0～15。一開始是 |0000⟩，所以只有 x = 0 這一根長條（振幅 1）。"],
+        [5, "4 顆都做 H（XY 線各送一個 π/2 脈衝）：16 個 x 同時存在，每個振幅 ¼、機率 1/16。", () => g8Push({ t: "H", col: 0 })],
+        [10.5, "長條高度是振幅大小，顏色是相位。現在全部金色（0°）、一樣高：還沒有任何週期資訊。"],
+      ], dur: 15 },
+    { name: "模指數運算", title: "③ 模指數：一次算出所有 f(x)，產生糾纏",
+      body: `<p>對兩組暫存器做 <b>|x⟩|1⟩ → |x⟩|7ˣ mod 15⟩</b>。只做一次運算，16 個 x 的函數值就全部寫進疊加態裡（下方色塊）。</p>
+      <p>此時每個 x 都和自己的 f(x) <b>糾纏</b>在一起，拆不開——和 Deutsch、BV 不同，Shor 真的需要糾纏。直接量測只會隨機得到一組 (x, f(x))，看不出週期。</p>
+      <p>這一步是整個演算法<b>最花資源</b>的部分：必須用可逆的量子加法器、乘法器組成，閘數約 n³（n 是 N 的位元數）。</p>`,
+      setup() { g8Config(15, 7, 16); g8Set("uni", { wm: null, bracket: false, math: ["U：|x⟩|1⟩ → |x⟩|7^x mod 15⟩", "（可逆的模乘法電路，約 n³ 個閘）"] }); g8S.tileOn.fill(false); g8S.done = 0; },
+      cues: [
+        [0.3, "對工作暫存器做模指數運算 |x⟩|1⟩ → |x⟩|7ˣ mod 15⟩：只做一次，16 個 f(x) 就同時算好了（下方色塊）。", () => g8Push({ t: "U", col: 1 })],
+        [6, "每根長條下方的色塊是它綁定的 f(x)：同顏色＝同一個值。x 和 f(x) 現在糾纏在一起，拆不開。"],
+        [11.5, "但直接量測，只會隨機得到一組，例如 (6, 4)。週期藏在「哪些 x 有同樣的顏色」裡，單次量測看不出來。"],
+        [17, "這一步最花資源：要用可逆的量子加法器、乘法器組成。破解 RSA 需要的上億個閘，大多花在這裡。"],
+      ], dur: 22 },
+    { name: "量測工作暫存器", title: "④ 量測工作暫存器：剩下一把「梳子」",
+      body: `<p>（觀念上）先量工作暫存器，假設得到 <b>4</b>。因為糾纏，計數暫存器立刻只剩下 f(x) = 4 的那些 x：<b>2、6、10、14</b>，各自振幅 ½。</p>
+      <p>這是一把間隔正好等於週期 <b>r = 4</b> 的梳子，但起點（這裡是 2）是隨機的：量到 1、7、13 時起點就不同。現在直接量計數暫存器，只會得到其中一個數字，還是看不出間隔。</p>
+      <p>這一步其實可以省略：不量工作暫存器，最後計數暫存器的結果分布完全一樣（延遲量測原理），這裡量它只是方便理解。</p>`,
+      setup() { g8Config(15, 7, 16); g8Set("uni", { wm: null, bracket: false, math: ["量測工作暫存器（觀念上）", "→ 計數暫存器只剩 f(x) = 量到值 的 x"] }); g8S.tileOn.fill(true); g8S.stage = "ent"; g8S.done = 1; },
+      cues: [
+        [0.3, "（觀念上）先量工作暫存器，假設得到 4。", () => g8Push({ t: "MW", w: 4, col: 2 })],
+        [3.8, "因為糾纏，只有 f(x) = 4 的 x 留下來：x = 2、6、10、14，各自振幅變成 ½；其他 12 根歸零。"],
+        [9, "這是一把「梳子」：間隔正好是週期 r = 4，但起點 2 是隨機的（量到 1、7、13 時起點就不同）。", () => { g8S.bracket = true; g8S.math = ["量到工作暫存器 = 4", "計數暫存器 → (|2⟩ + |6⟩ + |10⟩ + |14⟩) / 2", "間隔 = 週期 r = 4，起點隨機"]; }],
+        [14.5, "現在直接量計數暫存器，只會得到 2、6、10、14 其中一個——單一個數字看不出間隔。所以需要 QFT。"],
+      ], dur: 19.5 },
+    { name: "QFT", title: "⑤ 量子傅立葉轉換：梳子 → 尖峰",
+      body: `<p><b>QFT</b> 把 |x⟩ 變成 (1/√Q) Σ_y e^(2πi·xy/Q)|y⟩，就像稜鏡把光分成光譜：<b>間隔 r 的梳子</b>變成<b>間隔 Q/r = 16/4 = 4 的尖峰</b>。</p>
+      <p>結果只剩 y = 0、4、8、12 四根，各 25%。其他 12 根的各項相位轉了一圈，彼此完全抵消（干涉）。隨機的起點只會改變尖峰的<b>相位</b>（顏色金、紅交替），不改變尖峰的<b>位置</b>，所以起點不重要。</p>
+      <p>電路上 QFT 由 H 閘、受控相位旋轉（角度 2π/2ᵏ，用 Z 線做部分 CZ，或拆成 CNOT＋虛擬 Z）和 SWAP 組成，只要約 n² 個閘；古典 FFT 處理 2ⁿ 個點要約 n·2ⁿ 步。<b>指數級加速就來自這裡。</b></p>`,
+      setup() { g8Config(15, 7, 16); g8Set("comb", { wm: 4, bracket: true, math: ["QFT：|x⟩ → (1/√16) Σ e^(2πi·xy/16) |y⟩", "梳子間隔 r = 4 → 尖峰間隔 16/4 = 4"] }); g8S.tileOn.fill(true); g8S.done = 2; },
+      cues: [
+        [0.3, "對計數暫存器做 QFT：它像稜鏡，把「間隔 r 的梳子」轉成「間隔 Q/r = 16/4 = 4 的尖峰」。", () => g8Push({ t: "QFT", col: 3 })],
+        [6, "結果只剩 y = 0、4、8、12 四根，各 25%。其他 12 根的各項相位轉了一圈，彼此完全抵消。"],
+        [11.5, "隨機起點只改變尖峰的相位（顏色金、紅交替），不改變尖峰的位置——所以起點是多少都沒關係。"],
+        [17, "QFT 只要約 n² 個閘：H、受控相位旋轉（Z 線部分 CZ 或虛擬 Z）、SWAP。古典 FFT 要 n·2ⁿ 步，指數級加速就在這裡。"],
+      ], dur: 23 },
+    { name: "量測", title: "⑥ 量測計數暫存器",
+      body: `<p>每個 shot 都重跑一次整個電路，最後量測計數暫存器。40 次結果只會落在 <b>0、4、8、12</b>（後方青色長條是次數）。</p>
+      <p>每次量到的 y 都滿足 <b>y / Q ≈ k / r</b>（k 是 0 到 r−1 之間的某個整數）。所以只要量到一次，就能從 y/Q 反推出 r 的分母。</p>`,
+      setup() { g8Config(15, 7, 16); g8Set("qft", { wm: 4, bracket: false, math: ["量測計數暫存器", "每個 y 都滿足 y / 16 ≈ k / r"] }); g8S.tileOn.fill(true); g8S.done = 3; },
+      cues: [
+        [0.3, "量測計數暫存器 40 次（每次都重跑整個電路）：只會出現 0、4、8、12。", () => g8Push({ t: "MC", n: 40, col: 4 })],
+        [6.5, "後方青色長條是量測次數。每個量到的 y 都滿足 y / 16 ≈ k / r，k 是某個整數——下一步用它反推 r。"],
+      ], dur: 12 },
+    { name: "連分數與 gcd", title: "⑦ 古典後處理：連分數找 r，gcd 找因數",
+      body: `<p>量到 y 之後回到古典電腦：把 <b>y / Q</b> 用<b>連分數</b>展開，找出分母不超過 N 的最佳分數 k/r，再驗算 aʳ mod N = 1。</p>
+      <p>・y = 4：4/16 = 1/4 → r = 4 ✓　・y = 12：12/16 = 3/4 → r = 4 ✓<br>・y = 8：8/16 = 1/2 → 候選 2，但 7² mod 15 = 4 ≠ 1，改試倍數 4 ✓　・y = 0：沒有資訊，重跑</p>
+      <p>r = 4 是偶數，7² ≡ 4，gcd(3, 15) = 3、gcd(5, 15) = 5：<b>15 = 3 × 5</b>。真實的 RSA-2048 估計需要約百萬顆實體位元與錯誤更正，目前的機台還差很遠。</p>`,
+      setup() {
+        g8Config(15, 7, 16); g8Set("qft", { wm: 4, bracket: false, math: ["古典後處理：連分數 + gcd"] }); g8S.tileOn.fill(true); g8S.done = 4;
+        for (let k = 0; k < 40; k++) g8S.hist[[0, 4, 8, 12][Math.floor(Math.random() * 4)]]++;
+      },
+      cues: [
+        [0.3, "古典後處理：量到 y = 12 時，y/Q = 12/16 = 3/4 → 分母 4 是週期的候選。", () => { g8S.hiY = 12; g8S.lastY = 12; g8S.post = postProcess(12); g8S.math = g8S.post.lines.slice(0, 3); }],
+        [6, "驗算 7⁴ mod 15 = 1 ✓，所以 r = 4。量到 4 也一樣：4/16 = 1/4。", () => { g8S.hiY = 4; g8S.lastY = 4; g8S.post = postProcess(4); g8S.math = g8S.post.lines.slice(0, 3); }],
+        [11, "量到 8：8/16 = 1/2 → 候選 2，但 7² mod 15 = 4 ≠ 1，改試它的倍數 4 ✓。量到 0 沒有資訊，重跑一次。", () => { g8S.hiY = 8; g8S.lastY = 8; g8S.post = postProcess(8); g8S.math = g8S.post.lines.slice(0, 3); }],
+        [17, "r = 4 是偶數，7² = 49 ≡ 4 (mod 15)：gcd(4 − 1, 15) = 3，gcd(4 + 1, 15) = 5。", () => { g8S.hiY = 12; g8S.lastY = 12; g8S.post = postProcess(12); g8S.math = g8S.post.lines.slice(2); }],
+        [22.5, "15 = 3 × 5 ✓。破解 RSA-2048 估計需要約百萬顆實體位元加上錯誤更正，現在的機台還差很遠。", () => { g8S.result = "15 = 3 × 5"; }],
+      ], dur: 29 },
+    { name: "自由實驗", title: "⑧ 換你操作：換 N、換 a、換位元數", free: true,
+      body: `<p>選 N（15 或 21）、a 和計數位元數，按「一鍵執行」或依序按 ①～⑤。量到 y 之後，右側面板與上方看板會顯示連分數、候選 r 與 gcd 的完整推導。</p>
+      <p>值得試試：・N = 15、a = 14：r = 2，但 14 ≡ −1 → 失敗，要換 a。・N = 21、a = 2：週期 r = 6 不整除 Q，尖峰會「糊開」，量到的 y 常常不夠接近 k/6，連分數就找不到 r。改成 5 顆位元（Q = 32）尖峰更集中、成功率較高——理論上要 Q ≥ N²（計數位元約 2n 顆）才能保證連分數找得到。・跳過「量測工作」直接按 QFT：程式會自動補上這一步（結果分布本來就一樣）。</p>`,
+      extra: `<div class="controls" style="margin:8px 0 4px"><span class="qn" style="width:auto;color:var(--muted)">N</span><button class="btn" type="button" data-n8="15">15</button><button class="btn" type="button" data-n8="21">21</button><span class="qn" style="width:auto;color:var(--muted);margin-left:8px">計數位元</span><button class="btn" type="button" data-q8="16">4 顆（Q = 16）</button><button class="btn" type="button" data-q8="32">5 顆（Q = 32）</button></div>
+      <div class="controls" style="margin:6px 0 4px" id="g8alist"></div>
+      <div class="controls" style="margin:6px 0"><button class="btn" type="button" data-op8="H">① 疊加</button><button class="btn" type="button" data-op8="U">② 模指數</button><button class="btn" type="button" data-op8="MW">③ 量測工作</button><button class="btn" type="button" data-op8="QFT">④ QFT</button><button class="btn" type="button" data-op8="MC1">⑤ 量測 1 次</button><button class="btn" type="button" data-op8="MC20">量測 20 次</button></div>
+      <div class="controls" style="margin:6px 0 10px"><button class="btn primary" type="button" id="g8run">一鍵執行</button><button class="btn" type="button" id="g8reset">重設</button></div>`,
+      setup() { g8Config(15, 7, 16); g8Set("init", { wm: null, bracket: false, math: ["自由實驗：選 N、a、計數位元數", "按「一鍵執行」或依序 ①～⑤"] }); g8S.tileOn.fill(false); g8S.free = true; },
+      cues: [[0.3, "換你操作：選 N、a 與計數位元數，按「一鍵執行」或依序按 ①～⑤，看看連分數能不能找到 r。"]], dur: 0 },
+  ];
+
+  function g8Step(i) {
+    i = Math.max(0, Math.min(G8STEPS.length - 1, i));
+    const S = g8S; S.step = i; S.t = 0; S.cue = 0; S.playing = true;
+    S.hist.fill(0); S.flash.fill(0); S.hiY = -1; S.active = -1; S.done = -1; S.lastY = null; S.post = null; S.result = ""; S.seq = null; S.free = false;
+    const st = G8STEPS[i]; st.setup();
+    capEl.classList.remove("show");
+    if (cur === 7) {
+      $("g8title").textContent = st.title; $("g8body").innerHTML = st.body; $("g8extra").innerHTML = st.extra || "";
+      [...$("g8steps").children].forEach((b, k) => b.setAttribute("aria-current", k === i ? "true" : "false"));
+      if (st.free) g8BindFree();
+    }
+    g8UpdPlay();
+  }
+  function g8UpdPlay() {
+    const b = $("g8play"); if (!b) return;
+    const st = G8STEPS[g8S.step], done = st.dur && g8S.t >= st.dur;
+    b.textContent = g8S.playing ? "暫停" : done ? "再看一次" : "播放";
+    b.disabled = !!st.free; $("g8prev").disabled = g8S.step === 0; $("g8next").disabled = g8S.step === G8STEPS.length - 1;
+  }
+  function g8FreeReset(keepMath) {
+    const S = g8S; g8Set("init", { wm: null, bracket: false }); S.tileOn.fill(false); S.hist.fill(0); S.lastY = null; S.post = null; S.result = ""; S.done = -1; S.active = -1; S.hiY = -1;
+    if (!keepMath) S.math = [`N = ${S.N}，a = ${S.a}，Q = ${S.Q}`, `f(x) = ${S.a}^x mod ${S.N}，真實週期 r = ${S.rTrue}`];
+  }
+  function g8FreeOp(k) {
+    const S = g8S;
+    if (k === "H") { if (S.stage !== "init") g8FreeReset(true); g8Push({ t: "H", col: 0 }); }
+    if (k === "U") { if (S.stage === "init") g8Push({ t: "H", col: 0 }); g8Push({ t: "U", col: 1 }); }
+    if (k === "MW") {
+      if (S.stage === "init") g8Push({ t: "H", col: 0 });
+      if (S.stage === "init" || S.stage === "uni") g8Push({ t: "U", col: 1 });
+      if (S.stage === "comb" || S.stage === "qft") { capShow("自由實驗 ・ Shor", "工作暫存器已經量過了；要重新開始請按「重設」或 ①。"); return; }
+      g8Push({ t: "MW", col: 2 });
+    }
+    if (k === "QFT") {
+      if (S.stage === "ent") { capShow("自由實驗 ・ Shor", "工作暫存器還沒量：先自動補上「③ 量測工作」。不量也行，計數暫存器的結果分布完全一樣（延遲量測原理）。"); g8Push({ t: "MW", col: 2 }); }
+      if (S.stage === "uni") capShow("自由實驗 ・ Shor", "還沒做模指數運算：對均勻疊加做 QFT 只會得到 y = 0，沒有週期資訊。");
+      g8Push({ t: "QFT", col: 3 });
+    }
+    if (k === "MC1") g8Push({ t: "MC", n: 1, col: 4, post: true });
+    if (k === "MC20") g8Push({ t: "MC", n: 20, col: 4, post: true });
+  }
+  function g8BindFree() {
+    const S = g8S;
+    const coprimes = N => Array.from({ length: N - 2 }, (_, i) => i + 2).filter(a => gcd(a, N) === 1);
+    const render = () => {
+      document.querySelectorAll("[data-n8]").forEach(b => b.setAttribute("aria-pressed", +b.dataset.n8 === S.N ? "true" : "false"));
+      document.querySelectorAll("[data-q8]").forEach(b => b.setAttribute("aria-pressed", +b.dataset.q8 === S.Q ? "true" : "false"));
+      $("g8alist").innerHTML = `<span class="qn" style="width:auto;color:var(--muted)">a</span>` + coprimes(S.N).map(a => `<button class="btn" type="button" data-a8="${a}" aria-pressed="${a === S.a}">${a}</button>`).join("");
+      document.querySelectorAll("[data-a8]").forEach(b => { b.onclick = () => { g8Config(S.N, +b.dataset.a8, S.Q); g8FreeReset(); render(); }; });
+    };
+    document.querySelectorAll("[data-n8]").forEach(b => { b.onclick = () => { const N = +b.dataset.n8; g8Config(N, N === 15 ? 7 : 2, S.Q); g8FreeReset(); render(); }; });
+    document.querySelectorAll("[data-q8]").forEach(b => { b.onclick = () => { g8Config(S.N, S.a, +b.dataset.q8); g8FreeReset(); render(); }; });
+    document.querySelectorAll("[data-op8]").forEach(b => { b.onclick = () => g8FreeOp(b.dataset.op8); });
+    $("g8reset").onclick = () => g8FreeReset();
+    $("g8run").onclick = () => { g8FreeReset(); g8Push({ t: "H", col: 0 }, { t: "U", col: 1 }, { t: "MW", col: 2 }, { t: "QFT", col: 3 }, { t: "MC", n: 1, col: 4, post: true }); };
+    render(); g8FreeReset();
+  }
+
+  let b8Key = "";
+  function drawBoard8() {
+    const S = g8S, key = JSON.stringify([S.active, S.done, S.math, S.N, S.a, S.Q]);
+    if (key === b8Key) return; b8Key = key;
+    const c = c8, W = 1400, Hh = 340, t = Math.round(Math.log2(S.Q)), nW = Math.ceil(Math.log2(S.N + 1));
+    c.clearRect(0, 0, W, Hh);
+    c.fillStyle = "rgba(14,18,25,0.88)"; c.strokeStyle = "rgba(232,235,240,0.14)"; c.lineWidth = 2;
+    c.beginPath(); c.roundRect ? c.roundRect(2, 2, W - 4, Hh - 4, 18) : c.rect(2, 2, W - 4, Hh - 4); c.fill(); c.stroke();
+    c.textBaseline = "middle"; c.textAlign = "left";
+    c.fillStyle = "#d6b04a"; c.font = "700 26px 'Noto Sans TC', sans-serif";
+    c.fillText(`Shor：N = ${S.N}，a = ${S.a}，f(x) = ${S.a}^x mod ${S.N}`, 28, 40);
+    const yC = 130, yW = 240;
+    c.font = "600 22px 'Noto Sans TC', sans-serif"; c.fillStyle = "#cfd5de";
+    c.fillText(`計數 ×${t}`, 24, yC); c.fillText(`工作 ×${nW}`, 24, yW);
+    c.strokeStyle = "rgba(232,235,240,0.45)"; c.lineWidth = 2;
+    [yC, yW].forEach(y => { c.beginPath(); c.moveTo(130, y); c.lineTo(720, y); c.stroke(); });
+    const st = i => i === S.active ? { f: "#d6b04a", s: "#d6b04a", t: "#17140a" } : i <= S.done ? { f: "#1d2430", s: "#cfd5de", t: "#e8ebf0" } : { f: "#12161d", s: "rgba(152,161,176,0.45)", t: "rgba(152,161,176,0.7)" };
+    const box = (x, y, w, h, s, lines, font) => {
+      c.fillStyle = s.f; c.strokeStyle = s.s; c.lineWidth = 2.5;
+      c.beginPath(); c.roundRect ? c.roundRect(x - w / 2, y - h / 2, w, h, 8) : c.rect(x - w / 2, y - h / 2, w, h); c.fill(); c.stroke();
+      c.fillStyle = s.t; c.font = font; c.textAlign = "center";
+      lines.forEach((l, k) => c.fillText(l, x, y + (k - (lines.length - 1) / 2) * 28));
+    };
+    const meter = (x, y, s) => { box(x, y, 64, 58, s, [], ""); c.strokeStyle = s.t; c.lineWidth = 2.5; c.beginPath(); c.arc(x, y + 12, 18, Math.PI * 1.15, Math.PI * 1.85); c.stroke(); c.beginPath(); c.moveTo(x, y + 12); c.lineTo(x + 12, y - 12); c.stroke(); };
+    const X = [210, 330, 450, 570, 680], mono = "700 26px 'JetBrains Mono', monospace";
+    box(X[0], yC, 78, 58, st(0), [`H⊗${t}`], mono);
+    box(X[1], (yC + yW) / 2, 96, 170, st(1), ["a^x", `mod ${S.N}`], "700 24px 'JetBrains Mono', monospace");
+    meter(X[2], yW, st(2));
+    box(X[3], yC, 82, 58, st(3), ["QFT"], mono);
+    meter(X[4], yC, st(4));
+    c.font = "500 18px 'Noto Sans TC', sans-serif"; c.textAlign = "center";
+    ["①疊加", "②模指數", "③量測工作", "④QFT", "⑤量測"].forEach((l, i) => { c.fillStyle = i === S.active ? "#d6b04a" : "#98a1b0"; c.fillText(l, X[i], 312); });
+    // 右側：推導
+    c.fillStyle = "rgba(232,235,240,0.05)"; c.beginPath(); c.roundRect ? c.roundRect(745, 70, 630, 250, 12) : c.rect(745, 70, 630, 250); c.fill();
+    c.textAlign = "left"; c.font = "500 23px 'Noto Sans TC', 'JetBrains Mono', sans-serif";
+    S.math.slice(0, 6).forEach((l, i) => { c.fillStyle = i === S.math.length - 1 ? "#e8ebf0" : "#cfd5de"; c.fillText(l, 765, 100 + i * 39, 595); });
+    tex8.needsUpdate = true;
+  }
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => { b8Key = ""; });
+
+  const fmtC = (re, im) => {
+    const m = Math.hypot(re, im); if (m < 0.005) return "";
+    if (Math.abs(im) < 0.005) return (re < 0 ? "−" : "+") + Math.abs(re).toFixed(2);
+    if (Math.abs(re) < 0.005) return (im < 0 ? "−" : "+") + Math.abs(im).toFixed(2) + "i";
+    return m.toFixed(2) + "∠" + Math.round((Math.atan2(im, re) * 180 / Math.PI + 360) % 360) + "°";
+  };
+
+  function updateG8(dt) {
+    const S = g8S, st = G8STEPS[S.step], Q = S.Q;
+    // 時間軸
+    if (S.playing) S.t += dt;
+    while (S.cue < st.cues.length && S.t >= st.cues[S.cue][0]) {
+      const c = st.cues[S.cue];
+      capShow(`步驟 ${S.step + 1} / ${G8STEPS.length} ・ ${st.name} ・ ${S.cue + 1}/${st.cues.length}`, c[1]);
+      if (c[2]) c[2](); S.cue++;
+    }
+    capBar.style.width = (st.dur ? Math.min(100, S.t / st.dur * 100) : 100).toFixed(1) + "%";
+    if (st.dur && S.playing && S.t >= st.dur) {
+      if (S.auto && S.step < G8STEPS.length - 1) { g8Step(S.step + 1); return; }
+      S.playing = false; g8UpdPlay();
+    }
+    // 第 1 步：古典逐一計算
+    if (S.seq) { S.seq.t += dt; for (let x = 0; x < Q; x++) S.tileOn[x] = S.seq.t > x * 0.32; if (S.seq.t > Q * 0.32 + 1) S.seq = null; }
+
+    // 運算佇列
+    if (!S.op && S.queue.length) { const op = S.queue.shift(); S.op = op.t === "MC" ? { op, t: 0, shots: 0 } : g8Run(op); S.active = op.col; }
+    d8re.set(S.re); d8im.set(S.im);
+    if (S.op) {
+      const o = S.op; o.t += dt;
+      if (o.op.t === "MC") {
+        const want = Math.min(o.op.n, Math.floor(o.t * 15) + 1);
+        while (o.shots < want) {
+          let r = Math.random(), y = 0; const p = []; for (let k = 0; k < Q; k++) p.push(S.re[k] * S.re[k] + S.im[k] * S.im[k]);
+          while (y < Q - 1 && r >= p[y]) { r -= p[y]; y++; }
+          S.hist[y]++; S.flash[y] = 1; S.lastY = y; o.shots++;
+        }
+        if (o.shots >= o.op.n && o.t > o.op.n / 15 + 0.4) {
+          S.op = null; S.done = Math.max(S.done, o.op.col); S.active = -1;
+          if (o.op.post) {
+            S.post = postProcess(S.lastY); S.math = S.post.lines.slice(-6); S.hiY = S.lastY; S.result = S.post.ok ? S.post.short : "";
+            capShow("自由實驗 ・ 結果", S.post.ok ? `量到 y = ${S.lastY} → r = ${S.post.r} → ${S.post.short}。` : `量到 y = ${S.lastY}：${S.post.short}。再量一次或換 a 試試。`);
+          }
+        }
+      } else {
+        const d = D8[o.op.t] || 1.2, u = smooth(Math.min(1, o.t / d));
+        for (let k = 0; k < QMAX; k++) {   // 大小線性內插；相位在中途切換
+          const m0 = Math.hypot(o.fr[0][k], o.fr[1][k]), m1 = Math.hypot(o.to[0][k], o.to[1][k]), m = m0 + (m1 - m0) * u;
+          const src = u < 0.5 && m0 > 1e-9 ? [o.fr[0][k], o.fr[1][k]] : [o.to[0][k], o.to[1][k]], ms = Math.hypot(src[0], src[1]) || 1;
+          d8re[k] = m * src[0] / ms; d8im[k] = m * src[1] / ms;
+        }
+        if (o.t >= d) { S.re.set(o.to[0]); S.im.set(o.to[1]); d8re.set(S.re); d8im.set(S.im); S.op = null; S.done = Math.max(S.done, o.op.col); S.active = -1; }
+      }
+    }
+
+    // 版面：Q 根長條平均分布在 x ∈ [−7, 7]
+    const sp = 14 / Q, maxH = Math.max(1, ...S.hist);
+    const tileCol = v => PAL8[S.orbit.indexOf(v) % PAL8.length];
+    let topH = 0;
+    for (let i = 0; i < QMAX; i++) {
+      const on = i < Q, x = -7 + sp * (i + 0.5), bar = b8[i];
+      bar.visible = on; t8[i].visible = on; h8[i].visible = on && S.hist[i] > 0;
+      x8Tags[i].on = on && (Q <= 16 || i % 4 === 0); f8Tags[i].on = false; a8Tags[i].on = false;
+      if (!on) continue;
+      const m = Math.hypot(d8re[i], d8im[i]), h = Math.max(0.004, m * S8);
+      bar.scale.set(sp * 0.72, h, 1); bar.position.set(x, h / 2, 0);
+      phaseColor(d8re[i], d8im[i], tmpC); b8Mat[i].color.copy(tmpC); b8Mat[i].emissive.copy(tmpC);
+      S.flash[i] = Math.max(0, S.flash[i] - dt * 3);
+      b8Mat[i].emissiveIntensity = 0.15 + 0.7 * S.flash[i] + (i === S.hiY ? 0.35 + 0.25 * Math.sin(T * 5) : 0);
+      if (m > 0.01) topH = Math.max(topH, h);
+      x8Tags[i].pos.set(x, -1.05, 0.45).add(g8.position);
+      x8Tags[i].el.classList.toggle("gold", i === S.hiY);
+      // 工作暫存器色塊
+      const tv = S.tileOn[i], dim = S.wm != null && S.fv[i] !== S.wm;
+      t8Mat[i].opacity += ((tv ? (dim ? 0.18 : 1) : 0) - t8Mat[i].opacity) * (1 - Math.exp(-dt * 6));
+      t8Mat[i].color.setHex(tileCol(S.fv[i])); t8Mat[i].emissive.setHex(tileCol(S.fv[i]));
+      t8[i].scale.set(sp * 0.82, 1, 1); t8[i].position.x = x;
+      f8Tags[i].on = tv && Q <= 16 && t8Mat[i].opacity > 0.5; f8Tags[i].el.textContent = String(S.fv[i]);
+      f8Tags[i].pos.set(x, -0.45, 0.62).add(g8.position);
+      // 振幅數值
+      const txt = Q <= 16 ? fmtC(d8re[i], d8im[i]) : "";
+      a8Tags[i].on = !!txt; a8Tags[i].el.textContent = txt; a8Tags[i].pos.set(x, h + 0.28, 0.3).add(g8.position);
+      // 量測次數
+      const hh = S.hist[i] / maxH * 2.2; h8[i].scale.set(sp * 0.5, Math.max(0.004, hh), 1); h8[i].position.set(x, hh / 2, -1.0);
+    }
+    // 梳子間隔標示
+    const pos = brGeo.attributes.position.array; let n = 0;
+    if (S.bracket && S.wm != null) {
+      const xs = S.fv.map((v, x) => v === S.wm ? x : -1).filter(x => x >= 0).map(x => -7 + sp * (x + 0.5));
+      const yb = topH + 0.55;
+      const put = (x1, y1, x2, y2) => { pos.set([x1, y1, 0.35, x2, y2, 0.35], n * 3); n += 2; };
+      put(xs[0], yb, xs[xs.length - 1], yb);
+      xs.forEach(x => put(x, yb, x, yb - 0.25));
+      brTag.on = true; brTag.el.textContent = `間隔 r = ${S.rTrue}`; brTag.pos.set((xs[0] + xs[xs.length - 1]) / 2, yb + 0.3, 0.35).add(g8.position);
+    } else brTag.on = false;
+    brGeo.setDrawRange(0, n); brGeo.attributes.position.needsUpdate = true;
+    resTag.on = !!S.result; resTag.el.textContent = S.result;
+
+    // 面板
+    const e = $("g8na");
+    if (e) {
+      e.textContent = `N = ${S.N}，a = ${S.a}，Q = ${S.Q}`;
+      $("g8r").textContent = `${S.rTrue}（${S.a}^${S.rTrue} mod ${S.N} = 1）`;
+      $("g8y").textContent = S.lastY == null ? "—" : `${S.lastY}（y/Q = ${S.lastY}/${S.Q}）`;
+      $("g8cf").textContent = S.post ? (S.post.r ? `r = ${S.post.r}` : "—") : "—";
+      $("g8f").textContent = S.post ? S.post.short : "—";
+    }
+    drawBoard8();
   }
 
   // ---------- 相機（拖曳 / 縮放） ----------
@@ -1485,6 +1980,7 @@ nav.chapters {
     // 第 6 章：案例
     if (cur === 5) updateCase(dt);
     if (cur === 6) updateG7(dt);
+    if (cur === 7) updateG8(dt);
 
     // 標籤投影
     const w = stage.clientWidth, h = stage.clientHeight;
