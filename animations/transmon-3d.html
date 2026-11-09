@@ -80,6 +80,34 @@ body { background: var(--bg); color: var(--fg); font-family: var(--font-body); o
 .hist { display: flex; gap: 10px; width: 100%; font-family: var(--font-mono); font-size: 12px; color: var(--muted); }
 .hist span b { color: var(--fg); font-weight: 600; }
 
+/* 第 6 章：步驟列、字幕 */
+.panel h3 { margin: 12px 0 6px; font-size: 16px; line-height: 1.4; font-weight: 700; color: var(--fg); }
+.steps { display: flex; gap: 4px; margin: 2px 0 12px; }
+.steps button { flex: 1; font: 600 12px/1 var(--font-mono); color: var(--muted); background: rgba(232, 235, 240, 0.06); border: 1px solid transparent; border-radius: 6px; padding: 8px 0; cursor: pointer; }
+.steps button:hover { color: var(--fg); border-color: var(--hair); }
+.steps button[aria-current="true"] { color: #17140a; background: var(--gold); }
+.steps button:focus-visible { outline: 2px solid var(--teal); outline-offset: 2px; }
+.controls output { font-family: var(--font-mono); font-size: 12px; color: var(--fg); min-width: 64px; text-align: right; font-variant-numeric: tabular-nums; }
+.controls .qn { width: 40px; font-family: var(--font-mono); font-size: 12px; }
+.col-list { font-size: 12.5px; line-height: 1.7; margin: 0 0 12px; color: var(--muted); }
+.col-list b { color: #ef7a73; font-weight: 600; }
+.col-list .ok { color: var(--teal); font-weight: 600; }
+.caption {
+  position: fixed; z-index: 5;
+  top: calc(env(safe-area-inset-top, 0px) + 60px);
+  left: max(16px, env(safe-area-inset-left, 0px));
+  width: min(460px, calc(100vw - 370px - 64px));
+  background: rgba(16, 19, 26, 0.9); border: 1px solid var(--hair); border-left: 3px solid var(--gold); border-radius: 8px;
+  padding: 10px 14px 12px; pointer-events: none;
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  opacity: 0; transform: translateY(-6px); transition: opacity 260ms, transform 260ms;
+}
+.caption.show { opacity: 1; transform: none; }
+.caption .ck { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em; color: var(--gold); }
+.caption p { margin: 4px 0 8px; font-size: 15px; line-height: 1.6; color: var(--fg); }
+.caption .cbar { height: 3px; border-radius: 2px; background: rgba(232, 235, 240, 0.1); overflow: hidden; }
+.caption .cbar i { display: block; height: 100%; width: 0; background: var(--gold); }
+
 nav.chapters {
   position: fixed; z-index: 6;
   left: max(16px, env(safe-area-inset-left, 0px)); right: max(16px, env(safe-area-inset-right, 0px));
@@ -98,7 +126,8 @@ nav.chapters {
 .tag.mono { font-family: var(--font-mono); font-size: 11px; }
 .tag.flat { transform: translate(-50%, -50%); background: transparent; border: 0; padding: 0; }
 .tag.flat::after { display: none; }
-.tag.gold { color: var(--gold); } .tag.teal { color: var(--teal); } .tag.copper { color: var(--copper); }
+.tag.gold { color: var(--gold); } .tag.teal { color: var(--teal); } .tag.copper { color: var(--copper); } .tag.red { color: #ef7a73; }
+.tag.small { font-size: 10.5px; }
 .hint { position: fixed; z-index: 4; left: max(16px, env(safe-area-inset-left, 0px)); bottom: calc(env(safe-area-inset-bottom, 0px) + 74px); font-size: 12px; color: var(--muted); pointer-events: none; }
 .fallback { position: fixed; inset: 0; display: grid; place-items: center; padding: 24px; text-align: center; color: var(--muted); font-size: 14px; }
 
@@ -117,8 +146,11 @@ nav.chapters {
   .chap { padding: 10px 14px; }
   .hint { display: none; }
   .tag { font-size: 11px; }
+  .caption { top: calc(env(safe-area-inset-top, 0px) + 50px); right: max(16px, env(safe-area-inset-right, 0px)); width: auto; padding: 8px 12px 10px; }
+  .caption p { font-size: 13px; line-height: 1.55; }
+  .tag.detail { display: none; }
 }
-@media (prefers-reduced-motion: reduce) { .meter i, .tag { transition: none; } }
+@media (prefers-reduced-motion: reduce) { .meter i, .tag, .caption { transition: none; } }
 </style>
 
 <div id="stage" aria-label="Transmon 3D 場景，可拖曳旋轉、滾輪或雙指縮放"></div>
@@ -127,6 +159,7 @@ nav.chapters {
 <div class="brand"><h1>Transmon 3D</h1><span>超導量子位元互動導覽</span></div>
 
 <aside class="panel" id="panel" aria-live="polite"></aside>
+<div class="caption" id="caption" role="status" aria-live="polite" hidden><div class="ck" id="capK"></div><p id="capP"></p><div class="cbar"><i id="capBar"></i></div></div>
 <div class="hint">拖曳旋轉 ・ 滾輪縮放 ・ ← → 切換章節</div>
 
 <nav class="chapters" aria-label="章節">
@@ -460,36 +493,144 @@ nav.chapters {
   const P1 = () => (1 - state.y) / 2;
 
   // =====================================================================
+  // 第 6 章：案例——三顆可調 transmon 的頻率配置與碰撞
+  // =====================================================================
+  const CZ0 = -44;
+  const cs = new THREE.Group(); cs.position.set(0, 0, CZ0); scene.add(cs);
+  // f₀₁ ≈ √(8 E_J E_C) − E_C − d（d = 13 MHz 修正，使 E_J = 15 GHz 時與數值解 5.214 GHz 一致）；α 取第 3 章數值 −283 MHz
+  const QC = { EC: 0.25, alpha: -0.283, d: 0.013, EJmax: [14.49, 14.381, 15.978] };   // sweet spot 頻率 5.12 / 5.10 / 5.39 GHz（製程誤差）
+  const QCOL = [COL.teal, COL.gold, COL.copper], QCLS = ["teal", "gold", "copper"], QHEX = ["#35b8ac", "#d6b04a", "#d77b45"];
+  const RED = 0xf0625a;
+  const fOfEJ = EJ => Math.max(0, Math.sqrt(8 * EJ * QC.EC) - QC.EC - QC.d);
+  const fOf = (k, phi) => fOfEJ(QC.EJmax[k] * Math.abs(Math.cos(Math.PI * phi)));
+  const phiFor = (k, f) => { const EJ = Math.pow(f + QC.EC + QC.d, 2) / (8 * QC.EC); const r = EJ / QC.EJmax[k]; return r >= 1 ? 0 : Math.acos(r) / Math.PI; };
+  const WIN = { same: 0.03, x12: 0.025, tp: 0.012 };   // 碰撞判定窗（GHz，示意）
+
+  cs.add(box(14.4, 0.6, 6.6, mat.sub, 0, -0.33, 0));
+  cs.add(box(14, 0.06, 6.2, mat.ground, 0, -0.03, 0));
+  const QX = [-4.2, 0, 4.2], QA = 1.15, QW = 0.3, QG = 0.18, QSZ = QA + 0.42;
+  const qPadMat = QCOL.map(c => new THREE.MeshStandardMaterial({ color: 0xaab2bd, roughness: 0.28, metalness: 0.6, emissive: new THREE.Color(c), emissiveIntensity: 0 }));
+  const zMat = QCOL.map(() => new THREE.MeshStandardMaterial({ color: COL.metal, roughness: 0.32, metalness: 0.55, emissive: new THREE.Color(COL.copper), emissiveIntensity: 0 }));
+  const cplMat = [0, 1].map(() => new THREE.MeshStandardMaterial({ color: COL.metal, roughness: 0.32, metalness: 0.55, emissive: new THREE.Color(COL.teal), emissiveIntensity: 0 }));
+  const fluxArrows = [], warnRings = [];
+  QX.forEach((x, k) => {
+    // 十字電容
+    cs.add(box(2 * QA + 2 * QG, 0.012, QW + 2 * QG, mat.gap, x, GAP_Y, 0));
+    cs.add(box(QW + 2 * QG, 0.012, 2 * QA + 2 * QG, mat.gap, x, GAP_Y, 0));
+    cs.add(box(2 * QA, 0.07, QW, qPadMat[k], x, 0.04, 0));
+    cs.add(box(QW, 0.07, 2 * QA, qPadMat[k], x, 0.04, 0));
+    // SQUID
+    cs.add(box(0.62, 0.012, 0.56, mat.gap, x, GAP_Y, QSZ));
+    cs.add(box(0.07, 0.05, 0.27, mat.metal, x, LINE_Y, QA + 0.135));
+    [-0.16, 0.16].forEach(dx => { cs.add(box(0.05, 0.05, 0.3, mat.metal, x + dx, LINE_Y, QSZ)); cs.add(box(0.1, 0.08, 0.09, mat.jj, x + dx, 0.05, QSZ)); });
+    cs.add(box(0.37, 0.05, 0.05, mat.metal, x, LINE_Y, QSZ - 0.15));
+    cs.add(box(0.37, 0.05, 0.05, mat.metal, x, LINE_Y, QSZ + 0.15));
+    cs.add(box(0.07, 0.05, 0.26, mat.metal, x, LINE_Y, QSZ + 0.28));
+    // Z 線（下）、XY 線（上）
+    cs.add(cpw([[x + 0.62, 3.1], [x + 0.62, QSZ], [x + 0.3, QSZ]], 0.08, 0.06, zMat[k]));
+    cs.add(cpw([[x, -3.1], [x, -QA - 0.36]], 0.08, 0.06));
+    // 磁通箭頭（穿過 SQUID 迴路）
+    const arrows = [];
+    for (let i = 0; i < 3; i++) {
+      const c = new THREE.Mesh(new THREE.ConeGeometry(0.06, 0.16, 10), new THREE.MeshBasicMaterial({ color: COL.copper, transparent: true, opacity: 0 }));
+      c.position.set(x, 0.1, QSZ); cs.add(c); arrows.push(c);
+    }
+    fluxArrows.push(arrows);
+    const ring = new THREE.Mesh(new THREE.TorusGeometry(1.7, 0.035, 8, 80), new THREE.MeshBasicMaterial({ color: RED, transparent: true, opacity: 0 }));
+    ring.rotation.x = Math.PI / 2; ring.position.set(x, 0.08, 0.2); cs.add(ring); warnRings.push(ring);
+  });
+  // 耦合電容
+  [0, 1].forEach(i => {
+    const x1 = QX[i] + QA + 0.24, x2 = QX[i + 1] - QA - 0.24, cx = (x1 + x2) / 2;
+    cs.add(box(x2 - x1 + 0.2, 0.012, 0.36, mat.gap, cx, GAP_Y, 0));
+    cs.add(box(x2 - x1, 0.06, 0.16, cplMat[i], cx, 0.035, 0));
+  });
+  const csPulses = [];
+  for (let i = 0; i < 5; i++) { const s = new THREE.Mesh(new THREE.SphereGeometry(0.09, 14, 10), new THREE.MeshBasicMaterial({ color: COL.teal, transparent: true, opacity: 0 })); s.position.y = 0.14; cs.add(s); csPulses.push(s); }
+  const hiRing = new THREE.Mesh(new THREE.TorusGeometry(0.5, 0.03, 8, 64), new THREE.MeshBasicMaterial({ color: COL.gold, transparent: true, opacity: 0, depthWrite: false }));
+  hiRing.rotation.x = Math.PI / 2; cs.add(hiRing);
+
+  // 浮動看板：左＝SQUID 干涉小圖，右＝頻率尺
+  const board = new THREE.Group(); board.position.set(0, 4.1, -3.4); board.rotation.x = -0.3; cs.add(board);
+  const inset = new THREE.Mesh(new THREE.PlaneGeometry(4.4, 4.0), panelMat); inset.position.x = -5.0; board.add(inset);
+  const rulerP = new THREE.Mesh(new THREE.PlaneGeometry(10.2, 4.0), panelMat); rulerP.position.x = 2.5; board.add(rulerP);
+  const V = (x, y, z = 0.01) => new THREE.Vector3(x, y, z);
+  const rectLine = (cx, w, h) => { const l = lineFrom([V(cx - w / 2, -h / 2), V(cx + w / 2, -h / 2), V(cx + w / 2, h / 2), V(cx - w / 2, h / 2), V(cx - w / 2, -h / 2)], COL.gold, 0.99); l.material.opacity = 0; l.material.depthWrite = false; board.add(l); return l; };
+  const hiInset = rectLine(-5.0, 4.4, 4.0), hiRuler = rectLine(2.5, 10.2, 4.0);
+  // 干涉小圖：E_J(Φ)/E_J,max = |cos(πΦ/Φ₀)|，Φ ∈ [−Φ₀, Φ₀]
+  const ix = p => -5.0 + p * 1.9, iy = v => -1.25 + 2.5 * v;
+  { const pts = []; for (let i = 0; i <= 200; i++) { const p = -1 + 2 * i / 200; pts.push(V(ix(p), iy(Math.abs(Math.cos(Math.PI * p))))); } board.add(lineFrom(pts, COL.copper)); }
+  board.add(lineFrom([V(-7.0, -1.25), V(-3.0, -1.25)], COL.muted, 0.5));
+  board.add(lineFrom([V(-5.0, -1.25), V(-5.0, 1.35)], COL.muted, 0.25));
+  const insetDots = QCOL.map(c => { const m = new THREE.Mesh(new THREE.SphereGeometry(0.1, 16, 12), new THREE.MeshBasicMaterial({ color: c })); board.add(m); return m; });
+  // 頻率尺：4.55–5.45 GHz
+  const fx = f => -2.1 + (f - 4.55) / 0.9 * 9.2, GX = 9.2 / 0.9;
+  board.add(lineFrom([V(-2.4, -1.25), V(7.4, -1.25)], COL.muted, 0.6));
+  for (let i = 0; i <= 8; i++) { const x = fx(4.6 + 0.1 * i); board.add(lineFrom([V(x, -1.25), V(x, -1.25 + (i % 2 ? 0.1 : 0.2))], COL.muted, 0.6)); }
+  const bandMat = op => new THREE.MeshBasicMaterial({ color: RED, transparent: true, opacity: op, depthWrite: false });
+  const colBands = []; for (let i = 0; i < 6; i++) { const m = new THREE.Mesh(new THREE.PlaneGeometry(1, 2.5), bandMat(0)); m.position.z = 0.004; board.add(m); colBands.push(m); }
+  const zoneBands = []; for (let i = 0; i < 5; i++) { const m = new THREE.Mesh(new THREE.PlaneGeometry(1, 2.3), bandMat(0)); m.position.set(0, -0.1, 0.003); board.add(m); zoneBands.push(m); }
+  const ghostBand = new THREE.Mesh(new THREE.PlaneGeometry(1, 2.5), bandMat(0)); ghostBand.position.z = 0.005; board.add(ghostBand);
+  const markers = QCOL.map((c, k) => {
+    const m01 = new THREE.Mesh(new THREE.BoxGeometry(0.05, 2.3, 0.01), new THREE.MeshBasicMaterial({ color: c }));
+    const m12 = new THREE.Mesh(new THREE.BoxGeometry(0.03, 1.2, 0.01), new THREE.MeshBasicMaterial({ color: c, transparent: true, opacity: 0.55, depthWrite: false }));
+    const m2p = new THREE.Mesh(new THREE.OctahedronGeometry(0.08), new THREE.MeshBasicMaterial({ color: c, transparent: true, opacity: 0.85 }));
+    m01.position.set(0, -0.1, 0.012 + k * 0.002); m12.position.set(0, -0.65, 0.012 + k * 0.002); m2p.position.set(0, -1.0, 0.03);
+    board.add(m01, m12, m2p); return { m01, m12, m2p };
+  });
+  const ghostM = new THREE.Mesh(new THREE.BoxGeometry(0.05, 2.3, 0.01), new THREE.MeshBasicMaterial({ color: RED, transparent: true, opacity: 0, depthWrite: false }));
+  ghostM.position.set(0, -0.1, 0.02); board.add(ghostM);
+
+  // 第 6 章標籤
+  cs.updateMatrixWorld(true);
+  const cTag = (t, p, cls = "") => tag(t, cs.localToWorld(V(...p)), [5], cls);
+  const bTag = (t, x, y, cls = "") => tag(t, board.localToWorld(V(x, y, 0.02)), [5], "flat " + cls);
+  QX.forEach((x, k) => cTag(`Q${k + 1}`, [x + 0.95, 0.15, -0.95], "mono " + QCLS[k]));
+  cTag("SQUID", [QX[0] - 0.75, 0.15, QSZ + 0.1], "detail");
+  cTag("Z 線", [QX[0] + 0.62, 0.15, 2.9], "detail");
+  cTag("XY 線", [QX[0], 0.15, -2.75], "detail");
+  cTag("耦合電容", [(QX[0] + QX[1]) / 2, 0.15, 0], "detail");
+  bTag("SQUID 干涉：E_J(Φ) / E_J,max = |cos(πΦ/Φ₀)|", -5.0, 1.72, "small detail");
+  bTag("sweet spot", -4.2, 1.42, "mono gold small detail");
+  bTag("−Φ₀", ix(-1), -1.48, "mono small detail"); bTag("0", ix(0), -1.48, "mono small detail"); bTag("Φ₀", ix(1), -1.48, "mono small detail");
+  bTag("Φ（Z 線磁通）", -5.0, -1.82, "small detail");
+  for (let i = 0; i <= 4; i++) bTag((4.6 + 0.2 * i).toFixed(1), fx(4.6 + 0.2 * i), -1.48, "mono small detail");
+  bTag("頻率 GHz ｜ 實線 0→1 ・ 細線 1→2 ・ ◆ 雙光子 0→2", 2.5, -1.82, "small detail");
+  const qLabels = [0, 1, 2].map(k => bTag("", 0, 0, "mono small " + QCLS[k]));
+  const zoneLabels = ["同頻", "1→2", "1→2", "雙光子", "雙光子"].map(t => bTag(t, 0, 0, "mono small red"));
+  const ghostLabel = bTag("反例路徑", 0, 0, "mono small red");
+
+  // =====================================================================
   // 章節定義
   // =====================================================================
   const CH = [
-    { id: "chip", short: "晶片", kicker: "第 1 章 / 5", title: "一顆 transmon 的俯視圖",
+    { id: "chip", short: "晶片", kicker: "第 1 章 / 6", title: "一顆 transmon 的俯視圖",
       target: [0, -0.6, 0.6], pos: [8.5, 13.5, 15],
       html: `<p>灰色是<b>接地面</b>，深色細縫是蝕刻掉金屬、露出基板的間隙。中央的<b>十字金屬板</b>就是 transmon 的大電容，下端經由 <b>SQUID</b>（兩個約瑟夫森結）接地。</p>
       <p>三條線各司其職：<b>XY 線</b>送微波脈衝控制狀態，<b>Z 線</b>送磁通調頻率，蜿蜒的<b>讀取共振腔</b>透過饋線把狀態讀出來。</p>
       <dl class="stats"><dt>電容 C_Σ</dt><dd>≈ 77.5 fF</dd><dt>充電能 E_C/h</dt><dd>250 MHz</dd><dt>約瑟夫森能 E_J/h</dt><dd>15 GHz</dd><dt>實際尺寸</dt><dd>數百 μm（示意，未按比例）</dd></dl>
       <div class="controls"><button class="btn primary" id="c1pulse" type="button">送出 π 脈衝</button><label class="check"><input type="checkbox" id="c1tags" checked> 顯示標籤</label></div>
       <p class="note">送出脈衝後，十字板發出金光代表位元被激發到 |1⟩，之後依 T₁ 慢慢衰減回 |0⟩。</p>` },
-    { id: "junction", short: "約瑟夫森結", kicker: "第 2 章 / 5", title: "約瑟夫森結：非線性電感的本體",
+    { id: "junction", short: "約瑟夫森結", kicker: "第 2 章 / 6", title: "約瑟夫森結：非線性電感的本體",
       target: [JX + 0.3, 1.0, 0], pos: [JX + 4.5, 6.2, 12],
       html: `<p>下層 Al、中間 1–2 nm 的 AlOx、上層 Al。兩邊的超導波函數（後方截面圖）在絕緣層裡<b>指數衰減並重疊</b>，庫柏對因此能穿隧過去。</p>
       <p>拖動相位差 φ：電流 <b>I = I_c sin φ</b>，等效電感 <b>L_J = L_J0 / cos φ</b>。勾選「施加電壓」時 φ 以 2eV/ħ 的速率轉動，電流變成交流。</p>
       <dl class="stats"><dt>相位差 φ</dt><dd id="r2phi">—</dd><dt>電流 I / I_c</dt><dd id="r2I">—</dd><dt>電感 L_J / L_J0</dt><dd id="r2L">—</dd><dt>L_J0（I_c ≈ 30 nA）</dt><dd>≈ 10.9 nH</dd></dl>
       <div class="controls"><label class="row" for="c2phi">φ <input type="range" id="c2phi" min="0" max="180" step="1" value="35"></label><label class="check"><input type="checkbox" id="c2v"> 施加電壓 V ≠ 0（交流約瑟夫森效應）</label></div>` },
-    { id: "potential", short: "位能井", kicker: "第 3 章 / 5", title: "cos 位能井：能階不再等距",
+    { id: "potential", short: "位能井", kicker: "第 3 章 / 6", title: "cos 位能井：能階不再等距",
       target: [PX + 2.2, 3.6, 0], pos: [PX + 2.6, 5.2, 20],
       html: `<p>JJ 的位能是 <b>−E_J cos φ</b>（銅色），線性電感是<b>拋物線</b>（灰色）。cos 井的邊緣比拋物線平坦，量子化後能階<b>越往上越密</b>。</p>
       <p>右邊的單擺有完全相同的位能形狀。E_J/E_C = 60 時，相位擾動只有約 0.43 rad，所以只「有一點點」不簡諧。</p>
       <dl class="stats" id="r3"></dl>
       <div class="controls" role="group" aria-label="比較"><button class="btn" id="c3tr" type="button" aria-pressed="true">Transmon 能階</button><button class="btn" id="c3lc" type="button" aria-pressed="false">線性 LC 能階</button></div>` },
-    { id: "control", short: "操控", kicker: "第 4 章 / 5", title: "用微波轉動布洛赫球",
+    { id: "control", short: "操控", kicker: "第 4 章 / 6", title: "用微波轉動布洛赫球",
       target: [-1.6, 0.6, BZ], pos: [3.5, 4.5, BZ + 13.5],
       html: `<p><b>|0⟩、|1⟩</b> 是 cos 井最低的兩個能階。以 <b>f₀₁ = 5.21 GHz</b> 的微波脈衝驅動，狀態在布洛赫球上繞 X 或 Y 軸旋轉（Rabi 振盪）。</p>
       <p>|1⟩→|2⟩ 的頻率低了 283 MHz，所以同一道微波不會把狀態推上 |2⟩。實務上脈衝長 20–50 ns，並用 DRAG 整形進一步抑制洩漏。</p>
       <dl class="stats"><dt>P(|1⟩)</dt><dd id="r4p">0.000</dd></dl>
       <div class="meter" aria-hidden="true"><i id="r4bar"></i></div>
       <div class="controls" style="margin-top:12px"><button class="btn primary" id="c4xpi" type="button">X 軸 π</button><button class="btn" id="c4xh" type="button">X 軸 π/2</button><button class="btn" id="c4yh" type="button">Y 軸 π/2</button><button class="btn" id="c4r" type="button">重設 |0⟩</button></div>` },
-    { id: "readout", short: "讀取", kicker: "第 5 章 / 5", title: "色散讀取：從頻移讀出狀態",
+    { id: "readout", short: "讀取", kicker: "第 5 章 / 6", title: "色散讀取：從頻移讀出狀態",
       target: [-0.4, 2.0, -4.6], pos: [1.0, 7.0, 7.6],
       html: `<p>量子位元與 7 GHz 共振腔失諧約 1.8 GHz，兩者不直接交換能量，但共振腔頻率會依位元狀態偏移 <b>χ/2π ≈ ±0.77 MHz</b>。</p>
       <p>在兩個頻率中間送入探測微波，反射訊號的相位因狀態而不同，在 <b>IQ 平面</b>上落在兩個點群。量測結果依第 4 章的機率隨機出現，量測後狀態塌縮。</p>
@@ -497,9 +638,18 @@ nav.chapters {
       <div class="controls"><button class="btn primary" id="c5m" type="button">量測一次</button><button class="btn" id="c5m20" type="button">量測 20 次</button><button class="btn" id="c5plus" type="button">準備疊加態</button><button class="btn" id="c5one" type="button">準備 |1⟩</button></div>
       <div class="hist" style="margin-top:12px"><span>結果 0：<b id="h0">0</b></span><span>結果 1：<b id="h1">0</b></span></div>
       <p class="note">「量測 20 次」每次都先重新準備同一個疊加態，所以統計會接近 P(|1⟩)。</p>` },
+    { id: "case", short: "案例", kicker: "第 6 章 / 6", title: "案例：三顆可調 transmon 的頻率配置",
+      target: [0.6, 2.3, CZ0 - 1.2], pos: [1.2, 12.2, CZ0 + 16.0],
+      html: `<p>把前五章串起來：<b>XY 線寫入狀態、SQUID＋Z 線決定頻率</b>，再看多顆位元放在一起時，頻率要怎麼排才不會互相碰撞。動畫會邊演示邊在左上方跳出說明。</p>
+      <div class="steps" id="c6steps" role="group" aria-label="步驟"></div>
+      <div class="controls"><button class="btn" id="c6prev" type="button">◀ 上一步</button><button class="btn" id="c6play" type="button">暫停</button><button class="btn" id="c6re" type="button">重播</button><button class="btn primary" id="c6next" type="button">下一步 ▶</button><label class="check"><input type="checkbox" id="c6auto" checked> 自動接續</label></div>
+      <h3 id="c6title"></h3><div id="c6body"></div><div id="c6extra"></div>
+      <dl class="stats"><dt style="color:${QHEX[0]}">Q1</dt><dd id="c6q0">—</dd><dt style="color:${QHEX[1]}">Q2</dt><dd id="c6q1">—</dd><dt style="color:${QHEX[2]}">Q3</dt><dd id="c6q2">—</dd></dl>
+      <div class="col-list" id="c6col"></div>
+      <p class="note">各欄依序是 f₀₁、Z 線磁通 Φ、激發機率 P(|1⟩)。碰撞判定窗與串擾比例為示意值；頻率由 f₀₁ ≈ √(8E_J E_C) − E_C 與 E_J(Φ) = E_J,max|cos(πΦ/Φ₀)| 計算。</p>` },
   ];
-  const groupsFor = [[chip], [jj], [pot], [bl], [chip, readout]];
-  const allGroups = [chip, jj, pot, bl, readout];
+  const groupsFor = [[chip], [jj], [pot], [bl], [chip, readout], [cs]];
+  const allGroups = [chip, jj, pot, bl, readout, cs];
 
   // ---------- 章節 UI ----------
   const rail = document.getElementById("rail"), panel = document.getElementById("panel");
@@ -523,6 +673,7 @@ nav.chapters {
     view.yaw = 0; view.pitch = 0; view.zoom = 1;
     desired.target.set(...c.target);
     if (!fromHash) { try { history.replaceState(null, "", "#" + c.id); } catch (e) { location.hash = c.id; } }
+    capEl.hidden = i !== 5; capEl.classList.remove("show");
     bindChapter(i);
   }
   function bindChapter(i) {
@@ -552,6 +703,20 @@ nav.chapters {
       $("c5one").onclick = () => { queue.length = 0; anim = null; state.set(0, -1, 0); trailN = 0; };
       $("h0").textContent = hist[0]; $("h1").textContent = hist[1];
     }
+    if (i === 5) {
+      const sp = $("c6steps");
+      STEPS.forEach((s, k) => { const b = document.createElement("button"); b.type = "button"; b.textContent = k + 1; b.title = s.name; b.setAttribute("aria-label", `步驟 ${k + 1}：${s.name}`); b.onclick = () => setStep(k); sp.appendChild(b); });
+      $("c6prev").onclick = () => setStep(csS.step - 1);
+      $("c6next").onclick = () => setStep(csS.step + 1);
+      $("c6re").onclick = () => setStep(csS.step);
+      $("c6play").onclick = () => {
+        const st = STEPS[csS.step];
+        if (!csS.playing && st.dur && csS.t >= st.dur) { setStep(csS.step); return; }
+        csS.playing = !csS.playing; updPlay();
+      };
+      $("c6auto").checked = csS.auto; $("c6auto").onchange = e => { csS.auto = e.target.checked; };
+      setStep(csS.step);
+    }
   }
   function prepPlus() { queue.length = 0; anim = null; state.set(0, 0, 1); /* Rx(π/2)|0⟩ → −Y 方向（世界 +z） */ trailN = 0; }
   function measure() {
@@ -567,6 +732,287 @@ nav.chapters {
     const d = [E[1] - E[0], E[2] - E[1], E[3] - E[2]];
     const el = $("r3");
     if (el) el.innerHTML = `<dt>E₁ − E₀</dt><dd>${d[0].toFixed(2)} GHz</dd><dt>E₂ − E₁</dt><dd>${d[1].toFixed(2)} GHz</dd><dt>E₃ − E₂</dt><dd>${d[2].toFixed(2)} GHz</dd><dt>非諧性 α</dt><dd>${trMode ? "−283 MHz" : "0（等距）"}</dd>`;
+  }
+
+  // =====================================================================
+  // 第 6 章：步驟腳本與狀態
+  // =====================================================================
+  const capEl = $("caption"), capK = $("capK"), capP = $("capP"), capBar = $("capBar");
+  const csS = { step: 0, t: 0, cue: 0, playing: true, auto: true, anchor: null,
+    phi: [0, 0, 0], phiT: [0, 0, 0], exc: [0, 0, 0], zones: false, hiZone: -1,
+    sweep: null, cz: null, ghost: null, pulse: null };
+  let czP20 = 0, czPhase = 0, czDone = false, ghostFlash = 0;
+  const ALLOC = [phiFor(0, 4.90), 0, phiFor(2, 5.30)];
+  const smooth = u => u * u * (3 - 2 * u);
+  const fNow = k => fOf(k, csS.phi[k]);
+  function setPhi(arr, instant) { for (let k = 0; k < 3; k++) { csS.phiT[k] = arr[k]; if (instant) csS.phi[k] = arr[k]; } syncSliders(); }
+  function firePulse(k) { csS.pulse = { k, t: 0, applied: false }; csPulses.forEach(s => s.material.color.setHex(QCOL[k])); }
+  // π 脈衝打 Q_k：其他位元看到洩漏的驅動（相鄰 60%、隔一顆 25%，示意），依失諧算激發機率
+  function applyPi(k) {
+    const f = [0, 1, 2].map(fNow), Om = 25, leak = [1, 0.6, 0.25];   // Rabi 頻率 25 MHz（20 ns π 脈衝）
+    for (let j = 0; j < 3; j++) {
+      const Oj = Om * leak[Math.abs(j - k)], D = (f[j] - f[k]) * 1000, Og = Math.hypot(Oj, D);
+      const P = Oj * Oj / (Og * Og) * Math.pow(Math.sin(Math.PI * Og / (2 * Om)), 2);
+      csS.exc[j] = csS.exc[j] * (1 - P) + (1 - csS.exc[j]) * P;
+    }
+  }
+  // CZ（Q2–Q3）：Q3 推到 f_Q2 − α，|11⟩ ↔ |20⟩ 共振一個週期
+  function startCZ() {
+    const fT = fNow(1) - QC.alpha;
+    if (fT > fOf(2, 0) + 0.002) { showCaption(`Q3 最高只到 ${fOf(2, 0).toFixed(3)} GHz，到不了交會點 ${fT.toFixed(3)} GHz（只能往下調）。`, 0, 1); return; }
+    csS.cz = { t: 0, p0: csS.phiT[2], p1: phiFor(2, fT) }; czP20 = 0; czPhase = 0; czDone = false;
+  }
+  function startGhost() { csS.ghost = { t: 0, f0: fNow(2), f1: fNow(1) + QC.alpha }; }
+  function collisions(f) {
+    const a = QC.alpha, out = [];
+    const pair = (i, j, sp) => {
+      const n = `Q${i + 1}`, m = `Q${j + 1}`, pre = sp ? "旁觀者：" : "";
+      if (Math.abs(f[i] - f[j]) < WIN.same) out.push({ f: (f[i] + f[j]) / 2, w: WIN.same, q: [i, j], t: sp ? `旁觀者：${n} ≈ ${m}（兩者都是 Q2 的鄰居）` : `${n}–${m} 同頻（差 ${Math.round(Math.abs(f[i] - f[j]) * 1000)} MHz）` });
+      if (Math.abs(f[i] - (f[j] + a)) < WIN.x12) out.push({ f: f[i], w: WIN.x12, q: [i, j], t: `${pre}${n} 0→1 ≈ ${m} 1→2` });
+      if (Math.abs(f[j] - (f[i] + a)) < WIN.x12) out.push({ f: f[j], w: WIN.x12, q: [i, j], t: `${pre}${m} 0→1 ≈ ${n} 1→2` });
+      if (!sp) {
+        if (Math.abs(f[i] - (f[j] + a / 2)) < WIN.tp) out.push({ f: f[i], w: WIN.tp, q: [i, j], t: `${n} 驅動 ≈ ${m} 雙光子 0→2` });
+        if (Math.abs(f[j] - (f[i] + a / 2)) < WIN.tp) out.push({ f: f[j], w: WIN.tp, q: [i, j], t: `${m} 驅動 ≈ ${n} 雙光子 0→2` });
+      }
+    };
+    pair(0, 1, false); pair(1, 2, false); pair(0, 2, true);
+    return out;
+  }
+  function showCaption(text, i, n) {
+    capEl.classList.remove("show"); void capEl.offsetWidth;
+    capK.textContent = `步驟 ${csS.step + 1} / ${STEPS.length} ・ ${STEPS[csS.step].name} ・ ${i + 1}/${n}`;
+    capP.textContent = text; capEl.classList.add("show");
+  }
+
+  const CZHTML = `<dl class="stats"><dt>P(|20⟩)（Q3 在 |2⟩）</dt><dd id="c6p20">0.00</dd><dt>|11⟩ 累積相位</dt><dd id="c6ph">0°</dd></dl><div class="meter" aria-hidden="true"><i id="c6bar"></i></div>`;
+  const FREEHTML = `<div class="controls" style="margin:8px 0 4px">
+      ${[0, 1, 2].map(k => `<label class="row" for="c6phi${k}"><span class="qn" style="color:${QHEX[k]}">Q${k + 1} Φ</span><input type="range" id="c6phi${k}" min="0" max="0.3" step="0.001"><output id="c6o${k}"></output></label>`).join("")}
+      <button class="btn" type="button" data-pi="0">π → Q1</button><button class="btn" type="button" data-pi="1">π → Q2</button><button class="btn" type="button" data-pi="2">π → Q3</button>
+      <button class="btn" type="button" id="c6cz">CZ（Q2–Q3）</button><button class="btn" type="button" id="c6alloc">回到配置</button><button class="btn" type="button" id="c6raw">回到製程原貌</button>
+      <label class="check"><input type="checkbox" id="c6zones"> 顯示 Q2 鄰居的禁區</label></div>${CZHTML}`;
+
+  // 每個 cue：[秒, 字幕, 指示位置, 動作]
+  const STEPS = [
+    { name: "製程誤差", title: "① 剛做好：頻率散亂、互相碰撞",
+      body: `<p>三顆可調 transmon 排成一列，相鄰之間有耦合電容。剛冷下來時都停在 <b>sweet spot（Φ = 0）</b>，但 JJ 氧化層只要差幾個原子，E_J 就差好幾 %，頻率跟著散開。</p>
+      <p>頻率尺上每顆位元有三個頻率：<b>實線 0→1</b>、<b>細線 1→2</b>（低 283 MHz）、<b>◆ 雙光子</b>（低 141 MHz）。任一條撞上鄰居的任一條就是<b>碰撞</b>，以紅色帶標示。</p>`,
+      setup() { setPhi([0, 0, 0], true); csS.zones = false; csS.exc = [0, 0, 0]; },
+      cues: [
+        [0.3, "三顆可調 transmon 排成一列：Q1 – Q2 – Q3，相鄰之間靠電容耦合。", "chip"],
+        [4, "剛做好時都停在 sweet spot（Φ = 0），但製程誤差讓 E_J 不同：Q1 5.12、Q2 5.10、Q3 5.39 GHz。", "ruler"],
+        [8.5, "紅色帶就是碰撞：Q1 和 Q2 只差 20 MHz（同頻）；Q3 的 1→2（5.107 GHz）又同時撞上 Q2、Q1 的 0→1。", "ruler"],
+        [13.5, "這時對 Q1 送一個 π 脈衝……", "q0", () => firePulse(0)],
+        [16.5, "Q2 也被激發了（看右側面板的 P(|1⟩)）：頻率太近，XY 脈衝分不出目標，這就是驅動串擾。", "q1"],
+      ], dur: 21.5 },
+    { name: "SQUID 調頻", title: "② SQUID 干涉：用磁通把頻率往下調",
+      body: `<p>SQUID 是兩個 JJ 圍成的小迴路。Z 線電流的磁場穿過迴路，兩路超電流發生干涉：<b>E_J(Φ) = E_J,max |cos(πΦ/Φ₀)|</b>（左邊小圖）。</p>
+      <p>頻率 <b>f₀₁ ≈ √(8E_J E_C) − E_C</b> 跟著下降。因為最高點在 Φ = 0，<b>只能往下調</b>，這個最高點就是 sweet spot。離開 sweet spot 後 df/dΦ ≠ 0，磁通雜訊會變成頻率抖動（看頻率尺上 Q1 的實線）。</p>`,
+      setup() { setPhi([0, 0, 0]); csS.zones = false; },
+      cues: [
+        [0.3, "看 Q1：SQUID 是兩個 JJ（橘色小塊）圍成的迴路，Z 線就從旁邊經過。", "s0"],
+        [4, "Z 線送入電流，產生的磁通 Φ 穿過 SQUID 迴路（銅色箭頭往上冒）。", "s0", () => { csS.sweep = { t: 0 }; }],
+        [7.5, "兩路超電流干涉：E_J 隨 Φ 呈 |cos| 週期變化，週期正好是一個磁通量子 Φ₀。", "inset"],
+        [11.5, "E_J 變小 → f₀₁ 下降。最高點 Φ = 0 就是 sweet spot，所以頻率只能往下調。", "ruler"],
+        [15.5, "離開 sweet spot 時，磁通雜訊讓頻率抖動（dephasing）；回到 Φ = 0，抖動就消失。", "ruler"],
+      ], dur: 20 },
+    { name: "頻率配置", title: "③ 頻率配置：給每顆位元一個地址",
+      body: `<p>Q2 留在 sweet spot（5.10 GHz）。淡紅色是 Q2 鄰居的<b>禁區</b>：同頻、0→1 撞 1→2（±283 MHz）、雙光子（±141 MHz）。</p>
+      <p>直覺的<b>棋盤格</b>（Q1 = Q3）會失敗：兩者都是 Q2 的鄰居，對 Q2 做閘時會被同時拖下水（<b>旁觀者碰撞</b>）。所以同一顆位元的鄰居彼此也要錯開。目標不是讓位元「一樣」，而是讓每顆<b>各有地址</b>。</p>`,
+      setup() { setPhi([0, 0, 0]); csS.zones = true; },
+      cues: [
+        [0.3, "Q2 留在 sweet spot 5.10 GHz。淡紅色帶是它的鄰居不能去的禁區。", "ruler"],
+        [4.5, "先試棋盤格：用 Z 線把 Q1、Q3 都調到 4.90 GHz。", "ruler", () => setPhi([phiFor(0, 4.9), 0, phiFor(2, 4.9)])],
+        [9.5, "Q1、Q3 都避開了 Q2 的禁區，但 Q1 = Q3：兩者都是 Q2 的鄰居 → 旁觀者碰撞。", "ruler"],
+        [14, "把 Q3 改放 5.30 GHz：避開 Q2 的禁區，也和 Q1 錯開 400 MHz。", "q2", () => setPhi(ALLOC)],
+        [18.5, "零碰撞：三顆位元各有自己的地址，彼此相距約 200 MHz。", "ruler"],
+      ], dur: 23 },
+    { name: "XY 寫入", title: "④ XY 寫入：頻率錯開才打得準",
+      body: `<p>寫入一律從 |0⟩ 出發：冷卻到 10–20 mK 後幾乎都在基態。接著 XY 線送出<b>對準該位元 f₀₁ 的微波脈衝</b>：振幅 × 時間決定旋轉角度，相位決定旋轉軸（第 4 章）。</p>
+      <p>20 ns 的 π 脈衝頻寬約 50 MHz。鄰居失諧 200 MHz，遠在頻寬之外，所以只有目標位元被翻轉。<b>SQUID 不負責寫入</b>，它只決定位元在哪個頻率。</p>`,
+      setup() { setPhi(ALLOC); csS.zones = false; csS.exc = [0, 0, 0]; },
+      cues: [
+        [0.3, "所有位元先回到 |0⟩：冷卻到 10–20 mK，熱激發可以忽略。", "chip"],
+        [3, "XY 線送出 4.90 GHz 的 π 脈衝給 Q1……", "q0", () => firePulse(0)],
+        [6.5, "只有 Q1 被翻到 |1⟩：Q2 失諧 200 MHz，遠大於脈衝頻寬（約 50 MHz）。", "q0"],
+        [10.5, "再送 5.30 GHz 的 π 脈衝給 Q3：一樣只打中 Q3。", "q2", () => firePulse(2)],
+        [14, "任意狀態都由「角度 × 旋轉軸」的組合寫入；SQUID 只決定頻率，不負責寫入。", "chip"],
+      ], dur: 18.5 },
+    { name: "CZ 閘", title: "⑤ CZ 閘：刻意短暫拜訪碰撞點",
+      body: `<p>要讓 Q2、Q3 互動，就用磁通脈衝把 Q3 推到 <b>f_Q2 − α = 5.383 GHz</b>。這時 |11⟩ 與 |20⟩ 能量相同，|11⟩ 繞一圈回來多一個 <b>−1 相位</b>，這就是 CZ。</p>
+      <p>這個交會點正是平常要避開的「0→1 撞 1→2」碰撞點。另一條路（|11⟩↔|02⟩）要把 Q3 降到 4.817 GHz，途中會掃過 Q2 的 5.10 GHz，造成 |01⟩↔|10⟩ 交換錯誤，所以不選。</p>`,
+      extra: CZHTML,
+      setup() { setPhi(ALLOC); csS.zones = true; csS.exc = [0, 0, 0]; },
+      cues: [
+        [0.3, "目標：讓 Q2、Q3 做 CZ。交會點是 f_Q3 = f_Q2 − α = 5.383 GHz（|11⟩ ↔ |20⟩ 共振）。", "ruler", () => { csS.hiZone = 2; }],
+        [4.5, "這正是平常要避開的禁區：做閘時才刻意去，而且只停留幾十 ns。", "ruler"],
+        [8, "先用 XY 線把 Q2、Q3 都寫成 |1⟩：CZ 只對 |11⟩ 加相位，所以要從 |11⟩ 開始看。", "q1", () => firePulse(1)],
+        [9.6, null, null, () => firePulse(2)],
+        [12, "Z 線送出磁通脈衝：Q3 往上移到 5.383 GHz，停留，再回到 5.30。", "s2", () => startCZ()],
+        [18, "|11⟩ 的振幅流到 |20⟩ 又流回來，多了一個 −1 相位：CZ 完成，Q3 回到原本的地址。", "q2"],
+        [22, "反例：若改走 |11⟩↔|02⟩，Q3 得降到 4.817 GHz，途中會掃過 Q2 的 5.10 → 交換錯誤。", "ruler", () => { csS.hiZone = 1; startGhost(); }],
+      ], dur: 28 },
+    { name: "自由實驗", title: "⑥ 換你操作：Z 能調什麼、不能調什麼",
+      body: `<p>拖動三條 Z 線的磁通，試著製造或消除碰撞；再送 π 脈衝看看串擾，或做一次 CZ。</p>
+      <p><b>Z 只能調 f₀₁</b>。非諧性（電容幾何）、T₁/T₂（材料缺陷）、耦合強度 g、讀取腔頻率都調不了，要靠校準逐顆處理。目標從來不是讓每顆一樣，而是<b>每顆放在各自的地址</b>，要互動時才短暫對上。</p>`,
+      extra: FREEHTML, free: true,
+      setup() { setPhi(ALLOC); csS.zones = false; },
+      cues: [[0.3, "換你操作：拖動 Φ 滑桿、送 π 脈衝或做 CZ。紅色帶一出現，就是碰撞。", "ruler"]], dur: 0 },
+  ];
+
+  function setStep(i) {
+    i = Math.max(0, Math.min(STEPS.length - 1, i));
+    const S = csS; S.step = i; S.t = 0; S.cue = 0; S.playing = true; S.anchor = null; S.hiZone = -1;
+    S.sweep = null; S.cz = null; S.ghost = null; S.pulse = null;
+    czP20 = 0; czPhase = 0; czDone = false; ghostFlash = 0;
+    csPulses.forEach(s => s.material.opacity = 0);
+    cplMat.forEach(m => m.emissiveIntensity = 0);
+    capEl.classList.remove("show");
+    const st = STEPS[i];
+    st.setup();
+    if (cur === 5) {
+      $("c6title").textContent = st.title; $("c6body").innerHTML = st.body; $("c6extra").innerHTML = st.extra || "";
+      [...$("c6steps").children].forEach((b, k) => b.setAttribute("aria-current", k === i ? "true" : "false"));
+      if (st.free) bindFree();
+    }
+    updPlay();
+  }
+  function updPlay() {
+    const b = $("c6play"); if (!b) return;
+    const st = STEPS[csS.step], done = st.dur && csS.t >= st.dur;
+    b.textContent = csS.playing ? "暫停" : done ? "再看一次" : "播放";
+    b.disabled = !!st.free; $("c6prev").disabled = csS.step === 0; $("c6next").disabled = csS.step === STEPS.length - 1;
+  }
+  function bindFree() {
+    [0, 1, 2].forEach(k => { const s = $("c6phi" + k); s.oninput = () => { csS.phiT[k] = +s.value; }; });
+    document.querySelectorAll("[data-pi]").forEach(b => { b.onclick = () => firePulse(+b.dataset.pi); });
+    $("c6cz").onclick = () => { if (!csS.cz) startCZ(); };
+    $("c6alloc").onclick = () => setPhi(ALLOC);
+    $("c6raw").onclick = () => setPhi([0, 0, 0]);
+    $("c6zones").checked = csS.zones; $("c6zones").onchange = e => { csS.zones = e.target.checked; };
+    syncSliders();
+  }
+  function syncSliders() {
+    for (let k = 0; k < 3; k++) { const s = $("c6phi" + k); if (s && document.activeElement !== s) s.value = csS.phiT[k]; }
+  }
+
+  function updateCase(dt) {
+    const S = csS, st = STEPS[S.step];
+    // 時間軸
+    if (S.playing) S.t += dt;
+    while (S.cue < st.cues.length && S.t >= st.cues[S.cue][0]) {
+      const c = st.cues[S.cue], nCap = st.cues.filter(q => q[1]).length, iCap = st.cues.slice(0, S.cue).filter(q => q[1]).length;
+      if (c[1]) { showCaption(c[1], iCap, nCap); S.anchor = c[2]; } if (c[3]) c[3](); S.cue++;
+    }
+    capBar.style.width = (st.dur ? Math.min(100, S.t / st.dur * 100) : 100).toFixed(1) + "%";
+    if (st.dur && S.playing && S.t >= st.dur) {
+      if (S.auto && S.step < STEPS.length - 1) { setStep(S.step + 1); return; }
+      S.playing = false; updPlay();
+    }
+
+    // 磁通：平滑移向目標；掃描、CZ 脈衝另行覆寫
+    const kk = 1 - Math.exp(-dt * 2.4);
+    for (let k = 0; k < 3; k++) S.phi[k] += (S.phiT[k] - S.phi[k]) * kk;
+    if (S.sweep) {
+      const u = (S.sweep.t += dt); let v;
+      if (u < 3) v = smooth(u / 3); else if (u < 8) v = 1; else if (u < 11) v = 1 - smooth((u - 8) / 3); else { v = 0; S.sweep = null; }
+      S.phi[0] = S.phiT[0] = 0.2 * v;
+    }
+    let czEnv = 0;
+    if (S.cz) {
+      const c = S.cz, u = (c.t += dt); let ud = 0;
+      if (u < 1) czEnv = smooth(u); else if (u < 4) { czEnv = 1; ud = (u - 1) / 3; } else if (u < 5) { czEnv = 1 - smooth(u - 4); ud = 1; } else { ud = 1; S.cz = null; czDone = true; }
+      if (S.cz) S.phi[2] = c.p0 + (c.p1 - c.p0) * czEnv;
+      czP20 = Math.pow(Math.sin(Math.PI * ud), 2); czPhase = 180 * ud;
+    }
+    cplMat[1].emissiveIntensity = 0.9 * czEnv;
+
+    const f = [0, 1, 2].map(fNow);
+
+    // XY 脈衝
+    if (S.pulse) {
+      const p = S.pulse; p.t += dt;
+      csPulses.forEach((s, i) => {
+        const u = p.t * 1.2 - i * 0.08, vis = u > 0 && u < 1;
+        s.material.opacity = vis ? 1 - i * 0.15 : 0;
+        s.position.set(QX[p.k], 0.14, -3.1 + (3.1 - QA - 0.36) * Math.min(Math.max(u, 0), 1));
+      });
+      if (!p.applied && p.t * 1.2 >= 1) { applyPi(p.k); p.applied = true; }
+      if (p.t * 1.2 > 1.5) { S.pulse = null; csPulses.forEach(s => s.material.opacity = 0); }
+    }
+    for (let k = 0; k < 3; k++) {
+      S.exc[k] *= Math.exp(-dt / 14);   // T₁ 衰減（放慢以便觀察）
+      qPadMat[k].emissiveIntensity = 0.04 + 0.95 * S.exc[k];
+      // 磁通箭頭與 Z 線發光
+      const amp = Math.min(1, S.phi[k] / 0.06);
+      zMat[k].emissiveIntensity = 0.75 * amp;
+      fluxArrows[k].forEach((c, i) => { const u = (T * 0.8 + i / 3) % 1; c.position.y = 0.08 + 0.8 * u; c.material.opacity = amp * Math.sin(Math.PI * u); });
+    }
+
+    // 頻率尺標記（加上磁通雜訊造成的抖動：幅度 ∝ |df/dΦ|）
+    for (let k = 0; k < 3; k++) {
+      const slope = Math.abs(fOf(k, S.phi[k] + 0.001) - fOf(k, S.phi[k])) / 0.001;
+      const fd = f[k] + slope * 0.0025 * Math.sin(T * 37 + k * 11) * Math.sin(T * 23 + k * 5);
+      const m = markers[k], x = fx(fd), x12 = fx(fd + QC.alpha), x2p = fx(fd + QC.alpha / 2), inR = v => v > -2.5 && v < 7.5;
+      m.m01.position.x = x; m.m01.visible = inR(x);
+      m.m12.position.x = x12; m.m12.visible = inR(x12);
+      m.m2p.position.x = x2p; m.m2p.visible = inR(x2p); m.m2p.rotation.y = T * 1.5;
+      const lab = qLabels[k]; lab.on = inR(x);
+      lab.el.textContent = `Q${k + 1} ${f[k].toFixed(3)}`;
+      lab.pos.copy(board.localToWorld(V(x, [1.28, 1.62, 1.0][k], 0.02)));
+      insetDots[k].position.set(ix(S.phi[k]), iy(Math.abs(Math.cos(Math.PI * S.phi[k]))), 0.03 + k * 0.01);
+    }
+
+    // 碰撞
+    const cols = collisions(f), inv = [0, 0, 0];
+    colBands.forEach((b, i) => {
+      const c = cols[i];
+      if (c) { b.visible = fx(c.f) > -2.4 && fx(c.f) < 7.4; b.position.x = fx(c.f); b.scale.x = 2 * c.w * GX; b.material.opacity = 0.32 + 0.2 * Math.sin(T * 6); c.q.forEach(q => inv[q] = 1); }
+      else b.material.opacity = 0;
+    });
+    warnRings.forEach((r, k) => { r.material.opacity = inv[k] ? 0.55 + 0.35 * Math.sin(T * 6) : 0; });
+
+    // Q2 鄰居的禁區
+    const zc = [f[1], f[1] + QC.alpha, f[1] - QC.alpha, f[1] + QC.alpha / 2, f[1] - QC.alpha / 2];
+    const zw = [WIN.same, WIN.x12, WIN.x12, WIN.tp, WIN.tp];
+    zoneBands.forEach((b, i) => {
+      b.position.x = fx(zc[i]); b.scale.x = 2 * zw[i] * GX;
+      b.material.opacity = !S.zones ? 0 : (i === S.hiZone ? 0.42 + 0.18 * Math.sin(T * 5) : 0.22);
+      const zin = fx(zc[i]) > -2.4 && fx(zc[i]) < 7.4; b.visible = zin;
+      const lb = zoneLabels[i]; lb.on = S.zones && zin; lb.pos.copy(board.localToWorld(V(fx(zc[i]), 0.6, 0.02)));
+    });
+
+    // 反例路徑
+    ghostFlash = Math.max(0, ghostFlash - dt * 1.2);
+    if (S.ghost) {
+      const g = S.ghost, u = (g.t += dt) / 4.5;
+      if (u >= 1) S.ghost = null;
+      else {
+        const fg = g.f0 + (g.f1 - g.f0) * Math.pow(Math.sin(Math.PI * u), 2);
+        ghostM.position.x = fx(fg);
+        ghostLabel.pos.copy(board.localToWorld(V(fx(fg), 1.28, 0.02)));
+        if (Math.abs(fg - f[1]) < WIN.same) ghostFlash = 1;
+      }
+    }
+    ghostM.material.opacity = S.ghost ? 0.9 : 0; ghostLabel.on = !!S.ghost;
+    ghostBand.position.x = fx(f[1]); ghostBand.scale.x = 2 * WIN.same * GX; ghostBand.material.opacity = 0.7 * ghostFlash;
+
+    // 指示圈
+    const a = S.anchor, pul = 0.55 + 0.35 * Math.sin(T * 4);
+    hiRing.material.opacity = 0; hiInset.material.opacity = 0; hiRuler.material.opacity = 0;
+    if (a && a[0] === "q") { hiRing.position.set(QX[+a[1]], 0.1, 0.2); hiRing.scale.setScalar(4.1 + 0.15 * Math.sin(T * 4)); hiRing.material.opacity = pul; }
+    if (a && a[0] === "s") { hiRing.position.set(QX[+a[1]], 0.1, QSZ); hiRing.scale.setScalar(1.0 + 0.12 * Math.sin(T * 4)); hiRing.material.opacity = pul; }
+    if (a === "inset") hiInset.material.opacity = pul;
+    if (a === "ruler") hiRuler.material.opacity = pul;
+
+    // 面板數值
+    for (let k = 0; k < 3; k++) { const el = $("c6q" + k); if (el) el.textContent = `${f[k].toFixed(3)} GHz ・ Φ ${S.phi[k].toFixed(3)}Φ₀ ・ P₁ ${S.exc[k].toFixed(2)}`; const o = $("c6o" + k); if (o) o.textContent = S.phiT[k].toFixed(3) + "Φ₀"; }
+    const cl = $("c6col");
+    if (cl) cl.innerHTML = cols.length
+      ? `<b>碰撞 ${cols.length} 處${S.cz ? "（CZ 進行中：刻意共振）" : ""}</b><br>` + cols.map(c => "・" + c.t).join("<br>")
+      : `<span class="ok">無碰撞 ✓</span>`;
+    const p20 = $("c6p20");
+    if (p20) { p20.textContent = czP20.toFixed(2); $("c6ph").textContent = czPhase.toFixed(0) + "°" + (czDone ? "（= −1，CZ 完成）" : ""); $("c6bar").style.width = (czP20 * 100).toFixed(1) + "%"; }
+    if (st.free) syncSliders();
   }
 
   // ---------- 相機（拖曳 / 縮放） ----------
@@ -710,10 +1156,13 @@ nav.chapters {
       const p5 = $("r5p"); if (p5 && cur === 4) p5.textContent = P1().toFixed(3);
     }
 
+    // 第 6 章：案例
+    if (cur === 5) updateCase(dt);
+
     // 標籤投影
     const w = stage.clientWidth, h = stage.clientHeight;
     for (const t of tags) {
-      let show = t.chapters.includes(cur) && (cur !== 0 || showTags);
+      let show = t.on !== false && t.chapters.includes(cur) && (cur !== 0 || showTags);
       if (show) {
         tmpV.copy(t.pos).project(camera);
         show = tmpV.z < 1 && Math.abs(tmpV.x) < 1.05 && Math.abs(tmpV.y) < 1.05;
