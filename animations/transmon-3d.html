@@ -349,6 +349,31 @@ nav.chapters {
   rTag("|0⟩", IQ0.x, IQ0.y + 0.55, [4], "teal mono");
   rTag("|1⟩", IQ1.x, IQ1.y - 0.6, [4], "gold mono");
 
+  // 第 5 章補充：判別閾值、單發軌跡、讀取鏈／重設時間軸看板
+  const MID5 = IQ0.clone().add(IQ1).multiplyScalar(0.5), AX5 = IQ1.clone().sub(IQ0);
+  const thrDir = new THREE.Vector2(-AX5.y, AX5.x).normalize();
+  const thrLine = lineFrom([new THREE.Vector3(MID5.x - thrDir.x * 1.65, MID5.y - thrDir.y * 1.65, 0.015), new THREE.Vector3(MID5.x + thrDir.x * 1.65, MID5.y + thrDir.y * 1.65, 0.015)], COL.white, 0.99);
+  thrLine.material.opacity = 0; thrLine.material.depthWrite = false; readout.add(thrLine);
+  const trajN = 48, trajGeo = new THREE.BufferGeometry();
+  trajGeo.setAttribute("position", new THREE.BufferAttribute(new Float32Array(trajN * 3), 3)); trajGeo.setDrawRange(0, 0);
+  const trajLine = new THREE.Line(trajGeo, new THREE.LineBasicMaterial({ color: COL.white, transparent: true, opacity: 0.7, depthWrite: false })); readout.add(trajLine);
+  const trajDot = new THREE.Mesh(new THREE.SphereGeometry(0.09, 16, 12), new THREE.MeshBasicMaterial({ color: COL.white, transparent: true, opacity: 0 })); readout.add(trajDot);
+  function addIQAt(x, y, bit) {
+    const i = iqCount % iqMax;
+    iqPos[i * 3] = x; iqPos[i * 3 + 1] = y; iqPos[i * 3 + 2] = 0.02;
+    const col = new THREE.Color(bit ? COL.gold : COL.teal);
+    iqCol[i * 3] = col.r; iqCol[i * 3 + 1] = col.g; iqCol[i * 3 + 2] = col.b;
+    iqCount++; iqGeo.setDrawRange(0, Math.min(iqCount, iqMax));
+    iqGeo.attributes.position.needsUpdate = true; iqGeo.attributes.color.needsUpdate = true;
+  }
+  const thrTag = rTag("判別閾值", MID5.x + thrDir.x * 1.45 + 0.45, MID5.y + thrDir.y * 1.45, [4], "mono small");
+  // 看板（讀取鏈／重設時間軸），放在晶片右側，靠相機移動過去看
+  const rchain = new THREE.Group(); rchain.position.set(17, 3.2, -4); scene.add(rchain);
+  const cv5 = document.createElement("canvas"); cv5.width = 1400; cv5.height = 640;
+  const c5x = cv5.getContext("2d");
+  const tex5 = new THREE.CanvasTexture(cv5); tex5.encoding = THREE.sRGBEncoding; tex5.anisotropy = 4;
+  rchain.add(new THREE.Mesh(new THREE.PlaneGeometry(12, 12 * 640 / 1400), new THREE.MeshBasicMaterial({ map: tex5, transparent: true, depthWrite: false })));
+
   // =====================================================================
   // 第 2 章：約瑟夫森結放大模型
   // =====================================================================
@@ -696,13 +721,14 @@ nav.chapters {
       <div class="meter" aria-hidden="true"><i id="r4bar"></i></div>
       <div class="controls" style="margin-top:12px"><button class="btn primary" id="c4xpi" type="button">X 軸 π</button><button class="btn" id="c4xh" type="button">X 軸 π/2</button><button class="btn" id="c4yh" type="button">Y 軸 π/2</button><button class="btn" id="c4r" type="button">重設 |0⟩</button></div>` },
     { id: "readout", short: "讀取", kicker: "第 5 章 / 8", title: "色散讀取：從頻移讀出狀態",
-      target: [-0.4, 2.0, -4.6], pos: [1.0, 7.0, 7.6],
-      html: `<p>量子位元與 7 GHz 共振腔失諧約 1.8 GHz，兩者不直接交換能量，但共振腔頻率會依位元狀態偏移 <b>χ/2π ≈ ±0.77 MHz</b>。</p>
-      <p>在兩個頻率中間送入探測微波，反射訊號的相位因狀態而不同，在 <b>IQ 平面</b>上落在兩個點群。量測結果依第 4 章的機率隨機出現，量測後狀態塌縮。</p>
-      <dl class="stats"><dt>目前 P(|1⟩)</dt><dd id="r5p">0.000</dd></dl>
-      <div class="controls"><button class="btn primary" id="c5m" type="button">量測一次</button><button class="btn" id="c5m20" type="button">量測 20 次</button><button class="btn" id="c5plus" type="button">準備疊加態</button><button class="btn" id="c5one" type="button">準備 |1⟩</button></div>
-      <div class="hist" style="margin-top:12px"><span>結果 0：<b id="h0">0</b></span><span>結果 1：<b id="h1">0</b></span></div>
-      <p class="note">「量測 20 次」每次都先重新準備同一個疊加態，所以統計會接近 P(|1⟩)。</p>` },
+      target: [-0.3, 2.3, -5.2], pos: [0.7, 6.6, 10.2],
+      html: `<p>讀取不直接量位元，而是量它旁邊<b>讀取共振腔的「音高」</b>。本章分 8 步：為什麼要間接讀、色散偏移、探測與 IQ、整條讀取鏈、積分與判別、量測反作用與 QND、<b>量完之後怎麼回到 |0⟩</b>，最後是自由實驗。左上方字幕會跟著動畫說明。</p>
+      <div class="steps" id="g5steps" role="group" aria-label="步驟"></div>
+      <div class="controls"><button class="btn" id="g5prev" type="button">◀ 上一步</button><button class="btn" id="g5play" type="button">暫停</button><button class="btn" id="g5re" type="button">重播</button><button class="btn primary" id="g5next" type="button">下一步 ▶</button><label class="check"><input type="checkbox" id="g5auto" checked> 自動接續</label></div>
+      <h3 id="g5title"></h3><div id="g5body"></div><div id="g5extra"></div>
+      <dl class="stats"><dt>目前 P(|1⟩)</dt><dd id="r5p">0.000</dd><dt>積分時間 τ</dt><dd id="g5tau">—</dd><dt>估計讀取保真度</dt><dd id="g5F">—</dd><dt>最近一次</dt><dd id="g5last">—</dd></dl>
+      <div class="hist"><span>判成 0：<b id="h0">0</b></span><span>判成 1：<b id="h1">0</b></span></div>
+      <p class="note">數值：f_q = 5.21 GHz、f_r ≈ 7 GHz、g ≈ 100 MHz、α = −283 MHz → χ ≈ 0.77 MHz、最佳 κ ≈ 2χ ≈ 1.5 MHz。IQ 雜訊大小與 T₁ = 50 μs 為示意值；保真度估計 = 兩團高斯重疊 + 讀取途中 T₁ 衰減。</p>` },
     { id: "case", short: "案例", kicker: "第 6 章 / 8", title: "案例：三顆可調 transmon 的頻率配置",
       target: [0.6, 2.3, CZ0 - 1.2], pos: [1.2, 12.2, CZ0 + 16.0],
       html: `<p>把前五章串起來：<b>XY 線寫入狀態、SQUID＋Z 線決定頻率</b>，再看多顆位元放在一起時，頻率要怎麼排才不會互相碰撞。動畫會邊演示邊在左上方跳出說明。</p>
@@ -731,8 +757,8 @@ nav.chapters {
       <dl class="stats"><dt>設定</dt><dd id="g8na">—</dd><dt>真實週期（古典驗算）</dt><dd id="g8r">—</dd><dt>最近量到的 y</dt><dd id="g8y">—</dd><dt>連分數 → 週期</dt><dd id="g8cf">—</dd><dt>分解結果</dt><dd id="g8f">—</dd></dl>
       <p class="note">量測工作暫存器只是為了方便理解：不量它，計數暫存器最後的結果分布完全相同（延遲量測原理）。振幅由完整的離散傅立葉轉換計算，量測依 |振幅|² 隨機取樣。</p>` },
   ];
-  const groupsFor = [[chip], [jj], [pot], [bl], [chip, readout], [cs], [g7], [g8]];
-  const allGroups = [chip, jj, pot, bl, readout, cs, g7, g8];
+  const groupsFor = [[chip], [jj], [pot], [bl], [chip, readout, rchain], [cs], [g7], [g8]];
+  const allGroups = [chip, jj, pot, bl, readout, rchain, cs, g7, g8];
 
   // ---------- 章節 UI ----------
   const rail = document.getElementById("rail"), panel = document.getElementById("panel");
@@ -753,15 +779,15 @@ nav.chapters {
     panel.innerHTML = `<div class="kicker">${c.kicker}</div><h2>${c.title}</h2>${c.html}`;
     [...rail.children].forEach((b, k) => b.setAttribute("aria-current", k === i ? "true" : "false"));
     allGroups.forEach(g => g.visible = groupsFor[i].includes(g));
-    view.yaw = 0; view.pitch = 0; view.zoom = 1;
+    view.yaw = 0; view.pitch = 0; view.zoom = 1; camOv = null;
     desired.target.set(...c.target);
     if (!fromHash) { try { history.replaceState(null, "", "#" + c.id); } catch (e) { location.hash = c.id; } }
-    capEl.hidden = i < 5; capEl.classList.remove("show");
+    capEl.hidden = i < 4; capEl.classList.remove("show");
     bindChapter(i);
   }
   function bindChapter(i) {
     if (i === 0) {
-      $("c1pulse").onclick = () => { xyT = 0; };
+      $("c1pulse").onclick = () => { xyDe = false; xyT = 0; };
       $("c1tags").checked = showTags; $("c1tags").onchange = e => { showTags = e.target.checked; };
     }
     if (i === 1) {
@@ -780,11 +806,18 @@ nav.chapters {
       $("c4r").onclick = () => { queue.length = 0; anim = null; state.set(0, 1, 0); trailN = 0; };
     }
     if (i === 4) {
-      $("c5m").onclick = () => measure();
-      $("c5m20").onclick = () => { for (let k = 0; k < 20; k++) setTimeout(() => { prepPlus(); measure(); }, k * 90); };
-      $("c5plus").onclick = () => prepPlus();
-      $("c5one").onclick = () => { queue.length = 0; anim = null; state.set(0, -1, 0); trailN = 0; };
-      $("h0").textContent = hist[0]; $("h1").textContent = hist[1];
+      const sp = $("g5steps");
+      G5STEPS.forEach((s, k) => { const b = document.createElement("button"); b.type = "button"; b.textContent = k + 1; b.title = s.name; b.setAttribute("aria-label", `步驟 ${k + 1}：${s.name}`); b.onclick = () => g5Step(k); sp.appendChild(b); });
+      $("g5prev").onclick = () => g5Step(g5S.step - 1);
+      $("g5next").onclick = () => g5Step(g5S.step + 1);
+      $("g5re").onclick = () => g5Step(g5S.step);
+      $("g5play").onclick = () => {
+        const st = G5STEPS[g5S.step];
+        if (!g5S.playing && st.dur && g5S.t >= st.dur) { g5Step(g5S.step); return; }
+        g5S.playing = !g5S.playing; g5UpdPlay();
+      };
+      $("g5auto").checked = g5S.auto; $("g5auto").onchange = e => { g5S.auto = e.target.checked; };
+      g5Step(g5S.step);
     }
     if (i === 5) {
       const sp = $("c6steps");
@@ -1836,6 +1869,344 @@ nav.chapters {
     drawBoard8();
   }
 
+  // =====================================================================
+  // 第 5 章：讀取——步驟腳本、單發讀取軌跡、讀取鏈與重設時間軸
+  // =====================================================================
+  const g5S = { step: 0, t: 0, cue: 0, playing: true, auto: true, alt: false, altT: 0, showThr: false,
+    tau: 300, T1: 50, traj: null, trajQ: [], mode: "chain", hi: [], row: -1, cursor: 0,
+    last: null, prep: "plus", passive: null, pendingReset: null };
+  let camOv = null;
+  function setCam(ov) { camOv = ov; desired.target.set(...(ov || CH[cur]).target); }
+  const CAM5 = { chip: { target: [0, -0.4, -1.6], pos: [6.5, 11.5, 11.0] }, board: { target: [17.6, 3.0, -4], pos: [17.6, 4.2, 10.9] } };
+  const sig5 = tau => 0.45 * Math.sqrt(200 / tau);   // 積分越久，雜訊 ∝ 1/√τ
+  const classify5 = (x, y) => ((x - MID5.x) * AX5.x + (y - MID5.y) * AX5.y) > 0 ? 1 : 0;
+  function erfc(x) {   // Abramowitz–Stegun 7.1.26
+    const t = 1 / (1 + 0.3275911 * Math.abs(x));
+    const y = t * (0.254829592 + t * (-0.284496736 + t * (1.421413741 + t * (-1.453152027 + t * 1.061405429)))) * Math.exp(-x * x);
+    return x >= 0 ? y : 2 - y;
+  }
+  function fid5(tau) {   // 估計：兩團高斯重疊 + 讀取途中 T₁ 衰減
+    const en = 0.5 * erfc(AX5.length() / (2 * Math.SQRT2 * sig5(tau))), e1 = en + (tau / 1000) / (2 * g5S.T1);
+    return { en, e1, F: 1 - (en + e1) / 2 };
+  }
+  function clearIQ() { iqCount = 0; iqGeo.setDrawRange(0, 0); hist[0] = hist[1] = 0; }
+  function prep5(kind) {
+    queue.length = 0; anim = null; trailN = 0; g5S.prep = kind;
+    if (kind === "zero") state.set(0, 1, 0);
+    if (kind === "one") state.set(0, -1, 0);
+    if (kind === "plus") state.set(0, 0, 1);
+  }
+  // 單發讀取：依目前狀態決定實際狀態，模擬積分（含讀取途中的 T₁ 衰減），再判別
+  function shot5(o = {}) {
+    if (g5S.traj && !o.quick) { g5S.trajQ.push(o); return; }
+    if (o.prep) prep5(o.prep);
+    const actual = o.force != null ? o.force : (Math.random() < P1() ? 1 : 0);
+    let f = 1;   // 位元停在 |1⟩ 的時間比例
+    if (actual === 1) {
+      if (o.decayAt != null) f = o.decayAt;
+      else { const td = -g5S.T1 * 1000 * Math.log(Math.random() || 1e-9); if (td < g5S.tau) f = td / g5S.tau; }
+    }
+    const K = trajN, s = sig5(g5S.tau) * Math.sqrt(K), pts = []; let sx = 0, sy = 0;
+    for (let k = 1; k <= K; k++) {
+      const c = actual === 1 && k / K <= f ? IQ1 : IQ0;
+      sx += c.x + gauss() * s; sy += c.y + gauss() * s; pts.push([sx / k, sy / k]);
+    }
+    const [fx5, fy5] = pts[K - 1], assigned = classify5(fx5, fy5), post = actual === 1 && f >= 1 ? 1 : 0;
+    const finish = () => {
+      addIQAt(fx5, fy5, assigned); hist[assigned]++;
+      state.set(0, post ? -1 : 1, 0); trailN = 0;
+      if (post) excite = 1;
+      g5S.last = { assigned, actual, decayed: actual === 1 && f < 1 };
+      if (o.after) o.after(g5S.last);
+    };
+    measuring = 1;
+    if (o.quick) { finish(); return; }
+    g5S.traj = { pts, t: 0, dur: 1.3, finish };
+  }
+
+  const G5STEPS = [
+    { name: "為什麼間接讀", title: "① 為什麼不直接量量子位元？", cam: "chip",
+      body: `<p>量子位元的一個激發只有 h × 5.21 GHz ≈ <b>22 μeV</b>（約相當於 0.25 K 的熱能），比可見光光子小約 10 萬倍，沒有偵測器能直接「數」這麼小的一個微波光子。</p>
+      <p>更麻煩的是，就算能把這份能量取出來，也等於把位元從 |1⟩ 打回 |0⟩——<b>量測本身就毀了狀態</b>，量完也不能再用。</p>
+      <p>解法是<b>間接讀取</b>：在位元旁邊放一個約 7 GHz 的<b>讀取共振腔</b>（晶片上蜿蜒的那條），讓位元的狀態改變共振腔的「音高」。我們只探測共振腔，完全不從位元取能量——就像敲一個鈴，從聲音判斷鈴裡裝了什麼，而不必打開它。</p>`,
+      setup() { prep5("zero"); },
+      cues: [
+        [0.3, "量子位元的一個激發只有約 22 μeV（5.21 GHz），沒有偵測器能直接數這麼小的一個微波光子。"],
+        [5.5, "而且直接把能量取出來，就等於把 |1⟩ 打回 |0⟩：量測本身就把狀態毀了。"],
+        [10.5, "解法：在旁邊放一個約 7 GHz 的讀取共振腔（蜿蜒發光的那條），讓位元的狀態改變共振腔的「音高」。", () => { measuring = 1; }],
+        [16.5, "我們只「聽」共振腔，不碰位元的能量；共振腔再透過下方的饋線，把訊號送出晶片。", () => { measuring = 1; }],
+      ], dur: 22 },
+    { name: "色散偏移", title: "② 色散偏移：位元狀態改變共振腔的頻率",
+      body: `<p>位元 5.21 GHz、共振腔約 7 GHz，相差 Δ ≈ 1.8 GHz，遠大於兩者的耦合 g ≈ 100 MHz。這叫<b>色散區</b>：兩者不會交換能量（位元不會把激發交給共振腔），只會互相「推」頻率。</p>
+      <p>結果是共振腔頻率變成 <b>f_r ± χ</b>，正負號由位元狀態決定：|0⟩ 時往下（青色曲線）、|1⟩ 時往上（金色曲線）。對 transmon，<b>χ = (g²/Δ)·α/(Δ+α) ≈ 0.77 MHz</b>（α = −283 MHz 是非諧性）。</p>
+      <p>兩條曲線只差約 1.5 MHz，放在 7 GHz 裡相對只有 2×10⁻⁴——讀取要分辨的就是這麼小的頻率差。反過來看同一件事：腔裡每多一個光子，位元頻率也會偏 2χ（AC Stark 位移），這是量測反作用的來源。</p>`,
+      setup() { prep5("zero"); },
+      cues: [
+        [0.3, "位元 5.21 GHz、共振腔約 7 GHz：相差約 1.8 GHz，遠大於耦合 g ≈ 100 MHz，所以兩者不交換能量（色散區）。"],
+        [6.5, "但會互相「推」頻率：位元在 |0⟩ 時，共振腔頻率往下偏 χ（青色曲線變亮）……", () => prep5("zero")],
+        [11.5, "……位元在 |1⟩ 時，往上偏 χ（金色曲線變亮）。χ = (g²/Δ)·α/(Δ+α) ≈ 0.77 MHz。", () => prep5("one")],
+        [17, "兩條曲線只差約 1.5 MHz，放在 7 GHz 裡相對只有 2×10⁻⁴。讀取就是要分辨這麼小的頻率差。", () => { g5S.alt = true; }],
+        [23, "反過來看：腔裡每多一個光子，位元頻率也偏 2χ（AC Stark 位移）——這就是讀取會干擾位元的原因。"],
+      ], dur: 28 },
+    { name: "探測與 IQ", title: "③ 探測：把頻率差變成 IQ 平面上的兩個點",
+      body: `<p>在兩條曲線正中間（白線）送一個很微弱的<b>探測微波</b>：腔內只有約 10 個光子，晶片端功率約 −125 dBm。位元在 |0⟩ 時，探測頻率落在青色共振峰的右側；在 |1⟩ 時落在金色共振峰的左側，所以回來的訊號<b>相位一正一負</b>（±arctan(2χ/κ)）。</p>
+      <p>把回來的訊號和參考振盪器比較，拆成<b>同相分量 I</b> 和<b>正交分量 Q</b>，就是右邊 IQ 平面上的一個點——一個點同時記下了振幅和相位。|0⟩、|1⟩ 落在不同位置。</p>
+      <p>設計時讓共振腔線寬 <b>κ ≈ 2χ</b>（約 1.5 MHz）：兩個狀態的相位差正好 90°，在 IQ 平面上分得最開。κ 太小，訊號出不來；κ 太大，兩條曲線擠在一起分不清。</p>`,
+      setup() { prep5("zero"); clearIQ(); },
+      cues: [
+        [0.3, "在兩條曲線正中間（白線）送一個很微弱的探測微波：腔內只有約 10 個光子，晶片端約 −125 dBm。", () => { measuring = 1; }],
+        [6, "位元在 |0⟩ 時，探測頻率在青色峰右側；在 |1⟩ 時，在金色峰左側。回來的訊號相位因此一正一負。"],
+        [11.5, "把訊號拆成 I（同相）、Q（正交）兩個分量，畫成平面上的一個點。先讀一次 |0⟩……", () => shot5({ prep: "zero" })],
+        [15.5, "……再讀一次 |1⟩：點落在另一個位置。", () => shot5({ prep: "one", force: 1, decayAt: 1 })],
+        [19.5, "設計時讓共振腔線寬 κ ≈ 2χ：兩個狀態的相位差正好 90°，在 IQ 平面上分得最開。", () => { for (let k = 0; k < 12; k++) shot5({ quick: true, prep: k % 2 ? "one" : "zero", force: k % 2, decayAt: 1 }); }],
+      ], dur: 25 },
+    { name: "讀取鏈", title: "④ 整條讀取鏈：從室溫到 10 mK 再回來", cam: "board", mode: "chain",
+      body: `<p>讀取脈衝從室溫產生，一路送進 10 mK 的晶片，回來的訊號只有幾個光子，要一路放大回室溫。設計原則：<b>輸入線讓訊號下去、熱雜訊上不來；輸出線讓訊號上去、放大器的雜訊回不來</b>。</p>
+      <p>① 室溫 AWG/DAC＋IQ 混頻器產生 7 GHz 脈衝（和下變頻共用同一個 LO）→ ② 輸入線在 4 K、Still、MXC 分級衰減，共約 −60 到 −70 dB → ③ 晶片：饋線、讀取共振腔、Purcell 濾波器 → ④ 環行器／隔離器 → ⑤ JPA／TWPA 參量放大器（接近量子極限，雜訊約半個光子）→ ⑥ 4 K 的 HEMT（+40 dB）→ ⑦ 室溫放大與下變頻 → ⑧ ADC＋FPGA 即時解調、積分、判斷 0/1，並可在幾百 ns 內送出回饋。</p>
+      <p>多顆位元時，每顆配一個不同頻率的讀取腔，共用同一條饋線（<b>頻率多工</b>），室溫端一次解調多個頻率。</p>`,
+      setup() { prep5("zero"); g5S.hi = []; },
+      cues: [
+        [0.3, "整條讀取鏈：從室溫產生脈衝，一路送進 10 mK 的晶片，再把只有幾個光子的回波放大回室溫。", () => { g5S.hi = []; }],
+        [5, "① 室溫：AWG/DAC 產生讀取脈衝的包絡，IQ 混頻器把它搬到 7 GHz（上、下變頻共用同一個 LO，相位才對得上）。", () => { g5S.hi = [0]; }],
+        [11, "② 輸入線：4 K、Still、MXC 各放衰減器，總共約 −60 到 −70 dB，把室溫熱雜訊壓到遠少於一個光子。", () => { g5S.hi = [1]; }],
+        [17, "③ 晶片：探測脈衝經過饋線，和讀取共振腔作用；Purcell 濾波器擋住位元經由共振腔漏能（否則 T₁ 會變短）。", () => { g5S.hi = [2]; }],
+        [23, "④ 環行器／隔離器：只讓訊號往上走，擋住後面放大器的雜訊和泵浦訊號回灌到晶片。", () => { g5S.hi = [3]; }],
+        [28.5, "⑤ JPA／TWPA：接近量子極限的參量放大器，只多加約半個光子的雜訊——讀取保真度的關鍵。", () => { g5S.hi = [4]; }],
+        [34.5, "⑥ HEMT（4 K）：再放大約 40 dB，雜訊溫度約 3 K；有了前一級高增益，這一級的雜訊就不重要了。", () => { g5S.hi = [5]; }],
+        [40.5, "⑦ 室溫再放大、下變頻；⑧ ADC 數位化，FPGA 即時解調、積分、判斷 0/1，還能在幾百 ns 內送出回饋脈衝。", () => { g5S.hi = [6, 7]; }],
+      ], dur: 48 },
+    { name: "積分與判別", title: "⑤ 積分與判別：每一次讀取得到一個點",
+      body: `<p>每次讀取（single shot）把回來的訊號<b>積分一段時間 τ</b>（約 100 ns–1 μs），得到 IQ 平面上的一個點。看白色亮點：一開始被雜訊甩來甩去，積分越久雜訊被平均得越多（∝ 1/√τ），最後收斂到其中一團。</p>
+      <p>重複幾千次，|0⟩、|1⟩ 形成兩團高斯分布。中間的白線是<b>判別閾值</b>：點落在哪一邊就判成 0 或 1。錯誤來源：① 兩團重疊（放大器雜訊）；② 讀取途中 <b>T₁ 衰減</b>，|1⟩ 的點半路被拖向 |0⟩；③ 初始熱激發；④ 讀取功率太高引起能階躍遷。</p>
+      <p>所以 τ 不能太短（雜訊大）也不能太長（衰減多）。業界約 <b>100–300 ns 做到 99% 以上</b>的讀取保真度。</p>`,
+      setup() { prep5("zero"); clearIQ(); g5S.showThr = true; },
+      cues: [
+        [0.3, "每一次讀取，把回來的訊號積分一段時間 τ。看白色亮點：一開始被雜訊甩來甩去……", () => shot5({ prep: "zero" })],
+        [4.5, "……積分越久，雜訊被平均掉（∝ 1/√τ），點慢慢收斂到 |0⟩ 那一團。"],
+        [8, "這次位元在 |1⟩：點收斂到另一團。中間白線是判別閾值，落在哪一邊就判成 0 或 1。", () => shot5({ prep: "one", force: 1, decayAt: 1 })],
+        [13, "重複很多次，兩團高斯分布就出現了。兩團尾巴重疊的部分會判錯，主要來自放大器雜訊。", () => { for (let k = 0; k < 60; k++) shot5({ quick: true, prep: k % 2 ? "one" : "zero" }); }],
+        [19, "另一種錯誤：讀取途中 T₁ 衰減。|1⟩ 半路變成 |0⟩，點會停在兩團之間，甚至越過閾值被判成 0。", () => shot5({ prep: "one", force: 1, decayAt: 0.35 })],
+        [25, "所以 τ 不能太短也不能太長：業界約 100–300 ns 做到 99% 以上的讀取保真度。"],
+      ], dur: 30 },
+    { name: "反作用與 QND", title: "⑥ 量測反作用與 QND：量完狀態就定了",
+      body: `<p>先把位元準備成疊加態 (|0⟩+|1⟩)/√2。量一次，結果隨機是 0 或 1，<b>疊加態塌縮</b>成量到的那個狀態。</p>
+      <p>色散讀取不交換能量，所以是<b>量子非破壞性（QND）量測</b>：量到 1 之後位元就停在 |1⟩，立刻再量還是 1（除非這段時間剛好 T₁ 衰減）。量子錯誤更正就靠這點：同一顆輔助位元可以反覆量、反覆用。</p>
+      <p>代價是：<b>資訊被取出的速率＝疊加態被破壞的速率</b>（量測去相干 Γ_m）。讀完後腔裡殘留的光子還會繼續透過 AC Stark 位移干擾位元，所以要等光子漏光（約幾個 1/κ，數百 ns），或送一個反向的「清空脈衝」把它們抽掉。</p>`,
+      setup() { prep5("plus"); clearIQ(); g5S.showThr = true; },
+      cues: [
+        [0.3, "先把位元準備成疊加態 (|0⟩ + |1⟩)/√2（第 4 章的 X 軸 π/2），P(|1⟩) = 0.5。", () => prep5("plus")],
+        [4.5, "量一次：結果隨機是 0 或 1，疊加態跟著塌縮（看面板的 P(|1⟩) 變成 0 或 1）。", () => shot5({})],
+        [9.5, "立刻再量一次：結果和上一次一樣。色散讀取不交換能量，是「量子非破壞性」（QND）量測。", () => shot5({})],
+        [14, "再量一次，還是一樣。錯誤更正就靠這點：同一顆輔助位元可以反覆量。", () => shot5({})],
+        [18.5, "代價：讀得越清楚，疊加態被破壞得越快。讀完後腔內殘留光子要先漏光（數百 ns），否則會繼續干擾位元。"],
+      ], dur: 24 },
+    { name: "重設", title: "⑦ 量完之後：要重新降溫嗎？", cam: "board", mode: "timeline",
+      body: `<p><b>不用！</b>稀釋冷凍機全程維持約 10 mK，重新降溫一次要好幾天，絕不會每個 shot 都做。量完之後要做的，只是讓<b>這顆位元</b>回到 |0⟩，再開始下一個 shot。常見三種做法：</p>
+      <p><b>① 被動等待</b>：什麼都不做，讓它以 T₁ 自己衰減。要等約 <b>5 T₁</b>（T₁ ≈ 100 μs → 約 0.5 ms），殘留 e⁻⁵ ≈ 0.7%。每秒只能跑約 2,000 個 shot，幾乎全在等。</p>
+      <p><b>② 主動重設</b>：量一次，FPGA 在幾百 ns 內判斷；是 1 就送一個 π 脈衝翻回 0。整個約 <b>1–3 μs</b>，快上百倍；殘留誤差主要來自讀取誤判，常量兩次確認。</p>
+      <p><b>③ 無條件重設</b>：用特殊微波驅動把位元的激發「倒進」讀取共振腔（例如 |f,0⟩→|g,1⟩ 邊帶躍遷），光子幾百 ns 內從共振腔漏走；不必先讀，也能順便清掉漏到 |2⟩ 的洩漏。</p>
+      <p>另外，位元的等效溫度常是 40–60 mK（比冷凍機底板熱），靜置時仍有約 0.1–1% 在 |1⟩；主動重設也順便把這部分清掉。</p>`,
+      setup() { prep5("zero"); g5S.row = -1; },
+      cues: [
+        [0.3, "量完之後要重新降溫嗎？不用！稀釋冷凍機全程維持約 10 mK，重新降溫要好幾天，絕不會每個 shot 都做。", () => { g5S.row = -1; }],
+        [6.5, "要做的只是讓「這顆位元」回到 |0⟩。最簡單：被動等待，讓它以 T₁ 自己衰減。", () => { g5S.row = 0; }],
+        [11.5, "要等約 5 T₁ ≈ 0.5 ms 才剩不到 1%。每秒只能跑約 2,000 個 shot，大部分時間都在等。"],
+        [16.5, "主動重設：量一次，FPGA 在幾百 ns 內判斷；是 1 就送 π 脈衝翻回 0。整個約 1–3 μs，快上百倍。", () => { g5S.row = 1; }],
+        [23, "無條件重設：用特殊驅動把激發倒進讀取共振腔，讓光子從共振腔漏走；不必先讀，也能清掉 |2⟩ 洩漏。", () => { g5S.row = 2; }],
+        [29.5, "另外，位元的等效溫度常是 40–60 mK，靜置時仍有約 0.1–1% 在 |1⟩；主動重設也順便把這部分清掉。", () => { g5S.row = 3; }],
+      ], dur: 36 },
+    { name: "自由實驗", title: "⑧ 換你操作：準備、讀取、重設", free: true,
+      body: `<p>先選要準備的狀態，再按「量測一次」看白色軌跡怎麼收斂；「量測 20 次」會每次重新準備同一個狀態再量。</p>
+      <p>拖動<b>積分時間 τ</b>：τ 短，兩團變胖、重疊變多；τ 長，|1⟩ 在讀取途中衰減的機會變大（點被拖向 |0⟩）。面板會即時估計讀取保真度，找找看最佳的 τ。</p>
+      <p>量到 1 之後試試兩種重設：<b>主動重設</b>（XY 線送 π 脈衝，約 1–3 μs）和<b>被動等待</b>（等 5 T₁，約 0.5 ms，這裡用慢動作播放）。</p>`,
+      extra: `<div class="controls" style="margin:8px 0 4px"><span class="qn" style="width:auto;color:var(--muted)">準備</span><button class="btn" type="button" data-p5="zero">|0⟩</button><button class="btn" type="button" data-p5="one">|1⟩</button><button class="btn" type="button" data-p5="plus">疊加態</button></div>
+      <div class="controls" style="margin:6px 0"><button class="btn primary" type="button" id="c5m">量測一次</button><button class="btn" type="button" id="c5m20">量測 20 次</button><button class="btn" type="button" id="c5clr">清除點</button></div>
+      <div class="controls" style="margin:6px 0"><label class="row" for="c5tau">積分 τ <input type="range" id="c5tau" min="50" max="1500" step="10" value="300"><output id="c5tauo"></output></label></div>
+      <div class="controls" style="margin:6px 0 10px"><button class="btn" type="button" id="c5act">主動重設</button><button class="btn" type="button" id="c5pas">被動等待 5T₁</button></div>`,
+      setup() { prep5("plus"); clearIQ(); g5S.showThr = true; },
+      cues: [[0.3, "換你操作：準備狀態 → 量測 → 重設。拖動積分時間 τ，看讀取保真度怎麼變。"]], dur: 0 },
+  ];
+
+  function g5Step(i) {
+    i = Math.max(0, Math.min(G5STEPS.length - 1, i));
+    const S = g5S, st = G5STEPS[i];
+    S.step = i; S.t = 0; S.cue = 0; S.playing = true; S.alt = false; S.showThr = false;
+    S.traj = null; S.trajQ.length = 0; S.passive = null; S.hi = []; S.row = -1;
+    trajGeo.setDrawRange(0, 0); trajDot.material.opacity = 0;
+    if (st.mode) S.mode = st.mode;
+    st.setup();
+    capEl.classList.remove("show");
+    if (cur === 4) {
+      setCam(st.cam ? CAM5[st.cam] : null);
+      $("g5title").textContent = st.title; $("g5body").innerHTML = st.body; $("g5extra").innerHTML = st.extra || "";
+      [...$("g5steps").children].forEach((b, k) => b.setAttribute("aria-current", k === i ? "true" : "false"));
+      if (st.free) g5BindFree();
+    }
+    g5UpdPlay();
+  }
+  function g5UpdPlay() {
+    const b = $("g5play"); if (!b) return;
+    const st = G5STEPS[g5S.step], done = st.dur && g5S.t >= st.dur;
+    b.textContent = g5S.playing ? "暫停" : done ? "再看一次" : "播放";
+    b.disabled = !!st.free; $("g5prev").disabled = g5S.step === 0; $("g5next").disabled = g5S.step === G5STEPS.length - 1;
+  }
+  function g5BindFree() {
+    const S = g5S;
+    const mark = () => document.querySelectorAll("[data-p5]").forEach(b => b.setAttribute("aria-pressed", b.dataset.p5 === S.prep ? "true" : "false"));
+    document.querySelectorAll("[data-p5]").forEach(b => { b.onclick = () => { prep5(b.dataset.p5); mark(); }; });
+    $("c5m").onclick = () => shot5({});
+    $("c5m20").onclick = () => { for (let k = 0; k < 20; k++) shot5({ prep: S.prep, quick: k < 19 }); };
+    $("c5clr").onclick = () => clearIQ();
+    const tau = $("c5tau"); tau.value = S.tau; tau.oninput = () => { S.tau = +tau.value; };
+    $("c5act").onclick = () => {
+      if (!S.last) { capShow("自由實驗 ・ 主動重設", "還沒量過：主動重設要先讀一次，才知道要不要送 π 脈衝。"); return; }
+      if (S.last.assigned === 0) { capShow("自由實驗 ・ 主動重設", "量到 0：FPGA 判斷不用動作，位元已經在 |0⟩。整個判斷只花幾百 ns。"); return; }
+      capShow("自由實驗 ・ 主動重設", "量到 1：FPGA 在幾百 ns 內送出 π 脈衝（XY 線），把 |1⟩ 翻回 |0⟩。整個重設約 1–3 μs。");
+      xyDe = true; xyT = 0; S.pendingReset = { t: 0 }; S.last = { ...S.last, assigned: 0 };
+    };
+    $("c5pas").onclick = () => {
+      const p0 = P1();
+      capShow("自由實驗 ・ 被動等待", `等 5 T₁ ≈ 0.5 ms（慢動作）：P(|1⟩) 從 ${p0.toFixed(2)} 以 e^(−t/T₁) 衰減到約 ${(p0 * Math.exp(-5)).toFixed(3)}。`);
+      S.passive = { t: 0, p0 };
+    };
+    mark();
+  }
+
+  // 看板：讀取鏈與重設時間軸
+  let b5Key = "";
+  function rr(c, x, y, w, h, r) { c.beginPath(); if (c.roundRect) c.roundRect(x, y, w, h, r); else c.rect(x, y, w, h); }
+  function drawBoard5() {
+    const S = g5S, key = JSON.stringify([S.mode, S.hi, S.row, S.mode === "timeline" ? Math.floor(S.cursor * 80) : 0]);
+    if (key === b5Key) return; b5Key = key;
+    const c = c5x, W = 1400, Hh = 640;
+    c.clearRect(0, 0, W, Hh);
+    c.fillStyle = "rgba(14,18,25,0.92)"; c.strokeStyle = "rgba(232,235,240,0.14)"; c.lineWidth = 2;
+    rr(c, 2, 2, W - 4, Hh - 4, 18); c.fill(); c.stroke();
+    c.textBaseline = "middle";
+    const box = (x, y, w, h, on, lines, dim) => {
+      c.fillStyle = on ? "#d6b04a" : "#1d2430"; c.strokeStyle = on ? "#d6b04a" : dim ? "rgba(152,161,176,0.35)" : "#cfd5de"; c.lineWidth = 2.5;
+      rr(c, x - w / 2, y - h / 2, w, h, 9); c.fill(); c.stroke();
+      c.fillStyle = on ? "#17140a" : dim ? "rgba(152,161,176,0.7)" : "#e8ebf0"; c.textAlign = "center";
+      lines.forEach((l, k) => { c.font = k === 0 ? "700 21px 'Noto Sans TC', sans-serif" : "500 17px 'Noto Sans TC', sans-serif"; c.fillText(l, x, y + (k - (lines.length - 1) / 2) * 24); });
+    };
+    if (S.mode === "chain") {
+      // 溫度分層
+      const bands = [["300 K（室溫）", 20, 150], ["50 K", 150, 205], ["4 K", 205, 320], ["Still ~0.8 K", 320, 395], ["MXC ~10 mK", 395, 625]];
+      bands.forEach(([n, y0, y1], i) => { c.fillStyle = i % 2 ? "rgba(232,235,240,0.035)" : "rgba(232,235,240,0.07)"; c.fillRect(14, y0, W - 28, y1 - y0); c.fillStyle = "#98a1b0"; c.font = "500 17px 'Noto Sans TC', sans-serif"; c.textAlign = "left"; c.fillText(n, 24, (y0 + y1) / 2); });
+      const on = k => S.hi.includes(k);
+      // 線路
+      c.strokeStyle = "rgba(53,184,172,0.8)"; c.lineWidth = 4;
+      c.beginPath(); c.moveTo(330, 120); c.lineTo(330, 560); c.lineTo(500, 560); c.stroke();
+      c.beginPath(); c.moveTo(900, 560); c.lineTo(1010, 560); c.lineTo(1010, 120); c.stroke();
+      c.beginPath(); c.moveTo(1120, 85); c.lineTo(1150, 85); c.stroke();
+      c.setLineDash([8, 8]); c.strokeStyle = "rgba(152,161,176,0.6)"; c.lineWidth = 2;
+      c.beginPath(); c.moveTo(620, 85); c.lineTo(440, 85); c.moveTo(780, 85); c.lineTo(900, 85); c.stroke(); c.setLineDash([]);
+      box(330, 85, 220, 62, on(0), ["① AWG/DAC＋混頻", "產生 7 GHz 讀取脈衝"]);
+      box(700, 85, 150, 50, false, ["LO（共用）"], true);
+      [[262, "−20 dB"], [357, "−10 dB"], [440, "−20 dB"], [505, "濾波"]].forEach(([y, t]) => box(330, y, 110, 40, on(1), [t]));
+      box(700, 560, 400, 84, on(2), ["③ 晶片（樣品盒）", "饋線＋讀取共振腔＋Purcell 濾波器＋transmon"]);
+      box(1010, 500, 200, 48, on(3), ["④ 環行器／隔離器"]);
+      box(1010, 432, 200, 48, on(4), ["⑤ JPA／TWPA"]);
+      box(1010, 262, 200, 48, on(5), ["⑥ HEMT +40 dB"]);
+      box(1010, 85, 220, 62, on(6), ["⑦ 放大＋下變頻", "回到中頻"]);
+      box(1265, 85, 220, 62, on(7), ["⑧ ADC＋FPGA", "解調・積分・判別・回饋"]);
+      c.textAlign = "center"; c.fillStyle = "#98a1b0"; c.font = "500 17px 'Noto Sans TC', sans-serif";
+      c.fillText("② 輸入線：分級衰減，共約 −60 ~ −70 dB", 520, 300);
+      c.fillText("讓訊號下去、熱雜訊上不來", 520, 326);
+      c.fillText("輸出線：讓訊號上去、放大器雜訊回不來", 1220, 360);
+      c.fillText("（MXC→4 K 用超導同軸線）", 1220, 386);
+    } else {
+      c.textAlign = "left"; c.fillStyle = "#d6b04a"; c.font = "700 26px 'Noto Sans TC', sans-serif";
+      c.fillText("量完之後：讓「位元」回到 |0⟩，不是重新降溫", 28, 46);
+      const hiF = S.row === -1;
+      c.fillStyle = hiF ? "rgba(53,184,172,0.22)" : "rgba(53,184,172,0.08)"; rr(c, 860, 18, 520, 64, 10); c.fill();
+      c.strokeStyle = "rgba(53,184,172,0.7)"; c.lineWidth = 2; c.stroke();
+      c.fillStyle = "#bff0ea"; c.font = "600 19px 'Noto Sans TC', sans-serif"; c.textAlign = "center";
+      c.fillText("稀釋冷凍機：全程維持 ~10 mK", 1120, 38); c.fillText("（重新降溫一次要好幾天）", 1120, 64);
+      const X0 = 330, px = 120;   // 1 μs = 120 px
+      const rows = [
+        { y: 190, t: ["① 被動等待", "等 ~5 T₁（T₁ ≈ 100 μs）"], seg: [["閘", 0.5, "#35b8ac"], ["讀取", 1, "#d6b04a"], ["等待 ≈ 500 μs（5 T₁）", 7.2, "#3a4250", true]], note: "→ 每個 shot ≈ 0.5 ms，每秒約 2,000 個" },
+        { y: 330, t: ["② 主動重設", "量測 → FPGA 判斷 → π"], seg: [["閘", 0.5, "#35b8ac"], ["讀取", 1, "#d6b04a"], ["判斷", 0.35, "#9b7be0"], ["π", 0.12, "#d77b45"], ["確認讀取", 1, "#d6b04a"]], note: "→ 約 1–3 μs，快上百倍" },
+        { y: 470, t: ["③ 無條件重設", "激發倒進讀取腔漏掉"], seg: [["閘", 0.5, "#35b8ac"], ["讀取", 1, "#d6b04a"], ["重設脈衝", 0.5, "#f0625a"], ["腔光子漏光", 0.35, "#5a6272"]], note: "→ 約 2 μs，不必先讀，也清 |2⟩" },
+      ];
+      rows.forEach((r, i) => {
+        const act = S.row === i || S.row === 3, a = S.row < 0 ? 0.55 : act ? 1 : 0.3;
+        c.globalAlpha = a;
+        c.textAlign = "left"; c.fillStyle = "#e8ebf0"; c.font = "700 22px 'Noto Sans TC', sans-serif"; c.fillText(r.t[0], 30, r.y - 14);
+        c.fillStyle = "#98a1b0"; c.font = "500 17px 'Noto Sans TC', sans-serif"; c.fillText(r.t[1], 30, r.y + 16);
+        let x = X0;
+        r.seg.forEach(([n, us, col, brk]) => {
+          const w = Math.max(16, us * px);
+          c.fillStyle = col; rr(c, x, r.y - 24, w - 3, 48, 6); c.fill();
+          if (brk) { c.strokeStyle = "#0e1219"; c.lineWidth = 4; c.beginPath(); for (let k = 0; k < 2; k++) { const bx = x + w * (0.45 + k * 0.08); c.moveTo(bx, r.y - 28); c.lineTo(bx + 10, r.y - 8); c.lineTo(bx - 4, r.y + 8); c.lineTo(bx + 6, r.y + 28); } c.stroke(); }
+          c.fillStyle = col === "#3a4250" || col === "#5a6272" ? "#cfd5de" : "#17140a"; c.textAlign = "center"; c.font = "600 17px 'Noto Sans TC', sans-serif";
+          if (w > 34) c.fillText(n, x + w / 2, r.y + 1);
+          x += w;
+        });
+        c.textAlign = "left"; c.fillStyle = "#cfd5de"; c.font = "500 18px 'Noto Sans TC', sans-serif";
+        c.fillText(r.note, i === 0 ? X0 : x + 16, i === 0 ? r.y + 46 : r.y + 1);
+        if (act && S.row !== 3) { const cx = X0 + S.cursor * (x - X0); c.strokeStyle = "#ffffff"; c.lineWidth = 3; c.beginPath(); c.moveTo(cx, r.y - 34); c.lineTo(cx, r.y + 34); c.stroke(); }
+        c.globalAlpha = 1;
+      });
+      c.fillStyle = S.row === 3 ? "#e8ebf0" : "#98a1b0"; c.font = "500 18px 'Noto Sans TC', sans-serif"; c.textAlign = "left";
+      c.fillText("位元等效溫度常為 40–60 mK：靜置時仍有約 0.1–1% 在 |1⟩，主動／無條件重設也會順便清掉。", 30, 590);
+      c.fillStyle = "#98a1b0"; c.font = "500 16px 'Noto Sans TC', sans-serif"; c.textAlign = "right";
+      c.fillText("比例尺：1 μs ≈ 120 px（被動等待的長條已截斷）", W - 30, 548);
+    }
+    tex5.needsUpdate = true;
+  }
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => { b5Key = ""; });
+
+  function updateG5(dt) {
+    const S = g5S, st = G5STEPS[S.step];
+    if (S.playing) S.t += dt;
+    while (S.cue < st.cues.length && S.t >= st.cues[S.cue][0]) {
+      const c = st.cues[S.cue], nCap = st.cues.filter(q => q[1]).length, iCap = st.cues.slice(0, S.cue).filter(q => q[1]).length;
+      if (c[1]) capShow(`步驟 ${S.step + 1} / ${G5STEPS.length} ・ ${st.name} ・ ${iCap + 1}/${nCap}`, c[1]);
+      if (c[2]) c[2](); S.cue++;
+    }
+    capBar.style.width = (st.dur ? Math.min(100, S.t / st.dur * 100) : 100).toFixed(1) + "%";
+    if (st.dur && S.playing && S.t >= st.dur) {
+      if (S.auto && S.step < G5STEPS.length - 1) { g5Step(S.step + 1); return; }
+      S.playing = false; g5UpdPlay();
+    }
+    // 第 2 步：|0⟩、|1⟩ 交替
+    if (S.alt) { S.altT += dt; if (S.altT > 1.6) { S.altT = 0; state.set(0, P1() > 0.5 ? 1 : -1, 0); } }
+    // 單發軌跡動畫
+    if (!S.traj && S.trajQ.length) shot5(S.trajQ.shift());
+    if (S.traj) {
+      const tr = S.traj; tr.t += dt;
+      const u = Math.min(1, tr.t / tr.dur), n = Math.max(1, Math.round(u * trajN)), arr = trajGeo.attributes.position.array;
+      for (let k = 0; k < n; k++) { arr[k * 3] = Math.min(4.55, Math.max(1.05, tr.pts[k][0])); arr[k * 3 + 1] = Math.min(1.7, Math.max(-1.7, tr.pts[k][1])); arr[k * 3 + 2] = 0.03; }
+      trajGeo.setDrawRange(0, n); trajGeo.attributes.position.needsUpdate = true;
+      trajDot.position.set(arr[(n - 1) * 3], arr[(n - 1) * 3 + 1], 0.04); trajDot.material.opacity = 1;
+      measuring = 1;
+      if (tr.t >= tr.dur + 0.35) { tr.finish(); S.traj = null; trajDot.material.opacity = 0; trajGeo.setDrawRange(0, 0); }
+    }
+    // 被動等待（慢動作：2.5 秒代表 5 T₁）
+    if (S.passive) {
+      const p = S.passive; p.t += dt; const u = Math.min(1, p.t / 2.5), pp = p.p0 * Math.exp(-5 * u);
+      state.set(0, 1 - 2 * pp, 0); excite = pp;
+      if (u >= 1) { S.passive = null; state.set(0, 1, 0); S.last = S.last ? { ...S.last, assigned: 0 } : null; }
+    }
+    if (S.pendingReset) { S.pendingReset.t += dt; if (S.pendingReset.t > 0.75) { state.set(0, 1, 0); S.pendingReset = null; } }
+    thrLine.material.opacity += ((S.showThr ? 0.75 : 0) - thrLine.material.opacity) * (1 - Math.exp(-dt * 5));
+    thrTag.on = S.showThr;
+    // 看板
+    if (S.mode === "timeline") S.cursor = (S.cursor + dt * 0.18) % 1;
+    drawBoard5();
+    // 面板
+    const tv = $("g5tau");
+    if (tv) {
+      const fd = fid5(S.tau);
+      tv.textContent = `${S.tau} ns（雜訊 σ ∝ 1/√τ）`;
+      $("g5F").textContent = `${(fd.F * 100).toFixed(2)} %（重疊 ${(fd.en * 100).toFixed(2)}%、T₁ 衰減 ${((fd.e1 - fd.en) * 100).toFixed(2)}%）`;
+      $("g5last").textContent = S.last ? `判成 ${S.last.assigned}（實際 ${S.last.actual}${S.last.decayed ? "，讀取中衰減" : ""}）` : "—";
+      $("h0").textContent = hist[0]; $("h1").textContent = hist[1];
+      const o = $("c5tauo"); if (o) o.textContent = S.tau + " ns";
+    }
+  }
+
   // ---------- 相機（拖曳 / 縮放） ----------
   const view = { yaw: 0, pitch: 0, zoom: 1 };
   const desired = { target: new THREE.Vector3() };
@@ -1855,7 +2226,7 @@ nav.chapters {
   window.addEventListener("keydown", e => { if (e.target.tagName === "INPUT") return; if (e.key === "ArrowRight") go(cur + 1); if (e.key === "ArrowLeft") go(cur - 1); });
 
   function desiredCamPos(out) {
-    const c = CH[cur]; const t = new THREE.Vector3(...c.target);
+    const c = camOv || CH[cur]; const t = new THREE.Vector3(...c.target);
     const off = new THREE.Vector3(...c.pos).sub(t);
     const sph = new THREE.Spherical().setFromVector3(off);
     sph.theta += view.yaw; sph.phi = Math.max(0.12, Math.min(Math.PI - 0.2, sph.phi - view.pitch)); sph.radius *= view.zoom;
@@ -1865,7 +2236,7 @@ nav.chapters {
   }
 
   // ---------- 狀態變數 ----------
-  let jjPhi = 35 * Math.PI / 180, acMode = false, xyT = -1, excite = 0;
+  let jjPhi = 35 * Math.PI / 180, acMode = false, xyT = -1, excite = 0, xyDe = false;   // xyDe：這次 XY 脈衝是重設（翻回 |0⟩）
 
   // ---------- 尺寸 ----------
   function resize() {
@@ -1895,7 +2266,7 @@ nav.chapters {
     if (xyT >= 0) {
       xyT += dt;
       xyPulses.forEach((s, i) => { const u = (xyT * 1.4 - i * 0.07); const vis = u > 0 && u < 1; s.material.opacity = vis ? 1 - i * 0.12 : 0; s.position.set(-6 + (6 - ARM - 0.75) * Math.min(Math.max(u, 0), 1), 0.16, PADZ); });
-      if (xyT * 1.4 > 1) { excite = 1; }
+      if (xyT * 1.4 > 1) { excite = xyDe ? 0 : 1; }
       if (xyT * 1.4 > 1.6) { xyT = -1; xyPulses.forEach(s => s.material.opacity = 0); }
     }
     excite *= Math.exp(-dt / 6);
@@ -1978,6 +2349,7 @@ nav.chapters {
     }
 
     // 第 6 章：案例
+    if (cur === 4) updateG5(dt);
     if (cur === 5) updateCase(dt);
     if (cur === 6) updateG7(dt);
     if (cur === 7) updateG8(dt);
