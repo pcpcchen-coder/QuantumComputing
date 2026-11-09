@@ -35,8 +35,8 @@
    - 製作流程與產生器：[`slides/README.md`](slides/README.md)
 9. [課程擴充規劃：量子電腦學院（參考父子科技學院格式，6 模組 × 16 堂）](docs/量子電腦學院_課程擴充規劃.md)（現有 223 頁簡報與 47 個 3D 場景的盤點、Q001–Q096 課表、新增動畫與簡報清單）
    - 學程資料夾：[`academy/`](academy/README.md)（96 堂課綱、每堂教案、製作指南、製作狀態）
-10. [量子電腦供電設計：文獻回顧與台達電的切入點](docs/量子電腦供電設計文獻回顧與台達電切入點.md)（精密 DC 源、不斷電與備援、低干擾設計、能耗擴展、低溫電源轉換）
-    - 簡報：[`slides/output/qc-power-supply-delta.pptx`](slides/output/qc-power-supply-delta.pptx)（20 頁，含講稿）；PDF：[`slides/pdf/QC_Power_Supply_Delta.pdf`](slides/pdf/QC_Power_Supply_Delta.pdf)
+10. [量子電腦供電設計：文獻回顧與台達電的切入點](docs/量子電腦供電設計文獻回顧與台達電切入點.md)（超導、離子阱、中性原子三平台分篇細部分析：精密電源、不斷電與分層備援、低干擾設計、能耗擴展，以及台達電的產品 × 平台矩陣）
+    - 簡報：[`slides/output/qc-power-supply-delta.pptx`](slides/output/qc-power-supply-delta.pptx)（36 頁，含講稿）；PDF：[`slides/pdf/QC_Power_Supply_Delta.pdf`](slides/pdf/QC_Power_Supply_Delta.pdf)
     - 簡報內容檔：[`slides/reports/qc-power-delta.js`](slides/reports/qc-power-delta.js)（`cd slides && node build_deck.js reports/qc-power-delta.js` 重新產生）
 
 ---

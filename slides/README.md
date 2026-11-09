@@ -8,7 +8,7 @@
 
 第一個樣本：`episodes/ep049.js` → `output/ep049-superconducting-qubit.pptx`（16 張，含講稿）
 
-引擎也可以用在非影片的報告：`reports/qc-power-delta.js` → `output/qc-power-supply-delta.pptx`（量子電腦供電設計，20 張，含講稿）。這類內容不需要 `time` 欄位。
+引擎也可以用在非影片的報告：`reports/qc-power-delta.js` → `output/qc-power-supply-delta.pptx`（量子電腦供電設計，超導／離子阱／中性原子三平台，36 張，含講稿）。這類內容不需要 `time` 欄位。
 
 ## 每集的製作流程
 
