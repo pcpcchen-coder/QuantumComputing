@@ -1,0 +1,110 @@
+[
+  {
+    "slide": 1,
+    "title": "硬幣與箭頭：位元和量子位元",
+    "purpose": "開場：課前教學版揭露、量子位元是什麼",
+    "visual": "封面版型＋陳犀牛（L001 還原版型的原生可編輯文字與圖形）",
+    "activity": "回想上一堂",
+    "motion": "static + 0.55s fade",
+    "narrationSentences": 3
+  },
+  {
+    "slide": 2,
+    "title": "三站：硬幣、箭頭、紙球",
+    "purpose": "三站流程",
+    "visual": "三步流程卡＋黃字（L001 還原版型的原生可編輯文字與圖形）",
+    "activity": "認識今天的三站",
+    "motion": "static + 0.55s fade",
+    "narrationSentences": 3
+  },
+  {
+    "slide": 3,
+    "title": "古典位元：一枚硬幣",
+    "purpose": "古典位元：硬幣",
+    "visual": "三點條列＋陳犀牛（L001 還原版型的原生可編輯文字與圖形）",
+    "activity": "說出位元的三個性質",
+    "motion": "static + 0.55s fade",
+    "narrationSentences": 3
+  },
+  {
+    "slide": 4,
+    "title": "量子位元：一支箭頭",
+    "purpose": "量子位元：箭頭的四個位置",
+    "visual": "面板四張卡＋黃字（L001 還原版型的原生可編輯文字與圖形）",
+    "activity": "說出北極、南極、赤道",
+    "motion": "static + 0.55s fade",
+    "narrationSentences": 3
+  },
+  {
+    "slide": 5,
+    "title": "比一比：兩種說法",
+    "purpose": "比較：同時是零又是一 vs 一個方向",
+    "visual": "雙框對照＋白字＋黃字（L001 還原版型的原生可編輯文字與圖形）",
+    "activity": "說出比較好的說法",
+    "motion": "static + 0.55s fade",
+    "narrationSentences": 3
+  },
+  {
+    "slide": 6,
+    "title": "角度決定機率",
+    "purpose": "角度與機率",
+    "visual": "三張步驟卡＋黃字（L001 還原版型的原生可編輯文字與圖形）",
+    "activity": "說出三個角度的結果",
+    "motion": "static + 0.55s fade",
+    "narrationSentences": 3
+  },
+  {
+    "slide": 7,
+    "title": "第二個角度：相位",
+    "purpose": "相位",
+    "visual": "路徑一行＋三張卡＋黃字（L001 還原版型的原生可編輯文字與圖形）",
+    "activity": "說出相位看不見",
+    "motion": "static + 0.55s fade",
+    "narrationSentences": 3
+  },
+  {
+    "slide": 8,
+    "title": "動手做：紙的布洛赫球",
+    "purpose": "動手做紙球",
+    "visual": "左三行＋右欄＋黃字（L001 還原版型的原生可編輯文字與圖形）",
+    "activity": "準備材料",
+    "motion": "static + 0.55s fade",
+    "narrationSentences": 3
+  },
+  {
+    "slide": 9,
+    "title": "角色扮演：人肉布洛赫球",
+    "purpose": "遊戲：人肉布洛赫球",
+    "visual": "左右比較卡＋黃字（L001 還原版型的原生可編輯文字與圖形）",
+    "activity": "用手臂指方向",
+    "motion": "static + 0.55s fade",
+    "narrationSentences": 3
+  },
+  {
+    "slide": 10,
+    "title": "換你出題",
+    "purpose": "獨立改造：選角度、預測、驗證",
+    "visual": "三點條列＋陳犀牛（L001 還原版型的原生可編輯文字與圖形）",
+    "activity": "寫預測、跑三維動畫",
+    "motion": "static + 0.55s fade",
+    "narrationSentences": 3
+  },
+  {
+    "slide": 11,
+    "title": "兩小時的箭頭工坊",
+    "purpose": "120 分鐘安排",
+    "visual": "六列時間表＋黃字（L001 還原版型的原生可編輯文字與圖形）",
+    "activity": "照時間表進行",
+    "motion": "static + 0.55s fade",
+    "narrationSentences": 3
+  },
+  {
+    "slide": 12,
+    "title": "最後一關：用紙球教爸爸",
+    "purpose": "驗收與結尾：差別、三個位置、限制；預告 Q003",
+    "visual": "三點條列＋陳犀牛＋結尾語（L001 還原版型的原生可編輯文字與圖形）",
+    "activity": "孩子教爸爸；錄音總結",
+    "motion": "static + 0.55s fade",
+    "narrationSentences": 3
+  }
+]

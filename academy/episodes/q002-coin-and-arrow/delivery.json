@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q002",
+  "program": "父子科技學院 量子電腦學程",
+  "episodePath": "academy/episodes/q002-coin-and-arrow",
+  "version": "Q002-v1",
+  "createdAt": "2026-11-09",
+  "producedBy": "Claude (cloud Linux session) via XiNewVideoGPT academy portable-runtime.sh + ooxml-template (special_builder route)",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "contentMode": "curriculum-based-preclass (no recording)",
+  "durationSeconds": 323.933333,
+  "openingSeconds": 60.277,
+  "voice": "zh-TW-YunJheNeural",
+  "ttsEngine": "edge-tts 7.3.1",
+  "validation": {
+    "passed": 25,
+    "total": 25,
+    "sceneAudioMaxLagMs": 0.0,
+    "sceneAudioMinCorrelation": 0.9909,
+    "minSimilarity": 0.653,
+    "meanSimilarity": 0.888,
+    "minSoundSimilarity": 0.9,
+    "meanSoundSimilarity": 0.988,
+    "reviewRecords": [
+      "qc/report.md",
+      "qc/manual-review.md",
+      "qc/slide-visual-review.md"
+    ],
+    "notDone": [
+      "沒有真人整段聽審",
+      "「相位」的聲調待真人確認",
+      "沒有用 PowerPoint／Keynote 開啟",
+      "沒有 YouTube 版權檢查"
+    ],
+    "integratedLufsPredicted": -16.860000000000003
+  },
+  "largeFiles": {
+    "narration-only.mp3": {
+      "bytes": 6328557,
+      "sha256": "899ea286fbcdb2282c88fcc05426ae1b1c82f71c2141b3dfdefd50181b9d5318"
+    },
+    "q002-coin-and-arrow-master.mp4": {
+      "bytes": 74748190,
+      "sha256": "e61849328f91c843647575d8d2ac8aaf1c9a9c7ae2fac493c0d3aadba37d156b"
+    },
+    "q002-coin-and-arrow-zh-TW.mp4": {
+      "bytes": 70906237,
+      "sha256": "eedf85fd2159966b1330993f3c37ac32d1db7c4154a40433d618f8ac595308e4"
+    }
+  },
+  "package": {
+    "filename": "Q002-v1_量子電腦學程_硬幣與箭頭_2026-11-09.zip",
+    "bytes": 155137814,
+    "sha256": "872ab4afa31ae052f6475ed831a41322e742cd298bf8fa7af7e808b741721de9",
+    "parts": [
+      {
+        "name": "Q002-v1_量子電腦學程_硬幣與箭頭_2026-11-09.zip.part01",
+        "bytes": 29360128,
+        "sha256": "bc7fb1e2e8ff01cc6d8ac35b76b3e63edc5344f313c9d3062b77b27c12284d1c"
+      },
+      {
+        "name": "Q002-v1_量子電腦學程_硬幣與箭頭_2026-11-09.zip.part02",
+        "bytes": 29360128,
+        "sha256": "cc9ecc0631df5c6e8dc47b2dade00816494e3e1603cb5373b9398deb3f49722e"
+      },
+      {
+        "name": "Q002-v1_量子電腦學程_硬幣與箭頭_2026-11-09.zip.part03",
+        "bytes": 29360128,
+        "sha256": "6b316c3f2a3264202a60fe9fae1ea51e4d98da435a91b24e9c2f83ad2cf2df5f"
+      },
+      {
+        "name": "Q002-v1_量子電腦學程_硬幣與箭頭_2026-11-09.zip.part04",
+        "bytes": 29360128,
+        "sha256": "3d58d1d9b61dad50d8cca438b97c74933a27923c1ec875cdeca2c206ae6b9514"
+      },
+      {
+        "name": "Q002-v1_量子電腦學程_硬幣與箭頭_2026-11-09.zip.part05",
+        "bytes": 29360128,
+        "sha256": "12acd947198107b2e843282e9b373f39e260c7860172635baca20522210fd2c6"
+      },
+      {
+        "name": "Q002-v1_量子電腦學程_硬幣與箭頭_2026-11-09.zip.part06",
+        "bytes": 8337174,
+        "sha256": "572fd9f72fc65014abaca9f165589c31d2dd9574b76e26caae69e174910fdb26"
+      }
+    ],
+    "restore": "依序把 .part 檔接成 Q002-v1_量子電腦學程_硬幣與箭頭_2026-11-09.zip，再比對 sha256；詳見 Q002-v1_還原說明_RESTORE.txt",
+    "handedOver": "2026-11-09 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（21.7 MiB，非上傳用）"
+  },
+  "notInGit": "MP4 與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔"
+}

@@ -8,9 +8,10 @@
       "evidence": "academy/episodes/q001-not-faster/delivery.json"
     },
     "Q002": {
-      "status": "planned",
-      "episodePath": null,
-      "evidence": null
+      "status": "verified",
+      "publication": "awaiting_user_upload",
+      "episodePath": "academy/episodes/q002-coin-and-arrow",
+      "evidence": "academy/episodes/q002-coin-and-arrow/delivery.json"
     },
     "Q003": {
       "status": "planned",

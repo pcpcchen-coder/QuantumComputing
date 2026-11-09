@@ -1,0 +1,31 @@
+{
+  "generatedAt": "2026-11-09T00:01:18.583173+00:00",
+  "version": "opening v2 (native 1080p30) + static scenes, narration only",
+  "scenes": 12,
+  "opening": {
+    "file": "/home/user/xinewvideogpt/academy/assets/opening/開場影片-v2.mp4",
+    "seconds": 60.277,
+    "note": "User-supplied opening v2; duration measured during this build"
+  },
+  "backgroundMusic": "none — narration only under slides",
+  "animated": "/tmp/xinew-assemble-ypwebx9b/animated.mp4",
+  "master": "/home/user/xinewvideogpt/academy/specials/q002-coin-and-arrow/output/q002-coin-and-arrow-master.mp4",
+  "zh": "/home/user/xinewvideogpt/academy/specials/q002-coin-and-arrow/output/q002-coin-and-arrow-zh-TW.mp4",
+  "masterDuration": 323.933333,
+  "loudnessNormalization": "measured constant gain; source waveform and peak headroom preserved",
+  "captionLineBreak": {
+    "mode": "kinsoku",
+    "twoLineCues": [
+      1,
+      14,
+      18,
+      23,
+      31,
+      32,
+      34,
+      35,
+      36
+    ],
+    "note": "breaks chosen by pipeline/scripts/caption_wrap.py for the burn only; delivered SRT is one line per cue"
+  }
+}

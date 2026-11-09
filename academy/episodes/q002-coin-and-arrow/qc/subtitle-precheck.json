@@ -1,0 +1,530 @@
+{
+  "method": "each of 36 sentences burned on its own slide PNG with the assembler libass style; bbox from pixel diff",
+  "burnStyle": "FontName=Noto Sans CJK TC,FontSize=16,Bold=1,PrimaryColour=&H00FFFFFF,OutlineColour=&H7A000000,BackColour=&H7A000000,BorderStyle=1,Outline=1.2,Shadow=0,Alignment=2,MarginV=20,MarginL=24,MarginR=24",
+  "captionLineBreak": "kinsoku",
+  "cues": 36,
+  "lineCountDiffersFromPlan": [],
+  "topMin": 893,
+  "bottomMax": 1001,
+  "leftMin": 147,
+  "rightMax": 1759,
+  "maxLines": 2,
+  "cuesTouchingSlideContent": [],
+  "limits": "static pre-check only; real cue timing, fades and the final captioned MP4 are unchecked until TTS/assembly",
+  "results": [
+    {
+      "slide": 1,
+      "sentence": 1,
+      "chars": 62,
+      "top": 893,
+      "bottom": 1000,
+      "left": 272,
+      "right": 1632,
+      "lines": 2,
+      "plannedLines": [
+        "歡迎回到父子科技學院的量子電腦學程，我是陳犀牛，今天是量子第二堂，",
+        "硬幣與箭頭，這是依課綱製作的課前教學版，並非實際上課錄音。"
+      ],
+      "slideContentPixelsUnderCaption": 0
+    },
+    {
+      "slide": 1,
+      "sentence": 2,
+      "chars": 33,
+      "top": 953,
+      "bottom": 1001,
+      "left": 273,
+      "right": 1638,
+      "lines": 1,
+      "plannedLines": [
+        "上一堂我們知道，量子電腦不是同時試所有答案；那量子位元到底是什麼？"
+      ],
+      "slideContentPixelsUnderCaption": 0
+    },
+    {
+      "slide": 1,
+      "sentence": 3,
+      "chars": 31,
+      "top": 953,
+      "bottom": 1000,
+      "left": 313,
+      "right": 1594,
+      "lines": 1,
+      "plannedLines": [
+        "今天要用一枚硬幣和一支箭頭來回答，還要親手做一顆紙的布洛赫球。"
+      ],
+      "slideContentPixelsUnderCaption": 0
+    },
+    {
+      "slide": 2,
+      "sentence": 1,
+      "chars": 35,
+      "top": 953,
+      "bottom": 1000,
+      "left": 230,
+      "right": 1676,
+      "lines": 1,
+      "plannedLines": [
+        "今天有三站：先看古典位元，再看量子位元，最後做一顆紙球，把箭頭放進去。"
+      ],
+      "slideContentPixelsUnderCaption": 0
+    },
+    {
+      "slide": 2,
+      "sentence": 2,
+      "chars": 26,
+      "top": 953,
+      "bottom": 1000,
+      "left": 417,
+      "right": 1490,
+      "lines": 1,
+      "plannedLines": [
+        "每一站結束，都要用自己的話向爸爸說明，你看到了什麼。"
+      ],
+      "slideContentPixelsUnderCaption": 0
+    },
+    {
+      "slide": 2,
+      "sentence": 3,
+      "chars": 22,
+      "top": 953,
+      "bottom": 1000,
+      "left": 500,
+      "right": 1407,
+      "lines": 1,
+      "plannedLines": [
+        "今天的作品，是一顆用紙盤和竹籤做的布洛赫球。"
+      ],
+      "slideContentPixelsUnderCaption": 0
+    },
+    {
+      "slide": 3,
+      "sentence": 1,
+      "chars": 32,
+      "top": 953,
+      "bottom": 1000,
+      "left": 294,
+      "right": 1614,
+      "lines": 1,
+      "plannedLines": [
+        "古典位元像一枚放在桌上的硬幣：不是正面，就是反面，也就是零或一。"
+      ],
+      "slideContentPixelsUnderCaption": 0
+    },
+    {
+      "slide": 3,
+      "sentence": 2,
+      "chars": 24,
+      "top": 953,
+      "bottom": 1001,
+      "left": 457,
+      "right": 1449,
+      "lines": 1,
+      "plannedLines": [
+        "你看幾次，它都一樣；你也可以照抄一份，一模一樣。"
+      ],
+      "slideContentPixelsUnderCaption": 0
+    },
+    {
+      "slide": 3,
+      "sentence": 3,
+      "chars": 32,
+      "top": 953,
+      "bottom": 1000,
+      "left": 294,
+      "right": 1614,
+      "lines": 1,
+      "plannedLines": [
+        "電腦裡的每一個位元都是這樣，整台電腦就是用非常多這種硬幣在計算。"
+      ],
+      "slideContentPixelsUnderCaption": 0
+    },
+    {
+      "slide": 4,
+      "sentence": 1,
+      "chars": 32,
+      "top": 953,
+      "bottom": 1000,
+      "left": 293,
+      "right": 1614,
+      "lines": 1,
+      "plannedLines": [
+        "量子位元比較像一支箭頭，箭頭的尖端可以指向一顆球面上的任何一點。"
+      ],
+      "slideContentPixelsUnderCaption": 0
+    },
+    {
+      "slide": 4,
+      "sentence": 2,
+      "chars": 38,
+      "top": 953,
+      "bottom": 1001,
+      "left": 168,
+      "right": 1739,
+      "lines": 1,
+      "plannedLines": [
+        "指向北極，代表狀態零；指向南極，代表狀態一；指在赤道上，就是一半一半的疊加。"
+      ],
+      "slideContentPixelsUnderCaption": 0
+    },
+    {
+      "slide": 4,
+      "sentence": 3,
+      "chars": 28,
+      "top": 953,
+      "bottom": 1000,
+      "left": 376,
+      "right": 1531,
+      "lines": 1,
+      "plannedLines": [
+        "箭頭指在哪裡，決定了等一下測量時，得到零和得到一的機率。"
+      ],
+      "slideContentPixelsUnderCaption": 0
+    },
+    {
+      "slide": 5,
+      "sentence": 1,
+      "chars": 18,
+      "top": 953,
+      "bottom": 1000,
+      "left": 582,
+      "right": 1324,
+      "lines": 1,
+      "plannedLines": [
+        "你可能聽過：疊加就是同時是零又是一。"
+      ],
+      "slideContentPixelsUnderCaption": 0
+    },
+    {
+      "slide": 5,
+      "sentence": 2,
+      "chars": 47,
+      "top": 893,
+      "bottom": 1001,
+      "left": 396,
+      "right": 1511,
+      "lines": 2,
+      "plannedLines": [
+        "比較好的說法是：箭頭指向一個確定的方向，",
+        "這個方向本身就是它的狀態；測量的時候，才會變成零或一。"
+      ],
+      "slideContentPixelsUnderCaption": 0
+    },
+    {
+      "slide": 5,
+      "sentence": 3,
+      "chars": 27,
+      "top": 953,
+      "bottom": 1000,
+      "left": 396,
+      "right": 1511,
+      "lines": 1,
+      "plannedLines": [
+        "所以疊加不是兩個答案疊在一起，而是球面上一個新的方向。"
+      ],
+      "slideContentPixelsUnderCaption": 0
+    },
+    {
+      "slide": 6,
+      "sentence": 1,
+      "chars": 32,
+      "top": 953,
+      "bottom": 1000,
+      "left": 293,
+      "right": 1614,
+      "lines": 1,
+      "plannedLines": [
+        "我們用一個角度描述箭頭離北極多遠：零度在北極，一百八十度在南極。"
+      ],
+      "slideContentPixelsUnderCaption": 0
+    },
+    {
+      "slide": 6,
+      "sentence": 2,
+      "chars": 28,
+      "top": 953,
+      "bottom": 1000,
+      "left": 375,
+      "right": 1531,
+      "lines": 1,
+      "plannedLines": [
+        "零度一定得到零，九十度是一半一半，一百八十度一定得到一。"
+      ],
+      "slideContentPixelsUnderCaption": 0
+    },
+    {
+      "slide": 6,
+      "sentence": 3,
+      "chars": 41,
+      "top": 893,
+      "bottom": 1001,
+      "left": 481,
+      "right": 1428,
+      "lines": 2,
+      "plannedLines": [
+        "六十度呢？大約四分之三的機會得到零，",
+        "四分之一得到一；越靠近北極，得到零的機會越大。"
+      ],
+      "slideContentPixelsUnderCaption": 0
+    },
+    {
+      "slide": 7,
+      "sentence": 1,
+      "chars": 29,
+      "top": 953,
+      "bottom": 1000,
+      "left": 354,
+      "right": 1552,
+      "lines": 1,
+      "plannedLines": [
+        "布洛赫球上還有第二個角度：箭頭繞著赤道轉的角度，叫做相位。"
+      ],
+      "slideContentPixelsUnderCaption": 0
+    },
+    {
+      "slide": 7,
+      "sentence": 2,
+      "chars": 30,
+      "top": 953,
+      "bottom": 1000,
+      "left": 334,
+      "right": 1573,
+      "lines": 1,
+      "plannedLines": [
+        "在三維動畫裡轉動相位，你會發現測量得到零和一的機率完全不變。"
+      ],
+      "slideContentPixelsUnderCaption": 0
+    },
+    {
+      "slide": 7,
+      "sentence": 3,
+      "chars": 26,
+      "top": 953,
+      "bottom": 1001,
+      "left": 417,
+      "right": 1490,
+      "lines": 1,
+      "plannedLines": [
+        "相位看不見，但很重要；它會在之後干涉的課裡大顯身手。"
+      ],
+      "slideContentPixelsUnderCaption": 0
+    },
+    {
+      "slide": 8,
+      "sentence": 1,
+      "chars": 13,
+      "top": 953,
+      "bottom": 1000,
+      "left": 686,
+      "right": 1221,
+      "lines": 1,
+      "plannedLines": [
+        "接下來做一顆紙的布洛赫球。"
+      ],
+      "slideContentPixelsUnderCaption": 0
+    },
+    {
+      "slide": 8,
+      "sentence": 2,
+      "chars": 47,
+      "top": 893,
+      "bottom": 1000,
+      "left": 437,
+      "right": 1469,
+      "lines": 2,
+      "plannedLines": [
+        "把兩個紙盤十字交叉插在一起當球面，畫上赤道，",
+        "北極標成零、南極標成一，再從中心插一支竹籤當箭頭。"
+      ],
+      "slideContentPixelsUnderCaption": 0
+    },
+    {
+      "slide": 8,
+      "sentence": 3,
+      "chars": 23,
+      "top": 953,
+      "bottom": 1000,
+      "left": 480,
+      "right": 1428,
+      "lines": 1,
+      "plannedLines": [
+        "暫停影片，先把紙盤、竹籤、膠帶和彩色筆準備好。"
+      ],
+      "slideContentPixelsUnderCaption": 0
+    },
+    {
+      "slide": 9,
+      "sentence": 1,
+      "chars": 25,
+      "top": 953,
+      "bottom": 1000,
+      "left": 437,
+      "right": 1469,
+      "lines": 1,
+      "plannedLines": [
+        "做好之後玩角色扮演：你的身體是球心，手臂就是箭頭。"
+      ],
+      "slideContentPixelsUnderCaption": 0
+    },
+    {
+      "slide": 9,
+      "sentence": 2,
+      "chars": 39,
+      "top": 953,
+      "bottom": 1000,
+      "left": 147,
+      "right": 1759,
+      "lines": 1,
+      "plannedLines": [
+        "爸爸說出狀態零、狀態一，或赤道上的一半一半，你就用手臂指出來，再用紙球擺一次。"
+      ],
+      "slideContentPixelsUnderCaption": 0
+    },
+    {
+      "slide": 9,
+      "sentence": 3,
+      "chars": 26,
+      "top": 953,
+      "bottom": 1000,
+      "left": 417,
+      "right": 1490,
+      "lines": 1,
+      "plannedLines": [
+        "不確定的時候，打開三維動畫的量子位元場景，對照看看。"
+      ],
+      "slideContentPixelsUnderCaption": 0
+    },
+    {
+      "slide": 10,
+      "sentence": 1,
+      "chars": 28,
+      "top": 953,
+      "bottom": 1000,
+      "left": 376,
+      "right": 1531,
+      "lines": 1,
+      "plannedLines": [
+        "下半場換你。先自己選一個角度，例如四十五度或一百二十度。"
+      ],
+      "slideContentPixelsUnderCaption": 0
+    },
+    {
+      "slide": 10,
+      "sentence": 2,
+      "chars": 23,
+      "top": 953,
+      "bottom": 1000,
+      "left": 479,
+      "right": 1428,
+      "lines": 1,
+      "plannedLines": [
+        "預測得到零的機率比一半多還是少，寫在紀錄表上。"
+      ],
+      "slideContentPixelsUnderCaption": 0
+    },
+    {
+      "slide": 10,
+      "sentence": 3,
+      "chars": 30,
+      "top": 953,
+      "bottom": 1000,
+      "left": 334,
+      "right": 1573,
+      "lines": 1,
+      "plannedLines": [
+        "最後打開三維動畫，把角度調好，跑一千次測量，看看預測準不準。"
+      ],
+      "slideContentPixelsUnderCaption": 0
+    },
+    {
+      "slide": 11,
+      "sentence": 1,
+      "chars": 52,
+      "top": 893,
+      "bottom": 1000,
+      "left": 417,
+      "right": 1490,
+      "lines": 2,
+      "plannedLines": [
+        "兩小時的安排是：開場十分鐘，認識硬幣和箭頭十五分鐘，",
+        "接著四十分鐘做紙球、玩人肉布洛赫球，然後休息十分鐘。"
+      ],
+      "slideContentPixelsUnderCaption": 0
+    },
+    {
+      "slide": 11,
+      "sentence": 2,
+      "chars": 48,
+      "top": 893,
+      "bottom": 1000,
+      "left": 438,
+      "right": 1467,
+      "lines": 2,
+      "plannedLines": [
+        "下半場三十分鐘自己選角度、預測、再用三維動畫驗證；",
+        "接著十分鐘交換角色，由你教爸爸量子位元是什麼。"
+      ],
+      "slideContentPixelsUnderCaption": 0
+    },
+    {
+      "slide": 11,
+      "sentence": 3,
+      "chars": 23,
+      "top": 953,
+      "bottom": 1000,
+      "left": 479,
+      "right": 1428,
+      "lines": 1,
+      "plannedLines": [
+        "最後五分鐘錄音總結，替紙球取名字，存一個版本。"
+      ],
+      "slideContentPixelsUnderCaption": 0
+    },
+    {
+      "slide": 12,
+      "sentence": 1,
+      "chars": 43,
+      "top": 893,
+      "bottom": 1000,
+      "left": 459,
+      "right": 1452,
+      "lines": 2,
+      "plannedLines": [
+        "最後一關，請不看稿說出：位元和量子位元差在哪裡？",
+        "再用紙球擺出狀態零、狀態一和一半一半。"
+      ],
+      "slideContentPixelsUnderCaption": 0
+    },
+    {
+      "slide": 12,
+      "sentence": 2,
+      "chars": 44,
+      "top": 893,
+      "bottom": 1000,
+      "left": 417,
+      "right": 1490,
+      "lines": 2,
+      "plannedLines": [
+        "也說出一個限制：對超導量子位元來說，",
+        "球上的方向只是畫圖的方法，晶片裡並沒有一支真的箭頭。"
+      ],
+      "slideContentPixelsUnderCaption": 0
+    },
+    {
+      "slide": 12,
+      "sentence": 3,
+      "chars": 58,
+      "top": 893,
+      "bottom": 1001,
+      "left": 313,
+      "right": 1590,
+      "lines": 2,
+      "plannedLines": [
+        "今天的作品是紙做的布洛赫球，下一堂我們要真的去測量它，",
+        "看看一次又一次的結果會怎樣；我是陳犀牛，保持好奇，我們下次見！"
+      ],
+      "slideContentPixelsUnderCaption": 0
+    }
+  ],
+  "passed": true
+}
