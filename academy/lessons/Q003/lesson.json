@@ -41,7 +41,9 @@
     "影片用途 3": "課後延伸"
   },
   "curriculumSha256": "493446a21451c8a5c08a1723cfd04436e51cbfa4806049b55a765d22ecf2ba53",
-  "episodePaths": [],
+  "episodePaths": [
+    "academy/episodes/q003-measure-and-shots"
+  ],
   "minutes": 120,
-  "status": "planned"
+  "status": "verified"
 }

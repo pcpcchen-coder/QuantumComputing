@@ -1,0 +1,37 @@
+{
+  "folder": "classroom/Q003_一看就變",
+  "files": [
+    "00_爸爸先讀.md",
+    "01_實驗步驟.md",
+    "02_列印包_一看就變.pdf",
+    "03_實驗紀錄.csv",
+    "04_解答與誤差表.md",
+    "05_三維動畫導覽.md"
+  ],
+  "fileCount": 6,
+  "utf8TextReadable": true,
+  "sheet": {
+    "file": "03_實驗紀錄.csv",
+    "rows": 7,
+    "columns": 8
+  },
+  "printPack": {
+    "file": "02_列印包_一看就變.pdf",
+    "pages": 4,
+    "allFontsEmbedded": true,
+    "renderedThisRun": true,
+    "source": "authoring/q003/print/print-pack.html"
+  },
+  "activityMinutes": 120,
+  "needsAccount": false,
+  "needsInstall": false,
+  "errorTable": {
+    "10": 0.1581,
+    "100": 0.05,
+    "1000": 0.0158,
+    "10000": 0.005
+  },
+  "factsFrom": "production/fact-check.md",
+  "privateData": "none",
+  "status": "PASS (structure); page-by-page visual review recorded separately"
+}

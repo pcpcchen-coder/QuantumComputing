@@ -1,0 +1,30 @@
+{
+  "generatedAt": "2026-11-09T01:05:06.000381+00:00",
+  "version": "opening v2 (native 1080p30) + static scenes, narration only",
+  "scenes": 12,
+  "opening": {
+    "file": "/home/user/xinewvideogpt/academy/assets/opening/開場影片-v2.mp4",
+    "seconds": 60.277,
+    "note": "User-supplied opening v2; duration measured during this build"
+  },
+  "backgroundMusic": "none — narration only under slides",
+  "animated": "/tmp/xinew-assemble-bsxkqymv/animated.mp4",
+  "master": "/home/user/xinewvideogpt/academy/specials/q003-measure-and-shots/output/q003-measure-and-shots-master.mp4",
+  "zh": "/home/user/xinewvideogpt/academy/specials/q003-measure-and-shots/output/q003-measure-and-shots-zh-TW.mp4",
+  "masterDuration": 322.709,
+  "loudnessNormalization": "measured constant gain; source waveform and peak headroom preserved",
+  "captionLineBreak": {
+    "mode": "kinsoku",
+    "twoLineCues": [
+      1,
+      14,
+      16,
+      17,
+      23,
+      31,
+      32,
+      36
+    ],
+    "note": "breaks chosen by pipeline/scripts/caption_wrap.py for the burn only; delivered SRT is one line per cue"
+  }
+}

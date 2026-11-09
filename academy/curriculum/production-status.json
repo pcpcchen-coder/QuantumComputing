@@ -14,9 +14,10 @@
       "evidence": "academy/episodes/q002-coin-and-arrow/delivery.json"
     },
     "Q003": {
-      "status": "planned",
-      "episodePath": null,
-      "evidence": null
+      "status": "verified",
+      "publication": "awaiting_user_upload",
+      "episodePath": "academy/episodes/q003-measure-and-shots",
+      "evidence": "academy/episodes/q003-measure-and-shots/delivery.json"
     },
     "Q004": {
       "status": "planned",

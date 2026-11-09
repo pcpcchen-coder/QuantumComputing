@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q003",
+  "checkedAt": "2026-11-08",
+  "method": "Born rule, collapse and binomial standard-error claims from Wikipedia pages fetched by a research sub-agent (verbatim quotes in production/source-notes.md); repo slides and the 3D scene source read by the producing agent; error figures recomputed from sqrt(p(1-p)/N).",
+  "sources": [
+    {
+      "id": "curriculum",
+      "title": "量子電腦學程 Q003 課綱",
+      "publisher": "pcpcchen-coder/QuantumComputing",
+      "url": "pcpcchen-coder/QuantumComputing academy/lessons/Q003/lesson.json",
+      "usedFor": "主題、學習目標、動手任務、好玩機制、作品、120 分鐘流程、驗收"
+    },
+    {
+      "id": "op_talk",
+      "title": "如何操作量子電腦（內部技術分享簡報）第 6、8、32 頁",
+      "publisher": "pcpcchen-coder/QuantumComputing",
+      "url": "pcpcchen-coder/QuantumComputing slides/QC_Operation_Talk.pptx（第 6、8、32 頁）",
+      "usedFor": "只得到 0 或 1、塌縮、shots、P(0)=cos²(θ/2)、誤差 √(p(1−p)/N)、精度 ×10 → shots ×100"
+    },
+    {
+      "id": "born",
+      "title": "Born rule",
+      "publisher": "Wikipedia（oldid=1368836124）",
+      "url": "https://en.wikipedia.org/wiki/Born_rule",
+      "usedFor": "測量結果是可能值之一；機率等於振幅的平方"
+    },
+    {
+      "id": "collapse",
+      "title": "Wave function collapse",
+      "publisher": "Wikipedia（oldid=1383568408）",
+      "url": "https://en.wikipedia.org/wiki/Wave_function_collapse",
+      "usedFor": "塌縮是為了解釋重複測量得到相同結果；立即重複（第一類測量）得到相同值"
+    },
+    {
+      "id": "binomial",
+      "title": "Binomial proportion confidence interval",
+      "publisher": "Wikipedia（oldid=1374408093）",
+      "url": "https://en.wikipedia.org/wiki/Binomial_proportion_confidence_interval",
+      "usedFor": "比例估計的標準誤 √(p(1−p)/n)"
+    },
+    {
+      "id": "scene",
+      "title": "3D 場景 1：量子位元的狀態與測量",
+      "publisher": "pcpcchen-coder/QuantumComputing",
+      "url": "pcpcchen-coder/QuantumComputing animations/operation.html#qubit",
+      "usedFor": "測量一次、連續測量、一次跑 1000 次、θ 滑桿"
+    }
+  ],
+  "notVerified": [
+    "塌縮是標準教科書的說法；維基百科也寫到它依詮釋而定，且立即重複得到相同值只限第一類測量",
+    "「量子的隨機是規則本身」依 Born 規則的標準說法，本集不討論詮釋問題",
+    "課綱的三組 YouTube 搜尋入口本次未挑選或觀看"
+  ]
+}
