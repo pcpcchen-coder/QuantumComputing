@@ -9,7 +9,7 @@
 1. [約瑟夫森結（JJ）：巨觀量子波、相位差與「穿隧」的真正意義](notes/josephson-junction-wave-and-tunneling.md)
 2. [Transmon：約瑟夫森電感、電路結構與量子位元機制](notes/transmon-josephson-inductance.md)
    - 簡報：[`slides/transmon.pptx`](slides/transmon.pptx)（17 頁，PowerPoint）
-   - 3D 互動動畫：[`animations/transmon-3d.html`](animations/transmon-3d.html)（7 章；第 6 章「案例」示範 SQUID 調頻、頻率配置與頻率碰撞、XY 寫入、CZ 閘；第 7 章「振幅長條」示範糾纏與兩位元 Grover 搜尋；下載後用瀏覽器開啟；需連網載入 three.js）
+   - 3D 互動動畫：[`animations/transmon-3d.html`](animations/transmon-3d.html)（8 章；第 6 章「案例」示範 SQUID 調頻、頻率配置與頻率碰撞、XY 寫入、CZ 閘；第 7 章「振幅長條」示範糾纏、兩位元 Grover 搜尋與 Deutsch 演算法；第 8 章示範 Shor 演算法（QFT 找週期分解 15，可自選 N、a、計數位元數）；下載後用瀏覽器開啟；需連網載入 three.js）
 3. [色散讀取：用諧振腔頻率「看見」超導量子位元](notes/dispersive-readout.md)（原理、IQ 判別、設計取捨、整條讀取鏈設備與校準流程）
    - 對應動畫：[`animations/index.html`](animations/index.html) 場景 9、10；[`animations/peripherals.html`](animations/peripherals.html) 場景 5、6
 4. [技術分享：超導量子電腦的 JJ 元件與微波讀取](#技術分享超導量子電腦的-jj-元件與微波讀取)
