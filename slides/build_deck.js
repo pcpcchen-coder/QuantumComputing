@@ -456,6 +456,38 @@ R.junction = async (pres, s) => {
   return slide;
 };
 
+/** 流程／供電鏈：橫向一排方塊＋箭頭，下方可放項目符號與 callout */
+R.flow = async (pres, s) => {
+  const slide = pres.addSlide({ masterName: "CONTENT", sectionTitle: s.section });
+  slide.addText(s.title, { placeholder: "title" });
+  timeChip(slide, s.time);
+  let y0 = TOP;
+  if (s.lead) {
+    slide.addText(runs(s.lead, { fontSize: 17, color: C().text1 }), { x: MX, y: TOP, w: CW, h: 0.55, margin: 0, valign: "top", isTextBox: true, objectName: "lead" });
+    y0 = TOP + 0.75;
+  }
+  const n = s.steps.length;
+  const gap = 0.32;
+  const bw = (CW - gap * (n - 1)) / n;
+  const bh = s.boxHeight || 2.0;
+  const toneHexOf = (t) => ({ good: HEX.accent5, bad: HEX.accent4, warn: HEX.accent2, neutral: HEX.accent1, quantum: HEX.accent3 }[t || "neutral"]);
+  s.steps.forEach((st, i) => {
+    const x = MX + i * (bw + gap);
+    const col = toneHexOf(st.tone);
+    slide.addShape(pres.shapes.ROUNDED_RECTANGLE, { x, y: y0, w: bw, h: bh, rectRadius: 0.1, fill: { color: C().background2 }, line: { color: col, width: 1.5 }, objectName: `flow-box-${i}` });
+    slide.addShape(pres.shapes.RECTANGLE, { x: x + 0.12, y: y0 + 0.12, w: bw - 0.24, h: 0.08, fill: { color: col }, line: { type: "none" }, objectName: `flow-bar-${i}` });
+    slide.addText(runs(st.head, { fontSize: 14, bold: true, color: C().text2 }), { x: x + 0.12, y: y0 + 0.28, w: bw - 0.24, h: 0.62, margin: 0, valign: "top", align: "center", isTextBox: true, objectName: `flow-head-${i}` });
+    slide.addText(runs(st.body || "", { fontSize: 11.5, color: C().text1 }), { x: x + 0.12, y: y0 + 0.92, w: bw - 0.24, h: bh - 1.0, margin: 0, valign: "top", align: "center", isTextBox: true, objectName: `flow-body-${i}` });
+    if (i < n - 1) {
+      slide.addShape(pres.shapes.LINE, { x: x + bw + 0.04, y: y0 + bh / 2, w: gap - 0.08, h: 0, line: { color: HEX.accent6, width: 2, endArrowType: "triangle" }, objectName: `flow-arrow-${i}` });
+    }
+  });
+  const bottom = s.callout ? BOTTOM - 0.95 : BOTTOM;
+  if (s.bullets) bulletBox(slide, s.bullets, MX, y0 + bh + 0.3, CW, bottom - (y0 + bh + 0.3), { fontSize: 15, space: 6 });
+  if (s.callout) callout(slide, s.callout, MX, BOTTOM - 0.7, CW, 0.7);
+  if (s.notes) slide.addNotes(s.notes);
+};
+
 R.summary = async (pres, s) => {
   const slide = pres.addSlide({ masterName: "DARK", sectionTitle: s.section });
   slide.addText(s.title, { placeholder: "title" });

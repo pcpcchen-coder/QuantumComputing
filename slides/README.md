@@ -10,7 +10,7 @@
 
 《量子金魚》008 Deutsch 演算法：`episodes/qfish008.js` → `output/qfish008-deutsch-algorithm.pptx`（30 張，含講稿；PDF：`pdf/QFISH008_Deutsch_Algorithm.pdf`）。依影片逐字稿整理，並加上「案例實算（補充）」：振幅逐步計算、四種黑盒子、現場猜謎，每頁都有紫色按鈕直接開啟對應的 3D 動畫（`animations/transmon-3d.html#deutsch`、`#deutsch-lab`、`animations/operation.html#interference`）。3D 截圖以 `node capture_3d_deutsch.js` 重新擷取到 `figures/3d_deutsch/`。
 
-引擎也可以用在非影片的報告：`reports/qc-power-delta.js` → `output/qc-power-supply-delta.pptx`（量子電腦供電設計，超導／離子阱／中性原子三平台，43 張，含講稿）。這類內容不需要 `time` 欄位。
+引擎也可以用在非影片的報告：`reports/qc-power-delta.js` → `output/qc-power-supply-delta.pptx`（量子電腦供電設計，超導／離子阱／中性原子三平台，51 張，含講稿）。這類內容不需要 `time` 欄位。
 
 ## 每集的製作流程
 
@@ -58,6 +58,7 @@
 | `table` | 對照表 | `headers[]`、`rows[][]`、`colW[]`、`callout` |
 | `junction` | 約瑟夫森接面結構圖 | `arrowLabel`、`middle`、`symbol`、`bullets[]` |
 | `summary` | 重點整理（深色） | `points[]` |
+| `flow` | 流程／供電鏈（橫向方塊＋箭頭） | `steps[{head, body, tone}]`、`boxHeight`、`lead`、`bullets[]`、`callout` |
 | `closing` | 討論題＋延伸觀看（深色） | `question`、`prompts[]`、`refs[]`；可選 `questionKicker`、`refsHead` 改兩個小標 |
 | `circuit` | 量子線路圖（原生圖形）＋各階段狀態卡 | `circuit{wires[], cols[{g:[閘,…]} / {blk, tone} / {m:[true,false]}], marks[{after, label}]}`、`stages[{head, eq, body, tone}]`、`callout` |
 | `amps` | 振幅長條（金＝正、紅＝負，與 3D 動畫第 7 章同畫法） | `lead`、`panels[{head, amps[4], note, tone, focus}]`、`labels[]`、`callout` |
