@@ -10,7 +10,7 @@
 
 《量子金魚》008 Deutsch 演算法：`episodes/qfish008.js` → `output/qfish008-deutsch-algorithm.pptx`（30 張，含講稿；PDF：`pdf/QFISH008_Deutsch_Algorithm.pdf`）。依影片逐字稿整理，並加上「案例實算（補充）」：振幅逐步計算、四種黑盒子、現場猜謎，每頁都有紫色按鈕直接開啟對應的 3D 動畫（`animations/transmon-3d.html#deutsch`、`#deutsch-lab`、`animations/operation.html#interference`）。3D 截圖以 `node capture_3d_deutsch.js` 重新擷取到 `figures/3d_deutsch/`。
 
-引擎也可以用在非影片的報告：`reports/qc-power-delta.js` → `output/qc-power-supply-delta.pptx`（量子電腦供電設計，超導／離子阱／中性原子三平台，36 張，含講稿）。這類內容不需要 `time` 欄位。
+引擎也可以用在非影片的報告：`reports/qc-power-delta.js` → `output/qc-power-supply-delta.pptx`（量子電腦供電設計，超導／離子阱／中性原子三平台，43 張，含講稿）。這類內容不需要 `time` 欄位。
 
 ## 每集的製作流程
 
