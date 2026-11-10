@@ -34,12 +34,62 @@
    - #049 超導量子位元：[`slides/output/ep049-superconducting-qubit.pptx`](slides/output/ep049-superconducting-qubit.pptx)（16 頁，含講稿）
    - 量子金魚 008 Deutsch 演算法：[`slides/output/qfish008-deutsch-algorithm.pptx`](slides/output/qfish008-deutsch-algorithm.pptx)（30 頁，含講稿；依影片逐字稿整理，另附「案例實算」：紅綠球搖獎機、振幅逐步計算、四種黑盒子、現場猜謎；每個案例都有按鈕直接開啟 3D 動畫）；PDF：[`slides/pdf/QFISH008_Deutsch_Algorithm.pdf`](slides/pdf/QFISH008_Deutsch_Algorithm.pdf)
    - 製作流程與產生器：[`slides/README.md`](slides/README.md)
-9. [3D 動畫 ↔ PPT 簡報對照表](docs/動畫與簡報對照表.md)（5 個動畫頁、56 個場景／章節，逐一列出對應的簡報頁碼與動畫網址；`python3 slides/build/anim_ppt_map.py` 重新產生並檢查缺口）
+9. [3D 動畫 ↔ PPT 簡報對照表](#3d-動畫--ppt-簡報對照)（摘要見下方；完整逐場景表格：[`docs/動畫與簡報對照表.md`](docs/動畫與簡報對照表.md)；5 個動畫頁、56 個場景／章節，逐一列出對應的簡報頁碼與動畫網址；`python3 slides/build/anim_ppt_map.py` 重新產生並檢查缺口）
 10. [課程擴充規劃：量子電腦學院（參考父子科技學院格式，6 模組 × 16 堂）](docs/量子電腦學院_課程擴充規劃.md)（現有 223 頁簡報與 47 個 3D 場景的盤點、Q001–Q096 課表、新增動畫與簡報清單）
    - 學程資料夾：[`academy/`](academy/README.md)（96 堂課綱、每堂教案、製作指南、製作狀態）
 11. [量子電腦供電設計：文獻回顧與台達電的切入點](docs/量子電腦供電設計文獻回顧與台達電切入點.md)（超導、離子阱、中性原子三平台分篇細部分析：精密電源、不斷電與分層備援、低干擾設計、能耗擴展，以及台達電的產品 × 平台矩陣）
     - 簡報：[`slides/output/qc-power-supply-delta.pptx`](slides/output/qc-power-supply-delta.pptx)（36 頁，含講稿）；PDF：[`slides/pdf/QC_Power_Supply_Delta.pdf`](slides/pdf/QC_Power_Supply_Delta.pdf)
     - 簡報內容檔：[`slides/reports/qc-power-delta.js`](slides/reports/qc-power-delta.js)（`cd slides && node build_deck.js reports/qc-power-delta.js` 重新產生）
+
+---
+
+## 3D 動畫 ↔ PPT 簡報對照
+
+`animations/` 共 5 個動畫頁、56 個場景／章節，**每一個都有對應的簡報投影片**。簡報上的「▶ 3D」按鈕直接開啟對應場景；網址格式為 `animations/<頁面>.html#<場景代號>`。簡報裡用相對路徑（例如 `../animations/index.html#bloch`），請保持 `slides/` 與 `animations/` 的相對位置；`transmon-3d.html` 需連網載入 three.js。
+
+逐場景的完整表格（含投影片標題與可點的動畫網址）：[`docs/動畫與簡報對照表.md`](docs/動畫與簡報對照表.md)。新增動畫或簡報後執行下列指令，會重新產生表格，並列出還沒有投影片介紹的場景（有缺口時結束碼為 1）：
+
+```bash
+python3 slides/build/anim_ppt_map.py
+```
+
+### 總覽
+
+| 動畫 | 場景數 | 對應簡報 | 狀態 |
+|---|---|---|---|
+| [`index.html`](animations/index.html) | 11 | [`JJ_Microwave_Readout_Talk.pptx`](slides/JJ_Microwave_Readout_Talk.pptx) | ✅ 全部有 |
+| [`peripherals.html`](animations/peripherals.html) | 10 | [`QC_Peripheral_Systems_Talk.pptx`](slides/QC_Peripheral_Systems_Talk.pptx) | ✅ 全部有 |
+| [`operation.html`](animations/operation.html) | 12 | [`QC_Operation_Talk.pptx`](slides/QC_Operation_Talk.pptx)；干涉場景另見量子金魚 008 | ✅ 全部有 |
+| [`atoms.html`](animations/atoms.html) | 13 | [`Ion_NeutralAtom_Talk.pptx`](slides/Ion_NeutralAtom_Talk.pptx) | ✅ 全部有 |
+| [`transmon-3d.html`](animations/transmon-3d.html) | 8 章＋2 捷徑 | [`transmon.pptx`](slides/transmon.pptx)；Deutsch 捷徑另見 [`qfish008-deutsch-algorithm.pptx`](slides/output/qfish008-deutsch-algorithm.pptx) | ✅ 全部有（原本 8 章都缺，已補齊） |
+
+### transmon-3d.html ↔ transmon.pptx
+
+`transmon.pptx` 原本 17 頁、沒有任何動畫連結，現已補成 23 頁：既有 12 頁右上角加上「▶ 3D 第 N 章」按鈕，講者備註也附上動畫網址；新增第 17–22 頁（3D 動畫導覽、操控與讀取、案例：頻率配置、振幅長條、Shor），每頁都有 3D 截圖、按鈕與動畫網址。這份簡報由 [`slides/build/add_transmon_3d_links.py`](slides/build/add_transmon_3d_links.py) 從 `slides/build/transmon_base.pptx` 產生，截圖由 [`slides/capture_3d_transmon.js`](slides/capture_3d_transmon.js) 擷取。
+
+| 章 | 動畫網址 | 對應投影片 |
+|---|---|---|
+| 1 晶片 | [`transmon-3d.html#chip`](animations/transmon-3d.html#chip) | transmon p1、10、11、17、18、23 |
+| 2 約瑟夫森結 | [`#junction`](animations/transmon-3d.html#junction) | transmon p4、5、18 |
+| 3 位能井 | [`#potential`](animations/transmon-3d.html#potential) | transmon p6、7、8、12、14、15、18 |
+| 4 操控 | [`#control`](animations/transmon-3d.html#control) | transmon p16、18、19 |
+| 5 讀取 | [`#readout`](animations/transmon-3d.html#readout) | transmon p16、18、19 |
+| 6 案例 | [`#case`](animations/transmon-3d.html#case) | transmon p16、18、20 |
+| 7 振幅長條 | [`#grover`](animations/transmon-3d.html#grover) | transmon p18、21 |
+| 8 Shor | [`#shor`](animations/transmon-3d.html#shor) | transmon p18、22 |
+| 捷徑：Deutsch 步驟 | [`#deutsch`](animations/transmon-3d.html#deutsch) | qfish008 p13、20、23；transmon p21 |
+| 捷徑：Deutsch 自由實驗 | [`#deutsch-lab`](animations/transmon-3d.html#deutsch-lab) | qfish008 p21、22、24；transmon p21 |
+
+### 其他四個動畫（場景代號 → 投影片頁碼）
+
+| 動畫 | 場景 → 頁碼 |
+|---|---|
+| **index.html** ↔ JJ 與微波讀取 | bloch p5、6；cooper p7、8；jj p12、13；potential p10、15、19；washboard p16；squid p17；fab p21；chip p27、36；dispersive p28、29；iq p31；fridge p32、33 |
+| **peripherals.html** ↔ 周邊系統 | overview p3、11、35、36；pulsetube p8；dilution p9；cooldown p12；wiring p14–16；electronics p20、21；software p25；bringup p26、37；monitor p27、28；infra p30–33 |
+| **operation.html** ↔ 量子電腦操作 | workflow p3、52；qubit p7、8；register p9、10、43；pulse p14、20、21；gates p18、19；twoqubit p23；circuit p25、28；readout p30、31、33；interference p38、39（另 qfish008 p14、15、18、25）；grover p40；shor p41；qec p49、50 |
+| **atoms.html** ↔ 離子阱與中性原子 | ionsys p6；paul p7；ionqubit p13、16、19；modes p17；ms p18；qccd p20；atomsys p23；tweezer p26；atomqubit p29、30；rydberg p32、33；zoned p34；imaging p35；compare p40、41 |
+
+> 動畫連結目前是相對路徑，下載整個 repo 後即可點擊開啟。若之後開啟 GitHub Pages，可以改成網路網址，在任何地方都能直接點。
 
 ---
 
