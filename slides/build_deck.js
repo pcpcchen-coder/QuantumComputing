@@ -201,6 +201,7 @@ R.title = async (pres, s, meta) => {
   });
   slide.addShape(pres.shapes.LINE, { x: 10.6, y: yb - levels[1] * scale + 0.06, w: 0, h: (levels[1] - levels[0]) * scale - 0.12, line: { color: HEX.lt1, width: 2.5, beginArrowType: "triangle" }, objectName: "deco-arrow" });
   if (s.notes) slide.addNotes(s.notes);
+  return slide;
 };
 
 R.agenda = async (pres, s) => {
@@ -223,6 +224,7 @@ R.agenda = async (pres, s) => {
     slide.addText(runs(it.body, { fontSize: 14, color: C().text1 }), { x: x + 0.3, y: y + 1.62, w: cw - 0.6, h: ch - 1.8, margin: 0, valign: "top", isTextBox: true, objectName: `agenda-body-${i}` });
   });
   if (s.notes) slide.addNotes(s.notes);
+  return slide;
 };
 
 R.cards = async (pres, s) => {
@@ -255,6 +257,7 @@ R.cards = async (pres, s) => {
   }
   if (s.callout) callout(slide, s.callout, MX, BOTTOM - 0.7, CW, 0.7);
   if (s.notes) slide.addNotes(s.notes);
+  return slide;
 };
 
 function callout(slide, text, x, y, w, h) {
@@ -282,6 +285,7 @@ R.equations = async (pres, s) => {
   bulletBox(slide, s.bullets, MX + leftW + 0.5, TOP, CW - leftW - 0.5, bottom - TOP);
   if (s.callout) callout(slide, s.callout, MX, BOTTOM - 0.7, CW, 0.7);
   if (s.notes) slide.addNotes(s.notes);
+  return slide;
 };
 
 function chartOpts(spec, extra = {}) {
@@ -328,6 +332,7 @@ R.chart = async (pres, s) => {
   bulletBox(slide, s.bullets, MX + chartW + 0.5, TOP + 0.1, CW - chartW - 0.5, bottom - TOP - 0.1);
   if (s.callout) callout(slide, s.callout, MX, BOTTOM - 0.7, CW, 0.7);
   if (s.notes) slide.addNotes(s.notes);
+  return slide;
 };
 
 /** 方程式橫條 + 左圖表 + 右側「各項說明」卡 */
@@ -355,6 +360,7 @@ R.expansion = async (pres, s) => {
     ], { x: x + 1.95, y, w: w - 2.1, h: th, valign: "middle", margin: 0, isTextBox: true, objectName: `term-text-${i}` });
   });
   if (s.notes) slide.addNotes(s.notes);
+  return slide;
 };
 
 /** 能階圖：一或兩組「樓梯」，可畫躍遷箭頭（ok / bad / neutral） */
@@ -395,6 +401,7 @@ R.ladder = async (pres, s) => {
   if (s.caption) captionText(slide, s.caption, MX, bottom + 0.05, diagW);
   if (s.callout) callout(slide, s.callout, MX, BOTTOM - 0.7, CW, 0.7);
   if (s.notes) slide.addNotes(s.notes);
+  return slide;
 };
 
 R.table = async (pres, s) => {
@@ -414,6 +421,7 @@ R.table = async (pres, s) => {
   });
   if (s.callout) callout(slide, s.callout, MX, BOTTOM - 0.7, CW, 0.7);
   if (s.notes) slide.addNotes(s.notes);
+  return slide;
 };
 
 /** 結構圖：約瑟夫森接面（超導體｜絕緣體｜超導體） */
@@ -445,6 +453,7 @@ R.junction = async (pres, s) => {
   if (s.symbol) slide.addText(runs(s.symbol, { fontSize: 13, color: C().accent6 }), { x: dx, y: dy + dh + 0.65, w: dw, h: 0.6, align: "center", margin: 0, isTextBox: true, objectName: "jj-symbol" });
   bulletBox(slide, s.bullets, MX + dw + 0.5, TOP, CW - dw - 0.5, BOTTOM - TOP);
   if (s.notes) slide.addNotes(s.notes);
+  return slide;
 };
 
 R.summary = async (pres, s) => {
@@ -461,6 +470,7 @@ R.summary = async (pres, s) => {
     slide.addText(runs(p, { fontSize: 18, color: C().background1, strongColor: C().accent2 }), { x: MX + 0.85, y, w: CW - 0.85, h: rh, valign: "middle", margin: 0, isTextBox: true, objectName: `sum-text-${i}` });
   });
   if (s.notes) slide.addNotes(s.notes);
+  return slide;
 };
 
 R.closing = async (pres, s) => {
@@ -476,7 +486,213 @@ R.closing = async (pres, s) => {
   slide.addText(s.refsHead || "延伸觀看與資料來源", { x: rx, y: TOP, w: rw, h: 0.45, fontSize: 16, bold: true, color: C().accent2, margin: 0, isTextBox: true, objectName: "refs-head" });
   slide.addText(paragraphs(s.refs, { bullet: { indent: 16 }, paraSpaceAfter: 8 }, { fontSize: 13, color: C().background1 }), { x: rx, y: TOP + 0.6, w: rw, h: BOTTOM - TOP - 0.6, valign: "top", margin: 0, isTextBox: true, objectName: "refs" });
   if (s.notes) slide.addNotes(s.notes);
+  return slide;
 };
+
+// ───────────────────────────── 量子演算法用版型 ─────────────────────────────
+const TONE_HEX = { good: HEX.accent5, bad: HEX.accent4, warn: HEX.accent2, neutral: HEX.accent1, quantum: HEX.accent3 };
+
+/** 振幅數值 → 好讀的分數字串（½、1/√2…） */
+function ampText(v) {
+  if (Math.abs(v) < 1e-9) return "0";
+  const a = Math.abs(v), sg = v < 0 ? "−" : "+";
+  const known = [[1, "1"], [Math.SQRT1_2, "1/√2"], [0.5, "½"], [0.25, "¼"]];
+  const k = known.find(([x]) => Math.abs(a - x) < 1e-6);
+  return sg + (k ? k[1] : a.toFixed(2));
+}
+
+/**
+ * 量子線路圖（原生圖形，可在 PowerPoint 裡編輯）
+ * circuit: { wires: ["q0  |0⟩", …], cols: [{ g: ["H", null] } | { blk: "U_f", tone } | { m: [true, false] }],
+ *            marks: [{ after: 欄索引（-1 = 最左）, label: "①" }] }
+ */
+function drawCircuit(slide, cir, x, y, w, h) {
+  const pres = _pres;
+  const nW = cir.wires.length, nC = cir.cols.length;
+  const labW = cir.labelWidth || 1.85, x0 = x + labW, x1 = x + w - 0.15;
+  const dy = Math.min(1.05, (h - 0.7) / Math.max(nW - 1, 1));
+  const wy = cir.wires.map((_, i) => y + 0.55 + i * dy);
+  const dx = (x1 - x0) / nC, gs = 0.62;
+  const colX = (i) => x0 + dx * (i + 0.5);
+  slide.addShape(pres.shapes.ROUNDED_RECTANGLE, { x, y, w, h, rectRadius: 0.12, fill: { color: C().background2 }, line: { type: "none" }, objectName: "circ-bg" });
+  cir.wires.forEach((lb, i) => {
+    slide.addText(runs(lb, { fontSize: 15, fontFace: EQ_FONT, color: C().text2, bold: true }), { x: x + 0.15, y: wy[i] - 0.25, w: labW - 0.2, h: 0.5, margin: 0, valign: "middle", isTextBox: true, objectName: `circ-wire-label-${i}` });
+    slide.addShape(pres.shapes.LINE, { x: x0, y: wy[i], w: x1 - x0, h: 0, line: { color: HEX.accent6, width: 1.75 }, objectName: `circ-wire-${i}` });
+  });
+  // 階段分隔線（虛線）與圓圈編號
+  (cir.marks || []).forEach((m, k) => {
+    const mx = m.after < 0 ? x0 + 0.05 : x0 + dx * (m.after + 1);
+    slide.addShape(pres.shapes.LINE, { x: mx, y: y + 0.12, w: 0, h: h - 0.24, line: { color: HEX.accent2, width: 1.25, dashType: "dash" }, objectName: `circ-mark-${k}` });
+    slide.addShape(pres.shapes.OVAL, { x: mx - 0.2, y: y + h - 0.47, w: 0.4, h: 0.4, fill: { color: C().accent2 }, line: { type: "none" }, objectName: `circ-mark-bg-${k}` });
+    slide.addText(m.label, { x: mx - 0.2, y: y + h - 0.47, w: 0.4, h: 0.4, fontSize: 13, bold: true, color: C().background1, align: "center", valign: "middle", margin: 0, isTextBox: true, objectName: `circ-mark-num-${k}` });
+  });
+  const gate = (cx, cy, label, fill, txt, name, ww = gs, hh = gs) => {
+    slide.addShape(pres.shapes.ROUNDED_RECTANGLE, { x: cx - ww / 2, y: cy - hh / 2, w: ww, h: hh, rectRadius: 0.08, fill: { color: fill }, line: { color: HEX.dk2, width: 1.5 }, objectName: name });
+    slide.addText(runs(label, { fontSize: 18, bold: true, fontFace: EQ_FONT, color: txt }), { x: cx - ww / 2, y: cy - hh / 2, w: ww, h: hh, align: "center", valign: "middle", margin: 0, isTextBox: true, objectName: name + "-t" });
+  };
+  cir.cols.forEach((col, i) => {
+    const cx = colX(i);
+    if (col.g) col.g.forEach((g, q) => { if (g) gate(cx, wy[q], g, HEX.lt1, C().text2, `circ-g-${i}-${q}`); });
+    if (col.blk) {
+      const top = wy[0] - gs / 2 - 0.05, bot = wy[nW - 1] + gs / 2 + 0.05;
+      gate(cx, (top + bot) / 2, col.blk, TONE_HEX[col.tone || "quantum"], C().background1, `circ-blk-${i}`, Math.min(dx - 0.2, 1.25), bot - top);
+    }
+    if (col.m) col.m.forEach((on, q) => {
+      if (!on) return;
+      gate(cx, wy[q], "", HEX.lt1, C().text2, `circ-m-${i}-${q}`);
+      slide.addShape(pres.shapes.ARC, { x: cx - 0.22, y: wy[q] - 0.12, w: 0.44, h: 0.44, angleRange: [180, 360], line: { color: HEX.dk2, width: 1.5 }, fill: { type: "none" }, objectName: `circ-m-arc-${i}-${q}` });
+      slide.addShape(pres.shapes.LINE, { x: cx, y: wy[q] - 0.17, w: 0.16, h: 0.27, flipV: true, line: { color: HEX.dk2, width: 1.5, endArrowType: "triangle" }, objectName: `circ-m-needle-${i}-${q}` });
+      if (col.out && col.out[q]) slide.addText(runs(col.out[q], { fontSize: 13, bold: true, color: C().accent3 }), { x: cx + gs / 2 + 0.05, y: wy[q] - 0.5, w: 1.3, h: 0.35, margin: 0, isTextBox: true, objectName: `circ-out-${i}-${q}` });
+    });
+  });
+}
+
+/** 線路圖（上）＋各階段狀態卡（下） */
+R.circuit = async (pres, s) => {
+  const slide = pres.addSlide({ masterName: "CONTENT", sectionTitle: s.section });
+  slide.addText(s.title, { placeholder: "title" });
+  timeChip(slide, s.time);
+  const ch = s.circuitHeight || 2.55;
+  drawCircuit(slide, s.circuit, MX, TOP, CW, ch);
+  const bottom = s.callout ? BOTTOM - 0.95 : BOTTOM;
+  const st = s.stages || [];
+  const gap = 0.22, y0 = TOP + ch + 0.25, sh = bottom - y0;
+  const sw = (CW - gap * (st.length - 1)) / Math.max(st.length, 1);
+  st.forEach((t, i) => {
+    const x = MX + i * (sw + gap);
+    const tone = TONE_HEX[t.tone || "neutral"];
+    slide.addShape(pres.shapes.ROUNDED_RECTANGLE, { x, y: y0, w: sw, h: sh, rectRadius: 0.1, fill: { color: "FFFFFF" }, line: { color: tone, width: 1.5 }, objectName: `stage-bg-${i}` });
+    slide.addText(runs(t.head, { fontSize: 15, bold: true, color: tone }), { x: x + 0.15, y: y0 + 0.08, w: sw - 0.3, h: 0.4, margin: 0, valign: "middle", isTextBox: true, objectName: `stage-head-${i}` });
+    if (t.eq) slide.addText(runs(t.eq, { fontSize: 15, fontFace: EQ_FONT, color: C().text2 }), { x: x + 0.1, y: y0 + 0.5, w: sw - 0.2, h: 0.5, margin: 0, align: "center", valign: "middle", isTextBox: true, objectName: `stage-eq-${i}` });
+    if (t.body) slide.addText(runs(t.body, { fontSize: 12.5, color: C().text1 }), { x: x + 0.15, y: y0 + (t.eq ? 1.02 : 0.52), w: sw - 0.3, h: sh - (t.eq ? 1.1 : 0.6), margin: 0, valign: "top", isTextBox: true, objectName: `stage-body-${i}` });
+  });
+  if (s.callout) callout(slide, s.callout, MX, BOTTOM - 0.7, CW, 0.7);
+  if (s.notes) slide.addNotes(s.notes);
+  return slide;
+};
+
+/**
+ * 振幅長條（與 3D 動畫第 7 章同一套畫法：正＝金、負＝紅、機率＝振幅²）
+ * panels: [{ head, amps: [a00, a01, a10, a11], note, tone }]，labels 預設 |00⟩…|11⟩
+ */
+R.amps = async (pres, s) => {
+  const slide = pres.addSlide({ masterName: "CONTENT", sectionTitle: s.section });
+  slide.addText(s.title, { placeholder: "title" });
+  timeChip(slide, s.time);
+  let y0 = TOP;
+  if (s.lead) {
+    slide.addText(runs(s.lead, { fontSize: 16, color: C().text1 }), { x: MX, y: TOP - 0.05, w: CW, h: 0.5, margin: 0, valign: "top", isTextBox: true, objectName: "lead" });
+    y0 = TOP + 0.55;
+  }
+  const bottom = s.callout ? BOTTOM - 0.95 : BOTTOM;
+  const labels = s.labels || ["|00⟩", "|01⟩", "|10⟩", "|11⟩"];
+  const n = s.panels.length, gap = 0.2;
+  const pw = (CW - gap * (n - 1)) / n, ph = bottom - y0;
+  const noteH = s.noteHeight || 1.0;
+  s.panels.forEach((pn, i) => {
+    const px = MX + i * (pw + gap);
+    const tone = TONE_HEX[pn.tone || "neutral"];
+    slide.addShape(pres.shapes.ROUNDED_RECTANGLE, { x: px, y: y0, w: pw, h: ph, rectRadius: 0.1, fill: { color: C().background2 }, line: pn.focus ? { color: tone, width: 2.25 } : { type: "none" }, objectName: `amp-panel-${i}` });
+    slide.addText(runs(pn.head, { fontSize: 14.5, bold: true, color: C().text2 }), { x: px + 0.12, y: y0 + 0.08, w: pw - 0.24, h: 0.45, margin: 0, valign: "middle", isTextBox: true, objectName: `amp-head-${i}` });
+    // 繪圖區
+    const gx = px + 0.18, gw = pw - 0.36, gTop = y0 + 0.75, gBot = y0 + ph - noteH - 0.45;
+    const mid = (gTop + gBot) / 2, half = (gBot - gTop) / 2 - 0.2;
+    slide.addShape(pres.shapes.LINE, { x: gx, y: mid, w: gw, h: 0, line: { color: HEX.accent6, width: 1 }, objectName: `amp-axis-${i}` });
+    const bw = gw / labels.length;
+    pn.amps.forEach((a, k) => {
+      const bx = gx + k * bw + bw * 0.18, bwid = bw * 0.64, hh = Math.abs(a) * half;
+      if (hh > 0.005) slide.addShape(pres.shapes.RECTANGLE, { x: bx, y: a > 0 ? mid - hh : mid, w: bwid, h: hh, fill: { color: a > 0 ? HEX.accent2 : HEX.accent4 }, line: { type: "none" }, objectName: `amp-bar-${i}-${k}` });
+      const ty = a >= 0 ? mid - hh - 0.3 : mid + hh + 0.02;
+      slide.addText(ampText(a), { x: gx + k * bw - 0.05, y: ty, w: bw + 0.1, h: 0.28, fontSize: 11, bold: true, fontFace: EQ_FONT, color: a < 0 ? C().accent4 : C().text2, align: "center", margin: 0, isTextBox: true, objectName: `amp-val-${i}-${k}` });
+      slide.addText(labels[k], { x: gx + k * bw - 0.05, y: gBot + 0.02, w: bw + 0.1, h: 0.3, fontSize: 12, fontFace: EQ_FONT, color: C().text2, align: "center", margin: 0, isTextBox: true, objectName: `amp-ket-${i}-${k}` });
+    });
+    if (pn.note) slide.addText(runs(pn.note, { fontSize: 12, color: C().text1 }), { x: px + 0.12, y: y0 + ph - noteH - 0.08, w: pw - 0.24, h: noteH, margin: 0, valign: "top", isTextBox: true, objectName: `amp-note-${i}` });
+  });
+  if (s.callout) callout(slide, s.callout, MX, BOTTOM - 0.7, CW, 0.7);
+  if (s.notes) slide.addNotes(s.notes);
+  return slide;
+};
+
+/** 3D 動畫截圖（1–2 張）＋說明＋「開啟 3D 動畫」按鈕（超連結） */
+R.scene3d = async (pres, s) => {
+  const slide = pres.addSlide({ masterName: "CONTENT", sectionTitle: s.section });
+  slide.addText(s.title, { placeholder: "title" });
+  timeChip(slide, s.time);
+  const imgs = Array.isArray(s.image) ? s.image : [s.image];
+  if (s.layout === "wide") return scene3dWide(pres, slide, s, imgs);
+  const boxW = s.imageWidth || 7.4, gap = 0.15;
+  const capH = s.caption ? 0.35 : 0;
+  const boxH = BOTTOM - TOP - capH;
+  const each = (boxW - gap * (imgs.length - 1)) / imgs.length;
+  let used = 0;
+  for (let i = 0; i < imgs.length; i++) {
+    const file = path.resolve(__dirname, imgs[i]);
+    const md = await sharp(file).metadata();
+    const ar = md.width / md.height;
+    let iw = each, ih = iw / ar;
+    if (ih > boxH) { ih = boxH; iw = ih * ar; }
+    slide.addImage({ path: file, x: MX + i * (each + gap) + (each - iw) / 2, y: TOP, w: iw, h: ih, objectName: `scene-img-${i}` });
+    used = Math.max(used, ih);
+    if (s.imageLabels && s.imageLabels[i]) {
+      slide.addShape(pres.shapes.ROUNDED_RECTANGLE, { x: MX + i * (each + gap) + (each - iw) / 2 + 0.1, y: TOP + 0.1, w: 1.9, h: 0.38, rectRadius: 0.19, fill: { color: C().accent2 }, line: { type: "none" }, objectName: `scene-img-tag-bg-${i}` });
+      slide.addText(s.imageLabels[i], { x: MX + i * (each + gap) + (each - iw) / 2 + 0.1, y: TOP + 0.1, w: 1.9, h: 0.38, fontSize: 12, bold: true, color: C().text2, align: "center", valign: "middle", margin: 0, isTextBox: true, objectName: `scene-img-tag-${i}` });
+    }
+  }
+  if (s.caption) captionText(slide, s.caption, MX, TOP + used + 0.06, boxW);
+  const rx = MX + boxW + 0.4, rw = CW - boxW - 0.4;
+  const btnH = s.link ? 0.62 : 0;
+  bulletBox(slide, s.bullets, rx, TOP, rw, BOTTOM - TOP - btnH - 0.2, { fontSize: s.fontSize || 15, space: 8 });
+  if (s.link) {
+    slide.addShape(pres.shapes.ROUNDED_RECTANGLE, { x: rx, y: BOTTOM - btnH, w: rw, h: btnH, rectRadius: 0.12, fill: { color: C().accent3 }, line: { type: "none" }, objectName: "scene-btn-bg" });
+    slide.addText(`▶ 開啟 3D 動畫：${s.link.label}`, { x: rx, y: BOTTOM - btnH, w: rw, h: btnH, fontSize: 15, bold: true, color: C().background1, align: "center", valign: "middle", margin: 0, isTextBox: true, hyperlink: { url: s.link.url, tooltip: s.link.url }, objectName: "scene-btn" });
+  }
+  if (s.notes) slide.addNotes(s.notes);
+  return slide;
+};
+
+/** scene3d 的寬版：截圖橫排在上（適合 2 張並排），說明與按鈕在下 */
+async function scene3dWide(pres, slide, s, imgs) {
+  const gap = 0.25, maxH = s.imageHeight || 3.35;
+  const sizes = [];
+  for (const im of imgs) {
+    const file = path.resolve(__dirname, im);
+    const md = await sharp(file).metadata();
+    sizes.push({ file, ar: md.width / md.height });
+  }
+  // 先依高度上限算寬度，總寬超過內容寬時再等比縮小
+  let ws = sizes.map((z) => maxH * z.ar);
+  const total = ws.reduce((a, b) => a + b, 0) + gap * (imgs.length - 1);
+  const k = Math.min(1, CW / total);
+  ws = ws.map((w) => w * k);
+  const ih = maxH * k, rowW = ws.reduce((a, b) => a + b, 0) + gap * (imgs.length - 1);
+  let x = MX + (CW - rowW) / 2;
+  sizes.forEach((z, i) => {
+    slide.addImage({ path: z.file, x, y: TOP, w: ws[i], h: ih, objectName: `scene-img-${i}` });
+    if (s.imageLabels && s.imageLabels[i]) {
+      slide.addShape(pres.shapes.ROUNDED_RECTANGLE, { x: x + 0.1, y: TOP + 0.1, w: 1.9, h: 0.38, rectRadius: 0.19, fill: { color: C().accent2 }, line: { type: "none" }, objectName: `scene-img-tag-bg-${i}` });
+      slide.addText(s.imageLabels[i], { x: x + 0.1, y: TOP + 0.1, w: 1.9, h: 0.38, fontSize: 12, bold: true, color: C().text2, align: "center", valign: "middle", margin: 0, isTextBox: true, objectName: `scene-img-tag-${i}` });
+    }
+    x += ws[i] + gap;
+  });
+  let y = TOP + ih + 0.06;
+  if (s.caption) { captionText(slide, s.caption, MX, y, CW); y += 0.36; }
+  const btnW = s.link ? 3.4 : 0;
+  bulletBox(slide, s.bullets, MX, y + 0.05, CW - btnW - 0.3, BOTTOM - y - 0.05, { fontSize: s.fontSize || 14, space: 4 });
+  if (s.link) {
+    const bx = MX + CW - btnW, by = BOTTOM - 0.62;
+    slide.addShape(pres.shapes.ROUNDED_RECTANGLE, { x: bx, y: by, w: btnW, h: 0.62, rectRadius: 0.12, fill: { color: C().accent3 }, line: { type: "none" }, objectName: "scene-btn-bg" });
+    slide.addText(`▶ 開啟 3D 動畫：${s.link.label}`, { x: bx, y: by, w: btnW, h: 0.62, fontSize: 14, bold: true, color: C().background1, align: "center", valign: "middle", margin: 0, isTextBox: true, hyperlink: { url: s.link.url, tooltip: s.link.url }, objectName: "scene-btn" });
+  }
+  if (s.notes) slide.addNotes(s.notes);
+  return slide;
+}
+
+/** 任何投影片右上角都可加一顆「▶ 3D」小按鈕（s.scene = { label, url }） */
+function sceneChip(slide, sc, hasTime = false) {
+  const x = hasTime ? 9.12 : 10.95; // 有影片時間標籤時放在它左邊
+  slide.addShape(_pres.shapes.ROUNDED_RECTANGLE, { x, y: 0.6, w: 1.78, h: 0.44, rectRadius: 0.22, fill: { color: C().accent3 }, line: { type: "none" }, objectName: "scene-chip" });
+  slide.addText(`▶ 3D：${sc.label}`, { x, y: 0.6, w: 1.78, h: 0.44, fontSize: 11, bold: true, color: C().background1, align: "center", valign: "middle", margin: 0, isTextBox: true, hyperlink: { url: sc.url, tooltip: sc.url }, objectName: "scene-chip-text" });
+}
 
 // ───────────────────────────── 主題寫入（取代 Office 預設色票） ─────────────────────────────
 async function applyTheme(file, theme) {
@@ -531,7 +747,8 @@ async function build(contentPath, outPath) {
     }
     const fn = R[s.type];
     if (!fn) throw new Error(`未知的投影片類型：${s.type}`);
-    await fn(pres, s, meta);
+    const slide = await fn(pres, s, meta);
+    if (s.scene && slide) sceneChip(slide, s.scene, !!s.time);
   }
   const file = outPath || path.join(__dirname, "output", meta.output || "deck.pptx");
   fs.mkdirSync(path.dirname(file), { recursive: true });

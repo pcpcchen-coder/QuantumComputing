@@ -4,12 +4,12 @@
 
 ## 筆記目錄
 
-> 所有簡報都另附 PDF 版：[`slides/pdf/`](slides/pdf/)（`JJ_Microwave_Readout_Talk.pdf`、`QC_Peripheral_Systems_Talk.pdf`、`QC_Operation_Talk.pdf`、`Ion_NeutralAtom_Talk.pdf`、`transmon.pdf`、`QC_Power_Supply_Delta.pdf`）。
+> 所有簡報都另附 PDF 版：[`slides/pdf/`](slides/pdf/)（`JJ_Microwave_Readout_Talk.pdf`、`QC_Peripheral_Systems_Talk.pdf`、`QC_Operation_Talk.pdf`、`Ion_NeutralAtom_Talk.pdf`、`transmon.pdf`、`QC_Power_Supply_Delta.pdf`、`QFISH008_Deutsch_Algorithm.pdf`）。
 
 1. [約瑟夫森結（JJ）：巨觀量子波、相位差與「穿隧」的真正意義](notes/josephson-junction-wave-and-tunneling.md)
 2. [Transmon：約瑟夫森電感、電路結構與量子位元機制](notes/transmon-josephson-inductance.md)
    - 簡報：[`slides/transmon.pptx`](slides/transmon.pptx)（17 頁，PowerPoint）
-   - 3D 互動動畫：[`animations/transmon-3d.html`](animations/transmon-3d.html)（8 章；第 6 章「案例」示範 SQUID 調頻、頻率配置與頻率碰撞、XY 寫入、CZ 閘；第 7 章「振幅長條」示範糾纏、兩位元 Grover 搜尋與 Deutsch 演算法；第 8 章示範 Shor 演算法（QFT 找週期分解 15，可自選 N、a、計數位元數）；下載後用瀏覽器開啟；需連網載入 three.js）
+   - 3D 互動動畫：[`animations/transmon-3d.html`](animations/transmon-3d.html)（8 章；第 6 章「案例」示範 SQUID 調頻、頻率配置與頻率碰撞、XY 寫入、CZ 閘；第 7 章「振幅長條」示範糾纏、兩位元 Grover 搜尋與 Deutsch 演算法；第 8 章示範 Shor 演算法（QFT 找週期分解 15，可自選 N、a、計數位元數）；下載後用瀏覽器開啟；需連網載入 three.js；網址加 `#deutsch` 直接進 Deutsch 步驟、`#deutsch-lab` 進自由實驗）
 3. [色散讀取：用諧振腔頻率「看見」超導量子位元](notes/dispersive-readout.md)（原理、IQ 判別、設計取捨、整條讀取鏈設備與校準流程）
    - 對應動畫：[`animations/index.html`](animations/index.html) 場景 9、10；[`animations/peripherals.html`](animations/peripherals.html) 場景 5、6
 4. [技術分享：超導量子電腦的 JJ 元件與微波讀取](#技術分享超導量子電腦的-jj-元件與微波讀取)
@@ -32,6 +32,7 @@
    - 3D 互動動畫：[`animations/atoms.html`](animations/atoms.html)（13 個場景，離線可用）
 8. [影片報告簡報：《量子超級英雄》影片轉 PPT](#影片報告簡報量子超級英雄影片轉-ppt)
    - #049 超導量子位元：[`slides/output/ep049-superconducting-qubit.pptx`](slides/output/ep049-superconducting-qubit.pptx)（16 頁，含講稿）
+   - 量子金魚 008 Deutsch 演算法：[`slides/output/qfish008-deutsch-algorithm.pptx`](slides/output/qfish008-deutsch-algorithm.pptx)（30 頁，含講稿；依影片逐字稿整理，另附「案例實算」：紅綠球搖獎機、振幅逐步計算、四種黑盒子、現場猜謎；每個案例都有按鈕直接開啟 3D 動畫）；PDF：[`slides/pdf/QFISH008_Deutsch_Algorithm.pdf`](slides/pdf/QFISH008_Deutsch_Algorithm.pdf)
    - 製作流程與產生器：[`slides/README.md`](slides/README.md)
 9. [課程擴充規劃：量子電腦學院（參考父子科技學院格式，6 模組 × 16 堂）](docs/量子電腦學院_課程擴充規劃.md)（現有 223 頁簡報與 47 個 3D 場景的盤點、Q001–Q096 課表、新增動畫與簡報清單）
    - 學程資料夾：[`academy/`](academy/README.md)（96 堂課綱、每堂教案、製作指南、製作狀態）

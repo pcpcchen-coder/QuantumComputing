@@ -8,6 +8,8 @@
 
 第一個樣本：`episodes/ep049.js` → `output/ep049-superconducting-qubit.pptx`（16 張，含講稿）
 
+《量子金魚》008 Deutsch 演算法：`episodes/qfish008.js` → `output/qfish008-deutsch-algorithm.pptx`（30 張，含講稿；PDF：`pdf/QFISH008_Deutsch_Algorithm.pdf`）。依影片逐字稿整理，並加上「案例實算（補充）」：振幅逐步計算、四種黑盒子、現場猜謎，每頁都有紫色按鈕直接開啟對應的 3D 動畫（`animations/transmon-3d.html#deutsch`、`#deutsch-lab`、`animations/operation.html#interference`）。3D 截圖以 `node capture_3d_deutsch.js` 重新擷取到 `figures/3d_deutsch/`。
+
 引擎也可以用在非影片的報告：`reports/qc-power-delta.js` → `output/qc-power-supply-delta.pptx`（量子電腦供電設計，超導／離子阱／中性原子三平台，36 張，含講稿）。這類內容不需要 `time` 欄位。
 
 ## 每集的製作流程
@@ -57,8 +59,13 @@
 | `junction` | 約瑟夫森接面結構圖 | `arrowLabel`、`middle`、`symbol`、`bullets[]` |
 | `summary` | 重點整理（深色） | `points[]` |
 | `closing` | 討論題＋延伸觀看（深色） | `question`、`prompts[]`、`refs[]`；可選 `questionKicker`、`refsHead` 改兩個小標 |
+| `circuit` | 量子線路圖（原生圖形）＋各階段狀態卡 | `circuit{wires[], cols[{g:[閘,…]} / {blk, tone} / {m:[true,false]}], marks[{after, label}]}`、`stages[{head, eq, body, tone}]`、`callout` |
+| `amps` | 振幅長條（金＝正、紅＝負，與 3D 動畫第 7 章同畫法） | `lead`、`panels[{head, amps[4], note, tone, focus}]`、`labels[]`、`callout` |
+| `scene3d` | 3D 動畫截圖＋說明＋「開啟 3D 動畫」超連結按鈕 | `image`（1–2 張）、`imageLabels[]`、`caption`、`bullets[]`、`link{label, url}`；`layout: "wide"` 讓兩張截圖橫排在上 |
 
-共通欄位：`section`（PowerPoint 章節）、`time`、`notes`。
+共通欄位：`section`（PowerPoint 章節）、`time`、`notes`；`scene{label, url}` 會在右上角加一顆可點的「▶ 3D」小按鈕。
+
+> 3D 連結用相對於 `output/` 的路徑（例如 `../../animations/transmon-3d.html#deutsch`），請保持 `slides/` 與 `animations/` 的相對位置。
 
 `tone` 可用：`good`（綠 ✓）、`bad`（紅 ✗）、`warn`（琥珀）、`neutral`（青綠）、`quantum`（紫）。
 

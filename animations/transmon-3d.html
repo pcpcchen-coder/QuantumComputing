@@ -1999,8 +1999,18 @@ nav.chapters {
   }
 
   // ---------- 啟動 ----------
-  const fromHash = () => { const id = location.hash.slice(1); const i = CH.findIndex(c => c.id === id); return i < 0 ? 0 : i; };
-  window.addEventListener("hashchange", () => go(fromHash(), true));
+  // 捷徑：#deutsch 直接進第 7 章步驟 7（Deutsch），#deutsch-lab 進步驟 8（自由實驗），方便簡報按鈕直接跳轉
+  const HASH_ALIAS = { deutsch: ["grover", 6], "deutsch-lab": ["grover", 7] };
+  const fromHash = () => {
+    const id = location.hash.slice(1), al = HASH_ALIAS[id];
+    if (al) g7S.step = al[1];
+    const i = CH.findIndex(c => c.id === (al ? al[0] : id)); return i < 0 ? 0 : i;
+  };
+  window.addEventListener("hashchange", () => {
+    const prev = cur, i = fromHash();
+    go(i, true);
+    if (i === prev && HASH_ALIAS[location.hash.slice(1)]) g7Step(g7S.step);   // 已在第 7 章時直接換步驟
+  });
   resize();
   go(fromHash(), true);
   desiredCamPos(camera.position); camTarget.copy(desired.target);
