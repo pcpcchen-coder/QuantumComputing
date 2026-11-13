@@ -38,14 +38,16 @@
 10. [課程擴充規劃：量子電腦學院（參考父子科技學院格式，6 模組 × 16 堂）](docs/量子電腦學院_課程擴充規劃.md)（現有 223 頁簡報與 47 個 3D 場景的盤點、Q001–Q096 課表、新增動畫與簡報清單）
    - 學程資料夾：[`academy/`](academy/README.md)（96 堂課綱、每堂教案、製作指南、製作狀態）
 11. [量子電腦供電設計：文獻回顧與台達電的切入點](docs/量子電腦供電設計文獻回顧與台達電切入點.md)（超導、離子阱、中性原子三平台分篇細部分析：精密電源、不斷電與分層備援、低干擾設計、能耗擴展，以及台達電的產品 × 平台矩陣）
-    - 簡報：[`slides/output/qc-power-supply-delta.pptx`](slides/output/qc-power-supply-delta.pptx)（43 頁，含講稿）；PDF：[`slides/pdf/QC_Power_Supply_Delta.pdf`](slides/pdf/QC_Power_Supply_Delta.pdf)
+    - 簡報：[`slides/output/qc-power-supply-delta.pptx`](slides/output/qc-power-supply-delta.pptx)（64 頁，含講稿）；PDF：[`slides/pdf/QC_Power_Supply_Delta.pdf`](slides/pdf/QC_Power_Supply_Delta.pdf)
     - 簡報內容檔：[`slides/reports/qc-power-delta.js`](slides/reports/qc-power-delta.js)（`cd slides && node build_deck.js reports/qc-power-delta.js` 重新產生）
+    - 1,000 位元系統供電設計：[`docs/1000量子位元系統供電設計.md`](docs/1000量子位元系統供電設計.md)（線路與熱預算估算、設施用電與備援、接地與磁場、七層技術、台達三階段路線圖；簡報第 47–59 頁）
+    - 互動動畫：[`animations/power1000.html`](animations/power1000.html)（7 個 2D 互動場景：全景、規模計算器、低溫熱預算、接地與共模、斷電時間軸、磁場與配電佈局、路線圖；離線可用）
 
 ---
 
 ## 3D 動畫 ↔ PPT 簡報對照
 
-`animations/` 共 5 個動畫頁、56 個場景／章節，**每一個都有對應的簡報投影片**。簡報上的「▶ 3D」按鈕直接開啟對應場景；網址格式為 `animations/<頁面>.html#<場景代號>`。簡報裡用相對路徑（例如 `../animations/index.html#bloch`），請保持 `slides/` 與 `animations/` 的相對位置；`transmon-3d.html` 需連網載入 three.js。
+`animations/` 共 6 個動畫頁、63 個場景／章節，**每一個都有對應的簡報投影片**。簡報上的「▶ 3D」按鈕直接開啟對應場景；網址格式為 `animations/<頁面>.html#<場景代號>`。簡報裡用相對路徑（例如 `../animations/index.html#bloch`），請保持 `slides/` 與 `animations/` 的相對位置；`transmon-3d.html` 需連網載入 three.js。
 
 逐場景的完整表格（含投影片標題與可點的動畫網址）：[`docs/動畫與簡報對照表.md`](docs/動畫與簡報對照表.md)。新增動畫或簡報後執行下列指令，會重新產生表格，並列出還沒有投影片介紹的場景（有缺口時結束碼為 1）：
 
@@ -62,6 +64,7 @@ python3 slides/build/anim_ppt_map.py
 | [`operation.html`](animations/operation.html) | 12 | [`QC_Operation_Talk.pptx`](slides/QC_Operation_Talk.pptx)；干涉場景另見量子金魚 008 | ✅ 全部有 |
 | [`atoms.html`](animations/atoms.html) | 13 | [`Ion_NeutralAtom_Talk.pptx`](slides/Ion_NeutralAtom_Talk.pptx) | ✅ 全部有 |
 | [`transmon-3d.html`](animations/transmon-3d.html) | 8 章＋2 捷徑 | [`transmon.pptx`](slides/transmon.pptx)；Deutsch 捷徑另見 [`qfish008-deutsch-algorithm.pptx`](slides/output/qfish008-deutsch-algorithm.pptx) | ✅ 全部有（原本 8 章都缺，已補齊） |
+| [`power1000.html`](animations/power1000.html) | 7 | [`qc-power-supply-delta.pptx`](slides/output/qc-power-supply-delta.pptx)（右上角「▶ 動畫」按鈕） | ✅ 全部有 |
 
 ### transmon-3d.html ↔ transmon.pptx
 

@@ -26,6 +26,7 @@ PAGES = [  # (html, 場景 JS 目錄 or None, 說明)
     ("operation.html", "js/operation", "如何操作量子電腦"),
     ("atoms.html", "js/atoms", "離子阱與中性原子"),
     ("transmon-3d.html", None, "Transmon 3D（8 章）"),
+    ("power1000.html", "inline", "1,000 位元供電設計"),
 ]
 DECK_NAMES = {
     "slides/JJ_Microwave_Readout_Talk.pptx": "JJ 與微波讀取",
@@ -34,11 +35,15 @@ DECK_NAMES = {
     "slides/Ion_NeutralAtom_Talk.pptx": "離子阱與中性原子",
     "slides/transmon.pptx": "Transmon",
     "slides/output/qfish008-deutsch-algorithm.pptx": "量子金魚 008 Deutsch",
+    "slides/output/qc-power-supply-delta.pptx": "量子電腦供電設計",
 }
 
 
 def scenes_of(html, js_dir):
     """回傳 [(id, 標題)]，依動畫中的順序。"""
+    if js_dir == "inline":  # 場景直接寫在 HTML 裡：S({ id: '…', title: '…'
+        s = open(os.path.join(ANIM_DIR, html), encoding="utf-8").read()
+        return re.findall(r"S\(\{ id: '([\w-]+)', title: '([^']+)'", s)
     if js_dir:
         out = []
         for f in sorted(glob.glob(os.path.join(ANIM_DIR, js_dir, "[0-9]*.js"))):
