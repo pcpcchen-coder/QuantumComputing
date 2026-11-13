@@ -486,6 +486,7 @@ R.flow = async (pres, s) => {
   if (s.bullets) bulletBox(slide, s.bullets, MX, y0 + bh + 0.3, CW, bottom - (y0 + bh + 0.3), { fontSize: 15, space: 6 });
   if (s.callout) callout(slide, s.callout, MX, BOTTOM - 0.7, CW, 0.7);
   if (s.notes) slide.addNotes(s.notes);
+  return slide;
 };
 
 R.summary = async (pres, s) => {
@@ -723,7 +724,7 @@ async function scene3dWide(pres, slide, s, imgs) {
 function sceneChip(slide, sc, hasTime = false) {
   const x = hasTime ? 9.12 : 10.95; // 有影片時間標籤時放在它左邊
   slide.addShape(_pres.shapes.ROUNDED_RECTANGLE, { x, y: 0.6, w: 1.78, h: 0.44, rectRadius: 0.22, fill: { color: C().accent3 }, line: { type: "none" }, objectName: "scene-chip" });
-  slide.addText(`▶ 3D：${sc.label}`, { x, y: 0.6, w: 1.78, h: 0.44, fontSize: 11, bold: true, color: C().background1, align: "center", valign: "middle", margin: 0, isTextBox: true, hyperlink: { url: sc.url, tooltip: sc.url }, objectName: "scene-chip-text" });
+  slide.addText(`▶ ${sc.prefix || "3D"}：${sc.label}`, { x, y: 0.6, w: 1.78, h: 0.44, fontSize: 11, bold: true, color: C().background1, align: "center", valign: "middle", margin: 0, isTextBox: true, hyperlink: { url: sc.url, tooltip: sc.url }, objectName: "scene-chip-text" });
 }
 
 // ───────────────────────────── 主題寫入（取代 Office 預設色票） ─────────────────────────────
