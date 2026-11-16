@@ -523,6 +523,108 @@ S({ id: 'roadmap', title: '台達要怎麼做：三階段路線圖', sub: '代�
   },
   tick(st, dt) { st.t += dt; st.cards.forEach(c => c.g.setAttribute('opacity', clamp((st.t - c.delay) * 2, 0, 1))); } });
 
+// 8. 開發計畫
+const PLAN = [
+  { n: 1, st: 0, name: '分層 UPS＋空調參考設計', tag: 'A＋B', what: '可直接給場地設計單位用的參考設計（單線圖、容量計算、驗收項目）＋一個實際運轉的示範場域',
+    first: '取得場地規劃文件；量一次壓縮機啟動波形', done: '示範場域經過一次市電中斷，冷凍機溫度不離開運轉範圍', go: 'outage',
+    d: [['拿不到真實負載數據（規格書在 NDA 後）', '用免費的電力品質與啟動暫態量測換數據'], ['冷卻容忍時間只有一個公開數據點', '設計方法把容忍時間當輸入參數，示範場域實測'], ['壓縮機啟動電流讓 UPS 過度放大', '錯開啟動 → 軟啟動 → 變頻驅動（④）'], ['場域不願做斷電演練', '分級演練：切 UPS → 發電機帶載 → 完整演練']] },
+  { n: 2, st: 0, name: '現場勘查服務', tag: 'H', what: '標準化的量子機房勘查：磁場、接地電流、電力品質、振動、溫濕度、5–7 GHz 射頻；2–3 天完成',
+    first: '買齊儀器，先量台達自己的 UPS、變頻器、變壓器', done: '報告格式定案；累積 3 個場域的數據', go: 'field',
+    d: [['量到數字，說不出對量子位元的影響', '短期只交付「是否符合廠商規格」；長期累積關聯數據'], ['干擾是間歇性的，2–3 天量不到', '留下長期記錄器至少兩週'], ['接地電流量測沒有標準方法', '自訂方法寫進 QGP，重複量測確認再現性'], ['服務本身不賺錢', '定位為產品前哨']] },
+  { n: 3, st: 0, name: '量子等級電源規格 QGP', tag: 'QGP', what: '定義一般規格書沒有的參數與量測方法（隔離電容、共模電流頻譜、漏電流、近場磁場、低頻雜訊…）＋一座量測台',
+    first: '先定「量測方法」，門檻值後補', done: '同一顆電源重複量測結果一致；一家儀器廠採用', go: 'ground',
+    d: [['門檻值沒有依據', '先定方法、用 A／B／C 分級，等驗證數據再收斂'], ['量測台自己的雜訊與接地', '屏蔽箱、電池供電前置放大器，報告附雜訊底'], ['結果和配置強烈相關', '把測試配置畫死，換再現性'], ['客戶不承認自訂規格', '找儀器廠共同署名、方法公開、提到 OCP']] },
+  { n: 4, st: 1, name: '壓縮機變頻驅動', tag: 'F', what: '脈衝管氦氣壓縮機（約 12.5 kW）的變頻驅動：軟啟動、群控、低諧波、低共模、驟降穿越',
+    first: '借一台壓縮機做外掛驗證', done: '啟動電流下降、冷卻功率無退化；一家 OEM 簽共同開發', go: 'heat',
+    d: [['壓縮機與冷頭的匹配是 OEM 機密', '第一版只做軟啟動＋額定頻率，不碰穩態工作點'], ['變頻器自己變成干擾源', '正弦波濾波、屏蔽電纜、主動前端做成標配'], ['OEM 沒有動機改', '由場域端提需求；鎖定多脈衝管系統廠商'], ['市場量小', '從既有工業變頻器平台衍生']] },
+  { n: 5, st: 1, name: '量子等級 DC-DC 與 AC-DC', tag: 'D', what: '儀器內部電源模組：隔離電容個位數 pF、可鎖外部時脈、低漏磁、低漏電流（假設目標）',
+    first: '用 QGP 量測台量現有醫療級模組，找出差距', done: 'QGP 量測優於醫療級模組；一家儀器廠裝機回報改善', go: 'ground',
+    d: [['低隔離電容與效率、體積衝突', '諧振型拓撲，接受較大體積'], ['低漏電流與 EMC 衝突', '軟切換、靜電屏蔽、共模扼流圈'], ['客戶驗證週期長', '評估板＋QGP 報告，同時支援兩家以上'], ['儀器廠習慣自己做電源', '先切入最頭痛的類比域隔離電源']] },
+  { n: 6, st: 1, name: '集中供電＋監測 PDU', tag: 'A／D', what: '(a) 量每個插座剩餘電流的 PDU；(b) 一櫃只有 1–2 個交流入口的集中直流供電',
+    first: 'PDU 先做（不需儀器廠配合）', done: '抓到一次「接地電流變化 ↔ 量測異常」的時間對應', go: 'ground',
+    d: [['數安培負載下量 mA 以下的剩餘電流', '磁通門式感測器，出廠逐一校正'], ['集中供電需要儀器廠改設計', '先找模組化背板機箱的廠商，提開放母線規格'], ['共用母線造成模組間串擾', '模組入口保留隔離 DC-DC（⑤）'], ['單點故障', 'N+1 熱插拔電源模組']] },
+  { n: 7, st: 1, name: '精密線圈電流源', tag: 'G', what: '離子阱與中性原子用：ppm 級穩定型（內建 50/60 Hz 前饋）與毫秒級快切型',
+    first: '做 20 A 原型交給原子物理實驗室', done: '實驗室量到同調時間改善；一家系統廠索樣', go: 'overview',
+    d: [['ppm 等級怎麼量', '計量級感測器；最終由原子的同調時間驗證'], ['溫度漂移', '低溫漂元件、恆溫、水冷'], ['快切與低雜訊互相衝突', '兩個模式：裝載用快切、計算用低雜訊'], ['市場小、客戶習慣自製', '鎖定正在產品化的系統廠']] },
+  { n: 8, st: 2, name: '4 K 低溫電源轉換', tag: 'I', what: '在冷凍機 4 K 層工作的 DC-DC：高壓低電流送入、低溫端降壓，供電給低溫控制晶片',
+    first: '和學研合作量元件的低溫特性', done: '小功率原型在 4 K 恆溫器中展示', go: 'heat',
+    d: [['損耗直接吃 4 K 冷卻預算（每支約 2 W）', '提高效率目標，或放在 50 K 層'], ['磁性元件與電容在低溫特性改變', '空心電感或開關電容拓撲'], ['切換雜訊離量子晶片很近', '屏蔽、避開量子位元頻段、鎖定時脈'], ['市場時程不確定', '小團隊＋學研合作，設檢查點']] },
+  { n: 9, st: 2, name: '高通道數直流供電', tag: 'I', what: '數千到上萬路精密直流背後的電源分配：多軌、低雜訊、彼此隔離、高密度',
+    first: '作為 ⑥ 的第二代，不單獨立項', done: '與一家儀器廠完成共同設計', go: 'scale',
+    d: [['與儀器廠的分工界線', '共同設計，台達負責到通道群的類比電源軌'], ['通道間經共用電源耦合', '分群隔離、每群獨立穩壓'], ['密度與散熱', '背板液冷或恆溫風道'], ['架構可能被低溫化取代', '保留送進冷凍機的介面，與 ⑧ 共用技術']] },
+  { n: 10, st: 2, name: '模組化量子資料中心配電', tag: 'A', what: '把 ① 做成可複製的「量子單元」模組，並排擴充到 MW 等級',
+    first: '把 ① 每個案子的設計模組化', done: '需求出現時已有可複製的設計', go: 'field',
+    d: [['大電流母線的磁場', '提高配電電壓、母線成對並行、保持距離'], ['800 VDC 的靜磁場', '先評估交流與直流方案，不預設答案'], ['數十台壓縮機的群控', '延伸 ④ 的群控功能'], ['市場 2029 年後才出現', '不獨立開發產品']] },
+  { n: 11, st: 2, name: '解碼機櫃供電與液冷', tag: 'E', what: '即時解碼的 FPGA／GPU 機櫃：規格同 AI 機櫃，要補的是「緊鄰量子機台」的條件',
+    first: '量現有 AI 機櫃電源的磁場與漏電流（可提前做）', done: '定出與量子機台的最小距離與應用指南', go: 'overview',
+    d: [['大功率電源、泵、風扇緊鄰量子機台', '量測後定最小距離，泵浦遠端放置'], ['低延遲限制距離', '每公尺約 5 ns，對微秒級延遲影響小'], ['負載快速變動造成電源暫態', '走獨立匯流排與 UPS 分層'], ['需求量不明', '只做驗證與應用指南']] },
+];
+const FEEDS = { 2: [1, 10, 11], 3: [5, 6, 7, 9], 1: [10], 4: [1, 10], 5: [6, 9], 6: [9], 8: [9, 10] };
+const CHECKS = [[6, '取得場地規劃文件了嗎？QGP 量測台量得出產品差異嗎？'], [12, '示範場域運轉了嗎？勘查找到可對應產品的問題嗎？'], [18, '有儀器廠或冷凍機廠願意共同開發嗎？'], [36, 'OEM 有設計導入嗎？低溫 CMOS 與模組化冷凍機進度如何？']];
+const CIRC = '①②③④⑤⑥⑦⑧⑨⑩⑪';
+S({ id: 'devplan', title: '開發計畫：11 個項目怎麼做', sub: '規劃建議（非既有計畫）；規格目標為開發起點的假設值',
+  desc: `<p><b>點選項目</b>看：要做出什麼、第一步、困難與解法、完成判準。綠框是它<b>需要先有</b>的項目，金框是<b>靠它提供成果</b>的項目。</p>
+  <p>拉動<b>時間</b>可以看各階段何時啟動，以及第 6、12、18、36 個月的檢查點要回答什麼問題。勾選「自動導覽」會依建議的啟動順序逐項播放。</p>
+  <p class="src">內容來源：docs/台達量子供電產品開發計畫.md</p>`,
+  build(st) {
+    st.sel = 2; st.month = 0; st.auto = false; st.t = 0; st.k = 0;
+    st.order = [2, 3, 1, 6, 5, 4, 7, 11, 8, 9, 10];
+    toggle('自動導覽（依建議啟動順序）', false, v => { st.auto = v; st.t = 0; });
+    slider('時間', 0, 84, 1, 0, v => v === 0 ? '啟動' : `第 ${v} 個月`, v => { st.month = v; st.dirty = true; });
+    const cols = ['#3ccf8e', '#e0a54a', '#9d8cff'], names = ['0–1 年：建立案例與規格', '1–3 年：進入供應鏈', '3–7 年：下一代架構'], y0 = [30, 250, 500];
+    st.btn = {};
+    [0, 1, 2].forEach(s => {
+      txt(30, y0[s], names[s], { size: 17, bold: true, fill: cols[s] });
+      el('line', { x1: 30, x2: 530, y1: y0[s] + 16, y2: y0[s] + 16, stroke: cols[s], 'stroke-width': 2 });
+      PLAN.filter(p => p.st === s).forEach((p, j) => {
+        const x = 30 + (j % 2) * 255, y = y0[s] + 32 + Math.floor(j / 2) * 84, g = el('g', { class: 'pp' });
+        const r = box(x, y, 245, 70, { fill: 'rgba(255,255,255,.05)', stroke: cols[s] }, g);
+        txt(x + 14, y + 24, CIRC[p.n - 1] + ' ' + p.name, { size: 14, bold: true }, g);
+        txt(x + 14, y + 50, '矩陣 ' + p.tag, { size: 12, fill: cols[s] }, g);
+        g.addEventListener('click', () => { st.sel = p.n; st.auto = false; ctlBox.querySelector('input[type=checkbox]').checked = false; st.dirty = true; });
+        st.btn[p.n] = { g, r, col: cols[s] };
+      });
+    });
+    const fo = el('foreignObject', { x: 560, y: 20, width: 620, height: 720 });
+    st.detail = document.createElement('div');
+    st.detail.setAttribute('xmlns', 'http://www.w3.org/1999/xhtml');
+    st.detail.style.cssText = 'font-size:15px;line-height:1.6;color:#d3dcea;background:rgba(12,20,36,.9);border:1px solid rgba(140,170,220,.3);border-radius:12px;padding:16px 18px;height:100%;overflow:auto;box-sizing:border-box';
+    fo.appendChild(st.detail);
+    st.goBtn = null; st.dirty = true;
+  },
+  render(st) {
+    const p = PLAN.find(q => q.n === st.sel), start = [0, 12, 36];
+    const needs = Object.keys(FEEDS).filter(k => FEEDS[k].includes(p.n)).map(Number), feeds = FEEDS[p.n] || [];
+    PLAN.forEach(q => {
+      const b = st.btn[q.n], active = st.month >= start[q.st];
+      b.g.setAttribute('opacity', active ? 1 : 0.4);
+      const c = q.n === p.n ? '#ffffff' : needs.includes(q.n) ? '#3ccf8e' : feeds.includes(q.n) ? '#e0a54a' : b.col;
+      b.r.setAttribute('stroke', c); b.r.setAttribute('stroke-width', q.n === p.n ? 4 : (needs.includes(q.n) || feeds.includes(q.n)) ? 3.5 : 1.2);
+      b.r.setAttribute('fill', q.n === p.n ? 'rgba(255,255,255,.14)' : 'rgba(255,255,255,.05)');
+    });
+    const li = a => a.length ? a.map(n => CIRC[n - 1] + ' ' + PLAN[n - 1].name).join('、') : '（無）';
+    st.detail.innerHTML = `<div style="color:${st.btn[p.n].col};font-size:13px">${['0–1 年', '1–3 年', '3–7 年'][p.st]} · 矩陣 ${p.tag}</div>
+      <div style="font-size:22px;font-weight:700;color:#fff;margin:2px 0 8px">${CIRC[p.n - 1]} ${p.name}</div>
+      <div><b style="color:#fff">要做出什麼：</b>${p.what}</div>
+      <div style="margin-top:6px"><b style="color:#38c6d9">第一步：</b>${p.first}</div>
+      <table style="width:100%;border-collapse:collapse;margin-top:12px;font-size:14px">
+        <tr><th style="text-align:left;padding:6px 8px;background:#12304e;color:#fff;width:44%">困難</th><th style="text-align:left;padding:6px 8px;background:#12304e;color:#fff">可能的解法</th></tr>
+        ${p.d.map(([a, b], i) => `<tr style="background:${i % 2 ? 'transparent' : 'rgba(255,255,255,.04)'}"><td style="padding:7px 8px;color:#ff9a9d;vertical-align:top">${a}</td><td style="padding:7px 8px;vertical-align:top">${b}</td></tr>`).join('')}
+      </table>
+      <div style="margin-top:12px"><b style="color:#3ccf8e">完成判準：</b>${p.done}</div>
+      <div style="margin-top:8px;font-size:13px"><span style="color:#3ccf8e">■ 需要先有：</span>${li(needs)}<br><span style="color:#e0a54a">■ 成果提供給：</span>${li(feeds)}</div>
+      <div style="margin-top:12px"><a href="#${p.go}" style="color:#38c6d9">→ 看對應的痛點場景</a></div>`;
+    const ck = CHECKS.filter(c => c[0] <= st.month).pop(), nx = CHECKS.find(c => c[0] > st.month);
+    metrics([['目前', st.month < 12 ? '第一階段' : st.month < 36 ? '第二階段' : '第三階段', 'info'],
+      ['已啟動項目', PLAN.filter(q => st.month >= start[q.st]).length + ' / 11', 'info'],
+      ['下一個檢查點', nx ? `第 ${nx[0]} 個月` : '—', 'warn']]);
+    if (ck) metBox.insertAdjacentHTML('beforeend', `<div class="k" style="grid-column:1/3;color:#d3dcea;line-height:1.6"><b style="color:#e0a54a">第 ${ck[0]} 個月檢查點：</b>${ck[1]}</div>`);
+  },
+  tick(st, dt) {
+    if (st.auto) { st.t += dt; if (st.t > 6) { st.t = 0; st.k = (st.order.indexOf(st.sel) + 1) % st.order.length; st.sel = st.order[st.k]; st.dirty = true; } }
+    if (st.dirty) { st.dirty = false; this.render(st); }
+  } });
+
 // ───────────────────────── 主程式 ─────────────────────────
 const App = {
   i: 0, st: {}, paused: false, last: 0,
