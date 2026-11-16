@@ -77,6 +77,11 @@ body { background: var(--bg); color: var(--fg); font-family: var(--font-body); o
 .meter { width: 100%; height: 6px; border-radius: 3px; background: rgba(232, 235, 240, 0.1); overflow: hidden; }
 .meter i { display: block; height: 100%; width: 0; background: var(--gold); transition: width 120ms linear; }
 .note { font-size: 12px; color: var(--muted); line-height: 1.6; margin-top: 10px; }
+.subtabs { margin: 2px 0 12px; }
+.subtabs .btn { flex: 1; }
+.roles { margin: 0 0 12px; padding-left: 1.1em; display: grid; gap: 6px; }
+.roles li { font-size: 13.5px; line-height: 1.7; color: #cfd5de; }
+.roles li b { color: var(--fg); font-weight: 600; }
 .hist { display: flex; gap: 10px; width: 100%; font-family: var(--font-mono); font-size: 12px; color: var(--muted); }
 .hist span b { color: var(--fg); font-weight: 600; }
 
@@ -253,8 +258,9 @@ nav.chapters {
   }
   // 十字電容板
   const PADZ = 0.4, ARM = 3.2, PW = 0.62, PG = 0.32;
-  chip.add(box(2 * ARM + 2 * PG, 0.012, PW + 2 * PG, mat.gap, 0, GAP_Y, PADZ));
-  chip.add(box(PW + 2 * PG, 0.012, 2 * ARM + 2 * PG, mat.gap, 0, GAP_Y, PADZ));
+  const gapH = box(2 * ARM + 2 * PG, 0.012, PW + 2 * PG, mat.gap, 0, GAP_Y, PADZ);
+  const gapV = box(PW + 2 * PG, 0.012, 2 * ARM + 2 * PG, mat.gap, 0, GAP_Y, PADZ);
+  chip.add(gapH, gapV);
   const padH = box(2 * ARM, 0.07, PW, mat.pad, 0, 0.04, PADZ);
   const padV = box(PW, 0.07, 2 * ARM, mat.pad, 0, 0.04, PADZ);
   chip.add(padH, padV);
@@ -265,7 +271,8 @@ nav.chapters {
   [[-0.3, 0], [0.3, 0]].forEach(([x]) => chip.add(box(0.08, 0.05, 0.5, mat.metal, x, LINE_Y, SQZ)));
   chip.add(box(0.68, 0.05, 0.08, mat.metal, 0, LINE_Y, SQZ - 0.25));
   chip.add(box(0.68, 0.05, 0.08, mat.metal, 0, LINE_Y, SQZ + 0.25));
-  const jjL = box(0.16, 0.09, 0.14, mat.jj, -0.3, 0.05, SQZ); const jjR = box(0.16, 0.09, 0.14, mat.jj, 0.3, 0.05, SQZ);
+  const jjChipMat = mat.jj.clone();
+  const jjL = box(0.16, 0.09, 0.14, jjChipMat, -0.3, 0.05, SQZ); const jjR = box(0.16, 0.09, 0.14, jjChipMat, 0.3, 0.05, SQZ);
   chip.add(jjL, jjR);
   chip.add(box(0.12, 0.05, 0.3, mat.metal, 0, LINE_Y, SQZ + 0.42));
   // XY 驅動線（左）
@@ -301,6 +308,61 @@ nav.chapters {
   tag("Z 磁通線", [1.05, 0.15, 5.3], [0]);
   tag("接地面（Al）", [-4.3, 0.1, 4.2], [0]);
   tag("基板（矽 / 藍寶石）", [6.3, -0.6, 5.0], [0]);
+
+  // ---------- 第 1 章「大十字電容的作用」分頁 ----------
+  // 電場線：十字板邊緣到接地面邊緣的半圓弧（只畫基板上方，示意）
+  const fieldMat = new THREE.LineBasicMaterial({ color: 0x0b8f84, transparent: true, opacity: 0 });
+  const fieldLines = new THREE.LineSegments(new THREE.BufferGeometry(), fieldMat);
+  fieldLines.visible = false; chip.add(fieldLines);
+  function buildField(sc) {
+    const pts = [], half = PW * sc / 2, r = PG / 2, mid = half + r, SEG = 10;
+    const arc = (along, side, horiz) => {
+      for (let k = 0; k < SEG; k++) for (const kk of [k, k + 1]) {
+        const a = Math.PI * kk / SEG, d = side * (mid - r * Math.cos(a)), y = 0.075 + r * 3.2 * Math.sin(a);
+        pts.push(horiz ? new THREE.Vector3(along, y, PADZ + d) : new THREE.Vector3(d, y, PADZ + along));
+      }
+    };
+    for (let u = half + 0.3; u < ARM - 0.12; u += 0.28)
+      for (const sign of [-1, 1]) for (const side of [-1, 1]) { arc(sign * u, side, true); arc(sign * u, side, false); }
+    fieldLines.geometry.dispose();
+    fieldLines.geometry = new THREE.BufferGeometry().setFromPoints(pts);
+  }
+  // 右臂旁的耦合器（示意，只在電容分頁顯示）
+  const capExtra = new THREE.Group(); capExtra.visible = false; chip.add(capExtra);
+  capExtra.add(cpw([[6, PADZ], [ARM + 0.75, PADZ]]));
+  const capTag = (t, p, kind, cls = "") => { const x = tag(t, p, [0], cls); x.cap = kind; return x; };
+  capTag("上臂 → 讀取共振腔（耦合 g）", [0, 0.15, PADZ - ARM + 0.25], "arm");
+  capTag("左臂 → XY 驅動線", [-ARM + 0.4, 0.15, PADZ], "arm");
+  capTag("右臂 → 鄰近位元 / 耦合器（示意）", [ARM - 0.4, 0.15, PADZ], "arm");
+  capTag("下臂 → SQUID → 接地", [0, 0.15, PADZ + ARM + 0.55], "arm");
+  capTag("電場集中在間隙", [PW / 2 + PG / 2, 0.3, PADZ + 1.9], "field", "teal");
+  const CAPVIEW = { target: [0, 0, PADZ + 0.3], pos: [5.2, 10.5, 10.5] };
+  // 電荷基底三對角哈密頓量：以 Sturm 序列二分法求最低 k 個能階（單位同 EJ、EC）
+  function transmonLevels(EJ, EC, ng, k = 3, N = 25) {
+    const d = []; for (let n = -N; n <= N; n++) d.push(4 * EC * (n - ng) ** 2);
+    const e2 = (EJ / 2) ** 2;
+    const count = x => { let q = d[0] - x, c = q < 0 ? 1 : 0; for (let i = 1; i < d.length; i++) { q = d[i] - x - e2 / (q === 0 ? 1e-300 : q); if (q < 0) c++; } return c; };
+    const out = [];
+    for (let j = 0; j < k; j++) {
+      let lo = -EJ - 1, hi = 4 * EC * (N + 1) ** 2 + EJ + 1;
+      for (let it = 0; it < 90; it++) { const m = (lo + hi) / 2; if (count(m) > j) hi = m; else lo = m; }
+      out.push((lo + hi) / 2);
+    }
+    return out;
+  }
+  const EC_PER_FF = 19.37;   // E_C/h [GHz] = e²/(2hC) = 19.37 / C[fF]
+  function capStats(C) {
+    const EC = EC_PER_FF / C, a = transmonLevels(15, EC, 0), b = transmonLevels(15, EC, 0.5);
+    const fa = a[1] - a[0], fb = b[1] - b[0];
+    return { EC, f01: (fa + fb) / 2, alpha: ((a[2] - 2 * a[1] + a[0]) + (b[2] - 2 * b[1] + b[0])) / 2, disp: Math.abs(fa - fb) };
+  }
+  function fmtF(g) {
+    const v = g * 1e9;
+    if (v >= 1e9) return g.toFixed(2) + " GHz";
+    if (v >= 1e6) return (v / 1e6).toFixed(v >= 1e8 ? 0 : 1) + " MHz";
+    if (v >= 1e3) return (v / 1e3).toFixed(1) + " kHz";
+    return v.toFixed(1) + " Hz";
+  }
 
   // 第 5 章：S21 曲線與 IQ 平面（浮在晶片上方）
   const readout = new THREE.Group(); readout.position.set(0, 3.2, -5.6); readout.rotation.x = -0.28; scene.add(readout); readout.updateMatrixWorld();
@@ -671,11 +733,25 @@ nav.chapters {
   const CH = [
     { id: "chip", short: "晶片", kicker: "第 1 章 / 8", title: "一顆 transmon 的俯視圖",
       target: [0, -0.6, 0.6], pos: [8.5, 13.5, 15],
-      html: `<p>灰色是<b>接地面</b>，深色細縫是蝕刻掉金屬、露出基板的間隙。中央的<b>十字金屬板</b>就是 transmon 的大電容，下端經由 <b>SQUID</b>（兩個約瑟夫森結）接地。</p>
+      html: `<div class="controls subtabs" role="group" aria-label="分頁"><button class="btn" id="c1tabA" type="button" aria-pressed="true">晶片總覽</button><button class="btn" id="c1tabB" type="button" aria-pressed="false">大十字電容的作用</button></div>
+      <div id="c1A"><p>灰色是<b>接地面</b>，深色細縫是蝕刻掉金屬、露出基板的間隙。中央的<b>十字金屬板</b>就是 transmon 的大電容，下端經由 <b>SQUID</b>（兩個約瑟夫森結）接地。</p>
       <p>三條線各司其職：<b>XY 線</b>送微波脈衝控制狀態，<b>Z 線</b>送磁通調頻率，蜿蜒的<b>讀取共振腔</b>透過饋線把狀態讀出來。</p>
       <dl class="stats"><dt>電容 C_Σ</dt><dd>≈ 77.5 fF</dd><dt>充電能 E_C/h</dt><dd>250 MHz</dd><dt>約瑟夫森能 E_J/h</dt><dd>15 GHz</dd><dt>實際尺寸</dt><dd>數百 μm（示意，未按比例）</dd></dl>
       <div class="controls"><button class="btn primary" id="c1pulse" type="button">送出 π 脈衝</button><label class="check"><input type="checkbox" id="c1tags" checked> 顯示標籤</label></div>
-      <p class="note">送出脈衝後，十字板發出金光代表位元被激發到 |1⟩，之後依 T₁ 慢慢衰減回 |0⟩。</p>` },
+      <p class="note">送出脈衝後，十字板發出金光代表位元被激發到 |1⟩，之後依 T₁ 慢慢衰減回 |0⟩。</p></div>
+      <div id="c1B" hidden>
+      <p>十字金屬板就是 transmon 的<b>並聯電容 C_Σ</b>（約 77.5 fF），JJ 自己的電容只有 1–2 fF。這塊板子做四件事：</p>
+      <ul class="roles">
+        <li><b>讓 transmon「變重」</b>：E_C = e²/2C_Σ 被壓低，背景電荷雜訊造成的頻率漂移隨 √(8E_J/E_C) 指數下降。就像單擺的擺錘越重，越不怕被推。</li>
+        <li><b>決定頻率與非諧性</b>：f₀₁ ≈ √(8E_J E_C) − E_C，α ≈ −E_C。電容太大，α 太小，脈衝容易漏到 |2⟩。</li>
+        <li><b>存放電場能量</b>：電場集中在十字與接地面之間的間隙（青色場線）。能量在電場與 JJ 之間來回，所以場線和 JJ 交替發亮。表面缺陷在間隙吸收能量，所以板子做大、間隙不能太窄，T₁ 才長。</li>
+        <li><b>四隻手臂各接一個東西</b>：上接讀取共振腔、左接 XY 線、下經 SQUID 接地、右接鄰近位元或耦合器，各自用距離調整耦合強度。</li>
+      </ul>
+      <div class="controls"><label class="row" for="c1C">C_Σ <input type="range" id="c1C" min="5" max="200" step="0.5" value="77.5"></label></div>
+      <dl class="stats"><dt>電容 C_Σ</dt><dd id="r1C">—</dd><dt>充電能 E_C/h</dt><dd id="r1EC">—</dd><dt>E_J/E_C</dt><dd id="r1ratio">—</dd><dt>f₀₁</dt><dd id="r1f">—</dd><dt>非諧性 α</dt><dd id="r1a">—</dd><dt>電荷色散</dt><dd id="r1d">—</dd><dt>判斷</dt><dd id="r1v">—</dd></dl>
+      <div class="controls"><button class="btn" id="c1reset" type="button">回到 77.5 fF</button><label class="check"><input type="checkbox" id="c1field" checked> 電場線</label><label class="check"><input type="checkbox" id="c1arm" checked> 手臂用途</label></div>
+      <p class="note">E_J/h 固定為 15 GHz，各數值由電荷基底哈密頓量即時對角化求得。十字板粗細只是示意電容大小，未按比例；電場線只畫基板上方。</p>
+      </div>` },
     { id: "junction", short: "約瑟夫森結", kicker: "第 2 章 / 8", title: "約瑟夫森結：非線性電感的本體",
       target: [JX + 0.3, 1.0, 0], pos: [JX + 4.5, 6.2, 12],
       html: `<p>下層 Al、中間 1–2 nm 的 AlOx、上層 Al。兩邊的超導波函數（後方截面圖）在絕緣層裡<b>指數衰減並重疊</b>，庫柏對因此能穿隧過去。</p>
@@ -742,6 +818,7 @@ nav.chapters {
     b.addEventListener("click", () => go(i)); rail.appendChild(b);
   });
   let cur = -1, showTags = true, trMode = 1, measuring = 0;
+  let capView = false, capC = 77.5, fieldOn = true, armTagsOn = true, padS = 1, fieldDirty = true;
   const hist = [0, 0];
   const $ = id => document.getElementById(id);
 
@@ -763,6 +840,14 @@ nav.chapters {
     if (i === 0) {
       $("c1pulse").onclick = () => { xyT = 0; };
       $("c1tags").checked = showTags; $("c1tags").onchange = e => { showTags = e.target.checked; };
+      $("c1tabA").onclick = () => setCapView(false, true);
+      $("c1tabB").onclick = () => setCapView(true, true);
+      const cs1 = $("c1C"); cs1.value = capC;
+      cs1.oninput = () => { capC = +cs1.value; fillCap(); };
+      $("c1reset").onclick = () => { capC = 77.5; cs1.value = capC; fillCap(); };
+      $("c1field").checked = fieldOn; $("c1field").onchange = e => { fieldOn = e.target.checked; };
+      $("c1arm").checked = armTagsOn; $("c1arm").onchange = e => { armTagsOn = e.target.checked; };
+      setCapView(capView, false); fillCap();
     }
     if (i === 1) {
       const s = $("c2phi"); s.value = Math.round(jjPhi * 180 / Math.PI);
@@ -828,6 +913,27 @@ nav.chapters {
       $("g8auto").checked = g8S.auto; $("g8auto").onchange = e => { g8S.auto = e.target.checked; };
       g8Step(g8S.step);
     }
+  }
+  function setCapView(v, user) {
+    capView = v;
+    const a = $("c1A"), b = $("c1B"); if (!a || cur !== 0) return;
+    a.hidden = v; b.hidden = !v;
+    $("c1tabA").setAttribute("aria-pressed", String(!v)); $("c1tabB").setAttribute("aria-pressed", String(v));
+    panel.querySelector("h2").textContent = v ? "大十字電容：讓 transmon 變重" : CH[0].title;
+    desired.target.set(...(v ? CAPVIEW.target : CH[0].target));
+    if (user) { view.yaw = 0; view.pitch = 0; view.zoom = 1; try { history.replaceState(null, "", v ? "#capacitor" : "#chip"); } catch (e) { /* 忽略 */ } }
+  }
+  function fillCap() {
+    if (!$("r1C")) return;
+    const r = capStats(capC), ratio = 15 / r.EC, v = $("r1v");
+    $("r1C").textContent = capC.toFixed(1) + " fF";
+    $("r1EC").textContent = fmtF(r.EC);
+    $("r1ratio").textContent = ratio.toFixed(1);
+    $("r1f").textContent = fmtF(r.f01);
+    $("r1a").textContent = (r.alpha < 0 ? "−" : "+") + fmtF(Math.abs(r.alpha));
+    $("r1d").textContent = r.disp * 1e9 < 0.1 ? "< 0.1 Hz" : fmtF(r.disp);
+    v.textContent = ratio < 20 ? "電荷雜訊主導（接近 Cooper pair box）" : ratio <= 120 ? "transmon 區間" : "非諧性偏小，閘需放慢";
+    v.style.color = ratio < 20 ? "var(--copper)" : ratio <= 120 ? "var(--teal)" : "var(--gold)";
   }
   function prepPlus() { queue.length = 0; anim = null; state.set(0, 0, 1); /* Rx(π/2)|0⟩ → −Y 方向（世界 +z） */ trailN = 0; }
   function measure() {
@@ -1855,7 +1961,7 @@ nav.chapters {
   window.addEventListener("keydown", e => { if (e.target.tagName === "INPUT") return; if (e.key === "ArrowRight") go(cur + 1); if (e.key === "ArrowLeft") go(cur - 1); });
 
   function desiredCamPos(out) {
-    const c = CH[cur]; const t = new THREE.Vector3(...c.target);
+    const c = cur === 0 && capView ? CAPVIEW : CH[cur]; const t = new THREE.Vector3(...c.target);
     const off = new THREE.Vector3(...c.pos).sub(t);
     const sph = new THREE.Spherical().setFromVector3(off);
     sph.theta += view.yaw; sph.phi = Math.max(0.12, Math.min(Math.PI - 0.2, sph.phi - view.pitch)); sph.radius *= view.zoom;
@@ -1901,6 +2007,22 @@ nav.chapters {
     excite *= Math.exp(-dt / 6);
     mat.pad.emissiveIntensity = 0.55 * excite + 0.04 * Math.sin(T * 2) + 0.04;
     padLight.intensity = 1.1 * excite;
+
+    // 第 1 章「大十字電容」分頁：板子粗細、電場線、能量在電場與 JJ 間來回
+    const capOn = cur === 0 && capView;
+    const sGoal = capOn ? Math.min(1.8, Math.max(0.3, capC / 77.5)) : 1;
+    if (padS !== sGoal) {
+      padS += (sGoal - padS) * (REDUCE ? 1 : 1 - Math.exp(-dt * 8));
+      if (Math.abs(sGoal - padS) < 1e-3) padS = sGoal;
+      padH.scale.z = padS; padV.scale.x = padS;
+      const gs = (PW * padS + 2 * PG) / (PW + 2 * PG); gapH.scale.z = gs; gapV.scale.x = gs;
+      fieldDirty = true;
+    }
+    fieldLines.visible = capOn && fieldOn; capExtra.visible = capOn;
+    if (fieldLines.visible && fieldDirty) { buildField(padS); fieldDirty = false; }
+    const slosh = Math.cos(T * 1.6) ** 2;
+    fieldMat.opacity = 0.3 + 0.7 * slosh;
+    jjChipMat.emissiveIntensity = capOn ? 0.3 + 2.2 * (1 - slosh) : 0.6;
 
     // 第 5 章：讀取光子
     measuring = Math.max(0, measuring - dt * 0.8);
@@ -1985,7 +2107,7 @@ nav.chapters {
     // 標籤投影
     const w = stage.clientWidth, h = stage.clientHeight;
     for (const t of tags) {
-      let show = t.on !== false && t.chapters.includes(cur) && (cur !== 0 || showTags);
+      let show = t.on !== false && t.chapters.includes(cur) && (cur !== 0 || (t.cap ? capView && (t.cap === "field" ? fieldOn : armTagsOn) : showTags && !capView));
       if (show) {
         tmpV.copy(t.pos).project(camera);
         show = tmpV.z < 1 && Math.abs(tmpV.x) < 1.05 && Math.abs(tmpV.y) < 1.05;
@@ -2004,12 +2126,14 @@ nav.chapters {
   const fromHash = () => {
     const id = location.hash.slice(1), al = HASH_ALIAS[id];
     if (al) g7S.step = al[1];
-    const i = CH.findIndex(c => c.id === (al ? al[0] : id)); return i < 0 ? 0 : i;
+    if (id === "capacitor" || id === "chip") capView = id === "capacitor";   // #capacitor：第 1 章的電容分頁
+    const i = CH.findIndex(c => c.id === (al ? al[0] : id === "capacitor" ? "chip" : id)); return i < 0 ? 0 : i;
   };
   window.addEventListener("hashchange", () => {
     const prev = cur, i = fromHash();
     go(i, true);
     if (i === prev && HASH_ALIAS[location.hash.slice(1)]) g7Step(g7S.step);   // 已在第 7 章時直接換步驟
+    if (i === 0 && prev === 0) setCapView(capView, false);
   });
   resize();
   go(fromHash(), true);
