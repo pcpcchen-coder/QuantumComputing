@@ -42,6 +42,7 @@
     - 簡報內容檔：[`slides/reports/qc-power-delta.js`](slides/reports/qc-power-delta.js)（`cd slides && node build_deck.js reports/qc-power-delta.js` 重新產生）
     - 1,000 位元系統供電設計：[`docs/1000量子位元系統供電設計.md`](docs/1000量子位元系統供電設計.md)（線路與熱預算估算、設施用電與備援、接地與磁場、七層技術、台達三階段路線圖；簡報第 47–59 頁）
     - 互動動畫：[`animations/power1000.html`](animations/power1000.html)（7 個 2D 互動場景：全景、規模計算器、低溫熱預算、接地與共模、斷電時間軸、磁場與配電佈局、路線圖；離線可用）
+    - 產品開發計畫：[`docs/台達量子供電產品開發計畫.md`](docs/台達量子供電產品開發計畫.md)（三階段路線圖 11 個項目：要做出什麼、開發步驟、困難與解法、檢查點）
 
 ---
 
