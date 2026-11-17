@@ -16,7 +16,7 @@ const SCENES = {
   qubit: [1, '狀態與測量'], gates: [2, '單位元閘'], pulse: [3, '微波脈衝'], register: [4, '多位元與糾纏'], twoqubit: [5, '兩位元閘'], circuit: [6, '量子線路'],
   readout: [7, '讀取與統計'], interference: [8, '干涉'], grover: [9, 'Grover 搜尋'], shor: [10, 'Shor 週期尋找'], qec: [11, '錯誤更正'], workflow: [12, '完整流程'],
 };
-const D = makeDeck({ title: '如何操作量子電腦：設定、計算、讀取與加速原理', subject: '量子位元、量子閘、讀取、演算法與錯誤更正', footer: '如何操作量子電腦 · 設定 · 計算 · 讀取 · 加速原理', scenes: SCENES, animRel: '../animations/operation.html' });
+const D = makeDeck({ title: '如何操作量子電腦：設定、計算、讀取與加速原理', subject: '量子位元、量子閘、讀取、演算法與錯誤更正', footer: '如何操作量子電腦 · 設定 · 計算 · 讀取 · 加速原理', scenes: SCENES, animRel: 'https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html' });
 const { pres, C, HEX, runs } = D;
 const CROP = JSON.parse(fs.readFileSync(path.join(__dirname, 'op_crops.json'), 'utf8'));
 /* 3D 截圖（自動裁掉背景）；name 可以是場景代號或額外截圖名稱 */

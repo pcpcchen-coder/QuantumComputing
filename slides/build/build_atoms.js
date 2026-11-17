@@ -19,7 +19,7 @@ const SCENES = {
   atomsys: [7, '中性原子系統全景'], tweezer: [8, '光鑷裝載與重排'], atomqubit: [9, '原子量子位元'], rydberg: [10, '芮德堡阻斷'], zoned: [11, '分區架構'], imaging: [12, '螢光成像讀取'],
   compare: [13, '三平台比較'],
 };
-const D = makeDeck({ title: '離子阱與中性原子量子電腦：系統、量子位元、操作與量測', subject: 'Paul 阱、光鑷、雷射冷卻、MS 閘、芮德堡阻斷、螢光讀取與平台比較', footer: '離子阱與中性原子量子電腦 · 系統 · 量子位元 · 操作 · 量測', scenes: SCENES, animRel: '../animations/atoms.html' });
+const D = makeDeck({ title: '離子阱與中性原子量子電腦：系統、量子位元、操作與量測', subject: 'Paul 阱、光鑷、雷射冷卻、MS 閘、芮德堡阻斷、螢光讀取與平台比較', footer: '離子阱與中性原子量子電腦 · 系統 · 量子位元 · 操作 · 量測', scenes: SCENES, animRel: 'https://pcpcchen-coder.github.io/QuantumComputing/animations/atoms.html' });
 const { pres, C, HEX, runs } = D;
 const CROP = JSON.parse(fs.readFileSync(path.join(__dirname, 'atoms_crops.json'), 'utf8'));
 /* 3D 截圖（自動裁掉背景）；name 可以是場景代號或額外截圖名稱（<場景>_<說明>） */

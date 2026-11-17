@@ -173,7 +173,8 @@ nav.chapters {
 
 <div id="tags"></div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="lib/three-r128.min.js"></script>
+<script>window.THREE || document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"><\/script>');</script>
 <script>
 (() => {
   "use strict";
@@ -193,7 +194,12 @@ nav.chapters {
   try {
     renderer = new THREE.WebGLRenderer({ antialias: true });
   } catch (e) {
-    document.getElementById("fallback").hidden = false;
+    const fb = document.getElementById("fallback");
+    if (typeof THREE === "undefined") {   // 不是 WebGL 的問題，而是 three.js 沒載入（只有單一檔案又離線）
+      const online = "https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html" + location.hash;
+      fb.innerHTML = "<div>找不到 three.js（lib/three-r128.min.js），而且無法連網下載，所以 3D 場景無法顯示。<br>請下載整個 animations 資料夾後再開啟，或改用線上版：<br><a style=\"color:#8ef0ff\" href=\"" + online + "\">" + online + "</a></div>";
+    }
+    fb.hidden = false;
     return;
   }
   renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));

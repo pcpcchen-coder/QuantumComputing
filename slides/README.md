@@ -66,7 +66,7 @@
 
 共通欄位：`section`（PowerPoint 章節）、`time`、`notes`；`scene{label, url, prefix}` 會在右上角加一顆可點的「▶ 3D」小按鈕（`prefix` 可改按鈕前綴，例如「動畫」）。
 
-> 3D 連結用相對於 `output/` 的路徑（例如 `../../animations/transmon-3d.html#deutsch`），請保持 `slides/` 與 `animations/` 的相對位置。
+> 3D 連結用 GitHub Pages 網址（例如 `https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#deutsch`），簡報不必和 `animations/` 放在一起也能點開。已產生的 .pptx 可用 `python3 build/use_pages_links.py` 把舊的相對路徑改成網址。
 
 `tone` 可用：`good`（綠 ✓）、`bad`（紅 ✗）、`warn`（琥珀）、`neutral`（青綠）、`quantum`（紫）。
 

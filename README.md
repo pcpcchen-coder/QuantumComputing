@@ -9,7 +9,7 @@
 1. [約瑟夫森結（JJ）：巨觀量子波、相位差與「穿隧」的真正意義](notes/josephson-junction-wave-and-tunneling.md)
 2. [Transmon：約瑟夫森電感、電路結構與量子位元機制](notes/transmon-josephson-inductance.md)
    - 簡報：[`slides/transmon.pptx`](slides/transmon.pptx)（23 頁，PowerPoint；每頁右上角「▶ 3D 第 N 章」按鈕直接開啟動畫，第 17–22 頁為 3D 動畫導覽與案例、振幅長條、Shor 介紹；產生腳本 [`slides/build/add_transmon_3d_links.py`](slides/build/add_transmon_3d_links.py)）
-   - 3D 互動動畫：[`animations/transmon-3d.html`](animations/transmon-3d.html)（12 章；第 5 章「讀取」為 8 步驟導覽：色散偏移、IQ、讀取鏈、單發積分與判別、QND、讀完後的重設方式；第 6 章「案例」示範 SQUID 調頻、頻率配置與頻率碰撞、XY 寫入、CZ 閘；第 7 章「振幅長條」示範糾纏、兩位元 Grover 搜尋與 Deutsch 演算法；第 8 章示範 Shor 演算法（QFT 找週期分解 15，可自選 N、a、計數位元數）；第 9 章「BV 密碼」為基本操作案例：3 顆位元用 Bernstein–Vazirani 演算法只查詢一次猜出密碼（可隱藏密碼猜謎、和古典查詢比賽）；第 10 章「表面碼」示範量子錯誤更正：d = 3 表面碼的穩定子、一個週期的 CZ 順序、X/Z/Y 錯誤與邊界、最小權重完美匹配解碼、兩個錯誤造成邏輯錯誤、碼距與閾值（自由實驗可點位元注入錯誤、換 d = 3/5/7、跑蒙地卡羅統計）；第 11 章「邏輯閘」示範 lattice surgery（兩塊 d = 3 補丁合併量 X_A·X_B、拆開、三步 CNOT、T 閘傳送）與 15-to-1 魔術態蒸餾工廠（可調注入錯誤率、跑統計）；第 12 章「軟體堆疊」跟著電路走完整條編譯與控制堆疊（七層架構、分解成 Rz／√X／CZ、校準感知映射、SWAP 路由、H·H 抵消與 Rz 合併、ASAP 排程與脈衝時間軸、FPGA 即時回饋、2000 shots 結果、校準依賴圖；自由實驗可選 Bell／GHZ／BV 與直線／方格晶片比較 SWAP 數與總時間）；下載後用瀏覽器開啟；需連網載入 three.js；網址加 `#deutsch` 直接進 Deutsch 步驟、`#deutsch-lab` 進自由實驗）
+   - 3D 互動動畫：[`animations/transmon-3d.html`](animations/transmon-3d.html)（12 章；第 5 章「讀取」為 8 步驟導覽：色散偏移、IQ、讀取鏈、單發積分與判別、QND、讀完後的重設方式；第 6 章「案例」示範 SQUID 調頻、頻率配置與頻率碰撞、XY 寫入、CZ 閘；第 7 章「振幅長條」示範糾纏、兩位元 Grover 搜尋與 Deutsch 演算法；第 8 章示範 Shor 演算法（QFT 找週期分解 15，可自選 N、a、計數位元數）；第 9 章「BV 密碼」為基本操作案例：3 顆位元用 Bernstein–Vazirani 演算法只查詢一次猜出密碼（可隱藏密碼猜謎、和古典查詢比賽）；第 10 章「表面碼」示範量子錯誤更正：d = 3 表面碼的穩定子、一個週期的 CZ 順序、X/Z/Y 錯誤與邊界、最小權重完美匹配解碼、兩個錯誤造成邏輯錯誤、碼距與閾值（自由實驗可點位元注入錯誤、換 d = 3/5/7、跑蒙地卡羅統計）；第 11 章「邏輯閘」示範 lattice surgery（兩塊 d = 3 補丁合併量 X_A·X_B、拆開、三步 CNOT、T 閘傳送）與 15-to-1 魔術態蒸餾工廠（可調注入錯誤率、跑統計）；第 12 章「軟體堆疊」跟著電路走完整條編譯與控制堆疊（七層架構、分解成 Rz／√X／CZ、校準感知映射、SWAP 路由、H·H 抵消與 Rz 合併、ASAP 排程與脈衝時間軸、FPGA 即時回饋、2000 shots 結果、校準依賴圖；自由實驗可選 Bell／GHZ／BV 與直線／方格晶片比較 SWAP 數與總時間）；線上版 https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html，或下載後用瀏覽器開啟（已內附 three.js，離線可用）；網址加 `#deutsch` 直接進 Deutsch 步驟、`#deutsch-lab` 進自由實驗）
    - 2D 互動圖解：[`animations/lc-vs-jj.html`](animations/lc-vs-jj.html)（為什麼 LC 是線性、JJ 是非線性；6 步：電流–磁通曲線與等效電感 L_J、正弦驅動與諧波、拋物線 vs 餘弦位能與數值對角化能階、躍遷頻率與 qubit 定址、泰勒展開的四次項、DRAG 脈衝抑制洩漏到 |2⟩（三能階 RK4 模擬、頻譜缺口、洩漏 vs 閘長度）；單一 HTML 檔，離線可用（字型需連網，離線時自動改用系統字型）；屬獨立圖解頁，未列入下方動畫 ↔ 簡報對照表）
    - 教學紀錄：[`docs/超導量子電腦師生對話教學紀錄.md`](docs/超導量子電腦師生對話教學紀錄.md)（師生對話形式，3 篇 13 課：SQUID、寫入、頻率配置、能階與 Rabi、讀取、BV、糾纏與 Grover、Deutsch、Shor、表面碼、lattice surgery 與魔術態、軟體堆疊；每課附學習目標、重點整理、動畫連結與課後練習）
 3. [色散讀取：用諧振腔頻率「看見」超導量子位元](notes/dispersive-readout.md)（原理、IQ 判別、設計取捨、整條讀取鏈設備與校準流程）
@@ -50,13 +50,27 @@
 
 ## 3D 動畫 ↔ PPT 簡報對照
 
-`animations/` 共 6 個動畫頁、64 個場景／章節，**每一個都有對應的簡報投影片**。簡報上的「▶ 3D」按鈕直接開啟對應場景；網址格式為 `animations/<頁面>.html#<場景代號>`。簡報裡用相對路徑（例如 `../animations/index.html#bloch`），請保持 `slides/` 與 `animations/` 的相對位置；`transmon-3d.html` 需連網載入 three.js。
+`animations/` 共 6 個動畫頁、68 個場景／章節，其中 64 個有對應的簡報投影片（`transmon-3d.html` 新增的第 9–12 章還沒有，見下表）。簡報上的「▶ 3D」按鈕直接開啟線上動畫，網址格式為 `https://pcpcchen-coder.github.io/QuantumComputing/animations/<頁面>.html#<場景代號>`（動畫首頁：<https://pcpcchen-coder.github.io/QuantumComputing/>）。離線時可改開 repo 內的 `animations/<頁面>.html#<場景代號>`。
 
 逐場景的完整表格（含投影片標題與可點的動畫網址）：[`docs/動畫與簡報對照表.md`](docs/動畫與簡報對照表.md)。新增動畫或簡報後執行下列指令，會重新產生表格，並列出還沒有投影片介紹的場景（有缺口時結束碼為 1）：
 
 ```bash
 python3 slides/build/anim_ppt_map.py
 ```
+
+### 線上版（GitHub Pages）與全白畫面排除
+
+動畫發布在 GitHub Pages：<https://pcpcchen-coder.github.io/QuantumComputing/>（首頁列出全部動畫）。`main` 上的 `animations/` 有變動時，[`.github/workflows/pages.yml`](.github/workflows/pages.yml) 會自動重新發布；網站只包含 `animations/` 與首頁 [`site/index.html`](site/index.html)，不含簡報、筆記與其他文件。
+
+**第一次啟用（需要 repo 管理員在 GitHub 網頁上操作一次）**：Settings → Pages → Build and deployment → Source 選 **GitHub Actions**，再到 Actions 分頁手動執行一次「Deploy animations to GitHub Pages」。私人 repo 要使用 Pages，帳號需要 GitHub Pro／Team 以上的方案；而且發布出去的網站是公開的，任何人都能用網址開啟。
+
+開啟動畫卻看到全白或全黑畫面時，常見原因：
+
+| 情況 | 原因 | 處理 |
+|---|---|---|
+| 只下載單一 HTML，或在 GitHub 網頁、雲端硬碟、通訊軟體的預覽裡開啟 | `index`／`peripherals`／`operation`／`atoms` 需要同資料夾的 `css/`、`js/`、`lib/`，缺檔時原本會是一片白 | 改開線上版，或下載整個 `animations/` 資料夾；現在缺檔時會顯示原因與線上版連結 |
+| 瀏覽器無法使用 WebGL（硬體加速關閉、遠端桌面、舊瀏覽器） | 3D 場景無法建立 | 改用桌面版 Chrome／Edge／Safari／Firefox 並開啟硬體加速；現在會顯示提示，不再是空白 |
+| `transmon-3d.html` 離線開啟 | 原本從網路載入 three.js | 已內附 `lib/three-r128.min.js`，離線也能開啟；只有單一檔案又離線時才會顯示提示 |
 
 ### 總覽
 
@@ -66,7 +80,7 @@ python3 slides/build/anim_ppt_map.py
 | [`peripherals.html`](animations/peripherals.html) | 10 | [`QC_Peripheral_Systems_Talk.pptx`](slides/QC_Peripheral_Systems_Talk.pptx) | ✅ 全部有 |
 | [`operation.html`](animations/operation.html) | 12 | [`QC_Operation_Talk.pptx`](slides/QC_Operation_Talk.pptx)；干涉場景另見量子金魚 008 | ✅ 全部有 |
 | [`atoms.html`](animations/atoms.html) | 13 | [`Ion_NeutralAtom_Talk.pptx`](slides/Ion_NeutralAtom_Talk.pptx) | ✅ 全部有 |
-| [`transmon-3d.html`](animations/transmon-3d.html) | 8 章＋2 捷徑 | [`transmon.pptx`](slides/transmon.pptx)；Deutsch 捷徑另見 [`qfish008-deutsch-algorithm.pptx`](slides/output/qfish008-deutsch-algorithm.pptx) | ✅ 全部有（原本 8 章都缺，已補齊） |
+| [`transmon-3d.html`](animations/transmon-3d.html) | 12 章＋2 捷徑 | [`transmon.pptx`](slides/transmon.pptx)；Deutsch 捷徑另見 [`qfish008-deutsch-algorithm.pptx`](slides/output/qfish008-deutsch-algorithm.pptx) | ⚠️ 第 1–8 章與捷徑有；第 9–12 章（BV 密碼、表面碼、邏輯閘、軟體堆疊）待補 |
 | [`power1000.html`](animations/power1000.html) | 8 | [`qc-power-supply-delta.pptx`](slides/output/qc-power-supply-delta.pptx)（右上角「▶ 動畫」按鈕） | ✅ 全部有 |
 
 ### transmon-3d.html ↔ transmon.pptx
@@ -95,7 +109,7 @@ python3 slides/build/anim_ppt_map.py
 | **operation.html** ↔ 量子電腦操作 | workflow p3、52；qubit p7、8；register p9、10、43；pulse p14、20、21；gates p18、19；twoqubit p23；circuit p25、28；readout p30、31、33；interference p38、39（另 qfish008 p14、15、18、25）；grover p40；shor p41；qec p49、50 |
 | **atoms.html** ↔ 離子阱與中性原子 | ionsys p6；paul p7；ionqubit p13、16、19；modes p17；ms p18；qccd p20；atomsys p23；tweezer p26；atomqubit p29、30；rydberg p32、33；zoned p34；imaging p35；compare p40、41 |
 
-> 動畫連結目前是相對路徑，下載整個 repo 後即可點擊開啟。若之後開啟 GitHub Pages，可以改成網路網址，在任何地方都能直接點。
+> 簡報（.pptx 與 `slides/pdf/` 的 PDF）裡的動畫連結都是 GitHub Pages 網址，不必下載 repo 也能點開。所有簡報的連結由 [`slides/build/use_pages_links.py`](slides/build/use_pages_links.py) 統一改寫，各簡報產生器也已改用同一個網址。
 
 ---
 
@@ -140,7 +154,7 @@ python3 slides/build/anim_ppt_map.py
 
 操作：滑鼠拖曳旋轉、滾輪縮放、右鍵/Shift 拖曳平移；`←` `→` 切換場景、空白鍵暫停、`H` 隱藏面板（投影時使用）、`F` 全螢幕、`R` 重設視角。網址加 `?noui=1` 可直接以無面板模式開啟。
 
-> 從 PowerPoint 點按鈕開啟動畫時，請保持 `slides/` 與 `animations/` 的相對位置不變（連結為 `../animations/index.html#…`）。
+> PowerPoint 的按鈕連到線上版（`https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#…`）；離線時請直接開 repo 內的 `animations/index.html`。
 
 ### 重新產生簡報與圖表
 

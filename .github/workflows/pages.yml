@@ -1,0 +1,43 @@
+# 把 animations/ 發布到 GitHub Pages
+# 網址：https://pcpcchen-coder.github.io/QuantumComputing/animations/<頁面>.html#<場景>
+# 首次使用前，請到 Settings → Pages → Build and deployment → Source 選「GitHub Actions」。
+name: Deploy animations to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "animations/**"
+      - "site/**"
+      - ".github/workflows/pages.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: 組出網站內容（只發布動畫，不含簡報與筆記）
+        run: |
+          mkdir -p _site
+          cp -r animations _site/animations
+          cp site/index.html _site/index.html
+          touch _site/.nojekyll
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - id: deployment
+        uses: actions/deploy-pages@v4

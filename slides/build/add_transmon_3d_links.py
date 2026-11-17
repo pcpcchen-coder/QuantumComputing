@@ -27,7 +27,7 @@ ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 PPTX = os.path.join(ROOT, "slides", "transmon.pptx")
 BASE = os.path.join(ROOT, "slides", "build", "transmon_base.pptx")   # 原始 17 頁（未加動畫連結）
 FIG = os.path.join(ROOT, "slides", "figures", "3d_transmon")
-ANIM = "../animations/transmon-3d.html"   # 相對於 slides/transmon.pptx
+ANIM = "https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html"   # GitHub Pages 網址
 
 FONT = "Microsoft JhengHei"
 INK = RGBColor(0x16, 0x18, 0x1D)
@@ -270,7 +270,7 @@ def new_tour(prs):
         textbox(s, x0 + Inches(7.6), y, Inches(1.4), rh, [pages], size=9, color=GRAY,
                 align=PP_ALIGN.RIGHT, anchor=MSO_ANCHOR.MIDDLE)
     textbox(s, x0, Inches(4.83), Inches(9), Inches(0.25),
-            ["點按鈕或標題即開啟動畫（連結為相對路徑 ../animations/transmon-3d.html#章節，請保持 slides/ 與 animations/ 的相對位置；需連網載入 three.js）。"
+            ["點按鈕或標題即開啟線上動畫（GitHub Pages：" + ANIM + "#章節）；離線時可改開 repo 內的 animations/transmon-3d.html。"
              " 另有捷徑：#deutsch 直接進第 7 章 Deutsch 步驟、#deutsch-lab 進自由實驗。"], size=8, color=GRAY)
     add_notes(s, "這張是 3D 動畫的目錄。每一列左邊的按鈕可以直接跳到該章，右邊是本簡報對應的頁碼。"
                  "前三章對應第一、二段的觀念，第四、五章對應控制與讀取，第六到八章是延伸：從一顆位元走到多顆位元和演算法。\n\n"
@@ -305,7 +305,7 @@ def two_image_slide(prs, title, imgs, caps, hashes, bullets, notes, pill_labels=
             paras.append(b)
     textbox(s, bx, Inches(1.0), SW - bx - Inches(0.35), Inches(3.75), paras, size=10, space=6)
     textbox(s, Inches(0.45), Inches(4.05), Inches(6.2), Inches(0.75),
-            ["動畫網址：" + "　".join(f"{ANIM}#{h}" for h in hashes)], size=8, color=GRAY)
+            ["動畫網址：" + "\n".join(f"{ANIM}#{h}" for h in hashes)], size=8, color=GRAY)
     add_notes(s, notes + "\n\n" + NOTE_MARK + "\n" + "\n".join(f"{pill_label(h)[2:]}　{url(h)}" for h in hashes))
     return s
 

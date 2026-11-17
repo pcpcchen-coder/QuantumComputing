@@ -16,7 +16,7 @@ const SCENES = {
   overview: [1, '系統全景'], pulsetube: [2, '脈衝管冷卻'], dilution: [3, '稀釋冷凍原理'], cooldown: [4, '降溫流程'], wiring: [5, '低溫佈線'],
   electronics: [6, '控制電子學'], software: [7, '軟體堆疊'], infra: [8, '機房基礎設施'], monitor: [9, '監控與聯鎖'], bringup: [10, '啟動與校準'],
 };
-const D = makeDeck({ title: '超導量子電腦：周邊系統與整合', subject: '稀釋冷凍、佈線、控制電子、軟體與機房基礎設施', footer: '超導量子電腦 · 周邊系統與整合', scenes: SCENES, animRel: '../animations/peripherals.html' });
+const D = makeDeck({ title: '超導量子電腦：周邊系統與整合', subject: '稀釋冷凍、佈線、控制電子、軟體與機房基礎設施', footer: '超導量子電腦 · 周邊系統與整合', scenes: SCENES, animRel: 'https://pcpcchen-coder.github.io/QuantumComputing/animations/peripherals.html' });
 const { pres, C, HEX, THEME, link, loadIcons, card, iconCircle, numCircle, runs, para, eqBox, fitImage, caption, animPill, table, chevrons, shadow, oname } = D;
 const IMG = (n) => path.join(FIG, '3d_periph', n + '.jpg');
 const CROP = {

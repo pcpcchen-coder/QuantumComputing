@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>量子計算互動動畫</title>
+<style>
+:root { --bg:#070c16; --card:#0f1a2e; --line:rgba(140,170,220,.22); --text:#e8eef8; --muted:#9fb0c8; --gold:#e0a54a; --teal:#38c6d9; }
+* { box-sizing: border-box; }
+body { margin:0; background:var(--bg); color:var(--text);
+  font:15px/1.65 "Microsoft JhengHei","PingFang TC","Noto Sans TC",system-ui,sans-serif; }
+main { max-width:980px; margin:0 auto; padding:48px 16px 64px; }
+.kicker { color:var(--gold); font-size:13px; letter-spacing:.08em; }
+h1 { margin:6px 0 8px; font-size:30px; }
+p.lead { color:var(--muted); margin:0 0 28px; }
+.grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:14px; }
+a.card { display:block; padding:18px 18px 16px; background:var(--card); border:1px solid var(--line); border-radius:12px;
+  color:inherit; text-decoration:none; transition:border-color .15s, transform .15s; }
+a.card:hover, a.card:focus-visible { border-color:var(--teal); transform:translateY(-2px); outline:none; }
+.card b { display:block; font-size:17px; margin-bottom:4px; }
+.card span { color:var(--muted); font-size:13.5px; }
+.card code { display:block; margin-top:10px; color:var(--teal); font-size:12px; }
+footer { margin-top:36px; color:var(--muted); font-size:12.5px; }
+</style>
+</head>
+<body>
+<main>
+  <div class="kicker">QUANTUM COMPUTING · 3D / 互動</div>
+  <h1>量子計算互動動畫</h1>
+  <p class="lead">搭配技術分享簡報使用。每頁網址加上 <code>#場景代號</code> 可直接跳到該場景，例如 <code>animations/index.html#bloch</code>。建議用桌面版 Chrome、Edge、Safari 或 Firefox 開啟。</p>
+  <div class="grid">
+    <a class="card" href="animations/index.html"><b>JJ 元件與微波讀取</b><span>Bloch 球、Cooper pair、約瑟夫森接面、transmon 能階、SQUID、製程、色散讀取、IQ、讀取鏈（11 個場景）</span><code>animations/index.html</code></a>
+    <a class="card" href="animations/transmon-3d.html"><b>Transmon 3D</b><span>晶片、JJ、位能井、操控、讀取、頻率配置、振幅長條、Shor、BV、表面碼、邏輯閘、軟體堆疊（12 章）</span><code>animations/transmon-3d.html</code></a>
+    <a class="card" href="animations/peripherals.html"><b>量子電腦周邊系統</b><span>機房全景、脈衝管、稀釋冷凍、降溫、佈線、電子學、軟體、基礎設施、監控、上線（10 個場景）</span><code>animations/peripherals.html</code></a>
+    <a class="card" href="animations/operation.html"><b>如何操作量子電腦</b><span>狀態與測量、量子閘、脈衝、多位元、兩位元閘、線路、讀取、干涉、Grover、Shor、錯誤更正（12 個場景）</span><code>animations/operation.html</code></a>
+    <a class="card" href="animations/atoms.html"><b>離子阱與中性原子</b><span>Paul 阱、離子量子位元、MS 閘、QCCD、光鑷陣列、芮德堡阻斷、分區架構、三平台比較（13 個場景）</span><code>animations/atoms.html</code></a>
+    <a class="card" href="animations/power1000.html"><b>1,000 位元供電設計</b><span>規模計算、低溫熱預算、接地與共模、斷電時間軸、磁場佈局、路線圖、開發計畫</span><code>animations/power1000.html</code></a>
+    <a class="card" href="animations/lc-vs-jj.html"><b>LC 與約瑟夫森接面</b><span>一條直線、一條正弦：線性與非線性電感的互動圖解</span><code>animations/lc-vs-jj.html</code></a>
+  </div>
+  <footer>3D 場景使用 three.js（MIT License）。</footer>
+</main>
+</body>
+</html>
