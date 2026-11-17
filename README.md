@@ -8,9 +8,9 @@
 
 1. [約瑟夫森結（JJ）：巨觀量子波、相位差與「穿隧」的真正意義](notes/josephson-junction-wave-and-tunneling.md)
 2. [Transmon：約瑟夫森電感、電路結構與量子位元機制](notes/transmon-josephson-inductance.md)
-   - 簡報：[`slides/transmon.pptx`](slides/transmon.pptx)（23 頁，PowerPoint；每頁右上角「▶ 3D 第 N 章」按鈕直接開啟動畫，第 17–22 頁為 3D 動畫導覽與案例、振幅長條、Shor 介紹；產生腳本 [`slides/build/add_transmon_3d_links.py`](slides/build/add_transmon_3d_links.py)）
+   - 簡報：[`slides/transmon.pptx`](slides/transmon.pptx)（25 頁，PowerPoint；每頁右上角「▶ 3D 第 N 章」按鈕直接開啟 3D 動畫、銅色「▶ 圖解 N」按鈕開啟 2D 圖解；第 17 頁 DRAG、第 18 頁 2D 互動圖解導覽，第 19–24 頁為 3D 動畫導覽與案例、振幅長條、Shor 介紹；產生腳本 [`slides/build/add_transmon_3d_links.py`](slides/build/add_transmon_3d_links.py)）
    - 3D 互動動畫：[`animations/transmon-3d.html`](animations/transmon-3d.html)（12 章；第 5 章「讀取」為 8 步驟導覽：色散偏移、IQ、讀取鏈、單發積分與判別、QND、讀完後的重設方式；第 6 章「案例」示範 SQUID 調頻、頻率配置與頻率碰撞、XY 寫入、CZ 閘；第 7 章「振幅長條」示範糾纏、兩位元 Grover 搜尋與 Deutsch 演算法；第 8 章示範 Shor 演算法（QFT 找週期分解 15，可自選 N、a、計數位元數）；第 9 章「BV 密碼」為基本操作案例：3 顆位元用 Bernstein–Vazirani 演算法只查詢一次猜出密碼（可隱藏密碼猜謎、和古典查詢比賽）；第 10 章「表面碼」示範量子錯誤更正：d = 3 表面碼的穩定子、一個週期的 CZ 順序、X/Z/Y 錯誤與邊界、最小權重完美匹配解碼、兩個錯誤造成邏輯錯誤、碼距與閾值（自由實驗可點位元注入錯誤、換 d = 3/5/7、跑蒙地卡羅統計）；第 11 章「邏輯閘」示範 lattice surgery（兩塊 d = 3 補丁合併量 X_A·X_B、拆開、三步 CNOT、T 閘傳送）與 15-to-1 魔術態蒸餾工廠（可調注入錯誤率、跑統計）；第 12 章「軟體堆疊」跟著電路走完整條編譯與控制堆疊（七層架構、分解成 Rz／√X／CZ、校準感知映射、SWAP 路由、H·H 抵消與 Rz 合併、ASAP 排程與脈衝時間軸、FPGA 即時回饋、2000 shots 結果、校準依賴圖；自由實驗可選 Bell／GHZ／BV 與直線／方格晶片比較 SWAP 數與總時間）；下載後用瀏覽器開啟；需連網載入 three.js；網址加 `#deutsch` 直接進 Deutsch 步驟、`#deutsch-lab` 進自由實驗）
-   - 2D 互動圖解：[`animations/lc-vs-jj.html`](animations/lc-vs-jj.html)（為什麼 LC 是線性、JJ 是非線性；6 步：電流–磁通曲線與等效電感 L_J、正弦驅動與諧波、拋物線 vs 餘弦位能與數值對角化能階、躍遷頻率與 qubit 定址、泰勒展開的四次項、DRAG 脈衝抑制洩漏到 |2⟩（三能階 RK4 模擬、頻譜缺口、洩漏 vs 閘長度）；單一 HTML 檔，離線可用（字型需連網，離線時自動改用系統字型）；屬獨立圖解頁，未列入下方動畫 ↔ 簡報對照表）
+   - 2D 互動圖解：[`animations/lc-vs-jj.html`](animations/lc-vs-jj.html)（為什麼 LC 是線性、JJ 是非線性；6 步：電流–磁通曲線與等效電感 L_J、正弦驅動與諧波、拋物線 vs 餘弦位能與數值對角化能階、躍遷頻率與 qubit 定址、泰勒展開的四次項、DRAG 脈衝抑制洩漏到 |2⟩（三能階 RK4 模擬、頻譜缺口、洩漏 vs 閘長度）；單一 HTML 檔，離線可用（字型需連網，離線時自動改用系統字型）；對應簡報 `transmon.pptx` 第 5–7、14、16–18 頁）
    - 教學紀錄：[`docs/超導量子電腦師生對話教學紀錄.md`](docs/超導量子電腦師生對話教學紀錄.md)（師生對話形式，3 篇 13 課：SQUID、寫入、頻率配置、能階與 Rabi、讀取、BV、糾纏與 Grover、Deutsch、Shor、表面碼、lattice surgery 與魔術態、軟體堆疊；每課附學習目標、重點整理、動畫連結與課後練習）
 3. [色散讀取：用諧振腔頻率「看見」超導量子位元](notes/dispersive-readout.md)（原理、IQ 判別、設計取捨、整條讀取鏈設備與校準流程）
    - 對應動畫：[`animations/index.html`](animations/index.html) 場景 9、10；[`animations/peripherals.html`](animations/peripherals.html) 場景 5、6
@@ -50,7 +50,7 @@
 
 ## 3D 動畫 ↔ PPT 簡報對照
 
-`animations/` 共 6 個動畫頁、64 個場景／章節，**每一個都有對應的簡報投影片**。簡報上的「▶ 3D」按鈕直接開啟對應場景；網址格式為 `animations/<頁面>.html#<場景代號>`。簡報裡用相對路徑（例如 `../animations/index.html#bloch`），請保持 `slides/` 與 `animations/` 的相對位置；`transmon-3d.html` 需連網載入 three.js。
+`animations/` 共 7 個動畫頁（6 個 3D 動畫＋1 個 2D 圖解 `lc-vs-jj.html`），除了 `transmon-3d.html` 第 9–12 章，**每一個場景都有對應的簡報投影片**。簡報上的「▶ 3D」按鈕直接開啟對應場景；網址格式為 `animations/<頁面>.html#<場景代號>`。簡報裡用相對路徑（例如 `../animations/index.html#bloch`），請保持 `slides/` 與 `animations/` 的相對位置；`transmon-3d.html` 需連網載入 three.js。
 
 逐場景的完整表格（含投影片標題與可點的動畫網址）：[`docs/動畫與簡報對照表.md`](docs/動畫與簡報對照表.md)。新增動畫或簡報後執行下列指令，會重新產生表格，並列出還沒有投影片介紹的場景（有缺口時結束碼為 1）：
 
@@ -66,25 +66,37 @@ python3 slides/build/anim_ppt_map.py
 | [`peripherals.html`](animations/peripherals.html) | 10 | [`QC_Peripheral_Systems_Talk.pptx`](slides/QC_Peripheral_Systems_Talk.pptx) | ✅ 全部有 |
 | [`operation.html`](animations/operation.html) | 12 | [`QC_Operation_Talk.pptx`](slides/QC_Operation_Talk.pptx)；干涉場景另見量子金魚 008 | ✅ 全部有 |
 | [`atoms.html`](animations/atoms.html) | 13 | [`Ion_NeutralAtom_Talk.pptx`](slides/Ion_NeutralAtom_Talk.pptx) | ✅ 全部有 |
-| [`transmon-3d.html`](animations/transmon-3d.html) | 8 章＋2 捷徑 | [`transmon.pptx`](slides/transmon.pptx)；Deutsch 捷徑另見 [`qfish008-deutsch-algorithm.pptx`](slides/output/qfish008-deutsch-algorithm.pptx) | ✅ 全部有（原本 8 章都缺，已補齊） |
+| [`transmon-3d.html`](animations/transmon-3d.html) | 12 章＋2 捷徑 | [`transmon.pptx`](slides/transmon.pptx)；Deutsch 捷徑另見 [`qfish008-deutsch-algorithm.pptx`](slides/output/qfish008-deutsch-algorithm.pptx) | ⚠️ 第 1–8 章與捷徑都有；第 9–12 章（BV、表面碼、lattice surgery、軟體堆疊）尚無投影片 |
 | [`power1000.html`](animations/power1000.html) | 8 | [`qc-power-supply-delta.pptx`](slides/output/qc-power-supply-delta.pptx)（右上角「▶ 動畫」按鈕） | ✅ 全部有 |
+| [`lc-vs-jj.html`](animations/lc-vs-jj.html)（2D） | 6 步 | [`transmon.pptx`](slides/transmon.pptx)（銅色「▶ 圖解 N」按鈕） | ✅ 全部有 |
 
 ### transmon-3d.html ↔ transmon.pptx
 
-`transmon.pptx` 原本 17 頁、沒有任何動畫連結，現已補成 23 頁：既有 12 頁右上角加上「▶ 3D 第 N 章」按鈕，講者備註也附上動畫網址；新增第 17–22 頁（3D 動畫導覽、操控與讀取、案例：頻率配置、振幅長條、Shor），每頁都有 3D 截圖、按鈕與動畫網址。這份簡報由 [`slides/build/add_transmon_3d_links.py`](slides/build/add_transmon_3d_links.py) 從 `slides/build/transmon_base.pptx` 產生，截圖由 [`slides/capture_3d_transmon.js`](slides/capture_3d_transmon.js) 擷取。
+`transmon.pptx` 原本 17 頁、沒有任何動畫連結，現已補成 25 頁：既有 12 頁右上角加上「▶ 3D 第 N 章」按鈕，講者備註也附上動畫網址；新增第 17 頁「DRAG：快速脈衝別漏到 |2⟩」與第 18 頁「2D 互動圖解：LC 為何線性、JJ 為何非線性」（2D 圖解見下一節），以及第 19–24 頁（3D 動畫導覽、操控與讀取、案例：頻率配置、振幅長條、Shor），每頁都有截圖、按鈕與動畫網址。這份簡報由 [`slides/build/add_transmon_3d_links.py`](slides/build/add_transmon_3d_links.py) 從 `slides/build/transmon_base.pptx` 產生，3D 截圖由 [`slides/capture_3d_transmon.js`](slides/capture_3d_transmon.js)、2D 截圖由 [`slides/capture_2d_lcjj.js`](slides/capture_2d_lcjj.js) 擷取。
 
 | 章 | 動畫網址 | 對應投影片 |
 |---|---|---|
-| 1 晶片 | [`transmon-3d.html#chip`](animations/transmon-3d.html#chip) | transmon p1、10、11、17、18、23 |
-| 2 約瑟夫森結 | [`#junction`](animations/transmon-3d.html#junction) | transmon p4、5、18 |
-| 3 位能井 | [`#potential`](animations/transmon-3d.html#potential) | transmon p6、7、8、12、14、15、18 |
-| 4 操控 | [`#control`](animations/transmon-3d.html#control) | transmon p16、18、19 |
-| 5 讀取 | [`#readout`](animations/transmon-3d.html#readout) | transmon p16、18、19 |
-| 6 案例 | [`#case`](animations/transmon-3d.html#case) | transmon p16、18、20 |
-| 7 振幅長條 | [`#grover`](animations/transmon-3d.html#grover) | transmon p18、21 |
-| 8 Shor | [`#shor`](animations/transmon-3d.html#shor) | transmon p18、22 |
-| 捷徑：Deutsch 步驟 | [`#deutsch`](animations/transmon-3d.html#deutsch) | qfish008 p13、20、23；transmon p21 |
-| 捷徑：Deutsch 自由實驗 | [`#deutsch-lab`](animations/transmon-3d.html#deutsch-lab) | qfish008 p21、22、24；transmon p21 |
+| 1 晶片 | [`transmon-3d.html#chip`](animations/transmon-3d.html#chip) | transmon p1、10、11、19、20、25 |
+| 2 約瑟夫森結 | [`#junction`](animations/transmon-3d.html#junction) | transmon p4、5、20 |
+| 3 位能井 | [`#potential`](animations/transmon-3d.html#potential) | transmon p6、7、8、12、14、15、20 |
+| 4 操控 | [`#control`](animations/transmon-3d.html#control) | transmon p16、20、21 |
+| 5 讀取 | [`#readout`](animations/transmon-3d.html#readout) | transmon p16、20、21 |
+| 6 案例 | [`#case`](animations/transmon-3d.html#case) | transmon p16、20、22 |
+| 7 振幅長條 | [`#grover`](animations/transmon-3d.html#grover) | transmon p20、23 |
+| 8 Shor | [`#shor`](animations/transmon-3d.html#shor) | transmon p20、24 |
+| 捷徑：Deutsch 步驟 | [`#deutsch`](animations/transmon-3d.html#deutsch) | qfish008 p13、20、23；transmon p23 |
+| 捷徑：Deutsch 自由實驗 | [`#deutsch-lab`](animations/transmon-3d.html#deutsch-lab) | qfish008 p21、22、24；transmon p23 |
+
+### lc-vs-jj.html（2D 圖解）↔ transmon.pptx
+
+| 步驟 | 圖解網址 | 對應投影片 |
+|---|---|---|
+| 1 電流與磁通：直線 vs 正弦 | [`lc-vs-jj.html#s1`](animations/lc-vs-jj.html#s1) | transmon p5、18 |
+| 2 正弦驅動與諧波 | [`#s2`](animations/lc-vs-jj.html#s2) | transmon p7、18 |
+| 3 位能與量子能階 | [`#s3`](animations/lc-vs-jj.html#s3) | transmon p14、18 |
+| 4 躍遷定址 | [`#s4`](animations/lc-vs-jj.html#s4) | transmon p14、18 |
+| 5 泰勒展開的四次項 | [`#s5`](animations/lc-vs-jj.html#s5) | transmon p6、18 |
+| 6 DRAG 抑制洩漏 | [`#s6drag`](animations/lc-vs-jj.html#s6drag) | transmon p16、17、18 |
 
 ### 其他四個動畫（場景代號 → 投影片頁碼）
 

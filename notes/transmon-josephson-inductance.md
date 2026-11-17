@@ -5,7 +5,7 @@
 > 2. 現在的 transmon 電路長什麼樣子？
 > 3. 它靠什麼機制變成量子位元？
 >
-> 配套教材：[簡報 `slides/transmon.pptx`](../slides/transmon.pptx)、[3D 動畫 `animations/transmon-3d.html`](../animations/transmon-3d.html)
+> 配套教材：[簡報 `slides/transmon.pptx`](../slides/transmon.pptx)、[3D 動畫 `animations/transmon-3d.html`](../animations/transmon-3d.html)、[2D 互動圖解 `animations/lc-vs-jj.html`](../animations/lc-vs-jj.html)（LC 線性 vs JJ 非線性、DRAG）
 > 前一篇：[約瑟夫森結：巨觀量子波、相位差與穿隧](josephson-junction-wave-and-tunneling.md)
 > 下一篇：[色散讀取：用諧振腔頻率「看見」超導量子位元](dispersive-readout.md)
 
