@@ -19,13 +19,14 @@ from pptx import Presentation
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 OUT = os.path.join(ROOT, "docs", "動畫與簡報對照表.md")
 ANIM_DIR = os.path.join(ROOT, "animations")
+PAGES_ANIM = "https://pcpcchen-coder.github.io/QuantumComputing/animations/"   # GitHub Pages
 
 PAGES = [  # (html, 場景 JS 目錄 or None, 說明)
     ("index.html", "js/scenes", "JJ 元件與微波讀取"),
     ("peripherals.html", "js/peripherals", "量子電腦周邊系統"),
     ("operation.html", "js/operation", "如何操作量子電腦"),
     ("atoms.html", "js/atoms", "離子阱與中性原子"),
-    ("transmon-3d.html", None, "Transmon 3D（8 章）"),
+    ("transmon-3d.html", None, "Transmon 3D（12 章）"),
     ("power1000.html", "inline", "1,000 位元供電設計"),
 ]
 DECK_NAMES = {
@@ -100,7 +101,7 @@ def main():
         for no, slide in enumerate(prs.slides, 1):
             for a in links_of(slide):
                 u = urlparse(a)
-                if u.scheme not in ("", "file") or "animations/" not in u.path:
+                if u.scheme not in ("", "file", "http", "https") or "animations/" not in u.path:
                     continue
                 html = os.path.basename(u.path)
                 scene = u.fragment or "（首頁）"
@@ -108,13 +109,13 @@ def main():
 
     lines = ["# 3D 動畫 ↔ PPT 簡報對照表", "",
              "> 由 `python3 slides/build/anim_ppt_map.py` 自動產生（掃描 `animations/` 的場景與所有 `.pptx` 的超連結）。",
-             "> 簡報裡的動畫連結都是相對路徑（例如 `../animations/index.html#bloch`），請保持 `slides/` 與 `animations/` 的相對位置；"
-             "下表的「動畫網址」欄也用相對於 repo 根目錄的路徑，點下去就是對應場景。", ""]
+             "> 簡報裡的動畫連結都是 GitHub Pages 網址（例如 " + PAGES_ANIM + "index.html#bloch），在任何地方點都能開啟；"
+             "下表的「動畫網址」欄也是同一個網址，點下去就是對應場景。離線時可改開 repo 內的 `animations/<頁面>.html#<場景>`。", ""]
     summary, missing, body = [], [], []
     for html, js_dir, desc in PAGES:
         sc = scenes_of(html, js_dir)
         covered = sum(1 for sid, _ in sc if refs.get((html, sid)))
-        summary.append(f"| [`{html}`](../animations/{html}) | {desc} | {len(sc)} | {covered} | "
+        summary.append(f"| [`{html}`]({PAGES_ANIM}{html}) | {desc} | {len(sc)} | {covered} | "
                        f"{'✅ 全部有' if covered == len(sc) else '⚠️ 缺 ' + str(len(sc) - covered)} |")
         body += [f"## `animations/{html}`：{desc}", "",
                  "| # | 場景 | 動畫網址 | 對應投影片（簡報 第 N 頁：標題） |", "|---|---|---|---|"]
@@ -127,7 +128,7 @@ def main():
                 by_deck[deck].append(f"p{no} {t}")
             cell = "<br>".join(f"**{DECK_NAMES.get(d, d)}**（[`{os.path.basename(d)}`](../{d})）：" + "；".join(v)
                                for d, v in by_deck.items()) or "⚠️ 無"
-            body.append(f"| {k} | {title} | [`#{sid}`](../animations/{html}#{sid}) | {cell} |")
+            body.append(f"| {k} | {title} | [`#{sid}`]({PAGES_ANIM}{html}#{sid}) | {cell} |")
         body.append("")
     lines += ["## 總覽", "", "| 動畫 | 主題 | 場景數 | 有簡報介紹 | 狀態 |", "|---|---|---|---|---|"] + summary + [""]
     lines += body
