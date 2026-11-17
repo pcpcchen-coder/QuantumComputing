@@ -832,10 +832,25 @@ nav.chapters {
   const guideTags10 = [g10Tag("Z_L（第一列的 Z）", [0, 0, 0], "flat mono small teal"), g10Tag("X_L（第一行的 X）", [0, 0, 0], "flat mono small copper")];
 
   // =====================================================================
+  // 第 11 章：lattice surgery 與魔術態蒸餾
+  // =====================================================================
+  const G11Z = 88;
+  const g11 = new THREE.Group(); g11.position.set(0, 0, G11Z); scene.add(g11);
+  g11.add(box(10.6, 0.3, 5.4, mat.sub, 0, -0.18, 0));
+  const lat11 = new THREE.Group(); g11.add(lat11);
+  const fac11 = new THREE.Group(); fac11.position.set(14, 0, 0); g11.add(fac11);
+  fac11.add(box(9.6, 0.3, 5.4, mat.sub, 0.6, -0.18, 0));
+  const cvs11 = document.createElement("canvas"); cvs11.width = 1400; cvs11.height = 560;
+  const c11x = cvs11.getContext("2d");
+  const tex11 = new THREE.CanvasTexture(cvs11); tex11.encoding = THREE.sRGBEncoding; tex11.anisotropy = 4;
+  [0, 14].forEach(x => { const b = new THREE.Mesh(new THREE.PlaneGeometry(11, 11 * 560 / 1400), new THREE.MeshBasicMaterial({ map: tex11, transparent: true, depthWrite: false })); b.position.set(x + (x ? 0.6 : 0), 3.5, -3.9); b.rotation.x = -0.1; g11.add(b); });
+  const g11Tag = (t, p, cls = "") => tag(t, new THREE.Vector3(...p).add(g11.position), [10], cls);
+
+  // =====================================================================
   // 章節定義
   // =====================================================================
   const CH = [
-    { id: "chip", short: "晶片", kicker: "第 1 章 / 10", title: "一顆 transmon 的俯視圖",
+    { id: "chip", short: "晶片", kicker: "第 1 章 / 11", title: "一顆 transmon 的俯視圖",
       target: [0, -0.6, 0.6], pos: [8.5, 13.5, 15],
       html: `<div class="controls subtabs" role="group" aria-label="分頁"><button class="btn" id="c1tabA" type="button" aria-pressed="true">晶片總覽</button><button class="btn" id="c1tabB" type="button" aria-pressed="false">大十字電容的作用</button></div>
       <div id="c1A"><p>灰色是<b>接地面</b>，深色細縫是蝕刻掉金屬、露出基板的間隙。中央的<b>十字金屬板</b>就是 transmon 的大電容，下端經由 <b>SQUID</b>（兩個約瑟夫森結）接地。</p>
@@ -856,13 +871,13 @@ nav.chapters {
       <div class="controls"><button class="btn" id="c1reset" type="button">回到 77.5 fF</button><label class="check"><input type="checkbox" id="c1field" checked> 電場線</label><label class="check"><input type="checkbox" id="c1arm" checked> 手臂用途</label></div>
       <p class="note">E_J/h 固定為 15 GHz，各數值由電荷基底哈密頓量即時對角化求得。十字板粗細只是示意電容大小，未按比例；電場線只畫基板上方。</p>
       </div>` },
-    { id: "junction", short: "約瑟夫森結", kicker: "第 2 章 / 10", title: "約瑟夫森結：非線性電感的本體",
+    { id: "junction", short: "約瑟夫森結", kicker: "第 2 章 / 11", title: "約瑟夫森結：非線性電感的本體",
       target: [JX + 0.3, 1.0, 0], pos: [JX + 4.5, 6.2, 12],
       html: `<p>下層 Al、中間 1–2 nm 的 AlOx、上層 Al。兩邊的超導波函數（後方截面圖）在絕緣層裡<b>指數衰減並重疊</b>，庫柏對因此能穿隧過去。</p>
       <p>拖動相位差 φ：電流 <b>I = I_c sin φ</b>，等效電感 <b>L_J = L_J0 / cos φ</b>。勾選「施加電壓」時 φ 以 2eV/ħ 的速率轉動，電流變成交流。</p>
       <dl class="stats"><dt>相位差 φ</dt><dd id="r2phi">—</dd><dt>電流 I / I_c</dt><dd id="r2I">—</dd><dt>電感 L_J / L_J0</dt><dd id="r2L">—</dd><dt>L_J0（I_c ≈ 30 nA）</dt><dd>≈ 10.9 nH</dd></dl>
       <div class="controls"><label class="row" for="c2phi">φ <input type="range" id="c2phi" min="0" max="180" step="1" value="35"></label><label class="check"><input type="checkbox" id="c2v"> 施加電壓 V ≠ 0（交流約瑟夫森效應）</label></div>` },
-    { id: "potential", short: "位能井", kicker: "第 3 章 / 10", title: "cos 位能井：能階不再等距",
+    { id: "potential", short: "位能井", kicker: "第 3 章 / 11", title: "cos 位能井：能階不再等距",
       target: [PX + 2.2, 3.6, 0], pos: [PX + 2.6, 5.2, 20],
       html: `<p>JJ 的位能是 <b>−E_J cos φ</b>（銅色），線性電感是<b>拋物線</b>（灰色）。cos 井的邊緣比拋物線平坦，量子化後能階<b>越往上越密</b>：0→1 是 5.21 GHz、1→2 只剩 4.93 GHz。右邊的單擺有完全相同的位能形狀；E_J/E_C = 60 時相位擾動只有約 0.43 rad，所以只「有一點點」不簡諧——但這一點點就夠了。</p>
       <div class="controls" role="group" aria-label="比較"><button class="btn" id="c3tr" type="button" aria-pressed="true">有 JJ（transmon）</button><button class="btn" id="c3lc" type="button" aria-pressed="false">沒有 JJ（線性 LC）</button></div>
@@ -874,7 +889,7 @@ nav.chapters {
       <dl class="stats" id="r3p"></dl>
       <p class="note" id="c3msg">有 JJ：π 脈衝把狀態完整送到 |1⟩；持續驅動則在 |0⟩、|1⟩ 之間來回（Rabi 振盪），幾乎不碰 |2⟩。沒有 JJ：狀態被一路往上推、散到很多能階（變成「相干態」，行為和古典的電流振盪一樣），根本停不在 |1⟩。</p>
       <p class="note">所以沒有 JJ 就沒有量子位元：① 定義不出只含兩個能階的 0/1；② 寫入時會一路漏到更高能階（第 4 章）；③ 讀取靠的色散偏移 χ = (g²/Δ)·α/(Δ+α)，α = 0 時 χ = 0，<b>讀不出狀態</b>（第 5 章）；④ CZ 閘靠 |11⟩↔|20⟩ 共振，也需要 α ≠ 0（第 6 章）。電感、電容怎麼組合都是線性的；JJ 是超導電路裡唯一「無損又非線性」的元件。</p>` },
-    { id: "control", short: "操控", kicker: "第 4 章 / 10", title: "用微波轉動布洛赫球",
+    { id: "control", short: "操控", kicker: "第 4 章 / 11", title: "用微波轉動布洛赫球",
       target: [-1.6, 0.6, BZ], pos: [3.5, 4.5, BZ + 13.5],
       html: `<div class="controls subtabs" role="group" aria-label="電路"><button class="btn" id="c4mtr" type="button" aria-pressed="true">有 JJ（transmon）</button><button class="btn" id="c4mlc" type="button" aria-pressed="false">沒有 JJ（線性 LC）</button></div>
       <div id="c4dtr"><p><b>|0⟩、|1⟩</b> 是 cos 井最低的兩個能階。以 <b>f₀₁ = 5.21 GHz</b> 的微波脈衝驅動，狀態在布洛赫球上繞 X 或 Y 軸旋轉（Rabi 振盪）。</p>
@@ -885,7 +900,7 @@ nav.chapters {
       <div class="meter" aria-hidden="true"><i id="r4bar"></i></div>
       <div class="controls" style="margin-top:12px"><button class="btn primary" id="c4xpi" type="button">X 軸 π</button><button class="btn" id="c4xh" type="button">X 軸 π/2</button><button class="btn" id="c4yh" type="button">Y 軸 π/2</button><button class="btn" id="c4r" type="button">重設 |0⟩</button></div>
       <p class="note" id="c4msg">切到「沒有 JJ」再按 X 軸 π，比較兩種電路的結果。</p>` },
-    { id: "readout", short: "讀取", kicker: "第 5 章 / 10", title: "色散讀取：從頻移讀出狀態",
+    { id: "readout", short: "讀取", kicker: "第 5 章 / 11", title: "色散讀取：從頻移讀出狀態",
       target: [-0.3, 2.3, -5.2], pos: [0.7, 6.6, 10.2],
       html: `<p>讀取不直接量位元，而是量它旁邊<b>讀取共振腔的「音高」</b>。本章分 8 步：為什麼要間接讀、色散偏移、探測與 IQ、整條讀取鏈、積分與判別、量測反作用與 QND、<b>量完之後怎麼回到 |0⟩</b>，最後是自由實驗。左上方字幕會跟著動畫說明。</p>
       <div class="steps" id="g5steps" role="group" aria-label="步驟"></div>
@@ -894,7 +909,7 @@ nav.chapters {
       <dl class="stats"><dt>目前 P(|1⟩)</dt><dd id="r5p">0.000</dd><dt>積分時間 τ</dt><dd id="g5tau">—</dd><dt>估計讀取保真度</dt><dd id="g5F">—</dd><dt>最近一次</dt><dd id="g5last">—</dd></dl>
       <div class="hist"><span>判成 0：<b id="h0">0</b></span><span>判成 1：<b id="h1">0</b></span></div>
       <p class="note">數值：f_q = 5.21 GHz、f_r ≈ 7 GHz、g ≈ 100 MHz、α = −283 MHz → χ ≈ 0.77 MHz、最佳 κ ≈ 2χ ≈ 1.5 MHz。IQ 雜訊大小與 T₁ = 50 μs 為示意值；保真度估計 = 兩團高斯重疊 + 讀取途中 T₁ 衰減。</p>` },
-    { id: "case", short: "案例", kicker: "第 6 章 / 10", title: "案例：三顆可調 transmon 的頻率配置",
+    { id: "case", short: "案例", kicker: "第 6 章 / 11", title: "案例：三顆可調 transmon 的頻率配置",
       target: [0.6, 2.3, CZ0 - 1.2], pos: [1.2, 12.2, CZ0 + 16.0],
       html: `<p>把前五章串起來：<b>XY 線寫入狀態、SQUID＋Z 線決定頻率</b>，再看多顆位元放在一起時，頻率要怎麼排才不會互相碰撞。動畫會邊演示邊在左上方跳出說明。</p>
       <div class="steps" id="c6steps" role="group" aria-label="步驟"></div>
@@ -903,7 +918,7 @@ nav.chapters {
       <dl class="stats"><dt style="color:${QHEX[0]}">Q1</dt><dd id="c6q0">—</dd><dt style="color:${QHEX[1]}">Q2</dt><dd id="c6q1">—</dd><dt style="color:${QHEX[2]}">Q3</dt><dd id="c6q2">—</dd></dl>
       <div class="col-list" id="c6col"></div>
       <p class="note">各欄依序是 f₀₁、Z 線磁通 Φ、激發機率 P(|1⟩)。碰撞判定窗與串擾比例為示意值；頻率由 f₀₁ ≈ √(8E_J E_C) − E_C 與 E_J(Φ) = E_J,max|cos(πΦ/Φ₀)| 計算。</p>` },
-    { id: "grover", short: "振幅長條", kicker: "第 7 章 / 10", title: "振幅長條：糾纏、Grover 與 Deutsch",
+    { id: "grover", short: "振幅長條", kicker: "第 7 章 / 11", title: "振幅長條：糾纏、Grover 與 Deutsch",
       target: [G7X - 0.6, 1.75, G7Z], pos: [G7X + 0.2, 4.9, G7Z + 16.5],
       html: `<p>兩顆位元有四個振幅 |00⟩、|01⟩、|10⟩、|11⟩（左邊那位是 Q1／q0，右邊是 Q2／q1）。長條<b>高度是振幅（可正可負，負的是紅色）</b>，機率是振幅的平方。上方電路圖高亮的是正在送的閘，左上方字幕說明對應的硬體脈衝。步驟 1 講糾纏、2–6 講 Grover 搜尋、7 講 Deutsch，8 是自由實驗。</p>
       <div class="steps" id="g7steps" role="group" aria-label="步驟"></div>
@@ -912,7 +927,7 @@ nav.chapters {
       <dl class="stats"><dt>a₀₀ · a₁₁</dt><dd id="g7p1">—</dd><dt>a₀₁ · a₁₀</dt><dd id="g7p2">—</dd><dt>判定</dt><dd id="g7ent">—</dd></dl>
       <div id="g7hist"></div>
       <p class="note">糾纏判定：兩者相等就能拆成兩顆各自的狀態（乘積態），不相等就是糾纏。糾纏度 C = 2|a₀₀a₁₁ − a₀₁a₁₀|，0 為乘積態、1 為最大糾纏。</p>` },
-    { id: "shor", short: "Shor", kicker: "第 8 章 / 10", title: "Shor 演算法：用 QFT 找週期，分解 15",
+    { id: "shor", short: "Shor", kicker: "第 8 章 / 11", title: "Shor 演算法：用 QFT 找週期，分解 15",
       target: [G8X - 1.0, 3.0, G8Z], pos: [G8X - 0.2, 6.3, G8Z + 18.5],
       html: `<p>Shor 演算法把「分解 N」轉成「找 f(x) = aˣ mod N 的週期 r」，量子電腦只負責找週期，前後都是古典計算。這裡用 <b>N = 15、a = 7</b> 走完整個流程。</p>
       <p>畫面說明：<b>長條是計數暫存器每個 x 的振幅</b>（高度＝大小、顏色＝相位：金 0°、青 90°、紅 180°、紫 270°）；下方色塊是工作暫存器裡綁定的 f(x)（同色＝同值）；後方青色細長條是量測次數；上方看板是電路（高亮＝目前步驟）與推導。</p>
@@ -921,7 +936,7 @@ nav.chapters {
       <h3 id="g8title"></h3><div id="g8body"></div><div id="g8extra"></div>
       <dl class="stats"><dt>設定</dt><dd id="g8na">—</dd><dt>真實週期（古典驗算）</dt><dd id="g8r">—</dd><dt>最近量到的 y</dt><dd id="g8y">—</dd><dt>連分數 → 週期</dt><dd id="g8cf">—</dd><dt>分解結果</dt><dd id="g8f">—</dd></dl>
       <p class="note">量測工作暫存器只是為了方便理解：不量它，計數暫存器最後的結果分布完全相同（延遲量測原理）。振幅由完整的離散傅立葉轉換計算，量測依 |振幅|² 隨機取樣。</p>` },
-    { id: "bv", short: "BV 密碼", kicker: "第 9 章 / 10", title: "基本操作案例：3 顆位元一次猜中密碼（BV）",
+    { id: "bv", short: "BV 密碼", kicker: "第 9 章 / 11", title: "基本操作案例：3 顆位元一次猜中密碼（BV）",
       target: [G9X - 1.0, 2.5, G9Z], pos: [G9X - 0.2, 5.8, G9Z + 18.5],
       html: `<p>這是一個完整的<b>基本操作案例</b>：用 3 顆位元跑 <b>Bernstein–Vazirani 演算法</b>，只查詢黑盒子一次，就猜出它藏的 3 位元密碼 s。會用到前面所有的操作：XY 線的 H 閘（第 4 章）、虛擬 Z、色散讀取與重設（第 5 章）。</p>
       <p>畫面說明：8 根長條是三顆位元 |q1 q2 q3⟩ 的振幅（|000⟩～|111⟩，高度可正可負、負的是紅色；機率＝振幅²）；上方看板左邊是電路（高亮＝目前的閘），右邊是推導；左上方字幕跟著動畫說明。</p>
@@ -931,7 +946,7 @@ nav.chapters {
       <dl class="stats"><dt>密碼 s</dt><dd id="g9s">—</dd><dt>查詢次數</dt><dd id="g9q">—</dd><dt>量測最多</dt><dd id="g9best">—</dd></dl>
       <div id="g9hist"></div>
       <p class="note">振幅由 8 維實數態向量逐閘計算（H、Z、黑盒子）；量測依 振幅² 隨機取樣。「讀取雜訊」為每顆位元 3% 的獨立誤判（示意值）。</p>` },
-    { id: "surface", short: "表面碼", kicker: "第 10 章 / 10", title: "量子錯誤更正：表面碼",
+    { id: "surface", short: "表面碼", kicker: "第 10 章 / 11", title: "量子錯誤更正：表面碼",
       target: [G10X - 1.5, 1.7, G10Z - 1.9], pos: [G10X - 1.2, 8.4, G10Z + 12.6],
       html: `<p>表面碼把 1 顆邏輯位元分散在一整片 2D 方格的實體位元上，靠<b>相鄰位元的奇偶量測（穩定子）</b>抓錯——不量資料本身、不破壞疊加——再由<b>解碼器</b>把亮點配對、推回錯誤位置。這章用 d = 3（17 顆位元）一步一步演示，自由實驗可以自己點位元注入錯誤、換碼距、跑統計。</p>
       <p>圖例：圓球＝資料位元（紅 X 錯誤、藍 Z 錯誤、紫 Y 錯誤）；小方塊＝量測位元；<b>青色格子＝Z 穩定子</b>（抓 X 錯誤）、<b>琥珀色格子＝X 穩定子</b>（抓 Z 錯誤）；格子亮起＝該穩定子量到 −1；白線＝解碼器的配對。</p>
@@ -940,9 +955,18 @@ nav.chapters {
       <h3 id="g10title"></h3><div id="g10body"></div><div id="g10extra"></div>
       <dl class="stats"><dt>碼距 d</dt><dd id="g10d">—</dd><dt>實體位元</dt><dd id="g10n">—</dd><dt>亮起的穩定子</dt><dd id="g10lit">—</dd><dt>最近一次解碼</dt><dd id="g10res">—</dd></dl>
       <p class="note">解碼器：最小權重完美匹配（亮點 ≤ 14 個時以動態規劃精確求解，更多時改用貪婪法），X、Z 兩類錯誤分開解碼。自由實驗的統計用簡化雜訊模型（只有資料位元以機率 p 發生 X/Y/Z 錯誤、量測完美），閾值約 10–15%；真實電路（閘與量測也會錯）的閾值約 1%。</p>` },
+    { id: "surgery", short: "邏輯閘", kicker: "第 11 章 / 11", title: "Lattice surgery 與魔術態蒸餾",
+      target: [-1.2, 2.1, G11Z - 1.2], pos: [-1.0, 8.6, G11Z + 14.2],
+      html: `<p>表面碼負責「存」；要「算」，Clifford 閘靠 <b>lattice surgery</b>——縫合兩塊表面碼補丁、量出聯合奇偶、再拆開；真正帶來量子優勢的 <b>T 閘</b>則靠消耗事先<b>蒸餾</b>好的魔術態。前半段看兩塊 d = 3 補丁的合併與拆開，後半段鏡頭移到魔術態工廠。</p>
+      <p>圖例：圓球＝資料位元（中間一行是接縫）；青色格子＝Z 穩定子、琥珀色格子＝X 穩定子，亮框是合併時新打開的穩定子，亮起＝量到 −1；工廠裡橘色球＝注入的髒魔術態、金色球＝蒸餾後的乾淨魔術態、紅色＝有錯。</p>
+      <div class="steps" id="g11steps" role="group" aria-label="步驟"></div>
+      <div class="controls"><button class="btn" id="g11prev" type="button">◀ 上一步</button><button class="btn" id="g11play" type="button">暫停</button><button class="btn" id="g11re" type="button">重播</button><button class="btn primary" id="g11next" type="button">下一步 ▶</button><label class="check"><input type="checkbox" id="g11auto" checked> 自動接續</label></div>
+      <h3 id="g11title"></h3><div id="g11body"></div><div id="g11extra"></div>
+      <dl class="stats"><dt>補丁狀態</dt><dd id="g11ph">—</dd><dt>量到的 X_A·X_B</dt><dd id="g11xx">—</dd><dt>蒸餾</dt><dd id="g11dist">—</dd></dl>
+      <p class="note">接縫新 X 穩定子的乘積 = A 最右一行 X × B 最左一行 X（接縫那一行兩兩抵消），即 X_A ⊗ X_B；已用程式驗證。蒸餾的輸出錯誤率用 35p³ 近似，抽樣模型為：1、2 個輸入出錯必被抓到，3 個出錯有 35/455 的組合漏網，更多時視為隨機。</p>` },
   ];
-  const groupsFor = [[chip], [jj], [pot], [bl], [chip, readout, rchain], [cs], [g7], [g8], [g9], [g10]];
-  const allGroups = [chip, jj, pot, bl, readout, rchain, cs, g7, g8, g9, g10];
+  const groupsFor = [[chip], [jj], [pot], [bl], [chip, readout, rchain], [cs], [g7], [g8], [g9], [g10], [g11]];
+  const allGroups = [chip, jj, pot, bl, readout, rchain, cs, g7, g8, g9, g10, g11];
 
   // ---------- 章節 UI ----------
   const rail = document.getElementById("rail"), panel = document.getElementById("panel");
@@ -1092,6 +1116,20 @@ nav.chapters {
       };
       $("g10auto").checked = g10S.auto; $("g10auto").onchange = e => { g10S.auto = e.target.checked; };
       g10Step(g10S.step);
+    }
+    if (i === 10) {
+      const sp = $("g11steps");
+      G11STEPS.forEach((s, k) => { const b = document.createElement("button"); b.type = "button"; b.textContent = k + 1; b.title = s.name; b.setAttribute("aria-label", `步驟 ${k + 1}：${s.name}`); b.onclick = () => g11Step(k); sp.appendChild(b); });
+      $("g11prev").onclick = () => g11Step(g11S.step - 1);
+      $("g11next").onclick = () => g11Step(g11S.step + 1);
+      $("g11re").onclick = () => g11Step(g11S.step);
+      $("g11play").onclick = () => {
+        const st = G11STEPS[g11S.step];
+        if (!g11S.playing && st.dur && g11S.t >= st.dur) { g11Step(g11S.step); return; }
+        g11S.playing = !g11S.playing; g11UpdPlay();
+      };
+      $("g11auto").checked = g11S.auto; $("g11auto").onchange = e => { g11S.auto = e.target.checked; };
+      g11Step(g11S.step);
     }
   }
   function setCapView(v, user) {
@@ -3209,6 +3247,368 @@ nav.chapters {
     drawBoard10();
   }
 
+  // =====================================================================
+  // 第 11 章：lattice surgery（合併／拆開兩塊 d = 3 補丁）與 15-to-1 魔術態蒸餾
+  // =====================================================================
+  // 長方形旋轉表面碼：rows × cols，全域欄位 c0 起；資料 (r, c) 編號 r·W + c
+  function rect11(rows, cols, c0, W) {
+    const P = [];
+    for (let r = -1; r <= rows - 1; r++) for (let c = -1; c <= cols - 1; c++) {
+      const gc = c + c0, t = (((r + gc) % 2) + 2) % 2 === 0 ? "Z" : "X", inR = v => v >= 0 && v <= rows - 2, inC = v => v >= 0 && v <= cols - 2;
+      let bd = null;
+      if (inR(r) && inC(c)) bd = "bulk";
+      else if (r === -1 && inC(c) && t === "X") bd = "top";
+      else if (r === rows - 1 && inC(c) && t === "X") bd = "bottom";
+      else if (c === -1 && inR(r) && t === "Z") bd = "left";
+      else if (c === cols - 1 && inR(r) && t === "Z") bd = "right";
+      if (!bd) continue;
+      const qs = [[r, c], [r, c + 1], [r + 1, c], [r + 1, c + 1]].filter(([a, b]) => a >= 0 && a < rows && b >= 0 && b < cols).map(([a, b]) => a * W + b + c0).sort((a, b) => a - b);
+      P.push({ t, r, gc, bd, qs, key: t + qs.join(",") });
+    }
+    return P;
+  }
+  const W11 = 7, SP11 = 1.25, SEAM = [3, 10, 17];
+  const pA = rect11(3, 3, 0, W11), pB = rect11(3, 3, 4, W11), pM = rect11(3, 7, 0, W11);
+  const sepKeys = new Set([...pA, ...pB].map(p => p.key)), mrgKeys = new Set(pM.map(p => p.key));
+  const allP11 = []; [...pA, ...pB, ...pM].forEach(p => { if (!allP11.some(q => q.key === p.key)) allP11.push(p); });
+  allP11.forEach(p => { p.inSep = sepKeys.has(p.key); p.inMrg = mrgKeys.has(p.key); p.added = p.inMrg && !p.inSep; });
+  const d11Pos = q => ({ x: (q % W11 - 3) * SP11, z: (Math.floor(q / W11) - 1) * SP11 });
+  const t11Mat = [], d11Mat = [], d11Mesh = [];
+  allP11.forEach(p => {
+    const m = new THREE.MeshBasicMaterial({ color: TILE[p.t].base, transparent: true, opacity: 0, side: THREE.DoubleSide, depthWrite: false });
+    const geo = p.bd === "bulk" ? new THREE.PlaneGeometry(SP11 * 0.96, SP11 * 0.96) : new THREE.CircleGeometry(SP11 * 0.48, 28, { top: 0, bottom: Math.PI, left: Math.PI / 2, right: -Math.PI / 2 }[p.bd], Math.PI);
+    const tile = new THREE.Mesh(geo, m); tile.rotation.x = -Math.PI / 2;
+    const x = p.bd === "left" ? (p.gc + 1 - 3) * SP11 : p.bd === "right" ? (p.gc - 3) * SP11 : (p.gc + 0.5 - 3) * SP11;
+    const z = p.bd === "top" ? (0 - 1) * SP11 : p.bd === "bottom" ? (2 - 1) * SP11 : (p.r + 0.5 - 1) * SP11;
+    tile.position.set(x, 0.005 + (p.added ? 0.004 : 0), z); lat11.add(tile); t11Mat.push(m); p.val = 1;
+  });
+  for (let q = 0; q < 21; q++) {
+    const m = new THREE.MeshStandardMaterial({ color: CN10, roughness: 0.3, metalness: 0.3, transparent: true, opacity: 1, emissive: new THREE.Color(0xffffff), emissiveIntensity: 0 });
+    const s = new THREE.Mesh(new THREE.SphereGeometry(0.2, 20, 14), m), p = d11Pos(q); s.position.set(p.x, 0.22, p.z); lat11.add(s); d11Mat.push(m); d11Mesh.push(s);
+  }
+  g11Tag("邏輯位元 A（d = 3）", [-2.5, 0.2, -2.3], "mono small");
+  g11Tag("邏輯位元 B（d = 3）", [2.5, 0.2, -2.3], "mono small");
+  const seamTag = g11Tag("接縫", [0, 0.2, 2.2], "mono small gold");
+  const prodTag = g11Tag("", [0, 1.4, 0], "gold");
+  const seamQTags = SEAM.map(q => { const p = d11Pos(q); return g11Tag("", [p.x + 0.3, 0.55, p.z], "flat mono small teal"); });
+  // 工廠：15 顆輸入、1 顆輸出
+  const facBox = new THREE.Mesh(new THREE.BoxGeometry(2.6, 1.8, 2.6), new THREE.MeshStandardMaterial({ color: 0x2a3550, transparent: true, opacity: 0.45, roughness: 0.3, emissive: new THREE.Color(COL.teal), emissiveIntensity: 0.05, depthWrite: false }));
+  facBox.position.set(0.6, 0.9, 0); fac11.add(facBox);
+  const lamps = [0, 1, 2, 3].map(i => { const m = new THREE.Mesh(new THREE.SphereGeometry(0.13, 14, 10), new THREE.MeshBasicMaterial({ color: 0x3a4250 })); m.position.set(-0.3 + i * 0.3, 1.95, 0); fac11.add(m); return m; });
+  const inPos = Array.from({ length: 15 }, (_, i) => new THREE.Vector3(-3.6 + (i % 3) * 0.75, 0.3, -1.6 + Math.floor(i / 3) * 0.8));
+  const inMesh = inPos.map(p => { const m = new THREE.Mesh(new THREE.SphereGeometry(0.22, 18, 12), new THREE.MeshStandardMaterial({ color: 0xf08a4b, emissive: new THREE.Color(0xf08a4b), emissiveIntensity: 0.3, roughness: 0.35, transparent: true, opacity: 1 })); m.position.copy(p); fac11.add(m); return m; });
+  const outMesh = new THREE.Mesh(new THREE.SphereGeometry(0.34, 22, 16), new THREE.MeshStandardMaterial({ color: COL.gold, emissive: new THREE.Color(COL.gold), emissiveIntensity: 0.5, roughness: 0.3, transparent: true, opacity: 0 }));
+  outMesh.position.set(4.2, 0.4, 0); fac11.add(outMesh);
+  const facTag = (t, p, cls) => tag(t, new THREE.Vector3(...p).add(fac11.position).add(g11.position), [10], cls);
+  facTag("15-to-1 蒸餾工廠", [0.6, 2.45, 0], "mono small");
+  const inTag = facTag("", [-2.85, 0.9, -2.3], "mono small");
+  const outTag = facTag("", [4.2, 1.1, 0], "mono small gold");
+  const facRes = facTag("", [0.6, 3.0, 0], "gold");
+
+  const g11S = { step: 0, t: 0, cue: 0, playing: true, auto: true, phase: "sep", seamOn: false, round: 0, rounds: [], prod: null, mode: "intro",
+    hi: -1, coin: null, math: [], p: 1e-3, level: 1, dist: null, stats: null, splitT: -1, free: false };
+  const CAM11 = { surg: { target: [-1.2, 2.1, G11Z - 1.2], pos: [-1.0, 8.6, G11Z + 14.2] }, fac: { target: [13.4, 2.1, G11Z - 1.2], pos: [13.6, 8.6, G11Z + 14.2] } };
+  function surgReset() { const S = g11S; S.phase = "sep"; S.seamOn = false; S.round = 0; S.rounds = []; S.prod = null; S.splitT = -1; allP11.forEach(p => p.val = 1); }
+  function surgPrep() { const S = g11S; if (S.phase !== "sep") return; S.seamOn = true; }
+  function surgMerge() {   // 打開接縫的穩定子，連量 3 輪
+    const S = g11S; if (S.phase === "merged") return; S.seamOn = true; S.phase = "merged"; S.round = 0; S.mergeT = 0;
+    const addX = allP11.filter(p => p.added && p.t === "X");
+    addX.forEach(p => p.val = Math.random() < 0.5 ? -1 : 1);   // 個別結果隨機
+    S.prod = addX.reduce((a, p) => a * p.val, 1);              // 乘積 = X_A·X_B
+  }
+  function surgSplit() { const S = g11S; if (S.phase !== "merged") return; S.phase = "split"; S.splitT = 0; }
+  const ERR = p => p < 1e-99 ? "0" : p >= 0.01 ? p.toPrecision(2) : p.toExponential(1).replace("e-", "×10⁻").replace(/⁻(\d+)/, (m, d) => "⁻" + d.split("").map(c => "⁰¹²³⁴⁵⁶⁷⁸⁹"[+c]).join(""));
+  const out1 = p => 35 * p * p * p;
+  function distillSample(p) {   // 15-to-1 的近似模型：1、2 個錯誤必被抓到；3 個錯誤有 35/455 的組合漏網；更多時當作隨機
+    const bad = Array.from({ length: 15 }, () => Math.random() < p), k = bad.filter(Boolean).length;
+    if (k === 0) return { bad, accept: true, outBad: false };
+    if (k <= 2) return { bad, accept: false };
+    if (k === 3) return Math.random() < 35 / 455 ? { bad, accept: true, outBad: true } : { bad, accept: false };
+    const a = Math.random() < 1 / 16; return { bad, accept: a, outBad: a };
+  }
+  function runDistill(force) {
+    const S = g11S; if (S.dist) return;
+    const pin = S.level === 1 ? S.p : out1(S.p), r = force ? { bad: new Array(15).fill(false), accept: true, outBad: false } : distillSample(pin);
+    S.dist = { t: 0, ...r, pin, pout: out1(pin) };
+  }
+
+  const G11STEPS = [
+    { name: "為什麼", title: "① 為什麼需要 lattice surgery 與魔術態", cam: "surg",
+      body: `<p>第 10 章的表面碼只負責<b>把資訊存好</b>；要計算，還得在受保護的邏輯位元上做邏輯閘。最理想的是「<b>橫向閘</b>」：每顆實體位元各做一次同樣的閘就等於邏輯閘，錯誤不會擴散。但 <b>Eastin–Knill 定理</b>證明：沒有任何碼能把一組「通用」的閘全部做成橫向。</p>
+      <p>閘分兩類：<b>Clifford 閘</b>（X、Z、H、S、CNOT、CZ）和<b>非 Clifford 閘</b>（例如 T = Z 軸轉 45°）。<b>Gottesman–Knill 定理</b>說，只用 Clifford 閘加 Pauli 量測的電路，古典電腦能有效率地模擬——第 7 章的 Bell、Grover、Deutsch 和第 9 章的 BV 全都是 Clifford 電路，這就是它們能被古典模擬的原因。Shor 的 QFT 需要 T 閘。</p>
+      <p>所以容錯量子電腦分兩招：Clifford 運算用 <b>lattice surgery</b>（縫合與拆開補丁），T 閘用<b>魔術態</b>（先蒸餾乾淨，再「消耗」它）。</p>`,
+      setup() { surgReset(); g11S.mode = "intro"; },
+      cues: [
+        [0.3, "第 10 章的表面碼負責「存」。要計算，還得在受保護的邏輯位元上做邏輯閘。畫面上是兩顆邏輯位元 A、B，各是一塊 d = 3 的補丁。"],
+        [7, "最安全的是「橫向閘」：每顆實體位元各做一次就等於邏輯閘。但 Eastin–Knill 定理說：沒有碼能把通用閘全做成橫向。"],
+        [14, "Clifford 閘（H、S、CNOT）古典電腦可以模擬（Gottesman–Knill）；要有量子優勢，還需要非 Clifford 的 T 閘。"],
+        [21, "容錯量子電腦的兩招：Clifford 用 lattice surgery 縫合與拆開補丁；T 閘用事先蒸餾好的魔術態。"],
+      ], dur: 27 },
+    { name: "合併", title: "② 合併：打開接縫，量出 X_A ⊗ X_B", cam: "surg",
+      body: `<p>兩塊補丁之間留了一行<b>接縫位元</b>。lattice surgery 不移動任何位元，只改變「<b>哪些穩定子要量</b>」。</p>
+      <p>① 先把接縫位元準備在 |0⟩。② <b>合併</b>：打開接縫上的新穩定子，兩塊碼暫時變成一大塊。新出現的 X 穩定子（琥珀色），每一個的量測結果都是隨機的 ±1，但它們的<b>乘積</b>剛好等於 A 最右一行的 X 乘上 B 最左一行的 X——也就是 <b>X_A ⊗ X_B</b>，兩顆邏輯位元的聯合奇偶。③ 為了防止量測本身出錯，合併狀態要維持 <b>d 輪</b>（這裡 3 輪，約 3 μs），交給解碼器判斷。</p>
+      <p>可以想成用拉鍊把兩塊布拉起來，看一眼拉鍊上的記號。全程受表面碼保護，硬體上仍是第 10 章的週期：重設、4 層 CZ、中途量測。</p>`,
+      setup() { surgReset(); g11S.mode = "surgery"; g11S.math = ["兩塊 d = 3 補丁：A、B", "中間一行接縫位元（目前閒置）"]; },
+      cues: [
+        [0.3, "兩塊補丁之間留了一行接縫位元（中間那一行）。lattice surgery 不移動位元，只改變「哪些穩定子要量」。"],
+        [5, "先把接縫位元準備在 |0⟩（第 5 章的重設）。", () => { surgPrep(); g11S.math = ["接縫位元準備在 |0⟩"]; }],
+        [9, "合併：打開接縫上的新穩定子（亮框），兩塊碼暫時變成一大塊。琥珀色的新 X 穩定子，每個結果都是隨機的 ±1……", () => surgMerge()],
+        [16, "……但它們的乘積剛好等於 A 最右一行的 X 乘上 B 最左一行的 X：X_A ⊗ X_B，兩顆邏輯位元的聯合奇偶。"],
+        [23, "為了防止量測本身出錯，合併要維持 d 輪（這裡 3 輪，約 3 μs）；每一輪的結果都一樣，交給解碼器確認。"],
+      ], dur: 29 },
+    { name: "拆開", title: "③ 拆開：量掉接縫，回到兩塊", cam: "surg",
+      body: `<p><b>拆開</b>：把接縫位元逐一在 Z 基底量掉（第 5 章的中途 QND 讀取），關掉接縫穩定子，兩塊補丁恢復獨立。</p>
+      <p>剛才量到的 X_A ⊗ X_B 留在兩顆邏輯位元上：如果它們原本各自處於任意狀態，現在就被「投影」到聯合奇偶 = 量測值的狀態。拆開時量到的結果，以及合併時那些隨機的個別值，只需要補 <b>Pauli 修正</b>，而 Pauli 修正只要記在軟體裡（Pauli frame），不必真的送脈衝。</p>
+      <p>這就是 lattice surgery 的原生動作：<b>多位元 Pauli 量測</b>（X⊗X、Z⊗Z、甚至更多位元）。所有 Clifford 運算都能用它組出來。</p>`,
+      setup() { surgReset(); surgMerge(); g11S.mergeT = 99; g11S.round = 3; g11S.mode = "surgery"; g11S.math = ["合併中：已量 3 輪"]; },
+      cues: [
+        [0.3, "拆開：把接縫位元逐一在 Z 基底量掉（中途 QND 讀取），關掉接縫穩定子，兩塊補丁恢復獨立。", () => surgSplit()],
+        [6.5, "量到的 X_A ⊗ X_B 留在兩顆邏輯位元上；那些隨機的個別結果只需補 Pauli 修正，記在軟體裡就好。"],
+        [13, "這就是 lattice surgery 的原生動作：多位元 Pauli 量測。所有 Clifford 運算都能用它組出來。"],
+      ], dur: 19 },
+    { name: "CNOT", title: "④ 用三次聯合量測做出邏輯 CNOT", cam: "surg",
+      body: `<p>邏輯 CNOT 可以用一塊<b>輔助補丁 A</b>（準備在 |+⟩）和三次量測組出來：</p>
+      <p>① 量 <b>Z_控制 ⊗ Z_A</b>（控制補丁和 A 合併、拆開）；② 量 <b>X_A ⊗ X_目標</b>（A 和目標補丁合併、拆開）；③ 單獨量 A 的 Z；④ 依三次結果補 Pauli 修正（記在 Pauli frame）。</p>
+      <p>整個過程約 2～3d 輪週期（十幾到幾十 μs）。H、S 也有對應的補丁變形或量測做法。晶片因此變成一張「平面配置圖」：邏輯位元補丁、用來縫合的路由區、魔術態工廠——編譯器要安排哪兩塊補丁何時縫合、路由會不會塞車。</p>`,
+      setup() { surgReset(); g11S.mode = "cnot"; g11S.hi = -1; },
+      cues: [
+        [0.3, "邏輯 CNOT 用三塊補丁：控制 C、輔助 A（準備在 |+⟩）、目標 T。看看板上的示意圖。", () => { g11S.hi = 0; }],
+        [5.5, "第 1 步：量 Z_C ⊗ Z_A——控制和輔助縫起來、量 d 輪、拆開。", () => { g11S.hi = 1; }],
+        [10.5, "第 2 步：量 X_A ⊗ X_T——輔助和目標縫起來、量 d 輪、拆開（就是剛才演示的那種合併）。", () => { g11S.hi = 2; }],
+        [15.5, "第 3 步：單獨量輔助 A 的 Z，把它拆掉。", () => { g11S.hi = 3; }],
+        [20, "第 4 步：依三次結果補 Pauli 修正（記在軟體裡），就等於對 C、T 做了 CNOT。約 2～3d 輪，十幾到幾十 μs。", () => { g11S.hi = 4; }],
+      ], dur: 27 },
+    { name: "T 閘傳送", title: "⑤ T 閘：消耗一顆魔術態", cam: "surg",
+      body: `<p>T 閘在表面碼上沒辦法用 lattice surgery 直接做，但可以<b>消耗一顆魔術態</b>來得到它（閘傳送）：</p>
+      <p>① 準備魔術態 <b>|T⟩ = T|+⟩ = (|0⟩ + e^{iπ/4}|1⟩)/√2</b>；② 用 lattice surgery 量 <b>Z_資料 ⊗ Z_魔術態</b>；③ 量魔術態的 X；④ 一半機率結果直接就是 T 作用在資料上，另一半要補一個 <b>S 閘</b>（S 是 Clifford，用 lattice surgery 就能做）。</p>
+      <p>所以 <b>T 閘 = 1 顆魔術態 + 一些 Clifford 運算</b>。問題變成：怎麼做出<b>夠乾淨</b>的魔術態？</p>`,
+      setup() { surgReset(); g11S.mode = "tgate"; g11S.hi = -1; g11S.coin = null; },
+      cues: [
+        [0.3, "T 閘做不了，但可以消耗一顆魔術態 |T⟩ = (|0⟩ + e^{iπ/4}|1⟩)/√2 來得到它（閘傳送）。", () => { g11S.hi = 0; }],
+        [6, "用 lattice surgery 量 Z_資料 ⊗ Z_魔術態（縫合、量 d 輪、拆開）。", () => { g11S.hi = 1; }],
+        [11, "再量魔術態的 X，它就被用掉了。", () => { g11S.hi = 2; }],
+        [15.5, "依結果：一半機率直接得到 T，另一半補一個 S（Clifford）。", () => { g11S.hi = 3; g11S.coin = Math.random() < 0.5 ? 0 : 1; }],
+        [21, "所以 T 閘 = 1 顆魔術態 + Clifford 運算。下一步：怎麼做出夠乾淨的魔術態？"],
+      ], dur: 26 },
+    { name: "蒸餾", title: "⑥ 魔術態注入與 15-to-1 蒸餾", cam: "fac",
+      body: `<p><b>注入</b>：把一顆實體位元轉到 |T⟩，再「長大」成一塊表面碼補丁。注入那一刻還沒受保護，錯誤率大約就是實體錯誤率 <b>p ≈ 10⁻³</b>（橘色球）——跑 Shor 需要 10⁻¹⁰ 以下，差太遠。</p>
+      <p><b>15-to-1 蒸餾</b>（Bravyi–Kitaev，2005）：輸入 15 顆髒的魔術態，跑一段<b>只用 Clifford 閘</b>的電路（來自 [[15,1,3]] Reed–Muller 碼，它的 T 閘剛好是橫向的），量幾個檢查值（工廠頂上的燈）：<b>全部通過才保留</b>，任何一個不對就整批丟掉重來。</p>
+      <p>輸出 1 顆（金色球），錯誤率約 <b>35p³</b>：p = 10⁻³ 時降到約 3.5×10⁻⁸。1 或 2 個輸入出錯一定會被抓到；要 3 個以上同時出錯而且排列恰好騙過檢查，才會漏網。</p>`,
+      setup() { g11S.mode = "distill"; g11S.level = 1; g11S.p = 1e-3; g11S.dist = null; },
+      cues: [
+        [0.3, "注入：把一顆實體位元轉到 |T⟩ 再長大成補丁。注入時還沒受保護，錯誤率約 10⁻³（橘色球）——跑 Shor 要 10⁻¹⁰ 以下。"],
+        [7, "15-to-1 蒸餾：15 顆髒的魔術態送進工廠，跑一段只用 Clifford 閘的電路……", () => runDistill(true)],
+        [12.5, "……量檢查值（頂上的燈）：全部通過才保留，任何一個不對就整批丟掉。這次全部通過。"],
+        [17.5, "輸出 1 顆金色魔術態，錯誤率約 35p³ ≈ 3.5×10⁻⁸。1、2 個輸入出錯一定會被抓到，要 3 個以上同時出錯才可能漏網。"],
+      ], dur: 24 },
+    { name: "第二輪與工廠", title: "⑦ 第二輪蒸餾、魔術態工廠與培育", cam: "fac",
+      body: `<p>還不夠乾淨就<b>再蒸一輪</b>：把 15 顆第一輪的輸出（3.5×10⁻⁸）再送進工廠，輸出錯誤率約 35×(3.5×10⁻⁸)³ ≈ <b>10⁻²¹</b>。錯誤率是三次方下降，一到兩輪就夠，但兩輪要消耗 15×15 = 225 顆注入態，而且蒸餾電路本身也要用邏輯位元和 lattice surgery 來跑，非常佔面積。</p>
+      <p>晶片上要劃出專門的<b>魔術態工廠</b>持續生產，再經路由區送去需要 T 閘的地方。演算法成本常用 <b>T 數</b>（或 Toffoli 數）衡量；破解 RSA-2048 需要的 Toffoli 閘以十億計，工廠產能往往決定整個演算法要跑多久，所以常會平行放好幾座。</p>
+      <p><b>新進展：魔術態「培育」</b>（Gidney、Shutty、Jones，2024）：在一小塊碼裡一邊逐步長大魔術態、一邊反覆檢查，有問題就丟掉重來；估計在 p = 10⁻³ 下可達約 10⁻⁹ 等級，成本和一次 lattice surgery CNOT 相近。Gidney 2025 年「不到 100 萬顆實體位元、不到一週破解 RSA-2048」的估計就用了它。</p>`,
+      setup() { g11S.mode = "distill"; g11S.level = 2; g11S.p = 1e-3; g11S.dist = null; },
+      cues: [
+        [0.3, "還不夠乾淨就再蒸一輪：15 顆第一輪的輸出（3.5×10⁻⁸，淺金色）再送進工廠……", () => runDistill(true)],
+        [6.5, "……輸出錯誤率約 35×(3.5×10⁻⁸)³ ≈ 10⁻²¹。三次方下降，一到兩輪就夠，但兩輪要消耗 225 顆注入態。"],
+        [13, "晶片上要劃出專門的魔術態工廠持續生產；破解 RSA-2048 的 Toffoli 閘以十億計，工廠產能往往決定整個演算法要跑多久。"],
+        [20, "新進展「魔術態培育」：在小碼裡邊長大邊檢查，成本和一次 lattice surgery CNOT 相近；Gidney 2025 的 RSA 估計就用了它。"],
+      ], dur: 27 },
+    { name: "自由實驗", title: "⑧ 換你操作：縫合、拆開、蒸餾", cam: "surg", free: true,
+      body: `<p><b>Lattice surgery</b>：按「準備接縫」→「合併」→「拆開」，看接縫穩定子的隨機結果和它們的乘積 X_A·X_B。</p>
+      <p><b>魔術態蒸餾</b>：切到工廠視角，設定注入錯誤率 p，按「跑一輪」看一次蒸餾（有錯的輸入是紅色；檢查不過就整批丟掉）；按「跑 2000 次統計」看接受率與輸出錯誤率。試試 p = 5%：接受率掉多少？輸出還比輸入乾淨嗎？</p>`,
+      extra: `<div class="controls" style="margin:8px 0 4px"><button class="btn" type="button" id="g11vs">看 lattice surgery</button><button class="btn" type="button" id="g11vf">看魔術態工廠</button></div>
+      <div class="controls" style="margin:6px 0"><button class="btn" type="button" id="g11prep">準備接縫</button><button class="btn primary" type="button" id="g11mrg">合併（量 X_A·X_B）</button><button class="btn" type="button" id="g11spl">拆開</button><button class="btn" type="button" id="g11rst">重設</button></div>
+      <div class="controls" style="margin:6px 0"><label class="row" for="g11p">注入錯誤率 p <input type="range" id="g11p" min="-4" max="-1.3" step="0.05" value="-3"><output id="g11po"></output></label></div>
+      <div class="controls" style="margin:6px 0 10px"><span class="qn" style="width:auto;color:var(--muted)">輪數</span><button class="btn" type="button" data-lv11="1">1 輪</button><button class="btn" type="button" data-lv11="2">2 輪</button><button class="btn primary" type="button" id="g11run">跑一輪</button><button class="btn" type="button" id="g11mc">跑 2000 次統計</button></div>`,
+      setup() { surgReset(); g11S.mode = "surgery"; g11S.level = 1; g11S.p = 1e-3; g11S.dist = null; g11S.stats = null; g11S.free = true; g11S.math = ["自由實驗：準備接縫 → 合併 → 拆開", "或切到工廠視角跑蒸餾"]; },
+      cues: [[0.3, "換你操作：在 lattice surgery 視角試合併與拆開；切到工廠視角，調注入錯誤率 p 跑蒸餾與統計。"]], dur: 0 },
+  ];
+
+  function g11Step(i) {
+    i = Math.max(0, Math.min(G11STEPS.length - 1, i));
+    const S = g11S, st = G11STEPS[i];
+    S.step = i; S.t = 0; S.cue = 0; S.playing = true; S.free = false; S.dist = null;
+    st.setup();
+    capEl.classList.remove("show");
+    if (cur === 10) {
+      setCam(CAM11[st.cam]);
+      $("g11title").textContent = st.title; $("g11body").innerHTML = st.body; $("g11extra").innerHTML = st.extra || "";
+      [...$("g11steps").children].forEach((b, k) => b.setAttribute("aria-current", k === i ? "true" : "false"));
+      if (st.free) g11BindFree();
+    }
+    g11UpdPlay();
+  }
+  function g11UpdPlay() {
+    const b = $("g11play"); if (!b) return;
+    const st = G11STEPS[g11S.step], done = st.dur && g11S.t >= st.dur;
+    b.textContent = g11S.playing ? "暫停" : done ? "再看一次" : "播放";
+    b.disabled = !!st.free; $("g11prev").disabled = g11S.step === 0; $("g11next").disabled = g11S.step === G11STEPS.length - 1;
+  }
+  function g11BindFree() {
+    const S = g11S;
+    $("g11vs").onclick = () => { setCam(CAM11.surg); S.mode = "surgery"; };
+    $("g11vf").onclick = () => { setCam(CAM11.fac); S.mode = "distill"; };
+    $("g11prep").onclick = () => { surgPrep(); S.math = ["接縫位元準備在 |0⟩"]; };
+    $("g11mrg").onclick = () => { surgMerge(); S.math = ["合併：打開接縫穩定子，量 3 輪"]; };
+    $("g11spl").onclick = () => { surgSplit(); };
+    $("g11rst").onclick = () => { surgReset(); S.math = ["兩塊獨立補丁"]; };
+    const ps = $("g11p"); ps.value = Math.log10(S.p); ps.oninput = () => { S.p = Math.pow(10, +ps.value); S.stats = null; };
+    const markLv = () => document.querySelectorAll("[data-lv11]").forEach(b => b.setAttribute("aria-pressed", +b.dataset.lv11 === S.level ? "true" : "false"));
+    document.querySelectorAll("[data-lv11]").forEach(b => { b.onclick = () => { S.level = +b.dataset.lv11; S.stats = null; markLv(); }; });
+    $("g11run").onclick = () => { if (!S.dist) { setCam(CAM11.fac); S.mode = "distill"; runDistill(false); } };
+    $("g11mc").onclick = () => {
+      setCam(CAM11.fac); S.mode = "distill";
+      const pin = S.level === 1 ? S.p : out1(S.p), N = 2000; let acc = 0, bad = 0;
+      for (let k = 0; k < N; k++) { const r = distillSample(pin); if (r.accept) { acc++; if (r.outBad) bad++; } }
+      S.stats = { N, acc, bad, pin };
+      capShow("自由實驗 ・ 蒸餾統計", `${S.level} 輪、輸入錯誤率 ${ERR(pin)}：2000 批中接受 ${acc} 批（${(acc / N * 100).toFixed(1)}%），接受的裡面出錯 ${bad} 批。理論輸出錯誤率 35p³ ≈ ${ERR(out1(pin))}。`);
+    };
+    markLv();
+  }
+
+  let b11Key = "";
+  function drawBoard11() {
+    const S = g11S, dk = S.dist ? Math.floor(S.dist.t * 3) : -1;
+    const key = JSON.stringify([S.mode, S.math, S.phase, S.round, S.prod, S.hi, S.coin, S.p, S.level, dk, S.stats, S.splitT > 0]);
+    if (key === b11Key) return; b11Key = key;
+    const c = c11x, W = 1400, Hh = 560;
+    c.clearRect(0, 0, W, Hh);
+    c.fillStyle = "rgba(14,18,25,0.9)"; c.strokeStyle = "rgba(232,235,240,0.14)"; c.lineWidth = 2; rr(c, 2, 2, W - 4, Hh - 4, 18); c.fill(); c.stroke();
+    c.textBaseline = "middle"; c.textAlign = "left";
+    const H1 = t => { c.fillStyle = "#d6b04a"; c.font = "700 27px 'Noto Sans TC', sans-serif"; c.fillText(t, 28, 42); };
+    const line = (t, y, col = "#cfd5de", f = "500 22px 'Noto Sans TC', 'JetBrains Mono', sans-serif") => { c.fillStyle = col; c.font = f; c.fillText(t, 36, y, W - 72); };
+    const blk = (x, y, w, h, on, lbl, sub) => { c.fillStyle = on ? "#d6b04a" : "#1d2430"; c.strokeStyle = on ? "#d6b04a" : "#cfd5de"; c.lineWidth = 2.5; rr(c, x, y, w, h, 10); c.fill(); c.stroke(); c.fillStyle = on ? "#17140a" : "#e8ebf0"; c.textAlign = "center"; c.font = "700 24px 'Noto Sans TC', sans-serif"; c.fillText(lbl, x + w / 2, y + h / 2 - (sub ? 12 : 0)); if (sub) { c.font = "500 17px 'Noto Sans TC', sans-serif"; c.fillText(sub, x + w / 2, y + h / 2 + 16); } c.textAlign = "left"; };
+    const seam = (x, y, h, on) => { c.strokeStyle = on ? "#d6b04a" : "rgba(152,161,176,0.4)"; c.lineWidth = on ? 6 : 2; c.setLineDash(on ? [] : [8, 8]); c.beginPath(); c.moveTo(x, y); c.lineTo(x, y + h); c.stroke(); c.setLineDash([]); };
+    if (S.mode === "intro") {
+      H1("邏輯閘從哪裡來？");
+      const rows = [["X、Z（Pauli）", "只記在軟體裡（Pauli frame）", "幾乎免費"], ["多位元 Pauli 量測", "lattice surgery：合併 → 量 d 輪 → 拆開", "約 d μs"], ["H、S、CNOT（Clifford）", "由 lattice surgery 組合、補丁變形", "數倍 d μs"], ["T（非 Clifford）", "魔術態 + 閘傳送；魔術態要蒸餾或培育", "最貴"]];
+      c.font = "700 21px 'Noto Sans TC', sans-serif"; c.fillStyle = "#98a1b0"; ["邏輯運算", "做法", "代價"].forEach((h, i) => c.fillText(h, [36, 380, 1130][i], 100));
+      rows.forEach((r, k) => { c.font = "500 22px 'Noto Sans TC', sans-serif"; r.forEach((t, i) => { c.fillStyle = k === 3 ? "#ffb35c" : "#e8ebf0"; c.fillText(t, [36, 380, 1130][i], 150 + k * 56, i === 1 ? 720 : 300); }); });
+      line("Eastin–Knill：沒有碼能把通用閘全做成橫向。　Gottesman–Knill：只有 Clifford 的電路，古典電腦能有效率地模擬。", 410, "#cfd5de", "500 20px 'Noto Sans TC', sans-serif");
+      line("第 7、9 章的 Bell、Grover、Deutsch、BV 全是 Clifford 電路；Shor 的 QFT 需要 T 閘。", 452, "#cfd5de", "500 20px 'Noto Sans TC', sans-serif");
+    } else if (S.mode === "surgery") {
+      H1("Lattice surgery：合併 → 量 d 輪 → 拆開");
+      const ph = { sep: S.seamOn ? "接縫已準備在 |0⟩" : "兩塊獨立補丁", merged: "合併中", split: "拆開中" }[S.phase];
+      line("目前：" + ph, 100, "#e8ebf0", "700 23px 'Noto Sans TC', sans-serif");
+      const addX = allP11.filter(p => p.added && p.t === "X");
+      if (S.phase === "merged" || (S.phase === "split" && S.splitT < 1.2)) {
+        for (let r = 0; r < 3; r++) {
+          const show = r < S.round; c.font = "600 22px 'JetBrains Mono', monospace";
+          c.fillStyle = show ? "#e8ebf0" : "#4a5260";
+          c.fillText(`第 ${r + 1} 輪：` + (show ? addX.map(p => (p.val > 0 ? "+1" : "−1")).join("  ×  ") + `  =  ${S.prod > 0 ? "+1" : "−1"}` : "…"), 36, 160 + r * 50);
+        }
+        if (S.round >= 1) line(`→ X_A ⊗ X_B = ${S.prod > 0 ? "+1" : "−1"}（新 X 穩定子個別隨機，乘積才有意義）`, 330, "#ffb35c", "700 22px 'Noto Sans TC', sans-serif");
+      }
+      S.math.slice(-3).forEach((t, i) => line(t, 400 + i * 40, "#cfd5de", "500 21px 'Noto Sans TC', sans-serif"));
+      line("硬體動作仍是第 10 章的表面碼週期，只是改變「這一輪打開哪些穩定子」。", 520, "#98a1b0", "500 19px 'Noto Sans TC', sans-serif");
+    } else if (S.mode === "cnot") {
+      H1("邏輯 CNOT = 三次聯合量測 + Pauli 修正");
+      const bx = [120, 560, 1000], lbs = [["C", "控制"], ["A", "輔助 |+⟩"], ["T", "目標"]];
+      bx.forEach((x, i) => blk(x, 90, 260, 150, (S.hi === 1 && i < 2) || (S.hi === 2 && i > 0) || (S.hi === 3 && i === 1), lbs[i][0], lbs[i][1]));
+      seam(470, 90, 150, S.hi === 1); seam(910, 90, 150, S.hi === 2);
+      const st = ["① 量 Z_C ⊗ Z_A（C 和 A 合併、量 d 輪、拆開）", "② 量 X_A ⊗ X_T（A 和 T 合併、量 d 輪、拆開）", "③ 單獨量 A 的 Z（拆掉輔助補丁）", "④ 依三次結果補 Pauli 修正 → 等於 CNOT(C → T)"];
+      st.forEach((t, i) => line(t, 300 + i * 50, S.hi === i + 1 ? "#d6b04a" : "#cfd5de", (S.hi === i + 1 ? "700" : "500") + " 22px 'Noto Sans TC', sans-serif"));
+      line("總時間約 2～3d 輪週期（十幾到幾十 μs）", 510, "#98a1b0", "500 19px 'Noto Sans TC', sans-serif");
+    } else if (S.mode === "tgate") {
+      H1("T 閘傳送：T = 1 顆魔術態 + Clifford");
+      blk(180, 90, 340, 150, S.hi === 1 || S.hi === 3, "資料位元 ψ", ""); blk(860, 90, 340, 150, S.hi <= 2 && S.hi >= 0, "魔術態 |T⟩", "(|0⟩ + e^{iπ/4}|1⟩)/√2");
+      seam(690, 90, 150, S.hi === 1);
+      const st = ["① 準備魔術態 |T⟩（從工廠送來）", "② 量 Z_ψ ⊗ Z_T（lattice surgery 縫合、拆開）", "③ 量魔術態的 X（魔術態被用掉）", S.coin == null ? "④ 一半機率直接得到 T|ψ⟩，一半補一個 S（Clifford）" : S.coin ? "④ 這次結果 = 1 → 補一個 S（Clifford）→ 得到 T|ψ⟩" : "④ 這次結果 = 0 → 直接得到 T|ψ⟩，不必補"];
+      st.forEach((t, i) => line(t, 300 + i * 50, S.hi === i ? "#d6b04a" : "#cfd5de", (S.hi === i ? "700" : "500") + " 22px 'Noto Sans TC', sans-serif"));
+    } else {
+      H1(`15-to-1 魔術態蒸餾（${S.level} 輪）`);
+      const pin = S.level === 1 ? S.p : out1(S.p), acc = Math.pow(1 - pin, 15);
+      line(`注入錯誤率 p = ${ERR(S.p)}` + (S.level === 2 ? `　→ 第 1 輪輸出 ${ERR(out1(S.p))}（第 2 輪的輸入）` : ""), 100, "#e8ebf0", "700 22px 'Noto Sans TC', sans-serif");
+      line(`這一輪：輸入 ${ERR(pin)}　→　輸出 ≈ 35p³ = ${ERR(out1(pin))}`, 145, "#ffb35c", "700 22px 'Noto Sans TC', sans-serif");
+      line(`接受率 ≈ (1 − p)¹⁵ = ${(acc * 100).toFixed(acc > 0.999 ? 3 : 1)}%　消耗：${S.level === 1 ? "15" : "15 × 15 = 225"} 顆注入態換 1 顆`, 190);
+      // 錯誤率長條（對數）
+      const vals = [["注入", S.p], ["1 輪", out1(S.p)], ["2 輪", out1(out1(S.p))], ["Shor 需要", 1e-10]], X0 = 120, Y0 = 470, PW = 1180;
+      c.strokeStyle = "rgba(232,235,240,0.4)"; c.lineWidth = 2; c.beginPath(); c.moveTo(X0, Y0); c.lineTo(X0 + PW, Y0); c.stroke();
+      vals.forEach(([n, v], i) => {
+        const L = Math.min(1, Math.max(0.02, (Math.log10(Math.max(v, 1e-30)) + 30) / 30)), x = X0 + 40 + i * 290, h = L * 200;
+        c.fillStyle = i === 3 ? "#3a4250" : i === 0 ? "#f08a4b" : "#d6b04a"; rr(c, x, Y0 - h, 150, h, 6); c.fill();
+        c.fillStyle = "#e8ebf0"; c.textAlign = "center"; c.font = "600 19px 'Noto Sans TC', 'JetBrains Mono', sans-serif"; c.fillText(`${n}：${ERR(v)}`, x + 75, Y0 + 26); c.textAlign = "left";
+      });
+      c.fillStyle = "#98a1b0"; c.font = "500 16px 'Noto Sans TC', sans-serif"; c.fillText("錯誤率（對數，越短越乾淨）", X0, 240);
+      if (S.stats) line(`統計 2000 批：接受 ${(S.stats.acc / S.stats.N * 100).toFixed(1)}%、接受中出錯 ${S.stats.bad} 批`, 225 + 40, "#bff0ea", "700 21px 'Noto Sans TC', sans-serif");
+    }
+    tex11.needsUpdate = true;
+  }
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => { b11Key = ""; });
+
+  function updateG11(dt) {
+    const S = g11S, st = G11STEPS[S.step];
+    if (S.playing) S.t += dt;
+    while (S.cue < st.cues.length && S.t >= st.cues[S.cue][0]) {
+      const c = st.cues[S.cue];
+      capShow(`步驟 ${S.step + 1} / ${G11STEPS.length} ・ ${st.name} ・ ${S.cue + 1}/${st.cues.length}`, c[1]);
+      if (c[2]) c[2](); S.cue++;
+    }
+    capBar.style.width = (st.dur ? Math.min(100, S.t / st.dur * 100) : 100).toFixed(1) + "%";
+    if (st.dur && S.playing && S.t >= st.dur) {
+      if (S.auto && S.step < G11STEPS.length - 1) { g11Step(S.step + 1); return; }
+      S.playing = false; g11UpdPlay();
+    }
+    // 合併：每 2.4 秒量一輪，共 3 輪
+    if (S.phase === "merged" && S.round < 3) { S.mergeT = (S.mergeT || 0) + dt; S.round = Math.min(3, Math.floor(S.mergeT / 2.4) + 1); }
+    if (S.phase === "split") { S.splitT += dt; if (S.splitT > 2.2) { surgReset(); if (S.free) S.math = ["已拆開：兩塊補丁恢復獨立", "量到的 X_A·X_B 留在兩顆邏輯位元上"]; } }
+    // 穩定子方塊
+    allP11.forEach((p, i) => {
+      const vis = S.phase === "merged" || (S.phase === "split" && S.splitT < 1.2) ? p.inMrg : p.inSep, m = t11Mat[i];
+      const lit = vis && p.added && S.phase === "merged" && S.round >= 1 && p.val < 0;
+      const goal = vis ? (p.added ? 0.95 : 0.85) : 0;
+      m.opacity += (goal - m.opacity) * (1 - Math.exp(-dt * 5));
+      m.color.setHex(lit ? TILE[p.t].lit : p.added && vis ? (p.t === "X" ? 0x9a6a2a : 0x2a8a82) : TILE[p.t].base);
+      if (p.added && vis && S.phase === "merged") m.opacity = 0.75 + 0.2 * Math.sin(T * 5);
+    });
+    // 資料位元：接縫一行
+    for (let q = 0; q < 21; q++) {
+      const seamQ = SEAM.includes(q), m = d11Mat[q];
+      const active = !seamQ || S.seamOn || S.phase === "merged";
+      m.opacity = active ? 1 : 0.22;
+      const meas = seamQ && S.phase === "split" && S.splitT < 1.2;
+      m.color.setHex(seamQ && active ? (meas ? 0xffffff : 0x8fe8de) : CN10);
+      m.emissiveIntensity = meas ? 0.9 + 0.5 * Math.sin(T * 12) : seamQ && active ? 0.15 : 0;
+    }
+    seamQTags.forEach(t => { t.on = S.seamOn || S.phase !== "sep"; t.el.textContent = S.phase === "split" && S.splitT < 1.2 ? "量 Z" : S.phase === "merged" ? "" : "|0⟩"; });
+    prodTag.on = S.phase === "merged" && S.round >= 1; prodTag.el.textContent = `X_A · X_B = ${S.prod > 0 ? "+1" : "−1"}（第 ${S.round} / 3 輪）`;
+    seamTag.on = true;
+    // 蒸餾動畫：0–1.6 s 飛入、1.6–2.8 s 檢查、2.8–4 s 結果
+    const lv2 = S.level === 2, inCol = lv2 ? 0xe8d48a : 0xf08a4b;
+    const D = S.dist;
+    inMesh.forEach((m, i) => {
+      const bad = D && D.bad[i];
+      m.material.color.setHex(bad ? RED : inCol); m.material.emissive.setHex(bad ? RED : inCol);
+      if (D) {
+        const u = smooth(Math.min(1, Math.max(0, (D.t - i * 0.06) / 0.9)));
+        m.position.lerpVectors(inPos[i], new THREE.Vector3(0.6, 0.9, 0), u); m.material.opacity = u >= 1 ? 0 : 1; m.scale.setScalar(1 - 0.5 * u);
+      } else { m.position.copy(inPos[i]); m.material.opacity = 1; m.scale.setScalar(1); }
+    });
+    lamps.forEach((l, i) => {
+      if (D && D.t > 1.6) { const on = D.t > 1.6 + i * 0.25; l.material.color.setHex(!on ? 0x3a4250 : D.accept ? 0x3cf0dc : (i === 3 ? 0xf0625a : 0x3cf0dc)); }
+      else l.material.color.setHex(0x3a4250);
+    });
+    facBox.material.emissiveIntensity = D && D.t > 1.6 && D.t < 2.8 ? 0.35 + 0.25 * Math.sin(T * 10) : D && D.t >= 2.8 && !D.accept ? 0.6 : 0.05;
+    facBox.material.emissive.setHex(D && D.t >= 2.8 && !D.accept ? 0xf0625a : COL.teal);
+    if (D && D.t >= 2.8 && D.accept) {
+      const u = smooth(Math.min(1, (D.t - 2.8) / 0.8)); outMesh.material.opacity = 1; outMesh.position.set(0.6 + 3.6 * u, 0.9 - 0.5 * u, 0);
+      outMesh.material.color.setHex(D.outBad ? RED : COL.gold); outMesh.material.emissive.setHex(D.outBad ? RED : COL.gold);
+    } else if (!D || D.t < 2.8) outMesh.material.opacity = D ? 0 : outMesh.material.opacity * Math.exp(-dt * 0.5);
+    facRes.on = !!D && D.t >= 2.8; facRes.el.textContent = D ? (D.accept ? (D.outBad ? "通過檢查但輸出有錯（漏網）" : `通過！輸出錯誤率 ≈ ${ERR(D.pout)}`) : "檢查失敗 → 整批丟棄") : "";
+    if (D) { D.t += dt; if (D.t > 4.4) S.dist = null; }
+    inTag.el.textContent = `15 顆輸入（錯誤率 ${ERR(S.level === 1 ? S.p : out1(S.p))}）`;
+    outTag.on = outMesh.material.opacity > 0.3; outTag.el.textContent = `1 顆輸出（${ERR(out1(S.level === 1 ? S.p : out1(S.p)))}）`;
+    // 面板
+    const e = $("g11ph");
+    if (e) {
+      e.textContent = { sep: S.seamOn ? "接縫已準備" : "兩塊獨立", merged: `合併中（${S.round}/3 輪）`, split: "拆開中" }[S.phase];
+      $("g11xx").textContent = S.prod == null ? "—" : (S.prod > 0 ? "+1" : "−1");
+      const pin = S.level === 1 ? S.p : out1(S.p);
+      $("g11dist").textContent = `${S.level} 輪：${ERR(pin)} → ${ERR(out1(pin))}`;
+      const po = $("g11po"); if (po) po.textContent = ERR(S.p);
+    }
+    drawBoard11();
+  }
+
   // ---------- 相機（拖曳 / 縮放） ----------
   const view = { yaw: 0, pitch: 0, zoom: 1 };
   const desired = { target: new THREE.Vector3() };
@@ -3433,6 +3833,7 @@ nav.chapters {
     if (cur === 7) updateG8(dt);
     if (cur === 8) updateG9(dt);
     if (cur === 9) updateG10(dt);
+    if (cur === 10) updateG11(dt);
 
     // 標籤投影
     const w = stage.clientWidth, h = stage.clientHeight;
