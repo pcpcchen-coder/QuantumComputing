@@ -1,0 +1,664 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>1,000 位元供電設計</title>
+<style>
+:root{
+  --bg:#070c16; --panel:rgba(12,20,36,.9); --line:rgba(140,170,220,.22);
+  --text:#e8eef8; --muted:#9fb0c8; --gold:#e0a54a; --teal:#38c6d9;
+  --red:#ff5a5f; --green:#3ccf8e; --purple:#9d8cff; --blue:#4f8cff;
+}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;overflow:hidden;background:var(--bg);color:var(--text);
+  font-family:"Microsoft JhengHei","PingFang TC","Noto Sans TC","WenQuanYi Zen Hei",system-ui,sans-serif}
+#topbar{position:fixed;left:0;right:0;top:0;height:60px;display:flex;align-items:center;gap:18px;
+  padding:10px 16px;background:linear-gradient(180deg,rgba(5,9,18,.97),rgba(5,9,18,.6));z-index:5}
+.brand{font-weight:700;font-size:16px;color:var(--gold);white-space:nowrap}
+.brand span{color:var(--muted);font-weight:400;margin-left:6px;font-size:13px}
+#scene-nav{display:flex;gap:6px;flex-wrap:wrap}
+#scene-nav button{background:rgba(255,255,255,.05);color:var(--muted);border:1px solid var(--line);
+  border-radius:16px;padding:4px 10px;font-size:13px;cursor:pointer;font-family:inherit}
+#scene-nav button:hover{color:var(--text);border-color:rgba(224,165,74,.6)}
+#scene-nav button.active{background:var(--gold);color:#1a1206;border-color:var(--gold);font-weight:700}
+#panel{position:fixed;left:16px;top:70px;width:370px;bottom:16px;overflow:auto;
+  background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 18px;z-index:4}
+.scene-num{color:var(--teal);font-size:13px;letter-spacing:.08em}
+#panel h1{font-size:22px;margin:4px 0 4px;color:#fff}
+.scene-sub{color:var(--gold);font-size:14px;margin-bottom:10px}
+.scene-desc{font-size:14px;line-height:1.7;color:#d3dcea}
+.scene-desc p{margin:0 0 8px}
+.scene-desc b{color:#fff}
+.scene-desc .src{font-size:12px;color:var(--muted)}
+.controls{margin-top:12px;display:flex;flex-direction:column;gap:10px}
+.ctl label{display:flex;justify-content:space-between;font-size:13px;color:var(--muted);margin-bottom:3px}
+.ctl label b{color:var(--text);font-weight:600}
+.ctl input[type=range]{width:100%;accent-color:var(--gold)}
+.ctl select{width:100%;background:#0d1a2c;color:var(--text);border:1px solid var(--line);border-radius:8px;padding:5px;font-family:inherit;font-size:13px}
+.tog{display:flex;align-items:center;gap:8px;font-size:13px;color:#d3dcea;cursor:pointer}
+.tog input{accent-color:var(--gold);width:16px;height:16px}
+.metrics{margin-top:14px;border-top:1px solid var(--line);padding-top:10px;display:grid;grid-template-columns:1fr auto;gap:4px 10px;font-size:13px}
+.metrics .k{color:var(--muted)}
+.metrics .v{text-align:right;font-weight:700;font-variant-numeric:tabular-nums}
+.v.ok{color:var(--green)} .v.warn{color:var(--gold)} .v.bad{color:var(--red)} .v.info{color:var(--teal)}
+.hint{margin-top:14px;font-size:12px;color:var(--muted);line-height:1.6;border-top:1px solid var(--line);padding-top:8px}
+#stage{position:fixed;left:400px;right:12px;top:66px;bottom:10px}
+#stage svg{width:100%;height:100%;display:block}
+#paused{position:fixed;right:20px;top:72px;background:rgba(224,165,74,.9);color:#1a1206;padding:4px 10px;border-radius:10px;font-size:13px;display:none;z-index:6}
+body.hide-ui #panel{display:none}
+body.hide-ui #stage{left:12px}
+svg text{font-family:"Microsoft JhengHei","PingFang TC","Noto Sans TC","WenQuanYi Zen Hei",sans-serif}
+.pp{cursor:pointer}
+@media (max-width:900px){#panel{width:auto;right:16px;bottom:auto;max-height:45vh}#stage{left:12px;top:50vh}}
+</style>
+</head>
+<body>
+<header id="topbar">
+  <div class="brand">1,000 位元超導系統供電設計 <span>痛點與需求互動動畫</span></div>
+  <nav id="scene-nav" aria-label="場景"></nav>
+</header>
+<aside id="panel">
+  <div class="scene-num" id="scene-num"></div>
+  <h1 id="scene-title"></h1>
+  <div class="scene-sub" id="scene-sub"></div>
+  <div class="scene-desc" id="scene-desc"></div>
+  <div class="controls" id="controls"></div>
+  <div class="metrics" id="metrics"></div>
+  <div class="hint">← → 切換場景 · 空白鍵 暫停 · H 隱藏面板 · F 全螢幕<br>網址加 <b>#場景代號</b> 可直接跳轉；加 <b>?noui=1</b> 以無面板模式開啟<br>標示「推論」「示意」者為估算或教學示意，非廠商實際數據</div>
+</aside>
+<div id="stage"><svg id="svg" viewBox="0 0 1200 760" preserveAspectRatio="xMidYMid meet"></svg></div>
+<div id="paused">⏸ 暫停中</div>
+
+<script>
+'use strict';
+// ───────────────────────── 共用模型（與 docs/1000量子位元系統供電設計.md 相同假設）─────────────────────────
+const PER_LINE = { // Krinner et al., EPJ QT 6, 2 (2019) Table 2（每條線被動熱負載，W）
+  drive: { s50: 45e-3, s4: 1.0e-3, still: 4e-6, cp: 0.4e-6, mxc: 0.013e-6 },
+  flux:  { s50: 56e-3, s4: 1.2e-3, still: 2e-6, cp: 0.29e-6, mxc: 0.025e-6 },
+  out:   { s50: 45e-3, s4: 1.0e-3, still: 4e-6, cp: 0.29e-6, mxc: 0.020e-6 },
+};
+const CAP = { s50: 52.5, s4: 1.9, still: 40e-3, cp: 0.2e-3, mxc: 30e-6 }; // 每支脈衝管／每個稀釋單元
+function lines(N, cryo) {
+  const C = Math.round(1.5 * N), fl = Math.ceil(N / 8);
+  const xy = cryo ? Math.ceil(N / 16) : N;
+  const flux = cryo ? Math.ceil((N + C) / 16) : N + C;
+  return { N, C, fl, xy, flux, ri: fl, ro: fl, pump: fl, total: xy + flux + 3 * fl,
+           dc: (cryo ? 0 : N + C) + 3 * fl };
+}
+function heat(L, o) { // o: {thin, nbti, cryo, N}
+  const k = o.thin ? 0.27 : 1, st = ['s50', 's4', 'still', 'cp', 'mxc'], r = {};
+  const drv = L.xy + L.ri + L.pump;
+  st.forEach(s => {
+    const fluxPer = (o.nbti && (s === 'cp' || s === 'mxc')) ? PER_LINE.out[s] : PER_LINE.flux[s];
+    r[s] = k * (drv * PER_LINE.drive[s] + L.flux * fluxPer + L.ro * PER_LINE.out[s]);
+  });
+  r.s4 += L.fl * 1e-3;                       // HEMT 約 1 mW（中間值）
+  if (o.cryo) r.s4 += o.N * 1.5e-3;          // 低溫 CMOS 每位元 1.5 mW（假設）
+  r.cp += L.pump * 0.23e-6;                  // TWPA 泵浦主動負載
+  r.fluxDC = o.nbti ? 0 : L.flux * 0.050e-6 * (o.thin ? 4 : 1); // 磁通直流（±1 mA 隨機）
+  return r;
+}
+const fmtW = w => w >= 1 ? w.toFixed(w >= 100 ? 0 : 1) + ' W' : w >= 1e-3 ? (w * 1e3).toFixed(w >= 0.1 ? 0 : 1) + ' mW' : (w * 1e6).toFixed(w >= 1e-4 ? 0 : 1) + ' µW';
+const fmtN = n => n.toLocaleString('en-US');
+const clamp = (x, a, b) => Math.max(a, Math.min(b, x));
+
+// ───────────────────────── SVG 小工具 ─────────────────────────
+const NS = 'http://www.w3.org/2000/svg';
+const svg = document.getElementById('svg');
+function el(tag, attrs = {}, parent = svg, text) {
+  const e = document.createElementNS(NS, tag);
+  for (const k in attrs) e.setAttribute(k, attrs[k]);
+  if (text !== undefined) e.textContent = text;
+  parent.appendChild(e); return e;
+}
+function txt(x, y, s, o = {}, parent = svg) {
+  return el('text', { x, y, fill: o.fill || '#e8eef8', 'font-size': o.size || 14, 'font-weight': o.bold ? 700 : 400,
+    'text-anchor': o.anchor || 'start', 'dominant-baseline': o.base || 'middle', opacity: o.op ?? 1 }, parent, s);
+}
+function box(x, y, w, h, o = {}, parent = svg) {
+  return el('rect', { x, y, width: w, height: h, rx: o.rx ?? 10, fill: o.fill || 'rgba(255,255,255,.04)',
+    stroke: o.stroke || 'rgba(140,170,220,.35)', 'stroke-width': o.sw || 1.5 }, parent);
+}
+// 沿路徑流動的粒子
+class Flow {
+  constructor(d, color, rate, parent = svg, width = 3) {
+    this.path = el('path', { d, fill: 'none', stroke: color, 'stroke-opacity': .25, 'stroke-width': width }, parent);
+    this.layer = el('g', {}, parent);
+    this.len = this.path.getTotalLength(); this.color = color; this.rate = rate; this.dots = []; this.acc = 0; this.parent = this.layer; this.on = true;
+  }
+  tick(dt) {
+    if (this.on) { this.acc += dt * this.rate; while (this.acc > 1) { this.acc -= 1; this.dots.push({ s: 0, e: el('circle', { r: 3.2, fill: this.color }, this.parent) }); } }
+    const sp = 140 * dt;
+    this.dots = this.dots.filter(d => { d.s += sp; if (d.s > this.len) { d.e.remove(); return false; }
+      const p = this.path.getPointAtLength(d.s); d.e.setAttribute('cx', p.x); d.e.setAttribute('cy', p.y); return true; });
+  }
+}
+
+// ───────────────────────── 面板控制 ─────────────────────────
+const $ = id => document.getElementById(id);
+const ctlBox = $('controls'), metBox = $('metrics');
+function slider(label, min, max, step, val, fmt, cb) {
+  const d = document.createElement('div'); d.className = 'ctl';
+  d.innerHTML = `<label><span>${label}</span><b></b></label><input type="range" min="${min}" max="${max}" step="${step}" value="${val}">`;
+  const b = d.querySelector('b'), i = d.querySelector('input');
+  const upd = () => { b.textContent = fmt(+i.value); cb(+i.value); };
+  i.addEventListener('input', upd); ctlBox.appendChild(d); b.textContent = fmt(val); return i;
+}
+function toggle(label, val, cb) {
+  const d = document.createElement('label'); d.className = 'tog';
+  d.innerHTML = `<input type="checkbox" ${val ? 'checked' : ''}><span>${label}</span>`;
+  const i = d.querySelector('input'); i.addEventListener('change', () => cb(i.checked)); ctlBox.appendChild(d); return i;
+}
+function select(label, opts, val, cb) {
+  const d = document.createElement('div'); d.className = 'ctl';
+  d.innerHTML = `<label><span>${label}</span></label><select>${opts.map(([v, t]) => `<option value="${v}" ${v === val ? 'selected' : ''}>${t}</option>`).join('')}</select>`;
+  const s = d.querySelector('select'); s.addEventListener('change', () => cb(s.value)); ctlBox.appendChild(d); return s;
+}
+function metrics(rows) {
+  metBox.innerHTML = rows.map(([k, v, c]) => `<div class="k">${k}</div><div class="v ${c || ''}">${v}</div>`).join('');
+}
+
+// ───────────────────────── 場景 ─────────────────────────
+const SCENES = [];
+const S = o => SCENES.push(o);
+
+// 1. 全景：電從哪裡來、到哪裡去
+S({ id: 'overview', title: '全景：電從哪裡來、到哪裡去', sub: '推論：1,000 位元設施約 80–320 kW（中點合計約 200 kW）',
+  desc: `<p>從中壓進線到稀釋冷凍機，電要經過<b>分層 UPS</b>，再分成三條匯流排：<b>機電</b>（壓縮機、冷卻水、GHS）、<b>乾淨</b>（控制電子、精密直流、時脈）、<b>運算</b>（即時解碼）。</p>
+  <p>粒子密度代表功率。紅色編號是痛點，<b>點擊</b>可看說明。勾選「模擬斷電」觀察哪些負載能撐住。</p>
+  <p class="src">負載數字：本 repo 設計文件第 4 章（推論）；壓縮機 12.5 kW（PT420 規格）。</p>`,
+  build(st) {
+    st.outage = false; st.ups = { cool: true, ctrl: true, comp: true }; st.sel = null;
+    const g = el('g', {});
+    const N = [ // 節點
+      ['grid', 40, 330, 130, 80, '中壓進線', '雙迴路＋發電機'],
+      ['ups', 230, 330, 140, 80, '分層 UPS', '80–270 kW'],
+      ['mech', 450, 120, 200, 90, '機電匯流排', '約 80 kW'],
+      ['clean', 450, 330, 200, 90, '乾淨匯流排', '約 70 kW'],
+      ['comp', 450, 540, 200, 90, '運算匯流排', '約 30 kW'],
+    ];
+    const loads = [
+      ['comp1', 730, 40, '壓縮機 ×3–5', '37.5–62.5 kW', 'mech'], ['chill', 730, 120, '冰水機與泵', '15–40 kW', 'mech'], ['ghs', 730, 200, 'GHS', '3–5 kW', 'mech'],
+      ['elec', 730, 290, '控制電子', '10–100 kW', 'clean'], ['dc', 730, 370, '精密直流 ×110 台', '3–7 kW', 'clean'], ['clk', 730, 450, '時脈與網路', '2–5 kW', 'clean'],
+      ['dec', 730, 540, '即時解碼', '5–50 kW', 'comp'], ['hvac', 730, 620, '電子區空調', '5–50 kW', 'comp'],
+    ];
+    N.forEach(([id, x, y, w, h, t, s]) => { box(x, y, w, h, { fill: 'rgba(56,198,217,.08)' }, g); txt(x + w / 2, y + 32, t, { anchor: 'middle', bold: true, size: 16 }, g); txt(x + w / 2, y + 58, s, { anchor: 'middle', fill: '#9fb0c8', size: 13 }, g); });
+    loads.forEach(([id, x, y, t, s]) => { box(x, y, 190, 62, {}, g); txt(x + 95, y + 23, t, { anchor: 'middle', bold: true }, g); txt(x + 95, y + 45, s, { anchor: 'middle', fill: '#e0a54a', size: 13 }, g); });
+    // 冷凍機
+    const fr = el('g', {}, g);
+    box(1000, 90, 160, 520, { fill: 'rgba(79,140,255,.06)', stroke: 'rgba(79,140,255,.6)' }, fr);
+    ['300 K', '50 K', '4 K', 'Still', 'CP', 'MXC'].forEach((t, i) => { const y = 140 + i * 80; el('line', { x1: 1015, x2: 1145, y1: y, y2: y, stroke: '#4f8cff', 'stroke-width': 3, 'stroke-opacity': .7 - i * .08 }, fr); txt(1080, y - 14, t, { anchor: 'middle', size: 12, fill: '#a9c6ff' }, fr); });
+    txt(1080, 590, '稀釋冷凍機', { anchor: 'middle', bold: true }, fr);
+    st.T = txt(1080, 625, 'MXC 10 mK', { anchor: 'middle', fill: '#3ccf8e', bold: true }, fr);
+    // 流
+    const F = (d, c, r) => new Flow(d, c, r, g);
+    st.flows = {
+      grid: F('M170,370 L230,370', '#e0a54a', 9),
+      mech: F('M370,360 C410,360 410,165 450,165', '#ff8a5c', 4), clean: F('M370,370 L450,375', '#38c6d9', 3.5), comp: F('M370,380 C410,380 410,585 450,585', '#9d8cff', 2),
+      comp1: F('M650,150 L730,71', '#ff8a5c', 2.5), chill: F('M650,165 L730,151', '#ff8a5c', 1.4), ghs: F('M650,180 L730,231', '#ff8a5c', .4),
+      elec: F('M650,360 L730,321', '#38c6d9', 2.6), dc: F('M650,375 L730,401', '#38c6d9', .5), clk: F('M650,390 L730,481', '#38c6d9', .4),
+      dec: F('M650,575 L730,571', '#9d8cff', 1.2), hvac: F('M650,595 L730,651', '#9d8cff', 1.2),
+      tofr1: F('M920,71 C960,71 960,200 1000,200', '#ff8a5c', 1.5), tofr2: F('M920,321 C960,321 960,380 1000,380', '#38c6d9', 1.5),
+    };
+    // 痛點
+    const PP = [
+      [300, 320, 1, 'UPS 要為「馬達群」設計', '3–5 台壓縮機的同時啟動電流決定 UPS 級距；冷卻中斷約 2 分鐘 QPU 就超過 1 K，恢復 2–5 天（LRZ）。'],
+      [550, 110, 2, '壓縮機：最大的單一負載', '每支脈衝管 ≈ 12.5 kW 壓縮機。熱預算不夠 → 多加脈衝管 → 多加電與冷卻水；還要 N+1。'],
+      [550, 320, 3, '數百個交流入口的接地', '約 250–350 台設備，每台 0.5–1 mA 漏電流 → 地線 0.1–0.35 A → 數百 µV 到 mV 的地電位，偏壓要求是 µV。'],
+      [728, 372, 4, '2,500–3,000 路精密直流', '約 110 台 24 通道儀器；單台合格不等於接起來合格；前一級電源的共模、熱漂移是關鍵。'],
+      [1080, 330, 5, '低溫熱預算', '不改架構時 50 K 約 200 W、4 K 約 4.4 W、MXC 被動＋直流約 200 µW，都超過或逼近 3 個單元的容量。'],
+      [410, 470, 6, '配電磁場', '250 kW、400 V 約 360 A；母線與變壓器要遠離冷凍機並成對配線（LRZ 要求交流 ≪ 1 µT）。'],
+      [728, 542, 7, '解碼要緊鄰機台', '超導回饋預算只有個位數到數十 µs；解碼機櫃沿用 AI 機房供電與液冷。'],
+    ];
+    st.pp = PP.map(([x, y, n, t, d]) => {
+      const gg = el('g', { class: 'pp' }, g);
+      const c = el('circle', { cx: x, cy: y, r: 13, fill: '#ff5a5f' }, gg); txt(x, y + 1, String(n), { anchor: 'middle', bold: true, size: 13, fill: '#fff' }, gg);
+      gg.addEventListener('click', () => { st.sel = n; renderPP(); });
+      return { c, t, d, n };
+    });
+    const renderPP = () => {
+      const p = st.pp.find(q => q.n === st.sel);
+      metrics([
+        ['設施總功率（中點）', '約 200 kW', 'info'], ['冷卻鏈（要撐過斷電）', '約 80 kW', 'warn'], ['UPS 容量', '80–270 kW', 'warn'],
+        ...(p ? [['痛點 ' + p.n, p.t, 'bad'], ['', '', '']] : []),
+      ]);
+      if (p) metBox.insertAdjacentHTML('beforeend', `<div class="k" style="grid-column:1/3;color:#d3dcea;line-height:1.6">${p.d}</div>`);
+    };
+    renderPP();
+    toggle('模擬斷電（市電中斷）', false, v => { st.outage = v; st.t = 0; });
+    toggle('冷卻鏈接 UPS＋發電機', true, v => st.ups.cool = v);
+    toggle('控制與量測接 UPS', true, v => st.ups.ctrl = v);
+    toggle('運算接 UPS', true, v => st.ups.comp = v);
+    st.t = 0; st.temp = 0.01;
+  },
+  tick(st, dt) {
+    st.t += dt; const out = st.outage, f = st.flows;
+    f.grid.on = !out;
+    const cool = !out || st.ups.cool, ctrl = !out || st.ups.ctrl, comp = !out || st.ups.comp;
+    [f.mech, f.comp1, f.chill, f.ghs, f.tofr1].forEach(x => x.on = cool);
+    [f.clean, f.elec, f.dc, f.clk, f.tofr2].forEach(x => x.on = ctrl);
+    [f.comp, f.dec, f.hvac].forEach(x => x.on = comp);
+    Object.values(f).forEach(x => x.tick(dt));
+    // 示意：冷卻中斷時 MXC 溫度上升（動畫時間 1 秒 ≈ 實際 20 秒）
+    if (out && !st.ups.cool) st.temp = Math.min(300, st.temp * Math.exp(dt * 0.9)); else st.temp = Math.max(0.01, st.temp * Math.exp(-dt * 0.5));
+    const T = st.temp; st.T.textContent = 'MXC ' + (T < 1 ? (T * 1000).toFixed(0) + ' mK' : T.toFixed(1) + ' K');
+    st.T.setAttribute('fill', T < 0.1 ? '#3ccf8e' : T < 1 ? '#e0a54a' : '#ff5a5f');
+    st.pp.forEach(p => p.c.setAttribute('r', 12 + 2.5 * Math.sin(st.t * 4 + p.n)));
+  } });
+
+// 2. 規模計算器
+S({ id: 'scale', title: '規模計算器：位元數一變，什麼先爆？', sub: '推論模型：可調耦合器 1.5 N、每饋線 8 位元、KIDE 級冷凍機 4,000 條線',
+  desc: `<p>拉動<b>位元數</b>與<b>每位元控制電子功耗</b>，看同軸線、直流通道、交流入口、地線電流、設施用電怎麼成長。紅色代表超過門檻。</p>
+  <p>切換成「低溫 CMOS＋多工」：進入冷凍機的線大幅減少（假設減為 1/16），但 4 K 要多出每位元約 1.5 mW 的熱負載，而且需要低溫電源轉換。</p>
+  <p class="src">門檻：KIDE > 4,000 條 RF 線；地電位以 5 mΩ 接地阻抗、每台 0.75 mA 估算；偏壓要求 µV 級。</p>`,
+  build(st) {
+    st.N = 1000; st.W = 50; st.cryo = false;
+    slider('量子位元數 N', 2, 4.3, 0.01, 3, v => fmtN(Math.round(10 ** v)), v => { st.N = Math.round(10 ** v); st.dirty = true; });
+    slider('每位元室溫控制電子功耗', 1, 150, 1, 50, v => v + ' W', v => { st.W = v; st.dirty = true; });
+    select('架構', [['rt', '今日：室溫控制、每位元獨立線'], ['cryo', '未來：低溫 CMOS＋多工']], 'rt', v => { st.cryo = v === 'cryo'; st.dirty = true; });
+    st.g = el('g', {}); st.dirty = true;
+  },
+  render(st) {
+    const g = st.g; g.innerHTML = '';
+    const L = lines(st.N, st.cryo), H = heat(L, { cryo: st.cryo, N: st.N });
+    const fridges = Math.max(1, Math.ceil(L.total / 4000));
+    const pts = Math.max(3 * fridges, Math.ceil(H.s50 / CAP.s50), Math.ceil(H.s4 / CAP.s4));
+    const dcUnits = Math.ceil(L.dc / 24), inst = Math.ceil(st.N / 7) + dcUnits + 10;
+    const elec = st.N * (st.cryo ? Math.min(st.W, 5) : st.W) / 1000, comp = pts * 12.5;
+    const dec = st.N / 1000 * 25, hv = 0.4 * (elec + dcUnits * 0.045 + dec);
+    const kw = comp + 0.6 * comp + 4 * fridges + elec + dcUnits * 0.045 + 3 + dec + hv;
+    const pe = inst * 0.75e-3, gp = pe * 5e-3;
+    const rows = [
+      ['同軸線（進冷凍機）', L.total, 4000, fmtN(L.total) + ' 條', L.total > 4000 ? `需 ${fridges} 台 KIDE 級` : '1 台 KIDE 級內'],
+      ['精密直流通道', L.dc, 3000, fmtN(L.dc) + ' 路', `${fmtN(dcUnits)} 台 24 通道儀器`],
+      ['交流入口（儀器）', inst, 350, fmtN(inst) + ' 個', '每個都有 Y 電容'],
+      ['地線電流總和', pe, 0.1, pe.toFixed(2) + ' A', `地電位約 ${(gp * 1e3).toFixed(gp < 1e-3 ? 2 : 1)} mV（偏壓要 µV）`],
+      ['脈衝管／壓縮機', pts, 5, pts + ' 支', `${comp.toFixed(1)} kW 壓縮機`],
+      ['4 K 熱負載', H.s4, CAP.s4 * pts, fmtW(H.s4), `容量 ${fmtW(CAP.s4 * pts)}`],
+      ['設施總功率', kw, 320, kw.toFixed(0) + ' kW', kw > 1000 ? 'MW 級量子資料中心' : '資料中心等級'],
+    ];
+    txt(40, 40, `N = ${fmtN(st.N)} 位元　·　耦合器 ${fmtN(L.C)}　·　讀取饋線 ${fmtN(L.fl)}`, { size: 20, bold: true, fill: '#e0a54a' }, g);
+    rows.forEach(([name, val, ref, vs, note], i) => {
+      const y = 90 + i * 92, frac = val / ref, w = 640 * clamp(Math.log10(1 + 9 * frac) / Math.log10(1 + 9 * 4), 0, 1);
+      const bad = (name.includes('4 K') ? val > ref : frac > 1);
+      txt(40, y + 18, name, { size: 16, bold: true }, g);
+      box(260, y, 640, 34, { rx: 6, fill: 'rgba(255,255,255,.04)' }, g);
+      el('rect', { x: 260, y, width: Math.max(2, w), height: 34, rx: 6, fill: bad ? '#ff5a5f' : frac > 0.75 ? '#e0a54a' : '#38c6d9', 'fill-opacity': .8 }, g);
+      const refX = 260 + 640 * Math.log10(10) / Math.log10(37);
+      if (!name.includes('4 K')) { el('line', { x1: refX, x2: refX, y1: y - 4, y2: y + 38, stroke: '#fff', 'stroke-dasharray': '4 3', 'stroke-opacity': .5 }, g); }
+      txt(915, y + 10, vs, { size: 16, bold: true, fill: bad ? '#ff5a5f' : '#e8eef8' }, g);
+      txt(915, y + 30, note, { size: 12, fill: '#9fb0c8' }, g);
+    });
+    txt(260 + 640 * 1 / Math.log10(37), 735, '虛線＝門檻（1,000 位元參考值）', { anchor: 'middle', size: 12, fill: '#9fb0c8' }, g);
+    metrics([['同軸線', fmtN(L.total), L.total > 4000 ? 'bad' : 'ok'], ['精密直流', fmtN(L.dc) + ' 路', 'info'], ['KIDE 級冷凍機', fridges + ' 台', fridges > 1 ? 'warn' : 'ok'],
+      ['壓縮機', comp.toFixed(1) + ' kW', 'warn'], ['控制電子', elec.toFixed(1) + ' kW', 'info'], ['設施總功率', kw.toFixed(0) + ' kW', kw > 320 ? 'bad' : 'warn'], ['地線電流', pe.toFixed(2) + ' A', pe > 0.1 ? 'bad' : 'warn']]);
+  },
+  tick(st) { if (st.dirty) { st.dirty = false; this.render(st); } } });
+
+// 3. 低溫熱預算
+S({ id: 'heat', title: '低溫熱預算：熱帳怎麼變成電', sub: '推論：Krinner 2019 每條線實測熱負載 × 線數',
+  desc: `<p>每一層冷盤的條狀圖是<b>負載 / 可用冷卻</b>。紅色代表超過。調整位元數、線材、稀釋單元數，找出讓熱帳過關的組合，並看它需要多少壓縮機電力。</p>
+  <p><b>細線</b>：被動熱負載降約 4 倍，但不鏽鋼磁通直流熱反而 ×4。<b>NbTi 磁通線</b>：消除直流主動熱負載。<b>混合腔 30 mK</b>：冷卻約加倍（Krinner）。</p>
+  <p class="src">每單元／每支脈衝管容量：50 K 約 52.5 W、4 K 約 1.9 W（PT420）、Still 40 mW、CP 0.2 mW（容忍 200 mK 時 0.4 mW）、MXC 30 µW @20 mK（KIDE 每單元）。</p>`,
+  build(st) {
+    st.N = 1000; st.thin = false; st.nbti = false; st.du = 3; st.hot = false; st.cryo = false;
+    slider('量子位元數 N', 100, 3000, 50, 1000, v => fmtN(v), v => { st.N = v; st.dirty = true; });
+    slider('稀釋單元／脈衝管數', 1, 8, 1, 3, v => v + ' 組', v => { st.du = v; st.dirty = true; });
+    toggle('改用 0.047" 細同軸', false, v => { st.thin = v; st.dirty = true; });
+    toggle('磁通線改用超導 NbTi', false, v => { st.nbti = v; st.dirty = true; });
+    toggle('容忍 CP 200 mK、MXC 30 mK', false, v => { st.hot = v; st.dirty = true; });
+    toggle('低溫 CMOS＋多工（4 K 每位元 1.5 mW）', false, v => { st.cryo = v; st.dirty = true; });
+    st.g = el('g', {}); st.particles = el('g', {}); st.dirty = true; st.drops = [];
+  },
+  render(st) {
+    const g = st.g; g.innerHTML = '';
+    const L = lines(st.N, st.cryo), H = heat(L, { thin: st.thin, nbti: st.nbti, cryo: st.cryo, N: st.N });
+    const cap = { s50: CAP.s50 * st.du, s4: CAP.s4 * st.du, still: CAP.still * st.du, cp: (st.hot ? 0.4e-3 : CAP.cp) * st.du, mxc: (st.hot ? 60e-6 : CAP.mxc) * st.du };
+    const rows = [['s50', '50 K', H.s50], ['s4', '4 K', H.s4], ['still', 'Still', H.still], ['cp', 'CP', H.cp], ['mxc', 'MXC 被動', H.mxc], ['mxc', 'MXC 磁通直流', H.fluxDC], ['mxc', 'MXC 合計', H.mxc + H.fluxDC]];
+    // 冷凍機示意
+    box(60, 40, 220, 680, { fill: 'rgba(79,140,255,.05)', stroke: 'rgba(79,140,255,.5)' }, g);
+    st.plates = [];
+    ['50 K', '4 K', 'Still', 'CP', 'MXC'].forEach((t, i) => { const y = 120 + i * 130; el('rect', { x: 70, y, width: 200, height: 10, rx: 3, fill: '#4f8cff', 'fill-opacity': .7 - i * .1 }, g); txt(170, y - 14, t, { anchor: 'middle', size: 13, fill: '#a9c6ff' }, g); st.plates.push(y); });
+    el('rect', { x: 140, y: 690, width: 60, height: 18, rx: 3, fill: '#e0a54a' }, g); txt(170, 735, '量子晶片', { anchor: 'middle', size: 12, fill: '#e0a54a' }, g);
+    const over = {};
+    rows.forEach(([k, name, load], i) => {
+      const y = 70 + i * 92, c = cap[k], frac = load / c; over[name] = frac;
+      txt(320, y + 16, name, { size: 16, bold: true }, g);
+      box(470, y, 460, 32, { rx: 6 }, g);
+      el('rect', { x: 470, y, width: 460 * clamp(frac, 0, 1.6) / 1.6, height: 32, rx: 6, fill: frac > 1 ? '#ff5a5f' : frac > .75 ? '#e0a54a' : '#3ccf8e', 'fill-opacity': .85 }, g);
+      const x1 = 470 + 460 / 1.6; el('line', { x1, x2: x1, y1: y - 4, y2: y + 36, stroke: '#fff', 'stroke-dasharray': '4 3', 'stroke-opacity': .6 }, g);
+      txt(945, y + 9, `${fmtW(load)} / ${fmtW(c)}`, { size: 14, bold: true, fill: frac > 1 ? '#ff5a5f' : '#e8eef8' }, g);
+      txt(945, y + 28, frac > 1 ? `超過 ${(frac * 100 - 100).toFixed(0)}%` : `使用 ${(frac * 100).toFixed(0)}%`, { size: 12, fill: '#9fb0c8' }, g);
+    });
+    txt(470 + 460 / 1.6, 735, '虛線＝可用冷卻上限', { anchor: 'middle', size: 12, fill: '#9fb0c8' }, g);
+    const ok = Object.values(over).every(f => f <= 1);
+    st.ok = ok; st.L = L;
+    metrics([['進冷凍機的線', fmtN(L.total) + ' 條', 'info'], ['稀釋單元／脈衝管', st.du + ' 組', 'info'], ['壓縮機電力', (st.du * 12.5).toFixed(1) + ' kW', 'warn'],
+      ['加冷卻水（約 0.6×）', (st.du * 12.5 * 0.6).toFixed(1) + ' kW', 'warn'], ['熱帳', ok ? '過關' : '不過關', ok ? 'ok' : 'bad']]);
+  },
+  tick(st, dt) {
+    if (st.dirty) { st.dirty = false; this.render(st); }
+    // 熱從上往下流的粒子
+    const rate = Math.min(40, 6 + (st.L ? st.L.total / 200 : 0));
+    st.acc = (st.acc || 0) + dt * rate;
+    while (st.acc > 1) { st.acc -= 1; st.drops.push({ x: 90 + Math.random() * 160, y: 50, e: el('circle', { r: 2.5, fill: st.ok ? '#38c6d9' : '#ff5a5f' }, st.particles) }); }
+    st.drops = st.drops.filter(d => { d.y += 120 * dt; d.e.setAttribute('cx', d.x); d.e.setAttribute('cy', d.y); if (d.y > 690) { d.e.remove(); return false; } return true; });
+  } });
+
+// 4. 接地與共模
+S({ id: 'ground', title: '接地與共模：上百台儀器一起漏電', sub: '推論：每台合規的漏電流，加起來就是 µV 級量測的雜訊源',
+  desc: `<p>每台儀器的交流電源都有 <b>Y 電容</b>，把工頻與切換頻率的電流漏到<b>保護地線</b>；同軸屏蔽又把儀器外殼和冷凍機連成<b>迴路</b>。紅點代表接地電流。</p>
+  <p>勾選<b>機櫃集中供電</b>：交流入口從每台一個變成每櫃一個，漏電流大幅減少。勾選<b>量子等級隔離 DC-DC</b>：隔離電容降低，共模尖峰變小。</p>
+  <p class="src">共模尖峰 I = C·dV/dt，以 48 V／20 ns 切換邊緣估算；地電位 = 地線電流 × 接地阻抗。</p>`,
+  build(st) {
+    st.n = 250; st.leak = 0.75; st.R = 5; st.shelf = false; st.C = 100; st.qdc = false;
+    slider('交流入口（儀器台數）', 10, 400, 10, 250, v => v + ' 台', v => { st.n = v; st.dirty = true; });
+    slider('每台漏電流', 0.1, 3.5, 0.05, 0.75, v => v.toFixed(2) + ' mA', v => { st.leak = v; st.dirty = true; });
+    slider('接地阻抗', 1, 20, 1, 5, v => v + ' mΩ', v => { st.R = v; st.dirty = true; });
+    slider('隔離 DC-DC 的隔離電容', 2, 1000, 1, 100, v => v + ' pF', v => { st.C = v; st.dirty = true; });
+    toggle('機櫃集中供電（每櫃一個交流入口）', false, v => { st.shelf = v; st.dirty = true; });
+    toggle('量子等級隔離 DC-DC（隔離電容 ≤ 10 pF）', false, v => { st.qdc = v; st.dirty = true; });
+    const g = el('g', {});
+    // 儀器列
+    st.inst = [];
+    for (let i = 0; i < 12; i++) { const x = 60 + i * 72; box(x, 120, 60, 90, { fill: 'rgba(56,198,217,.07)' }, g); txt(x + 30, 145, '儀器', { anchor: 'middle', size: 12 }, g); el('path', { d: `M${x + 22},175 l8,0 m-8,8 l8,0 M${x + 26},175 v-6 M${x + 26},183 v27`, stroke: '#e0a54a', 'stroke-width': 2, fill: 'none' }, g); txt(x + 46, 180, 'Y', { size: 11, fill: '#e0a54a' }, g); st.inst.push(x); }
+    txt(940, 165, '× 數百台', { size: 18, bold: true, fill: '#e0a54a' }, g);
+    // 市電與地線
+    el('line', { x1: 40, x2: 920, y1: 90, y2: 90, stroke: '#9fb0c8', 'stroke-width': 3 }, g); txt(40, 70, '市電（L／N）', { size: 13, fill: '#9fb0c8' }, g);
+    st.inst.forEach(x => el('line', { x1: x + 30, x2: x + 30, y1: 90, y2: 120, stroke: '#9fb0c8', 'stroke-width': 2 }, g));
+    txt(40, 248, '保護地線（PE）', { size: 13, fill: '#3ccf8e' }, g);
+    // 冷凍機
+    box(980, 300, 170, 330, { fill: 'rgba(79,140,255,.06)', stroke: 'rgba(79,140,255,.6)' }, g); txt(1065, 330, '稀釋冷凍機', { anchor: 'middle', bold: true }, g); txt(1065, 355, '（金屬框架接地）', { anchor: 'middle', size: 12, fill: '#9fb0c8' }, g);
+    el('rect', { x: 1040, y: 560, width: 50, height: 16, fill: '#e0a54a' }, g); txt(1065, 600, '量子晶片：µV 級偏壓', { anchor: 'middle', size: 12, fill: '#e0a54a' }, g);
+    // 地網
+    box(40, 680, 1110, 40, { rx: 6, fill: 'rgba(60,207,142,.07)', stroke: 'rgba(60,207,142,.5)' }, g); txt(595, 700, '建築接地（毫歐等級的阻抗 → 電流 × 阻抗 = 地電位差）', { anchor: 'middle', size: 13, fill: '#3ccf8e' }, g);
+    st.flows = [];
+    const PE = new Flow('M66,230 L930,230 L930,690', '#ff5a5f', 6, g, 4); st.flows.push(PE);
+    st.inst.forEach(x => st.flows.push(new Flow(`M${x + 26},210 L${x + 26},230`, '#ff5a5f', 1.2, g, 2)));
+    const SH = new Flow('M300,210 C300,420 700,520 980,520', '#ff8a5c', 3, g, 3); st.flows.push(SH);
+    const SH2 = new Flow('M600,210 C620,380 800,420 980,440', '#ff8a5c', 3, g, 3); st.flows.push(SH2);
+    st.flows.push(new Flow('M1150,630 L1150,690', '#ff8a5c', 3, g, 3));
+    txt(640, 470, '同軸屏蔽層：迴路的另一半', { size: 13, fill: '#ff8a5c' }, g);
+    st.out = el('g', {}, g); st.dirty = true; st.PE = PE; st.SH = [SH, SH2];
+  },
+  render(st) {
+    const n = st.shelf ? Math.ceil(st.n / 12) : st.n;
+    const leak = st.shelf ? Math.min(st.leak, 0.5) : st.leak;
+    const pe = n * leak * 1e-3, gp = pe * st.R * 1e-3;
+    const C = st.qdc ? Math.min(st.C, 10) : st.C, spike = C * 1e-12 * 48 / 20e-9;
+    st.PE.rate = clamp(pe * 40, 0.3, 20); st.SH.forEach(f => f.rate = clamp(pe * 12 + spike * 10, 0.2, 12));
+    const g = st.out; g.innerHTML = '';
+    box(330, 290, 560, 150, { fill: 'rgba(8,14,26,.85)' }, g);
+    txt(350, 320, `交流入口 ${fmtN(n)} 個 × ${leak.toFixed(2)} mA`, { size: 16 }, g);
+    txt(350, 350, `地線電流 ≈ ${pe.toFixed(3)} A`, { size: 18, bold: true, fill: pe > 0.1 ? '#ff5a5f' : '#e0a54a' }, g);
+    txt(350, 382, `地電位差 ≈ ${gp >= 1e-3 ? (gp * 1e3).toFixed(2) + ' mV' : (gp * 1e6).toFixed(0) + ' µV'}（偏壓要求 µV 級）`, { size: 16, fill: gp > 5e-6 ? '#ff5a5f' : '#3ccf8e' }, g);
+    txt(350, 414, `每顆 DC-DC 共模尖峰 ≈ ${spike >= 0.01 ? spike.toFixed(2) + ' A' : (spike * 1e3).toFixed(1) + ' mA'}（${C} pF × 48 V／20 ns）`, { size: 14, fill: spike > 0.05 ? '#ff8a5c' : '#9fb0c8' }, g);
+    metrics([['交流入口', fmtN(n), n > 100 ? 'warn' : 'ok'], ['地線電流', pe.toFixed(3) + ' A', pe > 0.1 ? 'bad' : 'warn'],
+      ['地電位差', gp >= 1e-3 ? (gp * 1e3).toFixed(2) + ' mV' : (gp * 1e6).toFixed(0) + ' µV', gp > 5e-6 ? 'bad' : 'ok'], ['共模尖峰', (spike * 1e3).toFixed(1) + ' mA', spike > 0.05 ? 'bad' : 'ok']]);
+  },
+  tick(st, dt) { if (st.dirty) { st.dirty = false; this.render(st); } st.flows.forEach(f => f.tick(dt)); } });
+
+// 5. 斷電時間軸
+S({ id: 'outage', title: '斷電時間軸：2 分鐘換 2–5 天', sub: '示意曲線：依 LRZ 公開數據（約 2 分鐘超過 1 K、恢復 2–5 天）繪製',
+  desc: `<p>選擇備援方案後按「播放」：時間軸是<b>對數座標</b>（1 秒到 10 天），曲線是混合腔溫度。</p>
+  <p>只有控制電子接 UPS 時，冷卻鏈一停，約 2 分鐘晶片就超過 1 K，之後要 2–5 天重新降溫與完整校準。冷卻鏈接 UPS 並由發電機接手，溫度不動。</p>
+  <p class="src">曲線為教學示意，非實測；時間點引用 LRZ／IQM（arXiv:2509.12949）。</p>`,
+  build(st) {
+    st.sc = 'none'; st.ups = 15; st.play = 0; st.running = true;
+    select('備援方案', [['none', 'A：只有控制電子接 UPS'], ['full', 'B：冷卻鏈 UPS＋發電機接手'], ['gen', 'C：冷卻鏈 UPS，但發電機沒起來']], 'none', v => { st.sc = v; st.play = 0; st.dirty = true; });
+    slider('UPS 撐住冷卻鏈的時間（方案 C）', 5, 60, 5, 15, v => v + ' 分鐘', v => { st.ups = v; st.play = 0; st.dirty = true; });
+    const g = el('g', {}); st.g = g;
+    const X0 = 120, X1 = 1140, Y0 = 640, Y1 = 80;
+    st.X = t => X0 + (X1 - X0) * (Math.log10(t) - 0) / (Math.log10(864000) - 0);
+    st.Y = T => Y0 + (Y1 - Y0) * (Math.log10(T) + 2) / (Math.log10(300) + 2);
+    el('line', { x1: X0, x2: X1, y1: Y0, y2: Y0, stroke: '#9fb0c8' }, g); el('line', { x1: X0, x2: X0, y1: Y0, y2: Y1, stroke: '#9fb0c8' }, g);
+    [[1, '1 秒'], [60, '1 分'], [120, '2 分'], [3600, '1 小時'], [86400, '1 天'], [432000, '5 天']].forEach(([t, s]) => { const x = st.X(t); el('line', { x1: x, x2: x, y1: Y0, y2: Y1, stroke: 'rgba(140,170,220,.15)' }, g); txt(x, Y0 + 22, s, { anchor: 'middle', size: 12, fill: '#9fb0c8' }, g); });
+    [[0.01, '10 mK'], [0.1, '100 mK'], [1, '1 K'], [4, '4 K'], [50, '50 K'], [300, '300 K']].forEach(([T, s]) => { const y = st.Y(T); el('line', { x1: X0, x2: X1, y1: y, y2: y, stroke: T === 1 ? 'rgba(255,90,95,.5)' : 'rgba(140,170,220,.12)', 'stroke-dasharray': T === 1 ? '6 4' : '' }, g); txt(X0 - 10, y, s, { anchor: 'end', size: 12, fill: T === 1 ? '#ff5a5f' : '#9fb0c8' }, g); });
+    txt(st.X(130), st.Y(1) - 14, '超過 1 K → 需要完整校準', { size: 13, fill: '#ff5a5f' }, g);
+    txt(X1, Y0 + 44, '時間（對數）', { anchor: 'end', size: 12, fill: '#9fb0c8' }, g);
+    st.path = el('path', { fill: 'none', stroke: '#e0a54a', 'stroke-width': 3 }, g);
+    st.cur = el('circle', { r: 7, fill: '#fff' }, g);
+    st.lab = txt(X0 + 20, Y1 - 30, '', { size: 18, bold: true }, g);
+    st.dirty = true;
+  },
+  curve(st, t) { // 示意：冷卻停止時刻 t0，升溫；恢復後降溫 3.5 天
+    const t0 = st.sc === 'none' ? 0 : st.sc === 'gen' ? st.ups * 60 : Infinity;
+    if (t < t0) return 0.01;
+    const dt = t - t0, Tmax = 300;
+    const up = Math.min(Tmax, 0.01 * Math.pow(1 + dt / 1.2, 1.0)); // 約 120 秒到 1 K
+    const restart = t0 + 3600; // 假設 1 小時後恢復供電、開始重新降溫
+    if (t < restart) return up;
+    const Tr = Math.min(Tmax, 0.01 * (1 + 3600 / 1.2));
+    const cool = 3.5 * 86400, x = Math.min(1, (t - restart) / cool);
+    return Math.max(0.01, Tr * Math.pow(0.01 / Tr, x));
+  },
+  render(st) {
+    let d = '';
+    for (let i = 0; i <= 300; i++) { const t = 10 ** (i / 300 * Math.log10(864000)); d += (i ? 'L' : 'M') + st.X(t).toFixed(1) + ',' + st.Y(this.curve(st, t)).toFixed(1); }
+    st.path.setAttribute('d', d);
+    const down = st.sc === 'none' ? '約 3–5 天（含重新降溫與完整校準）' : st.sc === 'full' ? '0（不受影響）' : '約 3–5 天（UPS 耗盡後同 A）';
+    metrics([['方案', st.sc === 'none' ? 'A' : st.sc === 'full' ? 'B' : 'C', 'info'], ['冷卻鏈負載', '55–110 kW', 'warn'], ['停機時間（示意）', down, st.sc === 'full' ? 'ok' : 'bad']]);
+  },
+  tick(st, dt) {
+    if (st.dirty) { st.dirty = false; this.render(st); }
+    st.play = (st.play + dt / 12) % 1.05; const p = Math.min(1, st.play);
+    const t = 10 ** (p * Math.log10(864000)), T = this.curve(st, t);
+    st.cur.setAttribute('cx', st.X(t)); st.cur.setAttribute('cy', st.Y(T));
+    const ts = t < 60 ? t.toFixed(0) + ' 秒' : t < 3600 ? (t / 60).toFixed(1) + ' 分' : t < 86400 ? (t / 3600).toFixed(1) + ' 小時' : (t / 86400).toFixed(1) + ' 天';
+    st.lab.textContent = `t = ${ts}　MXC ≈ ${T < 1 ? (T * 1000).toFixed(0) + ' mK' : T.toFixed(1) + ' K'}`;
+    st.lab.setAttribute('fill', T < 0.1 ? '#3ccf8e' : T < 1 ? '#e0a54a' : '#ff5a5f');
+  } });
+
+// 6. 磁場與配電佈局
+S({ id: 'field', title: '磁場與配電佈局：母線離冷凍機多遠？', sub: '推論：B = µ₀I／2πr（單根）、µ₀Id／2πr²（成對）、偶極約 1/r³',
+  desc: `<p>俯視圖：中央是冷凍機，左邊是母線或變壓器。色塊是磁場強度（對數）。調整電流、距離與配線方式，看冷凍機位置的磁場是否符合 LRZ 要求：<b>直流 &lt; 100 µT</b>、<b>交流 ≪ 1 µT</b>。</p>
+  <p>800 VDC 這類大電流直流母線會產生<b>靜磁場</b>；交流母線產生 50/60 Hz 磁場。電子顯微鏡機房的作法：<b>先拉距離，再用補償線圈，最後才屏蔽</b>。</p>`,
+  build(st) {
+    st.I = 360; st.d = 3; st.mode = 'pair'; st.s = 0.1; st.ac = true;
+    slider('電流', 50, 2000, 10, 360, v => v + ' A', v => { st.I = v; st.dirty = true; });
+    slider('與冷凍機距離', 0.5, 10, 0.1, 3, v => v.toFixed(1) + ' m', v => { st.d = v; st.dirty = true; });
+    select('配線方式', [['single', '單根（淨電流不為零）'], ['pair', '去回線成對'], ['dipole', '變壓器（近似偶極）']], 'pair', v => { st.mode = v; st.dirty = true; });
+    slider('成對間距', 0.02, 0.5, 0.01, 0.1, v => (v * 100).toFixed(0) + ' cm', v => { st.s = v; st.dirty = true; });
+    toggle('交流（50/60 Hz）', true, v => { st.ac = v; st.dirty = true; });
+    st.g = el('g', {}); st.dirty = true;
+  },
+  B(st, r) { const mu = 2e-7; r = Math.max(r, 0.05); if (st.mode === 'single') return mu * st.I / r; if (st.mode === 'pair') return mu * st.I * st.s / (r * r); return mu * st.I * 0.2 / (r * r * r); },
+  render(st) {
+    const g = st.g; g.innerHTML = '';
+    const ox = 130, oy = 380, scale = 95; // 每公尺 95 px
+    const fx = ox + st.d * scale;
+    // 熱圖
+    const cols = 48, rows = 30, cw = 1100 / cols, ch = 660 / rows;
+    for (let i = 0; i < cols; i++) for (let j = 0; j < rows; j++) {
+      const x = 60 + i * cw + cw / 2, y = 60 + j * ch + ch / 2, r = st.mode === 'dipole' ? Math.hypot((x - ox) / scale, (y - oy) / scale) : Math.abs(x - ox) / scale;
+      const B = this.B(st, r) * 1e6, v = clamp((Math.log10(B) + 1) / 4, 0, 1);
+      el('rect', { x: 60 + i * cw, y: 60 + j * ch, width: cw + .5, height: ch + .5, fill: `hsl(${(1 - v) * 200},80%,${18 + v * 30}%)`, 'fill-opacity': .8 }, g);
+    }
+    // 母線
+    if (st.mode === 'dipole') { box(ox - 30, oy - 30, 60, 60, { fill: '#e0a54a', stroke: '#fff' }, g); txt(ox, oy + 50, '變壓器', { anchor: 'middle', bold: true }, g); }
+    else { el('rect', { x: ox - 8, y: 60, width: 16, height: 660, fill: '#e0a54a' }, g); txt(ox + 14, 80, st.mode === 'pair' ? '母線（成對）' : '母線（單根）', { bold: true }, g); }
+    // 冷凍機
+    el('circle', { cx: fx, cy: oy, r: 34, fill: 'rgba(79,140,255,.25)', stroke: '#fff', 'stroke-width': 2 }, g);
+    txt(fx, oy, '冷凍機', { anchor: 'middle', bold: true, size: 13 }, g);
+    el('line', { x1: ox, x2: fx - 34, y1: oy + 60, y2: oy + 60, stroke: '#fff', 'marker-end': '' }, g);
+    txt((ox + fx) / 2, oy + 78, st.d.toFixed(1) + ' m', { anchor: 'middle', size: 13 }, g);
+    const B = this.B(st, st.d) * 1e6, lim = st.ac ? 1 : 100, ok = st.ac ? B < 0.1 : B < 100;
+    box(760, 80, 400, 150, { fill: 'rgba(8,14,26,.88)' }, g);
+    txt(780, 112, `冷凍機位置磁場 ≈ ${B >= 1 ? B.toFixed(1) : B.toFixed(3)} µT`, { size: 18, bold: true, fill: ok ? '#3ccf8e' : '#ff5a5f' }, g);
+    txt(780, 145, `${st.ac ? '交流要求 ≪ 1 µT（此處以 0.1 µT 判斷）' : '直流要求 < 100 µT'}`, { size: 14, fill: '#9fb0c8' }, g);
+    txt(780, 178, ok ? '符合' : '超過：拉開距離、成對配線、補償線圈或屏蔽', { size: 14, fill: ok ? '#3ccf8e' : '#ff5a5f' }, g);
+    txt(780, 208, '色塊：藍＝弱、紅＝強（對數）', { size: 12, fill: '#9fb0c8' }, g);
+    metrics([['電流', st.I + ' A', 'info'], ['距離', st.d.toFixed(1) + ' m', 'info'], ['冷凍機處磁場', (B >= 1 ? B.toFixed(1) : B.toFixed(3)) + ' µT', ok ? 'ok' : 'bad'], ['要求', st.ac ? '≪ 1 µT（交流）' : '< 100 µT（直流）', 'warn']]);
+  },
+  tick(st) { if (st.dirty) { st.dirty = false; this.render(st); } } });
+
+// 7. 台達路線圖
+S({ id: 'roadmap', title: '台達要怎麼做：三階段路線圖', sub: '代號對應簡報「產品 × 平台矩陣」A–I；點卡片可跳到對應的痛點場景',
+  desc: `<p><b>0–1 年</b>建立案例與規格；<b>1–3 年</b>以 OEM／ODM 進入冷凍機與控制電子的供應鏈；<b>3–7 年</b>跟上 10,000 位元與 MW 級量子資料中心。</p>
+  <p>三個先建立的能力：<b>量子等級電源規格（QGP）與量測</b>、<b>電源事件 → 量子位元的驗證平台</b>、<b>夥伴生態</b>。</p>`,
+  build(st) {
+    const cols = [
+      ['0–1 年：建立案例與規格', '#3ccf8e', [['A＋B', '分層 UPS＋精密空調參考設計', 'outage'], ['H', '現場勘查：磁場、接地電流、電力品質', 'field'], ['QGP', '量子等級電源規格的量測方法', 'ground'], ['OCP', '加入量子工作小組、提出分層 UPS', 'overview']]],
+      ['1–3 年：進入供應鏈', '#e0a54a', [['F', '壓縮機變頻驅動（軟啟動、N+1）', 'heat'], ['D', '量子等級隔離 DC-DC 與 AC-DC 前端', 'ground'], ['A／D', '機櫃集中供電＋接地電流監測 PDU', 'ground'], ['G', '精密線圈電流源（原子平台）', 'overview']]],
+      ['3–7 年：下一代架構', '#9d8cff', [['I', '4 K GaN 低溫電源轉換', 'heat'], ['I', '高通道數直流供電', 'scale'], ['A', '800 VDC 模組化量子資料中心', 'scale'], ['E', '解碼機櫃供電與液冷', 'overview']]],
+    ];
+    st.cards = [];
+    cols.forEach(([t, c, items], i) => {
+      const x = 40 + i * 380;
+      txt(x + 170, 50, t, { anchor: 'middle', size: 20, bold: true, fill: c });
+      el('line', { x1: x, x2: x + 340, y1: 72, y2: 72, stroke: c, 'stroke-width': 3 });
+      items.forEach(([tag, s, go], j) => {
+        const g = el('g', { class: 'pp', opacity: 0 }); const y = 100 + j * 150;
+        box(x, y, 340, 125, { fill: 'rgba(255,255,255,.05)', stroke: c }, g);
+        el('rect', { x: x + 16, y: y + 16, width: 70, height: 28, rx: 14, fill: c }, g); txt(x + 51, y + 31, tag, { anchor: 'middle', bold: true, fill: '#0b1220', size: 13 }, g);
+        txt(x + 16, y + 72, s, { size: 15, bold: true }, g);
+        txt(x + 16, y + 102, '→ 看痛點：' + SCENES.find(q => q.id === go).title.split('：')[0], { size: 12, fill: '#9fb0c8' }, g);
+        g.addEventListener('click', () => go && App.go(SCENES.findIndex(q => q.id === go)));
+        st.cards.push({ g, delay: i * 1.2 + j * 0.25 });
+      });
+    });
+    st.t = 0;
+    metrics([['先建立的能力 1', 'QGP 規格與量測', 'info'], ['先建立的能力 2', '驗證平台', 'info'], ['先建立的能力 3', '夥伴生態', 'info']]);
+  },
+  tick(st, dt) { st.t += dt; st.cards.forEach(c => c.g.setAttribute('opacity', clamp((st.t - c.delay) * 2, 0, 1))); } });
+
+// 8. 開發計畫
+const PLAN = [
+  { n: 1, st: 0, name: '分層 UPS＋空調參考設計', tag: 'A＋B', what: '可直接給場地設計單位用的參考設計（單線圖、容量計算、驗收項目）＋一個實際運轉的示範場域',
+    first: '取得場地規劃文件；量一次壓縮機啟動波形', done: '示範場域經過一次市電中斷，冷凍機溫度不離開運轉範圍', go: 'outage',
+    d: [['拿不到真實負載數據（規格書在 NDA 後）', '用免費的電力品質與啟動暫態量測換數據'], ['冷卻容忍時間只有一個公開數據點', '設計方法把容忍時間當輸入參數，示範場域實測'], ['壓縮機啟動電流讓 UPS 過度放大', '錯開啟動 → 軟啟動 → 變頻驅動（④）'], ['場域不願做斷電演練', '分級演練：切 UPS → 發電機帶載 → 完整演練']] },
+  { n: 2, st: 0, name: '現場勘查服務', tag: 'H', what: '標準化的量子機房勘查：磁場、接地電流、電力品質、振動、溫濕度、5–7 GHz 射頻；2–3 天完成',
+    first: '買齊儀器，先量台達自己的 UPS、變頻器、變壓器', done: '報告格式定案；累積 3 個場域的數據', go: 'field',
+    d: [['量到數字，說不出對量子位元的影響', '短期只交付「是否符合廠商規格」；長期累積關聯數據'], ['干擾是間歇性的，2–3 天量不到', '留下長期記錄器至少兩週'], ['接地電流量測沒有標準方法', '自訂方法寫進 QGP，重複量測確認再現性'], ['服務本身不賺錢', '定位為產品前哨']] },
+  { n: 3, st: 0, name: '量子等級電源規格 QGP', tag: 'QGP', what: '定義一般規格書沒有的參數與量測方法（隔離電容、共模電流頻譜、漏電流、近場磁場、低頻雜訊…）＋一座量測台',
+    first: '先定「量測方法」，門檻值後補', done: '同一顆電源重複量測結果一致；一家儀器廠採用', go: 'ground',
+    d: [['門檻值沒有依據', '先定方法、用 A／B／C 分級，等驗證數據再收斂'], ['量測台自己的雜訊與接地', '屏蔽箱、電池供電前置放大器，報告附雜訊底'], ['結果和配置強烈相關', '把測試配置畫死，換再現性'], ['客戶不承認自訂規格', '找儀器廠共同署名、方法公開、提到 OCP']] },
+  { n: 4, st: 1, name: '壓縮機變頻驅動', tag: 'F', what: '脈衝管氦氣壓縮機（約 12.5 kW）的變頻驅動：軟啟動、群控、低諧波、低共模、驟降穿越',
+    first: '借一台壓縮機做外掛驗證', done: '啟動電流下降、冷卻功率無退化；一家 OEM 簽共同開發', go: 'heat',
+    d: [['壓縮機與冷頭的匹配是 OEM 機密', '第一版只做軟啟動＋額定頻率，不碰穩態工作點'], ['變頻器自己變成干擾源', '正弦波濾波、屏蔽電纜、主動前端做成標配'], ['OEM 沒有動機改', '由場域端提需求；鎖定多脈衝管系統廠商'], ['市場量小', '從既有工業變頻器平台衍生']] },
+  { n: 5, st: 1, name: '量子等級 DC-DC 與 AC-DC', tag: 'D', what: '儀器內部電源模組：隔離電容個位數 pF、可鎖外部時脈、低漏磁、低漏電流（假設目標）',
+    first: '用 QGP 量測台量現有醫療級模組，找出差距', done: 'QGP 量測優於醫療級模組；一家儀器廠裝機回報改善', go: 'ground',
+    d: [['低隔離電容與效率、體積衝突', '諧振型拓撲，接受較大體積'], ['低漏電流與 EMC 衝突', '軟切換、靜電屏蔽、共模扼流圈'], ['客戶驗證週期長', '評估板＋QGP 報告，同時支援兩家以上'], ['儀器廠習慣自己做電源', '先切入最頭痛的類比域隔離電源']] },
+  { n: 6, st: 1, name: '集中供電＋監測 PDU', tag: 'A／D', what: '(a) 量每個插座剩餘電流的 PDU；(b) 一櫃只有 1–2 個交流入口的集中直流供電',
+    first: 'PDU 先做（不需儀器廠配合）', done: '抓到一次「接地電流變化 ↔ 量測異常」的時間對應', go: 'ground',
+    d: [['數安培負載下量 mA 以下的剩餘電流', '磁通門式感測器，出廠逐一校正'], ['集中供電需要儀器廠改設計', '先找模組化背板機箱的廠商，提開放母線規格'], ['共用母線造成模組間串擾', '模組入口保留隔離 DC-DC（⑤）'], ['單點故障', 'N+1 熱插拔電源模組']] },
+  { n: 7, st: 1, name: '精密線圈電流源', tag: 'G', what: '離子阱與中性原子用：ppm 級穩定型（內建 50/60 Hz 前饋）與毫秒級快切型',
+    first: '做 20 A 原型交給原子物理實驗室', done: '實驗室量到同調時間改善；一家系統廠索樣', go: 'overview',
+    d: [['ppm 等級怎麼量', '計量級感測器；最終由原子的同調時間驗證'], ['溫度漂移', '低溫漂元件、恆溫、水冷'], ['快切與低雜訊互相衝突', '兩個模式：裝載用快切、計算用低雜訊'], ['市場小、客戶習慣自製', '鎖定正在產品化的系統廠']] },
+  { n: 8, st: 2, name: '4 K 低溫電源轉換', tag: 'I', what: '在冷凍機 4 K 層工作的 DC-DC：高壓低電流送入、低溫端降壓，供電給低溫控制晶片',
+    first: '和學研合作量元件的低溫特性', done: '小功率原型在 4 K 恆溫器中展示', go: 'heat',
+    d: [['損耗直接吃 4 K 冷卻預算（每支約 2 W）', '提高效率目標，或放在 50 K 層'], ['磁性元件與電容在低溫特性改變', '空心電感或開關電容拓撲'], ['切換雜訊離量子晶片很近', '屏蔽、避開量子位元頻段、鎖定時脈'], ['市場時程不確定', '小團隊＋學研合作，設檢查點']] },
+  { n: 9, st: 2, name: '高通道數直流供電', tag: 'I', what: '數千到上萬路精密直流背後的電源分配：多軌、低雜訊、彼此隔離、高密度',
+    first: '作為 ⑥ 的第二代，不單獨立項', done: '與一家儀器廠完成共同設計', go: 'scale',
+    d: [['與儀器廠的分工界線', '共同設計，台達負責到通道群的類比電源軌'], ['通道間經共用電源耦合', '分群隔離、每群獨立穩壓'], ['密度與散熱', '背板液冷或恆溫風道'], ['架構可能被低溫化取代', '保留送進冷凍機的介面，與 ⑧ 共用技術']] },
+  { n: 10, st: 2, name: '模組化量子資料中心配電', tag: 'A', what: '把 ① 做成可複製的「量子單元」模組，並排擴充到 MW 等級',
+    first: '把 ① 每個案子的設計模組化', done: '需求出現時已有可複製的設計', go: 'field',
+    d: [['大電流母線的磁場', '提高配電電壓、母線成對並行、保持距離'], ['800 VDC 的靜磁場', '先評估交流與直流方案，不預設答案'], ['數十台壓縮機的群控', '延伸 ④ 的群控功能'], ['市場 2029 年後才出現', '不獨立開發產品']] },
+  { n: 11, st: 2, name: '解碼機櫃供電與液冷', tag: 'E', what: '即時解碼的 FPGA／GPU 機櫃：規格同 AI 機櫃，要補的是「緊鄰量子機台」的條件',
+    first: '量現有 AI 機櫃電源的磁場與漏電流（可提前做）', done: '定出與量子機台的最小距離與應用指南', go: 'overview',
+    d: [['大功率電源、泵、風扇緊鄰量子機台', '量測後定最小距離，泵浦遠端放置'], ['低延遲限制距離', '每公尺約 5 ns，對微秒級延遲影響小'], ['負載快速變動造成電源暫態', '走獨立匯流排與 UPS 分層'], ['需求量不明', '只做驗證與應用指南']] },
+];
+const FEEDS = { 2: [1, 10, 11], 3: [5, 6, 7, 9], 1: [10], 4: [1, 10], 5: [6, 9], 6: [9], 8: [9, 10] };
+const CHECKS = [[6, '取得場地規劃文件了嗎？QGP 量測台量得出產品差異嗎？'], [12, '示範場域運轉了嗎？勘查找到可對應產品的問題嗎？'], [18, '有儀器廠或冷凍機廠願意共同開發嗎？'], [36, 'OEM 有設計導入嗎？低溫 CMOS 與模組化冷凍機進度如何？']];
+const CIRC = '①②③④⑤⑥⑦⑧⑨⑩⑪';
+S({ id: 'devplan', title: '開發計畫：11 個項目怎麼做', sub: '規劃建議（非既有計畫）；規格目標為開發起點的假設值',
+  desc: `<p><b>點選項目</b>看：要做出什麼、第一步、困難與解法、完成判準。綠框是它<b>需要先有</b>的項目，金框是<b>靠它提供成果</b>的項目。</p>
+  <p>拉動<b>時間</b>可以看各階段何時啟動，以及第 6、12、18、36 個月的檢查點要回答什麼問題。勾選「自動導覽」會依建議的啟動順序逐項播放。</p>
+  <p class="src">內容來源：docs/台達量子供電產品開發計畫.md</p>`,
+  build(st) {
+    st.sel = 2; st.month = 0; st.auto = false; st.t = 0; st.k = 0;
+    st.order = [2, 3, 1, 6, 5, 4, 7, 11, 8, 9, 10];
+    toggle('自動導覽（依建議啟動順序）', false, v => { st.auto = v; st.t = 0; });
+    slider('時間', 0, 84, 1, 0, v => v === 0 ? '啟動' : `第 ${v} 個月`, v => { st.month = v; st.dirty = true; });
+    const cols = ['#3ccf8e', '#e0a54a', '#9d8cff'], names = ['0–1 年：建立案例與規格', '1–3 年：進入供應鏈', '3–7 年：下一代架構'], y0 = [30, 250, 500];
+    st.btn = {};
+    [0, 1, 2].forEach(s => {
+      txt(30, y0[s], names[s], { size: 17, bold: true, fill: cols[s] });
+      el('line', { x1: 30, x2: 530, y1: y0[s] + 16, y2: y0[s] + 16, stroke: cols[s], 'stroke-width': 2 });
+      PLAN.filter(p => p.st === s).forEach((p, j) => {
+        const x = 30 + (j % 2) * 255, y = y0[s] + 32 + Math.floor(j / 2) * 84, g = el('g', { class: 'pp' });
+        const r = box(x, y, 245, 70, { fill: 'rgba(255,255,255,.05)', stroke: cols[s] }, g);
+        txt(x + 14, y + 24, CIRC[p.n - 1] + ' ' + p.name, { size: 14, bold: true }, g);
+        txt(x + 14, y + 50, '矩陣 ' + p.tag, { size: 12, fill: cols[s] }, g);
+        g.addEventListener('click', () => { st.sel = p.n; st.auto = false; ctlBox.querySelector('input[type=checkbox]').checked = false; st.dirty = true; });
+        st.btn[p.n] = { g, r, col: cols[s] };
+      });
+    });
+    const fo = el('foreignObject', { x: 560, y: 20, width: 620, height: 720 });
+    st.detail = document.createElement('div');
+    st.detail.setAttribute('xmlns', 'http://www.w3.org/1999/xhtml');
+    st.detail.style.cssText = 'font-size:15px;line-height:1.6;color:#d3dcea;background:rgba(12,20,36,.9);border:1px solid rgba(140,170,220,.3);border-radius:12px;padding:16px 18px;height:100%;overflow:auto;box-sizing:border-box';
+    fo.appendChild(st.detail);
+    st.goBtn = null; st.dirty = true;
+  },
+  render(st) {
+    const p = PLAN.find(q => q.n === st.sel), start = [0, 12, 36];
+    const needs = Object.keys(FEEDS).filter(k => FEEDS[k].includes(p.n)).map(Number), feeds = FEEDS[p.n] || [];
+    PLAN.forEach(q => {
+      const b = st.btn[q.n], active = st.month >= start[q.st];
+      b.g.setAttribute('opacity', active ? 1 : 0.4);
+      const c = q.n === p.n ? '#ffffff' : needs.includes(q.n) ? '#3ccf8e' : feeds.includes(q.n) ? '#e0a54a' : b.col;
+      b.r.setAttribute('stroke', c); b.r.setAttribute('stroke-width', q.n === p.n ? 4 : (needs.includes(q.n) || feeds.includes(q.n)) ? 3.5 : 1.2);
+      b.r.setAttribute('fill', q.n === p.n ? 'rgba(255,255,255,.14)' : 'rgba(255,255,255,.05)');
+    });
+    const li = a => a.length ? a.map(n => CIRC[n - 1] + ' ' + PLAN[n - 1].name).join('、') : '（無）';
+    st.detail.innerHTML = `<div style="color:${st.btn[p.n].col};font-size:13px">${['0–1 年', '1–3 年', '3–7 年'][p.st]} · 矩陣 ${p.tag}</div>
+      <div style="font-size:22px;font-weight:700;color:#fff;margin:2px 0 8px">${CIRC[p.n - 1]} ${p.name}</div>
+      <div><b style="color:#fff">要做出什麼：</b>${p.what}</div>
+      <div style="margin-top:6px"><b style="color:#38c6d9">第一步：</b>${p.first}</div>
+      <table style="width:100%;border-collapse:collapse;margin-top:12px;font-size:14px">
+        <tr><th style="text-align:left;padding:6px 8px;background:#12304e;color:#fff;width:44%">困難</th><th style="text-align:left;padding:6px 8px;background:#12304e;color:#fff">可能的解法</th></tr>
+        ${p.d.map(([a, b], i) => `<tr style="background:${i % 2 ? 'transparent' : 'rgba(255,255,255,.04)'}"><td style="padding:7px 8px;color:#ff9a9d;vertical-align:top">${a}</td><td style="padding:7px 8px;vertical-align:top">${b}</td></tr>`).join('')}
+      </table>
+      <div style="margin-top:12px"><b style="color:#3ccf8e">完成判準：</b>${p.done}</div>
+      <div style="margin-top:8px;font-size:13px"><span style="color:#3ccf8e">■ 需要先有：</span>${li(needs)}<br><span style="color:#e0a54a">■ 成果提供給：</span>${li(feeds)}</div>
+      <div style="margin-top:12px"><a href="#${p.go}" style="color:#38c6d9">→ 看對應的痛點場景</a></div>`;
+    const ck = CHECKS.filter(c => c[0] <= st.month).pop(), nx = CHECKS.find(c => c[0] > st.month);
+    metrics([['目前', st.month < 12 ? '第一階段' : st.month < 36 ? '第二階段' : '第三階段', 'info'],
+      ['已啟動項目', PLAN.filter(q => st.month >= start[q.st]).length + ' / 11', 'info'],
+      ['下一個檢查點', nx ? `第 ${nx[0]} 個月` : '—', 'warn']]);
+    if (ck) metBox.insertAdjacentHTML('beforeend', `<div class="k" style="grid-column:1/3;color:#d3dcea;line-height:1.6"><b style="color:#e0a54a">第 ${ck[0]} 個月檢查點：</b>${ck[1]}</div>`);
+  },
+  tick(st, dt) {
+    if (st.auto) { st.t += dt; if (st.t > 6) { st.t = 0; st.k = (st.order.indexOf(st.sel) + 1) % st.order.length; st.sel = st.order[st.k]; st.dirty = true; } }
+    if (st.dirty) { st.dirty = false; this.render(st); }
+  } });
+
+// ───────────────────────── 主程式 ─────────────────────────
+const App = {
+  i: 0, st: {}, paused: false, last: 0,
+  go(i) {
+    this.i = (i + SCENES.length) % SCENES.length; const sc = SCENES[this.i];
+    svg.innerHTML = ''; ctlBox.innerHTML = ''; metBox.innerHTML = ''; this.st = {};
+    $('scene-num').textContent = `場景 ${this.i + 1} / ${SCENES.length}`; $('scene-title').textContent = sc.title;
+    $('scene-sub').textContent = sc.sub; $('scene-desc').innerHTML = sc.desc;
+    document.querySelectorAll('#scene-nav button').forEach((b, k) => b.classList.toggle('active', k === this.i));
+    history.replaceState(null, '', location.pathname + location.search + '#' + sc.id);
+    sc.build(this.st); if (sc.tick) sc.tick.call(sc, this.st, 0);
+  },
+  loop(ts) {
+    const dt = Math.min(0.05, (ts - this.last) / 1000 || 0); this.last = ts;
+    const sc = SCENES[this.i]; if (!this.paused && sc.tick) sc.tick.call(sc, this.st, dt);
+    requestAnimationFrame(t => this.loop(t));
+  },
+  start() {
+    const nav = $('scene-nav');
+    SCENES.forEach((s, k) => { const b = document.createElement('button'); b.textContent = (k + 1) + ' ' + s.title.split('：')[0]; b.onclick = () => this.go(k); nav.appendChild(b); });
+    window.addEventListener('keydown', e => {
+      if (e.target.tagName === 'INPUT' && e.target.type === 'range' && (e.key === 'ArrowLeft' || e.key === 'ArrowRight')) return;
+      if (e.key === 'ArrowRight') this.go(this.i + 1); else if (e.key === 'ArrowLeft') this.go(this.i - 1);
+      else if (e.key === ' ') { this.paused = !this.paused; $('paused').style.display = this.paused ? 'block' : 'none'; e.preventDefault(); }
+      else if (e.key === 'h' || e.key === 'H') document.body.classList.toggle('hide-ui');
+      else if (e.key === 'f' || e.key === 'F') { if (!document.fullscreenElement) document.documentElement.requestFullscreen?.(); else document.exitFullscreen?.(); }
+    });
+    if (new URLSearchParams(location.search).has('noui')) document.body.classList.add('hide-ui');
+    window.addEventListener('hashchange', () => { const j = SCENES.findIndex(s => s.id === location.hash.slice(1)); if (j >= 0 && j !== this.i) this.go(j); });
+    const h = location.hash.slice(1), k = SCENES.findIndex(s => s.id === h);
+    this.go(k >= 0 ? k : 0); requestAnimationFrame(t => { this.last = t; this.loop(t); });
+  },
+};
+App.start();
+</script>
+</body>
+</html>

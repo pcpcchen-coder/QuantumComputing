@@ -561,18 +561,18 @@ S({ sec: '05 機房基礎設施', title: '防振、接地與電磁干擾', anim:
     H(s, '防振、接地與電磁干擾'); animPill(s, 'infra');
     const cols = [['防振', C.accent1, ['脈衝管 ~1.4 Hz 及諧波振動', '纜線摩擦起電 → 5–10 kHz 雜訊，影響相干性', '對策：遠端馬達、軟管固定、纜線綁紮/包覆（改善 > 10×）、避震座、剛性框架']],
       ['接地', C.accent5, ['單點（星形）接地，避免接地迴路', '冷凍機、機櫃、儀器共用同一參考', '電子機櫃前加隔離變壓器', 'DC 線使用雙絞、屏蔽與濾波']],
-      ['電磁干擾', C.accent3, ['遠離大型馬達、變頻器、電梯', 'Wi-Fi / 手機頻段遠離量子位元頻率，但仍須屏蔽', '磁屏蔽 + 遠離磁性物件（鋼構、磁鐵）', '室溫纜線使用高品質同軸、良好鎖緊']]];
+      ['電磁干擾', C.accent3, ['遠離大型馬達、變頻器、電梯', 'Wi-Fi 6E／7（5.9–7.1 GHz）落在量子位元與讀取腔頻段，須屏蔽', '磁屏蔽 + 遠離磁性物件（鋼構、磁鐵）', '室溫纜線使用高品質同軸、良好鎖緊']]];
     cols.forEach(([t, col, b], i) => {
       const x = 0.6 + i * 4.1; card(s, x, 1.45, 3.9, 4.75);
       sub(s, t, x + 0.25, 1.6, 3.4, col, 18);
       para(s, b, x + 0.25, 2.15, 3.45, 3.9, { size: 13.5, bullet: true, space: 8 });
     });
-    caption(s, '振動與摩擦起電雜訊：Kalra et al., Rev. Sci. Instrum. 87, 054301 (2016)', 0.6, 6.4, 12);
+    caption(s, '振動與摩擦起電雜訊：Kalra et al., Rev. Sci. Instrum. 87, 073905 (2016)（量測對象為電子自旋量子位元）', 0.6, 6.4, 12);
   },
   notes: `防振、接地和電磁干擾這三項，常常是實驗室裡「莫名其妙」問題的來源。
-防振：脈衝管在 1.4 Hz 和它的諧波上振動，會讓纜線彼此摩擦產生摩擦起電，形成 5 到 10 kHz 的雜訊，影響量子位元相干性。研究顯示把纜線固定、包覆可以改善十倍以上；另外可以用遠端馬達、固定軟管、避震座和剛性框架。
+防振：脈衝管在 1.4 Hz 和它的諧波上振動，會讓纜線彼此摩擦產生摩擦起電，形成 5 到 10 kHz 的雜訊，影響量子位元相干性。研究顯示把纜線固定、包覆可以改善十倍以上；這篇研究量測的是電子自旋量子位元，但振動透過摩擦起電耦合到纜線的機制，同樣存在於超導系統的直流與控制線上；另外可以用遠端馬達、固定軟管、避震座和剛性框架。
 接地：採用單點星形接地，避免接地迴路；冷凍機、機櫃和儀器共用同一個參考點；電子機櫃前加隔離變壓器；直流線用雙絞、屏蔽並且濾波。
-電磁干擾：遠離大型馬達、變頻器和電梯；Wi-Fi 和手機頻段雖然不在量子位元頻率，但仍然需要屏蔽；遠離鋼構和磁鐵等磁性物件；室溫段的同軸線要用高品質的並確實鎖緊。`,
+電磁干擾：遠離大型馬達、變頻器和電梯；Wi-Fi 和手機頻段要特別注意：Wi-Fi 6E 和 Wi-Fi 7 使用 5.925 到 7.125 GHz，正好落在超導量子位元和讀取諧振腔的頻段，5G 的 3.3 到 5 GHz 也很接近，所以一定要做好屏蔽；遠離鋼構和磁鐵等磁性物件；室溫段的同軸線要用高品質的並確實鎖緊。`,
 });
 S({ sec: '05 機房基礎設施', title: '機房配置建議', anim: 'infra', min: 2,
   async render(s) {
@@ -711,7 +711,7 @@ S({ sec: '06 系統整合', title: '參考資料', min: 0.5,
       'P. Krantz et al., "A quantum engineer\'s guide to superconducting qubits," Appl. Phys. Rev. 6, 021318 (2019).',
       'F. Arute et al., "Quantum supremacy using a programmable superconducting processor," Nature 574, 505 (2019)（補充資料：功耗）.',
       'R. Barends et al., "Minimizing quasiparticle generation from stray infrared light," Appl. Phys. Lett. 99, 113507 (2011).',
-      'R. Kalra et al., "Vibration-induced electrical noise in a cryogen-free dilution refrigerator," Rev. Sci. Instrum. 87, 054301 (2016).',
+      'R. Kalra et al., "Vibration-induced electrical noise in a cryogen-free dilution refrigerator: characterization, mitigation, and impact on qubit coherence," Rev. Sci. Instrum. 87, 073905 (2016).',
       'L. Stefanazzi et al., "The QICK (Quantum Instrumentation Control Kit)," Rev. Sci. Instrum. 93, 044709 (2022).',
       'Bluefors：LD / XLD / KIDE 產品頁與 LD 使用手冊；PT415、PT420 脈衝管規格。',
       'Oxford Instruments ProteoxMX 規格；Zurich Instruments SHFQC+ 規格與主動重置說明；Qblox 產品文件；Keysight M5300A 規格；QDevil QDAC-II。',
