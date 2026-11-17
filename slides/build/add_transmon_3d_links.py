@@ -6,11 +6,14 @@
 2. 在「一句話總結」之前新增第 04 段「用 3D 動畫走一遍」：
    八章導覽、操控與讀取、案例（頻率配置）、振幅長條（糾纏／Grover／Deutsch）、Shor。
 3. 總結頁的「animations/transmon-3d.html」改成可點的超連結。
+4. 2D 圖解（animations/lc-vs-jj.html）：第 5、6、7、14、16 頁加銅色「▶ 圖解 N」按鈕；
+   在第 16 頁之後新增「DRAG」與「2D 互動圖解導覽」兩頁（第 17、18 頁），3D 段落順延到第 19–24 頁。
 
 可重複執行：一律從 slides/build/transmon_base.pptx（原始 17 頁）出發，輸出覆寫 slides/transmon.pptx。
 要改原始內容請改 transmon_base.pptx 後再執行本腳本。
 用法（在 repo 根目錄）：
     node slides/capture_3d_transmon.js          # 需要時重新擷取截圖
+    node slides/capture_2d_lcjj.js              # 2D 圖解截圖
     python3 slides/build/add_transmon_3d_links.py
 """
 import copy
@@ -28,6 +31,8 @@ PPTX = os.path.join(ROOT, "slides", "transmon.pptx")
 BASE = os.path.join(ROOT, "slides", "build", "transmon_base.pptx")   # 原始 17 頁（未加動畫連結）
 FIG = os.path.join(ROOT, "slides", "figures", "3d_transmon")
 ANIM = "../animations/transmon-3d.html"   # 相對於 slides/transmon.pptx
+ANIM2 = "../animations/lc-vs-jj.html"     # 2D 圖解：LC 線性 vs JJ 非線性
+FIG2 = os.path.join(ROOT, "slides", "figures", "2d_lcjj")
 
 FONT = "Microsoft JhengHei"
 INK = RGBColor(0x16, 0x18, 0x1D)
@@ -37,10 +42,30 @@ GOLD = RGBColor(0xC9, 0xA2, 0x27)
 TEAL = RGBColor(0x17, 0x87, 0x7F)
 GRAY = RGBColor(0x7D, 0x87, 0x96)
 WHITE = RGBColor(0xFF, 0xFF, 0xFF)
+COPPER = RGBColor(0xB6, 0x5C, 0x12)   # 2D 圖解按鈕（與圖解頁的 JJ 色相同）
 
 TAG_LINK = "anim-link"          # 按鈕 shape 名稱前綴
 TAG_SLIDE = "anim-3d-slide"     # 新增投影片的標記 shape 名稱
 NOTE_MARK = "【3D 動畫】"
+NOTE_MARK2 = "【2D 圖解】"
+
+STEPS = {   # lc-vs-jj.html 的段落 id → (步驟, 按鈕短名, 段落標題)
+    "s1": (1, "I–Φ 曲線", "電流與磁通：直線 vs 正弦"),
+    "s2": (2, "諧波", "用正弦波去推，輸出長什麼樣？"),
+    "s3": (3, "能階", "拋物線的能階等間距，餘弦的不是"),
+    "s4": (4, "定址", "能不能只停在 |0⟩ 和 |1⟩？"),
+    "s5": (5, "四次項", "泰勒展開：多出來的四次項"),
+    "s6drag": (6, "DRAG", "DRAG：讓脈衝在 ω₁₂ 上挖一個洞"),
+}
+
+
+def url2(sid):
+    return f"{ANIM2}#{sid}"
+
+
+def pill2_label(sid):
+    n, short, _ = STEPS[sid]
+    return f"▶ 圖解 {n}：{short}"
 
 CHAPTERS = {
     "chip": (1, "晶片"), "junction": (2, "約瑟夫森結"), "potential": (3, "位能井"),
@@ -100,13 +125,14 @@ def textbox(slide, x, y, w, h, paras, size=12, color=INK2, align=PP_ALIGN.LEFT,
     return tb
 
 
-def pill(slide, x, y, w, h, hash_, label=None, size=10):
-    """可點的圓角按鈕：shape 與文字都帶超連結。"""
+def pill(slide, x, y, w, h, hash_, label=None, size=10, href=None, color=TEAL):
+    """可點的圓角按鈕：shape 與文字都帶超連結。預設連到 transmon-3d.html#hash_，href 可改連其他頁。"""
+    link = href or url(hash_)
     sh = slide.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, Emu(x), Emu(y), Emu(w), Emu(h))
     sh.name = f"{TAG_LINK}_{hash_}"
     sh.adjustments[0] = 0.5
     sh.fill.solid()
-    sh.fill.fore_color.rgb = TEAL
+    sh.fill.fore_color.rgb = color
     sh.line.fill.background()
     sh.shadow.inherit = False
     tf = sh.text_frame
@@ -119,8 +145,8 @@ def pill(slide, x, y, w, h, hash_, label=None, size=10):
     r = p.add_run()
     r.text = label or pill_label(hash_)
     style_run(r, size, WHITE, bold=True)
-    r.hyperlink.address = url(hash_)
-    sh.click_action.hyperlink.address = url(hash_)
+    r.hyperlink.address = link
+    sh.click_action.hyperlink.address = link
     # 文字超連結顏色跟隨文字（PowerPoint 2019+），避免變成藍底線
     hl = r._r.find(".//{http://schemas.openxmlformats.org/drawingml/2006/main}hlinkClick")
     if hl is not None:
@@ -250,11 +276,11 @@ def new_tour(prs):
         ("chip", "一顆 transmon 的俯視圖", "十字電容板、SQUID、XY／Z 線與讀取共振腔；送 π 脈衝看激發與 T₁ 衰減", "第 10、11 頁"),
         ("junction", "約瑟夫森結：非線性電感的本體", "拖動相位差 φ，看 I = I_c sin φ 與 L_J = L_J0 / cos φ；交流約瑟夫森效應", "第 4、5 頁"),
         ("potential", "cos 位能井：能階不再等距", "cos 井 vs 拋物線、能階越往上越密、量子單擺類比", "第 6–8、14、15 頁"),
-        ("control", "用微波轉動布洛赫球", "X／Y 軸 π、π/2 脈衝，Rabi 振盪與 P(|1⟩)", "第 16、19 頁"),
-        ("readout", "色散讀取：從頻移讀出狀態", "±χ 頻移、反射相位、IQ 點群與量測統計", "第 16、19 頁"),
-        ("case", "案例：三顆可調 transmon 的頻率配置", "SQUID 調頻、頻率碰撞、XY 寫入串擾、CZ 閘", "第 16、20 頁"),
-        ("grover", "振幅長條：糾纏、Grover 與 Deutsch", "CZ 產生糾纏、Oracle＋擴散、Deutsch 一次查詢", "第 21 頁"),
-        ("shor", "Shor 演算法：用 QFT 找週期，分解 15", "模指數、量子傅立葉轉換、連分數與 gcd", "第 22 頁"),
+        ("control", "用微波轉動布洛赫球", "X／Y 軸 π、π/2 脈衝，Rabi 振盪與 P(|1⟩)", "第 16、21 頁"),
+        ("readout", "色散讀取：從頻移讀出狀態", "±χ 頻移、反射相位、IQ 點群與量測統計", "第 16、21 頁"),
+        ("case", "案例：三顆可調 transmon 的頻率配置", "SQUID 調頻、頻率碰撞、XY 寫入串擾、CZ 閘", "第 16、22 頁"),
+        ("grover", "振幅長條：糾纏、Grover 與 Deutsch", "CZ 產生糾纏、Oracle＋擴散、Deutsch 一次查詢", "第 23 頁"),
+        ("shor", "Shor 演算法：用 QFT 找週期，分解 15", "模指數、量子傅立葉轉換、連分數與 gcd", "第 24 頁"),
     ]
     x0, y0 = Inches(0.5), Inches(1.0)
     rh = Inches(0.47)
@@ -370,6 +396,132 @@ def build_new(prs):
     return out
 
 
+# --------------------------------------------------------------------------- 2D 圖解（lc-vs-jj.html）
+EXISTING2 = {   # 投影片頁碼（1 起算）→ 圖解段落
+    5: ["s1"],
+    6: ["s5"],
+    7: ["s2"],
+    14: ["s3", "s4"],
+    16: ["s6drag"],
+}
+PILL2_W = Inches(1.45)
+
+
+def add_2d_buttons(prs):
+    """在 3D 按鈕左邊加銅色「▶ 圖解 N」按鈕；講者備註附上網址。"""
+    slides = list(prs.slides)
+    gap = Inches(0.08)
+    for no, sids in EXISTING2.items():
+        s = slides[no - 1]
+        xs = [sh.left for sh in s.shapes if sh.name.startswith(TAG_LINK) and abs(sh.top - PILL_Y) < Inches(0.02)]
+        right = (min(xs) - gap) if xs else SW - Inches(0.25)
+        x = right - len(sids) * PILL2_W - (len(sids) - 1) * gap
+        for k, sid in enumerate(sids):
+            pill(s, x + k * (PILL2_W + gap), PILL_Y, PILL2_W, PILL_H, sid, label=pill2_label(sid), size=9,
+                 href=url2(sid), color=COPPER)
+        add_notes(s, NOTE_MARK2 + "\n" + "\n".join(f"第 {STEPS[i][0]} 步 {STEPS[i][2]}　{url2(i)}" for i in sids))
+
+
+def picture2(slide, name, x, y, h, link=None):
+    pic = slide.shapes.add_picture(os.path.join(FIG2, name + ".jpg"), Emu(x), Emu(y), height=Emu(h))
+    pic.name = f"{TAG_LINK}_img2_{name}"
+    if link:
+        pic.click_action.hyperlink.address = link
+    pic.line.color.rgb = RGBColor(0xD5, 0xDA, 0xE0)
+    pic.line.width = Pt(0.75)
+    return pic
+
+
+def new_drag(prs):
+    s = prs.slides.add_slide(layout(prs, "CONTENT"))
+    set_title(s, "DRAG：快速脈衝別漏到 |2⟩")
+    marker(s)
+    pill(s, SW - Inches(0.25) - PILL2_W, PILL_Y, PILL2_W, PILL_H, "s6drag", label=pill2_label("s6drag"), size=9,
+         href=url2("s6drag"), color=COPPER)
+    pic = picture2(s, "step6_drag", Inches(0.45), Inches(1.0), Inches(3.72), link=url2("s6drag"))
+    bx = pic.left + pic.width + Inches(0.3)
+    bw = SW - bx - Inches(0.4)
+    paras = [
+        [("問題", {"bold": True, "color": COPPER, "size": 12}),
+         ("　非諧性只有約 −250 MHz。閘要快，脈衝就要短；脈衝愈短頻譜愈寬，尾巴碰到 ω₁₂ = ω₀₁ + α，就把佈居推到 |2⟩（洩漏）。", {})],
+        [("做法", {"bold": True, "color": COPPER, "size": 12}),
+         ("　高斯脈衝當 I，正交的 Q 加上它的導數：", {}),
+         ("Q(t) = −β · İ(t) / α", {"bold": True, "color": INK})],
+        [("為什麼有效", {"bold": True, "color": COPPER, "size": 12}),
+         ("　頻域上 Ω̃(Δ) = Ĩ(Δ)·(1 − βΔ/α)，β = 1 時剛好在 Δ = α 歸零：脈衝一樣快，只是 ω₁₂ 上沒有能量。", {})],
+        [("數值", {"bold": True, "color": COPPER, "size": 12}),
+         ("　三能階模擬，6 ns π 脈衝、α = −250 MHz：洩漏 4.7×10⁻² → 4.0×10⁻⁴（約少 120 倍）；20 ns 時差到 10⁴ 倍以上。", {})],
+        [("實務", {"bold": True, "color": COPPER, "size": 12}),
+         ("　β 用 AllXY 等序列實驗校準；|2⟩ 造成的 AC Stark 相位誤差另用微調頻率或虛擬 Z 補償。", {})],
+    ]
+    textbox(s, bx, Inches(1.0), bw, Inches(3.75), paras, size=11, space=9)
+    textbox(s, Inches(0.45), Inches(4.83), Inches(9.1), Inches(0.25),
+            ["左圖：脈衝 I/Q 包絡、頻譜（DRAG 在 Δ = α 挖洞）、脈衝期間 |2⟩ 佔有率、洩漏 vs 閘長度。點圖或右上按鈕開啟互動版："
+             + url2("s6drag")], size=8, color=GRAY)
+    add_notes(s, "第 16 頁提到 XY 旋轉要用 DRAG 整形，這一頁說明原因。transmon 的非諧性只有兩三百 MHz，"
+                 "閘做得愈快，脈衝頻譜愈寬，就會碰到 1→2 的躍遷頻率，把一部分佈居推到 |2⟩，這叫洩漏。"
+                 "DRAG 的做法是在正交相位 Q 加上 I 的導數，係數是負 β 除以 α。換到頻域，這等於把頻譜乘上 1 − βΔ/α，"
+                 "β 等於 1 時剛好在 ω₁₂ 那個頻率挖出一個零點。左下的模擬顯示，6 ns 的 π 脈衝洩漏從大約 5% 降到 0.04%。"
+                 "實務上 β 要校準，另外 |2⟩ 也會造成 AC Stark 相位誤差，要用虛擬 Z 或微調驅動頻率補掉。\n\n"
+                 + NOTE_MARK2 + "\n第 6 步 DRAG　" + url2("s6drag"))
+    return s
+
+
+def new_2d_overview(prs):
+    s = prs.slides.add_slide(layout(prs, "CONTENT"))
+    set_title(s, "2D 互動圖解：LC 為何線性、JJ 為何非線性")
+    marker(s)
+    pill(s, SW - Inches(0.25) - Inches(1.9), PILL_Y, Inches(1.9), PILL_H, "s1", label="▶ 開啟 2D 互動圖解", size=9,
+         href=url2("s1"), color=COPPER)
+    h = Inches(2.25)
+    a = picture2(s, "step1_iphi", 0, Inches(0.98), h, link=url2("s1"))
+    b = picture2(s, "step3_levels", 0, Inches(0.98), h, link=url2("s3"))
+    gap = Inches(0.2)
+    x0 = int((SW - a.width - b.width - gap) / 2)
+    a.left = x0
+    b.left = x0 + a.width + gap
+    textbox(s, a.left, Inches(3.25), a.width, Inches(0.2), ["第 1 步：電感是直線 I = Φ/L，JJ 是正弦 I = I_c sin φ"],
+            size=8, color=GRAY, align=PP_ALIGN.CENTER)
+    textbox(s, b.left, Inches(3.25), b.width, Inches(0.2), ["第 3 步：拋物線能階等間距，餘弦位能愈往上愈擠"],
+            size=8, color=GRAY, align=PP_ALIGN.CENTER)
+    rows = [
+        ("s1", "等效電感 L_J = L_J0 / cos φ 隨電流改變", "第 4、5 頁"),
+        ("s2", "正弦驅動產生 3ω、5ω 諧波，輸出會飽和", "第 7 頁"),
+        ("s3", "數值對角化 transmon 能階，可調 E_J/E_C", "第 14 頁"),
+        ("s4", "LC 躍遷全部重疊；transmon 只打得到 0→1", "第 14 頁"),
+        ("s5", "−E_J cos φ 的四次項就是非線性的來源", "第 6 頁"),
+        ("s6drag", "Q = −β·İ/α，在 ω₁₂ 挖洞抑制洩漏", "第 16、17 頁"),
+    ]
+    cw = Inches(3.0)
+    cx0 = Inches(0.5)
+    for k, (sid, desc, pages) in enumerate(rows):
+        col, row = k % 3, k // 3
+        x = cx0 + col * (cw + Inches(0.05))
+        y = Inches(3.55) + row * Inches(0.62)
+        pill(s, x, y, PILL2_W, Inches(0.25), sid, label=pill2_label(sid), size=9, href=url2(sid), color=COPPER)
+        textbox(s, x + PILL2_W + Inches(0.08), y + Inches(0.02), cw - PILL2_W - Inches(0.1), Inches(0.25),
+                [pages], size=8, color=GRAY, anchor=MSO_ANCHOR.MIDDLE)
+        textbox(s, x, y + Inches(0.28), cw - Inches(0.1), Inches(0.3), [desc], size=9)
+    textbox(s, Inches(0.5), Inches(4.86), Inches(9.0), Inches(0.22),
+            ["單一 HTML 檔、離線可用：" + ANIM2 + "（請保持 slides/ 與 animations/ 的相對位置）。每頁的銅色「▶ 圖解」按鈕直接跳到對應步驟。"],
+            size=8, color=GRAY)
+    add_notes(s, "進 3D 動畫之前，先用這份 2D 互動圖解把第一段到第三段串起來複習一次。重點只有一句：電感的電流–磁通關係是直線，"
+                 "JJ 是正弦。直線積分出拋物線位能，能階等間距，所以 LC 是線性系統、當不了 qubit；正弦積分出餘弦位能，"
+                 "多出四次項，能階愈往上愈擠，0→1 才能單獨定址。最後一步接到上一頁的 DRAG。每個按鈕都會直接跳到圖解的對應步驟，"
+                 "滑桿可以現場調給大家看。\n\n" + NOTE_MARK2 + "\n"
+                 + "\n".join(f"第 {STEPS[r[0]][0]} 步 {STEPS[r[0]][2]}　{url2(r[0])}" for r in rows))
+    return s
+
+
+def move_to(prs, slide, index):
+    """把 slide 移到第 index 個位置（0 起算）。"""
+    ids = prs.slides._sldIdLst
+    rid = next(r for r, rel in prs.part.rels.items() if rel.target_part is slide.part)
+    el = next(e for e in ids if e.rId == rid)
+    ids.remove(el)
+    ids.insert(index, el)
+
+
 def move_before_last(prs, new_slides):
     ids = prs.slides._sldIdLst
     items = list(ids)
@@ -393,6 +545,10 @@ def main():
     link_summary(prs)
     new = build_new(prs)
     move_before_last(prs, new)
+    add_2d_buttons(prs)
+    base_n = 16   # 原始 17 頁中，第 16 頁「控制與讀取」之後插入 2D 兩頁
+    move_to(prs, new_drag(prs), base_n)
+    move_to(prs, new_2d_overview(prs), base_n + 1)
     prs.save(PPTX)
     print("saved", PPTX, "slides:", len(prs.slides))
 

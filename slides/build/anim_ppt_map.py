@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """產生「3D 動畫場景 ↔ PPT 投影片」對照表，並檢查每個場景是否都有簡報介紹。
 
-掃描 animations/*.html 的所有場景（含 transmon-3d.html 的 8 章與 #deutsch 捷徑），
+掃描 animations/*.html 的所有場景（含 transmon-3d.html 的 8 章與 #deutsch 捷徑、lc-vs-jj.html 的 6 步），
 再掃描 repo 內所有 .pptx 的超連結，輸出 docs/動畫與簡報對照表.md。
 有場景沒有任何投影片連到時，程式以結束碼 1 結束並列出缺口。
 
@@ -27,6 +27,7 @@ PAGES = [  # (html, 場景 JS 目錄 or None, 說明)
     ("atoms.html", "js/atoms", "離子阱與中性原子"),
     ("transmon-3d.html", None, "Transmon 3D（8 章）"),
     ("power1000.html", "inline", "1,000 位元供電設計"),
+    ("lc-vs-jj.html", "sections", "LC vs JJ 2D 圖解（6 步）"),
 ]
 DECK_NAMES = {
     "slides/JJ_Microwave_Readout_Talk.pptx": "JJ 與微波讀取",
@@ -41,6 +42,10 @@ DECK_NAMES = {
 
 def scenes_of(html, js_dir):
     """回傳 [(id, 標題)]，依動畫中的順序。"""
+    if js_dir == "sections":  # 2D 圖解頁：<section class="step" id="…"> 內有「第 N 步」與 <h2>
+        s = open(os.path.join(ANIM_DIR, html), encoding="utf-8").read()
+        return re.findall(r'<section class="step" id="([\w-]+)">\s*<div class="step-head">\s*'
+                          r'<span class="eyebrow">第 \d 步[^<]*</span>\s*<h2>([^<]+)</h2>', s)
     if js_dir == "inline":  # 場景直接寫在 HTML 裡：S({ id: '…', title: '…'
         s = open(os.path.join(ANIM_DIR, html), encoding="utf-8").read()
         return re.findall(r"S\(\{ id: '([\w-]+)', title: '([^']+)'", s)
@@ -59,6 +64,11 @@ def scenes_of(html, js_dir):
         for name in re.findall(r'"?([\w-]+)"?:\s*\[', alias.group(1)):
             out.append((name, f"（捷徑）第 7 章 {'Deutsch 步驟' if name == 'deutsch' else 'Deutsch 自由實驗'}"))
     return out
+
+
+def esc(s):
+    """表格儲存格內的 | 要跳脫，否則會被當成欄位分隔（例如 |0⟩）。"""
+    return s.replace("|", "\\|")
 
 
 def slide_title(slide):
@@ -124,10 +134,10 @@ def main():
                 missing.append(f"{html}#{sid}")
             by_deck = defaultdict(list)
             for deck, no, t in r:
-                by_deck[deck].append(f"p{no} {t}")
+                by_deck[deck].append(f"p{no} {esc(t)}")
             cell = "<br>".join(f"**{DECK_NAMES.get(d, d)}**（[`{os.path.basename(d)}`](../{d})）：" + "；".join(v)
                                for d, v in by_deck.items()) or "⚠️ 無"
-            body.append(f"| {k} | {title} | [`#{sid}`](../animations/{html}#{sid}) | {cell} |")
+            body.append(f"| {k} | {esc(title)} | [`#{sid}`](../animations/{html}#{sid}) | {cell} |")
         body.append("")
     lines += ["## 總覽", "", "| 動畫 | 主題 | 場景數 | 有簡報介紹 | 狀態 |", "|---|---|---|---|---|"] + summary + [""]
     lines += body
