@@ -181,11 +181,11 @@ nav.chapters {
   const COL = { bg: 0x0a0c11, gold: 0xd6b04a, teal: 0x35b8ac, copper: 0xd77b45, metal: 0xb7bec8, gap: 0x0f1a2c, sub: 0x16263f, white: 0xe8ebf0, muted: 0x98a1b0 };
 
   // ---------- 物理數值（E_J/h = 15 GHz, E_C/h = 250 MHz，數值對角化） ----------
-  const PHYS = {
-    trE: [2.676, 7.890, 12.821, 17.439],   // 相對位能井底，GHz
-    lcE: [2.739, 8.216, 13.693, 19.170],
-    EJ: 15,
-  };
+  const PHYS = (() => {
+    const all = transmonLevels(15, 0.25, 0, 14).map(v => v + 15);   // 相對位能井底，GHz（電荷基底數值對角化）
+    const w = Math.sqrt(8 * 15 * 0.25);                               // 線性 LC 的能階間距 √(8E_J E_C) ≈ 5.48 GHz
+    return { EJ: 15, trAll: all, trE: all.slice(0, 6), lcE: [0, 1, 2, 3, 4, 5].map(n => (n + 0.5) * w) };
+  })();
 
   // ---------- 渲染器 ----------
   const stage = document.getElementById("stage");
@@ -519,10 +519,14 @@ nav.chapters {
   pot.add(lineFrom([new THREE.Vector3(-6.6, 0, 0), new THREE.Vector3(6.6, 0, 0)], COL.muted, 0.45));
   // 能階
   const levelBars = [];
-  for (let n = 0; n < 4; n++) {
+  for (let n = 0; n < 6; n++) {
     const m = new THREE.Mesh(new THREE.BoxGeometry(1, 0.06, 0.5), new THREE.MeshBasicMaterial({ color: n < 2 ? COL.gold : 0x9aa3b2, transparent: true, opacity: n < 2 ? 1 : 0.7 }));
     pot.add(m); levelBars.push({ m, y: 0, w: 1 });
   }
+  // 各能階的佔據機率（青色長條，長度 ∝ 機率）
+  const popBars = [0, 1, 2, 3, 4, 5].map(() => { const m = new THREE.Mesh(new THREE.BoxGeometry(1, 0.2, 0.3), new THREE.MeshBasicMaterial({ color: COL.teal, transparent: true, opacity: 0.85 })); m.position.z = 0.35; pot.add(m); return m; });
+  const mw3N = 90, mw3Geo = new THREE.BufferGeometry(); mw3Geo.setAttribute("position", new THREE.BufferAttribute(new Float32Array(mw3N * 3), 3));
+  const mw3 = new THREE.Line(mw3Geo, new THREE.LineBasicMaterial({ color: COL.teal, transparent: true, opacity: 0 })); pot.add(mw3);
   const ball = new THREE.Mesh(new THREE.SphereGeometry(0.26, 24, 18), new THREE.MeshStandardMaterial({ color: COL.teal, emissive: new THREE.Color(COL.teal), emissiveIntensity: 0.35, roughness: 0.3 }));
   pot.add(ball);
   // 單擺
@@ -536,8 +540,38 @@ nav.chapters {
   ptag("拋物線（線性電感）", [-4.9, 7.6, 0]);
   ptag("相位 φ", [6.6, -0.35, 0], "flat mono");
   ptag("同形的單擺", [8.6, 8.1, 0], "");
-  const levelTags = [0, 1, 2, 3].map(n => ptag(`|${n}⟩`, [0, 0, 0], "flat mono"));
-  const gapTags = [0, 1, 2].map(() => ptag("", [0, 0, 0], "flat mono"));
+  const levelTags = [0, 1, 2, 3, 4, 5].map(n => ptag(`|${n}⟩`, [0, 0, 0], "flat mono"));
+  const gapTags = [0, 1, 2, 3, 4].map(() => ptag("", [0, 0, 0], "flat mono"));
+  const drv3Tag = ptag("微波 f₀₁ 驅動中", [-6.2, 3.2, 0], "flat mono teal");
+
+  // ---------- 多能階驅動模擬：有 JJ（transmon）vs 沒有 JJ（線性 LC）----------
+  // 以驅動頻率 f₀₁ 的旋轉座標寫 H = Σ δₙ|n⟩⟨n| + (Ω/2)(e^{−iφ}a + e^{iφ}a†)，δₙ = Eₙ − E₀ − n·f₀₁，矩陣元素取 √n
+  const NL = 14, RABI = 0.025;   // 0↔1 Rabi 頻率 25 MHz：π 脈衝 20 ns
+  const DET = { tr: PHYS.trAll.map((v, n) => v - PHYS.trAll[0] - n * (PHYS.trAll[1] - PHYS.trAll[0])), lc: new Array(NL).fill(0) };
+  function makeSim(mode) { const s = { re: new Float64Array(NL), im: new Float64Array(NL), mode, left: 0, phi: 0, k: Array.from({ length: 8 }, () => new Float64Array(NL)), tr: new Float64Array(NL), ti: new Float64Array(NL) }; s.re[0] = 1; return s; }
+  function simReset(s, mode) { s.re.fill(0); s.im.fill(0); s.re[0] = 1; s.left = 0; if (mode) s.mode = mode; }
+  function simDeriv(s, r, m, dr, di) {
+    const dl = DET[s.mode], c = Math.cos(s.phi), sn = Math.sin(s.phi), h = RABI / 2, TP = 2 * Math.PI;
+    for (let n = 0; n < NL; n++) {
+      let hr = dl[n] * r[n], hi = dl[n] * m[n];
+      if (n + 1 < NL) { const k = h * Math.sqrt(n + 1); hr += k * (c * r[n + 1] + sn * m[n + 1]); hi += k * (c * m[n + 1] - sn * r[n + 1]); }
+      if (n > 0) { const k = h * Math.sqrt(n); hr += k * (c * r[n - 1] - sn * m[n - 1]); hi += k * (c * m[n - 1] + sn * r[n - 1]); }
+      dr[n] = TP * hi; di[n] = -TP * hr;   // dψ/dt = −i·2π·Hψ（t：ns，頻率：GHz）
+    }
+  }
+  function simAdvance(s, T) {   // RK4
+    const [a1, b1, a2, b2, a3, b3, a4, b4] = s.k, tr = s.tr, ti = s.ti;
+    for (let left = T; left > 1e-9; left -= 0.02) {
+      const dt = Math.min(0.02, left);
+      simDeriv(s, s.re, s.im, a1, b1);
+      for (let n = 0; n < NL; n++) { tr[n] = s.re[n] + a1[n] * dt / 2; ti[n] = s.im[n] + b1[n] * dt / 2; } simDeriv(s, tr, ti, a2, b2);
+      for (let n = 0; n < NL; n++) { tr[n] = s.re[n] + a2[n] * dt / 2; ti[n] = s.im[n] + b2[n] * dt / 2; } simDeriv(s, tr, ti, a3, b3);
+      for (let n = 0; n < NL; n++) { tr[n] = s.re[n] + a3[n] * dt; ti[n] = s.im[n] + b3[n] * dt; } simDeriv(s, tr, ti, a4, b4);
+      for (let n = 0; n < NL; n++) { s.re[n] += dt / 6 * (a1[n] + 2 * a2[n] + 2 * a3[n] + a4[n]); s.im[n] += dt / 6 * (b1[n] + 2 * b2[n] + 2 * b3[n] + b4[n]); }
+    }
+  }
+  const simPops = s => Array.from(s.re, (v, i) => v * v + s.im[i] * s.im[i]);
+  const sim3 = makeSim("tr");
 
   // =====================================================================
   // 第 4 章：布洛赫球
@@ -558,19 +592,18 @@ nav.chapters {
   // 能階梯與微波
   const ladder = new THREE.Group(); ladder.position.set(-6.2, -2.2, 0); bl.add(ladder);
   const ladderY = [0, 5.214, 10.145].map(e => e * 0.42);
-  const ladderBars = ladderY.map((y, n) => { const m = new THREE.Mesh(new THREE.BoxGeometry(1.8, 0.07, 0.4), new THREE.MeshBasicMaterial({ color: n === 2 ? 0x6d7584 : COL.gold })); m.position.y = y; ladder.add(m); return m; });
+  const LADDER = { tr: [0, 1, 2, 3].map(n => (PHYS.trAll[n] - PHYS.trAll[0]) * 0.42), lc: [0, 1, 2, 3].map(n => n * Math.sqrt(30) * 0.42) };
+  const ladderBars = [0, 1, 2, 3].map(n => { const m = new THREE.Mesh(new THREE.BoxGeometry(1.8, 0.07, 0.4), new THREE.MeshBasicMaterial({ color: n >= 2 ? 0x6d7584 : COL.gold })); m.position.y = LADDER.tr[n]; m.visible = n < 3; ladder.add(m); return m; });
   const mwN = 120; const mwGeo = new THREE.BufferGeometry(); mwGeo.setAttribute("position", new THREE.BufferAttribute(new Float32Array(mwN * 3), 3));
   const mw = new THREE.Line(mwGeo, new THREE.LineBasicMaterial({ color: COL.teal, transparent: true, opacity: 0 })); bl.add(mw);
+  const mwX = [1, 2].map(() => { const g = new THREE.BufferGeometry(); g.setAttribute("position", new THREE.BufferAttribute(new Float32Array(mwN * 3), 3)); const l = new THREE.Line(g, new THREE.LineBasicMaterial({ color: 0xf0625a, transparent: true, opacity: 0 })); bl.add(l); return l; });
   const btag = (t, p, cls = "") => tag(t, new THREE.Vector3(...p).add(bl.position), [3], cls);
   btag("|0⟩", [0, R * 1.28, 0], "flat mono gold");
   btag("|1⟩", [0, -R * 1.28, 0], "flat mono gold");
   btag("X", [R * 1.25, 0, 0], "flat mono");
   btag("Y", [0, 0, -R * 1.25], "flat mono");
-  btag("|0⟩", [-7.5, -2.2, 0], "flat mono");
-  btag("|1⟩", [-7.5, -2.2 + ladderY[1], 0], "flat mono");
-  btag("|2⟩", [-7.5, -2.2 + ladderY[2], 0], "flat mono");
-  btag("5.21 GHz 共振", [-4.6, -2.2 + ladderY[1] / 2, 0], "flat mono teal");
-  btag("4.93 GHz 不共振", [-4.4, -2.2 + (ladderY[1] + ladderY[2]) / 2, 0], "flat mono");
+  const ladTags = [0, 1, 2, 3].map(n => btag(`|${n}⟩`, [-7.5, -2.2 + LADDER.tr[n], 0], "flat mono"));
+  const gapTags4 = [0, 1, 2].map(n => btag("", [-4.4, -2.2 + (LADDER.tr[n] + LADDER.tr[n + 1]) / 2, 0], "flat mono"));
 
   // ---------- 量子態 ----------
   const state = new THREE.Vector3(0, 1, 0); // 世界座標（Bloch z → y，Bloch y → −z）
@@ -831,17 +864,27 @@ nav.chapters {
       <div class="controls"><label class="row" for="c2phi">φ <input type="range" id="c2phi" min="0" max="180" step="1" value="35"></label><label class="check"><input type="checkbox" id="c2v"> 施加電壓 V ≠ 0（交流約瑟夫森效應）</label></div>` },
     { id: "potential", short: "位能井", kicker: "第 3 章 / 10", title: "cos 位能井：能階不再等距",
       target: [PX + 2.2, 3.6, 0], pos: [PX + 2.6, 5.2, 20],
-      html: `<p>JJ 的位能是 <b>−E_J cos φ</b>（銅色），線性電感是<b>拋物線</b>（灰色）。cos 井的邊緣比拋物線平坦，量子化後能階<b>越往上越密</b>。</p>
-      <p>右邊的單擺有完全相同的位能形狀。E_J/E_C = 60 時，相位擾動只有約 0.43 rad，所以只「有一點點」不簡諧。</p>
+      html: `<p>JJ 的位能是 <b>−E_J cos φ</b>（銅色），線性電感是<b>拋物線</b>（灰色）。cos 井的邊緣比拋物線平坦，量子化後能階<b>越往上越密</b>：0→1 是 5.21 GHz、1→2 只剩 4.93 GHz。右邊的單擺有完全相同的位能形狀；E_J/E_C = 60 時相位擾動只有約 0.43 rad，所以只「有一點點」不簡諧——但這一點點就夠了。</p>
+      <div class="controls" role="group" aria-label="比較"><button class="btn" id="c3tr" type="button" aria-pressed="true">有 JJ（transmon）</button><button class="btn" id="c3lc" type="button" aria-pressed="false">沒有 JJ（線性 LC）</button></div>
       <dl class="stats" id="r3"></dl>
-      <div class="controls" role="group" aria-label="比較"><button class="btn" id="c3tr" type="button" aria-pressed="true">Transmon 能階</button><button class="btn" id="c3lc" type="button" aria-pressed="false">線性 LC 能階</button></div>` },
+      <h3>如果沒有 JJ，會怎樣？</h3>
+      <p>把 JJ 換成普通電感，電路就是線性 LC 諧振器：位能是拋物線，能階<b>完全等距</b>（每階都是 √(8E_J E_C) ≈ 5.48 GHz）。這時 0→1、1→2、2→3……<b>所有躍遷的頻率都一樣</b>，一道對準 0→1 的微波，對整把梯子的每一階都共振。</p>
+      <p>按下方按鈕送一道 f₀₁ 微波，比較兩種電路：青色長條是各能階的佔據機率，小球的擺幅代表平均能量。</p>
+      <div class="controls"><button class="btn primary" id="c3pi" type="button">送 π 脈衝（20 ns）</button><button class="btn" id="c3long" type="button">持續驅動 40 ns</button><button class="btn" id="c3r" type="button">重設 |0⟩</button></div>
+      <dl class="stats" id="r3p"></dl>
+      <p class="note" id="c3msg">有 JJ：π 脈衝把狀態完整送到 |1⟩；持續驅動則在 |0⟩、|1⟩ 之間來回（Rabi 振盪），幾乎不碰 |2⟩。沒有 JJ：狀態被一路往上推、散到很多能階（變成「相干態」，行為和古典的電流振盪一樣），根本停不在 |1⟩。</p>
+      <p class="note">所以沒有 JJ 就沒有量子位元：① 定義不出只含兩個能階的 0/1；② 寫入時會一路漏到更高能階（第 4 章）；③ 讀取靠的色散偏移 χ = (g²/Δ)·α/(Δ+α)，α = 0 時 χ = 0，<b>讀不出狀態</b>（第 5 章）；④ CZ 閘靠 |11⟩↔|20⟩ 共振，也需要 α ≠ 0（第 6 章）。電感、電容怎麼組合都是線性的；JJ 是超導電路裡唯一「無損又非線性」的元件。</p>` },
     { id: "control", short: "操控", kicker: "第 4 章 / 10", title: "用微波轉動布洛赫球",
       target: [-1.6, 0.6, BZ], pos: [3.5, 4.5, BZ + 13.5],
-      html: `<p><b>|0⟩、|1⟩</b> 是 cos 井最低的兩個能階。以 <b>f₀₁ = 5.21 GHz</b> 的微波脈衝驅動，狀態在布洛赫球上繞 X 或 Y 軸旋轉（Rabi 振盪）。</p>
-      <p>|1⟩→|2⟩ 的頻率低了 283 MHz，所以同一道微波不會把狀態推上 |2⟩。實務上脈衝長 20–50 ns，並用 DRAG 整形進一步抑制洩漏。</p>
-      <dl class="stats"><dt>P(|1⟩)</dt><dd id="r4p">0.000</dd></dl>
+      html: `<div class="controls subtabs" role="group" aria-label="電路"><button class="btn" id="c4mtr" type="button" aria-pressed="true">有 JJ（transmon）</button><button class="btn" id="c4mlc" type="button" aria-pressed="false">沒有 JJ（線性 LC）</button></div>
+      <div id="c4dtr"><p><b>|0⟩、|1⟩</b> 是 cos 井最低的兩個能階。以 <b>f₀₁ = 5.21 GHz</b> 的微波脈衝驅動，狀態在布洛赫球上繞 X 或 Y 軸旋轉（Rabi 振盪）。</p>
+      <p>|1⟩→|2⟩ 的頻率低了 283 MHz，所以同一道微波不會把狀態推上 |2⟩。實務上脈衝長 20–50 ns，並用 DRAG 整形進一步抑制洩漏。</p></div>
+      <div id="c4dlc" hidden><p><b>沒有 JJ 的線性 LC</b>：能階等距，左邊梯子每一階的間距都是 5.48 GHz。對準 0→1 的微波，<b>對 1→2、2→3 也同樣共振</b>（紅色波），所以同一道「X 軸 π 脈衝」不會停在 |1⟩，而是把狀態一路往上推。</p>
+      <p>看布洛赫球：箭頭<b>變短、甚至縮到球心</b>——長度代表狀態還留在 {|0⟩, |1⟩} 裡的比例，其餘都漏到 |2⟩、|3⟩ 以上去了。0 和 1 根本定義不出來，也就沒有量子位元可以操作。這不是脈衝調得不好：線性系統裡，任何形狀的脈衝都只會讓整個振盪器「像古典電流一樣」被推動。</p></div>
+      <dl class="stats"><dt>P(|1⟩)</dt><dd id="r4p">0.000</dd><dt>P(|0⟩)・P(|2⟩)・P(≥|3⟩)</dt><dd id="r4pops">—</dd><dt>留在 {|0⟩,|1⟩} 的比例</dt><dd id="r4in">—</dd></dl>
       <div class="meter" aria-hidden="true"><i id="r4bar"></i></div>
-      <div class="controls" style="margin-top:12px"><button class="btn primary" id="c4xpi" type="button">X 軸 π</button><button class="btn" id="c4xh" type="button">X 軸 π/2</button><button class="btn" id="c4yh" type="button">Y 軸 π/2</button><button class="btn" id="c4r" type="button">重設 |0⟩</button></div>` },
+      <div class="controls" style="margin-top:12px"><button class="btn primary" id="c4xpi" type="button">X 軸 π</button><button class="btn" id="c4xh" type="button">X 軸 π/2</button><button class="btn" id="c4yh" type="button">Y 軸 π/2</button><button class="btn" id="c4r" type="button">重設 |0⟩</button></div>
+      <p class="note" id="c4msg">切到「沒有 JJ」再按 X 軸 π，比較兩種電路的結果。</p>` },
     { id: "readout", short: "讀取", kicker: "第 5 章 / 10", title: "色散讀取：從頻移讀出狀態",
       target: [-0.3, 2.3, -5.2], pos: [0.7, 6.6, 10.2],
       html: `<p>讀取不直接量位元，而是量它旁邊<b>讀取共振腔的「音高」</b>。本章分 8 步：為什麼要間接讀、色散偏移、探測與 IQ、整條讀取鏈、積分與判別、量測反作用與 QND、<b>量完之後怎麼回到 |0⟩</b>，最後是自由實驗。左上方字幕會跟著動畫說明。</p>
@@ -946,14 +989,25 @@ nav.chapters {
       $("c2v").checked = acMode; $("c2v").onchange = e => { acMode = e.target.checked; };
     }
     if (i === 2) {
-      const set = m => { trMode = m; $("c3tr").setAttribute("aria-pressed", m === 1); $("c3lc").setAttribute("aria-pressed", m === 0); fillLevels(); };
+      const set = m => { trMode = m; $("c3tr").setAttribute("aria-pressed", m === 1); $("c3lc").setAttribute("aria-pressed", m === 0); simReset(sim3, m ? "tr" : "lc"); fillLevels(); };
       $("c3tr").onclick = () => set(1); $("c3lc").onclick = () => set(0); set(trMode);
+      $("c3pi").onclick = () => { simReset(sim3); sim3.left = 20; sim3.goal = "pi"; };
+      $("c3long").onclick = () => { simReset(sim3); sim3.left = 40; sim3.goal = "long"; };
+      $("c3r").onclick = () => simReset(sim3);
     }
     if (i === 3) {
-      $("c4xpi").onclick = () => pulse("X", Math.PI);
-      $("c4xh").onclick = () => pulse("X", Math.PI / 2);
-      $("c4yh").onclick = () => pulse("Y", Math.PI / 2);
-      $("c4r").onclick = () => { queue.length = 0; anim = null; state.set(0, 1, 0); trailN = 0; };
+      const set = m => {
+        c4mode = m; $("c4mtr").setAttribute("aria-pressed", m === "tr"); $("c4mlc").setAttribute("aria-pressed", m === "lc");
+        $("c4dtr").hidden = m !== "tr"; $("c4dlc").hidden = m !== "lc";
+        queue.length = 0; anim = null; simReset(sim4, m); sim4q.length = 0; state.set(0, 1, 0); trailN = 0;
+        $("c4msg").textContent = m === "lc" ? "沒有 JJ：按「X 軸 π」，看狀態會不會停在 |1⟩。" : "有 JJ：X 軸 π 會把 |0⟩ 完整翻到 |1⟩。切到「沒有 JJ」比較看看。";
+      };
+      $("c4mtr").onclick = () => set("tr"); $("c4mlc").onclick = () => set("lc"); set(c4mode);
+      const p4 = (axis, ang) => { if (c4mode === "lc") sim4q.push({ T: 20 * ang / Math.PI, phi: axis === "X" ? 0 : Math.PI / 2, ang }); else pulse(axis, ang); };
+      $("c4xpi").onclick = () => p4("X", Math.PI);
+      $("c4xh").onclick = () => p4("X", Math.PI / 2);
+      $("c4yh").onclick = () => p4("Y", Math.PI / 2);
+      $("c4r").onclick = () => { queue.length = 0; anim = null; simReset(sim4); sim4q.length = 0; state.set(0, 1, 0); trailN = 0; };
     }
     if (i === 4) {
       const sp = $("g5steps");
@@ -3184,7 +3238,8 @@ nav.chapters {
   }
 
   // ---------- 狀態變數 ----------
-  let jjPhi = 35 * Math.PI / 180, acMode = false, xyT = -1, excite = 0, xyDe = false;   // xyDe：這次 XY 脈衝是重設（翻回 |0⟩）
+  let jjPhi = 35 * Math.PI / 180, acMode = false, xyT = -1, excite = 0, xyDe = false;
+  let c4mode = "tr"; const sim4 = makeSim("lc"), sim4q = [];   // xyDe：這次 XY 脈衝是重設（翻回 |0⟩）
 
   // ---------- 尺寸 ----------
   function resize() {
@@ -3277,8 +3332,29 @@ nav.chapters {
         b.m.position.set(0, b.y, 0); b.m.scale.x = b.w;
         levelTags[n].pos.set(PX - b.w / 2 - 0.55, b.y, 0);
       });
-      for (let n = 0; n < 3; n++) { gapTags[n].el.textContent = (E[n + 1] - E[n]).toFixed(2) + " GHz"; gapTags[n].pos.set(PX + levelBars[n + 1].w / 2 + 1.25, (levelBars[n].y + levelBars[n + 1].y) / 2, 0); }
-      const amp = 0.95, w = trMode ? 2.2 : 2.3; const phi = amp * Math.sin(T * w);
+      for (let n = 0; n < 5; n++) { gapTags[n].el.textContent = (E[n + 1] - E[n]).toFixed(2) + " GHz"; gapTags[n].pos.set(PX + levelBars[n + 1].w / 2 + 1.25, (levelBars[n].y + levelBars[n + 1].y) / 2, 0); }
+      // 驅動模擬（1 秒動畫 = 8 ns）
+      if (sim3.left > 0) {
+        const step = Math.min(sim3.left, dt * 8); simAdvance(sim3, step); sim3.left -= step;
+        if (sim3.left <= 1e-9) {
+          sim3.left = 0; const P = simPops(sim3), nb = P.reduce((a, v, n) => a + v * n, 0), el = $("c3msg");
+          if (el) el.innerHTML = sim3.mode === "tr"
+            ? (sim3.goal === "pi" ? `<b>有 JJ</b>：π 脈衝後 P(|1⟩) = ${P[1].toFixed(3)}，漏到 |2⟩ 只有 ${(P[2] * 100).toFixed(1)}%——能階不等距，微波只對 0↔1 共振，乾淨地寫入 |1⟩。` : `<b>有 JJ</b>：持續驅動 40 ns 剛好轉一整圈，又回到 |0⟩（P(|0⟩) = ${P[0].toFixed(3)}）。狀態只在 |0⟩、|1⟩ 之間 Rabi 振盪，這就是一個乾淨的二能階系統。`)
+            : (sim3.goal === "pi" ? `<b>沒有 JJ</b>：同一個 π 脈衝後只有 ${(P[1] * 100).toFixed(0)}% 在 |1⟩，其餘散到 |0⟩、|2⟩、|3⟩…（平均停在第 ${nb.toFixed(1)} 階）。等距的梯子每一階都共振，寫不進 |1⟩。` : `<b>沒有 JJ</b>：持續驅動 40 ns，狀態越爬越高（平均第 ${nb.toFixed(1)} 階，|0⟩ 只剩 ${(P[0] * 100).toFixed(2)}%）——就像古典的電流振盪被越推越大，永遠不會回到 |0⟩、也不會停在 |1⟩。`);
+        }
+      }
+      const P3 = simPops(sim3), nbar = P3.reduce((a, v, n) => a + v * n, 0);
+      levelBars.forEach((b, n) => {
+        const pn = n < 5 ? P3[n] : P3.slice(5).reduce((a, v) => a + v, 0), pb = popBars[n];
+        pb.visible = pn > 0.004; pb.scale.x = Math.max(0.01, b.w * Math.min(1, pn)); pb.position.set(0, b.y + 0.16, 0.35);
+      });
+      drv3Tag.on = sim3.left > 0;
+      const ma = mw3Geo.attributes.position.array;
+      for (let i = 0; i < mw3N; i++) { const x = -9.5 + 3.2 * i / (mw3N - 1); ma[i * 3] = x; ma[i * 3 + 1] = 2.4 + 0.3 * Math.sin(x * 9 - T * 14); ma[i * 3 + 2] = 0; }
+      mw3Geo.attributes.position.needsUpdate = true; mw3.material.opacity = sim3.left > 0 ? 1 : 0;
+      const r3p = $("r3p");
+      if (r3p) r3p.innerHTML = `<dt>P(|0⟩)・P(|1⟩)・P(|2⟩)</dt><dd>${P3[0].toFixed(3)}・${P3[1].toFixed(3)}・${P3[2].toFixed(3)}</dd><dt>P(≥|3⟩)</dt><dd>${P3.slice(3).reduce((a, v) => a + v, 0).toFixed(3)}</dd><dt>平均能階 ⟨n⟩</dt><dd>${nbar.toFixed(2)}</dd>`;
+      const amp = Math.min(2.1, 0.45 * Math.sqrt(2 * nbar + 1)), w = trMode ? 2.2 : 2.3; const phi = amp * Math.sin(T * w);
       const Uy = trMode ? PHYS.EJ * (1 - Math.cos(phi)) : PHYS.EJ * phi * phi / 2;
       ball.position.set(phi * SX, Uy * SY + 0.3, 0);
       arm.rotation.z = phi;
@@ -3287,27 +3363,65 @@ nav.chapters {
 
     // 第 4 章：布洛赫球
     if (cur === 3 || cur === 4) {
-      if (!anim && queue.length) { const q = queue.shift(); anim = { ...q, t: 0, from: state.clone() }; }
-      if (anim) {
-        anim.t += dt / (1.1 * anim.angle / Math.PI + 0.25);
-        const u = Math.min(anim.t, 1);
-        state.copy(anim.from).applyQuaternion(new THREE.Quaternion().setFromAxisAngle(anim.axis, anim.angle * u));
-        if (u >= 1) anim = null;
+      const lcOn = cur === 3 && c4mode === "lc";
+      let pops4 = null;
+      if (lcOn) {
+        // 沒有 JJ：用多能階模擬；1 秒動畫 = 16 ns
+        if (sim4.left <= 0 && sim4q.length) { const q = sim4q.shift(); sim4.left = q.T; sim4.phi = q.phi; sim4.ang = q.ang; }
+        if (sim4.left > 0) {
+          const step = Math.min(sim4.left, dt * 16); simAdvance(sim4, step); sim4.left -= step;
+          if (sim4.left <= 1e-9) {
+            sim4.left = 0; const P = simPops(sim4), el = $("c4msg");
+            if (el) el.innerHTML = `<b>沒有 JJ</b>：這個脈衝在有 JJ 時會${sim4.ang > 2 ? "把 |0⟩ 完整翻到 |1⟩" : "轉 90°"}；現在 P(|1⟩) = ${P[1].toFixed(3)}，有 ${((1 - P[0] - P[1]) * 100).toFixed(0)}% 漏到 |2⟩ 以上，箭頭縮短成 ${(P[0] + P[1]).toFixed(2)}。`;
+          }
+        }
+        pops4 = simPops(sim4);
+        const c0r = sim4.re[0], c0i = sim4.im[0], c1r = sim4.re[1], c1i = sim4.im[1];
+        const bx = 2 * (c0r * c1r + c0i * c1i), by = 2 * (c0r * c1i - c0i * c1r), bz = pops4[0] - pops4[1];
+        state.set(bx, bz, -by);   // 布洛赫 z → 世界 y，y → 世界 −z
+      } else {
+        if (!anim && queue.length) { const q = queue.shift(); anim = { ...q, t: 0, from: state.clone() }; }
+        if (anim) {
+          anim.t += dt / (1.1 * anim.angle / Math.PI + 0.25);
+          const u = Math.min(anim.t, 1);
+          state.copy(anim.from).applyQuaternion(new THREE.Quaternion().setFromAxisAngle(anim.axis, anim.angle * u));
+          if (u >= 1) anim = null;
+        }
       }
-      arrow.setDirection(state.clone().normalize());
+      const len4 = Math.min(1, state.length());
+      if (len4 > 1e-4) arrow.setDirection(state.clone().normalize());
+      arrow.setLength(Math.max(0.05, R * len4), Math.min(0.5, R * len4 * 0.4 + 0.02), Math.min(0.28, R * len4 * 0.25 + 0.02));
       tip.position.copy(state).multiplyScalar(R);
       if (cur === 3) {
         const tp = trailGeo.attributes.position.array, idx = trailN % TRAIL;
-        if (anim || trailN === 0) { tp[idx * 3] = tip.position.x; tp[idx * 3 + 1] = tip.position.y; tp[idx * 3 + 2] = tip.position.z; trailN++; trailGeo.setDrawRange(0, Math.min(trailN, TRAIL)); trailGeo.attributes.position.needsUpdate = true; }
+        if (anim || sim4.left > 0 || trailN === 0) { tp[idx * 3] = tip.position.x; tp[idx * 3 + 1] = tip.position.y; tp[idx * 3 + 2] = tip.position.z; trailN++; trailGeo.setDrawRange(0, Math.min(trailN, TRAIL)); trailGeo.attributes.position.needsUpdate = true; }
         if (trailN >= TRAIL) trailN = 1;
-        ladderBars[0].material.color.setHex(COL.gold); ladderBars[0].scale.set(1, 1 + 2 * (1 - P1()), 1);
-        ladderBars[1].scale.set(1, 1 + 2 * P1(), 1);
-        // 微波
-        const arr = mwGeo.attributes.position.array;
-        for (let i = 0; i < mwN; i++) { const x = -4.9 + 4.6 * i / (mwN - 1); arr[i * 3] = x; arr[i * 3 + 1] = -2.2 + ladderY[1] / 2 + 0.35 * Math.sin(x * 9 - T * 14); arr[i * 3 + 2] = 0; }
-        mwGeo.attributes.position.needsUpdate = true;
-        mw.material.opacity = anim ? 1 : 0;
-        const pv = $("r4p"); if (pv) { pv.textContent = P1().toFixed(3); $("r4bar").style.width = (P1() * 100).toFixed(1) + "%"; }
+        // 能階梯：有 JJ 不等距、沒有 JJ 等距；長條粗細 ∝ 佔據機率
+        const LY = LADDER[lcOn ? "lc" : "tr"], pp = pops4 || [1 - P1(), P1(), 0, 0];
+        const p3up = pops4 ? pops4.slice(3).reduce((a, v) => a + v, 0) : 0;
+        ladderBars.forEach((b, n) => {
+          b.position.y += (LY[n] - b.position.y) * (1 - Math.exp(-dt * 6)); b.visible = n < 3 || lcOn;
+          b.scale.set(1, 1 + 4 * (n < 3 ? pp[n] : p3up), 1);
+          ladTags[n].pos.set(-7.5, -2.2 + b.position.y, 0).add(bl.position); ladTags[n].on = n < 3 || lcOn;
+          if (n === 3) ladTags[n].el.textContent = lcOn ? "|3⟩ 以上" : "|3⟩";
+        });
+        const drv = lcOn ? sim4.left > 0 : !!anim;
+        gapTags4.forEach((t, n) => {
+          const y = -2.2 + (ladderBars[n].position.y + ladderBars[n + 1].position.y) / 2, f = (lcOn ? Math.sqrt(30) : PHYS.trAll[n + 1] - PHYS.trAll[n]).toFixed(2);
+          t.pos.set(-4.4, y, 0).add(bl.position); t.on = n < 2 || lcOn;
+          t.el.textContent = n === 0 ? `${f} GHz 共振` : lcOn ? `${f} GHz 也共振！` : `${f} GHz 不共振`;
+          t.el.classList.toggle("teal", n === 0); t.el.classList.toggle("red", n > 0 && lcOn);
+        });
+        // 微波：有 JJ 只在 0→1 共振；沒有 JJ 每一階都共振（紅色）
+        const wave = (g, y0) => { const arr = g.attributes.position.array; for (let i = 0; i < mwN; i++) { const x = -4.9 + 4.6 * i / (mwN - 1); arr[i * 3] = x; arr[i * 3 + 1] = y0 + 0.35 * Math.sin(x * 9 - T * 14); arr[i * 3 + 2] = 0; } g.attributes.position.needsUpdate = true; };
+        wave(mwGeo, -2.2 + (ladderBars[0].position.y + ladderBars[1].position.y) / 2); mw.material.opacity = drv ? 1 : 0;
+        mwX.forEach((l, k) => { wave(l.geometry, -2.2 + (ladderBars[k + 1].position.y + ladderBars[k + 2].position.y) / 2); l.material.opacity = drv && lcOn ? 1 : 0; });
+        const p1v = pops4 ? pops4[1] : P1(), pv = $("r4p");
+        if (pv) {
+          pv.textContent = p1v.toFixed(3); $("r4bar").style.width = (p1v * 100).toFixed(1) + "%";
+          $("r4pops").textContent = pops4 ? `${pops4[0].toFixed(3)}・${pops4[2].toFixed(3)}・${p3up.toFixed(3)}` : `${(1 - p1v).toFixed(3)}・0.000・0.000`;
+          $("r4in").textContent = pops4 ? (pops4[0] + pops4[1]).toFixed(3) : "1.000（理想二能階）";
+        }
       }
       const p5 = $("r5p"); if (p5 && cur === 4) p5.textContent = P1().toFixed(3);
     }
