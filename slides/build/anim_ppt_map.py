@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """產生「3D 動畫場景 ↔ PPT 投影片」對照表，並檢查每個場景是否都有簡報介紹。
 
-掃描 animations/*.html 的所有場景（含 transmon-3d.html 的 8 章與 #deutsch 捷徑），
+掃描 animations/*.html 的所有場景（含 transmon-3d.html 的 12 章與 #deutsch 捷徑），
 再掃描 repo 內所有 .pptx 的超連結，輸出 docs/動畫與簡報對照表.md。
 有場景沒有任何投影片連到時，程式以結束碼 1 結束並列出缺口。
 
@@ -18,6 +18,8 @@ from pptx import Presentation
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 OUT = os.path.join(ROOT, "docs", "動畫與簡報對照表.md")
+README = os.path.join(ROOT, "README.md")
+README_BEGIN, README_END = "<!-- anim-map:begin -->", "<!-- anim-map:end -->"   # README 裡自動更新的區塊
 ANIM_DIR = os.path.join(ROOT, "animations")
 PAGES_ANIM = "https://pcpcchen-coder.github.io/QuantumComputing/animations/"   # GitHub Pages
 
@@ -38,6 +40,79 @@ DECK_NAMES = {
     "slides/output/qfish008-deutsch-algorithm.pptx": "量子金魚 008 Deutsch",
     "slides/output/qc-power-supply-delta.pptx": "量子電腦供電設計",
 }
+DECK_SHORT = {   # README 精簡表用的簡稱
+    "slides/JJ_Microwave_Readout_Talk.pptx": "JJ", "slides/QC_Peripheral_Systems_Talk.pptx": "周邊",
+    "slides/QC_Operation_Talk.pptx": "操作", "slides/Ion_NeutralAtom_Talk.pptx": "離子阱",
+    "slides/transmon.pptx": "transmon", "slides/output/qfish008-deutsch-algorithm.pptx": "qfish008",
+    "slides/output/qc-power-supply-delta.pptx": "供電",
+}
+
+
+def page_list(nums):
+    """[6, 7, 8, 14] → 'p6–8、14'"""
+    nums = sorted(set(nums))
+    out, i = [], 0
+    while i < len(nums):
+        j = i
+        while j + 1 < len(nums) and nums[j + 1] == nums[j] + 1:
+            j += 1
+        out.append(f"{nums[i]}–{nums[j]}" if j - i >= 2 else "、".join(str(n) for n in nums[i:j + 1]))
+        i = j + 1
+    return "p" + "、".join(out)
+
+
+def readme_block(refs):
+    """README 的總覽與「場景 → 投影片頁碼」精簡表。"""
+    head = ["### 總覽", "",
+            "> 這一段由 `python3 slides/build/anim_ppt_map.py` 自動更新，請不要手動修改。", "",
+            "| 動畫（線上版） | 場景數 | 對應簡報 | 狀態 |", "|---|---|---|---|"]
+    rows = ["", "### 場景 → 投影片頁碼", "",
+            "主要簡報的頁碼不加前綴；其他簡報以簡稱標示（JJ、周邊、操作、離子阱、transmon、qfish008、供電）。", "",
+            "| 動畫 | 主要簡報 | 場景代號 → 頁碼 |", "|---|---|---|"]
+    for html, js_dir, desc in PAGES:
+        sc = scenes_of(html, js_dir)
+        decks = defaultdict(int)
+        for sid, _ in sc:
+            for d, _, _ in refs.get((html, sid), []):
+                decks[d] += 1
+        main_deck = max(decks, key=decks.get) if decks else None
+        covered = sum(1 for sid, _ in sc if refs.get((html, sid)))
+        deck_cell = "；".join(f"[`{os.path.basename(d)}`]({d})" for d in sorted(decks, key=lambda d: -decks[d]))
+        status = "✅ 全部有" if covered == len(sc) else f"⚠️ 缺 {len(sc) - covered}"
+        head.append(f"| [`{html}`]({PAGES_ANIM}{html})：{desc} | {len(sc)} | {deck_cell or '—'} | {status} |")
+        cells = []
+        for sid, _ in sc:
+            by = defaultdict(list)
+            for d, no, _ in refs.get((html, sid), []):
+                by[d].append(no)
+            if not by:
+                cells.append(f"{sid} ⚠️ 無")
+                continue
+            parts = [page_list(by[main_deck])] if main_deck in by else []
+            parts += [f"{DECK_SHORT.get(d, d)} {page_list(v)}" for d, v in by.items() if d != main_deck]
+            cells.append(f"{sid} " + "、".join(parts[:1]) + (f"（另 {'；'.join(parts[1:])}）" if len(parts) > 1 else ""))
+        rows.append(f"| **{html}** | {DECK_SHORT.get(main_deck, '—')} | {'；'.join(cells)} |")
+    listed = {h for h, _, _ in PAGES}
+    extra = sorted(os.path.basename(p) for p in glob.glob(os.path.join(ANIM_DIR, "*.html"))
+                   if os.path.basename(p) not in listed)
+    for html in extra:
+        linked = [k for k in refs if k[0] == html]
+        head.append(f"| [`{html}`]({PAGES_ANIM}{html}) | —（沒有場景代號） | "
+                    f"{'有連結' if linked else '目前沒有簡報連結'} | {'✅' if linked else '—'} |")
+    return "\n".join(head + rows)
+
+
+def update_readme(refs):
+    text = open(README, encoding="utf-8").read()
+    if README_BEGIN not in text or README_END not in text:
+        print("README 沒有 anim-map 標記，略過")
+        return
+    a = text.index(README_BEGIN) + len(README_BEGIN)
+    b = text.index(README_END)
+    new = text[:a] + "\n" + readme_block(refs) + "\n" + text[b:]
+    if new != text:
+        open(README, "w", encoding="utf-8").write(new)
+        print("updated README.md")
 
 
 def scenes_of(html, js_dir):
@@ -136,6 +211,7 @@ def main():
         lines += ["## 缺口", ""] + [f"- `{m}`" for m in missing] + [""]
     open(OUT, "w", encoding="utf-8").write("\n".join(lines))
     print("wrote", os.path.relpath(OUT, ROOT))
+    update_readme(refs)
     if missing:
         print("缺少簡報介紹的場景：", ", ".join(missing))
         sys.exit(1)
