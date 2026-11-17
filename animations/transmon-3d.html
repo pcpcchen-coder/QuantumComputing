@@ -775,10 +775,34 @@ nav.chapters {
   g9Tag("8 根長條＝|q1 q2 q3⟩ 的振幅（高度可正可負，負的是紅色）；機率 = 振幅²", [0, S9 + 0.5, -0.55], "flat small detail");
 
   // =====================================================================
+  // 第 10 章：表面碼——2D 方格、穩定子、解碼器
+  // =====================================================================
+  const G10X = -44, G10Z = 44;
+  const g10 = new THREE.Group(); g10.position.set(G10X, 0, G10Z); scene.add(g10);
+  g10.add(box(7.8, 0.3, 7.8, mat.sub, 0, -0.18, 0));
+  const lat10 = new THREE.Group(); g10.add(lat10);
+  const mkSeg = (n, color, op) => {
+    const g = new THREE.BufferGeometry(); g.setAttribute("position", new THREE.BufferAttribute(new Float32Array(n * 6), 3)); g.setDrawRange(0, 0);
+    const l = new THREE.LineSegments(g, new THREE.LineBasicMaterial({ color, transparent: true, opacity: op, depthWrite: false })); g10.add(l); return l;
+  };
+  const conn10 = mkSeg(64, COL.white, 0.9), match10 = mkSeg(600, COL.white, 0.95), logi10 = mkSeg(64, RED, 0.95), guide10 = mkSeg(64, COL.white, 0.6);
+  const cvs10 = document.createElement("canvas"); cvs10.width = 1400; cvs10.height = 560;
+  const c10x = cvs10.getContext("2d");
+  const tex10 = new THREE.CanvasTexture(cvs10); tex10.encoding = THREE.sRGBEncoding; tex10.anisotropy = 4;
+  const board10 = new THREE.Mesh(new THREE.PlaneGeometry(11, 11 * 560 / 1400), new THREE.MeshBasicMaterial({ map: tex10, transparent: true, depthWrite: false }));
+  board10.position.set(0, 3.6, -4.9); board10.rotation.x = -0.1; g10.add(board10);
+  const g10Tag = (t, p, cls = "") => tag(t, new THREE.Vector3(...p).add(g10.position), [9], cls);
+  const d10Tags = [], p10Tags = [];
+  for (let i = 0; i < 49; i++) d10Tags.push(g10Tag("", [0, 0, 0], "flat mono small"));
+  for (let i = 0; i < 48; i++) p10Tags.push(g10Tag("", [0, 0, 0], "flat mono small detail"));
+  const logTag10 = g10Tag("", [0, 0, 0], "red");
+  const guideTags10 = [g10Tag("Z_L（第一列的 Z）", [0, 0, 0], "flat mono small teal"), g10Tag("X_L（第一行的 X）", [0, 0, 0], "flat mono small copper")];
+
+  // =====================================================================
   // 章節定義
   // =====================================================================
   const CH = [
-    { id: "chip", short: "晶片", kicker: "第 1 章 / 9", title: "一顆 transmon 的俯視圖",
+    { id: "chip", short: "晶片", kicker: "第 1 章 / 10", title: "一顆 transmon 的俯視圖",
       target: [0, -0.6, 0.6], pos: [8.5, 13.5, 15],
       html: `<div class="controls subtabs" role="group" aria-label="分頁"><button class="btn" id="c1tabA" type="button" aria-pressed="true">晶片總覽</button><button class="btn" id="c1tabB" type="button" aria-pressed="false">大十字電容的作用</button></div>
       <div id="c1A"><p>灰色是<b>接地面</b>，深色細縫是蝕刻掉金屬、露出基板的間隙。中央的<b>十字金屬板</b>就是 transmon 的大電容，下端經由 <b>SQUID</b>（兩個約瑟夫森結）接地。</p>
@@ -799,26 +823,26 @@ nav.chapters {
       <div class="controls"><button class="btn" id="c1reset" type="button">回到 77.5 fF</button><label class="check"><input type="checkbox" id="c1field" checked> 電場線</label><label class="check"><input type="checkbox" id="c1arm" checked> 手臂用途</label></div>
       <p class="note">E_J/h 固定為 15 GHz，各數值由電荷基底哈密頓量即時對角化求得。十字板粗細只是示意電容大小，未按比例；電場線只畫基板上方。</p>
       </div>` },
-    { id: "junction", short: "約瑟夫森結", kicker: "第 2 章 / 9", title: "約瑟夫森結：非線性電感的本體",
+    { id: "junction", short: "約瑟夫森結", kicker: "第 2 章 / 10", title: "約瑟夫森結：非線性電感的本體",
       target: [JX + 0.3, 1.0, 0], pos: [JX + 4.5, 6.2, 12],
       html: `<p>下層 Al、中間 1–2 nm 的 AlOx、上層 Al。兩邊的超導波函數（後方截面圖）在絕緣層裡<b>指數衰減並重疊</b>，庫柏對因此能穿隧過去。</p>
       <p>拖動相位差 φ：電流 <b>I = I_c sin φ</b>，等效電感 <b>L_J = L_J0 / cos φ</b>。勾選「施加電壓」時 φ 以 2eV/ħ 的速率轉動，電流變成交流。</p>
       <dl class="stats"><dt>相位差 φ</dt><dd id="r2phi">—</dd><dt>電流 I / I_c</dt><dd id="r2I">—</dd><dt>電感 L_J / L_J0</dt><dd id="r2L">—</dd><dt>L_J0（I_c ≈ 30 nA）</dt><dd>≈ 10.9 nH</dd></dl>
       <div class="controls"><label class="row" for="c2phi">φ <input type="range" id="c2phi" min="0" max="180" step="1" value="35"></label><label class="check"><input type="checkbox" id="c2v"> 施加電壓 V ≠ 0（交流約瑟夫森效應）</label></div>` },
-    { id: "potential", short: "位能井", kicker: "第 3 章 / 9", title: "cos 位能井：能階不再等距",
+    { id: "potential", short: "位能井", kicker: "第 3 章 / 10", title: "cos 位能井：能階不再等距",
       target: [PX + 2.2, 3.6, 0], pos: [PX + 2.6, 5.2, 20],
       html: `<p>JJ 的位能是 <b>−E_J cos φ</b>（銅色），線性電感是<b>拋物線</b>（灰色）。cos 井的邊緣比拋物線平坦，量子化後能階<b>越往上越密</b>。</p>
       <p>右邊的單擺有完全相同的位能形狀。E_J/E_C = 60 時，相位擾動只有約 0.43 rad，所以只「有一點點」不簡諧。</p>
       <dl class="stats" id="r3"></dl>
       <div class="controls" role="group" aria-label="比較"><button class="btn" id="c3tr" type="button" aria-pressed="true">Transmon 能階</button><button class="btn" id="c3lc" type="button" aria-pressed="false">線性 LC 能階</button></div>` },
-    { id: "control", short: "操控", kicker: "第 4 章 / 9", title: "用微波轉動布洛赫球",
+    { id: "control", short: "操控", kicker: "第 4 章 / 10", title: "用微波轉動布洛赫球",
       target: [-1.6, 0.6, BZ], pos: [3.5, 4.5, BZ + 13.5],
       html: `<p><b>|0⟩、|1⟩</b> 是 cos 井最低的兩個能階。以 <b>f₀₁ = 5.21 GHz</b> 的微波脈衝驅動，狀態在布洛赫球上繞 X 或 Y 軸旋轉（Rabi 振盪）。</p>
       <p>|1⟩→|2⟩ 的頻率低了 283 MHz，所以同一道微波不會把狀態推上 |2⟩。實務上脈衝長 20–50 ns，並用 DRAG 整形進一步抑制洩漏。</p>
       <dl class="stats"><dt>P(|1⟩)</dt><dd id="r4p">0.000</dd></dl>
       <div class="meter" aria-hidden="true"><i id="r4bar"></i></div>
       <div class="controls" style="margin-top:12px"><button class="btn primary" id="c4xpi" type="button">X 軸 π</button><button class="btn" id="c4xh" type="button">X 軸 π/2</button><button class="btn" id="c4yh" type="button">Y 軸 π/2</button><button class="btn" id="c4r" type="button">重設 |0⟩</button></div>` },
-    { id: "readout", short: "讀取", kicker: "第 5 章 / 9", title: "色散讀取：從頻移讀出狀態",
+    { id: "readout", short: "讀取", kicker: "第 5 章 / 10", title: "色散讀取：從頻移讀出狀態",
       target: [-0.3, 2.3, -5.2], pos: [0.7, 6.6, 10.2],
       html: `<p>讀取不直接量位元，而是量它旁邊<b>讀取共振腔的「音高」</b>。本章分 8 步：為什麼要間接讀、色散偏移、探測與 IQ、整條讀取鏈、積分與判別、量測反作用與 QND、<b>量完之後怎麼回到 |0⟩</b>，最後是自由實驗。左上方字幕會跟著動畫說明。</p>
       <div class="steps" id="g5steps" role="group" aria-label="步驟"></div>
@@ -827,7 +851,7 @@ nav.chapters {
       <dl class="stats"><dt>目前 P(|1⟩)</dt><dd id="r5p">0.000</dd><dt>積分時間 τ</dt><dd id="g5tau">—</dd><dt>估計讀取保真度</dt><dd id="g5F">—</dd><dt>最近一次</dt><dd id="g5last">—</dd></dl>
       <div class="hist"><span>判成 0：<b id="h0">0</b></span><span>判成 1：<b id="h1">0</b></span></div>
       <p class="note">數值：f_q = 5.21 GHz、f_r ≈ 7 GHz、g ≈ 100 MHz、α = −283 MHz → χ ≈ 0.77 MHz、最佳 κ ≈ 2χ ≈ 1.5 MHz。IQ 雜訊大小與 T₁ = 50 μs 為示意值；保真度估計 = 兩團高斯重疊 + 讀取途中 T₁ 衰減。</p>` },
-    { id: "case", short: "案例", kicker: "第 6 章 / 9", title: "案例：三顆可調 transmon 的頻率配置",
+    { id: "case", short: "案例", kicker: "第 6 章 / 10", title: "案例：三顆可調 transmon 的頻率配置",
       target: [0.6, 2.3, CZ0 - 1.2], pos: [1.2, 12.2, CZ0 + 16.0],
       html: `<p>把前五章串起來：<b>XY 線寫入狀態、SQUID＋Z 線決定頻率</b>，再看多顆位元放在一起時，頻率要怎麼排才不會互相碰撞。動畫會邊演示邊在左上方跳出說明。</p>
       <div class="steps" id="c6steps" role="group" aria-label="步驟"></div>
@@ -836,7 +860,7 @@ nav.chapters {
       <dl class="stats"><dt style="color:${QHEX[0]}">Q1</dt><dd id="c6q0">—</dd><dt style="color:${QHEX[1]}">Q2</dt><dd id="c6q1">—</dd><dt style="color:${QHEX[2]}">Q3</dt><dd id="c6q2">—</dd></dl>
       <div class="col-list" id="c6col"></div>
       <p class="note">各欄依序是 f₀₁、Z 線磁通 Φ、激發機率 P(|1⟩)。碰撞判定窗與串擾比例為示意值；頻率由 f₀₁ ≈ √(8E_J E_C) − E_C 與 E_J(Φ) = E_J,max|cos(πΦ/Φ₀)| 計算。</p>` },
-    { id: "grover", short: "振幅長條", kicker: "第 7 章 / 9", title: "振幅長條：糾纏、Grover 與 Deutsch",
+    { id: "grover", short: "振幅長條", kicker: "第 7 章 / 10", title: "振幅長條：糾纏、Grover 與 Deutsch",
       target: [G7X - 0.6, 1.75, G7Z], pos: [G7X + 0.2, 4.9, G7Z + 16.5],
       html: `<p>兩顆位元有四個振幅 |00⟩、|01⟩、|10⟩、|11⟩（左邊那位是 Q1／q0，右邊是 Q2／q1）。長條<b>高度是振幅（可正可負，負的是紅色）</b>，機率是振幅的平方。上方電路圖高亮的是正在送的閘，左上方字幕說明對應的硬體脈衝。步驟 1 講糾纏、2–6 講 Grover 搜尋、7 講 Deutsch，8 是自由實驗。</p>
       <div class="steps" id="g7steps" role="group" aria-label="步驟"></div>
@@ -845,7 +869,7 @@ nav.chapters {
       <dl class="stats"><dt>a₀₀ · a₁₁</dt><dd id="g7p1">—</dd><dt>a₀₁ · a₁₀</dt><dd id="g7p2">—</dd><dt>判定</dt><dd id="g7ent">—</dd></dl>
       <div id="g7hist"></div>
       <p class="note">糾纏判定：兩者相等就能拆成兩顆各自的狀態（乘積態），不相等就是糾纏。糾纏度 C = 2|a₀₀a₁₁ − a₀₁a₁₀|，0 為乘積態、1 為最大糾纏。</p>` },
-    { id: "shor", short: "Shor", kicker: "第 8 章 / 9", title: "Shor 演算法：用 QFT 找週期，分解 15",
+    { id: "shor", short: "Shor", kicker: "第 8 章 / 10", title: "Shor 演算法：用 QFT 找週期，分解 15",
       target: [G8X - 1.0, 3.0, G8Z], pos: [G8X - 0.2, 6.3, G8Z + 18.5],
       html: `<p>Shor 演算法把「分解 N」轉成「找 f(x) = aˣ mod N 的週期 r」，量子電腦只負責找週期，前後都是古典計算。這裡用 <b>N = 15、a = 7</b> 走完整個流程。</p>
       <p>畫面說明：<b>長條是計數暫存器每個 x 的振幅</b>（高度＝大小、顏色＝相位：金 0°、青 90°、紅 180°、紫 270°）；下方色塊是工作暫存器裡綁定的 f(x)（同色＝同值）；後方青色細長條是量測次數；上方看板是電路（高亮＝目前步驟）與推導。</p>
@@ -854,7 +878,7 @@ nav.chapters {
       <h3 id="g8title"></h3><div id="g8body"></div><div id="g8extra"></div>
       <dl class="stats"><dt>設定</dt><dd id="g8na">—</dd><dt>真實週期（古典驗算）</dt><dd id="g8r">—</dd><dt>最近量到的 y</dt><dd id="g8y">—</dd><dt>連分數 → 週期</dt><dd id="g8cf">—</dd><dt>分解結果</dt><dd id="g8f">—</dd></dl>
       <p class="note">量測工作暫存器只是為了方便理解：不量它，計數暫存器最後的結果分布完全相同（延遲量測原理）。振幅由完整的離散傅立葉轉換計算，量測依 |振幅|² 隨機取樣。</p>` },
-    { id: "bv", short: "BV 密碼", kicker: "第 9 章 / 9", title: "基本操作案例：3 顆位元一次猜中密碼（BV）",
+    { id: "bv", short: "BV 密碼", kicker: "第 9 章 / 10", title: "基本操作案例：3 顆位元一次猜中密碼（BV）",
       target: [G9X - 1.0, 2.5, G9Z], pos: [G9X - 0.2, 5.8, G9Z + 18.5],
       html: `<p>這是一個完整的<b>基本操作案例</b>：用 3 顆位元跑 <b>Bernstein–Vazirani 演算法</b>，只查詢黑盒子一次，就猜出它藏的 3 位元密碼 s。會用到前面所有的操作：XY 線的 H 閘（第 4 章）、虛擬 Z、色散讀取與重設（第 5 章）。</p>
       <p>畫面說明：8 根長條是三顆位元 |q1 q2 q3⟩ 的振幅（|000⟩～|111⟩，高度可正可負、負的是紅色；機率＝振幅²）；上方看板左邊是電路（高亮＝目前的閘），右邊是推導；左上方字幕跟著動畫說明。</p>
@@ -864,9 +888,18 @@ nav.chapters {
       <dl class="stats"><dt>密碼 s</dt><dd id="g9s">—</dd><dt>查詢次數</dt><dd id="g9q">—</dd><dt>量測最多</dt><dd id="g9best">—</dd></dl>
       <div id="g9hist"></div>
       <p class="note">振幅由 8 維實數態向量逐閘計算（H、Z、黑盒子）；量測依 振幅² 隨機取樣。「讀取雜訊」為每顆位元 3% 的獨立誤判（示意值）。</p>` },
+    { id: "surface", short: "表面碼", kicker: "第 10 章 / 10", title: "量子錯誤更正：表面碼",
+      target: [G10X - 1.5, 1.7, G10Z - 1.9], pos: [G10X - 1.2, 8.4, G10Z + 12.6],
+      html: `<p>表面碼把 1 顆邏輯位元分散在一整片 2D 方格的實體位元上，靠<b>相鄰位元的奇偶量測（穩定子）</b>抓錯——不量資料本身、不破壞疊加——再由<b>解碼器</b>把亮點配對、推回錯誤位置。這章用 d = 3（17 顆位元）一步一步演示，自由實驗可以自己點位元注入錯誤、換碼距、跑統計。</p>
+      <p>圖例：圓球＝資料位元（紅 X 錯誤、藍 Z 錯誤、紫 Y 錯誤）；小方塊＝量測位元；<b>青色格子＝Z 穩定子</b>（抓 X 錯誤）、<b>琥珀色格子＝X 穩定子</b>（抓 Z 錯誤）；格子亮起＝該穩定子量到 −1；白線＝解碼器的配對。</p>
+      <div class="steps" id="g10steps" role="group" aria-label="步驟"></div>
+      <div class="controls"><button class="btn" id="g10prev" type="button">◀ 上一步</button><button class="btn" id="g10play" type="button">暫停</button><button class="btn" id="g10re" type="button">重播</button><button class="btn primary" id="g10next" type="button">下一步 ▶</button><label class="check"><input type="checkbox" id="g10auto" checked> 自動接續</label></div>
+      <h3 id="g10title"></h3><div id="g10body"></div><div id="g10extra"></div>
+      <dl class="stats"><dt>碼距 d</dt><dd id="g10d">—</dd><dt>實體位元</dt><dd id="g10n">—</dd><dt>亮起的穩定子</dt><dd id="g10lit">—</dd><dt>最近一次解碼</dt><dd id="g10res">—</dd></dl>
+      <p class="note">解碼器：最小權重完美匹配（亮點 ≤ 14 個時以動態規劃精確求解，更多時改用貪婪法），X、Z 兩類錯誤分開解碼。自由實驗的統計用簡化雜訊模型（只有資料位元以機率 p 發生 X/Y/Z 錯誤、量測完美），閾值約 10–15%；真實電路（閘與量測也會錯）的閾值約 1%。</p>` },
   ];
-  const groupsFor = [[chip], [jj], [pot], [bl], [chip, readout, rchain], [cs], [g7], [g8], [g9]];
-  const allGroups = [chip, jj, pot, bl, readout, rchain, cs, g7, g8, g9];
+  const groupsFor = [[chip], [jj], [pot], [bl], [chip, readout, rchain], [cs], [g7], [g8], [g9], [g10]];
+  const allGroups = [chip, jj, pot, bl, readout, rchain, cs, g7, g8, g9, g10];
 
   // ---------- 章節 UI ----------
   const rail = document.getElementById("rail"), panel = document.getElementById("panel");
@@ -991,6 +1024,20 @@ nav.chapters {
       };
       $("g9auto").checked = g9S.auto; $("g9auto").onchange = e => { g9S.auto = e.target.checked; };
       g9Step(g9S.step);
+    }
+    if (i === 9) {
+      const sp = $("g10steps");
+      G10STEPS.forEach((s, k) => { const b = document.createElement("button"); b.type = "button"; b.textContent = k + 1; b.title = s.name; b.setAttribute("aria-label", `步驟 ${k + 1}：${s.name}`); b.onclick = () => g10Step(k); sp.appendChild(b); });
+      $("g10prev").onclick = () => g10Step(g10S.step - 1);
+      $("g10next").onclick = () => g10Step(g10S.step + 1);
+      $("g10re").onclick = () => g10Step(g10S.step);
+      $("g10play").onclick = () => {
+        const st = G10STEPS[g10S.step];
+        if (!g10S.playing && st.dur && g10S.t >= st.dur) { g10Step(g10S.step); return; }
+        g10S.playing = !g10S.playing; g10UpdPlay();
+      };
+      $("g10auto").checked = g10S.auto; $("g10auto").onchange = e => { g10S.auto = e.target.checked; };
+      g10Step(g10S.step);
     }
   }
   function setCapView(v, user) {
@@ -2637,6 +2684,477 @@ nav.chapters {
     drawBoard9();
   }
 
+  // =====================================================================
+  // 第 10 章：表面碼——碼的結構、最小權重完美匹配解碼、步驟腳本
+  // =====================================================================
+  const CX10 = 0xf0625a, CZ10 = 0x4fa3e0, CY10 = 0xb07be0, CN10 = 0xcfd5de;
+  const TILE = { Z: { base: 0x1d5f5a, lit: 0x3cf0dc }, X: { base: 0x6a4a1c, lit: 0xffb35c } };
+  const codeCache = {};
+  function codeStruct(d) {   // 旋轉表面碼：資料位元 (r, c)；穩定子以左上角 (r, c) 表示，可為 −1 或 d−1（邊界）
+    if (codeCache[d]) return codeCache[d];
+    const sp = d === 3 ? 1.8 : d === 5 ? 1.15 : 0.82, off = (d - 1) / 2;
+    const data = []; for (let r = 0; r < d; r++) for (let c = 0; c < d; c++) data.push({ r, c, x: (c - off) * sp, z: (r - off) * sp });
+    const ok = (r, c) => r >= 0 && r < d && c >= 0 && c < d;
+    const plaq = [];
+    for (let r = -1; r <= d - 1; r++) for (let c = -1; c <= d - 1; c++) {
+      const t = (((r + c) % 2) + 2) % 2 === 0 ? "Z" : "X", inR = v => v >= 0 && v <= d - 2;
+      let bd = null;
+      if (inR(r) && inR(c)) bd = "bulk";
+      else if (r === -1 && inR(c) && t === "X") bd = "top";
+      else if (r === d - 1 && inR(c) && t === "X") bd = "bottom";
+      else if (c === -1 && inR(r) && t === "Z") bd = "left";
+      else if (c === d - 1 && inR(r) && t === "Z") bd = "right";
+      if (!bd) continue;
+      const corners = [[r, c], [r, c + 1], [r + 1, c], [r + 1, c + 1]];   // 左上、右上、左下、右下
+      const qs = corners.map(([a, b]) => ok(a, b) ? a * d + b : -1);
+      // 互動順序：Z 穩定子走 N 字形（左上→左下→右上→右下），X 穩定子走 Z 字形（左上→右上→左下→右下）
+      const order = (t === "Z" ? [0, 2, 1, 3] : [0, 1, 2, 3]).map(k => qs[k]);
+      let x = (c + 0.5 - off) * sp, z = (r + 0.5 - off) * sp;
+      if (bd === "top") z = (0 - off) * sp - sp * 0.22; if (bd === "bottom") z = (d - 1 - off) * sp + sp * 0.22;
+      if (bd === "left") x = (0 - off) * sp - sp * 0.22; if (bd === "right") x = (d - 1 - off) * sp + sp * 0.22;
+      plaq.push({ t, r, c, bd, qs: qs.filter(q => q >= 0), order, x, z });
+    }
+    // 解碼圖：節點＝同類穩定子，邊＝資料位元；只屬於一個穩定子的資料位元連到「邊界」節點
+    const graph = {};
+    for (const T of ["Z", "X"]) {
+      const nodes = plaq.map((p, i) => p.t === T ? i : -1).filter(i => i >= 0), idx = {}; nodes.forEach((pi, k) => idx[pi] = k);
+      const B = nodes.length, adj = Array.from({ length: B + 1 }, () => []);
+      data.forEach((_, q) => {
+        const ns = nodes.filter(pi => plaq[pi].qs.includes(q)).map(pi => idx[pi]);
+        if (ns.length === 2) { adj[ns[0]].push([ns[1], q]); adj[ns[1]].push([ns[0], q]); }
+        else if (ns.length === 1) { adj[ns[0]].push([B, q]); adj[B].push([ns[0], q]); }
+      });
+      graph[T] = { nodes, B, adj };
+    }
+    return (codeCache[d] = { d, sp, data, plaq, graph });
+  }
+  // 解碼一種錯誤：T = "Z" 用 Z 穩定子抓 X 錯誤；T = "X" 用 X 穩定子抓 Z 錯誤
+  function decodeType(code, T, err) {
+    const G = code.graph[T], plaq = code.plaq;
+    const defects = []; G.nodes.forEach((pi, k) => { let s = 0; plaq[pi].qs.forEach(q => s ^= err[q]); if (s) defects.push(k); });
+    const n = defects.length, bfs = defects.map(src => {
+      const dist = new Array(G.B + 1).fill(Infinity), par = new Array(G.B + 1).fill(null); dist[src] = 0; const qu = [src];
+      while (qu.length) { const u = qu.shift(); if (u === G.B) continue; for (const [v, q] of G.adj[u]) if (dist[v] === Infinity) { dist[v] = dist[u] + 1; par[v] = [u, q]; qu.push(v); } }
+      return { dist, par };
+    });
+    const D = defects.map((_, i) => defects.map(b => bfs[i].dist[b])), dB = defects.map((_, i) => bfs[i].dist[G.B]);
+    // 最小權重完美匹配（可配到邊界）：小規模用位元遮罩動態規劃精確求解，太多時改用貪婪法
+    const pairs = [];
+    if (n > 0 && n <= 14) {
+      const N = 1 << n, best = new Float64Array(N), ch = new Int32Array(N); best[N - 1] = 0;
+      for (let m = N - 2; m >= 0; m--) {
+        let i = 0; while ((m >> i) & 1) i++;
+        let b = dB[i] + best[m | (1 << i)], c = -1;
+        for (let j = i + 1; j < n; j++) if (!((m >> j) & 1)) { const v = D[i][j] + best[m | (1 << i) | (1 << j)]; if (v < b) { b = v; c = j; } }
+        best[m] = b; ch[m] = c;
+      }
+      let m = 0; while (m !== N - 1) { let i = 0; while ((m >> i) & 1) i++; const j = ch[m]; pairs.push([i, j]); m |= (1 << i) | (j >= 0 ? 1 << j : 0); }
+    } else if (n > 14) {
+      const left = new Set(defects.map((_, i) => i));
+      while (left.size) {
+        let bi = -1, bj = -1, bv = Infinity;
+        for (const i of left) { if (dB[i] < bv) { bv = dB[i]; bi = i; bj = -1; } for (const j of left) if (j > i && D[i][j] < bv) { bv = D[i][j]; bi = i; bj = j; } }
+        pairs.push([bi, bj]); left.delete(bi); if (bj >= 0) left.delete(bj);
+      }
+    }
+    const corr = new Uint8Array(code.data.length), paths = [];
+    for (const [i, j] of pairs) {
+      const tgt = j >= 0 ? defects[j] : G.B, par = bfs[i].par, seq = []; let v = tgt;
+      while (v !== defects[i]) { const [u, q] = par[v]; corr[q] ^= 1; seq.unshift([u, q, v]); v = u; }
+      paths.push({ T, seq, toB: j < 0 });
+    }
+    return { defects: defects.map(k => G.nodes[k]), corr, paths };
+  }
+  const parity = (arr, qs) => qs.reduce((s, q) => s ^ arr[q], 0);
+  function logicalOf(code, rx, rz) {   // 殘餘錯誤沒有任何症狀時，是否等於邏輯運算子
+    const d = code.d, row0 = [...Array(d).keys()], col0 = row0.map(r => r * d);
+    return { lx: parity(rx, row0), lz: parity(rz, col0) };
+  }
+
+  const g10S = { step: 0, t: 0, cue: 0, playing: true, auto: true, d: 3, code: null, ex: null, ez: null, flash: [], fix: [],
+    dec: null, cyc: null, guide: false, mode: "legend", math: [], res: "—", logical: null, free: false, p: 0.06, mc: [] };
+  const d10Mat = [], t10Mat = [], a10Mesh = [];
+  let d10Mesh = [];
+  function build10(d) {
+    const S = g10S, code = codeStruct(d);
+    while (lat10.children.length) { const o = lat10.children.pop(); o.geometry && o.geometry.dispose(); }
+    d10Mat.length = 0; t10Mat.length = 0; a10Mesh.length = 0; d10Mesh = [];
+    S.d = d; S.code = code; S.ex = new Uint8Array(d * d); S.ez = new Uint8Array(d * d); S.flash = new Array(d * d).fill(0); S.fix = new Array(d * d).fill(0);
+    S.dec = null; S.logical = null;
+    const sp = code.sp, rr10 = 0.2 * sp / 1.8 + 0.06;
+    code.plaq.forEach(p => {
+      const m = new THREE.MeshBasicMaterial({ color: TILE[p.t].base, transparent: true, opacity: 0.85, side: THREE.DoubleSide, depthWrite: false });
+      let geo;
+      if (p.bd === "bulk") geo = new THREE.PlaneGeometry(sp * 0.96, sp * 0.96);
+      else geo = new THREE.CircleGeometry(sp * 0.48, 28, { top: 0, bottom: Math.PI, left: Math.PI / 2, right: -Math.PI / 2 }[p.bd], Math.PI);
+      const tile = new THREE.Mesh(geo, m); tile.rotation.x = -Math.PI / 2;
+      const cx = p.bd === "bulk" || p.bd === "top" || p.bd === "bottom" ? (p.c + 0.5 - (d - 1) / 2) * sp : p.bd === "left" ? (0 - (d - 1) / 2) * sp : ((d - 1) - (d - 1) / 2) * sp;
+      const cz = p.bd === "bulk" || p.bd === "left" || p.bd === "right" ? (p.r + 0.5 - (d - 1) / 2) * sp : p.bd === "top" ? (0 - (d - 1) / 2) * sp : ((d - 1) - (d - 1) / 2) * sp;
+      tile.position.set(cx, 0.005, cz); lat10.add(tile); t10Mat.push(m);
+      const anc = new THREE.Mesh(new THREE.BoxGeometry(rr10 * 1.3, rr10 * 1.3, rr10 * 1.3), new THREE.MeshStandardMaterial({ color: TILE[p.t].lit, roughness: 0.4, emissive: new THREE.Color(TILE[p.t].lit), emissiveIntensity: 0.15 }));
+      anc.position.set(p.x, rr10 * 0.7, p.z); lat10.add(anc); a10Mesh.push(anc);
+    });
+    // 方格線
+    const gl = []; for (let r = 0; r < d; r++) gl.push(V(code.data[r * d].x, 0.02, code.data[r * d].z), V(code.data[r * d + d - 1].x, 0.02, code.data[r * d].z));
+    for (let c = 0; c < d; c++) gl.push(V(code.data[c].x, 0.02, code.data[c].z), V(code.data[c].x, 0.02, code.data[(d - 1) * d + c].z));
+    const grid = new THREE.LineSegments(new THREE.BufferGeometry().setFromPoints(gl), new THREE.LineBasicMaterial({ color: COL.muted, transparent: true, opacity: 0.45 })); lat10.add(grid);
+    code.data.forEach(q => {
+      const m = new THREE.MeshStandardMaterial({ color: CN10, roughness: 0.3, metalness: 0.3, emissive: new THREE.Color(0xffffff), emissiveIntensity: 0 });
+      const s = new THREE.Mesh(new THREE.SphereGeometry(rr10, 20, 14), m); s.position.set(q.x, rr10 + 0.02, q.z); s.userData.q = d10Mesh.length;
+      lat10.add(s); d10Mat.push(m); d10Mesh.push(s);
+    });
+    d10Tags.forEach((t, i) => { t.on = false; if (i < d * d) t.pos.set(code.data[i].x + rr10 * 0.2, rr10 * 2.6 + 0.12, code.data[i].z).add(g10.position); });
+    p10Tags.forEach((t, i) => { t.on = d === 3 && i < code.plaq.length; if (t.on) { const p = code.plaq[i]; t.el.textContent = p.t; t.el.classList.toggle("teal", p.t === "Z"); t.el.classList.toggle("gold", p.t === "X"); t.pos.set(p.x + sp * 0.22 * (p.bd === "bulk" ? 1 : 0), 0.06, p.z + sp * 0.22 * (p.bd === "bulk" ? 1 : 0)).add(g10.position); } });
+    // 邏輯運算子導引線：Z_L 第一列、X_L 第一行
+    const gp = guide10.geometry.attributes.position.array; let k = 0;
+    const put = (a, b) => { gp.set([a.x, 0.05, a.z, b.x, 0.05, b.z], k * 6); k++; };
+    put(code.data[0], code.data[d - 1]); put(code.data[0], code.data[(d - 1) * d]);
+    guide10.geometry.setDrawRange(0, k * 2); guide10.geometry.attributes.position.needsUpdate = true;
+    guideTags10[0].pos.set(code.data[d - 1].x + sp * 0.3, 0.1, code.data[0].z - sp * 0.42).add(g10.position);
+    guideTags10[1].pos.set(code.data[0].x - sp * 0.42, 0.1, code.data[(d - 1) * d].z + sp * 0.42).add(g10.position);
+  }
+  function inject10(q, type) {
+    const S = g10S;
+    if (type === "X" || type === "Y") S.ex[q] ^= 1;
+    if (type === "Z" || type === "Y") S.ez[q] ^= 1;
+    S.flash[q] = 1; S.logical = null; S.res = "—";
+  }
+  function clear10() { const S = g10S; S.ex.fill(0); S.ez.fill(0); S.dec = null; S.logical = null; S.fix.fill(0); S.res = "—"; }
+  function syndrome10() {
+    const S = g10S; return S.code.plaq.map(p => parity(p.t === "Z" ? S.ex : S.ez, p.qs));
+  }
+  function decode10(cb) {
+    const S = g10S, code = S.code;
+    const dz = decodeType(code, "Z", S.ex), dx = decodeType(code, "X", S.ez);
+    S.dec = { t: 0, dz, dx, applied: false, cb };
+  }
+  function random10(p) {
+    const S = g10S;
+    for (let q = 0; q < S.d * S.d; q++) { const r = Math.random(); if (r < p) inject10(q, r < p / 3 ? "X" : r < 2 * p / 3 ? "Z" : "Y"); }
+  }
+  function mc10(d, p, N) {
+    const code = codeStruct(d), n = d * d; let fail = 0;
+    const ex = new Uint8Array(n), ez = new Uint8Array(n);
+    for (let k = 0; k < N; k++) {
+      for (let q = 0; q < n; q++) { const r = Math.random(); ex[q] = r < p / 3 || (r >= 2 * p / 3 && r < p) ? 1 : 0; ez[q] = r >= p / 3 && r < p ? 1 : 0; }
+      const cz = decodeType(code, "Z", ex).corr, cx = decodeType(code, "X", ez).corr;
+      for (let q = 0; q < n; q++) { cz[q] ^= ex[q]; cx[q] ^= ez[q]; }
+      const L = logicalOf(code, cz, cx); if (L.lx || L.lz) fail++;
+    }
+    return fail / N;
+  }
+
+  const G10STEPS = [
+    { name: "結構", title: "① 表面碼的結構：17 顆實體位元存 1 顆邏輯位元", d: 3,
+      body: `<p>這是<b>距離 d = 3</b> 的表面碼。<b>9 顆資料位元</b>（圓球）排成 3×3，邏輯資訊被「分散」存在它們的糾纏態裡——不是複製（不可複製定理不允許），而是整片一起編碼。</p>
+      <p>格子中間和邊上是 <b>8 顆量測位元</b>（小方塊），各自負責一個<b>穩定子</b>：<b>青色格子量 Z 奇偶</b>（抓 X 錯誤）、<b>琥珀色格子量 X 奇偶</b>（抓 Z 錯誤）。內部格子量 4 顆、邊界半圓量 2 顆。每顆量測位元<b>只和上下左右的鄰居互動</b>，剛好對應超導晶片的 2D 方格與可調耦合器。</p>
+      <p>9 + 8 = <b>17 顆實體位元（2d² − 1）存 1 顆邏輯位元</b>。邏輯 Z 是第一列三顆的 Z，邏輯 X 是第一行三顆的 X（導引線）。平常所有穩定子都量到 +1（不亮）；哪裡出錯，旁邊的穩定子就會亮。</p>`,
+      setup() { clear10(); g10S.guide = false; g10S.mode = "legend"; g10S.math = ["d = 3：9 顆資料 + 8 顆量測 = 17 顆", "青色 = Z 穩定子（抓 X 錯誤）", "琥珀色 = X 穩定子（抓 Z 錯誤）"]; },
+      cues: [
+        [0.3, "這是距離 d = 3 的表面碼：9 顆資料位元（圓球）排成 3×3，邏輯資訊分散存在它們的糾纏態裡。"],
+        [6, "格子中間和邊上是 8 顆量測位元（小方塊）。青色格子量 Z 奇偶（抓 X 錯誤），琥珀色格子量 X 奇偶（抓 Z 錯誤）。"],
+        [12.5, "內部格子量 4 顆、邊界的半圓量 2 顆。每顆量測位元只和上下左右的鄰居互動，剛好對應晶片上的 2D 方格。"],
+        [19, "9 + 8 = 17 顆實體位元，只存 1 顆邏輯位元。邏輯 Z 是第一列的 Z，邏輯 X 是第一行的 X（導引線）。", () => { g10S.guide = true; }],
+        [26, "平常所有穩定子都量到 +1（不亮）。一旦某處出錯，相鄰的穩定子就會「亮」起來（量到 −1）。"],
+      ], dur: 31 },
+    { name: "一個週期", title: "② 一個表面碼週期（約 1 μs）", d: 3,
+      body: `<p>表面碼不停地重複同一個「週期」：</p>
+      <p>① <b>重設</b>所有量測位元到 |0⟩（第 5 章的主動／無條件重設）。② <b>4 層 CZ／CNOT</b>：每顆量測位元依序和 4 個鄰居互動，把它們的奇偶「加總」到自己身上（和第 9 章 BV 黑盒子算 s·x 是同一件事）。青色走 <b>N 字形</b>、琥珀色走 <b>Z 字形</b>——這個順序是精心安排的，避免單一錯誤擴散成沿著邏輯方向的兩個錯誤。③ <b>量測</b>所有量測位元：電路中途的 QND 讀取，資料位元全程不被量測，疊加態不受影響。</p>
+      <p>和上一輪結果比較，<b>有變化的地方叫「偵測事件」</b>。因為量測本身也會錯，解碼器要看「空間 × 時間」的 3D 圖。每 1 μs 就產生一輪新資料，解碼器必須即時跟上（FPGA／ASIC／GPU）。</p>`,
+      setup() { clear10(); g10S.guide = false; g10S.mode = "cycle"; g10S.math = ["一個週期 ≈ 1 μs", "重設 → 4 層 CZ → 量測 → 重複"]; },
+      cues: [
+        [0.3, "每 1 μs 跑一個「表面碼週期」。先把所有量測位元重設到 |0⟩（第 5 章的重設）。", () => { g10S.cyc = { t: 0 }; }],
+        [3.6, "接著 4 層 CZ／CNOT：每顆量測位元依序和 4 個鄰居互動（青色走 N 字形、琥珀色走 Z 字形），把奇偶加總到自己身上。"],
+        [14, "最後量測所有量測位元（電路中途的 QND 讀取），得到這一輪的穩定子值。資料位元全程不被量測。"],
+        [20, "和上一輪比較，有變化的地方叫「偵測事件」。每 1 μs 就產生一輪新資料，解碼器必須即時跟上。"],
+      ], dur: 26 },
+    { name: "單一 X 錯誤", title: "③ 單一 X 錯誤：兩個亮點，配對、修正", d: 3,
+      body: `<p>在中間的 <b>D5</b> 注入一個 <b>X 錯誤</b>（紅色，位元翻轉）。含 D5 的兩個<b>青色</b>格子（Z 穩定子）量到的奇偶從 +1 變成 −1，亮了起來；琥珀色格子不受 X 錯誤影響。</p>
+      <p><b>解碼器只看得到亮點，看不到錯誤本身。</b>它用「最小權重完美匹配」：把亮點兩兩配對（或配到邊界），選總路徑最短的組合，再沿路徑補上修正。兩個亮點之間最短的路徑正好經過 D5，於是在 D5 補一個 X，錯誤消失。</p>
+      <p>整個過程沒有量到任何資料位元，邏輯疊加態完好無損。實務上修正常常不用真的送脈衝，只要在軟體裡記下「D5 的 X 翻了」（Pauli frame），和虛擬 Z 是同一個概念。</p>`,
+      setup() { clear10(); g10S.guide = false; g10S.mode = "legend"; g10S.math = ["注入：D5 的 X 錯誤"]; },
+      cues: [
+        [0.3, "在中間的 D5 注入一個 X 錯誤（紅色，位元翻轉）。", () => inject10(4, "X")],
+        [4.5, "含 D5 的兩個青色格子（Z 穩定子）亮了：它們量到的奇偶從 +1 變成 −1。琥珀色格子不受 X 錯誤影響。", () => { g10S.math = ["D5 的 X 錯誤 → 左上、右下兩個 Z 穩定子亮起"]; }],
+        [11, "解碼器只看得到亮點。它把兩個亮點配成一對（白線），最短路徑正好經過 D5。", () => decode10()],
+        [16.5, "在 D5 補一個 X 修正，錯誤消失、所有格子恢復不亮。整個過程沒有量到任何資料位元。"],
+      ], dur: 22 },
+    { name: "Z 與 Y 錯誤", title: "④ Z 錯誤與 Y 錯誤：兩組穩定子各管一種", d: 3,
+      body: `<p>換成 <b>Z 錯誤</b>（藍色，相位翻轉——古典電腦沒有的錯誤）：這次亮的是含 D5 的兩個<b>琥珀色</b>格子（X 穩定子）。</p>
+      <p><b>Y 錯誤</b>＝同時有 X 和 Z（紫色）。在 D5 注入 Y：兩個青色、兩個琥珀色格子<b>同時亮</b>——X 的部分被 Z 穩定子抓到，Z 的部分被 X 穩定子抓到。</p>
+      <p>X 和 Z 兩組亮點<b>各自配對、各自修正</b>。表面碼同時防兩種錯誤，這是 3 位元重複碼做不到的。</p>`,
+      setup() { clear10(); g10S.guide = false; g10S.mode = "legend"; g10S.math = ["Z 錯誤 → 琥珀色（X 穩定子）亮", "Y = X + Z → 兩色都亮"]; },
+      cues: [
+        [0.3, "換成 Z 錯誤（藍色，相位翻轉）：這次亮的是含 D5 的兩個琥珀色格子（X 穩定子）。", () => inject10(4, "Z")],
+        [6, "解碼器把兩個琥珀色亮點配對，在 D5 補一個 Z 修正。", () => decode10()],
+        [11, "Y 錯誤＝同時有 X 和 Z（紫色）。在 D5 注入 Y：兩個青色、兩個琥珀色格子同時亮。", () => { clear10(); inject10(4, "Y"); }],
+        [17, "解碼器把 X、Z 兩組亮點各自配對、各自修正：在 D5 同時補 X 和 Z。", () => decode10()],
+        [22.5, "全部恢復。表面碼同時防 X、Z 兩種錯誤，這是 3 位元重複碼做不到的。"],
+      ], dur: 28 },
+    { name: "邊界", title: "⑤ 邊界：落單的亮點配到邊上", d: 3,
+      body: `<p>錯誤發生在邊上的 <b>D1</b>：含 D1 的青色格子只有一個（另一側是邊界，沒有 Z 穩定子），所以<b>只有一個亮點</b>。</p>
+      <p>落單的亮點代表「錯誤鏈的另一端接在邊界上」。解碼器把它配到最近的邊界，在 D1 補 X。</p>
+      <p>表面碼有兩種邊界：<b>上下是 X 邊界</b>（X 錯誤鏈可以在這裡結束），<b>左右是 Z 邊界</b>（Z 錯誤鏈可以在這裡結束）。正因為有這兩種邊界，「從上連到下的 X 鏈」和「從左連到右的 Z 鏈」才會變成邏輯運算子。</p>`,
+      setup() { clear10(); g10S.guide = false; g10S.mode = "legend"; g10S.math = ["注入：D1 的 X 錯誤（邊上）"]; },
+      cues: [
+        [0.3, "錯誤在邊上的 D1：含 D1 的青色格子只有一個（另一側是邊界），所以只有一個亮點。", () => inject10(0, "X")],
+        [5.5, "落單的亮點，代表錯誤鏈的另一端接在邊界上。解碼器把它配到最近的邊界，在 D1 補 X。", () => decode10()],
+        [11.5, "上下是 X 邊界、左右是 Z 邊界：「從上連到下的 X 鏈」和「從左連到右的 Z 鏈」就是邏輯運算子。", () => { g10S.guide = true; }],
+      ], dur: 17 },
+    { name: "邏輯錯誤", title: "⑥ 兩個錯誤騙過 d = 3：邏輯錯誤", d: 3,
+      body: `<p>d = 3 最多只能修 <b>1</b> 個錯誤。現在在 <b>D1、D4</b> 各注入一個 X 錯誤。D1、D4 在同一個青色格子裡，兩個翻轉互相抵消，<b>它沒亮</b>；只有左邊界的半圓亮了（它含 D4、D7）。</p>
+      <p>解碼器只看到一個亮點，最省的解釋是「D7 錯了一個」，於是在 D7 補 X。結果 <b>D1、D4、D7 整行都是 X</b>：所有穩定子都不亮，看起來一切正常，但這正好是<b>邏輯 X</b>——邏輯位元被翻轉了，而且沒有人發現。</p>
+      <p>這就是要<b>加大碼距 d</b> 的原因：錯誤必須排成橫跨整片晶片的鏈，才會騙過解碼器。d 越大，需要同時發生的錯誤越多（可修正 ⌊(d−1)/2⌋ 個），邏輯錯誤就越罕見。</p>`,
+      setup() { clear10(); g10S.guide = false; g10S.mode = "legend"; g10S.math = ["注入：D1、D4 的 X 錯誤（2 個）"]; },
+      cues: [
+        [0.3, "d = 3 最多只能修 1 個錯誤。現在在 D1、D4 各注入一個 X 錯誤。", () => { inject10(0, "X"); inject10(3, "X"); }],
+        [5.5, "D1、D4 在同一個青色格子裡，兩個翻轉互相抵消，它沒亮；只有左邊界的半圓（含 D4、D7）亮了。"],
+        [11, "解碼器只看到一個亮點，最省的解釋是「D7 錯了一個」，於是在 D7 補 X。", () => decode10()],
+        [17, "結果 D1、D4、D7 整行都是 X：所有穩定子都不亮，但這正好是邏輯 X——邏輯位元被翻轉了，而且沒人發現！"],
+        [25, "所以要加大碼距 d：錯誤必須排成橫跨整片晶片的鏈才會騙過解碼器，d 越大，需要同時發生的錯誤越多。", () => { g10S.guide = true; }],
+      ], dur: 31 },
+    { name: "碼距與閾值", title: "⑦ 碼距、閾值與資源", d: 5,
+      body: `<p>把碼距加大：<b>d = 5 用 49 顆、d = 7 用 97 顆</b>實體位元（2d² − 1），可修正的錯誤從 1 個變成 2 個、3 個。畫面換成 d = 5。</p>
+      <p>但位元越多，出錯的地方也越多。邏輯錯誤率大約是 <b>ε_L ≈ A·(p/p_th)^((d+1)/2)</b>：只有實體錯誤率 p 低於<b>閾值 p_th</b>（表面碼在真實電路約 <b>1%</b>）時，d 每加 2，ε_L 就除以一個固定倍數 Λ；超過閾值時，d 越大反而越糟（看板右側的圖）。</p>
+      <p><b>實驗</b>：Google 2024 年在 Willow 晶片做了 d = 3→5→7，Λ ≈ 2.1，d = 7 每週期邏輯錯誤約 0.14%，邏輯位元壽命約是最好實體位元的 2.4 倍——首次超越損益平衡。<b>資源</b>：若 p = 0.1%、目標 ε_L ≈ 10⁻¹²，大約需要 d ≈ 21，也就是<b>約 880 顆實體位元換 1 顆邏輯位元</b>；這就是 Shor 破解 RSA-2048 估計要約百萬顆實體位元的原因。</p>`,
+      setup() { clear10(); g10S.guide = false; g10S.mode = "chart"; g10S.math = ["ε_L ≈ A · (p / p_th)^((d+1)/2)", "p_th ≈ 1%（真實電路雜訊）"]; },
+      cues: [
+        [0.3, "加大碼距：d = 5 用 49 顆、d = 7 用 97 顆實體位元（2d² − 1），能修的錯誤從 1 個變成 2、3 個。畫面換成 d = 5。"],
+        [7.5, "但位元越多，出錯的地方也越多。只有實體錯誤率 p 低於「閾值」（表面碼在真實電路約 1%），加大 d 才有幫助。"],
+        [14.5, "看板右圖：p 小於閾值時，d 每加 2，邏輯錯誤率就除以一個倍數 Λ；超過閾值時，d 越大反而越糟。"],
+        [21.5, "Google 2024 年在 Willow 晶片做到 d = 3→5→7，Λ ≈ 2.1，d = 7 的邏輯位元壽命約是最好實體位元的 2.4 倍。", () => { g10S.math.push("Willow（2024）：Λ ≈ 2.1，d = 7 超越損益平衡"); g10S.math = g10S.math.slice(); }],
+        [29, "若 p = 0.1%、目標 10⁻¹²，大約需要 d ≈ 21，也就是約 880 顆實體位元換 1 顆邏輯位元。", () => { g10S.math.push("p = 0.1%、ε_L = 10⁻¹² → d ≈ 21 → 約 880 顆／邏輯位元"); g10S.math = g10S.math.slice(); }],
+      ], dur: 36 },
+    { name: "自由實驗", title: "⑧ 換你操作：注入錯誤、解碼、跑統計", d: 3, free: true,
+      body: `<p><b>點畫面上的資料位元</b>（圓球）注入錯誤：每點一次依序是 X → Z → Y → 清除。觀察哪些格子亮，再按「解碼並修正」，看解碼器怎麼配對、有沒有被騙成邏輯錯誤。</p>
+      <p>也可以設定實體錯誤率 p，按「隨機錯誤」一次撒滿；或按「跑 300 次統計」，算出這個 d、這個 p 下的邏輯錯誤率，結果會畫在看板右側。試試看：p = 5% 時 d = 3、5、7 哪個最好？p = 20% 時呢？</p>
+      <p>注意：統計用的是簡化模型（只有資料位元以機率 p 發生 X/Y/Z 錯誤、量測完美），這個模型的閾值約 10–15%；真實電路連閘與量測也會錯，閾值約 1%。</p>`,
+      extra: `<div class="controls" style="margin:8px 0 4px"><span class="qn" style="width:auto;color:var(--muted)">碼距 d</span><button class="btn" type="button" data-d10="3">3（17 顆）</button><button class="btn" type="button" data-d10="5">5（49 顆）</button><button class="btn" type="button" data-d10="7">7（97 顆）</button></div>
+      <div class="controls" style="margin:6px 0"><label class="row" for="g10p">錯誤率 p <input type="range" id="g10p" min="0.01" max="0.25" step="0.01" value="0.06"><output id="g10po"></output></label></div>
+      <div class="controls" style="margin:6px 0"><button class="btn primary" type="button" id="g10dec">解碼並修正</button><button class="btn" type="button" id="g10rnd">隨機錯誤</button><button class="btn" type="button" id="g10clr">清除錯誤</button></div>
+      <div class="controls" style="margin:6px 0 10px"><button class="btn" type="button" id="g10mc">跑 300 次統計</button><button class="btn" type="button" id="g10mcc">清除統計</button></div>`,
+      setup() { clear10(); g10S.guide = true; g10S.mode = "mc"; g10S.free = true; g10S.math = ["點資料位元注入錯誤：X → Z → Y → 清除", "按「解碼並修正」看解碼器的判斷"]; },
+      cues: [[0.3, "換你操作：點資料位元注入錯誤（X → Z → Y → 清除），再按「解碼並修正」；或設定 p 跑統計，比較不同碼距。"]], dur: 0 },
+  ];
+
+  function g10Step(i) {
+    i = Math.max(0, Math.min(G10STEPS.length - 1, i));
+    const S = g10S, st = G10STEPS[i];
+    S.step = i; S.t = 0; S.cue = 0; S.playing = true; S.free = false; S.cyc = null; S.dec = null;
+    if (!S.code || S.d !== st.d) build10(st.d);
+    st.setup();
+    capEl.classList.remove("show");
+    if (cur === 9) {
+      $("g10title").textContent = st.title; $("g10body").innerHTML = st.body; $("g10extra").innerHTML = st.extra || "";
+      [...$("g10steps").children].forEach((b, k) => b.setAttribute("aria-current", k === i ? "true" : "false"));
+      if (st.free) g10BindFree();
+    }
+    g10UpdPlay();
+  }
+  function g10UpdPlay() {
+    const b = $("g10play"); if (!b) return;
+    const st = G10STEPS[g10S.step], done = st.dur && g10S.t >= st.dur;
+    b.textContent = g10S.playing ? "暫停" : done ? "再看一次" : "播放";
+    b.disabled = !!st.free; $("g10prev").disabled = g10S.step === 0; $("g10next").disabled = g10S.step === G10STEPS.length - 1;
+  }
+  function g10BindFree() {
+    const S = g10S;
+    const mark = () => document.querySelectorAll("[data-d10]").forEach(b => b.setAttribute("aria-pressed", +b.dataset.d10 === S.d ? "true" : "false"));
+    document.querySelectorAll("[data-d10]").forEach(b => { b.onclick = () => { build10(+b.dataset.d10); mark(); }; });
+    const ps = $("g10p"); ps.value = S.p; ps.oninput = () => { S.p = +ps.value; };
+    $("g10dec").onclick = () => { if (!S.dec) decode10(); };
+    $("g10rnd").onclick = () => { clear10(); random10(S.p); capShow("自由實驗 ・ 隨機錯誤", `每顆資料位元以 p = ${(S.p * 100).toFixed(0)}% 發生 X／Y／Z 錯誤（各 1/3）。觀察亮點，再按「解碼並修正」。`); };
+    $("g10clr").onclick = () => clear10();
+    $("g10mc").onclick = () => {
+      const N = 300, r = mc10(S.d, S.p, N);
+      S.mc.push({ d: S.d, p: S.p, r, N });
+      capShow("自由實驗 ・ 統計", `d = ${S.d}、p = ${(S.p * 100).toFixed(0)}%：300 次中邏輯錯誤 ${Math.round(r * N)} 次，邏輯錯誤率 ≈ ${(r * 100).toFixed(1)}%（實體錯誤率 ${(S.p * 100).toFixed(0)}%）。`);
+      S.math = [`d = ${S.d}、p = ${(S.p * 100).toFixed(0)}% → ε_L ≈ ${(r * 100).toFixed(1)}%`, r < S.p ? "邏輯錯誤率 < 實體錯誤率：編碼有幫助" : "邏輯錯誤率 ≥ 實體錯誤率：p 太高，編碼反而沒用"];
+    };
+    $("g10mcc").onclick = () => { S.mc = []; };
+    mark();
+  }
+  // 點擊資料位元注入錯誤（只在自由實驗）
+  const ray10 = new THREE.Raycaster(); let down10 = null;
+  stage.addEventListener("pointerdown", e => { down10 = { x: e.clientX, y: e.clientY }; });
+  stage.addEventListener("pointerup", e => {
+    if (!down10 || cur !== 9 || !g10S.free || g10S.dec) return;
+    if (Math.hypot(e.clientX - down10.x, e.clientY - down10.y) > 6) return;
+    const r = stage.getBoundingClientRect();
+    ray10.setFromCamera(new THREE.Vector2((e.clientX - r.left) / r.width * 2 - 1, -((e.clientY - r.top) / r.height) * 2 + 1), camera);
+    const hit = ray10.intersectObjects(d10Mesh)[0]; if (!hit) return;
+    const q = hit.object.userData.q, S = g10S, cur10 = (S.ex[q] ? 1 : 0) + (S.ez[q] ? 2 : 0);   // 0 無、1 X、2 Z、3 Y
+    const next = { 0: 1, 1: 2, 2: 3, 3: 0 }[cur10];
+    S.ex[q] = next === 1 || next === 3 ? 1 : 0; S.ez[q] = next === 2 || next === 3 ? 1 : 0; S.flash[q] = 1; S.logical = null; S.res = "—";
+  });
+
+  let b10Key = "";
+  function drawBoard10() {
+    const S = g10S, cyc = S.cyc ? Math.floor(S.cyc.t * 4) : -1;
+    const key = JSON.stringify([S.mode, S.d, S.math, S.res, cyc, S.mc]);
+    if (key === b10Key) return; b10Key = key;
+    const c = c10x, W = 1400, Hh = 560;
+    c.clearRect(0, 0, W, Hh);
+    c.fillStyle = "rgba(14,18,25,0.9)"; c.strokeStyle = "rgba(232,235,240,0.14)"; c.lineWidth = 2; rr(c, 2, 2, W - 4, Hh - 4, 18); c.fill(); c.stroke();
+    c.textBaseline = "middle"; c.textAlign = "left";
+    c.fillStyle = "#d6b04a"; c.font = "700 27px 'Noto Sans TC', sans-serif";
+    c.fillText(`表面碼 d = ${S.d}：${2 * S.d * S.d - 1} 顆實體位元 → 1 顆邏輯位元`, 28, 42);
+    // 圖例
+    const leg = [["●", "#cfd5de", "資料位元"], ["■", "#3cf0dc", "青格：Z 穩定子（抓 X 錯誤）"], ["■", "#ffb35c", "琥珀格：X 穩定子（抓 Z 錯誤）"], ["●", "#f0625a", "X 錯誤"], ["●", "#4fa3e0", "Z 錯誤"], ["●", "#b07be0", "Y 錯誤（X + Z）"]];
+    c.font = "500 21px 'Noto Sans TC', sans-serif";
+    leg.forEach(([s, col, t], i) => { const x = 30 + (i % 2) * 300, y = 90 + Math.floor(i / 2) * 36; c.fillStyle = col; c.fillText(s, x, y); c.fillStyle = "#cfd5de"; c.fillText(t, x + 28, y); });
+    c.fillStyle = "rgba(232,235,240,0.05)"; rr(c, 24, 210, 620, 320, 12); c.fill();
+    c.font = "500 22px 'Noto Sans TC', 'JetBrains Mono', sans-serif";
+    S.math.slice(-5).forEach((l, i, arr) => { c.fillStyle = i === arr.length - 1 ? "#e8ebf0" : "#cfd5de"; c.fillText(l, 42, 245 + i * 44, 590); });
+    c.fillStyle = S.res.startsWith("邏輯") ? "#ef7a73" : "#bff0ea"; c.font = "700 22px 'Noto Sans TC', sans-serif";
+    c.fillText("最近一次解碼：" + S.res, 42, 500, 590);
+    // 右側
+    const X0 = 680, Y0 = 80, PW = 690, PH = 450;
+    c.fillStyle = "rgba(232,235,240,0.04)"; rr(c, X0, Y0, PW, PH, 12); c.fill();
+    if (S.mode === "cycle" || S.mode === "legend") {
+      c.fillStyle = "#e8ebf0"; c.font = "700 23px 'Noto Sans TC', sans-serif"; c.fillText("一個表面碼週期（約 1 μs）", X0 + 20, Y0 + 34);
+      const segs = [["重設", 0.6], ["CZ ①", 1], ["CZ ②", 1], ["CZ ③", 1], ["CZ ④", 1], ["量測", 1.6]], tot = segs.reduce((a, b) => a + b[1], 0);
+      let x = X0 + 20; const ph = S.cyc ? S.cyc.t : -1;
+      const act = ph < 0 ? -1 : ph < 3.4 ? 0 : ph < 13.4 ? 1 + Math.min(3, Math.floor((ph - 3.4) / 2.5)) : 5;
+      segs.forEach(([n, w], i) => {
+        const ww = w / tot * (PW - 40);
+        c.fillStyle = i === act ? "#d6b04a" : ["#3a4250", "#1d5f5a", "#1d5f5a", "#1d5f5a", "#1d5f5a", "#6a4a1c"][i]; rr(c, x, Y0 + 62, ww - 4, 56, 8); c.fill();
+        c.fillStyle = i === act ? "#17140a" : "#e8ebf0"; c.textAlign = "center"; c.font = "600 20px 'Noto Sans TC', sans-serif"; c.fillText(n, x + ww / 2, Y0 + 90); x += ww;
+      });
+      c.textAlign = "left"; c.fillStyle = "#cfd5de"; c.font = "500 19px 'Noto Sans TC', sans-serif";
+      ["量測位元把 4 個鄰居的奇偶「加總」到自己身上（像 BV 黑盒子算 s·x）", "青色走 N 字形、琥珀色走 Z 字形：避免一個錯誤擴散成邏輯方向的兩個", "量測是電路中途的 QND 讀取；資料位元全程不被量測", "和上一輪比較：有變化 = 偵測事件 → 交給解碼器配對", "解碼器：最小權重完美匹配（把亮點兩兩配對或配到邊界）", "修正常只記在軟體裡（Pauli frame），不必真的送脈衝"].forEach((t, i) => c.fillText("・" + t, X0 + 20, Y0 + 160 + i * 46, PW - 40));
+    } else {
+      // 圖表
+      const cx0 = X0 + 90, cy0 = Y0 + 390, cw = PW - 130, chh = 320;
+      c.strokeStyle = "rgba(232,235,240,0.5)"; c.lineWidth = 2; c.beginPath(); c.moveTo(cx0, cy0 - chh); c.lineTo(cx0, cy0); c.lineTo(cx0 + cw, cy0); c.stroke();
+      c.fillStyle = "#e8ebf0"; c.font = "700 22px 'Noto Sans TC', sans-serif"; c.textAlign = "left";
+      const dcol = { 3: "#35b8ac", 5: "#d6b04a", 7: "#f0625a", 11: "#9b7be0" };
+      if (S.mode === "chart") {
+        c.fillText("邏輯錯誤率 ε_L ≈ 0.1·(p / 1%)^((d+1)/2)", X0 + 20, Y0 + 30);
+        const lx = p => cx0 + (Math.log10(p) + 4) / (Math.log10(0.03) + 4) * cw, ly = e => cy0 - (Math.log10(Math.max(e, 1e-12)) + 12) / 12 * chh;
+        c.font = "500 16px 'JetBrains Mono', monospace"; c.fillStyle = "#98a1b0"; c.textAlign = "center";
+        [1e-4, 1e-3, 1e-2].forEach(p => { c.fillText(p === 1e-4 ? "0.01%" : p === 1e-3 ? "0.1%" : "1%", lx(p), cy0 + 22); });
+        c.textAlign = "right"; [1, 1e-4, 1e-8, 1e-12].forEach(e => c.fillText(e === 1 ? "1" : "1e" + Math.log10(e), cx0 - 8, ly(e)));
+        c.setLineDash([6, 6]); c.strokeStyle = "rgba(240,98,90,0.8)"; c.beginPath(); c.moveTo(lx(0.01), cy0); c.lineTo(lx(0.01), cy0 - chh); c.stroke(); c.setLineDash([]);
+        c.fillStyle = "#ef7a73"; c.textAlign = "left"; c.font = "600 17px 'Noto Sans TC', sans-serif"; c.fillText("閾值 ≈ 1%", lx(0.01) - 92, cy0 - chh + 14);
+        [3, 5, 7, 11].forEach(d => {
+          c.strokeStyle = dcol[d]; c.lineWidth = 3; c.beginPath();
+          for (let k = 0; k <= 60; k++) { const p = Math.pow(10, -4 + k / 60 * (Math.log10(0.03) + 4)), e = Math.min(0.5, 0.1 * Math.pow(p / 0.01, (d + 1) / 2)); k ? c.lineTo(lx(p), ly(e)) : c.moveTo(lx(p), ly(e)); }
+          c.stroke(); c.fillStyle = dcol[d]; c.font = "600 17px 'JetBrains Mono', monospace"; c.fillText(`d=${d}`, lx(1.2e-4) + 4, ly(0.1 * Math.pow(1.2e-2, (d + 1) / 2)) - 10);
+        });
+        c.fillStyle = "#98a1b0"; c.font = "500 17px 'Noto Sans TC', sans-serif"; c.textAlign = "center"; c.fillText("實體錯誤率 p（對數）", cx0 + cw / 2, cy0 + 48);
+      } else {
+        c.fillText("統計結果：邏輯錯誤率 vs 實體錯誤率（簡化模型）", X0 + 20, Y0 + 30);
+        const lx = p => cx0 + p / 0.25 * cw, ly = e => cy0 - (Math.log10(Math.max(e, 1e-3)) + 3) / 3 * chh;
+        c.font = "500 16px 'JetBrains Mono', monospace"; c.fillStyle = "#98a1b0"; c.textAlign = "center";
+        [0, 0.05, 0.1, 0.15, 0.2, 0.25].forEach(p => c.fillText((p * 100).toFixed(0) + "%", lx(p), cy0 + 22));
+        c.textAlign = "right"; [1, 0.1, 0.01, 0.001].forEach(e => c.fillText(e >= 0.01 ? (e * 100) + "%" : "0.1%", cx0 - 8, ly(e)));
+        c.strokeStyle = "rgba(232,235,240,0.35)"; c.setLineDash([5, 6]); c.beginPath(); c.moveTo(lx(0.003), ly(0.003)); c.lineTo(lx(0.25), ly(0.25)); c.stroke(); c.setLineDash([]);
+        c.fillStyle = "#98a1b0"; c.textAlign = "left"; c.font = "500 15px 'Noto Sans TC', sans-serif"; c.fillText("ε_L = p（虛線上方＝編碼沒幫助）", lx(0.12), ly(0.2) - 14);
+        S.mc.forEach(m => { c.fillStyle = dcol[m.d]; c.beginPath(); c.arc(lx(m.p), ly(m.r || 1e-3), 8, 0, Math.PI * 2); c.fill(); });
+        [3, 5, 7].forEach((d, i) => { c.fillStyle = dcol[d]; c.beginPath(); c.arc(X0 + PW - 150, Y0 + 70 + i * 28, 7, 0, Math.PI * 2); c.fill(); c.fillStyle = "#cfd5de"; c.font = "500 17px 'JetBrains Mono', monospace"; c.textAlign = "left"; c.fillText(`d=${d}`, X0 + PW - 134, Y0 + 70 + i * 28); });
+        c.fillStyle = "#98a1b0"; c.font = "500 17px 'Noto Sans TC', sans-serif"; c.textAlign = "center"; c.fillText("實體錯誤率 p（0 次失敗畫在底線）", cx0 + cw / 2, cy0 + 48);
+      }
+    }
+    tex10.needsUpdate = true;
+  }
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => { b10Key = ""; });
+
+  function updateG10(dt) {
+    const S = g10S, st = G10STEPS[S.step], code = S.code, d = S.d;
+    if (S.playing) S.t += dt;
+    while (S.cue < st.cues.length && S.t >= st.cues[S.cue][0]) {
+      const c = st.cues[S.cue];
+      capShow(`步驟 ${S.step + 1} / ${G10STEPS.length} ・ ${st.name} ・ ${S.cue + 1}/${st.cues.length}`, c[1]);
+      if (c[2]) c[2](); S.cue++;
+    }
+    capBar.style.width = (st.dur ? Math.min(100, S.t / st.dur * 100) : 100).toFixed(1) + "%";
+    if (st.dur && S.playing && S.t >= st.dur) {
+      if (S.auto && S.step < G10STEPS.length - 1) { g10Step(S.step + 1); return; }
+      S.playing = false; g10UpdPlay();
+    }
+    // 週期動畫：重設（0–3.4 s）→ 4 層 CZ（每層 2.5 s）→ 量測（13.4–16 s）
+    const cp = conn10.geometry.attributes.position.array; let nc = 0, ancGlow = 0;
+    if (S.cyc) {
+      const ph = (S.cyc.t += dt);
+      if (ph >= 3.4 && ph < 13.4) {
+        const layer = Math.min(3, Math.floor((ph - 3.4) / 2.5)), y = 0.3;
+        code.plaq.forEach(p => { const q = p.order[layer]; if (q >= 0) { const dq = code.data[q]; cp.set([p.x, y, p.z, dq.x, y, dq.z], nc * 6); nc++; } });
+      }
+      ancGlow = ph < 3.4 ? 0.1 + 0.15 * Math.sin(ph * 8) : ph >= 13.4 && ph < 16 ? 1.3 : 0.2;
+      if (ph > 17) S.cyc = null;
+    }
+    conn10.geometry.setDrawRange(0, nc * 2); conn10.geometry.attributes.position.needsUpdate = true;
+    // 解碼動畫：配對線（0–1.3 s）→ 套用修正（1.3 s）→ 判斷是否邏輯錯誤（2.0 s）
+    const mp = match10.geometry.attributes.position.array; let nm = 0;
+    if (S.dec) {
+      const dc = S.dec; dc.t += dt;
+      const nodePos = (T, k) => { const G = code.graph[T]; return k === G.B ? null : code.plaq[G.nodes[k]]; };
+      if (dc.t < 2.0) for (const pth of [...dc.dz.paths, ...dc.dx.paths]) {
+        for (const [u, q, v] of pth.seq) {
+          const a = nodePos(pth.T, u), b = nodePos(pth.T, v), dq = code.data[q];
+          if (a && nm < 598) { mp.set([a.x, 0.35, a.z, dq.x, 0.35, dq.z], nm * 6); nm++; }
+          if (b && nm < 598) { mp.set([dq.x, 0.35, dq.z, b.x, 0.35, b.z], nm * 6); nm++; }
+          else if (!b && nm < 598) { const dx = dq.x - a.x, dz = dq.z - a.z; mp.set([dq.x, 0.35, dq.z, dq.x + dx * 0.6, 0.35, dq.z + dz * 0.6], nm * 6); nm++; }
+        }
+      }
+      match10.material.opacity = 0.55 + 0.4 * Math.sin(T * 8);
+      if (!dc.applied && dc.t >= 1.3) {
+        dc.applied = true;
+        for (let q = 0; q < d * d; q++) { if (dc.dz.corr[q] || dc.dx.corr[q]) S.fix[q] = 1; S.ex[q] ^= dc.dz.corr[q]; S.ez[q] ^= dc.dx.corr[q]; }
+      }
+      if (dc.t >= 2.0 && !dc.judged) {
+        dc.judged = true;
+        const L = logicalOf(code, S.ex, S.ez), nD = dc.dz.defects.length + dc.dx.defects.length;
+        S.logical = L.lx || L.lz ? L : null;
+        S.res = S.logical ? `邏輯錯誤！（${[L.lx ? "邏輯 X" : "", L.lz ? "邏輯 Z" : ""].filter(Boolean).join("、")}）` : nD ? "成功：錯誤已修正 ✓" : "沒有亮點，不需要修正";
+        if (S.free) capShow("自由實驗 ・ 解碼結果", S.logical ? "解碼器被騙了：修正後所有穩定子都不亮，但殘餘錯誤剛好連成橫跨晶片的鏈——邏輯位元被翻轉了。" : nD ? "解碼成功：所有亮點都配對、修正完畢，邏輯資訊完好。" : "目前沒有任何亮點。先點資料位元注入錯誤。");
+        if (S.free) S.math = [S.res];
+        if (dc.cb) dc.cb(S.res);
+      }
+      if (dc.t > 2.8) S.dec = null;
+    }
+    match10.geometry.setDrawRange(0, nm * 2); match10.geometry.attributes.position.needsUpdate = true;
+    // 邏輯錯誤鏈
+    const lp = logi10.geometry.attributes.position.array; let nl = 0;
+    if (S.logical) {
+      const draw = (arr, horiz) => { const qs = []; for (let q = 0; q < d * d; q++) if (arr[q]) qs.push(q); qs.sort((a, b) => horiz ? code.data[a].c - code.data[b].c : code.data[a].r - code.data[b].r); for (let k = 0; k + 1 < qs.length && nl < 60; k++) { const a = code.data[qs[k]], b = code.data[qs[k + 1]]; lp.set([a.x, 0.45, a.z, b.x, 0.45, b.z], nl * 6); nl++; } };
+      if (S.logical.lx) draw(S.ex, false); if (S.logical.lz) draw(S.ez, true);
+      logTag10.on = true; logTag10.el.textContent = S.res; logTag10.pos.set(0, 1.3, -code.sp * (d - 1) / 2 - 0.6).add(g10.position);
+    } else logTag10.on = false;
+    logi10.geometry.setDrawRange(0, nl * 2); logi10.geometry.attributes.position.needsUpdate = true;
+    logi10.material.opacity = 0.6 + 0.35 * Math.sin(T * 6);
+    // 導引線
+    guide10.visible = S.guide; guideTags10.forEach(t => t.on = S.guide);
+    // 穩定子亮燈
+    const syn = syndrome10(); let litZ = 0, litX = 0;
+    code.plaq.forEach((p, i) => {
+      const on = syn[i], m = t10Mat[i];
+      m.color.setHex(on ? TILE[p.t].lit : TILE[p.t].base); m.opacity = on ? 0.75 + 0.25 * Math.sin(T * 6) : 0.85;
+      if (on) { if (p.t === "Z") litZ++; else litX++; }
+      a10Mesh[i].material.emissiveIntensity = (on ? 1.2 : 0.15) + ancGlow;
+    });
+    // 資料位元
+    for (let q = 0; q < d * d; q++) {
+      const k = (S.ex[q] ? 1 : 0) + (S.ez[q] ? 2 : 0), col = [CN10, CX10, CZ10, CY10][k];
+      d10Mat[q].color.setHex(col);
+      S.flash[q] = Math.max(0, S.flash[q] - dt * 2); S.fix[q] = Math.max(0, S.fix[q] - dt * 0.8);
+      d10Mat[q].emissive.setHex(S.fix[q] > 0 ? 0xffffff : col); d10Mat[q].emissiveIntensity = (k ? 0.35 : 0) + 0.8 * S.flash[q] + 0.9 * S.fix[q];
+      const t = d10Tags[q], lab = d === 3 ? `D${q + 1}` : "", err = ["", "X", "Z", "Y"][k];
+      t.on = d === 3 || !!k || S.fix[q] > 0;
+      t.el.textContent = S.fix[q] > 0.05 ? `${lab} 修正` : lab + (err ? (lab ? " · " : "") + err : "");
+      t.el.classList.toggle("red", k === 1); t.el.classList.toggle("teal", k === 2); t.el.classList.toggle("gold", S.fix[q] > 0.05);
+    }
+    // 面板
+    const e = $("g10d");
+    if (e) {
+      e.textContent = String(d); $("g10n").textContent = `${d * d} 資料 + ${d * d - 1} 量測 = ${2 * d * d - 1}`;
+      $("g10lit").textContent = `青色 ${litZ} 個、琥珀色 ${litX} 個`; $("g10res").textContent = S.res;
+      const po = $("g10po"); if (po) po.textContent = (S.p * 100).toFixed(0) + "%";
+    }
+    drawBoard10();
+  }
+
   // ---------- 相機（拖曳 / 縮放） ----------
   const view = { yaw: 0, pitch: 0, zoom: 1 };
   const desired = { target: new THREE.Vector3() };
@@ -2800,6 +3318,7 @@ nav.chapters {
     if (cur === 6) updateG7(dt);
     if (cur === 7) updateG8(dt);
     if (cur === 8) updateG9(dt);
+    if (cur === 9) updateG10(dt);
 
     // 標籤投影
     const w = stage.clientWidth, h = stage.clientHeight;
