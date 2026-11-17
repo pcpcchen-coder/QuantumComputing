@@ -28,6 +28,11 @@ PPTX = os.path.join(ROOT, "slides", "transmon.pptx")
 BASE = os.path.join(ROOT, "slides", "build", "transmon_base.pptx")   # 原始 17 頁（未加動畫連結）
 FIG = os.path.join(ROOT, "slides", "figures", "3d_transmon")
 ANIM = "https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html"   # GitHub Pages 網址
+LCJJ = "https://pcpcchen-coder.github.io/QuantumComputing/animations/lc-vs-jj.html"     # 2D 圖解：LC vs JJ
+LC_STEPS = {   # lc-vs-jj.html 的段落錨點 → 按鈕文字
+    "s1": "電流與磁通", "s2": "正弦驅動", "s3": "能階間距", "s4": "只停在 |0⟩|1⟩",
+    "s5": "泰勒展開", "s6drag": "DRAG", "s6": "差別總表",
+}
 
 FONT = "Microsoft JhengHei"
 INK = RGBColor(0x16, 0x18, 0x1D)
@@ -37,6 +42,7 @@ GOLD = RGBColor(0xC9, 0xA2, 0x27)
 TEAL = RGBColor(0x17, 0x87, 0x7F)
 GRAY = RGBColor(0x7D, 0x87, 0x96)
 WHITE = RGBColor(0xFF, 0xFF, 0xFF)
+COPPER = RGBColor(0xB8, 0x5C, 0x2E)   # 2D 圖解按鈕（與 3D 青綠色按鈕區分）
 
 TAG_LINK = "anim-link"          # 按鈕 shape 名稱前綴
 TAG_SLIDE = "anim-3d-slide"     # 新增投影片的標記 shape 名稱
@@ -101,13 +107,14 @@ def textbox(slide, x, y, w, h, paras, size=12, color=INK2, align=PP_ALIGN.LEFT,
     return tb
 
 
-def pill(slide, x, y, w, h, hash_, label=None, size=10):
-    """可點的圓角按鈕：shape 與文字都帶超連結。"""
+def pill(slide, x, y, w, h, hash_, label=None, size=10, href=None, color=None):
+    """可點的圓角按鈕：shape 與文字都帶超連結。href 不給時連到 transmon-3d.html#hash_。"""
+    href = href or url(hash_)
     sh = slide.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, Emu(x), Emu(y), Emu(w), Emu(h))
     sh.name = f"{TAG_LINK}_{hash_}"
     sh.adjustments[0] = 0.5
     sh.fill.solid()
-    sh.fill.fore_color.rgb = TEAL
+    sh.fill.fore_color.rgb = color or TEAL
     sh.line.fill.background()
     sh.shadow.inherit = False
     tf = sh.text_frame
@@ -120,8 +127,8 @@ def pill(slide, x, y, w, h, hash_, label=None, size=10):
     r = p.add_run()
     r.text = label or pill_label(hash_)
     style_run(r, size, WHITE, bold=True)
-    r.hyperlink.address = url(hash_)
-    sh.click_action.hyperlink.address = url(hash_)
+    r.hyperlink.address = href
+    sh.click_action.hyperlink.address = href
     # 文字超連結顏色跟隨文字（PowerPoint 2019+），避免變成藍底線
     hl = r._r.find(".//{http://schemas.openxmlformats.org/drawingml/2006/main}hlinkClick")
     if hl is not None:
@@ -208,6 +215,9 @@ EXISTING = {   # 投影片頁碼（1 起算）→ 章節
     15: ["potential"],
     16: ["control", "readout", "case"],
 }
+EXISTING_LC = {   # 投影片頁碼 → lc-vs-jj.html 段落（放在 3D 按鈕左邊，銅色）
+    4: ["s1"], 5: ["s1", "s2"], 6: ["s5"], 7: ["s6"], 8: ["s3"], 14: ["s3", "s4"], 16: ["s6drag"],
+}
 
 
 def add_existing_buttons(prs):
@@ -216,14 +226,23 @@ def add_existing_buttons(prs):
         s = slides[no - 1]
         if no == 1:   # 封面：放在標題區下方
             pill(s, Inches(0.55), Inches(4.55), Inches(2.3), Inches(0.34), "chip",
-                 label="▶ 開啟 3D 互動動畫（8 章）", size=11)
+                 label="▶ 開啟 3D 互動動畫（12 章）", size=11)
+            pill(s, Inches(3.0), Inches(4.55), Inches(2.3), Inches(0.34), "lc-cover",
+                 label="▶ 2D 圖解：LC vs JJ", size=11, href=LCJJ, color=COPPER)
         else:
             w = Inches(1.75)
             gap = Inches(0.08)
             x = SW - Inches(0.25) - len(hashes) * w - (len(hashes) - 1) * gap
             for k, h in enumerate(hashes):
                 pill(s, x + k * (w + gap), PILL_Y, w, PILL_H, h, size=9)
+            lw = Inches(1.5)
+            for k, sec in enumerate(reversed(EXISTING_LC.get(no, []))):
+                pill(s, x - (k + 1) * (lw + gap), PILL_Y, lw, PILL_H, f"lc-{sec}",
+                     label=f"▶ 圖解：{LC_STEPS[sec]}", size=9, href=f"{LCJJ}#{sec}", color=COPPER)
         lines = [f"{pill_label(h)[2:]}　{url(h)}" for h in hashes]
+        lines += [f"2D 圖解：{LC_STEPS[sec]}　{LCJJ}#{sec}" for sec in EXISTING_LC.get(no, [])]
+        if no == 1:
+            lines.append(f"2D 圖解：LC vs JJ　{LCJJ}")
         add_notes(s, NOTE_MARK + "\n" + "\n".join(lines))
 
 
@@ -298,7 +317,7 @@ def new_tour(prs):
                 [[(title, {"bold": True, "color": INK, "size": 10.5, "link": url(h)})], desc], size=8.5, space=1)
     textbox(s, x0, Inches(4.75), Inches(9.2), Inches(0.3),
             ["點按鈕或標題即開啟線上動畫（GitHub Pages：" + ANIM + "#章節）；離線時可改開 repo 內的 animations/transmon-3d.html。"
-             " 捷徑：#deutsch 直接進第 7 章 Deutsch 步驟、#deutsch-lab 進自由實驗。"], size=7.5, color=GRAY)
+             " 捷徑：#deutsch、#deutsch-lab。銅色「▶ 圖解」按鈕開啟 2D 圖解 lc-vs-jj.html（LC 與 JJ 的線性／非線性對照）。"], size=7.5, color=GRAY)
     add_notes(s, "這張是 3D 動畫的目錄。每一格左邊的按鈕可以直接跳到該章，按鈕下方是本簡報對應的頁碼。"
                  "前三章對應第一、二段的觀念，第四、五章對應控制與讀取，第六到九章從一顆位元走到多顆位元和演算法，"
                  "第十、十一章是量子錯誤更正，第十二章是把程式變成微波的軟體堆疊。\n\n"
