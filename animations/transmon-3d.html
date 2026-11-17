@@ -571,6 +571,16 @@ nav.chapters {
     }
   }
   const simPops = s => Array.from(s.re, (v, i) => v * v + s.im[i] * s.im[i]);
+  const fmtAmp = (re, im) => {   // 複數振幅：0.71、−0.71i、(0.50 − 0.50i)
+    const a = Math.abs(re) < 0.005 ? 0 : re, b = Math.abs(im) < 0.005 ? 0 : im, f = v => (v < 0 ? "−" : "") + Math.abs(v).toFixed(2);
+    if (!b) return f(a); if (!a) return f(b) + "i";
+    return `(${f(a)} ${b < 0 ? "−" : "+"} ${Math.abs(b).toFixed(2)}i)`;
+  };
+  // 把多項 a|n⟩ 串成式子：負的單項係數改成「− 0.71i|1⟩」
+  const psiStr = terms => terms.map(([re, im, lab], k) => {
+    const t = fmtAmp(re, im), neg = t.startsWith("−");
+    return (k === 0 ? (neg ? "−" : "") : neg ? " − " : " + ") + (neg ? t.slice(1) : t) + lab;
+  }).join("");
   const sim3 = makeSim("tr");
 
   // =====================================================================
@@ -887,18 +897,28 @@ nav.chapters {
       <p>按下方按鈕送一道 f₀₁ 微波，比較兩種電路：青色長條是各能階的佔據機率，小球的擺幅代表平均能量。</p>
       <div class="controls"><button class="btn primary" id="c3pi" type="button">送 π 脈衝（20 ns）</button><button class="btn" id="c3long" type="button">持續驅動 40 ns</button><button class="btn" id="c3r" type="button">重設 |0⟩</button></div>
       <dl class="stats" id="r3p"></dl>
+      <h3>微波頻率決定「誰」能吸收能量</h3>
+      <p>一個 5.21 GHz 的微波光子，能量是 h × 5.21 GHz。位元要吸收它，必須有<b>兩個相鄰能階的能量差剛好等於這個值</b>——吸收能量的不是「某一個能階」，而是「<b>一對能階之間的躍遷</b>」。微波一次只帶來或帶走一個光子，所以只能在相鄰兩階之間跳一格；「每一對」就是指 |0⟩↔|1⟩、|1⟩↔|2⟩、|2⟩↔|3⟩……這些相鄰的能階對，也就是梯子每一階之間的間距。</p>
+      <dl class="stats"><dt>|0⟩ → |1⟩ 需要</dt><dd>5.21 GHz：剛好對上，共振 ✓</dd><dt>|1⟩ → |2⟩ 需要</dt><dd>4.93 GHz：差 283 MHz，對不上</dd><dt>|2⟩ → |3⟩ 需要</dt><dd>4.62 GHz：差更多</dd><dt>沒有 JJ 時</dt><dd>每一對都是 5.48 GHz：全部對上</dd></dl>
+      <p><b>共振是雙向的</b>：在 |0⟩ 時吸收一個光子往上到 |1⟩；在 |1⟩ 時被同一道微波「推」一下，放出光子掉回 |0⟩（受激輻射）。所以持續驅動時狀態在 |0⟩、|1⟩ 之間來回——這就是 <b>Rabi 振盪</b>（第 4 章）；「持續驅動 40 ns」剛好轉一圈回到 |0⟩，π 脈衝則是在剛好翻到 |1⟩ 的那一刻停下。</p>
+      <p><b>「只能」其實是「幾乎只能」</b>：沒對準的躍遷，最多被激發的比例約為 Ω²/(Ω² + Δ²)。Ω 是驅動強度（這裡 25 MHz，對應 20 ns 的 π 脈衝），Δ 是失諧（283 MHz），算出來約 0.8%；按「送 π 脈衝」後漏到 |2⟩ 的模擬值是 0.4%，數量級吻合。脈衝越短越強、頻譜越寬，就越容易碰到 4.93 GHz，所以脈衝不能無限縮短，還要用 DRAG 整形壓低洩漏——這也是非諧性越大、閘可以做得越快的原因。</p>
       <p class="note" id="c3msg">有 JJ：π 脈衝把狀態完整送到 |1⟩；持續驅動則在 |0⟩、|1⟩ 之間來回（Rabi 振盪），幾乎不碰 |2⟩。沒有 JJ：狀態被一路往上推、散到很多能階（變成「相干態」，行為和古典的電流振盪一樣），根本停不在 |1⟩。</p>
       <p class="note">所以沒有 JJ 就沒有量子位元：① 定義不出只含兩個能階的 0/1；② 寫入時會一路漏到更高能階（第 4 章）；③ 讀取靠的色散偏移 χ = (g²/Δ)·α/(Δ+α)，α = 0 時 χ = 0，<b>讀不出狀態</b>（第 5 章）；④ CZ 閘靠 |11⟩↔|20⟩ 共振，也需要 α ≠ 0（第 6 章）。電感、電容怎麼組合都是線性的；JJ 是超導電路裡唯一「無損又非線性」的元件。</p>` },
     { id: "control", short: "操控", kicker: "第 4 章 / 11", title: "用微波轉動布洛赫球",
       target: [-1.6, 0.6, BZ], pos: [3.5, 4.5, BZ + 13.5],
       html: `<div class="controls subtabs" role="group" aria-label="電路"><button class="btn" id="c4mtr" type="button" aria-pressed="true">有 JJ（transmon）</button><button class="btn" id="c4mlc" type="button" aria-pressed="false">沒有 JJ（線性 LC）</button></div>
       <div id="c4dtr"><p><b>|0⟩、|1⟩</b> 是 cos 井最低的兩個能階。以 <b>f₀₁ = 5.21 GHz</b> 的微波脈衝驅動，狀態在布洛赫球上繞 X 或 Y 軸旋轉（Rabi 振盪）。</p>
-      <p>|1⟩→|2⟩ 的頻率低了 283 MHz，所以同一道微波不會把狀態推上 |2⟩。實務上脈衝長 20–50 ns，並用 DRAG 整形進一步抑制洩漏。</p></div>
+      <p>|1⟩→|2⟩ 的頻率低了 283 MHz，所以同一道微波不會把狀態推上 |2⟩。實務上脈衝長 20–50 ns，並用 DRAG 整形進一步抑制洩漏。</p>
+      <h3>Rabi 振盪與疊加態</h3>
+      <p>按「持續驅動」：微波一直照，箭頭沿著布洛赫球<b>連續旋轉</b>，下方曲線的 P(|1⟩) 在 0 和 1 之間來回——這就是 <b>Rabi 振盪</b>。它是一個「<b>過程</b>」；<b>疊加態</b>則是一種「<b>狀態</b>」：只要不是純 |0⟩ 或純 |1⟩ 就是疊加態。</p>
+      <p>「來回振盪」<b>不是位元在 0、1 之間跳來跳去</b>，而是振幅連續變化：任何一刻的狀態都是 cos(Ωt/2)|0⟩ − i·sin(Ωt/2)|1⟩，<b>中間每一刻都是疊加態</b>，只有轉到 0、π、2π 的瞬間才是純 |0⟩ 或 |1⟩。微波一停，疊加態就留下來——π/2 脈衝就是在半路停下、留下 50/50 的疊加態，這就是「寫入疊加態」。</p>
+      <p>疊加態不只有比例，還有<b>相位</b>：「X 軸 π/2」和「Y 軸 π/2」都得到 50/50，但箭頭指向赤道上不同方向（狀態式子裡的係數一個是 −i、一個是實數）；第 7～9 章的干涉靠的就是這個相位。量測會打斷疊加，只會隨機得到 0 或 1，要重複很多次才看得出比例（第 5 章）。面板的「此刻的狀態」把 |0⟩ 的係數一律取成正實數——整體相位不影響任何量測，所以轉過 π 之後 |1⟩ 的係數會從 −i 變成 +i，這只是寫法的選擇。</p></div>
       <div id="c4dlc" hidden><p><b>沒有 JJ 的線性 LC</b>：能階等距，左邊梯子每一階的間距都是 5.48 GHz。對準 0→1 的微波，<b>對 1→2、2→3 也同樣共振</b>（紅色波），所以同一道「X 軸 π 脈衝」不會停在 |1⟩，而是把狀態一路往上推。</p>
       <p>看布洛赫球：箭頭<b>變短、甚至縮到球心</b>——長度代表狀態還留在 {|0⟩, |1⟩} 裡的比例，其餘都漏到 |2⟩、|3⟩ 以上去了。0 和 1 根本定義不出來，也就沒有量子位元可以操作。這不是脈衝調得不好：線性系統裡，任何形狀的脈衝都只會讓整個振盪器「像古典電流一樣」被推動。</p></div>
-      <dl class="stats"><dt>P(|1⟩)</dt><dd id="r4p">0.000</dd><dt>P(|0⟩)・P(|2⟩)・P(≥|3⟩)</dt><dd id="r4pops">—</dd><dt>留在 {|0⟩,|1⟩} 的比例</dt><dd id="r4in">—</dd></dl>
+      <dl class="stats"><dt>此刻的狀態</dt><dd id="r4psi">—</dd><dt>類型</dt><dd id="r4kind">—</dd><dt>P(|1⟩)</dt><dd id="r4p">0.000</dd><dt>P(|0⟩)・P(|2⟩)・P(≥|3⟩)</dt><dd id="r4pops">—</dd><dt>留在 {|0⟩,|1⟩} 的比例</dt><dd id="r4in">—</dd></dl>
       <div class="meter" aria-hidden="true"><i id="r4bar"></i></div>
-      <div class="controls" style="margin-top:12px"><button class="btn primary" id="c4xpi" type="button">X 軸 π</button><button class="btn" id="c4xh" type="button">X 軸 π/2</button><button class="btn" id="c4yh" type="button">Y 軸 π/2</button><button class="btn" id="c4r" type="button">重設 |0⟩</button></div>
+      <canvas id="r4spark" width="660" height="120" style="width:100%;height:60px;margin-top:8px;display:block" aria-label="P(|1⟩) 隨時間的變化"></canvas>
+      <div class="controls" style="margin-top:12px"><button class="btn primary" id="c4xpi" type="button">X 軸 π</button><button class="btn" id="c4xh" type="button">X 軸 π/2</button><button class="btn" id="c4yh" type="button">Y 軸 π/2</button><button class="btn" id="c4rabi" type="button" aria-pressed="false">持續驅動（Rabi 振盪）</button><button class="btn" id="c4r" type="button">重設 |0⟩</button></div>
       <p class="note" id="c4msg">切到「沒有 JJ」再按 X 軸 π，比較兩種電路的結果。</p>` },
     { id: "readout", short: "讀取", kicker: "第 5 章 / 11", title: "色散讀取：從頻移讀出狀態",
       target: [-0.3, 2.3, -5.2], pos: [0.7, 6.6, 10.2],
@@ -1023,7 +1043,7 @@ nav.chapters {
       const set = m => {
         c4mode = m; $("c4mtr").setAttribute("aria-pressed", m === "tr"); $("c4mlc").setAttribute("aria-pressed", m === "lc");
         $("c4dtr").hidden = m !== "tr"; $("c4dlc").hidden = m !== "lc";
-        queue.length = 0; anim = null; simReset(sim4, m); sim4q.length = 0; state.set(0, 1, 0); trailN = 0;
+        queue.length = 0; anim = null; simReset(sim4, m); sim4q.length = 0; sim4.drv = 0; state.set(0, 1, 0); trailN = 0; rabiOn = false; const rb = $("c4rabi"); if (rb) { rb.setAttribute("aria-pressed", false); rb.textContent = "持續驅動（Rabi 振盪）"; }
         $("c4msg").textContent = m === "lc" ? "沒有 JJ：按「X 軸 π」，看狀態會不會停在 |1⟩。" : "有 JJ：X 軸 π 會把 |0⟩ 完整翻到 |1⟩。切到「沒有 JJ」比較看看。";
       };
       $("c4mtr").onclick = () => set("tr"); $("c4mlc").onclick = () => set("lc"); set(c4mode);
@@ -1031,7 +1051,10 @@ nav.chapters {
       $("c4xpi").onclick = () => p4("X", Math.PI);
       $("c4xh").onclick = () => p4("X", Math.PI / 2);
       $("c4yh").onclick = () => p4("Y", Math.PI / 2);
-      $("c4r").onclick = () => { queue.length = 0; anim = null; simReset(sim4); sim4q.length = 0; state.set(0, 1, 0); trailN = 0; };
+      $("c4r").onclick = () => { queue.length = 0; anim = null; simReset(sim4); sim4q.length = 0; sim4.drv = 0; state.set(0, 1, 0); trailN = 0; setRabi(false); spark4.length = 0; };
+      const setRabi = on => { rabiOn = on; const b = $("c4rabi"); b.setAttribute("aria-pressed", on); b.textContent = on ? "停止驅動" : "持續驅動（Rabi 振盪）"; if (on) { queue.length = 0; anim = null; sim4q.length = 0; } };
+      $("c4rabi").onclick = () => setRabi(!rabiOn);
+      setRabi(false);
     }
     if (i === 4) {
       const sp = $("g5steps");
@@ -3639,7 +3662,7 @@ nav.chapters {
 
   // ---------- 狀態變數 ----------
   let jjPhi = 35 * Math.PI / 180, acMode = false, xyT = -1, excite = 0, xyDe = false;
-  let c4mode = "tr"; const sim4 = makeSim("lc"), sim4q = [];   // xyDe：這次 XY 脈衝是重設（翻回 |0⟩）
+  let c4mode = "tr", rabiOn = false; const sim4 = makeSim("lc"), sim4q = [], spark4 = [];   // xyDe：這次 XY 脈衝是重設（翻回 |0⟩）
 
   // ---------- 尺寸 ----------
   function resize() {
@@ -3753,7 +3776,10 @@ nav.chapters {
       for (let i = 0; i < mw3N; i++) { const x = -9.5 + 3.2 * i / (mw3N - 1); ma[i * 3] = x; ma[i * 3 + 1] = 2.4 + 0.3 * Math.sin(x * 9 - T * 14); ma[i * 3 + 2] = 0; }
       mw3Geo.attributes.position.needsUpdate = true; mw3.material.opacity = sim3.left > 0 ? 1 : 0;
       const r3p = $("r3p");
-      if (r3p) r3p.innerHTML = `<dt>P(|0⟩)・P(|1⟩)・P(|2⟩)</dt><dd>${P3[0].toFixed(3)}・${P3[1].toFixed(3)}・${P3[2].toFixed(3)}</dd><dt>P(≥|3⟩)</dt><dd>${P3.slice(3).reduce((a, v) => a + v, 0).toFixed(3)}</dd><dt>平均能階 ⟨n⟩</dt><dd>${nbar.toFixed(2)}</dd>`;
+      if (r3p) {
+        const terms = []; for (let n = 0; n < NL && terms.length < 3; n++) if (P3[n] > 0.004) terms.push([sim3.re[n], sim3.im[n], `|${n}⟩`]);
+        r3p.innerHTML = `<dt>此刻的狀態</dt><dd>${psiStr(terms)}${P3.filter(v => v > 0.004).length > 3 ? " + …" : ""}</dd><dt>P(|0⟩)・P(|1⟩)・P(|2⟩)</dt><dd>${P3[0].toFixed(3)}・${P3[1].toFixed(3)}・${P3[2].toFixed(3)}</dd><dt>P(≥|3⟩)</dt><dd>${P3.slice(3).reduce((a, v) => a + v, 0).toFixed(3)}</dd><dt>平均能階 ⟨n⟩</dt><dd>${nbar.toFixed(2)}</dd>`;
+      }
       const amp = Math.min(2.1, 0.45 * Math.sqrt(2 * nbar + 1)), w = trMode ? 2.2 : 2.3; const phi = amp * Math.sin(T * w);
       const Uy = trMode ? PHYS.EJ * (1 - Math.cos(phi)) : PHYS.EJ * phi * phi / 2;
       ball.position.set(phi * SX, Uy * SY + 0.3, 0);
@@ -3767,10 +3793,18 @@ nav.chapters {
       let pops4 = null;
       if (lcOn) {
         // 沒有 JJ：用多能階模擬；1 秒動畫 = 16 ns
+        if (rabiOn && sim4.left <= 0) {
+          sim4.drv = (sim4.drv || 0) + 4;
+          if (sim4.drv > 40) {   // 沒有 JJ：狀態只會越爬越高，40 ns 後停下說明
+            rabiOn = false; sim4.drv = 0; const rb = $("c4rabi"); if (rb) { rb.setAttribute("aria-pressed", false); rb.textContent = "持續驅動（Rabi 振盪）"; }
+            const P = simPops(sim4), nb = P.reduce((a, v, n) => a + v * n, 0), el = $("c4msg");
+            if (el) el.innerHTML = `<b>沒有 JJ</b>：持續驅動 40 ns，狀態沒有在 |0⟩、|1⟩ 之間來回，而是一路往上爬到平均第 ${nb.toFixed(1)} 階，留在 {|0⟩,|1⟩} 的只剩 ${((P[0] + P[1]) * 100).toFixed(1)}%——沒有 Rabi 振盪，也就沒有量子位元。`;
+          } else { sim4.left = 4; sim4.phi = 0; sim4.ang = -1; }
+        }
         if (sim4.left <= 0 && sim4q.length) { const q = sim4q.shift(); sim4.left = q.T; sim4.phi = q.phi; sim4.ang = q.ang; }
         if (sim4.left > 0) {
           const step = Math.min(sim4.left, dt * 16); simAdvance(sim4, step); sim4.left -= step;
-          if (sim4.left <= 1e-9) {
+          if (sim4.left <= 1e-9 && sim4.ang > 0) {
             sim4.left = 0; const P = simPops(sim4), el = $("c4msg");
             if (el) el.innerHTML = `<b>沒有 JJ</b>：這個脈衝在有 JJ 時會${sim4.ang > 2 ? "把 |0⟩ 完整翻到 |1⟩" : "轉 90°"}；現在 P(|1⟩) = ${P[1].toFixed(3)}，有 ${((1 - P[0] - P[1]) * 100).toFixed(0)}% 漏到 |2⟩ 以上，箭頭縮短成 ${(P[0] + P[1]).toFixed(2)}。`;
           }
@@ -3780,6 +3814,7 @@ nav.chapters {
         const bx = 2 * (c0r * c1r + c0i * c1i), by = 2 * (c0r * c1i - c0i * c1r), bz = pops4[0] - pops4[1];
         state.set(bx, bz, -by);   // 布洛赫 z → 世界 y，y → 世界 −z
       } else {
+        if (rabiOn && cur === 3) { anim = null; state.applyQuaternion(new THREE.Quaternion().setFromAxisAngle(AX.X, dt * Math.PI / 1.1)); }
         if (!anim && queue.length) { const q = queue.shift(); anim = { ...q, t: 0, from: state.clone() }; }
         if (anim) {
           anim.t += dt / (1.1 * anim.angle / Math.PI + 0.25);
@@ -3794,7 +3829,7 @@ nav.chapters {
       tip.position.copy(state).multiplyScalar(R);
       if (cur === 3) {
         const tp = trailGeo.attributes.position.array, idx = trailN % TRAIL;
-        if (anim || sim4.left > 0 || trailN === 0) { tp[idx * 3] = tip.position.x; tp[idx * 3 + 1] = tip.position.y; tp[idx * 3 + 2] = tip.position.z; trailN++; trailGeo.setDrawRange(0, Math.min(trailN, TRAIL)); trailGeo.attributes.position.needsUpdate = true; }
+        if (anim || rabiOn || sim4.left > 0 || trailN === 0) { tp[idx * 3] = tip.position.x; tp[idx * 3 + 1] = tip.position.y; tp[idx * 3 + 2] = tip.position.z; trailN++; trailGeo.setDrawRange(0, Math.min(trailN, TRAIL)); trailGeo.attributes.position.needsUpdate = true; }
         if (trailN >= TRAIL) trailN = 1;
         // 能階梯：有 JJ 不等距、沒有 JJ 等距；長條粗細 ∝ 佔據機率
         const LY = LADDER[lcOn ? "lc" : "tr"], pp = pops4 || [1 - P1(), P1(), 0, 0];
@@ -3805,7 +3840,7 @@ nav.chapters {
           ladTags[n].pos.set(-7.5, -2.2 + b.position.y, 0).add(bl.position); ladTags[n].on = n < 3 || lcOn;
           if (n === 3) ladTags[n].el.textContent = lcOn ? "|3⟩ 以上" : "|3⟩";
         });
-        const drv = lcOn ? sim4.left > 0 : !!anim;
+        const drv = lcOn ? sim4.left > 0 : !!anim || rabiOn;
         gapTags4.forEach((t, n) => {
           const y = -2.2 + (ladderBars[n].position.y + ladderBars[n + 1].position.y) / 2, f = (lcOn ? Math.sqrt(30) : PHYS.trAll[n + 1] - PHYS.trAll[n]).toFixed(2);
           t.pos.set(-4.4, y, 0).add(bl.position); t.on = n < 2 || lcOn;
@@ -3821,6 +3856,29 @@ nav.chapters {
           pv.textContent = p1v.toFixed(3); $("r4bar").style.width = (p1v * 100).toFixed(1) + "%";
           $("r4pops").textContent = pops4 ? `${pops4[0].toFixed(3)}・${pops4[2].toFixed(3)}・${p3up.toFixed(3)}` : `${(1 - p1v).toFixed(3)}・0.000・0.000`;
           $("r4in").textContent = pops4 ? (pops4[0] + pops4[1]).toFixed(3) : "1.000（理想二能階）";
+          // 此刻的狀態：有 JJ 由布洛赫向量換算 cos(θ/2)|0⟩ + e^{iφ} sin(θ/2)|1⟩；沒有 JJ 直接用模擬振幅
+          let psi, p0v = pops4 ? pops4[0] : 1 - p1v;
+          if (pops4) {
+            const extra = 1 - pops4[0] - pops4[1];
+            psi = psiStr([[sim4.re[0], sim4.im[0], "|0⟩"], [sim4.re[1], sim4.im[1], "|1⟩"]]) + (extra > 0.005 ? ` + …（|2⟩ 以上佔 ${(extra * 100).toFixed(0)}%）` : "");
+          } else {
+            const bx = state.x, by = -state.z, bz = Math.max(-1, Math.min(1, state.y)), th = Math.acos(bz), ph = Math.atan2(by, bx), sh = Math.sin(th / 2);
+            psi = psiStr([[Math.cos(th / 2), 0, "|0⟩"], [sh * Math.cos(ph), sh * Math.sin(ph), "|1⟩"]].filter(t => Math.hypot(t[0], t[1]) > 0.005));
+          }
+          $("r4psi").textContent = psi;
+          const kd = $("r4kind");
+          kd.textContent = pops4 && pops4[0] + pops4[1] < 0.98 ? "已漏出 0/1：不是量子位元的狀態" : p1v < 0.005 ? "純 |0⟩（量測必得 0）" : p0v < 0.005 ? "純 |1⟩（量測必得 1）" : `疊加態（量測：0 有 ${(p0v * 100).toFixed(0)}%、1 有 ${(p1v * 100).toFixed(0)}%）`;
+          kd.style.color = pops4 && pops4[0] + pops4[1] < 0.98 ? "#ef7a73" : p1v < 0.005 || p0v < 0.005 ? "var(--fg)" : "var(--teal)";
+          // P(|1⟩) 隨時間的曲線
+          spark4.push(p1v); if (spark4.length > 330) spark4.shift();
+          const cv = $("r4spark"), cx = cv && cv.getContext("2d");
+          if (cx) {
+            const Wc = cv.width, Hc = cv.height; cx.clearRect(0, 0, Wc, Hc);
+            cx.strokeStyle = "rgba(232,235,240,0.18)"; cx.lineWidth = 1; [0, 0.5, 1].forEach(v => { cx.beginPath(); cx.moveTo(0, Hc - 8 - v * (Hc - 16)); cx.lineTo(Wc, Hc - 8 - v * (Hc - 16)); cx.stroke(); });
+            cx.strokeStyle = "#d6b04a"; cx.lineWidth = 3; cx.beginPath();
+            spark4.forEach((v, i) => { const x = Wc - (spark4.length - 1 - i) * 2, y = Hc - 8 - v * (Hc - 16); i ? cx.lineTo(x, y) : cx.moveTo(x, y); }); cx.stroke();
+            cx.fillStyle = "#98a1b0"; cx.font = "500 20px 'JetBrains Mono', monospace"; cx.fillText("P(|1⟩) 隨時間：1", 6, 22); cx.fillText("0", 6, Hc - 12);
+          }
         }
       }
       const p5 = $("r5p"); if (p5 && cur === 4) p5.textContent = P1().toFixed(3);
