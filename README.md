@@ -8,7 +8,7 @@
 
 1. [約瑟夫森結（JJ）：巨觀量子波、相位差與「穿隧」的真正意義](notes/josephson-junction-wave-and-tunneling.md)
 2. [Transmon：約瑟夫森電感、電路結構與量子位元機制](notes/transmon-josephson-inductance.md)
-   - 簡報：[`slides/transmon.pptx`](slides/transmon.pptx)（23 頁，PowerPoint；每頁右上角「▶ 3D 第 N 章」按鈕直接開啟動畫，第 17–22 頁為 3D 動畫導覽與案例、振幅長條、Shor 介紹；產生腳本 [`slides/build/add_transmon_3d_links.py`](slides/build/add_transmon_3d_links.py)）
+   - 簡報：[`slides/transmon.pptx`](slides/transmon.pptx)（27 頁，PowerPoint；每頁右上角「▶ 3D 第 N 章」按鈕直接開啟動畫，第 17–26 頁為 3D 動畫導覽與十二章的介紹：操控與讀取、案例、振幅長條、Shor、BV 密碼、表面碼、邏輯閘、軟體堆疊；產生腳本 [`slides/build/add_transmon_3d_links.py`](slides/build/add_transmon_3d_links.py)）
    - 3D 互動動畫：[`animations/transmon-3d.html`](animations/transmon-3d.html)（12 章；第 5 章「讀取」為 8 步驟導覽：色散偏移、IQ、讀取鏈、單發積分與判別、QND、讀完後的重設方式；第 6 章「案例」示範 SQUID 調頻、頻率配置與頻率碰撞、XY 寫入、CZ 閘；第 7 章「振幅長條」示範糾纏、兩位元 Grover 搜尋與 Deutsch 演算法；第 8 章示範 Shor 演算法（QFT 找週期分解 15，可自選 N、a、計數位元數）；第 9 章「BV 密碼」為基本操作案例：3 顆位元用 Bernstein–Vazirani 演算法只查詢一次猜出密碼（可隱藏密碼猜謎、和古典查詢比賽）；第 10 章「表面碼」示範量子錯誤更正：d = 3 表面碼的穩定子、一個週期的 CZ 順序、X/Z/Y 錯誤與邊界、最小權重完美匹配解碼、兩個錯誤造成邏輯錯誤、碼距與閾值（自由實驗可點位元注入錯誤、換 d = 3/5/7、跑蒙地卡羅統計）；第 11 章「邏輯閘」示範 lattice surgery（兩塊 d = 3 補丁合併量 X_A·X_B、拆開、三步 CNOT、T 閘傳送）與 15-to-1 魔術態蒸餾工廠（可調注入錯誤率、跑統計）；第 12 章「軟體堆疊」跟著電路走完整條編譯與控制堆疊（七層架構、分解成 Rz／√X／CZ、校準感知映射、SWAP 路由、H·H 抵消與 Rz 合併、ASAP 排程與脈衝時間軸、FPGA 即時回饋、2000 shots 結果、校準依賴圖；自由實驗可選 Bell／GHZ／BV 與直線／方格晶片比較 SWAP 數與總時間）；線上版 https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html，或下載後用瀏覽器開啟（已內附 three.js，離線可用）；網址加 `#deutsch` 直接進 Deutsch 步驟、`#deutsch-lab` 進自由實驗）
    - 2D 互動圖解：[`animations/lc-vs-jj.html`](animations/lc-vs-jj.html)（為什麼 LC 是線性、JJ 是非線性；6 步：電流–磁通曲線與等效電感 L_J、正弦驅動與諧波、拋物線 vs 餘弦位能與數值對角化能階、躍遷頻率與 qubit 定址、泰勒展開的四次項、DRAG 脈衝抑制洩漏到 |2⟩（三能階 RK4 模擬、頻譜缺口、洩漏 vs 閘長度）；單一 HTML 檔，離線可用（字型需連網，離線時自動改用系統字型）；屬獨立圖解頁，未列入下方動畫 ↔ 簡報對照表）
    - 教學紀錄：[`docs/超導量子電腦師生對話教學紀錄.md`](docs/超導量子電腦師生對話教學紀錄.md)（師生對話形式，3 篇 13 課：SQUID、寫入、頻率配置、能階與 Rabi、讀取、BV、糾纏與 Grover、Deutsch、Shor、表面碼、lattice surgery 與魔術態、軟體堆疊；每課附學習目標、重點整理、動畫連結與課後練習）
@@ -50,7 +50,7 @@
 
 ## 3D 動畫 ↔ PPT 簡報對照
 
-`animations/` 共 6 個動畫頁、68 個場景／章節，其中 64 個有對應的簡報投影片（`transmon-3d.html` 新增的第 9–12 章還沒有，見下表）。簡報上的「▶ 3D」按鈕直接開啟線上動畫，網址格式為 `https://pcpcchen-coder.github.io/QuantumComputing/animations/<頁面>.html#<場景代號>`（動畫首頁：<https://pcpcchen-coder.github.io/QuantumComputing/>）。離線時可改開 repo 內的 `animations/<頁面>.html#<場景代號>`。
+`animations/` 共 6 個動畫頁、68 個場景／章節，**每一個都有對應的簡報投影片**。簡報上的「▶ 3D」按鈕直接開啟線上動畫，網址格式為 `https://pcpcchen-coder.github.io/QuantumComputing/animations/<頁面>.html#<場景代號>`（動畫首頁：<https://pcpcchen-coder.github.io/QuantumComputing/>）。離線時可改開 repo 內的 `animations/<頁面>.html#<場景代號>`。
 
 逐場景的完整表格（含投影片標題與可點的動畫網址）：[`docs/動畫與簡報對照表.md`](docs/動畫與簡報對照表.md)。新增動畫或簡報後執行下列指令，會重新產生表格，並列出還沒有投影片介紹的場景（有缺口時結束碼為 1）：
 
@@ -80,16 +80,16 @@ python3 slides/build/anim_ppt_map.py
 | [`peripherals.html`](animations/peripherals.html) | 10 | [`QC_Peripheral_Systems_Talk.pptx`](slides/QC_Peripheral_Systems_Talk.pptx) | ✅ 全部有 |
 | [`operation.html`](animations/operation.html) | 12 | [`QC_Operation_Talk.pptx`](slides/QC_Operation_Talk.pptx)；干涉場景另見量子金魚 008 | ✅ 全部有 |
 | [`atoms.html`](animations/atoms.html) | 13 | [`Ion_NeutralAtom_Talk.pptx`](slides/Ion_NeutralAtom_Talk.pptx) | ✅ 全部有 |
-| [`transmon-3d.html`](animations/transmon-3d.html) | 12 章＋2 捷徑 | [`transmon.pptx`](slides/transmon.pptx)；Deutsch 捷徑另見 [`qfish008-deutsch-algorithm.pptx`](slides/output/qfish008-deutsch-algorithm.pptx) | ⚠️ 第 1–8 章與捷徑有；第 9–12 章（BV 密碼、表面碼、邏輯閘、軟體堆疊）待補 |
+| [`transmon-3d.html`](animations/transmon-3d.html) | 12 章＋2 捷徑 | [`transmon.pptx`](slides/transmon.pptx)；Deutsch 捷徑另見 [`qfish008-deutsch-algorithm.pptx`](slides/output/qfish008-deutsch-algorithm.pptx) | ✅ 全部有 |
 | [`power1000.html`](animations/power1000.html) | 8 | [`qc-power-supply-delta.pptx`](slides/output/qc-power-supply-delta.pptx)（右上角「▶ 動畫」按鈕） | ✅ 全部有 |
 
 ### transmon-3d.html ↔ transmon.pptx
 
-`transmon.pptx` 原本 17 頁、沒有任何動畫連結，現已補成 23 頁：既有 12 頁右上角加上「▶ 3D 第 N 章」按鈕，講者備註也附上動畫網址；新增第 17–22 頁（3D 動畫導覽、操控與讀取、案例：頻率配置、振幅長條、Shor），每頁都有 3D 截圖、按鈕與動畫網址。這份簡報由 [`slides/build/add_transmon_3d_links.py`](slides/build/add_transmon_3d_links.py) 從 `slides/build/transmon_base.pptx` 產生，截圖由 [`slides/capture_3d_transmon.js`](slides/capture_3d_transmon.js) 擷取。
+`transmon.pptx` 原本 17 頁、沒有任何動畫連結，現已補成 27 頁：既有 12 頁右上角加上「▶ 3D 第 N 章」按鈕，講者備註也附上動畫網址；新增第 17–26 頁（3D 動畫導覽、操控與讀取、案例：頻率配置、振幅長條、Shor、BV 密碼、表面碼、邏輯閘、軟體堆疊），每頁都有 3D 截圖、按鈕與動畫網址。這份簡報由 [`slides/build/add_transmon_3d_links.py`](slides/build/add_transmon_3d_links.py) 從 `slides/build/transmon_base.pptx` 產生，截圖由 [`slides/capture_3d_transmon.js`](slides/capture_3d_transmon.js) 擷取（第 9–12 章另以 [`slides/build/autocrop_shots.py`](slides/build/autocrop_shots.py) 裁掉空白）。
 
 | 章 | 動畫網址 | 對應投影片 |
 |---|---|---|
-| 1 晶片 | [`transmon-3d.html#chip`](animations/transmon-3d.html#chip) | transmon p1、10、11、17、18、23 |
+| 1 晶片 | [`transmon-3d.html#chip`](animations/transmon-3d.html#chip) | transmon p1、10、11、17、18、27 |
 | 2 約瑟夫森結 | [`#junction`](animations/transmon-3d.html#junction) | transmon p4、5、18 |
 | 3 位能井 | [`#potential`](animations/transmon-3d.html#potential) | transmon p6、7、8、12、14、15、18 |
 | 4 操控 | [`#control`](animations/transmon-3d.html#control) | transmon p16、18、19 |
@@ -97,6 +97,10 @@ python3 slides/build/anim_ppt_map.py
 | 6 案例 | [`#case`](animations/transmon-3d.html#case) | transmon p16、18、20 |
 | 7 振幅長條 | [`#grover`](animations/transmon-3d.html#grover) | transmon p18、21 |
 | 8 Shor | [`#shor`](animations/transmon-3d.html#shor) | transmon p18、22 |
+| 9 BV 密碼 | [`#bv`](animations/transmon-3d.html#bv) | transmon p18、23 |
+| 10 表面碼 | [`#surface`](animations/transmon-3d.html#surface) | transmon p18、24 |
+| 11 邏輯閘 | [`#surgery`](animations/transmon-3d.html#surgery) | transmon p18、25 |
+| 12 軟體堆疊 | [`#stack`](animations/transmon-3d.html#stack) | transmon p18、26 |
 | 捷徑：Deutsch 步驟 | [`#deutsch`](animations/transmon-3d.html#deutsch) | qfish008 p13、20、23；transmon p21 |
 | 捷徑：Deutsch 自由實驗 | [`#deutsch-lab`](animations/transmon-3d.html#deutsch-lab) | qfish008 p21、22、24；transmon p21 |
 
