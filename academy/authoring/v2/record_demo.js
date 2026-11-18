@@ -36,7 +36,7 @@ const { chromium } = require('playwright');
     if (!shotDone && Date.now() >= at(spec.shot_t)) { await p.screenshot({ path: spec.shot_out }); shotDone = true; }
   };
   for (const a of acts) {
-    if (!shotDone && at(spec.shot_t) < at(a.t)) { await sleepUntil(at(spec.shot_t)); await maybeShot(); }
+    if (!shotDone && at(spec.shot_t) < at(a.t)) { await sleepUntil(at(spec.shot_t) + 50); await maybeShot(); }
     await sleepUntil(at(a.t));
     if (a.kind === 'click') {
       const ok = await p.evaluate((t) => { const el = window.__btn(t); if (!el) return false; window.__flash(el); el.click(); return true; }, a.label);
@@ -69,7 +69,8 @@ const { chromium } = require('playwright');
     }
     await maybeShot();
   }
-  if (!shotDone) { await sleepUntil(at(spec.shot_t)); await maybeShot(); }
+  // waitForTimeout 可能早幾毫秒醒來，最後一定要補拍
+  if (!shotDone) { await sleepUntil(at(spec.shot_t) + 50); await p.screenshot({ path: spec.shot_out }); shotDone = true; }
   await sleepUntil(at(spec.duration + 0.4));
   const video = p.video();
   await ctx.close();
