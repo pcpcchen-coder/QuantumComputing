@@ -30,6 +30,7 @@ PAGES = [  # (html, 場景 JS 目錄 or None, 說明)
     ("atoms.html", "js/atoms", "離子阱與中性原子"),
     ("transmon-3d.html", None, "Transmon 3D（12 章）"),
     ("power1000.html", "inline", "1,000 位元供電設計"),
+    ("lc-vs-jj.html", "sections", "LC 與約瑟夫森接面（2D 圖解）"),
 ]
 DECK_NAMES = {
     "slides/JJ_Microwave_Readout_Talk.pptx": "JJ 與微波讀取",
@@ -117,6 +118,10 @@ def update_readme(refs):
 
 def scenes_of(html, js_dir):
     """回傳 [(id, 標題)]，依動畫中的順序。"""
+    if js_dir == "sections":  # 單頁圖解：<section class="step" id="…"> 後面的 <h2>
+        s = open(os.path.join(ANIM_DIR, html), encoding="utf-8").read()
+        return [(sid, re.sub(r"<[^>]+>", "", t).strip())
+                for sid, t in re.findall(r'<section class="step" id="([\w-]+)".*?<h2[^>]*>(.*?)</h2>', s, re.S)]
     if js_dir == "inline":  # 場景直接寫在 HTML 裡：S({ id: '…', title: '…'
         s = open(os.path.join(ANIM_DIR, html), encoding="utf-8").read()
         return re.findall(r"S\(\{ id: '([\w-]+)', title: '([^']+)'", s)
@@ -200,10 +205,11 @@ def main():
                 missing.append(f"{html}#{sid}")
             by_deck = defaultdict(list)
             for deck, no, t in r:
-                by_deck[deck].append(f"p{no} {t}")
+                by_deck[deck].append(f"p{no} {t}".replace("|", "\\|"))
             cell = "<br>".join(f"**{DECK_NAMES.get(d, d)}**（[`{os.path.basename(d)}`](../{d})）：" + "；".join(v)
                                for d, v in by_deck.items()) or "⚠️ 無"
-            body.append(f"| {k} | {title} | [`#{sid}`]({PAGES_ANIM}{html}#{sid}) | {cell} |")
+            esc = lambda t: t.replace("|", "\\|")   # 標題裡的 |0⟩ 會打斷 Markdown 表格
+            body.append(f"| {k} | {esc(title)} | [`#{sid}`]({PAGES_ANIM}{html}#{sid}) | {cell} |")
         body.append("")
     lines += ["## 總覽", "", "| 動畫 | 主題 | 場景數 | 有簡報介紹 | 狀態 |", "|---|---|---|---|---|"] + summary + [""]
     lines += body
