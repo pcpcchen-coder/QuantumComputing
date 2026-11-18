@@ -675,7 +675,13 @@
     "Q131": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q131-cooling-chain-ups-v2",
+        "evidence": "academy/episodes/q131-cooling-chain-ups-v2/delivery.json"
+      }
     },
     "Q132": {
       "status": "planned",

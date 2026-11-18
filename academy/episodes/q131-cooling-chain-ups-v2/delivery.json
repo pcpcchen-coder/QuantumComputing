@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q131",
+  "version": "Q131-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-18",
+  "episodePath": "academy/episodes/q131-cooling-chain-ups-v2",
+  "basedOn": "academy/episodes/q131-cooling-chain-ups（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 528.81,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "pulsetube",
+      "title": "動畫展示：冷卻鏈的第一棒",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/peripherals.html#pulsetube"
+    },
+    {
+      "key": "outage",
+      "title": "動畫展示：三種備援方案",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/power1000.html#outage"
+    },
+    {
+      "key": "overview",
+      "title": "動畫展示：分層保護的全景",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/power1000.html#overview"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.5,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q131-cooling-chain-ups-v2-zh-TW.mp4": {
+      "bytes": 90192844,
+      "sha256": "cfd663d43c4442eb32dbf4378fdfeda25e8563d4bdef55f275641345ffed901d"
+    },
+    "q131-cooling-chain-ups-v2-master.mp4": {
+      "bytes": 91748043,
+      "sha256": "081612022624603a200f58a3b00e879957d3336fd0c62f75cf8a21b4e3efc0dc"
+    },
+    "narration-only.mp3": {
+      "bytes": 12692884,
+      "sha256": "00388fe41ef6a03572ea230ee80fb743bcf64d698d17f280eae75d14e68ff59b"
+    }
+  },
+  "package": {
+    "filename": "Q131-v2_量子電腦學程_冷卻鏈不斷電_動畫展示版_2026-11-18.zip",
+    "bytes": 198621415,
+    "sha256": "029e8986c5666d941b445fb23992ae579fcb5fdb02da45ee3022b9a1ea012b44",
+    "parts": [
+      {
+        "name": "Q131-v2_量子電腦學程_冷卻鏈不斷電_動畫展示版_2026-11-18.zip.part01",
+        "bytes": 29360128,
+        "sha256": "0957d2f8970a26483b3c0699f304c4e1aaba4057aeec96fc77a7fed60fe25730"
+      },
+      {
+        "name": "Q131-v2_量子電腦學程_冷卻鏈不斷電_動畫展示版_2026-11-18.zip.part02",
+        "bytes": 29360128,
+        "sha256": "811a96aea532021561091f600ab6e3e1a37217082ad553e012d49b148ca5659e"
+      },
+      {
+        "name": "Q131-v2_量子電腦學程_冷卻鏈不斷電_動畫展示版_2026-11-18.zip.part03",
+        "bytes": 29360128,
+        "sha256": "4ab299b675bd4a714186392a78f82e7e7728fe3f58f9438df0d9240764d495c5"
+      },
+      {
+        "name": "Q131-v2_量子電腦學程_冷卻鏈不斷電_動畫展示版_2026-11-18.zip.part04",
+        "bytes": 29360128,
+        "sha256": "6622a7690723c5d3a4a537f6bc9f7812b67d1bb7ac72f463c5ea8828b8e0f3f1"
+      },
+      {
+        "name": "Q131-v2_量子電腦學程_冷卻鏈不斷電_動畫展示版_2026-11-18.zip.part05",
+        "bytes": 29360128,
+        "sha256": "d7d568e38d6b82c37ae34a596664d364cad14dac34b2529f45a645f41b26b2b8"
+      },
+      {
+        "name": "Q131-v2_量子電腦學程_冷卻鏈不斷電_動畫展示版_2026-11-18.zip.part06",
+        "bytes": 29360128,
+        "sha256": "510cda776c29d0229f446fe2dc6f71a7ee0ff931b986571cd2d75f88f4323e30"
+      },
+      {
+        "name": "Q131-v2_量子電腦學程_冷卻鏈不斷電_動畫展示版_2026-11-18.zip.part07",
+        "bytes": 22460647,
+        "sha256": "925eb43c27355f9a04de31205440644fa082486912b7e972d933431aae2bbc97"
+      }
+    ],
+    "handedOver": "2026-11-18 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "status": "pending: Drive token expired (HTTP 401) on 2026-11-18; queued in /home/user/qwork/pending-uploads.txt",
+    "folderId": "19TfKYX25oeVvzZEsGfFYyF8D3W3tknd7"
+  }
+}
