@@ -100,8 +100,12 @@ class Lesson:
                 if os.environ.get('QV2_DRY'):  # 試跑：用靜音代替，長度依字數估計；正式輸出前必須拿掉
                     run(['ffmpeg', '-y', '-v', 'error', '-f', 'lavfi', '-i', 'anullsrc=r=24000:cl=mono', '-t', f'{len(s) / 4.5:.2f}', raw.with_suffix('.dry.mp3')])
                     raw = raw.with_suffix('.dry.mp3')
-                elif not raw.exists():
-                    sn.synthesize(s, raw)
+                else:  # 原始音檔以段名＋句號命名；旁白改過就要重新合成，所以旁邊存一份文字比對
+                    said = raw.with_suffix('.txt')
+                    if not raw.exists() or not said.exists() or said.read_text(encoding='utf-8') != s:
+                        raw.unlink(missing_ok=True)
+                        sn.synthesize(s, raw)
+                        said.write_text(s, encoding='utf-8')
                 run(['ffmpeg', '-y', '-v', 'error', '-i', raw, '-af',
                      'adelay=140,highpass=f=85,lowpass=f=8800,'
                      'equalizer=f=170:t=q:w=1:g=2.5,equalizer=f=2600:t=q:w=1.2:g=1.2,'
