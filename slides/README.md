@@ -12,7 +12,7 @@
 
 引擎也可以用在非影片的報告：`reports/qc-power.js` → `output/qc-power-supply.pptx`（量子電腦供電設計，超導／離子阱／中性原子三平台，77 張，含講稿）。這類內容不需要 `time` 欄位。
 
-《八個基礎量子電路》：`reports/basic-circuits.js` → `output/basic-circuits.pptx`（32 張，含講稿；PDF：`pdf/Basic_Quantum_Circuits.pdf`）。疊加、干涉、Bell、GHZ、隱形傳態、Deutsch、BV、Grover 各有電路圖與振幅逐步長條，右上角「▶ 動畫」按鈕開到 `animations/basic-circuits.html` 的對應範例；振幅數值都和動畫頁的模擬器一致。截圖以 `node capture_basic_circuits.js` 重新擷取到 `figures/basic_circuits/`。
+《十個基礎量子電路》：`reports/basic-circuits.js` → `output/basic-circuits.pptx`（48 張，含講稿；PDF：`pdf/Basic_Quantum_Circuits.pdf`）。開頭「理論基礎」6 堂課（右上角「▶ 互動」連到 `animations/quantum-basics.html` 各課），接著疊加、干涉、Bell、GHZ、隱形傳態、Deutsch、BV、Grover、QFT、Shor 各有電路圖、振幅逐步長條或表格，右上角「▶ 動畫」按鈕開到 `animations/basic-circuits.html` 的對應範例；振幅數值都和動畫頁的模擬器一致。截圖以 `node capture_basic_circuits.js` 重新擷取到 `figures/basic_circuits/`。
 
 ## 每集的製作流程
 
@@ -62,7 +62,7 @@
 | `summary` | 重點整理（深色） | `points[]` |
 | `flow` | 流程／供電鏈（橫向方塊＋箭頭） | `steps[{head, body, tone}]`、`boxHeight`、`lead`、`bullets[]`、`callout` |
 | `closing` | 討論題＋延伸觀看（深色） | `question`、`prompts[]`、`refs[]`；可選 `questionKicker`、`refsHead` 改兩個小標 |
-| `circuit` | 量子線路圖（原生圖形）＋各階段狀態卡 | `circuit{wires[], cols[{g:[閘,…]} / {cx:[控制, 目標]} / {cz:[a, b]} / {blk, tone} / {m:[true,false]}], marks[{after, label}]}`、`circuitHeight`、`stages[{head, eq, body, tone}]`、`callout` |
+| `circuit` | 量子線路圖（原生圖形）＋各階段狀態卡 | `circuit{wires[], cols[{g:[閘,…]} / {cx:[控制, 目標]} / {cz:[a, b]} / {cp:[a, b], label} / {swap:[a, b]} / {blk, tone, span:[第一條, 最後一條]} / {m:[true,false]}], marks[{after, label}]}`、`circuitHeight`、`stages[{head, eq, body, tone}]`、`callout` |
 | `amps` | 振幅長條（金＝正、紅＝負，與 3D 動畫第 7 章同畫法） | `lead`、`panels[{head, amps[], note, tone, focus}]`、`labels[]`（長條數與 amps 相同；超過 4 根時數值縮小、0 不標）、`callout` |
 | `scene3d` | 3D 動畫截圖＋說明＋「開啟 3D 動畫」超連結按鈕 | `image`（1–2 張）、`imageLabels[]`、`caption`、`bullets[]`、`link{label, url, prefix}`（`prefix` 改按鈕前綴）；`layout: "wide"` 讓兩張截圖橫排在上 |
 

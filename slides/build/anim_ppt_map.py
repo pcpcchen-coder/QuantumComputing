@@ -31,7 +31,8 @@ PAGES = [  # (html, 場景 JS 目錄 or None, 說明)
     ("transmon-3d.html", None, "Transmon 3D（12 章）"),
     ("power1000.html", "inline", "1,000 位元供電設計"),
     ("lc-vs-jj.html", "sections", "LC 與約瑟夫森接面（2D 圖解）"),
-    ("basic-circuits.html", "engine", "八個基礎量子電路（2D 互動）"),
+    ("basic-circuits.html", "engine", "十個基礎量子電路（2D 互動）"),
+    ("quantum-basics.html", "sections", "量子理論基礎 6 堂課（2D 互動）"),
 ]
 DECK_NAMES = {
     "slides/JJ_Microwave_Readout_Talk.pptx": "JJ 與微波讀取",
@@ -41,7 +42,7 @@ DECK_NAMES = {
     "slides/transmon.pptx": "Transmon",
     "slides/output/qfish008-deutsch-algorithm.pptx": "量子金魚 008 Deutsch",
     "slides/output/qc-power-supply.pptx": "量子電腦供電設計",
-    "slides/output/basic-circuits.pptx": "八個基礎量子電路",
+    "slides/output/basic-circuits.pptx": "十個基礎量子電路",
 }
 DECK_SHORT = {   # README 精簡表用的簡稱
     "slides/JJ_Microwave_Readout_Talk.pptx": "JJ", "slides/QC_Peripheral_Systems_Talk.pptx": "周邊",

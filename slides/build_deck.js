@@ -536,7 +536,7 @@ function ampText(v) {
 
 /**
  * 量子線路圖（原生圖形，可在 PowerPoint 裡編輯）
- * circuit: { wires: ["q0  |0⟩", …], cols: [{ g: ["H", null] } | { cx: [控制, 目標] } | { cz: [a, b] } | { blk: "U_f", tone } | { m: [true, false] }],
+ * circuit: { wires: ["q0  |0⟩", …], cols: [{ g: ["H", null] } | { cx: [控制, 目標] } | { cz: [a, b] } | { cp: [a, b], label } | { swap: [a, b] } | { blk: "U_f", tone } | { m: [true, false] }],
  *            marks: [{ after: 欄索引（-1 = 最左）, label: "①" }] }
  */
 function drawCircuit(slide, cir, x, y, w, h) {
@@ -581,8 +581,23 @@ function drawCircuit(slide, cir, x, y, w, h) {
       slide.addShape(pres.shapes.LINE, { x: cx, y: Math.min(...ys), w: 0, h: Math.max(...ys) - Math.min(...ys), line: { color: HEX.dk2, width: 1.75 }, objectName: `circ-cz-line-${i}` });
       ys.forEach((yy, k) => slide.addShape(pres.shapes.OVAL, { x: cx - 0.09, y: yy - 0.09, w: 0.18, h: 0.18, fill: { color: HEX.dk2 }, line: { type: "none" }, objectName: `circ-cz-dot-${i}-${k}` }));
     }
-    if (col.blk) {
-      const top = wy[0] - gs / 2 - 0.05, bot = wy[nW - 1] + gs / 2 + 0.05;
+    if (col.cp) { // 受控相位：cp: [位元, 位元]，label 寫角度
+      const ys = col.cp.map((q) => wy[q]), y0 = Math.min(...ys), y1 = Math.max(...ys);
+      slide.addShape(pres.shapes.LINE, { x: cx, y: y0, w: 0, h: y1 - y0, line: { color: HEX.accent3, width: 1.75 }, objectName: `circ-cp-line-${i}` });
+      ys.forEach((yy, k) => slide.addShape(pres.shapes.OVAL, { x: cx - 0.09, y: yy - 0.09, w: 0.18, h: 0.18, fill: { color: HEX.accent3 }, line: { type: "none" }, objectName: `circ-cp-dot-${i}-${k}` }));
+      if (col.label) slide.addText(runs(col.label, { fontSize: 11, bold: true, fontFace: EQ_FONT, color: C().accent3 }), { x: cx + 0.06, y: y0 + 0.08, w: 0.7, h: 0.3, margin: 0, isTextBox: true, objectName: `circ-cp-label-${i}` });
+    }
+    if (col.swap) { // SWAP：swap: [位元, 位元]，兩端畫 ×
+      const ys = col.swap.map((q) => wy[q]), r = 0.12;
+      slide.addShape(pres.shapes.LINE, { x: cx, y: Math.min(...ys), w: 0, h: Math.abs(ys[1] - ys[0]), line: { color: HEX.dk2, width: 1.75 }, objectName: `circ-sw-line-${i}` });
+      ys.forEach((yy, k) => {
+        slide.addShape(pres.shapes.LINE, { x: cx - r, y: yy - r, w: 2 * r, h: 2 * r, line: { color: HEX.dk2, width: 1.75 }, objectName: `circ-sw-a-${i}-${k}` });
+        slide.addShape(pres.shapes.LINE, { x: cx - r, y: yy - r, w: 2 * r, h: 2 * r, flipV: true, line: { color: HEX.dk2, width: 1.75 }, objectName: `circ-sw-b-${i}-${k}` });
+      });
+    }
+    if (col.blk) { // span: [第一條, 最後一條] 導線（省略時蓋住全部）
+      const [s0, s1] = col.span || [0, nW - 1];
+      const top = wy[s0] - gs / 2 - 0.05, bot = wy[s1] + gs / 2 + 0.05;
       gate(cx, (top + bot) / 2, col.blk, TONE_HEX[col.tone || "quantum"], C().background1, `circ-blk-${i}`, Math.min(dx - 0.2, 1.25), bot - top);
     }
     if (col.m) col.m.forEach((on, q) => {

@@ -1,10 +1,11 @@
-// 擷取「八個基礎量子電路」簡報用截圖 → slides/figures/basic_circuits/
+// 擷取「十個基礎量子電路」與「量子理論基礎」簡報用截圖 → slides/figures/basic_circuits/
 // 用法：node slides/capture_basic_circuits.js（需 Playwright 與 Chromium；離線可用）
 const { chromium } = require('playwright');
 const fs = require('fs');
 const path = require('path');
 const OUT = path.join(__dirname, 'figures/basic_circuits/');
 const PAGE = 'file://' + path.resolve(__dirname, '../animations/basic-circuits.html');
+const BASICS = 'file://' + path.resolve(__dirname, '../animations/quantum-basics.html');
 
 (async () => {
   fs.mkdirSync(OUT, { recursive: true });
@@ -40,6 +41,16 @@ const PAGE = 'file://' + path.resolve(__dirname, '../animations/basic-circuits.h
   await open('bv', 4); await measure(); await shot('bv_final');             // 密碼 101
   await open('teleport', 4); await measure(); await shot('teleport_final');  // q2 = ψ，q0 不再是 ψ
   await open('grover', 4, '3 顆（N = 8）'); await shot('grover_oracle');     // 3 顆位元、第 2 輪標記後：答案變號、平均線
+  await open('qft', 5); await shot('qft_basis');                            // x = 1：大小一樣、相位每格 45°
+  await open('shor', 3); await p.click('#m1'); await p.click('#m1000'); await p.waitForTimeout(1600); await shot('shor_final'); // 尖峰 0、2、4、6
+
+  // 理論基礎頁：第 2 課（相位）與第 6 課（干涉）的互動圖
+  await p.goto(BASICS); await p.waitForTimeout(300);
+  const setRange = (id, v) => p.$eval('#' + id, (e, v) => { e.value = v; e.dispatchEvent(new Event('input')); }, v);
+  await setRange('q2p', 120); await setRange('q6p', 120);
+  for (const [sel, name] of [['#phase .fig', 'basics_phase'], ['#interference .fig', 'basics_interference']]) {
+    await p.locator(sel).screenshot({ path: OUT + name + '.jpg', type: 'jpeg', quality: 88 }); console.log('saved', name);
+  }
 
   await b.close();
 })();
