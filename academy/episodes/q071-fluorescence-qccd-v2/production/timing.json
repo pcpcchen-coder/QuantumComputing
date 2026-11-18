@@ -1,0 +1,394 @@
+{
+  "version": 2,
+  "opening": 60.277,
+  "scenes": [
+    {
+      "page": 1,
+      "kind": "slide",
+      "v1slide": 1,
+      "title": "螢光讀取與 QCCD",
+      "duration": 29.952,
+      "sentences": [
+        {
+          "text": "歡迎回到父子科技學院的量子電腦學程，我是陳犀牛，今天是量子第七十一堂，螢光讀取與離子搬運架構，這是依課綱製作的課前教學版，並非實際上課錄音。",
+          "start": 0.0,
+          "end": 12.76
+        },
+        {
+          "text": "上一堂我們看到，兩顆離子可以靠一起振動，做出讓它們糾纏的兩位元閘。",
+          "start": 12.94,
+          "end": 19.772018
+        },
+        {
+          "text": "今天要回答兩個問題：算完之後，怎麼知道離子是零還是一？離子變多了，又要怎麼把它們搬到該去的地方？",
+          "start": 19.952018,
+          "end": 29.736032
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q071-fluorescence-qccd/audio/slide_01.mp3"
+    },
+    {
+      "page": 2,
+      "kind": "slide",
+      "v1slide": 2,
+      "title": "三步：看光、設線、搬離子",
+      "duration": 23.592,
+      "sentences": [
+        {
+          "text": "今天分三步：先看離子會不會發光，再決定數到幾個光子才算一，最後看離子怎麼在晶片上被搬來搬去。",
+          "start": 0.0,
+          "end": 8.992018
+        },
+        {
+          "text": "今天的好玩機制是盲測：爸爸偷偷決定答案，你只知道光子數，要猜出是零還是一。",
+          "start": 9.172018,
+          "end": 16.892018
+        },
+        {
+          "text": "今天的作品，是一張讀取閾值選擇卡，寫下你選的閾值和理由。",
+          "start": 17.072018,
+          "end": 23.376032000000002
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q071-fluorescence-qccd/audio/slide_02.mp3"
+    },
+    {
+      "page": 3,
+      "kind": "slide",
+      "v1slide": 3,
+      "title": "離子的零和一：暗和亮",
+      "duration": 23.784,
+      "sentences": [
+        {
+          "text": "我們用的離子是鐿離子，它最低的能量裡有兩個非常接近的能階，就拿來當零和一。",
+          "start": 0.0,
+          "end": 6.928005000000001
+        },
+        {
+          "text": "讀取時打一道紫外光，它的頻率剛好對準一，處在一的離子會一直吸光、一直放光，所以是亮的。",
+          "start": 7.108005,
+          "end": 15.548005
+        },
+        {
+          "text": "處在零的離子差了一點點頻率，幾乎不吸這道光，看起來是暗的；這就叫做狀態相依螢光。",
+          "start": 15.728005,
+          "end": 23.568005
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q071-fluorescence-qccd/audio/slide_03.mp3"
+    },
+    {
+      "page": 4,
+      "kind": "slide",
+      "v1slide": 4,
+      "title": "讀取之前的四步",
+      "duration": 19.824,
+      "sentences": [
+        {
+          "text": "一顆離子要經過四步：第一步用雷射冷卻，讓它幾乎不再亂晃。",
+          "start": 0.0,
+          "end": 6.088005
+        },
+        {
+          "text": "第二步用光泵浦把它趕進零；第三步用微波轉動它的箭頭，這就是單位元閘。",
+          "start": 6.268005,
+          "end": 13.244014
+        },
+        {
+          "text": "第四步打開偵測光，用很靈敏的光子計數器，數它發出幾個光子。",
+          "start": 13.424014,
+          "end": 19.608028
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q071-fluorescence-qccd/audio/slide_04.mp3"
+    },
+    {
+      "page": 5,
+      "kind": "demo",
+      "demo": "readout",
+      "title": "動畫展示：從冷卻到螢光偵測",
+      "duration": 29.376,
+      "sentences": [
+        {
+          "text": "打開離子阱動畫的離子量子位元場景，先按重置，再按都卜勒冷卻，兩道雷射一起打在離子上，左邊的能階圖亮起吸光和打回來的箭頭。",
+          "start": 0.0,
+          "end": 11.464014
+        },
+        {
+          "text": "接著按光泵浦初始化，右邊布洛赫球上的箭頭從無到有，最後指向北極的零。",
+          "start": 11.644014,
+          "end": 18.716032
+        },
+        {
+          "text": "再按微波翻轉，箭頭轉到南極；最後按偵測，離子亮了起來，不停放出光子，右下的直方圖多了一根紅色柱子。",
+          "start": 18.896031999999998,
+          "end": 29.160045999999998
+        }
+      ],
+      "audio": "audio/demo_readout.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/atoms.html#ionqubit"
+    },
+    {
+      "page": 6,
+      "kind": "slide",
+      "v1slide": 5,
+      "title": "比一比：亮態和暗態",
+      "duration": 20.208,
+      "sentences": [
+        {
+          "text": "比一比：在兩百微秒裡，亮的離子大約讓我們收到十到三十個光子。",
+          "start": 0.0,
+          "end": 6.232018
+        },
+        {
+          "text": "暗的離子幾乎收不到光子，偶爾因為背景雜光，才多出一兩個。",
+          "start": 6.412018,
+          "end": 12.380023000000001
+        },
+        {
+          "text": "離子其實每秒放出數百萬個光子，可是物鏡只收得到百分之一到五，所以數字並不大。",
+          "start": 12.560023000000001,
+          "end": 19.992041
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q071-fluorescence-qccd/audio/slide_05.mp3"
+    },
+    {
+      "page": 7,
+      "kind": "slide",
+      "v1slide": 6,
+      "title": "設一條線：閾值",
+      "duration": 26.184,
+      "sentences": [
+        {
+          "text": "要判斷零或一，先畫一條線，叫做閾值：光子數超過它，就判為一，沒超過就判為零。",
+          "start": 0.0,
+          "end": 8.296009
+        },
+        {
+          "text": "會出錯有兩種情況：亮的離子在偵測中途被打成暗的，或是暗的離子被漏光打亮，再加上背景雜光。",
+          "start": 8.476009,
+          "end": 17.324014
+        },
+        {
+          "text": "閾值太低，暗的容易被誤判成亮；閾值太高，亮的容易被誤判成暗，要找兩種錯誤加起來最少的地方。",
+          "start": 17.504013999999998,
+          "end": 25.968027999999997
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q071-fluorescence-qccd/audio/slide_06.mp3"
+    },
+    {
+      "page": 8,
+      "kind": "demo",
+      "demo": "threshold",
+      "title": "動畫展示：偵測時間和閾值",
+      "duration": 37.8,
+      "sentences": [
+        {
+          "text": "回到同一個場景，先按光泵浦初始化，再按微波二分之一，讓離子變成一半零、一半一。",
+          "start": 0.0,
+          "end": 8.056009
+        },
+        {
+          "text": "按一次跑一千次，直方圖出現兩堆：藍色是零，擠在零個附近，紅色是一，散在二十個左右，兩堆分得很開。",
+          "start": 8.236009,
+          "end": 18.068027
+        },
+        {
+          "text": "把偵測時間縮短到五十微秒再跑一次，紅色那堆只剩五個左右，和藍色擠在一起，判別保真度掉到大約百分之九十八。",
+          "start": 18.248027,
+          "end": 28.080045
+        },
+        {
+          "text": "再拉回兩百微秒，兩堆又分開，保真度回到百分之九十九點多；偵測時間太短，光子不夠多，就分不清楚。",
+          "start": 28.260044999999998,
+          "end": 37.58805
+        }
+      ],
+      "audio": "audio/demo_threshold.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/atoms.html#ionqubit"
+    },
+    {
+      "page": 9,
+      "kind": "slide",
+      "v1slide": 7,
+      "title": "為什麼要搬離子",
+      "duration": 25.56,
+      "sentences": [
+        {
+          "text": "把所有離子排成一列，大約二、三十顆就差不多到頂了，離子越多，越難精準控制。",
+          "start": 0.0,
+          "end": 7.6720180000000004
+        },
+        {
+          "text": "於是工程師把晶片分成好幾個區，把需要做閘的離子搬過去，這種做法叫做量子電荷耦合元件架構。",
+          "start": 7.852018,
+          "end": 16.244036
+        },
+        {
+          "text": "二零二五年的搬運式晶片已經做到大約一百顆，再往上，就要做成平面陣列，或用光子把好幾台連起來。",
+          "start": 16.424036,
+          "end": 25.344036000000003
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q071-fluorescence-qccd/audio/slide_07.mp3"
+    },
+    {
+      "page": 10,
+      "kind": "slide",
+      "v1slide": 8,
+      "title": "離子怎麼被搬動",
+      "duration": 26.04,
+      "sentences": [
+        {
+          "text": "晶片上有上百片小電極，依序改變電壓，困住離子的位能井就像輸送帶，把離子往前推。",
+          "start": 0.0,
+          "end": 7.960000000000001
+        },
+        {
+          "text": "基本動作有三種：沿著軌道搬運，把兩顆離子分開或合併，以及在十字接面轉彎、交換順序。",
+          "start": 8.14,
+          "end": 16.700000000000003
+        },
+        {
+          "text": "搬運會讓離子變熱，所以每顆量子位元旁邊配一顆另一種元素的離子，用專門的雷射冷卻它，順便把熱帶走。",
+          "start": 16.880000000000003,
+          "end": 25.824014000000005
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q071-fluorescence-qccd/audio/slide_08.mp3"
+    },
+    {
+      "page": 11,
+      "kind": "demo",
+      "demo": "qccd",
+      "title": "動畫展示：把離子搬到閘區",
+      "duration": 36.888,
+      "sentences": [
+        {
+          "text": "打開搬運架構場景，金色是當量子位元的鋇離子，紫色是負責冷卻的鐿離子，兩兩一對停在記憶區。",
+          "start": 0.0,
+          "end": 8.56
+        },
+        {
+          "text": "按單步，其中兩對離子被分出來，沿著軌道搬到綠色的閘區，再按一次，合併進同一個位能井。",
+          "start": 8.74,
+          "end": 17.324014
+        },
+        {
+          "text": "接著冷卻光照亮紫色的鐿離子，把搬運產生的熱帶走，然後兩道閘雷射同時照兩顆金色離子，讓它們糾纏。",
+          "start": 17.504013999999998,
+          "end": 26.712018999999998
+        },
+        {
+          "text": "最後其中一對經過十字接面轉進偵測區讀取，再搬回記憶區；插圖裡的時間條提醒我們，搬運和冷卻占了大部分時間。",
+          "start": 26.892018999999998,
+          "end": 36.676033
+        }
+      ],
+      "audio": "audio/demo_qccd.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/atoms.html#qccd"
+    },
+    {
+      "page": 12,
+      "kind": "slide",
+      "v1slide": 9,
+      "title": "盲測：爸爸出題、你判讀",
+      "duration": 23.136,
+      "sentences": [
+        {
+          "text": "實作的時候玩盲測：爸爸在動畫裡偷偷把離子準備成零或一，再按偵測，然後只念出這一次的光子數。",
+          "start": 0.0,
+          "end": 8.584014
+        },
+        {
+          "text": "你只聽光子數，用自己選的閾值說出答案，爸爸再公布對不對。",
+          "start": 8.764014,
+          "end": 14.900023000000001
+        },
+        {
+          "text": "玩十回合，記下猜錯幾次，猜錯的時候想一想，是亮被判成暗，還是暗被判成亮。",
+          "start": 15.080023,
+          "end": 22.920023
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q071-fluorescence-qccd/audio/slide_09.mp3"
+    },
+    {
+      "page": 13,
+      "kind": "slide",
+      "v1slide": 10,
+      "title": "換你改造：搬運占了多少時間",
+      "duration": 27.096,
+      "sentences": [
+        {
+          "text": "下半場換你改造：動畫裡有一張一層線路的時間表，搬運加分離合併大約四百微秒，重新冷卻大約三百微秒。",
+          "start": 0.0,
+          "end": 9.256009
+        },
+        {
+          "text": "偵測大約一百五十微秒，兩位元閘大約五十微秒，單位元閘只要大約十微秒，全部加起來大約九百一十微秒。",
+          "start": 9.436009,
+          "end": 18.548027
+        },
+        {
+          "text": "請你算出搬運占了多少，再算搬運加冷卻一共占多少，你會發現真正在做閘的時間其實很少。",
+          "start": 18.728027,
+          "end": 26.880045000000003
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q071-fluorescence-qccd/audio/slide_10.mp3"
+    },
+    {
+      "page": 14,
+      "kind": "slide",
+      "v1slide": 11,
+      "title": "兩小時的讀取實驗室",
+      "duration": 31.968,
+      "sentences": [
+        {
+          "text": "兩小時的安排是：開場十分鐘，認識螢光讀取和搬運架構十五分鐘，接著四十分鐘在動畫裡選閾值、玩盲測、看離子搬運，然後休息十分鐘。",
+          "start": 0.0,
+          "end": 12.016009
+        },
+        {
+          "text": "下半場三十分鐘計算搬運時間的比例，接著十分鐘交換角色，由你教爸爸怎麼讀取、為什麼要搬離子。",
+          "start": 12.196009,
+          "end": 21.116009
+        },
+        {
+          "text": "最後五分鐘錄音總結，替閾值選擇卡取名字，存一個版本；就像物流一樣，貨車再快，倉庫搬貨慢，整體還是慢。",
+          "start": 21.296008999999998,
+          "end": 31.752018
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q071-fluorescence-qccd/audio/slide_11.mp3"
+    },
+    {
+      "page": 15,
+      "kind": "slide",
+      "v1slide": 12,
+      "title": "最後一關：教爸爸讀離子",
+      "duration": 28.8,
+      "sentences": [
+        {
+          "text": "最後一關，請不看稿說出：離子的零和一怎麼用螢光分辨？閾值要怎麼選？",
+          "start": 0.0,
+          "end": 7.7920180000000006
+        },
+        {
+          "text": "再指出一個限制：搬運會加熱離子，搬完一定要再冷卻，所以搬運和冷卻常占掉大部分時間。",
+          "start": 7.972018,
+          "end": 16.172018
+        },
+        {
+          "text": "今天的作品是讀取閾值選擇卡，下一堂我們換到中性原子，認識磁光阱與光鑷，看光怎麼抓住一顆原子；我是陳犀牛，保持好奇，我們下次見！",
+          "start": 16.352018,
+          "end": 28.584036
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q071-fluorescence-qccd/audio/slide_12.mp3"
+    }
+  ]
+}

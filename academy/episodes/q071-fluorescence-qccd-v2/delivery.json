@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q071",
+  "version": "Q071-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-18",
+  "episodePath": "academy/episodes/q071-fluorescence-qccd-v2",
+  "basedOn": "academy/episodes/q071-fluorescence-qccd（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 470.5,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "readout",
+      "title": "動畫展示：從冷卻到螢光偵測",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/atoms.html#ionqubit"
+    },
+    {
+      "key": "threshold",
+      "title": "動畫展示：偵測時間和閾值",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/atoms.html#ionqubit"
+    },
+    {
+      "key": "qccd",
+      "title": "動畫展示：把離子搬到閘區",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/atoms.html#qccd"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.4,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q071-fluorescence-qccd-v2-zh-TW.mp4": {
+      "bytes": 85614039,
+      "sha256": "b6c8b2a81f14cdecd2e2cbf91146ef8be574bed337c071e9a8e1a0bc288987fa"
+    },
+    "q071-fluorescence-qccd-v2-master.mp4": {
+      "bytes": 88030126,
+      "sha256": "008b16c7864abc420ee88535560c31e43bcb809b247bd1c64c255d55754aba0f"
+    },
+    "narration-only.mp3": {
+      "bytes": 11293204,
+      "sha256": "289cbe7696cc13ce1706c090bdfb9ec4e7ab121227ddf19a6f26ee06a1ec84e8"
+    }
+  },
+  "package": {
+    "filename": "Q071-v2_量子電腦學程_螢光讀取_動畫展示版_2026-11-18.zip",
+    "bytes": 189116149,
+    "sha256": "a3abc93b4698b3e448aa820121378c4e165c9be345f04f515d23803bbd3a89e4",
+    "parts": [
+      {
+        "name": "Q071-v2_量子電腦學程_螢光讀取_動畫展示版_2026-11-18.zip.part01",
+        "bytes": 29360128,
+        "sha256": "ab03ba9d736fdc9e766c045fc23265d9469d1152e4985db74d35d3b23436e596"
+      },
+      {
+        "name": "Q071-v2_量子電腦學程_螢光讀取_動畫展示版_2026-11-18.zip.part02",
+        "bytes": 29360128,
+        "sha256": "4f7aa2cbe2a9216a2da71a6f8bc9baa7f5f961baa7a44aa25fe29f4e6d44269b"
+      },
+      {
+        "name": "Q071-v2_量子電腦學程_螢光讀取_動畫展示版_2026-11-18.zip.part03",
+        "bytes": 29360128,
+        "sha256": "b03c0478466b3c87ea9780c7943ba6a217d88aed1e39eeae0fa285a1cfc12409"
+      },
+      {
+        "name": "Q071-v2_量子電腦學程_螢光讀取_動畫展示版_2026-11-18.zip.part04",
+        "bytes": 29360128,
+        "sha256": "12d0e5dc0c7b2419207cd432cccb49647cfd78229868455bed0a74137e123654"
+      },
+      {
+        "name": "Q071-v2_量子電腦學程_螢光讀取_動畫展示版_2026-11-18.zip.part05",
+        "bytes": 29360128,
+        "sha256": "e2b9d7d1283fabb068a9946f7f1b993ec108410c0dbbf837f5a30a79e5c7b0f5"
+      },
+      {
+        "name": "Q071-v2_量子電腦學程_螢光讀取_動畫展示版_2026-11-18.zip.part06",
+        "bytes": 29360128,
+        "sha256": "8dd53e211fcc2f6e4c2d3e61d77edf0303e9d9cd6cc19e08d8d31e20c44972b0"
+      },
+      {
+        "name": "Q071-v2_量子電腦學程_螢光讀取_動畫展示版_2026-11-18.zip.part07",
+        "bytes": 12955381,
+        "sha256": "eee9c49c25f7cc3f68ea03ef39db1c23880f34bf1498c65b111be9deb9f78d33"
+      }
+    ],
+    "handedOver": "2026-11-18 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔"
+}
