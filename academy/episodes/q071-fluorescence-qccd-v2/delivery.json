@@ -95,5 +95,29 @@
     ],
     "handedOver": "2026-11-18 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
   },
-  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔"
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1ZOQEWjgkBnzg6-88LtQiSOgQeO2JG9Wx",
+    "uploadedAt": "2026-11-18",
+    "files": [
+      {
+        "name": "Q071 螢光讀取：螢光讀取與 QCCD（動畫展示版）.mp4",
+        "id": "1neuTKgojeNzw7zsxSeQDrPMoTG4V-Q4M",
+        "bytes": 85614039,
+        "url": "https://drive.google.com/file/d/1neuTKgojeNzw7zsxSeQDrPMoTG4V-Q4M/view"
+      },
+      {
+        "name": "Q071 螢光讀取（動畫展示版）簡報.pptx",
+        "id": "1YbwKxI7nARXmrBjZo6eAYJqT5wcn7nHp",
+        "bytes": 3572897,
+        "url": "https://docs.google.com/presentation/d/1YbwKxI7nARXmrBjZo6eAYJqT5wcn7nHp/edit"
+      },
+      {
+        "name": "Q071 螢光讀取 教材.zip",
+        "id": "1jAj6PRMnqPjYsYI1odoxNshX3ZqNaprh",
+        "bytes": 353685,
+        "url": "https://drive.google.com/file/d/1jAj6PRMnqPjYsYI1odoxNshX3ZqNaprh/view"
+      }
+    ]
+  }
 }
