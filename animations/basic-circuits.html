@@ -260,9 +260,10 @@ const R2 = Math.SQRT1_2;
 const H = q => ({ g: "H", q }), X = q => ({ g: "X", q }), Z = q => ({ g: "Z", q }), CX = (c, t) => ({ g: "CX", c, t });
 const RY = (q, th, py) => ({ g: "RY", q, th, py });       // py：Qiskit 程式碼裡的角度寫法
 const CZ = (...qs) => ({ g: "CZ", qs });                   // 2 顆是 CZ，3 顆是 CCZ（全部是 1 才變號）
+const CCX = (a, c, t) => ({ g: "CCX", cs: [a, c], t });    // Toffoli：兩顆控制位元都是 1 才翻轉目標
 const CP = (c, t, th, py, lab) => ({ g: "CP", c, t, th, py, lab }); // 受控相位：兩顆都是 1 時乘上 e^{iθ}
 const SWAP = (a, b) => ({ g: "SWAP", a, b });
-const BLK = (kind, label, ops, extra) => ({ g: "BLK", kind, label, ops, ...extra }); // 方塊：kind = "diff" 理想擴散、"perm" 置換（Shor 的模冪 Oracle）
+const BLK = (kind, label, ops, extra) => ({ g: "BLK", kind, label, ops, ...extra }); // 方塊：kind = "diff" 理想擴散（extra.qs 指定只作用在哪幾顆）、"perm" 置換（Shor 的模冪 Oracle）
 
 function applyOp(s, n, op) {
   const N = 1 << n, re = s.re, im = s.im;
@@ -271,14 +272,17 @@ function applyOp(s, n, op) {
   else if (op.g === "X") { const m = 1 << op.q; for (let i = 0; i < N; i++) if (!(i & m)) swap(i, i | m); }
   else if (op.g === "Z") { const m = 1 << op.q; for (let i = 0; i < N; i++) if (i & m) { re[i] = -re[i]; im[i] = -im[i]; } }
   else if (op.g === "CX") { const mc = 1 << op.c, mt = 1 << op.t; for (let i = 0; i < N; i++) if ((i & mc) && !(i & mt)) swap(i, i | mt); }
+  else if (op.g === "CCX") { const mc = (1 << op.cs[0]) | (1 << op.cs[1]), mt = 1 << op.t; for (let i = 0; i < N; i++) if ((i & mc) === mc && !(i & mt)) swap(i, i | mt); }
   else if (op.g === "RY") { const m = 1 << op.q, c = Math.cos(op.th / 2), sn = Math.sin(op.th / 2); for (let i = 0; i < N; i++) if (!(i & m)) { const j = i | m, ar = re[i], ai = im[i], br = re[j], bi = im[j]; re[i] = c * ar - sn * br; im[i] = c * ai - sn * bi; re[j] = sn * ar + c * br; im[j] = sn * ai + c * bi; } }
   else if (op.g === "CZ") { const m = op.qs.reduce((x, q) => x | (1 << q), 0); for (let i = 0; i < N; i++) if ((i & m) === m) { re[i] = -re[i]; im[i] = -im[i]; } }
   else if (op.g === "CP") { const m = (1 << op.c) | (1 << op.t), c = Math.cos(op.th), sn = Math.sin(op.th); for (let i = 0; i < N; i++) if ((i & m) === m) { const ar = re[i], ai = im[i]; re[i] = c * ar - sn * ai; im[i] = sn * ar + c * ai; } }
   else if (op.g === "SWAP") { const ma = 1 << op.a, mb = 1 << op.b; for (let i = 0; i < N; i++) if ((i & ma) && !(i & mb)) swap(i, (i & ~ma) | mb); }
   else if (op.g === "BLK") {
     if (op.kind === "diff") { // 擴散 = 2|s⟩⟨s| − I：每個振幅對平均值翻轉（H、X、CZ 組成的電路會多一個整體負號，量不到）
-      let mr = 0, mi = 0; for (let i = 0; i < N; i++) { mr += re[i]; mi += im[i]; } mr /= N; mi /= N;
-      for (let i = 0; i < N; i++) { re[i] = 2 * mr - re[i]; im[i] = 2 * mi - im[i]; }
+      // 只作用在 op.qs 時，其他位元（輔助位元）每一種值各自算平均、各自翻轉
+      const m = op.qs ? op.qs.reduce((x, q) => x | (1 << q), 0) : N - 1, K = op.qs ? 1 << op.qs.length : N;
+      const mr = {}, mi = {}; for (let i = 0; i < N; i++) { const g = i & ~m; mr[g] = (mr[g] || 0) + re[i] / K; mi[g] = (mi[g] || 0) + im[i] / K; }
+      for (let i = 0; i < N; i++) { const g = i & ~m; re[i] = 2 * mr[g] - re[i]; im[i] = 2 * mi[g] - im[i]; }
     } else if (op.kind === "perm") { // |i⟩ → |perm(i)⟩
       const r2 = re.slice(), i2 = im.slice(); for (let i = 0; i < N; i++) { const j = op.perm(i); re[j] = r2[i]; im[j] = i2[i]; }
     } else op.ops.forEach(o => applyOp(s, n, o));
@@ -340,6 +344,54 @@ const fmtPct = p => (p < 5e-4 ? "" : (p > 0.9995 ? "100%" : (p * 100).toFixed(Ma
 const gcd = (a, b) => (b ? gcd(b, a % b) : Math.abs(a));
 const sup = n => String(n).replace(/\d/g, d => "⁰¹²³⁴⁵⁶⁷⁸⁹"[d]);
 const powmod = (a, e, m) => { let r = 1; for (let i = 0; i < e; i++) r = (r * a) % m; return r; };
+
+/* Grover 的 SAT 版 Oracle：電路裡只有題目的規則 (x0 OR x1) AND (NOT x0)，沒有寫答案。
+   q0 = x0、q1 = x1 是變數；q2 記錄子句 1、q3 記錄子句 2；兩個都成立就變號，最後把 q2、q3 還原。 */
+function groverSat(o) {
+  const best = 1, k = o.k === "best" ? best : +o.k, SOL = "10", si = 2; // 唯一解 x1 x0 = 10（狀態 |0010⟩）
+  const c1 = [[X(0), X(1)], [CCX(0, 1, 2)], [X(0), X(1), X(2)]]; // q2 = NOT(NOT x0 AND NOT x1) = x0 OR x1
+  const c2 = [[CX(0, 3)], [X(3)]];                                // q3 = NOT x0
+  const flip = [[CZ(2, 3)]];                                      // 兩個子句都成立才變號
+  const undo = [[X(0), X(1), X(2), X(3)], [CCX(0, 1, 2)], [X(0), X(1)], [CX(0, 3)]]; // 倒著做，q2、q3 回到 0
+  const sat = BLK("sat", "SAT\n規則", [...c1, ...c2, ...flip, ...undo].flat());
+  const diff = BLK("diff", "擴散", [H(0), H(1), X(0), X(1), CZ(0, 1), X(0), X(1), H(0), H(1)], { qs: [0, 1] });
+  const steps = [{ t: "H：4 組候選一樣大", cols: [[H(0), H(1)]] }];
+  for (let r = 1; r <= k; r++) {
+    if (r === 1) steps.push(
+      { t: "第 1 輪・Oracle ①：子句 1（x0 OR x1）→ q2", cols: c1, box: "子句 1：x0 OR x1" },
+      { t: "第 1 輪・Oracle ②：子句 2（NOT x0）→ q3", cols: c2, box: "子句 2" },
+      { t: "第 1 輪・Oracle ③：兩個子句都成立就變號", cols: flip, box: "AND" },
+      { t: "第 1 輪・Oracle ④：還原輔助位元", cols: undo, box: "還原 q2、q3" });
+    else steps.push({ t: `第 ${r} 輪・SAT Oracle（同上 4 步）`, cols: [[sat]] });
+    steps.push({ t: `第 ${r} 輪・擴散（只作用在 q0、q1）`, cols: [[diff]] });
+  }
+  const st = simulate(4, steps), pct = v => (v * 100).toFixed(1).replace(/\.0$/, "") + "%";
+  const pT = i => prob(st[i + 1], si), amp = i => fmtAmp(st[i + 1].re[si]);
+  steps[0].cap = "H 只作用在變數 q0、q1：4 組候選 x1 x0 = 00、01、10、11 的振幅都是 +0.5，各 25%。輔助位元 q2、q3 還在 0，所以只有最左邊 4 根柱子（q3 q2 = 00）有值。";
+  steps[1].cap = "OR 的做法是「兩個都反相、做 AND、再反相」：X 把 q0、q1 反相，Toffoli（CCX）在兩顆都是 1 時翻轉 q2，再用 X 還原 q0、q1、把 q2 反相。結果 q2 = x0 OR x1：只有 00 那一項 q2 = 0，01、10、11 三根柱子搬到 q2 = 1 的位置（0101、0110、0111）。4 個候選是同時檢查的。";
+  steps[2].cap = "CNOT 把 x0 複製到 q3，再用 X 反相，q3 = NOT x0。現在每一項都帶著自己的檢查結果（q3 q2）：00 → 1000（子句 1 不成立）、01 → 0101（子句 2 不成立）、10 → 1110（兩個都成立）、11 → 0111（子句 2 不成立）。";
+  steps[3].cap = "CZ 只在 q2、q3 都是 1 時加上負號，這就是「子句 1 AND 子句 2」。4 項裡只有 1110 符合，它的振幅從 +0.5 變成 −0.5。CZ 只看檢查結果 q2、q3，不需要知道答案是哪一個。";
+  steps[4].cap = "把前兩步倒著做一次，q2、q3 回到 0，柱子搬回最左邊 4 根，只留下那個負號：|0010⟩（x1 x0 = 10）變成 −0.5。一定要還原：如果 q2、q3 還留著檢查結果，它們會和 q0、q1 糾纏，下一步擴散就沒有干涉效果。";
+  let prev = 0;
+  steps.forEach((s, i) => {
+    if (s.t.includes("SAT Oracle")) s.cap = `同一個 Oracle（算子句、兩個都成立就變號、還原 q2、q3）再做一次：只有 |0010⟩ 的振幅變號（${fmtAmp(st[i].re[si])} → ${amp(i)}），機率仍是 ${pct(pT(i))}。`;
+    if (!s.t.includes("擴散")) return;
+    const p = pT(i), same = Math.abs(p - prev) < 1e-9, drop = p < prev - 1e-9;
+    s.cap = "擴散只作用在 q0、q1：最左邊 4 根柱子的振幅對它們的平均值翻轉（a → 2 × 平均 − a）。" + (same
+      ? `這次 4 根柱子一樣大，答案的機率停在 ${pct(p)}：已經轉過頭了。`
+      : drop
+      ? `答案的振幅已經太大，翻過去反而變小：機率降到 ${pct(p)}。N = 4 時最佳輪數是 1。`
+      : `答案 |0010⟩ 離平均最遠，翻過去後變成 ${amp(i)}：機率升到 ${pct(p)}。`);
+    prev = p;
+  });
+  return {
+    n: 4, meas: [0, 1], steps, meanLine: true, meanOver: 4,
+    init: "起點：4 顆位元都在 |0⟩。題目：找 x0、x1，讓 (x0 OR x1) AND (NOT x0) 成立。q0、q1 是變數 x0、x1；q2、q3 是輔助位元，分別記錄兩個子句有沒有成立。這次 Oracle 裡只寫了檢查規則，沒有寫答案。",
+    verdict: key => (key === SOL ? "→ x1 = 1、x0 = 0：代入 (0 OR 1) AND (NOT 0) = 1，成立 ✓" : `→ x1 = ${key[0]}、x0 = ${key[1]}：代入不成立 ✗`),
+    take: "這個 Oracle 裡只有題目的兩個子句，答案 x0 = 0、x1 = 1 是干涉之後量出來的，電路裡沒有任何地方寫著它。做法是把古典的檢查程式改寫成可逆電路：每個子句用一顆輔助位元記錄結果，全部成立才變號，最後把輔助位元還原。古典電腦拿到同一個檢查器，也只能一組一組代入；Grover 呼叫檢查器的次數只要約 √N。代價是子句越多，Toffoli 閘和輔助位元就越多，這是真實問題用 Grover 時最主要的成本。",
+    links: [["operation.html#grover", "如何操作量子電腦 · Grover 搜尋：振幅放大"], ["transmon-3d.html#grover", "Transmon 3D · 第 7 章 振幅長條：糾纏、Grover 與 Deutsch"]]
+  };
+}
 
 const SCENES = [
   {
@@ -507,12 +559,14 @@ const SCENES = [
     id: "grover", short: "Grover", title: "Grover 搜尋：把答案的機率放大",
     lead: "在 N 個可能裡找出一個打勾的答案。古典只能一個一個試，平均要試 N/2 次；Grover 演算法只要大約 (π/4)√N 輪，每一輪都讓答案的振幅變大一些。",
     opts: [
-      { key: "n", label: "位元數", def: "2", choices: [["2", "2 顆（N = 4）"], ["3", "3 顆（N = 8）"]] },
-      { key: "t2", label: "答案（q1 q0，點一下切換）", def: "11", bits: 2, when: o => o.n === "2" },
-      { key: "t3", label: "答案（q2 q1 q0，點一下切換）", def: "101", bits: 3, when: o => o.n === "3" },
+      { key: "oracle", label: "Oracle", def: "mark", choices: [["mark", "直接標記答案（教學版）"], ["sat", "SAT 規則（不寫答案）"]] },
+      { key: "n", label: "位元數", def: "2", choices: [["2", "2 顆（N = 4）"], ["3", "3 顆（N = 8）"]], when: o => o.oracle !== "sat" },
+      { key: "t2", label: "答案（q1 q0，點一下切換）", def: "11", bits: 2, when: o => o.oracle !== "sat" && o.n === "2" },
+      { key: "t3", label: "答案（q2 q1 q0，點一下切換）", def: "101", bits: 3, when: o => o.oracle !== "sat" && o.n === "3" },
       { key: "k", label: "重複輪數", def: "best", choices: [["best", "最佳"], ["1", "1 輪"], ["2", "2 輪"], ["3", "3 輪"]] }
     ],
     build(o) {
+      if (o.oracle === "sat") return groverSat(o);
       const n = +o.n, N = 1 << n, t = n === 2 ? o.t2 : o.t3, ti = parseInt(t, 2), best = n === 2 ? 1 : 2;
       const k = o.k === "best" ? best : +o.k, all = [...Array(n).keys()];
       const zeros = all.filter(q => t[n - 1 - q] === "0");
@@ -543,7 +597,7 @@ const SCENES = [
       }
       return {
         n, meas: all, steps, meanLine: true,
-        init: `起點：${n} 顆位元都在 |0⟩。要找的答案是 |${t}⟩：Oracle 認得它，但我們事先不知道是哪一個。`,
+        init: `起點：${n} 顆位元都在 |0⟩。要找的答案是 |${t}⟩：Oracle 認得它，但我們事先不知道是哪一個。（教學版為了方便，直接把答案寫進 Oracle；把上面的 Oracle 切到「SAT 規則」，看一個裡面沒有寫答案的 Oracle。）`,
         verdict: key => (key === t ? "→ 找到答案 ✓" : "→ 不是答案 ✗"),
         take: "Grover 把搜尋從約 N 次降到約 √N 次（平方加速），而且已經證明黑盒搜尋不可能更快。每一輪由「標記」（把答案變號）和「擴散」（對平均值翻轉）組成，就像每次把狀態往答案轉一個固定角度，轉太多會轉過頭。用 H、X、多控制 Z 組成的擴散電路會多一個整體負號（量不到），所以在 Qiskit 裡有時會看到振幅整體變號。",
         links: [["operation.html#grover", "如何操作量子電腦 · Grover 搜尋：振幅放大"], ["transmon-3d.html#grover", "Transmon 3D · 第 7 章 振幅長條：糾纏、Grover 與 Deutsch"]]
@@ -651,13 +705,16 @@ function qiskitCode(sc, o, b) {
     while (i < ops.length) {
       const op = ops[i];
       if (op.g === "CX") { L.push(`qc.cx(${op.c}, ${op.t})`); i++; continue; }
+      if (op.g === "CCX") { L.push(`qc.ccx(${op.cs.join(", ")}, ${op.t})`); i++; continue; }
       if (op.g === "CZ") { L.push(op.qs.length === 2 ? `qc.cz(${op.qs.join(", ")})` : `qc.ccz(${op.qs.join(", ")})`); i++; continue; }
       if (op.g === "RY") { L.push(`qc.ry(${op.py}, ${op.q})`); i++; continue; }
       if (op.g === "CP") { L.push(`qc.cp(${op.py}, ${op.c}, ${op.t})`); i++; continue; }
       if (op.g === "SWAP") { L.push(`qc.swap(${op.a}, ${op.b})`); i++; continue; }
       if (op.g === "BLK" && op.kind === "perm") { L.push(`qc.append(mod_exp_oracle(${op.a}), range(7))`); i++; continue; }
       if (op.g === "BLK") {
-        L.push(op.kind === "diff" ? "# 擴散：H、X、多控制 Z、X、H（這樣接會多一個整體負號，不影響機率）" : "# 標記：把答案變成全 1、多控制 Z 變號、再還原");
+        L.push(op.kind === "diff" ? "# 擴散：H、X、多控制 Z、X、H（這樣接會多一個整體負號，不影響機率）"
+          : op.kind === "sat" ? "# SAT Oracle：q2 = x0 OR x1、q3 = NOT x0，兩個都成立就變號，再還原 q2、q3"
+          : "# 標記：把答案變成全 1、多控制 Z 變號、再還原");
         emit(op.ops); i++; continue;
       }
       const qs = [op.q]; let j = i + 1;
@@ -710,6 +767,7 @@ if (typeof module !== "undefined") module.exports = { SCENES, simulate, marginal
   });
 
   function selectScene(id) {
+    if (id === "grover-sat") { opts.grover.oracle = "sat"; id = "grover"; } // 直接開啟 Grover 的 SAT 版 Oracle
     sc = SCENES.find(s => s.id === id) || SCENES[0];
     document.querySelectorAll(".tabs button").forEach(bt => bt.setAttribute("aria-selected", bt.id === "tab-" + sc.id));
     const i = SCENES.indexOf(sc);
@@ -805,6 +863,13 @@ if (typeof module !== "undefined") module.exports = { SCENES, simulate, marginal
           el("circle", { class: "c", cx: x, cy: yc, r: 5.5 }, g);
           el("circle", { class: "t", cx: x, cy: yt, r: 13 }, g);
           el("line", { x1: x - 13, x2: x + 13, y1: yt, y2: yt }, g);
+        } else if (op.g === "CCX") {
+          g = el("g", { class: "op cx", "data-si": c.si }, svg); const ycs = op.cs.map(yq), yt = yq(op.t);
+          el("line", { x1: x, x2: x, y1: Math.min(...ycs, yt - 13), y2: Math.max(...ycs, yt + 13) }, g);
+          ycs.forEach(y => el("circle", { class: "c", cx: x, cy: y, r: 5.5 }, g));
+          el("circle", { class: "t", cx: x, cy: yt, r: 13 }, g);
+          el("line", { x1: x - 13, x2: x + 13, y1: yt, y2: yt }, g);
+          el("title", {}, g, "Toffoli（CCX）：兩顆控制位元都是 1 才翻轉目標");
         } else if (op.g === "CZ") {
           g = el("g", { class: "op cz", "data-si": c.si }, svg);
           el("line", { x1: x, x2: x, y1: yq(Math.min(...op.qs)), y2: yq(Math.max(...op.qs)) }, g);
@@ -821,10 +886,14 @@ if (typeof module !== "undefined") module.exports = { SCENES, simulate, marginal
           [ya, yb].forEach(y => { el("line", { x1: x - 7, x2: x + 7, y1: y - 7, y2: y + 7 }, g); el("line", { x1: x - 7, x2: x + 7, y1: y + 7, y2: y - 7 }, g); });
         } else if (op.g === "BLK") {
           g = el("g", { class: `op blk blk-${op.kind}`, "data-si": c.si }, svg);
-          const w = op.kind === "perm" ? 66 : 44, lines = op.label.split("\n"), yc = yq(0) + (b.n - 1) * RH / 2;
-          el("rect", { x: x - w / 2, y: yq(0) - 20, width: w, height: (b.n - 1) * RH + 40, rx: 6 }, g);
+          const w = op.kind === "perm" ? 66 : 44, lines = op.label.split("\n");
+          const qa = op.qs ? Math.min(...op.qs) : 0, qb = op.qs ? Math.max(...op.qs) : b.n - 1, yc = yq(qa) + (qb - qa) * RH / 2;
+          el("rect", { x: x - w / 2, y: yq(qa) - 20, width: w, height: (qb - qa) * RH + 40, rx: 6 }, g);
           lines.forEach((t, j) => el("text", { x, y: yc + (j - (lines.length - 1) / 2) * 18 }, g, t));
-          el("title", {}, g, op.kind === "diff" ? "擴散：H、X、多控制 Z、X、H" : op.kind === "perm" ? "模冪 Oracle：|x⟩|w⟩ → |x⟩|w ⊕ aˣ mod 15⟩" : "標記：X（答案為 0 的位元）、多控制 Z、X");
+          el("title", {}, g, op.kind === "diff" ? "擴散：H、X、多控制 Z、X、H" + (op.qs ? `（只作用在 ${op.qs.map(q => "q" + q).join("、")}）` : "")
+            : op.kind === "perm" ? "模冪 Oracle：|x⟩|w⟩ → |x⟩|w ⊕ aˣ mod 15⟩"
+            : op.kind === "sat" ? "SAT Oracle：q2 = x0 OR x1、q3 = NOT x0，CZ(q2, q3) 變號，再還原 q2、q3"
+            : "標記：X（答案為 0 的位元）、多控制 Z、X");
         } else {
           g = el("g", { class: `op gate g-${op.g}`, "data-si": c.si }, svg);
           el("rect", { x: x - 17, y: yq(op.q) - 17, width: 34, height: 34, rx: 6 }, g);
@@ -874,11 +943,12 @@ if (typeof module !== "undefined") module.exports = { SCENES, simulate, marginal
         (view === "phase" ? '<svg class="dial" viewBox="-12 -12 24 24" aria-hidden="true"><circle r="10"/><line x1="0" y1="0" x2="9" y2="0"/></svg>' : "") +
         '<span class="amp"></span><span class="pr"></span>';
       box.appendChild(col);
-      barEls.push({ fill: col.querySelector(".fill"), amp: col.querySelector(".amp"), pr: col.querySelector(".pr"), dial: col.querySelector(".dial line") });
+      barEls.push({ col, fill: col.querySelector(".fill"), amp: col.querySelector(".amp"), pr: col.querySelector(".pr"), dial: col.querySelector(".dial line") });
     }
     meanEl = null;
     if (b.meanLine) { meanEl = document.createElement("div"); meanEl.className = "mean"; box.appendChild(meanEl); }
     $("meanKey").hidden = !b.meanLine;
+    $("meanKey").lastChild.textContent = b.meanOver ? `平均值（只算最左邊 ${b.meanOver} 根）` : "平均值";
   }
   function paintBars(v) {
     const view = b.view || "real";
@@ -905,8 +975,14 @@ if (typeof module !== "undefined") module.exports = { SCENES, simulate, marginal
       e.amp.textContent = fmtAmp(a); e.pr.textContent = fmtPct(a * a);
     });
     if (meanEl) { // 長條區高 160px，振幅 0 在 80px，+1 在 0px
-      const m = v.re.reduce((x, y) => x + y, 0) / v.re.length;
-      meanEl.style.top = (80 - m * 80) + "px"; meanEl.style.width = $("bars").scrollWidth + "px";
+      // meanOver：只算最左邊幾根（輔助位元都是 0 的那幾項）；輔助位元還沒還原時虛線淡出
+      const M = b.meanOver || v.re.length, m = v.re.slice(0, M).reduce((x, y) => x + y, 0) / M;
+      meanEl.style.top = (80 - m * 80) + "px";
+      if (b.meanOver) {
+        const last = barEls[M - 1].col;
+        meanEl.style.width = last.offsetLeft + last.offsetWidth + "px";
+        meanEl.style.opacity = Math.min(1, v.re.slice(0, M).reduce((x, a) => x + a * a, 0));
+      } else { meanEl.style.width = $("bars").scrollWidth + "px"; meanEl.style.opacity = ""; }
       meanEl.title = "平均值 " + fmtAmp(m);
     }
   }
