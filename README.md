@@ -49,10 +49,10 @@
 
 12. 基礎量子電路互動動畫：[`animations/basic-circuits.html`](animations/basic-circuits.html)（線上版 https://pcpcchen-coder.github.io/QuantumComputing/animations/basic-circuits.html）
     - 先備理論：[`animations/quantum-basics.html`](animations/quantum-basics.html)〈量子理論基礎：看電路前的 6 堂課〉（量子位元與振幅、相位、量測與 Born 規則、量子閘＝么正矩陣、張量積與糾纏、干涉；每堂都有可拖拉的互動圖，網址加 `#qubit`、`#phase`、`#measure`、`#gates`、`#tensor`、`#interference`）
-    - 10 個範例：疊加（|0⟩/|1⟩ 起始）、干涉 H‑Z‑H = X（可拿掉 Z 比較）、Bell 態（Φ⁺/Φ⁻/Ψ⁺/Ψ⁻）、GHZ 態（3 或 4 顆）、量子隱形傳態（四種 ψ，延遲量測版）、Deutsch 演算法（四種黑盒）、Bernstein–Vazirani（可自訂 3 位元密碼）、Grover 搜尋（2 或 3 顆位元、可選答案與 1–3 輪，平均值虛線看「對平均值翻轉」）、量子傅立葉轉換（基底態或週期態輸入，振幅下方的相位指針與三顆 Bloch 球看「位置變頻率」）、Shor 演算法（分解 15，a = 7、2、11、14；量測後自動做連分數與 gcd 後處理）
+    - 10 個範例：疊加（|0⟩/|1⟩ 起始）、干涉 H‑Z‑H = X（可拿掉 Z 比較）、Bell 態（Φ⁺/Φ⁻/Ψ⁺/Ψ⁻）、GHZ 態（3 或 4 顆）、量子隱形傳態（四種 ψ，延遲量測版）、Deutsch 演算法（四種黑盒）、Bernstein–Vazirani（可自訂 3 位元密碼）、Grover 搜尋（2 或 3 顆位元、可選答案與 1–3 輪，平均值虛線看「對平均值翻轉」；Oracle 可切成「SAT 規則」：只寫 (x0 OR x1) AND (NOT x0) 兩個子句、不寫答案，用輔助位元記錄子句結果再還原，答案從干涉裡量出來）、量子傅立葉轉換（基底態或週期態輸入，振幅下方的相位指針與三顆 Bloch 球看「位置變頻率」）、Shor 演算法（分解 15，a = 7、2、11、14；量測後自動做連分數與 gcd 後處理）
     - 每個範例都能逐步播放電路，同時顯示振幅長條（正負號分色）、狀態式子與 Bloch 球（Bell、隱形傳態、Deutsch 畫「單看某一顆位元」的 Bloch 球，看得出糾纏時向量縮短），也能量測 1 次或 1,000 次，對照理論機率；附會隨選項改變的 Qiskit 程式碼
-    - 簡報：[`slides/output/basic-circuits.pptx`](slides/output/basic-circuits.pptx)（48 頁，含講稿；開頭「理論基礎」6 堂課 10 頁，每個範例都有電路圖、振幅逐步長條與表格，右上角「▶ 動畫」按鈕直接開到該範例）；PDF：[`slides/pdf/Basic_Quantum_Circuits.pdf`](slides/pdf/Basic_Quantum_Circuits.pdf)；內容檔：[`slides/reports/basic-circuits.js`](slides/reports/basic-circuits.js)（`cd slides && node build_deck.js reports/basic-circuits.js` 重新產生，截圖用 `node slides/capture_basic_circuits.js` 重新擷取）
-    - 網址加 `#superposition`、`#interference`、`#bell`、`#ghz`、`#teleport`、`#deutsch`、`#bv`、`#grover`、`#qft`、`#shor` 可直接開啟指定範例；單一 HTML 檔，離線可用（字型需連網）；頁內模擬器支援複數振幅，88 種選項組合都已和 Qiskit `Statevector` 比對過，結果一致（Grover 的擴散照理想「對平均值翻轉」計算，和 H、X、多控制 Z 組成的電路只差一個整體負號）
+    - 簡報：[`slides/output/basic-circuits.pptx`](slides/output/basic-circuits.pptx)（49 頁，含講稿；開頭「理論基礎」6 堂課 10 頁，每個範例都有電路圖、振幅逐步長條與表格，Grover 另有一頁 SAT 規則版 Oracle，右上角「▶ 動畫」按鈕直接開到該範例）；PDF：[`slides/pdf/Basic_Quantum_Circuits.pdf`](slides/pdf/Basic_Quantum_Circuits.pdf)；內容檔：[`slides/reports/basic-circuits.js`](slides/reports/basic-circuits.js)（`cd slides && node build_deck.js reports/basic-circuits.js` 重新產生，截圖用 `node slides/capture_basic_circuits.js` 重新擷取）
+    - 網址加 `#superposition`、`#interference`、`#bell`、`#ghz`、`#teleport`、`#deutsch`、`#bv`、`#grover`、`#grover-sat`（Grover 的 SAT 版 Oracle）、`#qft`、`#shor` 可直接開啟指定範例；單一 HTML 檔，離線可用（字型需連網）；頁內模擬器支援複數振幅，92 種選項組合都已和 Qiskit `Statevector` 比對過，結果一致（Grover 的擴散照理想「對平均值翻轉」計算，和 H、X、多控制 Z 組成的電路只差一個整體負號）
 
 ---
 
@@ -110,7 +110,7 @@ python3 slides/build/anim_ppt_map.py
 | **transmon-3d.html** | transmon | chip p1、10、11、17、18、27；junction p4、5、18；potential p6–8、12、14、15、18；control p16、18、19；readout p16、18、19；case p16、18、20；grover p18、21；shor p18、22；bv p18、23；surface p18、24；surgery p18、25；stack p18、26；deutsch p21（另 qfish008 p13、20、23）；deutsch-lab p21（另 qfish008 p21、22、24） |
 | **power1000.html** | 供電 | overview p47、52、56；scale p48、51、55；heat p49、50；ground p22、54；outage p7、53；field p24；roadmap p57–59；devplan p60–72 |
 | **lc-vs-jj.html** | transmon | s1 p4、5；s2 p5；s3 p8、14；s4 p14；s5 p6；s6drag p16；s6 p7 |
-| **basic-circuits.html** | 基礎電路 | superposition p13、14；interference p15–17；bell p18–20；ghz p21、22；teleport p23–25；deutsch p26–28、45；bv p29、30；grover p31–35；qft p36–38；shor p39–43 |
+| **basic-circuits.html** | 基礎電路 | superposition p13、14；interference p15–17；bell p18–20；ghz p21、22；teleport p23–25；deutsch p26–28、46；bv p29、30；grover p31–35；qft p37–39；shor p40–44 |
 | **quantum-basics.html** | 基礎電路 | qubit p3；phase p4；measure p5；gates p6；tensor p7；interference p8 |
 <!-- anim-map:end -->
 

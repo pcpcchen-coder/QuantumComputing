@@ -4,6 +4,7 @@
  *
  * 對應互動動畫：animations/basic-circuits.html（每個範例有自己的網址錨點）
  *   #superposition  #interference  #bell  #ghz  #teleport  #deutsch  #bv  #grover  #qft  #shor
+ *   （另有 #grover-sat：Grover 的 SAT 規則版 Oracle）
  * 每個範例頁右上角的「▶ 動畫」按鈕直接開到該範例。截圖以 node slides/capture_basic_circuits.js 重新擷取。
  *
  * 位元順序和 Qiskit、動畫頁相同：電路圖 q0 在最上面，位元字串 q0 在最右邊（|01⟩ = q1 為 0、q0 為 1）。
@@ -693,6 +694,25 @@ module.exports = {
       link: { label: "Grover", url: `${BC}#grover`, prefix: "開啟互動動畫" },
       notes:
         "動畫裡可以選 2 或 3 顆位元、點選答案，還能選重複幾輪，預設是最佳輪數。振幅圖上多了一條綠色虛線，代表所有振幅的平均值：標記之後平均會往下掉，擴散就是對這條線翻轉，看起來非常直覺。截圖是 3 顆位元、第 2 輪剛標記完的畫面，答案 101 的振幅是負的，其他都在平均線附近。電路裡的標記和擴散畫成方塊，滑鼠移上去會顯示內部的閘。",
+    },
+
+    {
+      type: "scene3d",
+      section: "8. Grover",
+      title: "Oracle 怎麼知道答案？SAT 規則版",
+      image: "figures/basic_circuits/grover_sat.jpg",
+      imageWidth: 6.9,
+      bullets: [
+        "前面的 Oracle 為了教學，**直接把答案寫進電路**；真實的 Oracle 只會**檢查**，不知道答案",
+        "題目：找 x0、x1 讓 **(x0 OR x1) AND (NOT x0)** 成立；Oracle 裡只有這兩個子句",
+        "q2、q3 記錄兩個子句的結果；**兩個都成立**才由 CZ 變號，最後把 q2、q3 還原",
+        "截圖是 CZ 剛變號：只有 **1110**（x1 x0 = 10）是負的；擴散一輪後量到 10 的機率 **100%**",
+        "古典拿同一個檢查器也得逐一代入；代價是子句越多，Toffoli 閘和輔助位元越多",
+      ],
+      fontSize: 13,
+      link: { label: "Grover（SAT 規則版）", url: `${BC}#grover-sat`, prefix: "開啟互動動畫" },
+      notes:
+        "常有人問：Grover 的 Oracle 一開始怎麼會知道答案？前面的範例為了把焦點放在振幅放大，直接把答案寫進 Oracle，看起來像循環論證。真實的 Oracle 不知道答案，它只會檢查。這一頁的題目是：找 x0、x1，讓 x0 OR x1、而且 NOT x0 同時成立。電路裡只寫了這兩個子句：q2 用 X、Toffoli、X 算出 x0 OR x1，q3 用 CNOT 和 X 算出 NOT x0。因為 q0、q1 在疊加態，四組候選是同時檢查的，每一項都帶著自己的檢查結果。接著 CZ 只在 q2、q3 都是 1 時加負號，也就是兩個子句都成立。截圖就是這一刻：只有 1110 這一項是負的，對應 x1 等於 1、x0 等於 0。然後把 q2、q3 還原成 0，否則它們會和變數糾纏，擴散就沒有干涉效果。擴散一輪之後，量到 10 的機率是百分之百。整個電路沒有任何地方寫著答案，答案是干涉出來的。古典電腦拿到同一個檢查器，也只能一組一組代入；Grover 呼叫檢查器的次數只要大約根號 N。代價是子句越多，需要的 Toffoli 閘和輔助位元就越多，這是真實問題用 Grover 時最主要的成本。",
     },
 
     // ───────────── 9. QFT ─────────────

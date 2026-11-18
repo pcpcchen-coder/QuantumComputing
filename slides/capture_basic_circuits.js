@@ -41,6 +41,7 @@ const BASICS = 'file://' + path.resolve(__dirname, '../animations/quantum-basics
   await open('bv', 4); await measure(); await shot('bv_final');             // 密碼 101
   await open('teleport', 4); await measure(); await shot('teleport_final');  // q2 = ψ，q0 不再是 ψ
   await open('grover', 4, '3 顆（N = 8）'); await shot('grover_oracle');     // 3 顆位元、第 2 輪標記後：答案變號、平均線
+  await open('grover-sat', 4); await shot('grover_sat');                    // SAT 規則版 Oracle：CZ 剛變號，只有 1110 是負的
   await open('qft', 5); await shot('qft_basis');                            // x = 1：大小一樣、相位每格 45°
   await open('shor', 3); await p.click('#m1'); await p.click('#m1000'); await p.waitForTimeout(1600); await shot('shor_final'); // 尖峰 0、2、4、6
 
