@@ -97,7 +97,25 @@
   },
   "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
   "drive": {
-    "status": "pending: Drive token expired (HTTP 401) on 2026-11-18; queued in /home/user/qwork/pending-uploads.txt",
-    "folderId": "19TfKYX25oeVvzZEsGfFYyF8D3W3tknd7"
+    "folderId": "19TfKYX25oeVvzZEsGfFYyF8D3W3tknd7",
+    "uploaded": "2026-11-18",
+    "md5Verified": true,
+    "files": [
+      {
+        "name": "Q131 冷卻鏈不斷電：冷卻鏈不斷電與壓縮機驅動（動畫展示版）.mp4",
+        "id": "12VmV-mImJ7QIPhoqFwArtAH-cJKHXej6",
+        "link": "https://drive.google.com/file/d/12VmV-mImJ7QIPhoqFwArtAH-cJKHXej6/view?usp=drivesdk"
+      },
+      {
+        "name": "Q131 冷卻鏈不斷電 教材.zip",
+        "id": "1au3dYfqw874NS3V4sQldh8Hv2RjzsiL4",
+        "link": "https://drive.google.com/file/d/1au3dYfqw874NS3V4sQldh8Hv2RjzsiL4/view?usp=drivesdk"
+      },
+      {
+        "name": "Q131 冷卻鏈不斷電（動畫展示版）簡報.pptx",
+        "id": "1gkMukX3Nu2Bp1Q3uW4JE0Vt9JW54JNHD",
+        "link": "https://docs.google.com/presentation/d/1gkMukX3Nu2Bp1Q3uW4JE0Vt9JW54JNHD/edit?usp=drivesdk"
+      }
+    ]
   }
 }
