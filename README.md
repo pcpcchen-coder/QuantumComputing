@@ -46,11 +46,16 @@
     - 互動動畫：[`animations/power1000.html`](animations/power1000.html)（8 個 2D 互動場景：全景、規模計算器、低溫熱預算、接地與共模、斷電時間軸、磁場與配電佈局、路線圖、開發計畫；離線可用）
     - 產品開發計畫：[`docs/我們量子供電產品開發計畫.md`](docs/我們量子供電產品開發計畫.md)（三階段路線圖 11 個項目：要做出什麼、開發步驟、困難與解法、檢查點）
 
+12. 基礎量子電路互動動畫：[`animations/basic-circuits.html`](animations/basic-circuits.html)（線上版 https://pcpcchen-coder.github.io/QuantumComputing/animations/basic-circuits.html）
+    - 6 個範例：疊加（|0⟩/|1⟩ 起始）、干涉 H‑Z‑H = X（可拿掉 Z 比較）、Bell 態（Φ⁺/Φ⁻/Ψ⁺/Ψ⁻）、GHZ 態（3 或 4 顆）、Deutsch 演算法（四種黑盒）、Bernstein–Vazirani（可自訂 3 位元密碼）
+    - 每個範例都能逐步播放電路，同時顯示振幅長條（正負號分色）、狀態式子、單顆位元時的 Bloch 球，也能量測 1 次或 1,000 次，對照理論機率；附會隨選項改變的 Qiskit 程式碼
+    - 網址加 `#superposition`、`#interference`、`#bell`、`#ghz`、`#deutsch`、`#bv` 可直接開啟指定範例；單一 HTML 檔，離線可用（字型需連網）；頁內模擬器的 22 種選項組合都已和 Qiskit `Statevector` 比對過，結果一致
+
 ---
 
 ## 3D 動畫 ↔ PPT 簡報對照
 
-`animations/` 共 6 個有場景的動畫頁、68 個場景／章節，**每一個都有對應的簡報投影片**（另有 `lc-vs-jj.html` 是單頁 2D 圖解，見總覽表）。簡報上的「▶ 3D」按鈕直接開啟線上動畫，網址格式為 `https://pcpcchen-coder.github.io/QuantumComputing/animations/<頁面>.html#<場景代號>`（動畫首頁：<https://pcpcchen-coder.github.io/QuantumComputing/>）。離線時可改開 repo 內的 `animations/<頁面>.html#<場景代號>`。
+`animations/` 共 6 個有場景的動畫頁、68 個場景／章節，**每一個都有對應的簡報投影片**（另有 `lc-vs-jj.html`、`basic-circuits.html` 兩個 2D 圖解頁，見總覽表）。簡報上的「▶ 3D」按鈕直接開啟線上動畫，網址格式為 `https://pcpcchen-coder.github.io/QuantumComputing/animations/<頁面>.html#<場景代號>`（動畫首頁：<https://pcpcchen-coder.github.io/QuantumComputing/>）。離線時可改開 repo 內的 `animations/<頁面>.html#<場景代號>`。
 
 逐場景的完整表格（含投影片標題與可點的動畫網址）：[`docs/動畫與簡報對照表.md`](docs/動畫與簡報對照表.md)。新增動畫或簡報後執行下列指令，會重新產生該表格與本段的總覽、頁碼表，並列出還沒有投影片介紹的場景（有缺口時結束碼為 1）：
 
@@ -85,6 +90,7 @@ python3 slides/build/anim_ppt_map.py
 | [`atoms.html`](https://pcpcchen-coder.github.io/QuantumComputing/animations/atoms.html)：離子阱與中性原子 | 13 | [`Ion_NeutralAtom_Talk.pptx`](slides/Ion_NeutralAtom_Talk.pptx) | ✅ 全部有 |
 | [`transmon-3d.html`](https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html)：Transmon 3D（12 章） | 14 | [`transmon.pptx`](slides/transmon.pptx)；[`qfish008-deutsch-algorithm.pptx`](slides/output/qfish008-deutsch-algorithm.pptx) | ✅ 全部有 |
 | [`power1000.html`](https://pcpcchen-coder.github.io/QuantumComputing/animations/power1000.html)：1,000 位元供電設計 | 8 | [`qc-power-supply-delta.pptx`](slides/output/qc-power-supply-delta.pptx) | ✅ 全部有 |
+| [`basic-circuits.html`](https://pcpcchen-coder.github.io/QuantumComputing/animations/basic-circuits.html) | —（沒有場景代號） | 目前沒有簡報連結 | — |
 | [`lc-vs-jj.html`](https://pcpcchen-coder.github.io/QuantumComputing/animations/lc-vs-jj.html) | —（沒有場景代號） | 目前沒有簡報連結 | — |
 
 ### 場景 → 投影片頁碼
