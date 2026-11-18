@@ -51,7 +51,7 @@ def main(lid, short, date, outdir):
                "動畫都可以在瀏覽器直接開啟，自己動手操作。\n")
     desc = (f"父子科技學院 量子電腦學程 {lid}｜{title}（v2・含 3D 動畫展示）\n\n{summary}\n章節\n"
             + ''.join(f'{stamp(a)} {b}\n' for a, b in chapters)
-            + '\n旁白：Edge-TTS zh-TW-YunJheNeural 合成語音。字幕已燒入影片，開啟 CC 可能重疊。\n')
+            + '\n旁白：微軟 zh-TW-YunJheNeural 神經語音合成（Edge-TTS／Azure 語音服務，同一聲音同一格式）。字幕已燒入影片，開啟 CC 可能重疊。\n')
     (P / 'youtube-description.txt').write_text(desc, encoding='utf-8')
     dump(P / 'youtube-metadata.json', {'title': f'父子科技學院 {lid}｜{title}（動畫展示版）', 'description': desc, 'privacyStatus': 'private',
                                        'madeForKids': None, 'reviewStatus': 'needs-parent-review', 'publicationMode': 'manual-user-upload'})
