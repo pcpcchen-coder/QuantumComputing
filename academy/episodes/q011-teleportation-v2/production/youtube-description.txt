@@ -1,0 +1,32 @@
+父子科技學院 量子電腦學程 Q011｜隱形傳態：傳狀態不傳東西（v2・含 3D 動畫展示）
+
+這是依課綱製作的課前教學版，不是實際上課錄音。
+
+父子科技學院量子電腦學程 Q011「隱形傳態：傳狀態不傳東西」新版（v2）：在原本的教學投影片之間，插入本學程 3D 互動動畫的實際操作示範。
+
+這一版新增的動畫展示
+・狀態搬家的四步（https://pcpcchen-coder.github.io/QuantumComputing/animations/basic-circuits.html#teleport）
+・打電話前後（https://pcpcchen-coder.github.io/QuantumComputing/animations/basic-circuits.html#teleport）
+・重複一千次來確認（https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#circuit）
+
+動畫都可以在瀏覽器直接開啟，自己動手操作。
+
+章節
+00:00 陳犀牛系列片頭
+01:00 隱形傳態：傳狀態不傳東西
+01:29 三個重點
+01:52 三個角色：愛麗絲、鮑伯、信差
+02:17 傳送線路：四步
+02:50 動畫展示：狀態搬家的四步
+03:27 比一比：科幻傳送和隱形傳態
+03:49 為什麼一定要打電話？
+04:16 動畫展示：打電話前後
+04:53 不能超光速，也不能複製
+05:18 怎麼確認傳成功？
+05:46 動畫展示：重複一千次來確認
+06:26 角色扮演：三人傳送
+07:00 換你改造：六格傳送漫畫
+07:31 兩小時的傳送任務
+07:59 最後一關：教爸爸隱形傳態
+
+旁白：微軟 zh-TW-YunJheNeural 神經語音合成（Edge-TTS／Azure 語音服務，同一聲音同一格式）。字幕已燒入影片，開啟 CC 可能重疊。
