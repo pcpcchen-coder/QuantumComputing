@@ -4,7 +4,7 @@
 
 ## 筆記目錄
 
-> 所有簡報都另附 PDF 版：[`slides/pdf/`](slides/pdf/)（`JJ_Microwave_Readout_Talk.pdf`、`QC_Peripheral_Systems_Talk.pdf`、`QC_Operation_Talk.pdf`、`Ion_NeutralAtom_Talk.pdf`、`transmon.pdf`、`QC_Power_Supply.pdf`、`QFISH008_Deutsch_Algorithm.pdf`）。
+> 所有簡報都另附 PDF 版：[`slides/pdf/`](slides/pdf/)（`JJ_Microwave_Readout_Talk.pdf`、`QC_Peripheral_Systems_Talk.pdf`、`QC_Operation_Talk.pdf`、`Ion_NeutralAtom_Talk.pdf`、`transmon.pdf`、`QC_Power_Supply.pdf`、`QFISH008_Deutsch_Algorithm.pdf`、`Basic_Quantum_Circuits.pdf`）。
 
 1. [約瑟夫森結（JJ）：巨觀量子波、相位差與「穿隧」的真正意義](notes/josephson-junction-wave-and-tunneling.md)
 2. [Transmon：約瑟夫森電感、電路結構與量子位元機制](notes/transmon-josephson-inductance.md)
@@ -46,11 +46,17 @@
     - 互動動畫：[`animations/power1000.html`](animations/power1000.html)（8 個 2D 互動場景：全景、規模計算器、低溫熱預算、接地與共模、斷電時間軸、磁場與配電佈局、路線圖、開發計畫；離線可用）
     - 產品開發計畫：[`docs/我們量子供電產品開發計畫.md`](docs/我們量子供電產品開發計畫.md)（三階段路線圖 11 個項目：要做出什麼、開發步驟、困難與解法、檢查點）
 
+12. 基礎量子電路互動動畫：[`animations/basic-circuits.html`](animations/basic-circuits.html)（線上版 https://pcpcchen-coder.github.io/QuantumComputing/animations/basic-circuits.html）
+    - 6 個範例：疊加（|0⟩/|1⟩ 起始）、干涉 H‑Z‑H = X（可拿掉 Z 比較）、Bell 態（Φ⁺/Φ⁻/Ψ⁺/Ψ⁻）、GHZ 態（3 或 4 顆）、Deutsch 演算法（四種黑盒）、Bernstein–Vazirani（可自訂 3 位元密碼）
+    - 每個範例都能逐步播放電路，同時顯示振幅長條（正負號分色）、狀態式子、單顆位元時的 Bloch 球，也能量測 1 次或 1,000 次，對照理論機率；附會隨選項改變的 Qiskit 程式碼
+    - 簡報：[`slides/output/basic-circuits.pptx`](slides/output/basic-circuits.pptx)（24 頁，含講稿；每個範例都有電路圖、振幅逐步長條與表格，右上角「▶ 動畫」按鈕直接開到該範例）；PDF：[`slides/pdf/Basic_Quantum_Circuits.pdf`](slides/pdf/Basic_Quantum_Circuits.pdf)；內容檔：[`slides/reports/basic-circuits.js`](slides/reports/basic-circuits.js)（`cd slides && node build_deck.js reports/basic-circuits.js` 重新產生，截圖用 `node slides/capture_basic_circuits.js` 重新擷取）
+    - 網址加 `#superposition`、`#interference`、`#bell`、`#ghz`、`#deutsch`、`#bv` 可直接開啟指定範例；單一 HTML 檔，離線可用（字型需連網）；頁內模擬器的 22 種選項組合都已和 Qiskit `Statevector` 比對過，結果一致
+
 ---
 
 ## 3D 動畫 ↔ PPT 簡報對照
 
-`animations/` 共 7 個動畫頁、75 個場景／章節／段落（含 2D 圖解 `lc-vs-jj.html` 的 7 段），**每一個都有對應的簡報投影片**。簡報上的「▶ 3D」按鈕直接開啟線上動畫，網址格式為 `https://pcpcchen-coder.github.io/QuantumComputing/animations/<頁面>.html#<場景代號>`（動畫首頁：<https://pcpcchen-coder.github.io/QuantumComputing/>）。離線時可改開 repo 內的 `animations/<頁面>.html#<場景代號>`。
+`animations/` 共 8 個動畫頁、81 個場景／章節／段落（含 2D 圖解 `lc-vs-jj.html` 的 7 段、`basic-circuits.html` 的 6 個範例），**每一個都有對應的簡報投影片**。簡報上的「▶ 3D」按鈕直接開啟線上動畫，網址格式為 `https://pcpcchen-coder.github.io/QuantumComputing/animations/<頁面>.html#<場景代號>`（動畫首頁：<https://pcpcchen-coder.github.io/QuantumComputing/>）。離線時可改開 repo 內的 `animations/<頁面>.html#<場景代號>`。
 
 逐場景的完整表格（含投影片標題與可點的動畫網址）：[`docs/動畫與簡報對照表.md`](docs/動畫與簡報對照表.md)。新增動畫或簡報後執行下列指令，會重新產生該表格與本段的總覽、頁碼表，並列出還沒有投影片介紹的場景（有缺口時結束碼為 1）：
 
@@ -86,10 +92,11 @@ python3 slides/build/anim_ppt_map.py
 | [`transmon-3d.html`](https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html)：Transmon 3D（12 章） | 14 | [`transmon.pptx`](slides/transmon.pptx)；[`qfish008-deutsch-algorithm.pptx`](slides/output/qfish008-deutsch-algorithm.pptx) | ✅ 全部有 |
 | [`power1000.html`](https://pcpcchen-coder.github.io/QuantumComputing/animations/power1000.html)：1,000 位元供電設計 | 8 | [`qc-power-supply.pptx`](slides/output/qc-power-supply.pptx) | ✅ 全部有 |
 | [`lc-vs-jj.html`](https://pcpcchen-coder.github.io/QuantumComputing/animations/lc-vs-jj.html)：LC 與約瑟夫森接面（2D 圖解） | 7 | [`transmon.pptx`](slides/transmon.pptx) | ✅ 全部有 |
+| [`basic-circuits.html`](https://pcpcchen-coder.github.io/QuantumComputing/animations/basic-circuits.html)：六個基礎量子電路（2D 互動） | 6 | [`basic-circuits.pptx`](slides/output/basic-circuits.pptx) | ✅ 全部有 |
 
 ### 場景 → 投影片頁碼
 
-主要簡報的頁碼不加前綴；其他簡報以簡稱標示（JJ、周邊、操作、離子阱、transmon、qfish008、供電）。
+主要簡報的頁碼不加前綴；其他簡報以簡稱標示（JJ、周邊、操作、離子阱、transmon、qfish008、供電、基礎電路）。
 
 | 動畫 | 主要簡報 | 場景代號 → 頁碼 |
 |---|---|---|
@@ -100,6 +107,7 @@ python3 slides/build/anim_ppt_map.py
 | **transmon-3d.html** | transmon | chip p1、10、11、17、18、27；junction p4、5、18；potential p6–8、12、14、15、18；control p16、18、19；readout p16、18、19；case p16、18、20；grover p18、21；shor p18、22；bv p18、23；surface p18、24；surgery p18、25；stack p18、26；deutsch p21（另 qfish008 p13、20、23）；deutsch-lab p21（另 qfish008 p21、22、24） |
 | **power1000.html** | 供電 | overview p47、52、56；scale p48、51、55；heat p49、50；ground p22、54；outage p7、53；field p24；roadmap p57–59；devplan p60–72 |
 | **lc-vs-jj.html** | transmon | s1 p4、5；s2 p5；s3 p8、14；s4 p14；s5 p6；s6drag p16；s6 p7 |
+| **basic-circuits.html** | 基礎電路 | superposition p5、6；interference p7–9；bell p10–12；ghz p13、14；deutsch p15–17、22；bv p18、19 |
 <!-- anim-map:end -->
 
 ### transmon-3d.html ↔ transmon.pptx
