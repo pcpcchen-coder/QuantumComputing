@@ -15,4 +15,3 @@
 
 教材：四種黑盒判讀表、可執行的 `deutsch_box.py`（純 Python，不需套件）、盲測紀錄表、三個容易錯的地方、教爸爸檢核表、解答（`academy/authoring/q107/classroom.py`）。
 v2 動畫展示段：transmon-3d.html#deutsch-lab 單步跑 f₃（相位回踢）、basic-circuits.html#deutsch 的 f(x)=1−x 與布洛赫球、transmon-3d.html#deutsch-lab 隨機隱藏盲測，見 `academy/authoring/v2/demos_extra/q107.py`。
-這是依課綱製作的課前教學版，不是實際上課錄音。

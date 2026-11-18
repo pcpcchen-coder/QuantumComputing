@@ -235,7 +235,7 @@ SHEET_HEADER = ['回合', '黑盒主人', '祕密黑盒（翻開前不看）', '
 SHEET_ROWS = [['1', '孩子', '', '', '', '', ''], ['2', '孩子', '', '', '', '', ''], ['3', '孩子', '', '', '', '', ''],
               ['4', '爸爸', '', '', '', '', ''], ['5', '爸爸', '', '', '', '', ''], ['6（PREP = False）', '孩子', '', '', '', '', '']]
 
-EXTRA_CSS = '''table.judge td{height:16mm;font-size:11pt}table.judge td.k{font-weight:bold;color:#0b2540}
+EXTRA_CSS = '''table.judge td{height:24mm;font-size:11pt}table.judge td.k{font-weight:bold;color:#0b2540}
 table.rec td{height:9mm}.chk li{margin:2.5mm 0;font-size:13pt;list-style:none}.chk li:before{content:"□ "}.chk{padding-left:2mm}
 pre.code{font-size:9pt;background:#f2f6fa;border:1pt solid #cfdde8;padding:3mm;margin:2mm 0;white-space:pre-wrap}
 .balls{font-size:11pt;color:#4a6a88;margin:1mm 0 3mm}'''
@@ -253,15 +253,16 @@ def check_program():
 
 
 def html():
-    judge = ''.join(f'<tr><td class="k">{a}</td><td>{b}<br><span class="note">{c}</span></td><td></td><td></td><td></td><td></td></tr>'
+    judge = ''.join(f'<tr><td class="k">{a}</td><td>{b}<br><span class="note">{c}</span></td><td></td><td></td><td></td><td></td><td></td></tr>'
                     for a, b, c, d, e, f, g in BOXES)
     pages = [
         '<h2>四種黑盒判讀表</h2><p class="lead">在 transmon-3d.html#deutsch-lab 選黑盒子，按「一鍵 Deutsch」，只看第一位 q0。</p>'
-        '<p>開場先猜：黑盒子只准問一次，能分出常數和平衡嗎？ □ 能　□ 不能　因為＿＿＿＿＿＿＿＿＿＿＿＿</p>'
+        '<p>開場先猜：黑盒子只准問一次，能分出常數和平衡嗎？ □ 能　□ 不能　因為＿＿＿＿＿</p>'
         '<p class="balls">紅綠球：第一次搖 = 輸入 0、第二次搖 = 輸入 1；紅 = 0、綠 = 1。兩顆同色 = 常數，一紅一綠 = 平衡。</p>'
-        '<table class="judge"><tr><th>黑盒子</th><th>規則／紅綠球</th><th>我猜：常數或平衡</th><th>U_f 之後紅色（負）長條在哪幾根</th><th>量到 q0</th><th>判讀</th></tr>'
+        '<table class="judge"><tr><th style="width:9%">黑盒</th><th style="width:19%">規則／紅綠球</th><th style="width:14%">我猜</th><th style="width:24%">U_f 後紅色長條</th><th style="width:16%">問完後 q0<br>（±|+⟩／±|−⟩）</th><th style="width:8%">量到 q0</th><th style="width:10%">判讀</th></tr>'
         + judge + '</table>'
-        '<p class="note">q0：0 = 常數、1 = 平衡。右上判定是不是一直寫「乘積態」？ □ 是　□ 不是</p>',
+        '<p class="note">q0：0 = 常數、1 = 平衡。右上判定是不是一直寫「乘積態」？ □ 是　□ 不是</p>'
+        '<p>f₁ 和 f₂ 的 q0 只差一個整體負號，量得出來嗎？ □ 量得出來　□ 量不出來</p>',
         '<h2>換你當黑盒子：盲測紀錄</h2><p class="lead">黑盒主人偷偷選 f₁～f₄，改 deutsch_box.py 的 SECRET；解碼者只看最後一行，只准問一次。</p>'
         '<table class="rec"><tr><th>回合</th><th>黑盒主人</th><th>祕密黑盒</th><th>q0 結果</th><th>解碼者猜</th><th>翻開後</th><th>猜對？</th></tr>'
         + ''.join(f'<tr><td>{r[0]}</td><td>{r[1]}</td><td></td><td></td><td></td><td></td><td></td></tr>' for r in SHEET_ROWS) + '</table>'
