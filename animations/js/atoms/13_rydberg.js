@@ -1,9 +1,9 @@
-/* 原子場景 12：芮德堡阻斷（Rydberg blockade）與 CZ 閘
+/* 原子場景 14：芮德堡阻斷（Rydberg blockade）與 CZ 閘
  * 兩顆原子 + 共同雷射：H = Ω/2 Σ(|g⟩⟨r| + h.c.) + V(r)|rr⟩⟨rr|，V = C₆ / r⁶（數值精確演化：對角化 4×4 Hamiltonian）
  * 代表值：Ω/2π = 2 MHz，C₆/2π ≈ 858 GHz·μm⁶（⁸⁷Rb 70S 量級）→ 阻斷半徑 R_b = (C₆/Ω)^{1/6} ≈ 8.7 μm
  */
 App.register({
-  id: 'rydberg', num: 12, short: '芮德堡阻斷與 CZ 閘',
+  id: 'rydberg', num: 13, short: '芮德堡阻斷與 CZ 閘',
   title: '芮德堡阻斷：中性原子的兩位元閘',
   subtitle: '一顆原子被激發到芮德堡態後，附近的原子就無法再被激發 → 條件式相位 → CZ 閘',
   desc: `<p><b>芮德堡態</b>：把最外層電子激發到主量子數 n ≈ 50–100 的軌道，原子半徑變成約 n² 倍（數百 nm），偶極矩極大。兩顆芮德堡原子間的范德瓦耳斯交互作用 <span class="eq">V = C₆ / r⁶</span>，而 C₆ ∝ n¹¹。</p>

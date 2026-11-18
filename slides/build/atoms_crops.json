@@ -160,5 +160,11 @@
   "top": 274,
   "width": 2560,
   "height": 868
+ },
+ "photonic": {
+  "left": 432,
+  "top": 236,
+  "width": 1654,
+  "height": 918
  }
 }
