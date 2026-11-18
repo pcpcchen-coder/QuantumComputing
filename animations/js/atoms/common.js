@@ -233,6 +233,111 @@
     return g;
   };
 
+  /* 小型 n 位元狀態向量模擬器（ψ 以 Float64Array 存實部與虛部；位元 k 對應索引的第 k 個 bit）
+   * 用於「運算與讀取」總覽場景：Rx / Ry / Rz、XX(θ)（MS 閘）、CZ、Bloch 向量、取樣與塌縮 */
+  App.qsim = function (n) {
+    const N = 1 << n;
+    const S = { n, re: new Float64Array(N), im: new Float64Array(N) };
+    S.reset = () => { S.re.fill(0); S.im.fill(0); S.re[0] = 1; return S; };
+    S.copy = () => ({ re: S.re.slice(), im: S.im.slice() });
+    S.load = (c) => { S.re.set(c.re); S.im.set(c.im); return S; };
+    /* 單位元閘 [[a,b],[c,d]]，每個元素為 [re, im] */
+    S.u1 = (k, a, b, c, d) => {
+      const m = 1 << k;
+      for (let i = 0; i < N; i++) {
+        if (i & m) continue;
+        const j = i | m;
+        const r0 = S.re[i], i0 = S.im[i], r1 = S.re[j], i1 = S.im[j];
+        S.re[i] = a[0] * r0 - a[1] * i0 + b[0] * r1 - b[1] * i1; S.im[i] = a[0] * i0 + a[1] * r0 + b[0] * i1 + b[1] * r1;
+        S.re[j] = c[0] * r0 - c[1] * i0 + d[0] * r1 - d[1] * i1; S.im[j] = c[0] * i0 + c[1] * r0 + d[0] * i1 + d[1] * r1;
+      }
+      return S;
+    };
+    S.rx = (k, t) => { const c = Math.cos(t / 2), s = Math.sin(t / 2); return S.u1(k, [c, 0], [0, -s], [0, -s], [c, 0]); };
+    S.ry = (k, t) => { const c = Math.cos(t / 2), s = Math.sin(t / 2); return S.u1(k, [c, 0], [-s, 0], [s, 0], [c, 0]); };
+    S.rz = (k, t) => { const c = Math.cos(t / 2), s = Math.sin(t / 2); return S.u1(k, [c, -s], [0, 0], [0, 0], [c, s]); };
+    /* MS 閘：exp(−iθ X_a X_b)；θ = π/4 為最大糾纏 */
+    S.xx = (a, b, t) => {
+      const m = (1 << a) | (1 << b), c = Math.cos(t), s = Math.sin(t);
+      const re = S.re.slice(), im = S.im.slice();
+      for (let i = 0; i < N; i++) { const j = i ^ m; S.re[i] = c * re[i] + s * im[j]; S.im[i] = c * im[i] - s * re[j]; }
+      return S;
+    };
+    /* 受控相位：|11⟩ 乘上 e^{iφ}（φ = π 即 CZ） */
+    S.cphase = (a, b, phi) => {
+      const m = (1 << a) | (1 << b), c = Math.cos(phi), s = Math.sin(phi);
+      for (let i = 0; i < N; i++) if ((i & m) === m) { const r = S.re[i], q = S.im[i]; S.re[i] = c * r - s * q; S.im[i] = c * q + s * r; }
+      return S;
+    };
+    S.probs = () => { const p = new Float64Array(N); for (let i = 0; i < N; i++) p[i] = S.re[i] * S.re[i] + S.im[i] * S.im[i]; return p; };
+    /* 第 k 個位元的 Bloch 向量（約化密度矩陣）；z = +1 為 |0⟩ */
+    S.bloch = (k) => {
+      const m = 1 << k; let x = 0, y = 0, z = 0;
+      for (let i = 0; i < N; i++) {
+        const p = S.re[i] * S.re[i] + S.im[i] * S.im[i];
+        if (i & m) { z -= p; continue; }
+        z += p;
+        const j = i | m; // ρ01 = Σ ψ_i ψ_j*
+        const r = S.re[i] * S.re[j] + S.im[i] * S.im[j], q = S.im[i] * S.re[j] - S.re[i] * S.im[j];
+        x += 2 * r; y -= 2 * q;
+      }
+      return { x, y, z };
+    };
+    S.sample = () => { const p = S.probs(); let u = Math.random(), i = 0; for (; i < N - 1; i++) { u -= p[i]; if (u <= 0) break; } return i; };
+    S.collapse = (idx) => { S.re.fill(0); S.im.fill(0); S.re[idx] = 1; return S; };
+    return S.reset();
+  };
+
+  /* 2D 插圖：各步驟時間的 log 座標橫條（cats = 步驟名稱；rows = [{name, col, vals: [秒...]}]） */
+  App.timeBars = function (g, W, H, P, cats, rows, o = {}) {
+    const lo = o.lo ?? -8, hi = o.hi ?? -1;
+    const ticks = []; for (let e = lo; e <= hi; e++) { const s = { '-9': '1 ns', '-8': '10 ns', '-7': '100 ns', '-6': '1 μs', '-5': '10 μs', '-4': '100 μs', '-3': '1 ms', '-2': '10 ms', '-1': '100 ms', '0': '1 s' }[e]; if (s && (e - lo) % (o.every || 1) === 0) ticks.push([e, s]); }
+    const m = { l: 74, r: 20, t: 6, b: 34 };
+    const X = (e) => m.l + ((e - lo) / (hi - lo)) * (W - m.l - m.r);
+    g.strokeStyle = 'rgba(160,180,210,.18)'; g.lineWidth = 1;
+    ticks.forEach(([e]) => { g.beginPath(); g.moveTo(X(e), m.t); g.lineTo(X(e), H - m.b); g.stroke(); });
+    g.fillStyle = '#9fb0c8'; g.font = P.font; g.textAlign = 'center';
+    ticks.forEach(([e, s]) => g.fillText(s, X(e), H - m.b + 14));
+    const ch = (H - m.t - m.b) / cats.length, bh = Math.min(10, (ch - 6) / rows.length);
+    cats.forEach((c, i) => {
+      const y0 = m.t + i * ch + (ch - bh * rows.length) / 2;
+      P.text(g, c, m.l - 6, m.t + i * ch + ch / 2 + 4, '#cfd8e6', 'right');
+      rows.forEach((r, k) => {
+        const v = r.vals[i]; if (!v) return;
+        const e = Math.log10(v);
+        g.fillStyle = r.col; g.fillRect(X(lo), y0 + k * bh, Math.max(2, X(e) - X(lo)), bh - 2);
+        if (o.marks && o.marks[i] === k) { g.strokeStyle = '#fff'; g.strokeRect(X(lo), y0 + k * bh, Math.max(2, X(e) - X(lo)), bh - 2); }
+      });
+    });
+    let lx = m.l;
+    rows.forEach((r) => { g.fillStyle = r.col; g.fillRect(lx, H - 12, 10, 8); P.text(g, r.name, lx + 14, H - 4, '#cfd8e6'); lx += 16 + g.measureText(r.name).width + 14; });
+  };
+
+  /* 2D 插圖：位元串長條圖（counts = {'00': n, ...}），可標示理想值 */
+  App.bitHist = function (g, W, H, P, keys, counts, o = {}) {
+    const tot = Math.max(1, keys.reduce((a, k) => a + (counts[k] || 0), 0));
+    const { X, Y } = P.frame(g, W, H, [0, keys.length], [0, 1], { ylabel: '機率', yticks: [[0, '0'], [0.5, '0.5'], [1, '1']], xticks: keys.map((k, i) => [i + 0.5, k]), m: { l: 40, b: 30 } });
+    keys.forEach((k, i) => {
+      const p = (counts[k] || 0) / tot;
+      g.fillStyle = o.col ? o.col(k) : 'rgba(255,192,74,.8)';
+      g.fillRect(X(i) + 6, Y(p), X(1) - X(0) - 12, Y(0) - Y(p));
+      if (p > 0.005) P.text(g, (p * 100).toFixed(1) + '%', X(i + 0.5), Y(p) - 4, '#e8eef8', 'center');
+      if (o.ideal) { const q = o.ideal[k] || 0; g.strokeStyle = '#8ef0a0'; g.setLineDash([4, 3]); g.beginPath(); g.moveTo(X(i) + 3, Y(q)); g.lineTo(X(i + 1) - 3, Y(q)); g.stroke(); g.setLineDash([]); }
+    });
+    (o.notes || []).forEach(([s, x, y, c]) => P.text(g, s, x, y, c || '#e8eef8'));
+  };
+
+  /* 頻率參考源的 Allan 偏差 σ_y(τ)（代表性經驗模型，量級正確，實際依機型而異）與科學記號格式 */
+  App.FREF = {
+    Q: { name: '石英 OCXO', col: '#9fb0c8', s: (t) => Math.hypot(1e-12, 1.2e-15 * t / Math.SQRT2) },
+    Rb: { name: '銣鐘', col: '#ff8a3d', s: (t) => Math.hypot(1e-11 / Math.sqrt(t), 5e-13, 1.9e-17 * t / Math.SQRT2) },
+    Cs: { name: '銫鐘', col: '#7ee05a', s: (t) => Math.hypot(1e-11 / Math.sqrt(t), 1e-14) },
+    H: { name: '氫邁射', col: '#d8ff6a', s: (t) => Math.hypot(1.5e-13 / t, 2e-14 / Math.sqrt(t), 7e-16) },
+  };
+  /* Ramsey 自由演化 T 秒內，頻率 f0 的微波累積的相位誤差（rad）≈ 2π f0 σ_y(T) T */
+  App.ramseyPhase = (key, f0, T) => 2 * Math.PI * f0 * App.FREF[key].s(T) * T;
+  App.sciFmt = (x) => { const e = Math.floor(Math.log10(x)); return `${(x / Math.pow(10, e)).toFixed(1)}×10${String(e).replace('-', '⁻').replace(/\d/g, (d) => '⁰¹²³⁴⁵⁶⁷⁸⁹'[d])}`; };
+
   /* 量子位元顏色（與其他頁一致）：|0⟩ 藍、|1⟩ 紅；離子金、原子青 */
   App.QC = { q0: 0x4f8cff, q1: 0xff5a5f, ion: 0xffc04a, atom: 0x38d6e9, cool: 0x9b7bff, ryd: 0xff6ad5 };
 })();
