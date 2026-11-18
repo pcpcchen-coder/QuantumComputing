@@ -175,7 +175,7 @@ SHEET_ROWS = [['正常 1'], ['正常 2'], ['正常 3'], ['驅動站慢半拍'], 
 
 EXTRA_CSS = '''table.rec td{height:10mm}table.role td{height:15mm;font-size:11pt}
 .chk li{margin:2.5mm 0;font-size:13pt;list-style:none}.chk li:before{content:"□ "}.chk{padding-left:2mm}
-.flow{display:flex;flex-wrap:wrap;gap:4mm;margin-top:4mm}.flow div{border:1.5px dashed #4a6a88;border-radius:3mm;width:52mm;height:24mm;
+.flow{display:flex;flex-wrap:wrap;gap:4mm;margin-top:4mm}.flow div{border:1.5px dashed #4a6a88;border-radius:3mm;width:52mm;height:34mm;
 padding:2mm;font-size:10pt;color:#4a6a88}.clockline{border:1.5px dashed #c9a227;border-radius:3mm;height:14mm;margin-top:4mm;padding:2mm;
 font-size:10pt;color:#8a6d00}.small{font-size:10pt;color:#4a6a88}'''
 
