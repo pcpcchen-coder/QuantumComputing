@@ -35,7 +35,9 @@ atoms.html#compare
 ## 素材
 
 - 簡報：離子阱與中性原子量子電腦（slides/Ion_NeutralAtom_Talk.pptx）p38–45
+- 簡報：技術分享：量子電腦的供電設計（slides/output/qc-power-supply.pptx）p44–46
 - 3D 場景：[`a:compare`](../../../animations/atoms.html#compare)
+- 文件：量子電腦供電設計：文獻回顧與我們的切入點（docs/量子電腦供電設計文獻回顧與我們切入點.md）§16–18
 - 需新增：◆ 補光子、自旋、拓樸三欄
 
 生活技能支線：決策時先說清楚標準。課後延伸：15–30 分鐘自由改造；寫三句學習日誌：我做了什麼、哪裡卡住、下次想加什麼。

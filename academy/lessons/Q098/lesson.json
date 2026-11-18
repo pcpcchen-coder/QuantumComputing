@@ -1,0 +1,51 @@
+{
+  "lessonId": "Q098",
+  "sourceRow": {
+    "總課次": 98,
+    "學程": "量子電腦學程",
+    "階段": "第四階段 深化與產業",
+    "模組": "QM07 超導量子電腦深入：師生對話十三課",
+    "模組內課次": 2,
+    "課程主題": "LC 與 JJ：線性和非線性的差別",
+    "對象與上課方式": "高中理組／大學／工程同仁；師生對話形式，transmon 3D 十二章逐章操作",
+    "學習目標": "用 2D 圖解看懂為什麼 LC 是線性、JJ 是非線性，以及非線性如何挑出 |0⟩ 和 |1⟩",
+    "2 小時課程流程": "00–10 任務開場：LC 與 JJ：線性和非線性的差別\n10–25 概念示範：用 2D 圖解看懂為什麼 LC 是線性、JJ 是非線性，以及非線性如何挑出 |0⟩ 和 |1⟩\n25–65 父子共同實作：依 lc-vs-jj 圖解第 1–5 步，比較直線與正弦的電流–磁通關係、拋物線與餘弦位能的能階\n65–75 休息／走動／聊天\n75–105 孩子獨立改造：用第 4 步說明：為什麼線性 LC 停不在 |1⟩\n105–115 角色互換：孩子教爸爸操作與原理\n115–120 錄音總結、作品命名、版本存檔",
+    "動手任務": "依 lc-vs-jj 圖解第 1–5 步，比較直線與正弦的電流–磁通關係、拋物線與餘弦位能的能階",
+    "孩子獨立改造": "用第 4 步說明：為什麼線性 LC 停不在 |1⟩",
+    "好玩機制": "科學實驗",
+    "作品／交付": "線性 vs 非線性對照表",
+    "生活技能支線": "用對照表整理差異",
+    "家長課前準備": "lc-vs-jj.html",
+    "課後延伸": "15–30 分鐘自由改造；寫三句學習日誌：我做了什麼、哪裡卡住、下次想加什麼。",
+    "驗收標準": "完成「線性 vs 非線性對照表」；能不用看稿說出核心原理；能指出至少一個錯誤、限制或注意事項（例如：「非線性」指的是電流和磁通的關係不是直線，不是電路會亂跳）。",
+    "常見誤解與安全提醒": "「非線性」指的是電流和磁通的關係不是直線，不是電路會亂跳",
+    "錄音重點": "請孩子回答：1. LC 與 JJ：線性和非線性的差別在解決什麼？2. 我怎麼做？3. 哪裡容易錯？4. 生活中或真實的量子電腦哪裡會用到？",
+    "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q098｜LC 與 JJ：線性和非線性的差別",
+    "難度 1–5": 4,
+    "沿用簡報頁": [
+      "Transmon 筆記簡報（27 頁，含 3D 十二章導覽）（slides/transmon.pptx）p4–8",
+      "Transmon 筆記簡報（27 頁，含 3D 十二章導覽）（slides/transmon.pptx）p14"
+    ],
+    "沿用 3D 場景": [
+      "lj:s1",
+      "lj:s3",
+      "lj:s4",
+      "lj:s5"
+    ],
+    "需新增素材": [],
+    "沿用文件": [],
+    "YouTube 關鍵字 1": "LC 與 JJ：線性和非線性的差別 quantum computing explained beginner",
+    "YouTube 連結 1": "https://www.youtube.com/results?search_query=LC+%E8%88%87+JJ%EF%BC%9A%E7%B7%9A%E6%80%A7%E5%92%8C%E9%9D%9E%E7%B7%9A%E6%80%A7%E7%9A%84%E5%B7%AE%E5%88%A5+quantum+computing+explained+beginner",
+    "影片用途 1": "課前暖身",
+    "YouTube 關鍵字 2": "LC 與 JJ：線性和非線性的差別 用 2D 圖解看懂為什麼 LC 是線性、 hands on demo",
+    "YouTube 連結 2": "https://www.youtube.com/results?search_query=LC+%E8%88%87+JJ%EF%BC%9A%E7%B7%9A%E6%80%A7%E5%92%8C%E9%9D%9E%E7%B7%9A%E6%80%A7%E7%9A%84%E5%B7%AE%E5%88%A5+%E7%94%A8+2D+%E5%9C%96%E8%A7%A3%E7%9C%8B%E6%87%82%E7%82%BA%E4%BB%80%E9%BA%BC+LC+%E6%98%AF%E7%B7%9A%E6%80%A7%E3%80%81+hands+on+demo",
+    "影片用途 2": "課中實作參考",
+    "YouTube 關鍵字 3": "LC 與 JJ：線性和非線性的差別 quantum computing lecture visualization",
+    "YouTube 連結 3": "https://www.youtube.com/results?search_query=LC+%E8%88%87+JJ%EF%BC%9A%E7%B7%9A%E6%80%A7%E5%92%8C%E9%9D%9E%E7%B7%9A%E6%80%A7%E7%9A%84%E5%B7%AE%E5%88%A5+quantum+computing+lecture+visualization",
+    "影片用途 3": "課後延伸"
+  },
+  "curriculumSha256": "eb081f5848bd31bd8d734680a2d88f6821b6b30fa5d9ff1d813d06872e8f71c3",
+  "episodePaths": [],
+  "minutes": 120,
+  "status": "planned"
+}

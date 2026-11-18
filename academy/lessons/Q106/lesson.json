@@ -1,0 +1,53 @@
+{
+  "lessonId": "Q106",
+  "sourceRow": {
+    "總課次": 106,
+    "學程": "量子電腦學程",
+    "階段": "第四階段 深化與產業",
+    "模組": "QM07 超導量子電腦深入：師生對話十三課",
+    "模組內課次": 10,
+    "課程主題": "第 8 課：糾纏與兩位元 Grover",
+    "對象與上課方式": "高中理組／大學／工程同仁；師生對話形式，transmon 3D 十二章逐章操作",
+    "學習目標": "用振幅長條看糾纏的產生，以及兩位元 Grover 一輪就找到答案",
+    "2 小時課程流程": "00–10 任務開場：第 8 課：糾纏與兩位元 Grover\n10–25 概念示範：用振幅長條看糾纏的產生，以及兩位元 Grover 一輪就找到答案\n25–65 父子共同實作：在振幅長條章逐步做 Bell 態與兩位元 Grover\n65–75 休息／走動／聊天\n75–105 孩子獨立改造：換答案位置，預測一輪後的長條\n105–115 角色互換：孩子教爸爸操作與原理\n115–120 錄音總結、作品命名、版本存檔",
+    "動手任務": "在振幅長條章逐步做 Bell 態與兩位元 Grover",
+    "孩子獨立改造": "換答案位置，預測一輪後的長條",
+    "好玩機制": "尋寶",
+    "作品／交付": "振幅長條逐步圖",
+    "生活技能支線": "一步一步追蹤變化",
+    "家長課前準備": "師生對話第 8 課；transmon-3d#grover",
+    "課後延伸": "15–30 分鐘自由改造；寫三句學習日誌：我做了什麼、哪裡卡住、下次想加什麼。",
+    "驗收標準": "完成「振幅長條逐步圖」；能不用看稿說出核心原理；能指出至少一個錯誤、限制或注意事項（例如：兩位元 Grover 剛好一輪 100%；位元多了就不一定剛好）。",
+    "常見誤解與安全提醒": "兩位元 Grover 剛好一輪 100%；位元多了就不一定剛好",
+    "錄音重點": "請孩子回答：1. 第 8 課：糾纏與兩位元 Grover在解決什麼？2. 我怎麼做？3. 哪裡容易錯？4. 生活中或真實的量子電腦哪裡會用到？",
+    "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q106｜第 8 課：糾纏與兩位元 Grover",
+    "難度 1–5": 4,
+    "沿用簡報頁": [
+      "Transmon 筆記簡報（27 頁，含 3D 十二章導覽）（slides/transmon.pptx）p22",
+      "量子電路入門：八個範例（slides/output/basic-circuits.pptx）p10–11",
+      "量子電路入門：八個範例（slides/output/basic-circuits.pptx）p23–24"
+    ],
+    "沿用 3D 場景": [
+      "tr:grover",
+      "bc:bell",
+      "bc:grover"
+    ],
+    "需新增素材": [],
+    "沿用文件": [
+      "超導量子電腦師生對話教學紀錄（docs/超導量子電腦師生對話教學紀錄.md）第 8 課"
+    ],
+    "YouTube 關鍵字 1": "第 8 課：糾纏與兩位元 Grover quantum computing explained beginner",
+    "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E7%AC%AC+8+%E8%AA%B2%EF%BC%9A%E7%B3%BE%E7%BA%8F%E8%88%87%E5%85%A9%E4%BD%8D%E5%85%83+Grover+quantum+computing+explained+beginner",
+    "影片用途 1": "課前暖身",
+    "YouTube 關鍵字 2": "第 8 課：糾纏與兩位元 Grover 用振幅長條看糾纏的產生，以及兩位元 Gr hands on demo",
+    "YouTube 連結 2": "https://www.youtube.com/results?search_query=%E7%AC%AC+8+%E8%AA%B2%EF%BC%9A%E7%B3%BE%E7%BA%8F%E8%88%87%E5%85%A9%E4%BD%8D%E5%85%83+Grover+%E7%94%A8%E6%8C%AF%E5%B9%85%E9%95%B7%E6%A2%9D%E7%9C%8B%E7%B3%BE%E7%BA%8F%E7%9A%84%E7%94%A2%E7%94%9F%EF%BC%8C%E4%BB%A5%E5%8F%8A%E5%85%A9%E4%BD%8D%E5%85%83+Gr+hands+on+demo",
+    "影片用途 2": "課中實作參考",
+    "YouTube 關鍵字 3": "第 8 課：糾纏與兩位元 Grover quantum computing lecture visualization",
+    "YouTube 連結 3": "https://www.youtube.com/results?search_query=%E7%AC%AC+8+%E8%AA%B2%EF%BC%9A%E7%B3%BE%E7%BA%8F%E8%88%87%E5%85%A9%E4%BD%8D%E5%85%83+Grover+quantum+computing+lecture+visualization",
+    "影片用途 3": "課後延伸"
+  },
+  "curriculumSha256": "eb081f5848bd31bd8d734680a2d88f6821b6b30fa5d9ff1d813d06872e8f71c3",
+  "episodePaths": [],
+  "minutes": 120,
+  "status": "planned"
+}

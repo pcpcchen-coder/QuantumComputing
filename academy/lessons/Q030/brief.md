@@ -35,8 +35,9 @@ index.html#chip；列印晶片圖
 ## 素材
 
 - 簡報：超導量子電腦的核心：JJ 與微波讀取（slides/JJ_Microwave_Readout_Talk.pptx）p27
-- 簡報：Transmon 筆記簡報（slides/transmon.pptx）p10–12
+- 簡報：Transmon 筆記簡報（27 頁，含 3D 十二章導覽）（slides/transmon.pptx）p10–12
 - 3D 場景：[`i:chip`](../../../animations/index.html#chip)
+- 3D 場景：[`tr:chip`](../../../animations/transmon-3d.html#chip)
 
 生活技能支線：讀懂設計圖。課後延伸：15–30 分鐘自由改造；寫三句學習日誌：我做了什麼、哪裡卡住、下次想加什麼。
 

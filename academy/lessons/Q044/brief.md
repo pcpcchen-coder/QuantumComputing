@@ -35,7 +35,9 @@ peripherals.html#cooldown；docs/周邊系統連接與啟動指南.md
 ## 素材
 
 - 簡報：量子電腦的周邊系統（slides/QC_Peripheral_Systems_Talk.pptx）p12
+- 簡報：技術分享：量子電腦的供電設計（slides/output/qc-power-supply.pptx）p7–8
 - 3D 場景：[`p:cooldown`](../../../animations/peripherals.html#cooldown)
+- 3D 場景：[`pw:outage`](../../../animations/power1000.html#outage)
 
 生活技能支線：排專案時程。課後延伸：15–30 分鐘自由改造；寫三句學習日誌：我做了什麼、哪裡卡住、下次想加什麼。
 

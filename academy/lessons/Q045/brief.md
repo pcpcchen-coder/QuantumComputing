@@ -36,6 +36,7 @@ peripherals.html#wiring
 
 - 簡報：量子電腦的周邊系統（slides/QC_Peripheral_Systems_Talk.pptx）p14–18
 - 3D 場景：[`p:wiring`](../../../animations/peripherals.html#wiring)
+- 3D 場景：[`pw:heat`](../../../animations/power1000.html#heat)
 
 生活技能支線：做預算：資源有上限。課後延伸：15–30 分鐘自由改造；寫三句學習日誌：我做了什麼、哪裡卡住、下次想加什麼。
 

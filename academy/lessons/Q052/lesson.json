@@ -23,12 +23,22 @@
     "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q052｜微波脈衝：面積與相位",
     "難度 1–5": 4,
     "沿用簡報頁": [
-      "如何操作量子電腦（slides/QC_Operation_Talk.pptx）p20"
+      "如何操作量子電腦（slides/QC_Operation_Talk.pptx）p20",
+      "Transmon 筆記簡報（27 頁，含 3D 十二章導覽）（slides/transmon.pptx）p20"
     ],
     "沿用 3D 場景": [
-      "o:pulse"
+      "o:pulse",
+      "tr:control"
     ],
     "需新增素材": [],
+    "沿用文件": [
+      "超導量子電腦師生對話教學紀錄（docs/超導量子電腦師生對話教學紀錄.md）第 5 課"
+    ],
+    "2026-11-18 補充素材": [
+      "簡報 T p20",
+      "場景 tr:control",
+      "文件 DLG 第 5 課"
+    ],
     "YouTube 關鍵字 1": "微波脈衝：面積與相位 quantum computing explained beginner",
     "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E5%BE%AE%E6%B3%A2%E8%84%88%E8%A1%9D%EF%BC%9A%E9%9D%A2%E7%A9%8D%E8%88%87%E7%9B%B8%E4%BD%8D+quantum+computing+explained+beginner",
     "影片用途 1": "課前暖身",
@@ -39,7 +49,7 @@
     "YouTube 連結 3": "https://www.youtube.com/results?search_query=%E5%BE%AE%E6%B3%A2%E8%84%88%E8%A1%9D%EF%BC%9A%E9%9D%A2%E7%A9%8D%E8%88%87%E7%9B%B8%E4%BD%8D+quantum+computing+lecture+visualization",
     "影片用途 3": "課後延伸"
   },
-  "curriculumSha256": "493446a21451c8a5c08a1723cfd04436e51cbfa4806049b55a765d22ecf2ba53",
+  "curriculumSha256": "eb081f5848bd31bd8d734680a2d88f6821b6b30fa5d9ff1d813d06872e8f71c3",
   "episodePaths": [],
   "minutes": 120,
   "status": "planned"

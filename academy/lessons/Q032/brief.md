@@ -36,7 +36,7 @@ transmon 參數卡
 
 - 簡報：超導量子電腦的核心：JJ 與微波讀取（slides/JJ_Microwave_Readout_Talk.pptx）p20
 - 簡報：超導量子電腦的核心：JJ 與微波讀取（slides/JJ_Microwave_Readout_Talk.pptx）p37
-- 簡報：Transmon 筆記簡報（slides/transmon.pptx）p12
+- 簡報：Transmon 筆記簡報（27 頁，含 3D 十二章導覽）（slides/transmon.pptx）p12
 - 3D 場景：[`i:potential`](../../../animations/index.html#potential)
 - 需新增：★ transmon 參數設計器（工具）
 

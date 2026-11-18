@@ -29,6 +29,7 @@
     "需新增素材": [
       "★ 零雜訊外插場景"
     ],
+    "沿用文件": [],
     "YouTube 關鍵字 1": "錯誤緩解 quantum computing explained beginner",
     "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E9%8C%AF%E8%AA%A4%E7%B7%A9%E8%A7%A3+quantum+computing+explained+beginner",
     "影片用途 1": "課前暖身",
@@ -39,7 +40,7 @@
     "YouTube 連結 3": "https://www.youtube.com/results?search_query=%E9%8C%AF%E8%AA%A4%E7%B7%A9%E8%A7%A3+quantum+computing+lecture+visualization",
     "影片用途 3": "課後延伸"
   },
-  "curriculumSha256": "493446a21451c8a5c08a1723cfd04436e51cbfa4806049b55a765d22ecf2ba53",
+  "curriculumSha256": "eb081f5848bd31bd8d734680a2d88f6821b6b30fa5d9ff1d813d06872e8f71c3",
   "episodePaths": [],
   "minutes": 120,
   "status": "planned"

@@ -29,6 +29,7 @@
       "i:fridge"
     ],
     "需新增素材": [],
+    "沿用文件": [],
     "YouTube 關鍵字 1": "讀取鏈：衰減、環行器、放大器 quantum computing explained beginner",
     "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E8%AE%80%E5%8F%96%E9%8F%88%EF%BC%9A%E8%A1%B0%E6%B8%9B%E3%80%81%E7%92%B0%E8%A1%8C%E5%99%A8%E3%80%81%E6%94%BE%E5%A4%A7%E5%99%A8+quantum+computing+explained+beginner",
     "影片用途 1": "課前暖身",
@@ -39,7 +40,7 @@
     "YouTube 連結 3": "https://www.youtube.com/results?search_query=%E8%AE%80%E5%8F%96%E9%8F%88%EF%BC%9A%E8%A1%B0%E6%B8%9B%E3%80%81%E7%92%B0%E8%A1%8C%E5%99%A8%E3%80%81%E6%94%BE%E5%A4%A7%E5%99%A8+quantum+computing+lecture+visualization",
     "影片用途 3": "課後延伸"
   },
-  "curriculumSha256": "493446a21451c8a5c08a1723cfd04436e51cbfa4806049b55a765d22ecf2ba53",
+  "curriculumSha256": "eb081f5848bd31bd8d734680a2d88f6821b6b30fa5d9ff1d813d06872e8f71c3",
   "episodePaths": [],
   "minutes": 120,
   "status": "planned"

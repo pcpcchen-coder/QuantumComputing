@@ -35,7 +35,10 @@ operation.html#pulse
 ## 素材
 
 - 簡報：如何操作量子電腦（slides/QC_Operation_Talk.pptx）p20
+- 簡報：Transmon 筆記簡報（27 頁，含 3D 十二章導覽）（slides/transmon.pptx）p20
 - 3D 場景：[`o:pulse`](../../../animations/operation.html#pulse)
+- 3D 場景：[`tr:control`](../../../animations/transmon-3d.html#control)
+- 文件：超導量子電腦師生對話教學紀錄（docs/超導量子電腦師生對話教學紀錄.md）第 5 課
 
 生活技能支線：控制變因做實驗。課後延伸：15–30 分鐘自由改造；寫三句學習日誌：我做了什麼、哪裡卡住、下次想加什麼。
 

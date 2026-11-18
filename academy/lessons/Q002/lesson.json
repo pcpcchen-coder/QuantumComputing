@@ -33,6 +33,7 @@
     "需新增素材": [
       "★ o:qubit 兒童模式（只留 θ 與測量）"
     ],
+    "沿用文件": [],
     "YouTube 關鍵字 1": "硬幣與箭頭：位元 vs 量子位元 quantum computing explained beginner",
     "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E7%A1%AC%E5%B9%A3%E8%88%87%E7%AE%AD%E9%A0%AD%EF%BC%9A%E4%BD%8D%E5%85%83+vs+%E9%87%8F%E5%AD%90%E4%BD%8D%E5%85%83+quantum+computing+explained+beginner",
     "影片用途 1": "課前暖身",
@@ -43,7 +44,7 @@
     "YouTube 連結 3": "https://www.youtube.com/results?search_query=%E7%A1%AC%E5%B9%A3%E8%88%87%E7%AE%AD%E9%A0%AD%EF%BC%9A%E4%BD%8D%E5%85%83+vs+%E9%87%8F%E5%AD%90%E4%BD%8D%E5%85%83+quantum+computing+lecture+visualization",
     "影片用途 3": "課後延伸"
   },
-  "curriculumSha256": "493446a21451c8a5c08a1723cfd04436e51cbfa4806049b55a765d22ecf2ba53",
+  "curriculumSha256": "eb081f5848bd31bd8d734680a2d88f6821b6b30fa5d9ff1d813d06872e8f71c3",
   "episodePaths": [
     "academy/episodes/q002-coin-and-arrow",
     "academy/episodes/q002-coin-and-arrow-v2"

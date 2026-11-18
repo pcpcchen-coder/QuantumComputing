@@ -36,8 +36,9 @@ index.html#potential
 
 - 簡報：超導量子電腦的核心：JJ 與微波讀取（slides/JJ_Microwave_Readout_Talk.pptx）p15
 - 簡報：超導量子電腦的核心：JJ 與微波讀取（slides/JJ_Microwave_Readout_Talk.pptx）p19
-- 簡報：Transmon 筆記簡報（slides/transmon.pptx）p14–15
+- 簡報：Transmon 筆記簡報（27 頁，含 3D 十二章導覽）（slides/transmon.pptx）p14–15
 - 3D 場景：[`i:potential`](../../../animations/index.html#potential)
+- 3D 場景：[`tr:potential`](../../../animations/transmon-3d.html#potential)
 
 生活技能支線：在兩個互相衝突的目標中取捨。課後延伸：15–30 分鐘自由改造；寫三句學習日誌：我做了什麼、哪裡卡住、下次想加什麼。
 

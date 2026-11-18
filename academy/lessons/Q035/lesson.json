@@ -23,12 +23,22 @@
     "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q035｜色散位移 ±χ",
     "難度 1–5": 4,
     "沿用簡報頁": [
-      "超導量子電腦的核心：JJ 與微波讀取（slides/JJ_Microwave_Readout_Talk.pptx）p28–29"
+      "超導量子電腦的核心：JJ 與微波讀取（slides/JJ_Microwave_Readout_Talk.pptx）p28–29",
+      "Transmon 筆記簡報（27 頁，含 3D 十二章導覽）（slides/transmon.pptx）p20"
     ],
     "沿用 3D 場景": [
-      "i:dispersive"
+      "i:dispersive",
+      "tr:readout"
     ],
     "需新增素材": [],
+    "沿用文件": [
+      "超導量子電腦師生對話教學紀錄（docs/超導量子電腦師生對話教學紀錄.md）第 6 課"
+    ],
+    "2026-11-18 補充素材": [
+      "簡報 T p20",
+      "場景 tr:readout",
+      "文件 DLG 第 6 課"
+    ],
     "YouTube 關鍵字 1": "色散位移 ±χ quantum computing explained beginner",
     "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E8%89%B2%E6%95%A3%E4%BD%8D%E7%A7%BB+%C2%B1%CF%87+quantum+computing+explained+beginner",
     "影片用途 1": "課前暖身",
@@ -39,7 +49,7 @@
     "YouTube 連結 3": "https://www.youtube.com/results?search_query=%E8%89%B2%E6%95%A3%E4%BD%8D%E7%A7%BB+%C2%B1%CF%87+quantum+computing+lecture+visualization",
     "影片用途 3": "課後延伸"
   },
-  "curriculumSha256": "493446a21451c8a5c08a1723cfd04436e51cbfa4806049b55a765d22ecf2ba53",
+  "curriculumSha256": "eb081f5848bd31bd8d734680a2d88f6821b6b30fa5d9ff1d813d06872e8f71c3",
   "episodePaths": [],
   "minutes": 120,
   "status": "planned"

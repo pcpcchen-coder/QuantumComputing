@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "source": "academy/curriculum/lessons_data.py（由 build_curriculum.py 產生，不要手改）",
   "program": "父子科技學院 量子電腦學程",
-  "lessonCount": 96,
+  "lessonCount": 144,
   "modules": [
     {
       "id": "QM01",
@@ -45,6 +45,27 @@
       "stage": "第三階段 操作、平台與未來",
       "audience": "高中理組／大學／工程同仁；畢業專題與 Teach-back",
       "lessons": "Q081–Q096"
+    },
+    {
+      "id": "QM07",
+      "name": "超導量子電腦深入：師生對話十三課",
+      "stage": "第四階段 深化與產業",
+      "audience": "高中理組／大學／工程同仁；師生對話形式，transmon 3D 十二章逐章操作",
+      "lessons": "Q097–Q112"
+    },
+    {
+      "id": "QM08",
+      "name": "動手寫量子電路：從八個範例到自己的線路",
+      "stage": "第四階段 深化與產業",
+      "audience": "國中以上；逐步播放振幅長條、量測 1000 次，再用本機 Qiskit 模擬器重現",
+      "lessons": "Q113–Q128"
+    },
+    {
+      "id": "QM09",
+      "name": "量子電腦的供電與機房工程",
+      "stage": "第四階段 深化與產業",
+      "audience": "工程同仁、電力電子背景；把量子電腦當成一個要供電、要備援的工程系統",
+      "lessons": "Q129–Q144"
     }
   ],
   "classMinutes": "10／15／40／10／30／10／5",
@@ -86,6 +107,7 @@
         "需新增素材": [
           "◆ 學程地圖頁"
         ],
+        "沿用文件": [],
         "YouTube 關鍵字 1": "開學任務：量子電腦不是「更快的電腦」 quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E9%96%8B%E5%AD%B8%E4%BB%BB%E5%8B%99%EF%BC%9A%E9%87%8F%E5%AD%90%E9%9B%BB%E8%85%A6%E4%B8%8D%E6%98%AF%E3%80%8C%E6%9B%B4%E5%BF%AB%E7%9A%84%E9%9B%BB%E8%85%A6%E3%80%8D+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -132,6 +154,7 @@
         "需新增素材": [
           "★ o:qubit 兒童模式（只留 θ 與測量）"
         ],
+        "沿用文件": [],
         "YouTube 關鍵字 1": "硬幣與箭頭：位元 vs 量子位元 quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E7%A1%AC%E5%B9%A3%E8%88%87%E7%AE%AD%E9%A0%AD%EF%BC%9A%E4%BD%8D%E5%85%83+vs+%E9%87%8F%E5%AD%90%E4%BD%8D%E5%85%83+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -175,6 +198,7 @@
           "o:qubit"
         ],
         "需新增素材": [],
+        "沿用文件": [],
         "YouTube 關鍵字 1": "一看就變：測量與 shots quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E4%B8%80%E7%9C%8B%E5%B0%B1%E8%AE%8A%EF%BC%9A%E6%B8%AC%E9%87%8F%E8%88%87+shots+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -219,6 +243,7 @@
         "需新增素材": [
           "★ o:gates 目標態闖關模式"
         ],
+        "沿用文件": [],
         "YouTube 關鍵字 1": "量子閘就是轉箭頭 quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E9%87%8F%E5%AD%90%E9%96%98%E5%B0%B1%E6%98%AF%E8%BD%89%E7%AE%AD%E9%A0%AD+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -262,6 +287,7 @@
           "o:qubit"
         ],
         "需新增素材": [],
+        "沿用文件": [],
         "YouTube 關鍵字 1": "相位：看不見卻最重要 quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E7%9B%B8%E4%BD%8D%EF%BC%9A%E7%9C%8B%E4%B8%8D%E8%A6%8B%E5%8D%BB%E6%9C%80%E9%87%8D%E8%A6%81+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -298,13 +324,20 @@
         "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q006｜干涉：波可以互相抵消",
         "難度 1–5": 2,
         "沿用簡報頁": [
-          "如何操作量子電腦（slides/QC_Operation_Talk.pptx）p38"
+          "如何操作量子電腦（slides/QC_Operation_Talk.pptx）p38",
+          "量子電路入門：八個範例（slides/output/basic-circuits.pptx）p7–9"
         ],
         "沿用 3D 場景": [
-          "o:interference"
+          "o:interference",
+          "bc:interference"
         ],
         "需新增素材": [
           "★ 雙狹縫／Mach–Zehnder 干涉儀場景"
+        ],
+        "沿用文件": [],
+        "2026-11-18 補充素材": [
+          "簡報 G p7–9",
+          "場景 bc:interference"
         ],
         "YouTube 關鍵字 1": "干涉：波可以互相抵消 quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E5%B9%B2%E6%B6%89%EF%BC%9A%E6%B3%A2%E5%8F%AF%E4%BB%A5%E4%BA%92%E7%9B%B8%E6%8A%B5%E6%B6%88+quantum+computing+explained+beginner",
@@ -349,6 +382,7 @@
           "o:register"
         ],
         "需新增素材": [],
+        "沿用文件": [],
         "YouTube 關鍵字 1": "兩顆、三顆、五十顆：2ⁿ 有多大 quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E5%85%A9%E9%A1%86%E3%80%81%E4%B8%89%E9%A1%86%E3%80%81%E4%BA%94%E5%8D%81%E9%A1%86%EF%BC%9A2%E2%81%BF+%E6%9C%89%E5%A4%9A%E5%A4%A7+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -385,13 +419,20 @@
         "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q008｜糾纏：一對神祕骰子",
         "難度 1–5": 2,
         "沿用簡報頁": [
-          "如何操作量子電腦（slides/QC_Operation_Talk.pptx）p10"
+          "如何操作量子電腦（slides/QC_Operation_Talk.pptx）p10",
+          "量子電路入門：八個範例（slides/output/basic-circuits.pptx）p10–12"
         ],
         "沿用 3D 場景": [
-          "o:register"
+          "o:register",
+          "bc:bell"
         ],
         "需新增素材": [
           "★ CHSH 遊戲場景"
+        ],
+        "沿用文件": [],
+        "2026-11-18 補充素材": [
+          "簡報 G p10–12",
+          "場景 bc:bell"
         ],
         "YouTube 關鍵字 1": "糾纏：一對神祕骰子 quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E7%B3%BE%E7%BA%8F%EF%BC%9A%E4%B8%80%E5%B0%8D%E7%A5%9E%E7%A5%95%E9%AA%B0%E5%AD%90+quantum+computing+explained+beginner",
@@ -429,12 +470,19 @@
         "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q009｜量子線路像樂譜",
         "難度 1–5": 2,
         "沿用簡報頁": [
-          "如何操作量子電腦（slides/QC_Operation_Talk.pptx）p25"
+          "如何操作量子電腦（slides/QC_Operation_Talk.pptx）p25",
+          "量子電路入門：八個範例（slides/output/basic-circuits.pptx）p3–4"
         ],
         "沿用 3D 場景": [
-          "o:circuit"
+          "o:circuit",
+          "bc:superposition"
         ],
         "需新增素材": [],
+        "沿用文件": [],
+        "2026-11-18 補充素材": [
+          "簡報 G p3–4",
+          "場景 bc:superposition"
+        ],
         "YouTube 關鍵字 1": "量子線路像樂譜 quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E9%87%8F%E5%AD%90%E7%B7%9A%E8%B7%AF%E5%83%8F%E6%A8%82%E8%AD%9C+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -471,13 +519,21 @@
         "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q010｜第一個量子程式：Bell 態",
         "難度 1–5": 2,
         "沿用簡報頁": [
-          "如何操作量子電腦（slides/QC_Operation_Talk.pptx）p27"
+          "如何操作量子電腦（slides/QC_Operation_Talk.pptx）p27",
+          "量子電路入門：八個範例（slides/output/basic-circuits.pptx）p28"
         ],
         "沿用 3D 場景": [
-          "o:circuit"
+          "o:circuit",
+          "bc:bell"
         ],
         "需新增素材": [
           "★ 免安裝線路編輯器（工具）"
+        ],
+        "沿用文件": [],
+        "2026-11-18 補充素材": [
+          "簡報 G p28",
+          "場景 bc:bell",
+          "basic-circuits 已可逐步播放並量測 1／1000 次，可先替代線路編輯器"
         ],
         "YouTube 關鍵字 1": "第一個量子程式：Bell 態 quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E7%AC%AC%E4%B8%80%E5%80%8B%E9%87%8F%E5%AD%90%E7%A8%8B%E5%BC%8F%EF%BC%9ABell+%E6%85%8B+quantum+computing+explained+beginner",
@@ -514,12 +570,19 @@
         "錄音重點": "請孩子回答：1. 隱形傳態：傳狀態不傳東西在解決什麼？2. 我怎麼做？3. 哪裡容易錯？4. 生活中或真實的量子電腦哪裡會用到？",
         "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q011｜隱形傳態：傳狀態不傳東西",
         "難度 1–5": 2,
-        "沿用簡報頁": [],
-        "沿用 3D 場景": [
-          "o:circuit"
+        "沿用簡報頁": [
+          "量子電路入門：八個範例（slides/output/basic-circuits.pptx）p15–17"
         ],
-        "需新增素材": [
-          "◆ 漫畫分鏡頁"
+        "沿用 3D 場景": [
+          "o:circuit",
+          "bc:teleport"
+        ],
+        "需新增素材": [],
+        "沿用文件": [],
+        "2026-11-18 補充素材": [
+          "簡報 G p15–17",
+          "場景 bc:teleport",
+          "已有動畫，取消：◆ 漫畫分鏡頁"
         ],
         "YouTube 關鍵字 1": "隱形傳態：傳狀態不傳東西 quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E9%9A%B1%E5%BD%A2%E5%82%B3%E6%85%8B%EF%BC%9A%E5%82%B3%E7%8B%80%E6%85%8B%E4%B8%8D%E5%82%B3%E6%9D%B1%E8%A5%BF+quantum+computing+explained+beginner",
@@ -557,13 +620,24 @@
         "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q012｜Deutsch–Jozsa：一次看穿",
         "難度 1–5": 2,
         "沿用簡報頁": [
-          "如何操作量子電腦（slides/QC_Operation_Talk.pptx）p39"
+          "如何操作量子電腦（slides/QC_Operation_Talk.pptx）p39",
+          "《量子金魚》008 Deutsch 演算法報告簡報（slides/output/qfish008-deutsch-algorithm.pptx）p3–25",
+          "量子電路入門：八個範例（slides/output/basic-circuits.pptx）p18–20"
         ],
         "沿用 3D 場景": [
           "o:interference",
-          "o:circuit"
+          "o:circuit",
+          "bc:deutsch",
+          "tr:deutsch"
         ],
         "需新增素材": [],
+        "沿用文件": [],
+        "2026-11-18 補充素材": [
+          "簡報 F p3–25",
+          "簡報 G p18–20",
+          "場景 bc:deutsch",
+          "場景 tr:deutsch"
+        ],
         "YouTube 關鍵字 1": "Deutsch–Jozsa：一次看穿 quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=Deutsch%E2%80%93Jozsa%EF%BC%9A%E4%B8%80%E6%AC%A1%E7%9C%8B%E7%A9%BF+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -600,12 +674,21 @@
         "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q013｜Grover：16 個抽屜找寶藏",
         "難度 1–5": 2,
         "沿用簡報頁": [
-          "如何操作量子電腦（slides/QC_Operation_Talk.pptx）p40"
+          "如何操作量子電腦（slides/QC_Operation_Talk.pptx）p40",
+          "量子電路入門：八個範例（slides/output/basic-circuits.pptx）p23–27"
         ],
         "沿用 3D 場景": [
-          "o:grover"
+          "o:grover",
+          "bc:grover",
+          "tr:grover"
         ],
         "需新增素材": [],
+        "沿用文件": [],
+        "2026-11-18 補充素材": [
+          "簡報 G p23–27",
+          "場景 bc:grover",
+          "場景 tr:grover"
+        ],
         "YouTube 關鍵字 1": "Grover：16 個抽屜找寶藏 quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=Grover%EF%BC%9A16+%E5%80%8B%E6%8A%BD%E5%B1%9C%E6%89%BE%E5%AF%B6%E8%97%8F+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -649,6 +732,7 @@
           "i:bloch"
         ],
         "需新增素材": [],
+        "沿用文件": [],
         "YouTube 關鍵字 1": "量子態很怕吵：雜訊與退相干 quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E9%87%8F%E5%AD%90%E6%85%8B%E5%BE%88%E6%80%95%E5%90%B5%EF%BC%9A%E9%9B%9C%E8%A8%8A%E8%88%87%E9%80%80%E7%9B%B8%E5%B9%B2+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -695,6 +779,7 @@
         "需新增素材": [
           "◆ 關卡設計表"
         ],
+        "沿用文件": [],
         "YouTube 關鍵字 1": "迷你專案：量子逃脫室 quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E8%BF%B7%E4%BD%A0%E5%B0%88%E6%A1%88%EF%BC%9A%E9%87%8F%E5%AD%90%E9%80%83%E8%84%AB%E5%AE%A4+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -735,6 +820,7 @@
         "需新增素材": [
           "◆ 發表模板"
         ],
+        "沿用文件": [],
         "YouTube 關鍵字 1": "成果發表：我的量子小百科 quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E6%88%90%E6%9E%9C%E7%99%BC%E8%A1%A8%EF%BC%9A%E6%88%91%E7%9A%84%E9%87%8F%E5%AD%90%E5%B0%8F%E7%99%BE%E7%A7%91+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -776,6 +862,7 @@
         ],
         "沿用 3D 場景": [],
         "需新增素材": [],
+        "沿用文件": [],
         "YouTube 關鍵字 1": "為什麼要做「人造原子」 quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E7%82%BA%E4%BB%80%E9%BA%BC%E8%A6%81%E5%81%9A%E3%80%8C%E4%BA%BA%E9%80%A0%E5%8E%9F%E5%AD%90%E3%80%8D+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -818,6 +905,7 @@
           "i:cooper"
         ],
         "需新增素材": [],
+        "沿用文件": [],
         "YouTube 關鍵字 1": "超導：電阻消失、磁鐵懸浮 quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E8%B6%85%E5%B0%8E%EF%BC%9A%E9%9B%BB%E9%98%BB%E6%B6%88%E5%A4%B1%E3%80%81%E7%A3%81%E9%90%B5%E6%87%B8%E6%B5%AE+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -860,6 +948,7 @@
           "i:cooper"
         ],
         "需新增素材": [],
+        "沿用文件": [],
         "YouTube 關鍵字 1": "Cooper pair 與能隙 quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=Cooper+pair+%E8%88%87%E8%83%BD%E9%9A%99+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -902,6 +991,7 @@
         "需新增素材": [
           "★ 磁通量子化場景"
         ],
+        "沿用文件": [],
         "YouTube 關鍵字 1": "磁通量子化 Φ₀ = h/2e quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E7%A3%81%E9%80%9A%E9%87%8F%E5%AD%90%E5%8C%96+%CE%A6%E2%82%80+%3D+h%2F2e+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -939,11 +1029,19 @@
         "難度 1–5": 2,
         "沿用簡報頁": [
           "《量子超級英雄》#049 報告簡報（slides/output/ep049-superconducting-qubit.pptx）p6–8",
-          "Transmon 筆記簡報（slides/transmon.pptx）p8"
+          "Transmon 筆記簡報（27 頁，含 3D 十二章導覽）（slides/transmon.pptx）p8"
         ],
-        "沿用 3D 場景": [],
+        "沿用 3D 場景": [
+          "lj:s1",
+          "lj:s2"
+        ],
         "需新增素材": [
           "★ 彈簧 ↔ LC 類比場景"
+        ],
+        "沿用文件": [],
+        "2026-11-18 補充素材": [
+          "場景 lj:s1",
+          "場景 lj:s2"
         ],
         "YouTube 關鍵字 1": "彈簧、單擺與 LC 電路 quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E5%BD%88%E7%B0%A7%E3%80%81%E5%96%AE%E6%93%BA%E8%88%87+LC+%E9%9B%BB%E8%B7%AF+quantum+computing+explained+beginner",
@@ -982,12 +1080,19 @@
         "難度 1–5": 3,
         "沿用簡報頁": [
           "《量子超級英雄》#049 報告簡報（slides/output/ep049-superconducting-qubit.pptx）p7",
-          "《量子超級英雄》#049 報告簡報（slides/output/ep049-superconducting-qubit.pptx）p10"
+          "《量子超級英雄》#049 報告簡報（slides/output/ep049-superconducting-qubit.pptx）p10",
+          "Transmon 筆記簡報（27 頁，含 3D 十二章導覽）（slides/transmon.pptx）p14"
         ],
         "沿用 3D 場景": [
-          "i:potential"
+          "i:potential",
+          "lj:s3"
         ],
         "需新增素材": [],
+        "沿用文件": [],
+        "2026-11-18 補充素材": [
+          "簡報 T p14",
+          "場景 lj:s3"
+        ],
         "YouTube 關鍵字 1": "量子諧振子：等距的梯子 quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E9%87%8F%E5%AD%90%E8%AB%A7%E6%8C%AF%E5%AD%90%EF%BC%9A%E7%AD%89%E8%B7%9D%E7%9A%84%E6%A2%AF%E5%AD%90+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -1031,6 +1136,7 @@
           "i:jj"
         ],
         "需新增素材": [],
+        "沿用文件": [],
         "YouTube 關鍵字 1": "約瑟夫森接面：超導三明治 quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E7%B4%84%E7%91%9F%E5%A4%AB%E6%A3%AE%E6%8E%A5%E9%9D%A2%EF%BC%9A%E8%B6%85%E5%B0%8E%E4%B8%89%E6%98%8E%E6%B2%BB+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -1068,13 +1174,20 @@
         "難度 1–5": 3,
         "沿用簡報頁": [
           "超導量子電腦的核心：JJ 與微波讀取（slides/JJ_Microwave_Readout_Talk.pptx）p14",
-          "Transmon 筆記簡報（slides/transmon.pptx）p3–8",
+          "Transmon 筆記簡報（27 頁，含 3D 十二章導覽）（slides/transmon.pptx）p3–8",
           "《量子超級英雄》#049 報告簡報（slides/output/ep049-superconducting-qubit.pptx）p11–12"
         ],
         "沿用 3D 場景": [
-          "t3d"
+          "t3d",
+          "lj:s5",
+          "tr:junction"
         ],
         "需新增素材": [],
+        "沿用文件": [],
+        "2026-11-18 補充素材": [
+          "場景 lj:s5",
+          "場景 tr:junction"
+        ],
         "YouTube 關鍵字 1": "JJ 是非線性電感 quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=JJ+%E6%98%AF%E9%9D%9E%E7%B7%9A%E6%80%A7%E9%9B%BB%E6%84%9F+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -1113,12 +1226,17 @@
         "沿用簡報頁": [
           "超導量子電腦的核心：JJ 與微波讀取（slides/JJ_Microwave_Readout_Talk.pptx）p15",
           "超導量子電腦的核心：JJ 與微波讀取（slides/JJ_Microwave_Readout_Talk.pptx）p19",
-          "Transmon 筆記簡報（slides/transmon.pptx）p14–15"
+          "Transmon 筆記簡報（27 頁，含 3D 十二章導覽）（slides/transmon.pptx）p14–15"
         ],
         "沿用 3D 場景": [
-          "i:potential"
+          "i:potential",
+          "tr:potential"
         ],
         "需新增素材": [],
+        "沿用文件": [],
+        "2026-11-18 補充素材": [
+          "場景 tr:potential"
+        ],
         "YouTube 關鍵字 1": "E_J 與 E_C：兩個能量尺度 quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=E_J+%E8%88%87+E_C%EF%BC%9A%E5%85%A9%E5%80%8B%E8%83%BD%E9%87%8F%E5%B0%BA%E5%BA%A6+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -1161,6 +1279,7 @@
           "i:washboard"
         ],
         "需新增素材": [],
+        "沿用文件": [],
         "YouTube 關鍵字 1": "傾斜洗衣板 quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E5%82%BE%E6%96%9C%E6%B4%97%E8%A1%A3%E6%9D%BF+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -1197,12 +1316,22 @@
         "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q027｜SQUID：用磁場轉頻率",
         "難度 1–5": 4,
         "沿用簡報頁": [
-          "超導量子電腦的核心：JJ 與微波讀取（slides/JJ_Microwave_Readout_Talk.pptx）p17"
+          "超導量子電腦的核心：JJ 與微波讀取（slides/JJ_Microwave_Readout_Talk.pptx）p17",
+          "Transmon 筆記簡報（27 頁，含 3D 十二章導覽）（slides/transmon.pptx）p21"
         ],
         "沿用 3D 場景": [
-          "i:squid"
+          "i:squid",
+          "tr:case"
         ],
         "需新增素材": [],
+        "沿用文件": [
+          "超導量子電腦師生對話教學紀錄（docs/超導量子電腦師生對話教學紀錄.md）第 1–3 課"
+        ],
+        "2026-11-18 補充素材": [
+          "簡報 T p21",
+          "場景 tr:case",
+          "文件 DLG 第 1–3 課"
+        ],
         "YouTube 關鍵字 1": "SQUID：用磁場轉頻率 quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=SQUID%EF%BC%9A%E7%94%A8%E7%A3%81%E5%A0%B4%E8%BD%89%E9%A0%BB%E7%8E%87+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -1245,6 +1374,7 @@
         "需新增素材": [
           "◆ 圖鑑卡模板"
         ],
+        "沿用文件": [],
         "YouTube 關鍵字 1": "量子位元家族圖鑑 quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E9%87%8F%E5%AD%90%E4%BD%8D%E5%85%83%E5%AE%B6%E6%97%8F%E5%9C%96%E9%91%91+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -1287,6 +1417,7 @@
           "i:fab"
         ],
         "需新增素材": [],
+        "沿用文件": [],
         "YouTube 關鍵字 1": "晶片怎麼做：雙角度蒸鍍 quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E6%99%B6%E7%89%87%E6%80%8E%E9%BA%BC%E5%81%9A%EF%BC%9A%E9%9B%99%E8%A7%92%E5%BA%A6%E8%92%B8%E9%8D%8D+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -1324,12 +1455,17 @@
         "難度 1–5": 3,
         "沿用簡報頁": [
           "超導量子電腦的核心：JJ 與微波讀取（slides/JJ_Microwave_Readout_Talk.pptx）p27",
-          "Transmon 筆記簡報（slides/transmon.pptx）p10–12"
+          "Transmon 筆記簡報（27 頁，含 3D 十二章導覽）（slides/transmon.pptx）p10–12"
         ],
         "沿用 3D 場景": [
-          "i:chip"
+          "i:chip",
+          "tr:chip"
         ],
         "需新增素材": [],
+        "沿用文件": [],
+        "2026-11-18 補充素材": [
+          "場景 tr:chip"
+        ],
         "YouTube 關鍵字 1": "晶片長什麼樣子 quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E6%99%B6%E7%89%87%E9%95%B7%E4%BB%80%E9%BA%BC%E6%A8%A3%E5%AD%90+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -1373,6 +1509,7 @@
           "i:bloch"
         ],
         "需新增素材": [],
+        "沿用文件": [],
         "YouTube 關鍵字 1": "退相干：敵人在哪裡 quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E9%80%80%E7%9B%B8%E5%B9%B2%EF%BC%9A%E6%95%B5%E4%BA%BA%E5%9C%A8%E5%93%AA%E8%A3%A1+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -1411,7 +1548,7 @@
         "沿用簡報頁": [
           "超導量子電腦的核心：JJ 與微波讀取（slides/JJ_Microwave_Readout_Talk.pptx）p20",
           "超導量子電腦的核心：JJ 與微波讀取（slides/JJ_Microwave_Readout_Talk.pptx）p37",
-          "Transmon 筆記簡報（slides/transmon.pptx）p12"
+          "Transmon 筆記簡報（27 頁，含 3D 十二章導覽）（slides/transmon.pptx）p12"
         ],
         "沿用 3D 場景": [
           "i:potential"
@@ -1419,6 +1556,7 @@
         "需新增素材": [
           "★ transmon 參數設計器（工具）"
         ],
+        "沿用文件": [],
         "YouTube 關鍵字 1": "模組發表：設計我的 transmon quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E6%A8%A1%E7%B5%84%E7%99%BC%E8%A1%A8%EF%BC%9A%E8%A8%AD%E8%A8%88%E6%88%91%E7%9A%84+transmon+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -1459,6 +1597,7 @@
         ],
         "沿用 3D 場景": [],
         "需新增素材": [],
+        "沿用文件": [],
         "YouTube 關鍵字 1": "讀取要快、準、不破壞 quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E8%AE%80%E5%8F%96%E8%A6%81%E5%BF%AB%E3%80%81%E6%BA%96%E3%80%81%E4%B8%8D%E7%A0%B4%E5%A3%9E+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -1496,12 +1635,13 @@
         "難度 1–5": 3,
         "沿用簡報頁": [
           "超導量子電腦的核心：JJ 與微波讀取（slides/JJ_Microwave_Readout_Talk.pptx）p27",
-          "Transmon 筆記簡報（slides/transmon.pptx）p16"
+          "Transmon 筆記簡報（27 頁，含 3D 十二章導覽）（slides/transmon.pptx）p16"
         ],
         "沿用 3D 場景": [
           "i:chip"
         ],
         "需新增素材": [],
+        "沿用文件": [],
         "YouTube 關鍵字 1": "電路 QED：量子位元＋諧振腔 quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E9%9B%BB%E8%B7%AF+QED%EF%BC%9A%E9%87%8F%E5%AD%90%E4%BD%8D%E5%85%83%EF%BC%8B%E8%AB%A7%E6%8C%AF%E8%85%94+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -1538,12 +1678,22 @@
         "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q035｜色散位移 ±χ",
         "難度 1–5": 4,
         "沿用簡報頁": [
-          "超導量子電腦的核心：JJ 與微波讀取（slides/JJ_Microwave_Readout_Talk.pptx）p28–29"
+          "超導量子電腦的核心：JJ 與微波讀取（slides/JJ_Microwave_Readout_Talk.pptx）p28–29",
+          "Transmon 筆記簡報（27 頁，含 3D 十二章導覽）（slides/transmon.pptx）p20"
         ],
         "沿用 3D 場景": [
-          "i:dispersive"
+          "i:dispersive",
+          "tr:readout"
         ],
         "需新增素材": [],
+        "沿用文件": [
+          "超導量子電腦師生對話教學紀錄（docs/超導量子電腦師生對話教學紀錄.md）第 6 課"
+        ],
+        "2026-11-18 補充素材": [
+          "簡報 T p20",
+          "場景 tr:readout",
+          "文件 DLG 第 6 課"
+        ],
         "YouTube 關鍵字 1": "色散位移 ±χ quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E8%89%B2%E6%95%A3%E4%BD%8D%E7%A7%BB+%C2%B1%CF%87+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -1587,6 +1737,7 @@
           "i:iq"
         ],
         "需新增素材": [],
+        "沿用文件": [],
         "YouTube 關鍵字 1": "IQ 平面：把微波變成一個點 quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=IQ+%E5%B9%B3%E9%9D%A2%EF%BC%9A%E6%8A%8A%E5%BE%AE%E6%B3%A2%E8%AE%8A%E6%88%90%E4%B8%80%E5%80%8B%E9%BB%9E+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -1630,6 +1781,7 @@
           "o:readout"
         ],
         "需新增素材": [],
+        "沿用文件": [],
         "YouTube 關鍵字 1": "單發判別與保真度 quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E5%96%AE%E7%99%BC%E5%88%A4%E5%88%A5%E8%88%87%E4%BF%9D%E7%9C%9F%E5%BA%A6+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -1672,6 +1824,7 @@
           "i:fridge"
         ],
         "需新增素材": [],
+        "沿用文件": [],
         "YouTube 關鍵字 1": "讀取鏈：衰減、環行器、放大器 quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E8%AE%80%E5%8F%96%E9%8F%88%EF%BC%9A%E8%A1%B0%E6%B8%9B%E3%80%81%E7%92%B0%E8%A1%8C%E5%99%A8%E3%80%81%E6%94%BE%E5%A4%A7%E5%99%A8+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -1714,6 +1867,7 @@
         "需新增素材": [
           "★ 讀取參數計算器（工具）"
         ],
+        "沿用文件": [],
         "YouTube 關鍵字 1": "讀取設計的取捨 quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E8%AE%80%E5%8F%96%E8%A8%AD%E8%A8%88%E7%9A%84%E5%8F%96%E6%8D%A8+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -1756,6 +1910,7 @@
           "p:overview"
         ],
         "需新增素材": [],
+        "沿用文件": [],
         "YouTube 關鍵字 1": "量子電腦 ≠ 量子晶片 quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E9%87%8F%E5%AD%90%E9%9B%BB%E8%85%A6+%E2%89%A0+%E9%87%8F%E5%AD%90%E6%99%B6%E7%89%87+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -1796,6 +1951,7 @@
         ],
         "沿用 3D 場景": [],
         "需新增素材": [],
+        "沿用文件": [],
         "YouTube 關鍵字 1": "為什麼要 10 mK quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E7%82%BA%E4%BB%80%E9%BA%BC%E8%A6%81+10+mK+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -1838,6 +1994,7 @@
           "p:pulsetube"
         ],
         "需新增素材": [],
+        "沿用文件": [],
         "YouTube 關鍵字 1": "脈衝管與壓縮機 quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E8%84%88%E8%A1%9D%E7%AE%A1%E8%88%87%E5%A3%93%E7%B8%AE%E6%A9%9F+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -1880,6 +2037,7 @@
           "p:dilution"
         ],
         "需新增素材": [],
+        "沿用文件": [],
         "YouTube 關鍵字 1": "稀釋冷凍原理 quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E7%A8%80%E9%87%8B%E5%86%B7%E5%87%8D%E5%8E%9F%E7%90%86+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -1916,12 +2074,19 @@
         "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q044｜降溫一次要幾天",
         "難度 1–5": 3,
         "沿用簡報頁": [
-          "量子電腦的周邊系統（slides/QC_Peripheral_Systems_Talk.pptx）p12"
+          "量子電腦的周邊系統（slides/QC_Peripheral_Systems_Talk.pptx）p12",
+          "技術分享：量子電腦的供電設計（slides/output/qc-power-supply.pptx）p7–8"
         ],
         "沿用 3D 場景": [
-          "p:cooldown"
+          "p:cooldown",
+          "pw:outage"
         ],
         "需新增素材": [],
+        "沿用文件": [],
+        "2026-11-18 補充素材": [
+          "簡報 H p7–8",
+          "場景 pw:outage"
+        ],
         "YouTube 關鍵字 1": "降溫一次要幾天 quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E9%99%8D%E6%BA%AB%E4%B8%80%E6%AC%A1%E8%A6%81%E5%B9%BE%E5%A4%A9+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -1961,9 +2126,14 @@
           "量子電腦的周邊系統（slides/QC_Peripheral_Systems_Talk.pptx）p14–18"
         ],
         "沿用 3D 場景": [
-          "p:wiring"
+          "p:wiring",
+          "pw:heat"
         ],
         "需新增素材": [],
+        "沿用文件": [],
+        "2026-11-18 補充素材": [
+          "場景 pw:heat"
+        ],
         "YouTube 關鍵字 1": "低溫佈線與熱負載 quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E4%BD%8E%E6%BA%AB%E4%BD%88%E7%B7%9A%E8%88%87%E7%86%B1%E8%B2%A0%E8%BC%89+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -2006,6 +2176,7 @@
           "p:electronics"
         ],
         "需新增素材": [],
+        "沿用文件": [],
         "YouTube 關鍵字 1": "控制電子與時脈 quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E6%8E%A7%E5%88%B6%E9%9B%BB%E5%AD%90%E8%88%87%E6%99%82%E8%84%88+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -2049,6 +2220,7 @@
           "p:monitor"
         ],
         "需新增素材": [],
+        "沿用文件": [],
         "YouTube 關鍵字 1": "軟體、監控與聯鎖 quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E8%BB%9F%E9%AB%94%E3%80%81%E7%9B%A3%E6%8E%A7%E8%88%87%E8%81%AF%E9%8E%96+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -2085,13 +2257,25 @@
         "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q048｜從零到上線",
         "難度 1–5": 4,
         "沿用簡報頁": [
-          "量子電腦的周邊系統（slides/QC_Peripheral_Systems_Talk.pptx）p30–38"
+          "量子電腦的周邊系統（slides/QC_Peripheral_Systems_Talk.pptx）p30–38",
+          "技術分享：量子電腦的供電設計（slides/output/qc-power-supply.pptx）p18–25"
         ],
         "沿用 3D 場景": [
           "p:infra",
-          "p:bringup"
+          "p:bringup",
+          "pw:ground",
+          "pw:field"
         ],
         "需新增素材": [],
+        "沿用文件": [
+          "量子電腦供電設計：文獻回顧與我們的切入點（docs/量子電腦供電設計文獻回顧與我們切入點.md）§3"
+        ],
+        "2026-11-18 補充素材": [
+          "簡報 H p18–25",
+          "場景 pw:ground",
+          "場景 pw:field",
+          "文件 PWR §3"
+        ],
         "YouTube 關鍵字 1": "從零到上線 quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E5%BE%9E%E9%9B%B6%E5%88%B0%E4%B8%8A%E7%B7%9A+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -2135,6 +2319,7 @@
           "o:workflow"
         ],
         "需新增素材": [],
+        "沿用文件": [],
         "YouTube 關鍵字 1": "一次量子計算的生命週期 quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E4%B8%80%E6%AC%A1%E9%87%8F%E5%AD%90%E8%A8%88%E7%AE%97%E7%9A%84%E7%94%9F%E5%91%BD%E9%80%B1%E6%9C%9F+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -2177,6 +2362,7 @@
           "p:bringup"
         ],
         "需新增素材": [],
+        "沿用文件": [],
         "YouTube 關鍵字 1": "初始化與校準 quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E5%88%9D%E5%A7%8B%E5%8C%96%E8%88%87%E6%A0%A1%E6%BA%96+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -2219,6 +2405,7 @@
         "需新增素材": [
           "◆ 後端資料範例（虛構，標示清楚）"
         ],
+        "沿用文件": [],
         "YouTube 關鍵字 1": "看懂後端校準資料 quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E7%9C%8B%E6%87%82%E5%BE%8C%E7%AB%AF%E6%A0%A1%E6%BA%96%E8%B3%87%E6%96%99+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -2255,12 +2442,22 @@
         "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q052｜微波脈衝：面積與相位",
         "難度 1–5": 4,
         "沿用簡報頁": [
-          "如何操作量子電腦（slides/QC_Operation_Talk.pptx）p20"
+          "如何操作量子電腦（slides/QC_Operation_Talk.pptx）p20",
+          "Transmon 筆記簡報（27 頁，含 3D 十二章導覽）（slides/transmon.pptx）p20"
         ],
         "沿用 3D 場景": [
-          "o:pulse"
+          "o:pulse",
+          "tr:control"
         ],
         "需新增素材": [],
+        "沿用文件": [
+          "超導量子電腦師生對話教學紀錄（docs/超導量子電腦師生對話教學紀錄.md）第 5 課"
+        ],
+        "2026-11-18 補充素材": [
+          "簡報 T p20",
+          "場景 tr:control",
+          "文件 DLG 第 5 課"
+        ],
         "YouTube 關鍵字 1": "微波脈衝：面積與相位 quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E5%BE%AE%E6%B3%A2%E8%84%88%E8%A1%9D%EF%BC%9A%E9%9D%A2%E7%A9%8D%E8%88%87%E7%9B%B8%E4%BD%8D+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -2300,9 +2497,14 @@
           "如何操作量子電腦（slides/QC_Operation_Talk.pptx）p21"
         ],
         "沿用 3D 場景": [
-          "o:pulse"
+          "o:pulse",
+          "lj:s6drag"
         ],
         "需新增素材": [],
+        "沿用文件": [],
+        "2026-11-18 補充素材": [
+          "場景 lj:s6drag"
+        ],
         "YouTube 關鍵字 1": "DRAG 與虛擬 Z quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=DRAG+%E8%88%87%E8%99%9B%E6%93%AC+Z+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -2345,6 +2547,7 @@
           "o:gates"
         ],
         "需新增素材": [],
+        "沿用文件": [],
         "YouTube 關鍵字 1": "任意旋轉 = 三個旋轉 quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E4%BB%BB%E6%84%8F%E6%97%8B%E8%BD%89+%3D+%E4%B8%89%E5%80%8B%E6%97%8B%E8%BD%89+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -2381,12 +2584,22 @@
         "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q055｜兩位元閘：CZ 與交叉共振",
         "難度 1–5": 4,
         "沿用簡報頁": [
-          "如何操作量子電腦（slides/QC_Operation_Talk.pptx）p22–24"
+          "如何操作量子電腦（slides/QC_Operation_Talk.pptx）p22–24",
+          "Transmon 筆記簡報（27 頁，含 3D 十二章導覽）（slides/transmon.pptx）p21"
         ],
         "沿用 3D 場景": [
-          "o:twoqubit"
+          "o:twoqubit",
+          "tr:case"
         ],
         "需新增素材": [],
+        "沿用文件": [
+          "超導量子電腦師生對話教學紀錄（docs/超導量子電腦師生對話教學紀錄.md）第 4 課"
+        ],
+        "2026-11-18 補充素材": [
+          "簡報 T p21",
+          "場景 tr:case",
+          "文件 DLG 第 4 課"
+        ],
         "YouTube 關鍵字 1": "兩位元閘：CZ 與交叉共振 quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E5%85%A9%E4%BD%8D%E5%85%83%E9%96%98%EF%BC%9ACZ+%E8%88%87%E4%BA%A4%E5%8F%89%E5%85%B1%E6%8C%AF+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -2423,11 +2636,21 @@
         "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q056｜轉譯：邏輯線路到硬體",
         "難度 1–5": 4,
         "沿用簡報頁": [
-          "如何操作量子電腦（slides/QC_Operation_Talk.pptx）p26"
+          "如何操作量子電腦（slides/QC_Operation_Talk.pptx）p26",
+          "Transmon 筆記簡報（27 頁，含 3D 十二章導覽）（slides/transmon.pptx）p27"
         ],
-        "沿用 3D 場景": [],
-        "需新增素材": [
-          "★ 耦合圖路由場景"
+        "沿用 3D 場景": [
+          "tr:stack"
+        ],
+        "需新增素材": [],
+        "沿用文件": [
+          "超導量子電腦師生對話教學紀錄（docs/超導量子電腦師生對話教學紀錄.md）第 13 課"
+        ],
+        "2026-11-18 補充素材": [
+          "簡報 T p27",
+          "場景 tr:stack",
+          "文件 DLG 第 13 課",
+          "已有動畫，取消：★ 耦合圖路由場景"
         ],
         "YouTube 關鍵字 1": "轉譯：邏輯線路到硬體 quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E8%BD%89%E8%AD%AF%EF%BC%9A%E9%82%8F%E8%BC%AF%E7%B7%9A%E8%B7%AF%E5%88%B0%E7%A1%AC%E9%AB%94+quantum+computing+explained+beginner",
@@ -2465,13 +2688,23 @@
         "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q057｜Qiskit 實作：Bell 與 GHZ",
         "難度 1–5": 4,
         "沿用簡報頁": [
-          "如何操作量子電腦（slides/QC_Operation_Talk.pptx）p27"
+          "如何操作量子電腦（slides/QC_Operation_Talk.pptx）p27",
+          "量子電路入門：八個範例（slides/output/basic-circuits.pptx）p28–29"
         ],
         "沿用 3D 場景": [
-          "o:circuit"
+          "o:circuit",
+          "bc:bell",
+          "bc:ghz"
         ],
         "需新增素材": [
           "◆ notebook 範例（本機模擬器）"
+        ],
+        "沿用文件": [],
+        "2026-11-18 補充素材": [
+          "簡報 G p28–29",
+          "場景 bc:bell",
+          "場景 bc:ghz",
+          "basic-circuits 每個範例都附會隨選項改變的 Qiskit 程式碼"
         ],
         "YouTube 關鍵字 1": "Qiskit 實作：Bell 與 GHZ quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=Qiskit+%E5%AF%A6%E4%BD%9C%EF%BC%9ABell+%E8%88%87+GHZ+quantum+computing+explained+beginner",
@@ -2516,6 +2749,7 @@
           "o:readout"
         ],
         "需新增素材": [],
+        "沿用文件": [],
         "YouTube 關鍵字 1": "量測基底與期望值 quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E9%87%8F%E6%B8%AC%E5%9F%BA%E5%BA%95%E8%88%87%E6%9C%9F%E6%9C%9B%E5%80%BC+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -2558,6 +2792,7 @@
           "o:readout"
         ],
         "需新增素材": [],
+        "沿用文件": [],
         "YouTube 關鍵字 1": "shots、統計誤差與讀取誤差緩解 quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=shots%E3%80%81%E7%B5%B1%E8%A8%88%E8%AA%A4%E5%B7%AE%E8%88%87%E8%AE%80%E5%8F%96%E8%AA%A4%E5%B7%AE%E7%B7%A9%E8%A7%A3+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -2602,6 +2837,7 @@
         "需新增素材": [
           "★ 中途量測與回饋場景"
         ],
+        "沿用文件": [],
         "YouTube 關鍵字 1": "動態線路 quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E5%8B%95%E6%85%8B%E7%B7%9A%E8%B7%AF+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -2644,6 +2880,7 @@
         "需新增素材": [
           "★ 相位估計場景"
         ],
+        "沿用文件": [],
         "YouTube 關鍵字 1": "QFT 與相位估計 quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=QFT+%E8%88%87%E7%9B%B8%E4%BD%8D%E4%BC%B0%E8%A8%88+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -2680,12 +2917,22 @@
         "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q062｜Shor：用干涉找週期",
         "難度 1–5": 5,
         "沿用簡報頁": [
-          "如何操作量子電腦（slides/QC_Operation_Talk.pptx）p41"
+          "如何操作量子電腦（slides/QC_Operation_Talk.pptx）p41",
+          "Transmon 筆記簡報（27 頁，含 3D 十二章導覽）（slides/transmon.pptx）p23"
         ],
         "沿用 3D 場景": [
-          "o:shor"
+          "o:shor",
+          "tr:shor"
         ],
         "需新增素材": [],
+        "沿用文件": [
+          "超導量子電腦師生對話教學紀錄（docs/超導量子電腦師生對話教學紀錄.md）第 10 課"
+        ],
+        "2026-11-18 補充素材": [
+          "簡報 T p23",
+          "場景 tr:shor",
+          "文件 DLG 第 10 課"
+        ],
         "YouTube 關鍵字 1": "Shor：用干涉找週期 quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=Shor%EF%BC%9A%E7%94%A8%E5%B9%B2%E6%B6%89%E6%89%BE%E9%80%B1%E6%9C%9F+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -2727,6 +2974,7 @@
         ],
         "沿用 3D 場景": [],
         "需新增素材": [],
+        "沿用文件": [],
         "YouTube 關鍵字 1": "快在哪？加速的等級 quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E5%BF%AB%E5%9C%A8%E5%93%AA%EF%BC%9F%E5%8A%A0%E9%80%9F%E7%9A%84%E7%AD%89%E7%B4%9A+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -2769,6 +3017,7 @@
         "需新增素材": [
           "◆ 模擬器操作指引"
         ],
+        "沿用文件": [],
         "YouTube 關鍵字 1": "模組專題：在模擬器跑我的線路 quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E6%A8%A1%E7%B5%84%E5%B0%88%E9%A1%8C%EF%BC%9A%E5%9C%A8%E6%A8%A1%E6%93%AC%E5%99%A8%E8%B7%91%E6%88%91%E7%9A%84%E7%B7%9A%E8%B7%AF+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -2809,6 +3058,7 @@
         ],
         "沿用 3D 場景": [],
         "需新增素材": [],
+        "沿用文件": [],
         "YouTube 關鍵字 1": "人造原子 vs 真的原子 quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E4%BA%BA%E9%80%A0%E5%8E%9F%E5%AD%90+vs+%E7%9C%9F%E7%9A%84%E5%8E%9F%E5%AD%90+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -2851,6 +3101,7 @@
           "a:paul"
         ],
         "需新增素材": [],
+        "沿用文件": [],
         "YouTube 關鍵字 1": "Paul 阱：旋轉鞍形電場 quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=Paul+%E9%98%B1%EF%BC%9A%E6%97%8B%E8%BD%89%E9%9E%8D%E5%BD%A2%E9%9B%BB%E5%A0%B4+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -2894,6 +3145,7 @@
           "a:ionsys"
         ],
         "需新增素材": [],
+        "沿用文件": [],
         "YouTube 關鍵字 1": "離子阱系統全景 quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E9%9B%A2%E5%AD%90%E9%98%B1%E7%B3%BB%E7%B5%B1%E5%85%A8%E6%99%AF+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -2936,6 +3188,7 @@
           "a:ionqubit"
         ],
         "需新增素材": [],
+        "沿用文件": [],
         "YouTube 關鍵字 1": "¹⁷¹Yb⁺ 量子位元與雷射冷卻 quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=%C2%B9%E2%81%B7%C2%B9Yb%E2%81%BA+%E9%87%8F%E5%AD%90%E4%BD%8D%E5%85%83%E8%88%87%E9%9B%B7%E5%B0%84%E5%86%B7%E5%8D%BB+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -2978,6 +3231,7 @@
           "a:modes"
         ],
         "需新增素材": [],
+        "沿用文件": [],
         "YouTube 關鍵字 1": "離子鏈的集體振動 quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E9%9B%A2%E5%AD%90%E9%8F%88%E7%9A%84%E9%9B%86%E9%AB%94%E6%8C%AF%E5%8B%95+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -3020,6 +3274,7 @@
           "a:ms"
         ],
         "需新增素材": [],
+        "沿用文件": [],
         "YouTube 關鍵字 1": "Mølmer–Sørensen 閘 quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=M%C3%B8lmer%E2%80%93S%C3%B8rensen+%E9%96%98+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -3063,6 +3318,7 @@
           "a:qccd"
         ],
         "需新增素材": [],
+        "沿用文件": [],
         "YouTube 關鍵字 1": "螢光讀取與 QCCD quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E8%9E%A2%E5%85%89%E8%AE%80%E5%8F%96%E8%88%87+QCCD+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -3106,6 +3362,7 @@
           "a:tweezer"
         ],
         "需新增素材": [],
+        "沿用文件": [],
         "YouTube 關鍵字 1": "磁光阱與光鑷 quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E7%A3%81%E5%85%89%E9%98%B1%E8%88%87%E5%85%89%E9%91%B7+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -3150,6 +3407,7 @@
         "需新增素材": [
           "★ a:tweezer 玩家重排模式"
         ],
+        "沿用文件": [],
         "YouTube 關鍵字 1": "裝載與重排 quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E8%A3%9D%E8%BC%89%E8%88%87%E9%87%8D%E6%8E%92+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -3193,6 +3451,7 @@
           "a:atomqubit"
         ],
         "需新增素材": [],
+        "沿用文件": [],
         "YouTube 關鍵字 1": "芮德堡阻斷與 CZ quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E8%8A%AE%E5%BE%B7%E5%A0%A1%E9%98%BB%E6%96%B7%E8%88%87+CZ+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -3236,6 +3495,7 @@
           "a:imaging"
         ],
         "需新增素材": [],
+        "沿用文件": [],
         "YouTube 關鍵字 1": "分區架構與成像讀取 quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E5%88%86%E5%8D%80%E6%9E%B6%E6%A7%8B%E8%88%87%E6%88%90%E5%83%8F%E8%AE%80%E5%8F%96+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -3278,6 +3538,7 @@
         "需新增素材": [
           "★ 芮德堡陣列有序相場景"
         ],
+        "沿用文件": [],
         "YouTube 關鍵字 1": "類比量子模擬 quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E9%A1%9E%E6%AF%94%E9%87%8F%E5%AD%90%E6%A8%A1%E6%93%AC+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -3319,6 +3580,7 @@
           "◆ 新簡報：光子平台",
           "★ 光子干涉儀／玻色取樣場景"
         ],
+        "沿用文件": [],
         "YouTube 關鍵字 1": "光子量子電腦 quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E5%85%89%E5%AD%90%E9%87%8F%E5%AD%90%E9%9B%BB%E8%85%A6+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -3360,6 +3622,7 @@
           "◆ 新簡報：半導體自旋平台",
           "★ 量子點場景"
         ],
+        "沿用文件": [],
         "YouTube 關鍵字 1": "半導體自旋量子位元 quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E5%8D%8A%E5%B0%8E%E9%AB%94%E8%87%AA%E6%97%8B%E9%87%8F%E5%AD%90%E4%BD%8D%E5%85%83+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -3401,6 +3664,7 @@
           "◆ 新簡報：拓樸與 NV 色心",
           "★ 編織（braiding）示意場景"
         ],
+        "沿用文件": [],
         "YouTube 關鍵字 1": "拓樸量子位元與 NV 色心 quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E6%8B%93%E6%A8%B8%E9%87%8F%E5%AD%90%E4%BD%8D%E5%85%83%E8%88%87+NV+%E8%89%B2%E5%BF%83+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -3437,13 +3701,21 @@
         "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q080｜平台大比較與供電分析",
         "難度 1–5": 4,
         "沿用簡報頁": [
-          "離子阱與中性原子量子電腦（slides/Ion_NeutralAtom_Talk.pptx）p38–45"
+          "離子阱與中性原子量子電腦（slides/Ion_NeutralAtom_Talk.pptx）p38–45",
+          "技術分享：量子電腦的供電設計（slides/output/qc-power-supply.pptx）p44–46"
         ],
         "沿用 3D 場景": [
           "a:compare"
         ],
         "需新增素材": [
           "◆ 補光子、自旋、拓樸三欄"
+        ],
+        "沿用文件": [
+          "量子電腦供電設計：文獻回顧與我們的切入點（docs/量子電腦供電設計文獻回顧與我們切入點.md）§16–18"
+        ],
+        "2026-11-18 補充素材": [
+          "簡報 H p44–46",
+          "文件 PWR §16–18"
         ],
         "YouTube 關鍵字 1": "平台大比較與供電分析 quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E5%B9%B3%E5%8F%B0%E5%A4%A7%E6%AF%94%E8%BC%83%E8%88%87%E4%BE%9B%E9%9B%BB%E5%88%86%E6%9E%90+quantum+computing+explained+beginner",
@@ -3485,6 +3757,7 @@
         ],
         "沿用 3D 場景": [],
         "需新增素材": [],
+        "沿用文件": [],
         "YouTube 關鍵字 1": "錯誤預算：線路能跑多深 quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E9%8C%AF%E8%AA%A4%E9%A0%90%E7%AE%97%EF%BC%9A%E7%B7%9A%E8%B7%AF%E8%83%BD%E8%B7%91%E5%A4%9A%E6%B7%B1+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -3527,6 +3800,7 @@
         "需新增素材": [
           "★ 零雜訊外插場景"
         ],
+        "沿用文件": [],
         "YouTube 關鍵字 1": "錯誤緩解 quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E9%8C%AF%E8%AA%A4%E7%B7%A9%E8%A7%A3+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -3568,6 +3842,7 @@
           "◆ 新簡報：重複碼",
           "★ 重複碼場景"
         ],
+        "沿用文件": [],
         "YouTube 關鍵字 1": "重複碼：最簡單的錯誤更正 quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E9%87%8D%E8%A4%87%E7%A2%BC%EF%BC%9A%E6%9C%80%E7%B0%A1%E5%96%AE%E7%9A%84%E9%8C%AF%E8%AA%A4%E6%9B%B4%E6%AD%A3+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -3604,12 +3879,22 @@
         "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q084｜表面碼",
         "難度 1–5": 5,
         "沿用簡報頁": [
-          "如何操作量子電腦（slides/QC_Operation_Talk.pptx）p49"
+          "如何操作量子電腦（slides/QC_Operation_Talk.pptx）p49",
+          "Transmon 筆記簡報（27 頁，含 3D 十二章導覽）（slides/transmon.pptx）p25"
         ],
         "沿用 3D 場景": [
-          "o:qec"
+          "o:qec",
+          "tr:surface"
         ],
         "需新增素材": [],
+        "沿用文件": [
+          "超導量子電腦師生對話教學紀錄（docs/超導量子電腦師生對話教學紀錄.md）第 11 課"
+        ],
+        "2026-11-18 補充素材": [
+          "簡報 T p25",
+          "場景 tr:surface",
+          "文件 DLG 第 11 課"
+        ],
         "YouTube 關鍵字 1": "表面碼 quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E8%A1%A8%E9%9D%A2%E7%A2%BC+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -3646,12 +3931,19 @@
         "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q085｜低於門檻",
         "難度 1–5": 5,
         "沿用簡報頁": [
-          "如何操作量子電腦（slides/QC_Operation_Talk.pptx）p50"
+          "如何操作量子電腦（slides/QC_Operation_Talk.pptx）p50",
+          "Transmon 筆記簡報（27 頁，含 3D 十二章導覽）（slides/transmon.pptx）p25"
         ],
         "沿用 3D 場景": [
-          "o:qec"
+          "o:qec",
+          "tr:surface"
         ],
         "需新增素材": [],
+        "沿用文件": [],
+        "2026-11-18 補充素材": [
+          "簡報 T p25",
+          "場景 tr:surface"
+        ],
         "YouTube 關鍵字 1": "低於門檻 quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E4%BD%8E%E6%96%BC%E9%96%80%E6%AA%BB+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -3687,11 +3979,23 @@
         "錄音重點": "請孩子回答：1. 邏輯閘與魔術態在解決什麼？2. 我怎麼做？3. 哪裡容易錯？4. 生活中或真實的量子電腦哪裡會用到？",
         "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q086｜邏輯閘與魔術態",
         "難度 1–5": 5,
-        "沿用簡報頁": [],
-        "沿用 3D 場景": [],
+        "沿用簡報頁": [
+          "Transmon 筆記簡報（27 頁，含 3D 十二章導覽）（slides/transmon.pptx）p26"
+        ],
+        "沿用 3D 場景": [
+          "tr:surgery"
+        ],
         "需新增素材": [
-          "◆ 新簡報：邏輯閘與魔術態",
-          "★ lattice surgery 示意場景"
+          "◆ 新簡報：邏輯閘與魔術態"
+        ],
+        "沿用文件": [
+          "超導量子電腦師生對話教學紀錄（docs/超導量子電腦師生對話教學紀錄.md）第 12 課"
+        ],
+        "2026-11-18 補充素材": [
+          "簡報 T p26",
+          "場景 tr:surgery",
+          "文件 DLG 第 12 課",
+          "已有動畫，取消：★ lattice surgery 示意場景"
         ],
         "YouTube 關鍵字 1": "邏輯閘與魔術態 quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E9%82%8F%E8%BC%AF%E9%96%98%E8%88%87%E9%AD%94%E8%A1%93%E6%85%8B+quantum+computing+explained+beginner",
@@ -3734,6 +4038,7 @@
           "◆ 新簡報：VQE 與 QAOA",
           "★ 變分能量地形場景"
         ],
+        "沿用文件": [],
         "YouTube 關鍵字 1": "變分演算法：VQE 與 QAOA quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E8%AE%8A%E5%88%86%E6%BC%94%E7%AE%97%E6%B3%95%EF%BC%9AVQE+%E8%88%87+QAOA+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -3776,6 +4081,7 @@
         "需新增素材": [
           "◆ 新簡報＋notebook"
         ],
+        "沿用文件": [],
         "YouTube 關鍵字 1": "量子化學與材料 quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E9%87%8F%E5%AD%90%E5%8C%96%E5%AD%B8%E8%88%87%E6%9D%90%E6%96%99+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -3818,6 +4124,7 @@
         "需新增素材": [
           "◆ 新簡報：炒作與現實"
         ],
+        "沿用文件": [],
         "YouTube 關鍵字 1": "最佳化與機器學習：炒作與現實 quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E6%9C%80%E4%BD%B3%E5%8C%96%E8%88%87%E6%A9%9F%E5%99%A8%E5%AD%B8%E7%BF%92%EF%BC%9A%E7%82%92%E4%BD%9C%E8%88%87%E7%8F%BE%E5%AF%A6+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -3859,6 +4166,7 @@
           "◆ 新簡報：BB84",
           "★ BB84 場景"
         ],
+        "沿用文件": [],
         "YouTube 關鍵字 1": "量子密碼：BB84 quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E9%87%8F%E5%AD%90%E5%AF%86%E7%A2%BC%EF%BC%9ABB84+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -3903,6 +4211,7 @@
         "需新增素材": [
           "◆ 新簡報：後量子密碼"
         ],
+        "沿用文件": [],
         "YouTube 關鍵字 1": "Shor 之後：後量子密碼 quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=Shor+%E4%B9%8B%E5%BE%8C%EF%BC%9A%E5%BE%8C%E9%87%8F%E5%AD%90%E5%AF%86%E7%A2%BC+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -3948,6 +4257,7 @@
           "◆ 新簡報：量子感測",
           "★ Ramsey 干涉感測場景"
         ],
+        "沿用文件": [],
         "YouTube 關鍵字 1": "量子感測與原子鐘 quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E9%87%8F%E5%AD%90%E6%84%9F%E6%B8%AC%E8%88%87%E5%8E%9F%E5%AD%90%E9%90%98+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -3992,6 +4302,7 @@
         "需新增素材": [
           "◆ 年度更新頁"
         ],
+        "沿用文件": [],
         "YouTube 關鍵字 1": "產業地圖與發展路線 quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E7%94%A2%E6%A5%AD%E5%9C%B0%E5%9C%96%E8%88%87%E7%99%BC%E5%B1%95%E8%B7%AF%E7%B7%9A+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -4032,6 +4343,7 @@
         "需新增素材": [
           "◆ 提案模板"
         ],
+        "沿用文件": [],
         "YouTube 關鍵字 1": "畢業專題提案 quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E7%95%A2%E6%A5%AD%E5%B0%88%E9%A1%8C%E6%8F%90%E6%A1%88+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -4070,6 +4382,7 @@
         "沿用簡報頁": [],
         "沿用 3D 場景": [],
         "需新增素材": [],
+        "沿用文件": [],
         "YouTube 關鍵字 1": "畢業專題製作 quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E7%95%A2%E6%A5%AD%E5%B0%88%E9%A1%8C%E8%A3%BD%E4%BD%9C+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -4110,6 +4423,7 @@
         "需新增素材": [
           "◆ 發表模板"
         ],
+        "沿用文件": [],
         "YouTube 關鍵字 1": "畢業 Teach-back：換孩子教爸爸 quantum computing explained beginner",
         "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E7%95%A2%E6%A5%AD+Teach-back%EF%BC%9A%E6%8F%9B%E5%AD%A9%E5%AD%90%E6%95%99%E7%88%B8%E7%88%B8+quantum+computing+explained+beginner",
         "影片用途 1": "課前暖身",
@@ -4118,6 +4432,2199 @@
         "影片用途 2": "課中實作參考",
         "YouTube 關鍵字 3": "畢業 Teach-back：換孩子教爸爸 quantum computing lecture visualization",
         "YouTube 連結 3": "https://www.youtube.com/results?search_query=%E7%95%A2%E6%A5%AD+Teach-back%EF%BC%9A%E6%8F%9B%E5%AD%A9%E5%AD%90%E6%95%99%E7%88%B8%E7%88%B8+quantum+computing+lecture+visualization",
+        "影片用途 3": "課後延伸"
+      }
+    },
+    {
+      "lessonId": "Q097",
+      "sourceRow": {
+        "總課次": 97,
+        "學程": "量子電腦學程",
+        "階段": "第四階段 深化與產業",
+        "模組": "QM07 超導量子電腦深入：師生對話十三課",
+        "模組內課次": 1,
+        "課程主題": "導覽：一顆 transmon 的十二章旅程",
+        "對象與上課方式": "高中理組／大學／工程同仁；師生對話形式，transmon 3D 十二章逐章操作",
+        "學習目標": "用 transmon 3D 十二章與師生對話課程地圖，建立從晶片到軟體堆疊的整體路線",
+        "2 小時課程流程": "00–10 任務開場：導覽：一顆 transmon 的十二章旅程\n10–25 概念示範：用 transmon 3D 十二章與師生對話課程地圖，建立從晶片到軟體堆疊的整體路線\n25–65 父子共同實作：打開 transmon-3d 逐章走一遍，每章寫一句「這章在回答什麼問題」\n65–75 休息／走動／聊天\n75–105 孩子獨立改造：把十二章排成一張自己的心智圖，標出最想深入的三章\n105–115 角色互換：孩子教爸爸操作與原理\n115–120 錄音總結、作品命名、版本存檔",
+        "動手任務": "打開 transmon-3d 逐章走一遍，每章寫一句「這章在回答什麼問題」",
+        "孩子獨立改造": "把十二章排成一張自己的心智圖，標出最想深入的三章",
+        "好玩機制": "冒險任務",
+        "作品／交付": "十二章路線心智圖",
+        "生活技能支線": "先看全貌再鑽細節",
+        "家長課前準備": "transmon-3d.html；師生對話紀錄的課程地圖",
+        "課後延伸": "15–30 分鐘自由改造；寫三句學習日誌：我做了什麼、哪裡卡住、下次想加什麼。",
+        "驗收標準": "完成「十二章路線心智圖」；能不用看稿說出核心原理；能指出至少一個錯誤、限制或注意事項（例如：3D 模型未按比例，數值是本系列範例參數，不是某一顆實際晶片）。",
+        "常見誤解與安全提醒": "3D 模型未按比例，數值是本系列範例參數，不是某一顆實際晶片",
+        "錄音重點": "請孩子回答：1. 導覽：一顆 transmon 的十二章旅程在解決什麼？2. 我怎麼做？3. 哪裡容易錯？4. 生活中或真實的量子電腦哪裡會用到？",
+        "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q097｜導覽：一顆 transmon 的十二章旅程",
+        "難度 1–5": 4,
+        "沿用簡報頁": [
+          "Transmon 筆記簡報（27 頁，含 3D 十二章導覽）（slides/transmon.pptx）p18–19"
+        ],
+        "沿用 3D 場景": [
+          "tr:chip"
+        ],
+        "需新增素材": [],
+        "沿用文件": [
+          "超導量子電腦師生對話教學紀錄（docs/超導量子電腦師生對話教學紀錄.md）課程地圖"
+        ],
+        "YouTube 關鍵字 1": "導覽：一顆 transmon 的十二章旅程 quantum computing explained beginner",
+        "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E5%B0%8E%E8%A6%BD%EF%BC%9A%E4%B8%80%E9%A1%86+transmon+%E7%9A%84%E5%8D%81%E4%BA%8C%E7%AB%A0%E6%97%85%E7%A8%8B+quantum+computing+explained+beginner",
+        "影片用途 1": "課前暖身",
+        "YouTube 關鍵字 2": "導覽：一顆 transmon 的十二章旅程 用 transmon 3D 十二章與師生 hands on demo",
+        "YouTube 連結 2": "https://www.youtube.com/results?search_query=%E5%B0%8E%E8%A6%BD%EF%BC%9A%E4%B8%80%E9%A1%86+transmon+%E7%9A%84%E5%8D%81%E4%BA%8C%E7%AB%A0%E6%97%85%E7%A8%8B+%E7%94%A8+transmon+3D+%E5%8D%81%E4%BA%8C%E7%AB%A0%E8%88%87%E5%B8%AB%E7%94%9F+hands+on+demo",
+        "影片用途 2": "課中實作參考",
+        "YouTube 關鍵字 3": "導覽：一顆 transmon 的十二章旅程 quantum computing lecture visualization",
+        "YouTube 連結 3": "https://www.youtube.com/results?search_query=%E5%B0%8E%E8%A6%BD%EF%BC%9A%E4%B8%80%E9%A1%86+transmon+%E7%9A%84%E5%8D%81%E4%BA%8C%E7%AB%A0%E6%97%85%E7%A8%8B+quantum+computing+lecture+visualization",
+        "影片用途 3": "課後延伸"
+      }
+    },
+    {
+      "lessonId": "Q098",
+      "sourceRow": {
+        "總課次": 98,
+        "學程": "量子電腦學程",
+        "階段": "第四階段 深化與產業",
+        "模組": "QM07 超導量子電腦深入：師生對話十三課",
+        "模組內課次": 2,
+        "課程主題": "LC 與 JJ：線性和非線性的差別",
+        "對象與上課方式": "高中理組／大學／工程同仁；師生對話形式，transmon 3D 十二章逐章操作",
+        "學習目標": "用 2D 圖解看懂為什麼 LC 是線性、JJ 是非線性，以及非線性如何挑出 |0⟩ 和 |1⟩",
+        "2 小時課程流程": "00–10 任務開場：LC 與 JJ：線性和非線性的差別\n10–25 概念示範：用 2D 圖解看懂為什麼 LC 是線性、JJ 是非線性，以及非線性如何挑出 |0⟩ 和 |1⟩\n25–65 父子共同實作：依 lc-vs-jj 圖解第 1–5 步，比較直線與正弦的電流–磁通關係、拋物線與餘弦位能的能階\n65–75 休息／走動／聊天\n75–105 孩子獨立改造：用第 4 步說明：為什麼線性 LC 停不在 |1⟩\n105–115 角色互換：孩子教爸爸操作與原理\n115–120 錄音總結、作品命名、版本存檔",
+        "動手任務": "依 lc-vs-jj 圖解第 1–5 步，比較直線與正弦的電流–磁通關係、拋物線與餘弦位能的能階",
+        "孩子獨立改造": "用第 4 步說明：為什麼線性 LC 停不在 |1⟩",
+        "好玩機制": "科學實驗",
+        "作品／交付": "線性 vs 非線性對照表",
+        "生活技能支線": "用對照表整理差異",
+        "家長課前準備": "lc-vs-jj.html",
+        "課後延伸": "15–30 分鐘自由改造；寫三句學習日誌：我做了什麼、哪裡卡住、下次想加什麼。",
+        "驗收標準": "完成「線性 vs 非線性對照表」；能不用看稿說出核心原理；能指出至少一個錯誤、限制或注意事項（例如：「非線性」指的是電流和磁通的關係不是直線，不是電路會亂跳）。",
+        "常見誤解與安全提醒": "「非線性」指的是電流和磁通的關係不是直線，不是電路會亂跳",
+        "錄音重點": "請孩子回答：1. LC 與 JJ：線性和非線性的差別在解決什麼？2. 我怎麼做？3. 哪裡容易錯？4. 生活中或真實的量子電腦哪裡會用到？",
+        "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q098｜LC 與 JJ：線性和非線性的差別",
+        "難度 1–5": 4,
+        "沿用簡報頁": [
+          "Transmon 筆記簡報（27 頁，含 3D 十二章導覽）（slides/transmon.pptx）p4–8",
+          "Transmon 筆記簡報（27 頁，含 3D 十二章導覽）（slides/transmon.pptx）p14"
+        ],
+        "沿用 3D 場景": [
+          "lj:s1",
+          "lj:s3",
+          "lj:s4",
+          "lj:s5"
+        ],
+        "需新增素材": [],
+        "沿用文件": [],
+        "YouTube 關鍵字 1": "LC 與 JJ：線性和非線性的差別 quantum computing explained beginner",
+        "YouTube 連結 1": "https://www.youtube.com/results?search_query=LC+%E8%88%87+JJ%EF%BC%9A%E7%B7%9A%E6%80%A7%E5%92%8C%E9%9D%9E%E7%B7%9A%E6%80%A7%E7%9A%84%E5%B7%AE%E5%88%A5+quantum+computing+explained+beginner",
+        "影片用途 1": "課前暖身",
+        "YouTube 關鍵字 2": "LC 與 JJ：線性和非線性的差別 用 2D 圖解看懂為什麼 LC 是線性、 hands on demo",
+        "YouTube 連結 2": "https://www.youtube.com/results?search_query=LC+%E8%88%87+JJ%EF%BC%9A%E7%B7%9A%E6%80%A7%E5%92%8C%E9%9D%9E%E7%B7%9A%E6%80%A7%E7%9A%84%E5%B7%AE%E5%88%A5+%E7%94%A8+2D+%E5%9C%96%E8%A7%A3%E7%9C%8B%E6%87%82%E7%82%BA%E4%BB%80%E9%BA%BC+LC+%E6%98%AF%E7%B7%9A%E6%80%A7%E3%80%81+hands+on+demo",
+        "影片用途 2": "課中實作參考",
+        "YouTube 關鍵字 3": "LC 與 JJ：線性和非線性的差別 quantum computing lecture visualization",
+        "YouTube 連結 3": "https://www.youtube.com/results?search_query=LC+%E8%88%87+JJ%EF%BC%9A%E7%B7%9A%E6%80%A7%E5%92%8C%E9%9D%9E%E7%B7%9A%E6%80%A7%E7%9A%84%E5%B7%AE%E5%88%A5+quantum+computing+lecture+visualization",
+        "影片用途 3": "課後延伸"
+      }
+    },
+    {
+      "lessonId": "Q099",
+      "sourceRow": {
+        "總課次": 99,
+        "學程": "量子電腦學程",
+        "階段": "第四階段 深化與產業",
+        "模組": "QM07 超導量子電腦深入：師生對話十三課",
+        "模組內課次": 3,
+        "課程主題": "第 1 課：SQUID 干涉之後能做什麼",
+        "對象與上課方式": "高中理組／大學／工程同仁；師生對話形式，transmon 3D 十二章逐章操作",
+        "學習目標": "知道 SQUID 把兩個 JJ 並聯，用磁通調整等效 E_J 與頻率",
+        "2 小時課程流程": "00–10 任務開場：第 1 課：SQUID 干涉之後能做什麼\n10–25 概念示範：知道 SQUID 把兩個 JJ 並聯，用磁通調整等效 E_J 與頻率\n25–65 父子共同實作：照師生對話第 1 課，一人當老師、一人當學生讀一遍，再到 3D 動畫調磁通\n65–75 休息／走動／聊天\n75–105 孩子獨立改造：自己出一題問老師：如果磁通調太多會怎樣\n105–115 角色互換：孩子教爸爸操作與原理\n115–120 錄音總結、作品命名、版本存檔",
+        "動手任務": "照師生對話第 1 課，一人當老師、一人當學生讀一遍，再到 3D 動畫調磁通",
+        "孩子獨立改造": "自己出一題問老師：如果磁通調太多會怎樣",
+        "好玩機制": "角色扮演（師生對話）",
+        "作品／交付": "SQUID 調頻筆記",
+        "生活技能支線": "用提問推進理解",
+        "家長課前準備": "師生對話第 1 課；transmon-3d#case",
+        "課後延伸": "15–30 分鐘自由改造；寫三句學習日誌：我做了什麼、哪裡卡住、下次想加什麼。",
+        "驗收標準": "完成「SQUID 調頻筆記」；能不用看稿說出核心原理；能指出至少一個錯誤、限制或注意事項（例如：可調頻率也會帶來磁通雜訊；甜蜜點只是一階不敏感）。",
+        "常見誤解與安全提醒": "可調頻率也會帶來磁通雜訊；甜蜜點只是一階不敏感",
+        "錄音重點": "請孩子回答：1. 第 1 課：SQUID 干涉之後能做什麼在解決什麼？2. 我怎麼做？3. 哪裡容易錯？4. 生活中或真實的量子電腦哪裡會用到？",
+        "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q099｜第 1 課：SQUID 干涉之後能做什麼",
+        "難度 1–5": 4,
+        "沿用簡報頁": [
+          "Transmon 筆記簡報（27 頁，含 3D 十二章導覽）（slides/transmon.pptx）p21",
+          "超導量子電腦的核心：JJ 與微波讀取（slides/JJ_Microwave_Readout_Talk.pptx）p17"
+        ],
+        "沿用 3D 場景": [
+          "tr:case",
+          "i:squid"
+        ],
+        "需新增素材": [],
+        "沿用文件": [
+          "超導量子電腦師生對話教學紀錄（docs/超導量子電腦師生對話教學紀錄.md）第 1 課"
+        ],
+        "YouTube 關鍵字 1": "第 1 課：SQUID 干涉之後能做什麼 quantum computing explained beginner",
+        "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E7%AC%AC+1+%E8%AA%B2%EF%BC%9ASQUID+%E5%B9%B2%E6%B6%89%E4%B9%8B%E5%BE%8C%E8%83%BD%E5%81%9A%E4%BB%80%E9%BA%BC+quantum+computing+explained+beginner",
+        "影片用途 1": "課前暖身",
+        "YouTube 關鍵字 2": "第 1 課：SQUID 干涉之後能做什麼 知道 SQUID 把兩個 JJ 並聯，用 hands on demo",
+        "YouTube 連結 2": "https://www.youtube.com/results?search_query=%E7%AC%AC+1+%E8%AA%B2%EF%BC%9ASQUID+%E5%B9%B2%E6%B6%89%E4%B9%8B%E5%BE%8C%E8%83%BD%E5%81%9A%E4%BB%80%E9%BA%BC+%E7%9F%A5%E9%81%93+SQUID+%E6%8A%8A%E5%85%A9%E5%80%8B+JJ+%E4%B8%A6%E8%81%AF%EF%BC%8C%E7%94%A8+hands+on+demo",
+        "影片用途 2": "課中實作參考",
+        "YouTube 關鍵字 3": "第 1 課：SQUID 干涉之後能做什麼 quantum computing lecture visualization",
+        "YouTube 連結 3": "https://www.youtube.com/results?search_query=%E7%AC%AC+1+%E8%AA%B2%EF%BC%9ASQUID+%E5%B9%B2%E6%B6%89%E4%B9%8B%E5%BE%8C%E8%83%BD%E5%81%9A%E4%BB%80%E9%BA%BC+quantum+computing+lecture+visualization",
+        "影片用途 3": "課後延伸"
+      }
+    },
+    {
+      "lessonId": "Q100",
+      "sourceRow": {
+        "總課次": 100,
+        "學程": "量子電腦學程",
+        "階段": "第四階段 深化與產業",
+        "模組": "QM07 超導量子電腦深入：師生對話十三課",
+        "模組內課次": 4,
+        "課程主題": "第 2 課：transmon 怎麼寫入狀態",
+        "對象與上課方式": "高中理組／大學／工程同仁；師生對話形式，transmon 3D 十二章逐章操作",
+        "學習目標": "分清楚 XY 線的微波寫入與 Z 線的磁通調頻各自的角色",
+        "2 小時課程流程": "00–10 任務開場：第 2 課：transmon 怎麼寫入狀態\n10–25 概念示範：分清楚 XY 線的微波寫入與 Z 線的磁通調頻各自的角色\n25–65 父子共同實作：在 3D 動畫送 π 脈衝，再用 Z 線調頻，記錄兩種操作造成的不同效果\n65–75 休息／走動／聊天\n75–105 孩子獨立改造：畫一張「哪條線做什麼」的接線圖\n105–115 角色互換：孩子教爸爸操作與原理\n115–120 錄音總結、作品命名、版本存檔",
+        "動手任務": "在 3D 動畫送 π 脈衝，再用 Z 線調頻，記錄兩種操作造成的不同效果",
+        "孩子獨立改造": "畫一張「哪條線做什麼」的接線圖",
+        "好玩機制": "闖關",
+        "作品／交付": "XY／Z 線分工圖",
+        "生活技能支線": "分清楚每個控制鈕的功能",
+        "家長課前準備": "師生對話第 2 課；transmon-3d#chip、#case",
+        "課後延伸": "15–30 分鐘自由改造；寫三句學習日誌：我做了什麼、哪裡卡住、下次想加什麼。",
+        "驗收標準": "完成「XY／Z 線分工圖」；能不用看稿說出核心原理；能指出至少一個錯誤、限制或注意事項（例如：寫入用的是微波脈衝；Z 線改變頻率，本身不會把 |0⟩ 變成 |1⟩）。",
+        "常見誤解與安全提醒": "寫入用的是微波脈衝；Z 線改變頻率，本身不會把 |0⟩ 變成 |1⟩",
+        "錄音重點": "請孩子回答：1. 第 2 課：transmon 怎麼寫入狀態在解決什麼？2. 我怎麼做？3. 哪裡容易錯？4. 生活中或真實的量子電腦哪裡會用到？",
+        "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q100｜第 2 課：transmon 怎麼寫入狀態",
+        "難度 1–5": 4,
+        "沿用簡報頁": [
+          "Transmon 筆記簡報（27 頁，含 3D 十二章導覽）（slides/transmon.pptx）p16",
+          "Transmon 筆記簡報（27 頁，含 3D 十二章導覽）（slides/transmon.pptx）p21"
+        ],
+        "沿用 3D 場景": [
+          "tr:chip",
+          "tr:case"
+        ],
+        "需新增素材": [],
+        "沿用文件": [
+          "超導量子電腦師生對話教學紀錄（docs/超導量子電腦師生對話教學紀錄.md）第 2 課"
+        ],
+        "YouTube 關鍵字 1": "第 2 課：transmon 怎麼寫入狀態 quantum computing explained beginner",
+        "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E7%AC%AC+2+%E8%AA%B2%EF%BC%9Atransmon+%E6%80%8E%E9%BA%BC%E5%AF%AB%E5%85%A5%E7%8B%80%E6%85%8B+quantum+computing+explained+beginner",
+        "影片用途 1": "課前暖身",
+        "YouTube 關鍵字 2": "第 2 課：transmon 怎麼寫入狀態 分清楚 XY 線的微波寫入與 Z 線的磁 hands on demo",
+        "YouTube 連結 2": "https://www.youtube.com/results?search_query=%E7%AC%AC+2+%E8%AA%B2%EF%BC%9Atransmon+%E6%80%8E%E9%BA%BC%E5%AF%AB%E5%85%A5%E7%8B%80%E6%85%8B+%E5%88%86%E6%B8%85%E6%A5%9A+XY+%E7%B7%9A%E7%9A%84%E5%BE%AE%E6%B3%A2%E5%AF%AB%E5%85%A5%E8%88%87+Z+%E7%B7%9A%E7%9A%84%E7%A3%81+hands+on+demo",
+        "影片用途 2": "課中實作參考",
+        "YouTube 關鍵字 3": "第 2 課：transmon 怎麼寫入狀態 quantum computing lecture visualization",
+        "YouTube 連結 3": "https://www.youtube.com/results?search_query=%E7%AC%AC+2+%E8%AA%B2%EF%BC%9Atransmon+%E6%80%8E%E9%BA%BC%E5%AF%AB%E5%85%A5%E7%8B%80%E6%85%8B+quantum+computing+lecture+visualization",
+        "影片用途 3": "課後延伸"
+      }
+    },
+    {
+      "lessonId": "Q101",
+      "sourceRow": {
+        "總課次": 101,
+        "學程": "量子電腦學程",
+        "階段": "第四階段 深化與產業",
+        "模組": "QM07 超導量子電腦深入：師生對話十三課",
+        "模組內課次": 5,
+        "課程主題": "第 3 課：迷思修正——Z 線不是把位元調成一樣",
+        "對象與上課方式": "高中理組／大學／工程同仁；師生對話形式，transmon 3D 十二章逐章操作",
+        "學習目標": "修正「Z 線是把每顆位元調成相同」的迷思，理解失諧與耦合",
+        "2 小時課程流程": "00–10 任務開場：第 3 課：迷思修正——Z 線不是把位元調成一樣\n10–25 概念示範：修正「Z 線是把每顆位元調成相同」的迷思，理解失諧與耦合\n25–65 父子共同實作：在案例章把三顆位元的頻率調近再調開，觀察耦合何時打開\n65–75 休息／走動／聊天\n75–105 孩子獨立改造：寫一段 30 秒的迷思修正說明\n105–115 角色互換：孩子教爸爸操作與原理\n115–120 錄音總結、作品命名、版本存檔",
+        "動手任務": "在案例章把三顆位元的頻率調近再調開，觀察耦合何時打開",
+        "孩子獨立改造": "寫一段 30 秒的迷思修正說明",
+        "好玩機制": "偵探辦案",
+        "作品／交付": "迷思修正卡",
+        "生活技能支線": "找出自己的錯誤觀念並改正",
+        "家長課前準備": "師生對話第 3 課；transmon-3d#case",
+        "課後延伸": "15–30 分鐘自由改造；寫三句學習日誌：我做了什麼、哪裡卡住、下次想加什麼。",
+        "驗收標準": "完成「迷思修正卡」；能不用看稿說出核心原理；能指出至少一個錯誤、限制或注意事項（例如：頻率太近會發生碰撞與串擾；配置時要刻意錯開）。",
+        "常見誤解與安全提醒": "頻率太近會發生碰撞與串擾；配置時要刻意錯開",
+        "錄音重點": "請孩子回答：1. 第 3 課：迷思修正——Z 線不是把位元調成一樣在解決什麼？2. 我怎麼做？3. 哪裡容易錯？4. 生活中或真實的量子電腦哪裡會用到？",
+        "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q101｜第 3 課：迷思修正——Z 線不是把位元調成一樣",
+        "難度 1–5": 4,
+        "沿用簡報頁": [
+          "Transmon 筆記簡報（27 頁，含 3D 十二章導覽）（slides/transmon.pptx）p21"
+        ],
+        "沿用 3D 場景": [
+          "tr:case"
+        ],
+        "需新增素材": [],
+        "沿用文件": [
+          "超導量子電腦師生對話教學紀錄（docs/超導量子電腦師生對話教學紀錄.md）第 3 課"
+        ],
+        "YouTube 關鍵字 1": "第 3 課：迷思修正——Z 線不是把位元調成一樣 quantum computing explained beginner",
+        "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E7%AC%AC+3+%E8%AA%B2%EF%BC%9A%E8%BF%B7%E6%80%9D%E4%BF%AE%E6%AD%A3%E2%80%94%E2%80%94Z+%E7%B7%9A%E4%B8%8D%E6%98%AF%E6%8A%8A%E4%BD%8D%E5%85%83%E8%AA%BF%E6%88%90%E4%B8%80%E6%A8%A3+quantum+computing+explained+beginner",
+        "影片用途 1": "課前暖身",
+        "YouTube 關鍵字 2": "第 3 課：迷思修正——Z 線不是把位元調成一樣 修正「Z 線是把每顆位元調成相同」的迷思 hands on demo",
+        "YouTube 連結 2": "https://www.youtube.com/results?search_query=%E7%AC%AC+3+%E8%AA%B2%EF%BC%9A%E8%BF%B7%E6%80%9D%E4%BF%AE%E6%AD%A3%E2%80%94%E2%80%94Z+%E7%B7%9A%E4%B8%8D%E6%98%AF%E6%8A%8A%E4%BD%8D%E5%85%83%E8%AA%BF%E6%88%90%E4%B8%80%E6%A8%A3+%E4%BF%AE%E6%AD%A3%E3%80%8CZ+%E7%B7%9A%E6%98%AF%E6%8A%8A%E6%AF%8F%E9%A1%86%E4%BD%8D%E5%85%83%E8%AA%BF%E6%88%90%E7%9B%B8%E5%90%8C%E3%80%8D%E7%9A%84%E8%BF%B7%E6%80%9D+hands+on+demo",
+        "影片用途 2": "課中實作參考",
+        "YouTube 關鍵字 3": "第 3 課：迷思修正——Z 線不是把位元調成一樣 quantum computing lecture visualization",
+        "YouTube 連結 3": "https://www.youtube.com/results?search_query=%E7%AC%AC+3+%E8%AA%B2%EF%BC%9A%E8%BF%B7%E6%80%9D%E4%BF%AE%E6%AD%A3%E2%80%94%E2%80%94Z+%E7%B7%9A%E4%B8%8D%E6%98%AF%E6%8A%8A%E4%BD%8D%E5%85%83%E8%AA%BF%E6%88%90%E4%B8%80%E6%A8%A3+quantum+computing+lecture+visualization",
+        "影片用途 3": "課後延伸"
+      }
+    },
+    {
+      "lessonId": "Q102",
+      "sourceRow": {
+        "總課次": 102,
+        "學程": "量子電腦學程",
+        "階段": "第四階段 深化與產業",
+        "模組": "QM07 超導量子電腦深入：師生對話十三課",
+        "模組內課次": 6,
+        "課程主題": "第 4 課：頻率配置與頻率碰撞",
+        "對象與上課方式": "高中理組／大學／工程同仁；師生對話形式，transmon 3D 十二章逐章操作",
+        "學習目標": "知道多顆可調 transmon 要錯開頻率，認識幾種常見碰撞",
+        "2 小時課程流程": "00–10 任務開場：第 4 課：頻率配置與頻率碰撞\n10–25 概念示範：知道多顆可調 transmon 要錯開頻率，認識幾種常見碰撞\n25–65 父子共同實作：替三顆位元排一組頻率，在 3D 動畫檢查有沒有碰撞\n65–75 休息／走動／聊天\n75–105 孩子獨立改造：把位元數增加到五顆（紙上），排出不碰撞的頻率表\n105–115 角色互換：孩子教爸爸操作與原理\n115–120 錄音總結、作品命名、版本存檔",
+        "動手任務": "替三顆位元排一組頻率，在 3D 動畫檢查有沒有碰撞",
+        "孩子獨立改造": "把位元數增加到五顆（紙上），排出不碰撞的頻率表",
+        "好玩機制": "Boss 戰（排頻率）",
+        "作品／交付": "頻率配置表",
+        "生活技能支線": "在多個限制下排程",
+        "家長課前準備": "師生對話第 4 課；transmon-3d#case",
+        "課後延伸": "15–30 分鐘自由改造；寫三句學習日誌：我做了什麼、哪裡卡住、下次想加什麼。",
+        "驗收標準": "完成「頻率配置表」；能不用看稿說出核心原理；能指出至少一個錯誤、限制或注意事項（例如：頻率配置還受製程誤差影響；設計值和實測值會不同）。",
+        "常見誤解與安全提醒": "頻率配置還受製程誤差影響；設計值和實測值會不同",
+        "錄音重點": "請孩子回答：1. 第 4 課：頻率配置與頻率碰撞在解決什麼？2. 我怎麼做？3. 哪裡容易錯？4. 生活中或真實的量子電腦哪裡會用到？",
+        "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q102｜第 4 課：頻率配置與頻率碰撞",
+        "難度 1–5": 5,
+        "沿用簡報頁": [
+          "Transmon 筆記簡報（27 頁，含 3D 十二章導覽）（slides/transmon.pptx）p21",
+          "如何操作量子電腦（slides/QC_Operation_Talk.pptx）p23"
+        ],
+        "沿用 3D 場景": [
+          "tr:case"
+        ],
+        "需新增素材": [],
+        "沿用文件": [
+          "超導量子電腦師生對話教學紀錄（docs/超導量子電腦師生對話教學紀錄.md）第 4 課"
+        ],
+        "YouTube 關鍵字 1": "第 4 課：頻率配置與頻率碰撞 quantum computing explained beginner",
+        "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E7%AC%AC+4+%E8%AA%B2%EF%BC%9A%E9%A0%BB%E7%8E%87%E9%85%8D%E7%BD%AE%E8%88%87%E9%A0%BB%E7%8E%87%E7%A2%B0%E6%92%9E+quantum+computing+explained+beginner",
+        "影片用途 1": "課前暖身",
+        "YouTube 關鍵字 2": "第 4 課：頻率配置與頻率碰撞 知道多顆可調 transmon 要錯開頻 hands on demo",
+        "YouTube 連結 2": "https://www.youtube.com/results?search_query=%E7%AC%AC+4+%E8%AA%B2%EF%BC%9A%E9%A0%BB%E7%8E%87%E9%85%8D%E7%BD%AE%E8%88%87%E9%A0%BB%E7%8E%87%E7%A2%B0%E6%92%9E+%E7%9F%A5%E9%81%93%E5%A4%9A%E9%A1%86%E5%8F%AF%E8%AA%BF+transmon+%E8%A6%81%E9%8C%AF%E9%96%8B%E9%A0%BB+hands+on+demo",
+        "影片用途 2": "課中實作參考",
+        "YouTube 關鍵字 3": "第 4 課：頻率配置與頻率碰撞 quantum computing lecture visualization",
+        "YouTube 連結 3": "https://www.youtube.com/results?search_query=%E7%AC%AC+4+%E8%AA%B2%EF%BC%9A%E9%A0%BB%E7%8E%87%E9%85%8D%E7%BD%AE%E8%88%87%E9%A0%BB%E7%8E%87%E7%A2%B0%E6%92%9E+quantum+computing+lecture+visualization",
+        "影片用途 3": "課後延伸"
+      }
+    },
+    {
+      "lessonId": "Q103",
+      "sourceRow": {
+        "總課次": 103,
+        "學程": "量子電腦學程",
+        "階段": "第四階段 深化與產業",
+        "模組": "QM07 超導量子電腦深入：師生對話十三課",
+        "模組內課次": 7,
+        "課程主題": "第 5 課：能階、共振與拉比振盪",
+        "對象與上課方式": "高中理組／大學／工程同仁；師生對話形式，transmon 3D 十二章逐章操作",
+        "學習目標": "理解微波只在相鄰能階對得上時才被吸收，以及沒有 JJ 時會一路漏上去",
+        "2 小時課程流程": "00–10 任務開場：第 5 課：能階、共振與拉比振盪\n10–25 概念示範：理解微波只在相鄰能階對得上時才被吸收，以及沒有 JJ 時會一路漏上去\n25–65 父子共同實作：在第 3、4 章比較「有 JJ／沒有 JJ」送 π 脈衝的結果\n65–75 休息／走動／聊天\n75–105 孩子獨立改造：解釋為什麼持續驅動 40 ns 會轉一圈回到 |0⟩\n105–115 角色互換：孩子教爸爸操作與原理\n115–120 錄音總結、作品命名、版本存檔",
+        "動手任務": "在第 3、4 章比較「有 JJ／沒有 JJ」送 π 脈衝的結果",
+        "孩子獨立改造": "解釋為什麼持續驅動 40 ns 會轉一圈回到 |0⟩",
+        "好玩機制": "科學實驗",
+        "作品／交付": "拉比振盪觀察紀錄",
+        "生活技能支線": "共振：對上頻率才有效",
+        "家長課前準備": "師生對話第 5 課；transmon-3d#potential、#control",
+        "課後延伸": "15–30 分鐘自由改造；寫三句學習日誌：我做了什麼、哪裡卡住、下次想加什麼。",
+        "驗收標準": "完成「拉比振盪觀察紀錄」；能不用看稿說出核心原理；能指出至少一個錯誤、限制或注意事項（例如：「來回振盪」不是在 0、1 之間跳來跳去，中間每一刻都是疊加態）。",
+        "常見誤解與安全提醒": "「來回振盪」不是在 0、1 之間跳來跳去，中間每一刻都是疊加態",
+        "錄音重點": "請孩子回答：1. 第 5 課：能階、共振與拉比振盪在解決什麼？2. 我怎麼做？3. 哪裡容易錯？4. 生活中或真實的量子電腦哪裡會用到？",
+        "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q103｜第 5 課：能階、共振與拉比振盪",
+        "難度 1–5": 5,
+        "沿用簡報頁": [
+          "Transmon 筆記簡報（27 頁，含 3D 十二章導覽）（slides/transmon.pptx）p14",
+          "Transmon 筆記簡報（27 頁，含 3D 十二章導覽）（slides/transmon.pptx）p20"
+        ],
+        "沿用 3D 場景": [
+          "tr:potential",
+          "tr:control",
+          "lj:s4"
+        ],
+        "需新增素材": [],
+        "沿用文件": [
+          "超導量子電腦師生對話教學紀錄（docs/超導量子電腦師生對話教學紀錄.md）第 5 課"
+        ],
+        "YouTube 關鍵字 1": "第 5 課：能階、共振與拉比振盪 quantum computing explained beginner",
+        "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E7%AC%AC+5+%E8%AA%B2%EF%BC%9A%E8%83%BD%E9%9A%8E%E3%80%81%E5%85%B1%E6%8C%AF%E8%88%87%E6%8B%89%E6%AF%94%E6%8C%AF%E7%9B%AA+quantum+computing+explained+beginner",
+        "影片用途 1": "課前暖身",
+        "YouTube 關鍵字 2": "第 5 課：能階、共振與拉比振盪 理解微波只在相鄰能階對得上時才被吸收，以 hands on demo",
+        "YouTube 連結 2": "https://www.youtube.com/results?search_query=%E7%AC%AC+5+%E8%AA%B2%EF%BC%9A%E8%83%BD%E9%9A%8E%E3%80%81%E5%85%B1%E6%8C%AF%E8%88%87%E6%8B%89%E6%AF%94%E6%8C%AF%E7%9B%AA+%E7%90%86%E8%A7%A3%E5%BE%AE%E6%B3%A2%E5%8F%AA%E5%9C%A8%E7%9B%B8%E9%84%B0%E8%83%BD%E9%9A%8E%E5%B0%8D%E5%BE%97%E4%B8%8A%E6%99%82%E6%89%8D%E8%A2%AB%E5%90%B8%E6%94%B6%EF%BC%8C%E4%BB%A5+hands+on+demo",
+        "影片用途 2": "課中實作參考",
+        "YouTube 關鍵字 3": "第 5 課：能階、共振與拉比振盪 quantum computing lecture visualization",
+        "YouTube 連結 3": "https://www.youtube.com/results?search_query=%E7%AC%AC+5+%E8%AA%B2%EF%BC%9A%E8%83%BD%E9%9A%8E%E3%80%81%E5%85%B1%E6%8C%AF%E8%88%87%E6%8B%89%E6%AF%94%E6%8C%AF%E7%9B%AA+quantum+computing+lecture+visualization",
+        "影片用途 3": "課後延伸"
+      }
+    },
+    {
+      "lessonId": "Q104",
+      "sourceRow": {
+        "總課次": 104,
+        "學程": "量子電腦學程",
+        "階段": "第四階段 深化與產業",
+        "模組": "QM07 超導量子電腦深入：師生對話十三課",
+        "模組內課次": 8,
+        "課程主題": "第 6 課：色散讀取與重設",
+        "對象與上課方式": "高中理組／大學／工程同仁；師生對話形式，transmon 3D 十二章逐章操作",
+        "學習目標": "走過讀取八步驟：色散偏移、IQ、讀取鏈、單發判別、QND 與讀完後的重設",
+        "2 小時課程流程": "00–10 任務開場：第 6 課：色散讀取與重設\n10–25 概念示範：走過讀取八步驟：色散偏移、IQ、讀取鏈、單發判別、QND 與讀完後的重設\n25–65 父子共同實作：跟著第 5 章八步驟導覽，每步寫一個關鍵字\n65–75 休息／走動／聊天\n75–105 孩子獨立改造：比較被動重設和主動重設要花多久\n105–115 角色互換：孩子教爸爸操作與原理\n115–120 錄音總結、作品命名、版本存檔",
+        "動手任務": "跟著第 5 章八步驟導覽，每步寫一個關鍵字",
+        "孩子獨立改造": "比較被動重設和主動重設要花多久",
+        "好玩機制": "闖關（八關）",
+        "作品／交付": "讀取八步驟卡",
+        "生活技能支線": "把長流程切成小步驟",
+        "家長課前準備": "師生對話第 6 課；transmon-3d#readout",
+        "課後延伸": "15–30 分鐘自由改造；寫三句學習日誌：我做了什麼、哪裡卡住、下次想加什麼。",
+        "驗收標準": "完成「讀取八步驟卡」；能不用看稿說出核心原理；能指出至少一個錯誤、限制或注意事項（例如：QND 讀取不改變被量到的狀態，但會破壞疊加）。",
+        "常見誤解與安全提醒": "QND 讀取不改變被量到的狀態，但會破壞疊加",
+        "錄音重點": "請孩子回答：1. 第 6 課：色散讀取與重設在解決什麼？2. 我怎麼做？3. 哪裡容易錯？4. 生活中或真實的量子電腦哪裡會用到？",
+        "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q104｜第 6 課：色散讀取與重設",
+        "難度 1–5": 5,
+        "沿用簡報頁": [
+          "Transmon 筆記簡報（27 頁，含 3D 十二章導覽）（slides/transmon.pptx）p20",
+          "超導量子電腦的核心：JJ 與微波讀取（slides/JJ_Microwave_Readout_Talk.pptx）p28–31"
+        ],
+        "沿用 3D 場景": [
+          "tr:readout",
+          "i:iq"
+        ],
+        "需新增素材": [],
+        "沿用文件": [
+          "超導量子電腦師生對話教學紀錄（docs/超導量子電腦師生對話教學紀錄.md）第 6 課"
+        ],
+        "YouTube 關鍵字 1": "第 6 課：色散讀取與重設 quantum computing explained beginner",
+        "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E7%AC%AC+6+%E8%AA%B2%EF%BC%9A%E8%89%B2%E6%95%A3%E8%AE%80%E5%8F%96%E8%88%87%E9%87%8D%E8%A8%AD+quantum+computing+explained+beginner",
+        "影片用途 1": "課前暖身",
+        "YouTube 關鍵字 2": "第 6 課：色散讀取與重設 走過讀取八步驟：色散偏移、IQ、讀取鏈、 hands on demo",
+        "YouTube 連結 2": "https://www.youtube.com/results?search_query=%E7%AC%AC+6+%E8%AA%B2%EF%BC%9A%E8%89%B2%E6%95%A3%E8%AE%80%E5%8F%96%E8%88%87%E9%87%8D%E8%A8%AD+%E8%B5%B0%E9%81%8E%E8%AE%80%E5%8F%96%E5%85%AB%E6%AD%A5%E9%A9%9F%EF%BC%9A%E8%89%B2%E6%95%A3%E5%81%8F%E7%A7%BB%E3%80%81IQ%E3%80%81%E8%AE%80%E5%8F%96%E9%8F%88%E3%80%81+hands+on+demo",
+        "影片用途 2": "課中實作參考",
+        "YouTube 關鍵字 3": "第 6 課：色散讀取與重設 quantum computing lecture visualization",
+        "YouTube 連結 3": "https://www.youtube.com/results?search_query=%E7%AC%AC+6+%E8%AA%B2%EF%BC%9A%E8%89%B2%E6%95%A3%E8%AE%80%E5%8F%96%E8%88%87%E9%87%8D%E8%A8%AD+quantum+computing+lecture+visualization",
+        "影片用途 3": "課後延伸"
+      }
+    },
+    {
+      "lessonId": "Q105",
+      "sourceRow": {
+        "總課次": 105,
+        "學程": "量子電腦學程",
+        "階段": "第四階段 深化與產業",
+        "模組": "QM07 超導量子電腦深入：師生對話十三課",
+        "模組內課次": 9,
+        "課程主題": "第 7 課：BV 密碼——一次猜中三位元",
+        "對象與上課方式": "高中理組／大學／工程同仁；師生對話形式，transmon 3D 十二章逐章操作",
+        "學習目標": "用 Bernstein–Vazirani 理解疊加態的用途，以及和古典逐位查詢的差別",
+        "2 小時課程流程": "00–10 任務開場：第 7 課：BV 密碼——一次猜中三位元\n10–25 概念示範：用 Bernstein–Vazirani 理解疊加態的用途，以及和古典逐位查詢的差別\n25–65 父子共同實作：隱藏密碼猜謎：古典逐位查詢 vs BV 一次查詢比賽\n65–75 休息／走動／聊天\n75–105 孩子獨立改造：換成自己設定的密碼，讓爸爸用古典方法猜\n105–115 角色互換：孩子教爸爸操作與原理\n115–120 錄音總結、作品命名、版本存檔",
+        "動手任務": "隱藏密碼猜謎：古典逐位查詢 vs BV 一次查詢比賽",
+        "孩子獨立改造": "換成自己設定的密碼，讓爸爸用古典方法猜",
+        "好玩機制": "程式對決",
+        "作品／交付": "BV 比賽紀錄",
+        "生活技能支線": "聰明地問問題",
+        "家長課前準備": "師生對話第 7 課；transmon-3d#bv；basic-circuits#bv",
+        "課後延伸": "15–30 分鐘自由改造；寫三句學習日誌：我做了什麼、哪裡卡住、下次想加什麼。",
+        "驗收標準": "完成「BV 比賽紀錄」；能不用看稿說出核心原理；能指出至少一個錯誤、限制或注意事項（例如：BV 的優勢是查詢次數；它是示範題，不代表實際應用）。",
+        "常見誤解與安全提醒": "BV 的優勢是查詢次數；它是示範題，不代表實際應用",
+        "錄音重點": "請孩子回答：1. 第 7 課：BV 密碼——一次猜中三位元在解決什麼？2. 我怎麼做？3. 哪裡容易錯？4. 生活中或真實的量子電腦哪裡會用到？",
+        "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q105｜第 7 課：BV 密碼——一次猜中三位元",
+        "難度 1–5": 4,
+        "沿用簡報頁": [
+          "Transmon 筆記簡報（27 頁，含 3D 十二章導覽）（slides/transmon.pptx）p24",
+          "量子電路入門：八個範例（slides/output/basic-circuits.pptx）p21–22"
+        ],
+        "沿用 3D 場景": [
+          "tr:bv",
+          "bc:bv"
+        ],
+        "需新增素材": [],
+        "沿用文件": [
+          "超導量子電腦師生對話教學紀錄（docs/超導量子電腦師生對話教學紀錄.md）第 7 課"
+        ],
+        "YouTube 關鍵字 1": "第 7 課：BV 密碼——一次猜中三位元 quantum computing explained beginner",
+        "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E7%AC%AC+7+%E8%AA%B2%EF%BC%9ABV+%E5%AF%86%E7%A2%BC%E2%80%94%E2%80%94%E4%B8%80%E6%AC%A1%E7%8C%9C%E4%B8%AD%E4%B8%89%E4%BD%8D%E5%85%83+quantum+computing+explained+beginner",
+        "影片用途 1": "課前暖身",
+        "YouTube 關鍵字 2": "第 7 課：BV 密碼——一次猜中三位元 用 Bernstein–Vazirani hands on demo",
+        "YouTube 連結 2": "https://www.youtube.com/results?search_query=%E7%AC%AC+7+%E8%AA%B2%EF%BC%9ABV+%E5%AF%86%E7%A2%BC%E2%80%94%E2%80%94%E4%B8%80%E6%AC%A1%E7%8C%9C%E4%B8%AD%E4%B8%89%E4%BD%8D%E5%85%83+%E7%94%A8+Bernstein%E2%80%93Vazirani+hands+on+demo",
+        "影片用途 2": "課中實作參考",
+        "YouTube 關鍵字 3": "第 7 課：BV 密碼——一次猜中三位元 quantum computing lecture visualization",
+        "YouTube 連結 3": "https://www.youtube.com/results?search_query=%E7%AC%AC+7+%E8%AA%B2%EF%BC%9ABV+%E5%AF%86%E7%A2%BC%E2%80%94%E2%80%94%E4%B8%80%E6%AC%A1%E7%8C%9C%E4%B8%AD%E4%B8%89%E4%BD%8D%E5%85%83+quantum+computing+lecture+visualization",
+        "影片用途 3": "課後延伸"
+      }
+    },
+    {
+      "lessonId": "Q106",
+      "sourceRow": {
+        "總課次": 106,
+        "學程": "量子電腦學程",
+        "階段": "第四階段 深化與產業",
+        "模組": "QM07 超導量子電腦深入：師生對話十三課",
+        "模組內課次": 10,
+        "課程主題": "第 8 課：糾纏與兩位元 Grover",
+        "對象與上課方式": "高中理組／大學／工程同仁；師生對話形式，transmon 3D 十二章逐章操作",
+        "學習目標": "用振幅長條看糾纏的產生，以及兩位元 Grover 一輪就找到答案",
+        "2 小時課程流程": "00–10 任務開場：第 8 課：糾纏與兩位元 Grover\n10–25 概念示範：用振幅長條看糾纏的產生，以及兩位元 Grover 一輪就找到答案\n25–65 父子共同實作：在振幅長條章逐步做 Bell 態與兩位元 Grover\n65–75 休息／走動／聊天\n75–105 孩子獨立改造：換答案位置，預測一輪後的長條\n105–115 角色互換：孩子教爸爸操作與原理\n115–120 錄音總結、作品命名、版本存檔",
+        "動手任務": "在振幅長條章逐步做 Bell 態與兩位元 Grover",
+        "孩子獨立改造": "換答案位置，預測一輪後的長條",
+        "好玩機制": "尋寶",
+        "作品／交付": "振幅長條逐步圖",
+        "生活技能支線": "一步一步追蹤變化",
+        "家長課前準備": "師生對話第 8 課；transmon-3d#grover",
+        "課後延伸": "15–30 分鐘自由改造；寫三句學習日誌：我做了什麼、哪裡卡住、下次想加什麼。",
+        "驗收標準": "完成「振幅長條逐步圖」；能不用看稿說出核心原理；能指出至少一個錯誤、限制或注意事項（例如：兩位元 Grover 剛好一輪 100%；位元多了就不一定剛好）。",
+        "常見誤解與安全提醒": "兩位元 Grover 剛好一輪 100%；位元多了就不一定剛好",
+        "錄音重點": "請孩子回答：1. 第 8 課：糾纏與兩位元 Grover在解決什麼？2. 我怎麼做？3. 哪裡容易錯？4. 生活中或真實的量子電腦哪裡會用到？",
+        "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q106｜第 8 課：糾纏與兩位元 Grover",
+        "難度 1–5": 4,
+        "沿用簡報頁": [
+          "Transmon 筆記簡報（27 頁，含 3D 十二章導覽）（slides/transmon.pptx）p22",
+          "量子電路入門：八個範例（slides/output/basic-circuits.pptx）p10–11",
+          "量子電路入門：八個範例（slides/output/basic-circuits.pptx）p23–24"
+        ],
+        "沿用 3D 場景": [
+          "tr:grover",
+          "bc:bell",
+          "bc:grover"
+        ],
+        "需新增素材": [],
+        "沿用文件": [
+          "超導量子電腦師生對話教學紀錄（docs/超導量子電腦師生對話教學紀錄.md）第 8 課"
+        ],
+        "YouTube 關鍵字 1": "第 8 課：糾纏與兩位元 Grover quantum computing explained beginner",
+        "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E7%AC%AC+8+%E8%AA%B2%EF%BC%9A%E7%B3%BE%E7%BA%8F%E8%88%87%E5%85%A9%E4%BD%8D%E5%85%83+Grover+quantum+computing+explained+beginner",
+        "影片用途 1": "課前暖身",
+        "YouTube 關鍵字 2": "第 8 課：糾纏與兩位元 Grover 用振幅長條看糾纏的產生，以及兩位元 Gr hands on demo",
+        "YouTube 連結 2": "https://www.youtube.com/results?search_query=%E7%AC%AC+8+%E8%AA%B2%EF%BC%9A%E7%B3%BE%E7%BA%8F%E8%88%87%E5%85%A9%E4%BD%8D%E5%85%83+Grover+%E7%94%A8%E6%8C%AF%E5%B9%85%E9%95%B7%E6%A2%9D%E7%9C%8B%E7%B3%BE%E7%BA%8F%E7%9A%84%E7%94%A2%E7%94%9F%EF%BC%8C%E4%BB%A5%E5%8F%8A%E5%85%A9%E4%BD%8D%E5%85%83+Gr+hands+on+demo",
+        "影片用途 2": "課中實作參考",
+        "YouTube 關鍵字 3": "第 8 課：糾纏與兩位元 Grover quantum computing lecture visualization",
+        "YouTube 連結 3": "https://www.youtube.com/results?search_query=%E7%AC%AC+8+%E8%AA%B2%EF%BC%9A%E7%B3%BE%E7%BA%8F%E8%88%87%E5%85%A9%E4%BD%8D%E5%85%83+Grover+quantum+computing+lecture+visualization",
+        "影片用途 3": "課後延伸"
+      }
+    },
+    {
+      "lessonId": "Q107",
+      "sourceRow": {
+        "總課次": 107,
+        "學程": "量子電腦學程",
+        "階段": "第四階段 深化與產業",
+        "模組": "QM07 超導量子電腦深入：師生對話十三課",
+        "模組內課次": 11,
+        "課程主題": "第 9 課：Deutsch 演算法與相位回踢",
+        "對象與上課方式": "高中理組／大學／工程同仁；師生對話形式，transmon 3D 十二章逐章操作",
+        "學習目標": "用相位回踢理解 Deutsch：答案寫在相位上，再用干涉讀出來",
+        "2 小時課程流程": "00–10 任務開場：第 9 課：Deutsch 演算法與相位回踢\n10–25 概念示範：用相位回踢理解 Deutsch：答案寫在相位上，再用干涉讀出來\n25–65 父子共同實作：在 deutsch-lab 自由實驗跑四種黑盒，對照《量子金魚》紅綠球比喻\n65–75 休息／走動／聊天\n75–105 孩子獨立改造：自己當黑盒子，讓爸爸只問一次猜類型\n105–115 角色互換：孩子教爸爸操作與原理\n115–120 錄音總結、作品命名、版本存檔",
+        "動手任務": "在 deutsch-lab 自由實驗跑四種黑盒，對照《量子金魚》紅綠球比喻",
+        "孩子獨立改造": "自己當黑盒子，讓爸爸只問一次猜類型",
+        "好玩機制": "盲測",
+        "作品／交付": "四種黑盒判讀表",
+        "生活技能支線": "換個角度讀資訊",
+        "家長課前準備": "師生對話第 9 課；transmon-3d#deutsch、#deutsch-lab；量子金魚簡報",
+        "課後延伸": "15–30 分鐘自由改造；寫三句學習日誌：我做了什麼、哪裡卡住、下次想加什麼。",
+        "驗收標準": "完成「四種黑盒判讀表」；能不用看稿說出核心原理；能指出至少一個錯誤、限制或注意事項（例如：相位回踢需要輔助位元在 |−⟩；忘了準備就看不到效果）。",
+        "常見誤解與安全提醒": "相位回踢需要輔助位元在 |−⟩；忘了準備就看不到效果",
+        "錄音重點": "請孩子回答：1. 第 9 課：Deutsch 演算法與相位回踢在解決什麼？2. 我怎麼做？3. 哪裡容易錯？4. 生活中或真實的量子電腦哪裡會用到？",
+        "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q107｜第 9 課：Deutsch 演算法與相位回踢",
+        "難度 1–5": 4,
+        "沿用簡報頁": [
+          "Transmon 筆記簡報（27 頁，含 3D 十二章導覽）（slides/transmon.pptx）p22",
+          "《量子金魚》008 Deutsch 演算法報告簡報（slides/output/qfish008-deutsch-algorithm.pptx）p11–22",
+          "量子電路入門：八個範例（slides/output/basic-circuits.pptx）p18–20"
+        ],
+        "沿用 3D 場景": [
+          "tr:deutsch",
+          "tr:deutsch-lab",
+          "bc:deutsch"
+        ],
+        "需新增素材": [],
+        "沿用文件": [
+          "超導量子電腦師生對話教學紀錄（docs/超導量子電腦師生對話教學紀錄.md）第 9 課"
+        ],
+        "YouTube 關鍵字 1": "第 9 課：Deutsch 演算法與相位回踢 quantum computing explained beginner",
+        "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E7%AC%AC+9+%E8%AA%B2%EF%BC%9ADeutsch+%E6%BC%94%E7%AE%97%E6%B3%95%E8%88%87%E7%9B%B8%E4%BD%8D%E5%9B%9E%E8%B8%A2+quantum+computing+explained+beginner",
+        "影片用途 1": "課前暖身",
+        "YouTube 關鍵字 2": "第 9 課：Deutsch 演算法與相位回踢 用相位回踢理解 Deutsch：答案寫在 hands on demo",
+        "YouTube 連結 2": "https://www.youtube.com/results?search_query=%E7%AC%AC+9+%E8%AA%B2%EF%BC%9ADeutsch+%E6%BC%94%E7%AE%97%E6%B3%95%E8%88%87%E7%9B%B8%E4%BD%8D%E5%9B%9E%E8%B8%A2+%E7%94%A8%E7%9B%B8%E4%BD%8D%E5%9B%9E%E8%B8%A2%E7%90%86%E8%A7%A3+Deutsch%EF%BC%9A%E7%AD%94%E6%A1%88%E5%AF%AB%E5%9C%A8+hands+on+demo",
+        "影片用途 2": "課中實作參考",
+        "YouTube 關鍵字 3": "第 9 課：Deutsch 演算法與相位回踢 quantum computing lecture visualization",
+        "YouTube 連結 3": "https://www.youtube.com/results?search_query=%E7%AC%AC+9+%E8%AA%B2%EF%BC%9ADeutsch+%E6%BC%94%E7%AE%97%E6%B3%95%E8%88%87%E7%9B%B8%E4%BD%8D%E5%9B%9E%E8%B8%A2+quantum+computing+lecture+visualization",
+        "影片用途 3": "課後延伸"
+      }
+    },
+    {
+      "lessonId": "Q108",
+      "sourceRow": {
+        "總課次": 108,
+        "學程": "量子電腦學程",
+        "階段": "第四階段 深化與產業",
+        "模組": "QM07 超導量子電腦深入：師生對話十三課",
+        "模組內課次": 12,
+        "課程主題": "第 10 課：Shor 演算法——自選 N、a 找週期",
+        "對象與上課方式": "高中理組／大學／工程同仁；師生對話形式，transmon 3D 十二章逐章操作",
+        "學習目標": "在 Shor 章自選 N、a 與計數位元數，看 QFT 如何把週期變成峰值",
+        "2 小時課程流程": "00–10 任務開場：第 10 課：Shor 演算法——自選 N、a 找週期\n10–25 概念示範：在 Shor 章自選 N、a 與計數位元數，看 QFT 如何把週期變成峰值\n25–65 父子共同實作：用 N = 15 試三個不同的 a，記錄週期與分解結果\n65–75 休息／走動／聊天\n75–105 孩子獨立改造：試一個會失敗的 a，說明為什麼要重試\n105–115 角色互換：孩子教爸爸操作與原理\n115–120 錄音總結、作品命名、版本存檔",
+        "動手任務": "用 N = 15 試三個不同的 a，記錄週期與分解結果",
+        "孩子獨立改造": "試一個會失敗的 a，說明為什麼要重試",
+        "好玩機制": "Boss 戰",
+        "作品／交付": "Shor 實驗紀錄",
+        "生活技能支線": "失敗也是資訊",
+        "家長課前準備": "師生對話第 10 課；transmon-3d#shor；operation.html#shor",
+        "課後延伸": "15–30 分鐘自由改造；寫三句學習日誌：我做了什麼、哪裡卡住、下次想加什麼。",
+        "驗收標準": "完成「Shor 實驗紀錄」；能不用看稿說出核心原理；能指出至少一個錯誤、限制或注意事項（例如：動畫是小數字示範；分解真正的 RSA 需要大規模容錯量子電腦）。",
+        "常見誤解與安全提醒": "動畫是小數字示範；分解真正的 RSA 需要大規模容錯量子電腦",
+        "錄音重點": "請孩子回答：1. 第 10 課：Shor 演算法——自選 N、a 找週期在解決什麼？2. 我怎麼做？3. 哪裡容易錯？4. 生活中或真實的量子電腦哪裡會用到？",
+        "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q108｜第 10 課：Shor 演算法——自選 N、a 找週期",
+        "難度 1–5": 5,
+        "沿用簡報頁": [
+          "Transmon 筆記簡報（27 頁，含 3D 十二章導覽）（slides/transmon.pptx）p23",
+          "如何操作量子電腦（slides/QC_Operation_Talk.pptx）p41"
+        ],
+        "沿用 3D 場景": [
+          "tr:shor",
+          "o:shor"
+        ],
+        "需新增素材": [],
+        "沿用文件": [
+          "超導量子電腦師生對話教學紀錄（docs/超導量子電腦師生對話教學紀錄.md）第 10 課"
+        ],
+        "YouTube 關鍵字 1": "第 10 課：Shor 演算法——自選 N、a 找週期 quantum computing explained beginner",
+        "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E7%AC%AC+10+%E8%AA%B2%EF%BC%9AShor+%E6%BC%94%E7%AE%97%E6%B3%95%E2%80%94%E2%80%94%E8%87%AA%E9%81%B8+N%E3%80%81a+%E6%89%BE%E9%80%B1%E6%9C%9F+quantum+computing+explained+beginner",
+        "影片用途 1": "課前暖身",
+        "YouTube 關鍵字 2": "第 10 課：Shor 演算法——自選 N、a 找週期 在 Shor 章自選 N、a 與計數位元 hands on demo",
+        "YouTube 連結 2": "https://www.youtube.com/results?search_query=%E7%AC%AC+10+%E8%AA%B2%EF%BC%9AShor+%E6%BC%94%E7%AE%97%E6%B3%95%E2%80%94%E2%80%94%E8%87%AA%E9%81%B8+N%E3%80%81a+%E6%89%BE%E9%80%B1%E6%9C%9F+%E5%9C%A8+Shor+%E7%AB%A0%E8%87%AA%E9%81%B8+N%E3%80%81a+%E8%88%87%E8%A8%88%E6%95%B8%E4%BD%8D%E5%85%83+hands+on+demo",
+        "影片用途 2": "課中實作參考",
+        "YouTube 關鍵字 3": "第 10 課：Shor 演算法——自選 N、a 找週期 quantum computing lecture visualization",
+        "YouTube 連結 3": "https://www.youtube.com/results?search_query=%E7%AC%AC+10+%E8%AA%B2%EF%BC%9AShor+%E6%BC%94%E7%AE%97%E6%B3%95%E2%80%94%E2%80%94%E8%87%AA%E9%81%B8+N%E3%80%81a+%E6%89%BE%E9%80%B1%E6%9C%9F+quantum+computing+lecture+visualization",
+        "影片用途 3": "課後延伸"
+      }
+    },
+    {
+      "lessonId": "Q109",
+      "sourceRow": {
+        "總課次": 109,
+        "學程": "量子電腦學程",
+        "階段": "第四階段 深化與產業",
+        "模組": "QM07 超導量子電腦深入：師生對話十三課",
+        "模組內課次": 13,
+        "課程主題": "第 11 課：表面碼——穩定子與匹配解碼",
+        "對象與上課方式": "高中理組／大學／工程同仁；師生對話形式，transmon 3D 十二章逐章操作",
+        "學習目標": "理解 d = 3 表面碼的穩定子、CZ 順序、錯誤與邊界，以及最小權重完美匹配",
+        "2 小時課程流程": "00–10 任務開場：第 11 課：表面碼——穩定子與匹配解碼\n10–25 概念示範：理解 d = 3 表面碼的穩定子、CZ 順序、錯誤與邊界，以及最小權重完美匹配\n25–65 父子共同實作：在自由實驗點位元注入錯誤，看症狀與解碼器配對\n65–75 休息／走動／聊天\n75–105 孩子獨立改造：找出兩個錯誤造成邏輯錯誤的例子\n105–115 角色互換：孩子教爸爸操作與原理\n115–120 錄音總結、作品命名、版本存檔",
+        "動手任務": "在自由實驗點位元注入錯誤，看症狀與解碼器配對",
+        "孩子獨立改造": "找出兩個錯誤造成邏輯錯誤的例子",
+        "好玩機制": "Bug 獵人",
+        "作品／交付": "表面碼解碼練習單",
+        "生活技能支線": "從症狀推回原因",
+        "家長課前準備": "師生對話第 11 課；transmon-3d#surface",
+        "課後延伸": "15–30 分鐘自由改造；寫三句學習日誌：我做了什麼、哪裡卡住、下次想加什麼。",
+        "驗收標準": "完成「表面碼解碼練習單」；能不用看稿說出核心原理；能指出至少一個錯誤、限制或注意事項（例如：碼距越大越好，前提是物理錯誤率低於門檻）。",
+        "常見誤解與安全提醒": "碼距越大越好，前提是物理錯誤率低於門檻",
+        "錄音重點": "請孩子回答：1. 第 11 課：表面碼——穩定子與匹配解碼在解決什麼？2. 我怎麼做？3. 哪裡容易錯？4. 生活中或真實的量子電腦哪裡會用到？",
+        "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q109｜第 11 課：表面碼——穩定子與匹配解碼",
+        "難度 1–5": 5,
+        "沿用簡報頁": [
+          "Transmon 筆記簡報（27 頁，含 3D 十二章導覽）（slides/transmon.pptx）p25",
+          "如何操作量子電腦（slides/QC_Operation_Talk.pptx）p49–50"
+        ],
+        "沿用 3D 場景": [
+          "tr:surface",
+          "o:qec"
+        ],
+        "需新增素材": [],
+        "沿用文件": [
+          "超導量子電腦師生對話教學紀錄（docs/超導量子電腦師生對話教學紀錄.md）第 11 課"
+        ],
+        "YouTube 關鍵字 1": "第 11 課：表面碼——穩定子與匹配解碼 quantum computing explained beginner",
+        "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E7%AC%AC+11+%E8%AA%B2%EF%BC%9A%E8%A1%A8%E9%9D%A2%E7%A2%BC%E2%80%94%E2%80%94%E7%A9%A9%E5%AE%9A%E5%AD%90%E8%88%87%E5%8C%B9%E9%85%8D%E8%A7%A3%E7%A2%BC+quantum+computing+explained+beginner",
+        "影片用途 1": "課前暖身",
+        "YouTube 關鍵字 2": "第 11 課：表面碼——穩定子與匹配解碼 理解 d = 3 表面碼的穩定子、CZ  hands on demo",
+        "YouTube 連結 2": "https://www.youtube.com/results?search_query=%E7%AC%AC+11+%E8%AA%B2%EF%BC%9A%E8%A1%A8%E9%9D%A2%E7%A2%BC%E2%80%94%E2%80%94%E7%A9%A9%E5%AE%9A%E5%AD%90%E8%88%87%E5%8C%B9%E9%85%8D%E8%A7%A3%E7%A2%BC+%E7%90%86%E8%A7%A3+d+%3D+3+%E8%A1%A8%E9%9D%A2%E7%A2%BC%E7%9A%84%E7%A9%A9%E5%AE%9A%E5%AD%90%E3%80%81CZ++hands+on+demo",
+        "影片用途 2": "課中實作參考",
+        "YouTube 關鍵字 3": "第 11 課：表面碼——穩定子與匹配解碼 quantum computing lecture visualization",
+        "YouTube 連結 3": "https://www.youtube.com/results?search_query=%E7%AC%AC+11+%E8%AA%B2%EF%BC%9A%E8%A1%A8%E9%9D%A2%E7%A2%BC%E2%80%94%E2%80%94%E7%A9%A9%E5%AE%9A%E5%AD%90%E8%88%87%E5%8C%B9%E9%85%8D%E8%A7%A3%E7%A2%BC+quantum+computing+lecture+visualization",
+        "影片用途 3": "課後延伸"
+      }
+    },
+    {
+      "lessonId": "Q110",
+      "sourceRow": {
+        "總課次": 110,
+        "學程": "量子電腦學程",
+        "階段": "第四階段 深化與產業",
+        "模組": "QM07 超導量子電腦深入：師生對話十三課",
+        "模組內課次": 14,
+        "課程主題": "第 12 課：lattice surgery 與魔術態蒸餾",
+        "對象與上課方式": "高中理組／大學／工程同仁；師生對話形式，transmon 3D 十二章逐章操作",
+        "學習目標": "看兩塊補丁合併量 X_A·X_B、三步 CNOT、T 閘傳送，以及 15-to-1 魔術態工廠",
+        "2 小時課程流程": "00–10 任務開場：第 12 課：lattice surgery 與魔術態蒸餾\n10–25 概念示範：看兩塊補丁合併量 X_A·X_B、三步 CNOT、T 閘傳送，以及 15-to-1 魔術態工廠\n25–65 父子共同實作：在邏輯閘章依序播放合併、拆開、CNOT，再跑蒸餾統計\n65–75 休息／走動／聊天\n75–105 孩子獨立改造：調高注入錯誤率，觀察蒸餾成功率怎麼變\n105–115 角色互換：孩子教爸爸操作與原理\n115–120 錄音總結、作品命名、版本存檔",
+        "動手任務": "在邏輯閘章依序播放合併、拆開、CNOT，再跑蒸餾統計",
+        "孩子獨立改造": "調高注入錯誤率，觀察蒸餾成功率怎麼變",
+        "好玩機制": "工程答辯",
+        "作品／交付": "邏輯閘資源估算表",
+        "生活技能支線": "估算成本",
+        "家長課前準備": "師生對話第 12 課；transmon-3d#surgery",
+        "課後延伸": "15–30 分鐘自由改造；寫三句學習日誌：我做了什麼、哪裡卡住、下次想加什麼。",
+        "驗收標準": "完成「邏輯閘資源估算表」；能不用看稿說出核心原理；能指出至少一個錯誤、限制或注意事項（例如：容錯時代的成本主要在 T 閘與魔術態工廠）。",
+        "常見誤解與安全提醒": "容錯時代的成本主要在 T 閘與魔術態工廠",
+        "錄音重點": "請孩子回答：1. 第 12 課：lattice surgery 與魔術態蒸餾在解決什麼？2. 我怎麼做？3. 哪裡容易錯？4. 生活中或真實的量子電腦哪裡會用到？",
+        "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q110｜第 12 課：lattice surgery 與魔術態蒸餾",
+        "難度 1–5": 5,
+        "沿用簡報頁": [
+          "Transmon 筆記簡報（27 頁，含 3D 十二章導覽）（slides/transmon.pptx）p26"
+        ],
+        "沿用 3D 場景": [
+          "tr:surgery"
+        ],
+        "需新增素材": [],
+        "沿用文件": [
+          "超導量子電腦師生對話教學紀錄（docs/超導量子電腦師生對話教學紀錄.md）第 12 課"
+        ],
+        "YouTube 關鍵字 1": "第 12 課：lattice surgery 與魔術態蒸餾 quantum computing explained beginner",
+        "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E7%AC%AC+12+%E8%AA%B2%EF%BC%9Alattice+surgery+%E8%88%87%E9%AD%94%E8%A1%93%E6%85%8B%E8%92%B8%E9%A4%BE+quantum+computing+explained+beginner",
+        "影片用途 1": "課前暖身",
+        "YouTube 關鍵字 2": "第 12 課：lattice surgery 與魔術態蒸餾 看兩塊補丁合併量 X_A·X_B、三步  hands on demo",
+        "YouTube 連結 2": "https://www.youtube.com/results?search_query=%E7%AC%AC+12+%E8%AA%B2%EF%BC%9Alattice+surgery+%E8%88%87%E9%AD%94%E8%A1%93%E6%85%8B%E8%92%B8%E9%A4%BE+%E7%9C%8B%E5%85%A9%E5%A1%8A%E8%A3%9C%E4%B8%81%E5%90%88%E4%BD%B5%E9%87%8F+X_A%C2%B7X_B%E3%80%81%E4%B8%89%E6%AD%A5++hands+on+demo",
+        "影片用途 2": "課中實作參考",
+        "YouTube 關鍵字 3": "第 12 課：lattice surgery 與魔術態蒸餾 quantum computing lecture visualization",
+        "YouTube 連結 3": "https://www.youtube.com/results?search_query=%E7%AC%AC+12+%E8%AA%B2%EF%BC%9Alattice+surgery+%E8%88%87%E9%AD%94%E8%A1%93%E6%85%8B%E8%92%B8%E9%A4%BE+quantum+computing+lecture+visualization",
+        "影片用途 3": "課後延伸"
+      }
+    },
+    {
+      "lessonId": "Q111",
+      "sourceRow": {
+        "總課次": 111,
+        "學程": "量子電腦學程",
+        "階段": "第四階段 深化與產業",
+        "模組": "QM07 超導量子電腦深入：師生對話十三課",
+        "模組內課次": 15,
+        "課程主題": "第 13 課：編譯與控制軟體堆疊",
+        "對象與上課方式": "高中理組／大學／工程同仁；師生對話形式，transmon 3D 十二章逐章操作",
+        "學習目標": "跟著一條電路走完七層：分解、映射、SWAP 路由、最佳化、排程、脈衝、FPGA 回饋",
+        "2 小時課程流程": "00–10 任務開場：第 13 課：編譯與控制軟體堆疊\n10–25 概念示範：跟著一條電路走完七層：分解、映射、SWAP 路由、最佳化、排程、脈衝、FPGA 回饋\n25–65 父子共同實作：在軟體堆疊章比較直線與方格晶片的 SWAP 數與總時間\n65–75 休息／走動／聊天\n75–105 孩子獨立改造：選 Bell、GHZ、BV 其中一個，寫出每一層做了什麼\n105–115 角色互換：孩子教爸爸操作與原理\n115–120 錄音總結、作品命名、版本存檔",
+        "動手任務": "在軟體堆疊章比較直線與方格晶片的 SWAP 數與總時間",
+        "孩子獨立改造": "選 Bell、GHZ、BV 其中一個，寫出每一層做了什麼",
+        "好玩機制": "效能競賽",
+        "作品／交付": "七層堆疊說明卡",
+        "生活技能支線": "系統的每一層都有責任",
+        "家長課前準備": "師生對話第 13 課；transmon-3d#stack；operation.html#workflow",
+        "課後延伸": "15–30 分鐘自由改造；寫三句學習日誌：我做了什麼、哪裡卡住、下次想加什麼。",
+        "驗收標準": "完成「七層堆疊說明卡」；能不用看稿說出核心原理；能指出至少一個錯誤、限制或注意事項（例如：晶片連接方式會大幅改變 SWAP 數與錯誤）。",
+        "常見誤解與安全提醒": "晶片連接方式會大幅改變 SWAP 數與錯誤",
+        "錄音重點": "請孩子回答：1. 第 13 課：編譯與控制軟體堆疊在解決什麼？2. 我怎麼做？3. 哪裡容易錯？4. 生活中或真實的量子電腦哪裡會用到？",
+        "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q111｜第 13 課：編譯與控制軟體堆疊",
+        "難度 1–5": 5,
+        "沿用簡報頁": [
+          "Transmon 筆記簡報（27 頁，含 3D 十二章導覽）（slides/transmon.pptx）p27",
+          "如何操作量子電腦（slides/QC_Operation_Talk.pptx）p26"
+        ],
+        "沿用 3D 場景": [
+          "tr:stack",
+          "o:workflow"
+        ],
+        "需新增素材": [],
+        "沿用文件": [
+          "超導量子電腦師生對話教學紀錄（docs/超導量子電腦師生對話教學紀錄.md）第 13 課"
+        ],
+        "YouTube 關鍵字 1": "第 13 課：編譯與控制軟體堆疊 quantum computing explained beginner",
+        "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E7%AC%AC+13+%E8%AA%B2%EF%BC%9A%E7%B7%A8%E8%AD%AF%E8%88%87%E6%8E%A7%E5%88%B6%E8%BB%9F%E9%AB%94%E5%A0%86%E7%96%8A+quantum+computing+explained+beginner",
+        "影片用途 1": "課前暖身",
+        "YouTube 關鍵字 2": "第 13 課：編譯與控制軟體堆疊 跟著一條電路走完七層：分解、映射、SWA hands on demo",
+        "YouTube 連結 2": "https://www.youtube.com/results?search_query=%E7%AC%AC+13+%E8%AA%B2%EF%BC%9A%E7%B7%A8%E8%AD%AF%E8%88%87%E6%8E%A7%E5%88%B6%E8%BB%9F%E9%AB%94%E5%A0%86%E7%96%8A+%E8%B7%9F%E8%91%97%E4%B8%80%E6%A2%9D%E9%9B%BB%E8%B7%AF%E8%B5%B0%E5%AE%8C%E4%B8%83%E5%B1%A4%EF%BC%9A%E5%88%86%E8%A7%A3%E3%80%81%E6%98%A0%E5%B0%84%E3%80%81SWA+hands+on+demo",
+        "影片用途 2": "課中實作參考",
+        "YouTube 關鍵字 3": "第 13 課：編譯與控制軟體堆疊 quantum computing lecture visualization",
+        "YouTube 連結 3": "https://www.youtube.com/results?search_query=%E7%AC%AC+13+%E8%AA%B2%EF%BC%9A%E7%B7%A8%E8%AD%AF%E8%88%87%E6%8E%A7%E5%88%B6%E8%BB%9F%E9%AB%94%E5%A0%86%E7%96%8A+quantum+computing+lecture+visualization",
+        "影片用途 3": "課後延伸"
+      }
+    },
+    {
+      "lessonId": "Q112",
+      "sourceRow": {
+        "總課次": 112,
+        "學程": "量子電腦學程",
+        "階段": "第四階段 深化與產業",
+        "模組": "QM07 超導量子電腦深入：師生對話十三課",
+        "模組內課次": 16,
+        "課程主題": "模組發表：換你當老師",
+        "對象與上課方式": "高中理組／大學／工程同仁；師生對話形式，transmon 3D 十二章逐章操作",
+        "學習目標": "孩子當老師，用師生對話形式講一課，並用 3D 動畫示範",
+        "2 小時課程流程": "00–10 任務開場：模組發表：換你當老師\n10–25 概念示範：孩子當老師，用師生對話形式講一課，並用 3D 動畫示範\n25–65 父子共同實作：挑十三課其中一課，改寫成自己的師生對話並錄音\n65–75 休息／走動／聊天\n75–105 孩子獨立改造：替這課加三題課後練習與解答\n105–115 角色互換：孩子教爸爸操作與原理\n115–120 錄音總結、作品命名、版本存檔",
+        "動手任務": "挑十三課其中一課，改寫成自己的師生對話並錄音",
+        "孩子獨立改造": "替這課加三題課後練習與解答",
+        "好玩機制": "角色交換",
+        "作品／交付": "自編師生對話一課",
+        "生活技能支線": "教學相長",
+        "家長課前準備": "師生對話紀錄；錄音設備",
+        "課後延伸": "15–30 分鐘自由改造；寫三句學習日誌：我做了什麼、哪裡卡住、下次想加什麼。",
+        "驗收標準": "完成「自編師生對話一課」；能不用看稿說出核心原理；能指出至少一個錯誤、限制或注意事項（例如：引用動畫畫面時註明出處）。",
+        "常見誤解與安全提醒": "引用動畫畫面時註明出處",
+        "錄音重點": "請孩子回答：1. 模組發表：換你當老師在解決什麼？2. 我怎麼做？3. 哪裡容易錯？4. 生活中或真實的量子電腦哪裡會用到？",
+        "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q112｜模組發表：換你當老師",
+        "難度 1–5": 4,
+        "沿用簡報頁": [],
+        "沿用 3D 場景": [],
+        "需新增素材": [
+          "◆ 自編對話模板"
+        ],
+        "沿用文件": [
+          "超導量子電腦師生對話教學紀錄（docs/超導量子電腦師生對話教學紀錄.md）全篇"
+        ],
+        "YouTube 關鍵字 1": "模組發表：換你當老師 quantum computing explained beginner",
+        "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E6%A8%A1%E7%B5%84%E7%99%BC%E8%A1%A8%EF%BC%9A%E6%8F%9B%E4%BD%A0%E7%95%B6%E8%80%81%E5%B8%AB+quantum+computing+explained+beginner",
+        "影片用途 1": "課前暖身",
+        "YouTube 關鍵字 2": "模組發表：換你當老師 孩子當老師，用師生對話形式講一課，並用  hands on demo",
+        "YouTube 連結 2": "https://www.youtube.com/results?search_query=%E6%A8%A1%E7%B5%84%E7%99%BC%E8%A1%A8%EF%BC%9A%E6%8F%9B%E4%BD%A0%E7%95%B6%E8%80%81%E5%B8%AB+%E5%AD%A9%E5%AD%90%E7%95%B6%E8%80%81%E5%B8%AB%EF%BC%8C%E7%94%A8%E5%B8%AB%E7%94%9F%E5%B0%8D%E8%A9%B1%E5%BD%A2%E5%BC%8F%E8%AC%9B%E4%B8%80%E8%AA%B2%EF%BC%8C%E4%B8%A6%E7%94%A8++hands+on+demo",
+        "影片用途 2": "課中實作參考",
+        "YouTube 關鍵字 3": "模組發表：換你當老師 quantum computing lecture visualization",
+        "YouTube 連結 3": "https://www.youtube.com/results?search_query=%E6%A8%A1%E7%B5%84%E7%99%BC%E8%A1%A8%EF%BC%9A%E6%8F%9B%E4%BD%A0%E7%95%B6%E8%80%81%E5%B8%AB+quantum+computing+lecture+visualization",
+        "影片用途 3": "課後延伸"
+      }
+    },
+    {
+      "lessonId": "Q113",
+      "sourceRow": {
+        "總課次": 113,
+        "學程": "量子電腦學程",
+        "階段": "第四階段 深化與產業",
+        "模組": "QM08 動手寫量子電路：從八個範例到自己的線路",
+        "模組內課次": 1,
+        "課程主題": "讀圖之前：三個約定與今天用到的閘",
+        "對象與上課方式": "國中以上；逐步播放振幅長條、量測 1000 次，再用本機 Qiskit 模擬器重現",
+        "學習目標": "會讀線路圖的方向、位元順序與振幅長條的正負色，認識 H、X、Z、CNOT",
+        "2 小時課程流程": "00–10 任務開場：讀圖之前：三個約定與今天用到的閘\n10–25 概念示範：會讀線路圖的方向、位元順序與振幅長條的正負色，認識 H、X、Z、CNOT\n25–65 父子共同實作：對照簡報約定頁，在 basic-circuits 逐步播放疊加範例並讀出每一步\n65–75 休息／走動／聊天\n75–105 孩子獨立改造：自己畫一條兩閘線路，標出位元順序\n105–115 角色互換：孩子教爸爸操作與原理\n115–120 錄音總結、作品命名、版本存檔",
+        "動手任務": "對照簡報約定頁，在 basic-circuits 逐步播放疊加範例並讀出每一步",
+        "孩子獨立改造": "自己畫一條兩閘線路，標出位元順序",
+        "好玩機制": "臨摹挑戰",
+        "作品／交付": "讀圖約定卡",
+        "生活技能支線": "先統一規則再溝通",
+        "家長課前準備": "basic-circuits.html；簡報 p3–4",
+        "課後延伸": "15–30 分鐘自由改造；寫三句學習日誌：我做了什麼、哪裡卡住、下次想加什麼。",
+        "驗收標準": "完成「讀圖約定卡」；能不用看稿說出核心原理；能指出至少一個錯誤、限制或注意事項（例如：位元順序在不同工具可能相反（Qiskit 是小端序），讀結果前先確認）。",
+        "常見誤解與安全提醒": "位元順序在不同工具可能相反（Qiskit 是小端序），讀結果前先確認",
+        "錄音重點": "請孩子回答：1. 讀圖之前：三個約定與今天用到的閘在解決什麼？2. 我怎麼做？3. 哪裡容易錯？4. 生活中或真實的量子電腦哪裡會用到？",
+        "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q113｜讀圖之前：三個約定與今天用到的閘",
+        "難度 1–5": 2,
+        "沿用簡報頁": [
+          "量子電路入門：八個範例（slides/output/basic-circuits.pptx）p2–4"
+        ],
+        "沿用 3D 場景": [
+          "bc:superposition"
+        ],
+        "需新增素材": [],
+        "沿用文件": [],
+        "YouTube 關鍵字 1": "讀圖之前：三個約定與今天用到的閘 quantum computing explained beginner",
+        "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E8%AE%80%E5%9C%96%E4%B9%8B%E5%89%8D%EF%BC%9A%E4%B8%89%E5%80%8B%E7%B4%84%E5%AE%9A%E8%88%87%E4%BB%8A%E5%A4%A9%E7%94%A8%E5%88%B0%E7%9A%84%E9%96%98+quantum+computing+explained+beginner",
+        "影片用途 1": "課前暖身",
+        "YouTube 關鍵字 2": "讀圖之前：三個約定與今天用到的閘 會讀線路圖的方向、位元順序與振幅長條的正 hands on demo",
+        "YouTube 連結 2": "https://www.youtube.com/results?search_query=%E8%AE%80%E5%9C%96%E4%B9%8B%E5%89%8D%EF%BC%9A%E4%B8%89%E5%80%8B%E7%B4%84%E5%AE%9A%E8%88%87%E4%BB%8A%E5%A4%A9%E7%94%A8%E5%88%B0%E7%9A%84%E9%96%98+%E6%9C%83%E8%AE%80%E7%B7%9A%E8%B7%AF%E5%9C%96%E7%9A%84%E6%96%B9%E5%90%91%E3%80%81%E4%BD%8D%E5%85%83%E9%A0%86%E5%BA%8F%E8%88%87%E6%8C%AF%E5%B9%85%E9%95%B7%E6%A2%9D%E7%9A%84%E6%AD%A3+hands+on+demo",
+        "影片用途 2": "課中實作參考",
+        "YouTube 關鍵字 3": "讀圖之前：三個約定與今天用到的閘 quantum computing lecture visualization",
+        "YouTube 連結 3": "https://www.youtube.com/results?search_query=%E8%AE%80%E5%9C%96%E4%B9%8B%E5%89%8D%EF%BC%9A%E4%B8%89%E5%80%8B%E7%B4%84%E5%AE%9A%E8%88%87%E4%BB%8A%E5%A4%A9%E7%94%A8%E5%88%B0%E7%9A%84%E9%96%98+quantum+computing+lecture+visualization",
+        "影片用途 3": "課後延伸"
+      }
+    },
+    {
+      "lessonId": "Q114",
+      "sourceRow": {
+        "總課次": 114,
+        "學程": "量子電腦學程",
+        "階段": "第四階段 深化與產業",
+        "模組": "QM08 動手寫量子電路：從八個範例到自己的線路",
+        "模組內課次": 2,
+        "課程主題": "範例 1：疊加——量子硬幣與 |+⟩、|−⟩",
+        "對象與上課方式": "國中以上；逐步播放振幅長條、量測 1000 次，再用本機 Qiskit 模擬器重現",
+        "學習目標": "知道 |+⟩ 和 |−⟩ 機率一樣，只差正負號",
+        "2 小時課程流程": "00–10 任務開場：範例 1：疊加——量子硬幣與 |+⟩、|−⟩\n10–25 概念示範：知道 |+⟩ 和 |−⟩ 機率一樣，只差正負號\n25–65 父子共同實作：從 |0⟩ 與 |1⟩ 起始各做一次，比較振幅長條顏色與量測 1000 次結果\n65–75 休息／走動／聊天\n75–105 孩子獨立改造：預測再加一個 H 之後會怎樣，再驗證\n105–115 角色互換：孩子教爸爸操作與原理\n115–120 錄音總結、作品命名、版本存檔",
+        "動手任務": "從 |0⟩ 與 |1⟩ 起始各做一次，比較振幅長條顏色與量測 1000 次結果",
+        "孩子獨立改造": "預測再加一個 H 之後會怎樣，再驗證",
+        "好玩機制": "盲測",
+        "作品／交付": "|+⟩／|−⟩ 對照表",
+        "生活技能支線": "看不見的差異要靠設計實驗",
+        "家長課前準備": "basic-circuits#superposition",
+        "課後延伸": "15–30 分鐘自由改造；寫三句學習日誌：我做了什麼、哪裡卡住、下次想加什麼。",
+        "驗收標準": "完成「|+⟩／|−⟩ 對照表」；能不用看稿說出核心原理；能指出至少一個錯誤、限制或注意事項（例如：量測 1000 次看不出 |+⟩ 和 |−⟩ 的差別）。",
+        "常見誤解與安全提醒": "量測 1000 次看不出 |+⟩ 和 |−⟩ 的差別",
+        "錄音重點": "請孩子回答：1. 範例 1：疊加——量子硬幣與 |+⟩、|−⟩在解決什麼？2. 我怎麼做？3. 哪裡容易錯？4. 生活中或真實的量子電腦哪裡會用到？",
+        "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q114｜範例 1：疊加——量子硬幣與 |+⟩、|−⟩",
+        "難度 1–5": 2,
+        "沿用簡報頁": [
+          "量子電路入門：八個範例（slides/output/basic-circuits.pptx）p5–6"
+        ],
+        "沿用 3D 場景": [
+          "bc:superposition",
+          "o:qubit"
+        ],
+        "需新增素材": [],
+        "沿用文件": [],
+        "YouTube 關鍵字 1": "範例 1：疊加——量子硬幣與 |+⟩、|−⟩ quantum computing explained beginner",
+        "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E7%AF%84%E4%BE%8B+1%EF%BC%9A%E7%96%8A%E5%8A%A0%E2%80%94%E2%80%94%E9%87%8F%E5%AD%90%E7%A1%AC%E5%B9%A3%E8%88%87+%7C%2B%E2%9F%A9%E3%80%81%7C%E2%88%92%E2%9F%A9+quantum+computing+explained+beginner",
+        "影片用途 1": "課前暖身",
+        "YouTube 關鍵字 2": "範例 1：疊加——量子硬幣與 |+⟩、|−⟩ 知道 |+⟩ 和 |−⟩ 機率一樣，只差 hands on demo",
+        "YouTube 連結 2": "https://www.youtube.com/results?search_query=%E7%AF%84%E4%BE%8B+1%EF%BC%9A%E7%96%8A%E5%8A%A0%E2%80%94%E2%80%94%E9%87%8F%E5%AD%90%E7%A1%AC%E5%B9%A3%E8%88%87+%7C%2B%E2%9F%A9%E3%80%81%7C%E2%88%92%E2%9F%A9+%E7%9F%A5%E9%81%93+%7C%2B%E2%9F%A9+%E5%92%8C+%7C%E2%88%92%E2%9F%A9+%E6%A9%9F%E7%8E%87%E4%B8%80%E6%A8%A3%EF%BC%8C%E5%8F%AA%E5%B7%AE+hands+on+demo",
+        "影片用途 2": "課中實作參考",
+        "YouTube 關鍵字 3": "範例 1：疊加——量子硬幣與 |+⟩、|−⟩ quantum computing lecture visualization",
+        "YouTube 連結 3": "https://www.youtube.com/results?search_query=%E7%AF%84%E4%BE%8B+1%EF%BC%9A%E7%96%8A%E5%8A%A0%E2%80%94%E2%80%94%E9%87%8F%E5%AD%90%E7%A1%AC%E5%B9%A3%E8%88%87+%7C%2B%E2%9F%A9%E3%80%81%7C%E2%88%92%E2%9F%A9+quantum+computing+lecture+visualization",
+        "影片用途 3": "課後延伸"
+      }
+    },
+    {
+      "lessonId": "Q115",
+      "sourceRow": {
+        "總課次": 115,
+        "學程": "量子電腦學程",
+        "階段": "第四階段 深化與產業",
+        "模組": "QM08 動手寫量子電路：從八個範例到自己的線路",
+        "模組內課次": 3,
+        "課程主題": "範例 2：干涉——H‑Z‑H = X",
+        "對象與上課方式": "國中以上；逐步播放振幅長條、量測 1000 次，再用本機 Qiskit 模擬器重現",
+        "學習目標": "用振幅逐步看負號怎麼變成結果，以及拿掉 Z 的差別",
+        "2 小時課程流程": "00–10 任務開場：範例 2：干涉——H‑Z‑H = X\n10–25 概念示範：用振幅逐步看負號怎麼變成結果，以及拿掉 Z 的差別\n25–65 父子共同實作：逐步播放 H‑Z‑H，再拿掉 Z 比較\n65–75 休息／走動／聊天\n75–105 孩子獨立改造：用路徑加總的表格解釋為什麼會抵消\n105–115 角色互換：孩子教爸爸操作與原理\n115–120 錄音總結、作品命名、版本存檔",
+        "動手任務": "逐步播放 H‑Z‑H，再拿掉 Z 比較",
+        "孩子獨立改造": "用路徑加總的表格解釋為什麼會抵消",
+        "好玩機制": "科學實驗",
+        "作品／交付": "路徑加總表",
+        "生活技能支線": "小改變可能造成大不同",
+        "家長課前準備": "basic-circuits#interference",
+        "課後延伸": "15–30 分鐘自由改造；寫三句學習日誌：我做了什麼、哪裡卡住、下次想加什麼。",
+        "驗收標準": "完成「路徑加總表」；能不用看稿說出核心原理；能指出至少一個錯誤、限制或注意事項（例如：干涉發生在振幅，不是機率）。",
+        "常見誤解與安全提醒": "干涉發生在振幅，不是機率",
+        "錄音重點": "請孩子回答：1. 範例 2：干涉——H‑Z‑H = X在解決什麼？2. 我怎麼做？3. 哪裡容易錯？4. 生活中或真實的量子電腦哪裡會用到？",
+        "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q115｜範例 2：干涉——H‑Z‑H = X",
+        "難度 1–5": 3,
+        "沿用簡報頁": [
+          "量子電路入門：八個範例（slides/output/basic-circuits.pptx）p7–9"
+        ],
+        "沿用 3D 場景": [
+          "bc:interference",
+          "o:interference"
+        ],
+        "需新增素材": [],
+        "沿用文件": [],
+        "YouTube 關鍵字 1": "範例 2：干涉——H‑Z‑H = X quantum computing explained beginner",
+        "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E7%AF%84%E4%BE%8B+2%EF%BC%9A%E5%B9%B2%E6%B6%89%E2%80%94%E2%80%94H%E2%80%91Z%E2%80%91H+%3D+X+quantum+computing+explained+beginner",
+        "影片用途 1": "課前暖身",
+        "YouTube 關鍵字 2": "範例 2：干涉——H‑Z‑H = X 用振幅逐步看負號怎麼變成結果，以及拿掉  hands on demo",
+        "YouTube 連結 2": "https://www.youtube.com/results?search_query=%E7%AF%84%E4%BE%8B+2%EF%BC%9A%E5%B9%B2%E6%B6%89%E2%80%94%E2%80%94H%E2%80%91Z%E2%80%91H+%3D+X+%E7%94%A8%E6%8C%AF%E5%B9%85%E9%80%90%E6%AD%A5%E7%9C%8B%E8%B2%A0%E8%99%9F%E6%80%8E%E9%BA%BC%E8%AE%8A%E6%88%90%E7%B5%90%E6%9E%9C%EF%BC%8C%E4%BB%A5%E5%8F%8A%E6%8B%BF%E6%8E%89++hands+on+demo",
+        "影片用途 2": "課中實作參考",
+        "YouTube 關鍵字 3": "範例 2：干涉——H‑Z‑H = X quantum computing lecture visualization",
+        "YouTube 連結 3": "https://www.youtube.com/results?search_query=%E7%AF%84%E4%BE%8B+2%EF%BC%9A%E5%B9%B2%E6%B6%89%E2%80%94%E2%80%94H%E2%80%91Z%E2%80%91H+%3D+X+quantum+computing+lecture+visualization",
+        "影片用途 3": "課後延伸"
+      }
+    },
+    {
+      "lessonId": "Q116",
+      "sourceRow": {
+        "總課次": 116,
+        "學程": "量子電腦學程",
+        "階段": "第四階段 深化與產業",
+        "模組": "QM08 動手寫量子電路：從八個範例到自己的線路",
+        "模組內課次": 4,
+        "課程主題": "範例 3：Bell 態——四種糾纏",
+        "對象與上課方式": "國中以上；逐步播放振幅長條、量測 1000 次，再用本機 Qiskit 模擬器重現",
+        "學習目標": "知道 CNOT 把機率搬到 |11⟩，四個 Bell 態只差開頭的 X 與 Z",
+        "2 小時課程流程": "00–10 任務開場：範例 3：Bell 態——四種糾纏\n10–25 概念示範：知道 CNOT 把機率搬到 |11⟩，四個 Bell 態只差開頭的 X 與 Z\n25–65 父子共同實作：逐步做 Φ⁺、Φ⁻、Ψ⁺、Ψ⁻，各量測 1000 次\n65–75 休息／走動／聊天\n75–105 孩子獨立改造：看「單看某一顆位元」的 Bloch 球，說明為什麼向量變短\n105–115 角色互換：孩子教爸爸操作與原理\n115–120 錄音總結、作品命名、版本存檔",
+        "動手任務": "逐步做 Φ⁺、Φ⁻、Ψ⁺、Ψ⁻，各量測 1000 次",
+        "孩子獨立改造": "看「單看某一顆位元」的 Bloch 球，說明為什麼向量變短",
+        "好玩機制": "解鎖成就（四個 Bell 態）",
+        "作品／交付": "Bell 態圖鑑",
+        "生活技能支線": "整理分類",
+        "家長課前準備": "basic-circuits#bell",
+        "課後延伸": "15–30 分鐘自由改造；寫三句學習日誌：我做了什麼、哪裡卡住、下次想加什麼。",
+        "驗收標準": "完成「Bell 態圖鑑」；能不用看稿說出核心原理；能指出至少一個錯誤、限制或注意事項（例如：Bloch 向量變短代表和別人糾纏，不是位元壞掉）。",
+        "常見誤解與安全提醒": "Bloch 向量變短代表和別人糾纏，不是位元壞掉",
+        "錄音重點": "請孩子回答：1. 範例 3：Bell 態——四種糾纏在解決什麼？2. 我怎麼做？3. 哪裡容易錯？4. 生活中或真實的量子電腦哪裡會用到？",
+        "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q116｜範例 3：Bell 態——四種糾纏",
+        "難度 1–5": 3,
+        "沿用簡報頁": [
+          "量子電路入門：八個範例（slides/output/basic-circuits.pptx）p10–12"
+        ],
+        "沿用 3D 場景": [
+          "bc:bell",
+          "o:register"
+        ],
+        "需新增素材": [],
+        "沿用文件": [],
+        "YouTube 關鍵字 1": "範例 3：Bell 態——四種糾纏 quantum computing explained beginner",
+        "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E7%AF%84%E4%BE%8B+3%EF%BC%9ABell+%E6%85%8B%E2%80%94%E2%80%94%E5%9B%9B%E7%A8%AE%E7%B3%BE%E7%BA%8F+quantum+computing+explained+beginner",
+        "影片用途 1": "課前暖身",
+        "YouTube 關鍵字 2": "範例 3：Bell 態——四種糾纏 知道 CNOT 把機率搬到 |11⟩，四 hands on demo",
+        "YouTube 連結 2": "https://www.youtube.com/results?search_query=%E7%AF%84%E4%BE%8B+3%EF%BC%9ABell+%E6%85%8B%E2%80%94%E2%80%94%E5%9B%9B%E7%A8%AE%E7%B3%BE%E7%BA%8F+%E7%9F%A5%E9%81%93+CNOT+%E6%8A%8A%E6%A9%9F%E7%8E%87%E6%90%AC%E5%88%B0+%7C11%E2%9F%A9%EF%BC%8C%E5%9B%9B+hands+on+demo",
+        "影片用途 2": "課中實作參考",
+        "YouTube 關鍵字 3": "範例 3：Bell 態——四種糾纏 quantum computing lecture visualization",
+        "YouTube 連結 3": "https://www.youtube.com/results?search_query=%E7%AF%84%E4%BE%8B+3%EF%BC%9ABell+%E6%85%8B%E2%80%94%E2%80%94%E5%9B%9B%E7%A8%AE%E7%B3%BE%E7%BA%8F+quantum+computing+lecture+visualization",
+        "影片用途 3": "課後延伸"
+      }
+    },
+    {
+      "lessonId": "Q117",
+      "sourceRow": {
+        "總課次": 117,
+        "學程": "量子電腦學程",
+        "階段": "第四階段 深化與產業",
+        "模組": "QM08 動手寫量子電路：從八個範例到自己的線路",
+        "模組內課次": 5,
+        "課程主題": "範例 4：GHZ——CNOT 一路串下去",
+        "對象與上課方式": "國中以上；逐步播放振幅長條、量測 1000 次，再用本機 Qiskit 模擬器重現",
+        "學習目標": "把糾纏擴展到三、四顆位元，看每一步多綁一顆",
+        "2 小時課程流程": "00–10 任務開場：範例 4：GHZ——CNOT 一路串下去\n10–25 概念示範：把糾纏擴展到三、四顆位元，看每一步多綁一顆\n25–65 父子共同實作：做 3 顆與 4 顆 GHZ，記錄量測結果只有全 0 與全 1\n65–75 休息／走動／聊天\n75–105 孩子獨立改造：故意少接一條 CNOT，預測結果再驗證\n105–115 角色互換：孩子教爸爸操作與原理\n115–120 錄音總結、作品命名、版本存檔",
+        "動手任務": "做 3 顆與 4 顆 GHZ，記錄量測結果只有全 0 與全 1",
+        "孩子獨立改造": "故意少接一條 CNOT，預測結果再驗證",
+        "好玩機制": "闖關",
+        "作品／交付": "GHZ 逐步圖",
+        "生活技能支線": "一環扣一環",
+        "家長課前準備": "basic-circuits#ghz",
+        "課後延伸": "15–30 分鐘自由改造；寫三句學習日誌：我做了什麼、哪裡卡住、下次想加什麼。",
+        "驗收標準": "完成「GHZ 逐步圖」；能不用看稿說出核心原理；能指出至少一個錯誤、限制或注意事項（例如：位元越多，真機上的 GHZ 越容易被雜訊破壞）。",
+        "常見誤解與安全提醒": "位元越多，真機上的 GHZ 越容易被雜訊破壞",
+        "錄音重點": "請孩子回答：1. 範例 4：GHZ——CNOT 一路串下去在解決什麼？2. 我怎麼做？3. 哪裡容易錯？4. 生活中或真實的量子電腦哪裡會用到？",
+        "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q117｜範例 4：GHZ——CNOT 一路串下去",
+        "難度 1–5": 3,
+        "沿用簡報頁": [
+          "量子電路入門：八個範例（slides/output/basic-circuits.pptx）p13–14"
+        ],
+        "沿用 3D 場景": [
+          "bc:ghz",
+          "o:register"
+        ],
+        "需新增素材": [],
+        "沿用文件": [],
+        "YouTube 關鍵字 1": "範例 4：GHZ——CNOT 一路串下去 quantum computing explained beginner",
+        "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E7%AF%84%E4%BE%8B+4%EF%BC%9AGHZ%E2%80%94%E2%80%94CNOT+%E4%B8%80%E8%B7%AF%E4%B8%B2%E4%B8%8B%E5%8E%BB+quantum+computing+explained+beginner",
+        "影片用途 1": "課前暖身",
+        "YouTube 關鍵字 2": "範例 4：GHZ——CNOT 一路串下去 把糾纏擴展到三、四顆位元，看每一步多綁一 hands on demo",
+        "YouTube 連結 2": "https://www.youtube.com/results?search_query=%E7%AF%84%E4%BE%8B+4%EF%BC%9AGHZ%E2%80%94%E2%80%94CNOT+%E4%B8%80%E8%B7%AF%E4%B8%B2%E4%B8%8B%E5%8E%BB+%E6%8A%8A%E7%B3%BE%E7%BA%8F%E6%93%B4%E5%B1%95%E5%88%B0%E4%B8%89%E3%80%81%E5%9B%9B%E9%A1%86%E4%BD%8D%E5%85%83%EF%BC%8C%E7%9C%8B%E6%AF%8F%E4%B8%80%E6%AD%A5%E5%A4%9A%E7%B6%81%E4%B8%80+hands+on+demo",
+        "影片用途 2": "課中實作參考",
+        "YouTube 關鍵字 3": "範例 4：GHZ——CNOT 一路串下去 quantum computing lecture visualization",
+        "YouTube 連結 3": "https://www.youtube.com/results?search_query=%E7%AF%84%E4%BE%8B+4%EF%BC%9AGHZ%E2%80%94%E2%80%94CNOT+%E4%B8%80%E8%B7%AF%E4%B8%B2%E4%B8%8B%E5%8E%BB+quantum+computing+lecture+visualization",
+        "影片用途 3": "課後延伸"
+      }
+    },
+    {
+      "lessonId": "Q118",
+      "sourceRow": {
+        "總課次": 118,
+        "學程": "量子電腦學程",
+        "階段": "第四階段 深化與產業",
+        "模組": "QM08 動手寫量子電路：從八個範例到自己的線路",
+        "模組內課次": 6,
+        "課程主題": "範例 5：隱形傳態——四種 ψ",
+        "對象與上課方式": "國中以上；逐步播放振幅長條、量測 1000 次，再用本機 Qiskit 模擬器重現",
+        "學習目標": "用延遲量測版看 Alice 量到什麼、Bob 怎麼修，以及狀態怎麼搬家",
+        "2 小時課程流程": "00–10 任務開場：範例 5：隱形傳態——四種 ψ\n10–25 概念示範：用延遲量測版看 Alice 量到什麼、Bob 怎麼修，以及狀態怎麼搬家\n25–65 父子共同實作：四種 ψ 各傳一次，用 Bloch 球確認 Bob 收到的狀態\n65–75 休息／走動／聊天\n75–105 孩子獨立改造：拿掉修正步驟，看 Bob 的狀態變成什麼\n105–115 角色互換：孩子教爸爸操作與原理\n115–120 錄音總結、作品命名、版本存檔",
+        "動手任務": "四種 ψ 各傳一次，用 Bloch 球確認 Bob 收到的狀態",
+        "孩子獨立改造": "拿掉修正步驟，看 Bob 的狀態變成什麼",
+        "好玩機制": "角色扮演（三人傳送）",
+        "作品／交付": "傳送流程表",
+        "生活技能支線": "通訊是不可少的一環",
+        "家長課前準備": "basic-circuits#teleport",
+        "課後延伸": "15–30 分鐘自由改造；寫三句學習日誌：我做了什麼、哪裡卡住、下次想加什麼。",
+        "驗收標準": "完成「傳送流程表」；能不用看稿說出核心原理；能指出至少一個錯誤、限制或注意事項（例如：沒有古典通訊就無法完成，所以不能超光速）。",
+        "常見誤解與安全提醒": "沒有古典通訊就無法完成，所以不能超光速",
+        "錄音重點": "請孩子回答：1. 範例 5：隱形傳態——四種 ψ在解決什麼？2. 我怎麼做？3. 哪裡容易錯？4. 生活中或真實的量子電腦哪裡會用到？",
+        "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q118｜範例 5：隱形傳態——四種 ψ",
+        "難度 1–5": 3,
+        "沿用簡報頁": [
+          "量子電路入門：八個範例（slides/output/basic-circuits.pptx）p15–17"
+        ],
+        "沿用 3D 場景": [
+          "bc:teleport",
+          "o:circuit"
+        ],
+        "需新增素材": [],
+        "沿用文件": [],
+        "YouTube 關鍵字 1": "範例 5：隱形傳態——四種 ψ quantum computing explained beginner",
+        "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E7%AF%84%E4%BE%8B+5%EF%BC%9A%E9%9A%B1%E5%BD%A2%E5%82%B3%E6%85%8B%E2%80%94%E2%80%94%E5%9B%9B%E7%A8%AE+%CF%88+quantum+computing+explained+beginner",
+        "影片用途 1": "課前暖身",
+        "YouTube 關鍵字 2": "範例 5：隱形傳態——四種 ψ 用延遲量測版看 Alice 量到什麼、B hands on demo",
+        "YouTube 連結 2": "https://www.youtube.com/results?search_query=%E7%AF%84%E4%BE%8B+5%EF%BC%9A%E9%9A%B1%E5%BD%A2%E5%82%B3%E6%85%8B%E2%80%94%E2%80%94%E5%9B%9B%E7%A8%AE+%CF%88+%E7%94%A8%E5%BB%B6%E9%81%B2%E9%87%8F%E6%B8%AC%E7%89%88%E7%9C%8B+Alice+%E9%87%8F%E5%88%B0%E4%BB%80%E9%BA%BC%E3%80%81B+hands+on+demo",
+        "影片用途 2": "課中實作參考",
+        "YouTube 關鍵字 3": "範例 5：隱形傳態——四種 ψ quantum computing lecture visualization",
+        "YouTube 連結 3": "https://www.youtube.com/results?search_query=%E7%AF%84%E4%BE%8B+5%EF%BC%9A%E9%9A%B1%E5%BD%A2%E5%82%B3%E6%85%8B%E2%80%94%E2%80%94%E5%9B%9B%E7%A8%AE+%CF%88+quantum+computing+lecture+visualization",
+        "影片用途 3": "課後延伸"
+      }
+    },
+    {
+      "lessonId": "Q119",
+      "sourceRow": {
+        "總課次": 119,
+        "學程": "量子電腦學程",
+        "階段": "第四階段 深化與產業",
+        "模組": "QM08 動手寫量子電路：從八個範例到自己的線路",
+        "模組內課次": 7,
+        "課程主題": "範例 6：Deutsch——紅綠球搖獎機",
+        "對象與上課方式": "國中以上；逐步播放振幅長條、量測 1000 次，再用本機 Qiskit 模擬器重現",
+        "學習目標": "用《量子金魚》紅綠球比喻與四種黑盒，理解一次查詢分辨常數或平衡",
+        "2 小時課程流程": "00–10 任務開場：範例 6：Deutsch——紅綠球搖獎機\n10–25 概念示範：用《量子金魚》紅綠球比喻與四種黑盒，理解一次查詢分辨常數或平衡\n25–65 父子共同實作：先用古典方式搖球，再用 Deutsch 線路一次判斷，四種黑盒全部跑\n65–75 休息／走動／聊天\n75–105 孩子獨立改造：設計一個 8 顆球的版本，說明相長與相消\n105–115 角色互換：孩子教爸爸操作與原理\n115–120 錄音總結、作品命名、版本存檔",
+        "動手任務": "先用古典方式搖球，再用 Deutsch 線路一次判斷，四種黑盒全部跑",
+        "孩子獨立改造": "設計一個 8 顆球的版本，說明相長與相消",
+        "好玩機制": "偵探辦案",
+        "作品／交付": "四種黑盒判讀表",
+        "生活技能支線": "用對的問題一次問清楚",
+        "家長課前準備": "basic-circuits#deutsch；量子金魚簡報",
+        "課後延伸": "15–30 分鐘自由改造；寫三句學習日誌：我做了什麼、哪裡卡住、下次想加什麼。",
+        "驗收標準": "完成「四種黑盒判讀表」；能不用看稿說出核心原理；能指出至少一個錯誤、限制或注意事項（例如：Deutsch 是玩具問題；簡報 p27 有三個誠實的限制）。",
+        "常見誤解與安全提醒": "Deutsch 是玩具問題；簡報 p27 有三個誠實的限制",
+        "錄音重點": "請孩子回答：1. 範例 6：Deutsch——紅綠球搖獎機在解決什麼？2. 我怎麼做？3. 哪裡容易錯？4. 生活中或真實的量子電腦哪裡會用到？",
+        "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q119｜範例 6：Deutsch——紅綠球搖獎機",
+        "難度 1–5": 3,
+        "沿用簡報頁": [
+          "《量子金魚》008 Deutsch 演算法報告簡報（slides/output/qfish008-deutsch-algorithm.pptx）p5–25",
+          "量子電路入門：八個範例（slides/output/basic-circuits.pptx）p18–20"
+        ],
+        "沿用 3D 場景": [
+          "bc:deutsch",
+          "tr:deutsch"
+        ],
+        "需新增素材": [],
+        "沿用文件": [
+          "超導量子電腦師生對話教學紀錄（docs/超導量子電腦師生對話教學紀錄.md）第 9 課"
+        ],
+        "YouTube 關鍵字 1": "範例 6：Deutsch——紅綠球搖獎機 quantum computing explained beginner",
+        "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E7%AF%84%E4%BE%8B+6%EF%BC%9ADeutsch%E2%80%94%E2%80%94%E7%B4%85%E7%B6%A0%E7%90%83%E6%90%96%E7%8D%8E%E6%A9%9F+quantum+computing+explained+beginner",
+        "影片用途 1": "課前暖身",
+        "YouTube 關鍵字 2": "範例 6：Deutsch——紅綠球搖獎機 用《量子金魚》紅綠球比喻與四種黑盒，理解 hands on demo",
+        "YouTube 連結 2": "https://www.youtube.com/results?search_query=%E7%AF%84%E4%BE%8B+6%EF%BC%9ADeutsch%E2%80%94%E2%80%94%E7%B4%85%E7%B6%A0%E7%90%83%E6%90%96%E7%8D%8E%E6%A9%9F+%E7%94%A8%E3%80%8A%E9%87%8F%E5%AD%90%E9%87%91%E9%AD%9A%E3%80%8B%E7%B4%85%E7%B6%A0%E7%90%83%E6%AF%94%E5%96%BB%E8%88%87%E5%9B%9B%E7%A8%AE%E9%BB%91%E7%9B%92%EF%BC%8C%E7%90%86%E8%A7%A3+hands+on+demo",
+        "影片用途 2": "課中實作參考",
+        "YouTube 關鍵字 3": "範例 6：Deutsch——紅綠球搖獎機 quantum computing lecture visualization",
+        "YouTube 連結 3": "https://www.youtube.com/results?search_query=%E7%AF%84%E4%BE%8B+6%EF%BC%9ADeutsch%E2%80%94%E2%80%94%E7%B4%85%E7%B6%A0%E7%90%83%E6%90%96%E7%8D%8E%E6%A9%9F+quantum+computing+lecture+visualization",
+        "影片用途 3": "課後延伸"
+      }
+    },
+    {
+      "lessonId": "Q120",
+      "sourceRow": {
+        "總課次": 120,
+        "學程": "量子電腦學程",
+        "階段": "第四階段 深化與產業",
+        "模組": "QM08 動手寫量子電路：從八個範例到自己的線路",
+        "模組內課次": 8,
+        "課程主題": "範例 7：BV——查一次讀出整串密碼",
+        "對象與上課方式": "國中以上；逐步播放振幅長條、量測 1000 次，再用本機 Qiskit 模擬器重現",
+        "學習目標": "知道密碼藏在振幅正負號的排列裡，一次查詢就能讀出",
+        "2 小時課程流程": "00–10 任務開場：範例 7：BV——查一次讀出整串密碼\n10–25 概念示範：知道密碼藏在振幅正負號的排列裡，一次查詢就能讀出\n25–65 父子共同實作：自訂 3 位元密碼，逐步播放並量測\n65–75 休息／走動／聊天\n75–105 孩子獨立改造：和古典逐位查詢比較次數，畫成表\n105–115 角色互換：孩子教爸爸操作與原理\n115–120 錄音總結、作品命名、版本存檔",
+        "動手任務": "自訂 3 位元密碼，逐步播放並量測",
+        "孩子獨立改造": "和古典逐位查詢比較次數，畫成表",
+        "好玩機制": "程式對決",
+        "作品／交付": "BV 密碼紀錄",
+        "生活技能支線": "一次問對問題",
+        "家長課前準備": "basic-circuits#bv",
+        "課後延伸": "15–30 分鐘自由改造；寫三句學習日誌：我做了什麼、哪裡卡住、下次想加什麼。",
+        "驗收標準": "完成「BV 密碼紀錄」；能不用看稿說出核心原理；能指出至少一個錯誤、限制或注意事項（例如：密碼長度增加時古典要更多次，量子仍是一次）。",
+        "常見誤解與安全提醒": "密碼長度增加時古典要更多次，量子仍是一次",
+        "錄音重點": "請孩子回答：1. 範例 7：BV——查一次讀出整串密碼在解決什麼？2. 我怎麼做？3. 哪裡容易錯？4. 生活中或真實的量子電腦哪裡會用到？",
+        "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q120｜範例 7：BV——查一次讀出整串密碼",
+        "難度 1–5": 3,
+        "沿用簡報頁": [
+          "量子電路入門：八個範例（slides/output/basic-circuits.pptx）p21–22"
+        ],
+        "沿用 3D 場景": [
+          "bc:bv",
+          "tr:bv"
+        ],
+        "需新增素材": [],
+        "沿用文件": [
+          "超導量子電腦師生對話教學紀錄（docs/超導量子電腦師生對話教學紀錄.md）第 7 課"
+        ],
+        "YouTube 關鍵字 1": "範例 7：BV——查一次讀出整串密碼 quantum computing explained beginner",
+        "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E7%AF%84%E4%BE%8B+7%EF%BC%9ABV%E2%80%94%E2%80%94%E6%9F%A5%E4%B8%80%E6%AC%A1%E8%AE%80%E5%87%BA%E6%95%B4%E4%B8%B2%E5%AF%86%E7%A2%BC+quantum+computing+explained+beginner",
+        "影片用途 1": "課前暖身",
+        "YouTube 關鍵字 2": "範例 7：BV——查一次讀出整串密碼 知道密碼藏在振幅正負號的排列裡，一次查詢 hands on demo",
+        "YouTube 連結 2": "https://www.youtube.com/results?search_query=%E7%AF%84%E4%BE%8B+7%EF%BC%9ABV%E2%80%94%E2%80%94%E6%9F%A5%E4%B8%80%E6%AC%A1%E8%AE%80%E5%87%BA%E6%95%B4%E4%B8%B2%E5%AF%86%E7%A2%BC+%E7%9F%A5%E9%81%93%E5%AF%86%E7%A2%BC%E8%97%8F%E5%9C%A8%E6%8C%AF%E5%B9%85%E6%AD%A3%E8%B2%A0%E8%99%9F%E7%9A%84%E6%8E%92%E5%88%97%E8%A3%A1%EF%BC%8C%E4%B8%80%E6%AC%A1%E6%9F%A5%E8%A9%A2+hands+on+demo",
+        "影片用途 2": "課中實作參考",
+        "YouTube 關鍵字 3": "範例 7：BV——查一次讀出整串密碼 quantum computing lecture visualization",
+        "YouTube 連結 3": "https://www.youtube.com/results?search_query=%E7%AF%84%E4%BE%8B+7%EF%BC%9ABV%E2%80%94%E2%80%94%E6%9F%A5%E4%B8%80%E6%AC%A1%E8%AE%80%E5%87%BA%E6%95%B4%E4%B8%B2%E5%AF%86%E7%A2%BC+quantum+computing+lecture+visualization",
+        "影片用途 3": "課後延伸"
+      }
+    },
+    {
+      "lessonId": "Q121",
+      "sourceRow": {
+        "總課次": 121,
+        "學程": "量子電腦學程",
+        "階段": "第四階段 深化與產業",
+        "模組": "QM08 動手寫量子電路：從八個範例到自己的線路",
+        "模組內課次": 9,
+        "課程主題": "範例 8：Grover——對平均值翻轉",
+        "對象與上課方式": "國中以上；逐步播放振幅長條、量測 1000 次，再用本機 Qiskit 模擬器重現",
+        "學習目標": "用平均值虛線看擴散怎麼把答案拉高",
+        "2 小時課程流程": "00–10 任務開場：範例 8：Grover——對平均值翻轉\n10–25 概念示範：用平均值虛線看擴散怎麼把答案拉高\n25–65 父子共同實作：2 顆位元、選答案、跑 1 輪，觀察平均值與長條\n65–75 休息／走動／聊天\n75–105 孩子獨立改造：換另一個答案，預測一輪後的結果\n105–115 角色互換：孩子教爸爸操作與原理\n115–120 錄音總結、作品命名、版本存檔",
+        "動手任務": "2 顆位元、選答案、跑 1 輪，觀察平均值與長條",
+        "孩子獨立改造": "換另一個答案，預測一輪後的結果",
+        "好玩機制": "尋寶",
+        "作品／交付": "Grover 逐步圖",
+        "生活技能支線": "相對比較的力量",
+        "家長課前準備": "basic-circuits#grover",
+        "課後延伸": "15–30 分鐘自由改造；寫三句學習日誌：我做了什麼、哪裡卡住、下次想加什麼。",
+        "驗收標準": "完成「Grover 逐步圖」；能不用看稿說出核心原理；能指出至少一個錯誤、限制或注意事項（例如：擴散是對平均值翻轉；和閘電路差一個整體負號，不影響結果）。",
+        "常見誤解與安全提醒": "擴散是對平均值翻轉；和閘電路差一個整體負號，不影響結果",
+        "錄音重點": "請孩子回答：1. 範例 8：Grover——對平均值翻轉在解決什麼？2. 我怎麼做？3. 哪裡容易錯？4. 生活中或真實的量子電腦哪裡會用到？",
+        "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q121｜範例 8：Grover——對平均值翻轉",
+        "難度 1–5": 3,
+        "沿用簡報頁": [
+          "量子電路入門：八個範例（slides/output/basic-circuits.pptx）p23–24"
+        ],
+        "沿用 3D 場景": [
+          "bc:grover",
+          "o:grover"
+        ],
+        "需新增素材": [],
+        "沿用文件": [],
+        "YouTube 關鍵字 1": "範例 8：Grover——對平均值翻轉 quantum computing explained beginner",
+        "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E7%AF%84%E4%BE%8B+8%EF%BC%9AGrover%E2%80%94%E2%80%94%E5%B0%8D%E5%B9%B3%E5%9D%87%E5%80%BC%E7%BF%BB%E8%BD%89+quantum+computing+explained+beginner",
+        "影片用途 1": "課前暖身",
+        "YouTube 關鍵字 2": "範例 8：Grover——對平均值翻轉 用平均值虛線看擴散怎麼把答案拉高 hands on demo",
+        "YouTube 連結 2": "https://www.youtube.com/results?search_query=%E7%AF%84%E4%BE%8B+8%EF%BC%9AGrover%E2%80%94%E2%80%94%E5%B0%8D%E5%B9%B3%E5%9D%87%E5%80%BC%E7%BF%BB%E8%BD%89+%E7%94%A8%E5%B9%B3%E5%9D%87%E5%80%BC%E8%99%9B%E7%B7%9A%E7%9C%8B%E6%93%B4%E6%95%A3%E6%80%8E%E9%BA%BC%E6%8A%8A%E7%AD%94%E6%A1%88%E6%8B%89%E9%AB%98+hands+on+demo",
+        "影片用途 2": "課中實作參考",
+        "YouTube 關鍵字 3": "範例 8：Grover——對平均值翻轉 quantum computing lecture visualization",
+        "YouTube 連結 3": "https://www.youtube.com/results?search_query=%E7%AF%84%E4%BE%8B+8%EF%BC%9AGrover%E2%80%94%E2%80%94%E5%B0%8D%E5%B9%B3%E5%9D%87%E5%80%BC%E7%BF%BB%E8%BD%89+quantum+computing+lecture+visualization",
+        "影片用途 3": "課後延伸"
+      }
+    },
+    {
+      "lessonId": "Q122",
+      "sourceRow": {
+        "總課次": 122,
+        "學程": "量子電腦學程",
+        "階段": "第四階段 深化與產業",
+        "模組": "QM08 動手寫量子電路：從八個範例到自己的線路",
+        "模組內課次": 10,
+        "課程主題": "Grover 三位元：轉太多會轉過頭",
+        "對象與上課方式": "國中以上；逐步播放振幅長條、量測 1000 次，再用本機 Qiskit 模擬器重現",
+        "學習目標": "用 3 顆位元跑 1–3 輪，看成功機率先升後降，理解 √N",
+        "2 小時課程流程": "00–10 任務開場：Grover 三位元：轉太多會轉過頭\n10–25 概念示範：用 3 顆位元跑 1–3 輪，看成功機率先升後降，理解 √N\n25–65 父子共同實作：記錄 1、2、3 輪的成功機率並畫圖\n65–75 休息／走動／聊天\n75–105 孩子獨立改造：算出 N = 1024 時大約要幾輪\n105–115 角色互換：孩子教爸爸操作與原理\n115–120 錄音總結、作品命名、版本存檔",
+        "動手任務": "記錄 1、2、3 輪的成功機率並畫圖",
+        "孩子獨立改造": "算出 N = 1024 時大約要幾輪",
+        "好玩機制": "效能競賽",
+        "作品／交付": "輪數與成功率圖",
+        "生活技能支線": "恰到好處",
+        "家長課前準備": "basic-circuits#grover",
+        "課後延伸": "15–30 分鐘自由改造；寫三句學習日誌：我做了什麼、哪裡卡住、下次想加什麼。",
+        "驗收標準": "完成「輪數與成功率圖」；能不用看稿說出核心原理；能指出至少一個錯誤、限制或注意事項（例如：平方根加速，而且要先知道大約有幾個答案）。",
+        "常見誤解與安全提醒": "平方根加速，而且要先知道大約有幾個答案",
+        "錄音重點": "請孩子回答：1. Grover 三位元：轉太多會轉過頭在解決什麼？2. 我怎麼做？3. 哪裡容易錯？4. 生活中或真實的量子電腦哪裡會用到？",
+        "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q122｜Grover 三位元：轉太多會轉過頭",
+        "難度 1–5": 3,
+        "沿用簡報頁": [
+          "量子電路入門：八個範例（slides/output/basic-circuits.pptx）p25–27"
+        ],
+        "沿用 3D 場景": [
+          "bc:grover",
+          "o:grover"
+        ],
+        "需新增素材": [],
+        "沿用文件": [],
+        "YouTube 關鍵字 1": "Grover 三位元：轉太多會轉過頭 quantum computing explained beginner",
+        "YouTube 連結 1": "https://www.youtube.com/results?search_query=Grover+%E4%B8%89%E4%BD%8D%E5%85%83%EF%BC%9A%E8%BD%89%E5%A4%AA%E5%A4%9A%E6%9C%83%E8%BD%89%E9%81%8E%E9%A0%AD+quantum+computing+explained+beginner",
+        "影片用途 1": "課前暖身",
+        "YouTube 關鍵字 2": "Grover 三位元：轉太多會轉過頭 用 3 顆位元跑 1–3 輪，看成功機率 hands on demo",
+        "YouTube 連結 2": "https://www.youtube.com/results?search_query=Grover+%E4%B8%89%E4%BD%8D%E5%85%83%EF%BC%9A%E8%BD%89%E5%A4%AA%E5%A4%9A%E6%9C%83%E8%BD%89%E9%81%8E%E9%A0%AD+%E7%94%A8+3+%E9%A1%86%E4%BD%8D%E5%85%83%E8%B7%91+1%E2%80%933+%E8%BC%AA%EF%BC%8C%E7%9C%8B%E6%88%90%E5%8A%9F%E6%A9%9F%E7%8E%87+hands+on+demo",
+        "影片用途 2": "課中實作參考",
+        "YouTube 關鍵字 3": "Grover 三位元：轉太多會轉過頭 quantum computing lecture visualization",
+        "YouTube 連結 3": "https://www.youtube.com/results?search_query=Grover+%E4%B8%89%E4%BD%8D%E5%85%83%EF%BC%9A%E8%BD%89%E5%A4%AA%E5%A4%9A%E6%9C%83%E8%BD%89%E9%81%8E%E9%A0%AD+quantum+computing+lecture+visualization",
+        "影片用途 3": "課後延伸"
+      }
+    },
+    {
+      "lessonId": "Q123",
+      "sourceRow": {
+        "總課次": 123,
+        "學程": "量子電腦學程",
+        "階段": "第四階段 深化與產業",
+        "模組": "QM08 動手寫量子電路：從八個範例到自己的線路",
+        "模組內課次": 11,
+        "課程主題": "古典 vs 量子：要查幾次？",
+        "對象與上課方式": "國中以上；逐步播放振幅長條、量測 1000 次，再用本機 Qiskit 模擬器重現",
+        "學習目標": "整理 Deutsch、BV、Grover 的古典與量子查詢次數，分辨加速大小",
+        "2 小時課程流程": "00–10 任務開場：古典 vs 量子：要查幾次？\n10–25 概念示範：整理 Deutsch、BV、Grover 的古典與量子查詢次數，分辨加速大小\n25–65 父子共同實作：做一張查詢次數比較表並用動畫驗證其中三格\n65–75 休息／走動／聊天\n75–105 孩子獨立改造：找一個量子沒有優勢的問題，說明原因\n105–115 角色互換：孩子教爸爸操作與原理\n115–120 錄音總結、作品命名、版本存檔",
+        "動手任務": "做一張查詢次數比較表並用動畫驗證其中三格",
+        "孩子獨立改造": "找一個量子沒有優勢的問題，說明原因",
+        "好玩機制": "工程答辯",
+        "作品／交付": "查詢次數比較表",
+        "生活技能支線": "用數字比較",
+        "家長課前準備": "簡報 p30",
+        "課後延伸": "15–30 分鐘自由改造；寫三句學習日誌：我做了什麼、哪裡卡住、下次想加什麼。",
+        "驗收標準": "完成「查詢次數比較表」；能不用看稿說出核心原理；能指出至少一個錯誤、限制或注意事項（例如：查詢次數少不等於總時間少；還要算讀取與重複次數）。",
+        "常見誤解與安全提醒": "查詢次數少不等於總時間少；還要算讀取與重複次數",
+        "錄音重點": "請孩子回答：1. 古典 vs 量子：要查幾次？在解決什麼？2. 我怎麼做？3. 哪裡容易錯？4. 生活中或真實的量子電腦哪裡會用到？",
+        "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q123｜古典 vs 量子：要查幾次？",
+        "難度 1–5": 3,
+        "沿用簡報頁": [
+          "量子電路入門：八個範例（slides/output/basic-circuits.pptx）p30",
+          "如何操作量子電腦（slides/QC_Operation_Talk.pptx）p42"
+        ],
+        "沿用 3D 場景": [
+          "bc:bv",
+          "bc:grover"
+        ],
+        "需新增素材": [],
+        "沿用文件": [],
+        "YouTube 關鍵字 1": "古典 vs 量子：要查幾次？ quantum computing explained beginner",
+        "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E5%8F%A4%E5%85%B8+vs+%E9%87%8F%E5%AD%90%EF%BC%9A%E8%A6%81%E6%9F%A5%E5%B9%BE%E6%AC%A1%EF%BC%9F+quantum+computing+explained+beginner",
+        "影片用途 1": "課前暖身",
+        "YouTube 關鍵字 2": "古典 vs 量子：要查幾次？ 整理 Deutsch、BV、Grover hands on demo",
+        "YouTube 連結 2": "https://www.youtube.com/results?search_query=%E5%8F%A4%E5%85%B8+vs+%E9%87%8F%E5%AD%90%EF%BC%9A%E8%A6%81%E6%9F%A5%E5%B9%BE%E6%AC%A1%EF%BC%9F+%E6%95%B4%E7%90%86+Deutsch%E3%80%81BV%E3%80%81Grover+hands+on+demo",
+        "影片用途 2": "課中實作參考",
+        "YouTube 關鍵字 3": "古典 vs 量子：要查幾次？ quantum computing lecture visualization",
+        "YouTube 連結 3": "https://www.youtube.com/results?search_query=%E5%8F%A4%E5%85%B8+vs+%E9%87%8F%E5%AD%90%EF%BC%9A%E8%A6%81%E6%9F%A5%E5%B9%BE%E6%AC%A1%EF%BC%9F+quantum+computing+lecture+visualization",
+        "影片用途 3": "課後延伸"
+      }
+    },
+    {
+      "lessonId": "Q124",
+      "sourceRow": {
+        "總課次": 124,
+        "學程": "量子電腦學程",
+        "階段": "第四階段 深化與產業",
+        "模組": "QM08 動手寫量子電路：從八個範例到自己的線路",
+        "模組內課次": 12,
+        "課程主題": "用 Qiskit 重現八個範例",
+        "對象與上課方式": "國中以上；逐步播放振幅長條、量測 1000 次，再用本機 Qiskit 模擬器重現",
+        "學習目標": "在本機模擬器重現八個範例，與頁內結果比對",
+        "2 小時課程流程": "00–10 任務開場：用 Qiskit 重現八個範例\n10–25 概念示範：在本機模擬器重現八個範例，與頁內結果比對\n25–65 父子共同實作：照頁面附的 Qiskit 程式碼建立線路，用 Statevector 與 shots 各跑一次\n65–75 休息／走動／聊天\n75–105 孩子獨立改造：把其中一個範例改成自己的參數再比對\n105–115 角色互換：孩子教爸爸操作與原理\n115–120 錄音總結、作品命名、版本存檔",
+        "動手任務": "照頁面附的 Qiskit 程式碼建立線路，用 Statevector 與 shots 各跑一次",
+        "孩子獨立改造": "把其中一個範例改成自己的參數再比對",
+        "好玩機制": "Release 任務",
+        "作品／交付": "八範例 notebook",
+        "生活技能支線": "用工具驗證結果",
+        "家長課前準備": "安裝 Python、qiskit、qiskit-aer（本機模擬器）",
+        "課後延伸": "15–30 分鐘自由改造；寫三句學習日誌：我做了什麼、哪裡卡住、下次想加什麼。",
+        "驗收標準": "完成「八範例 notebook」；能不用看稿說出核心原理；能指出至少一個錯誤、限制或注意事項（例如：頁面已用 Statevector 比對 74 種組合；自己的版本也要比對，不要只看圖）。",
+        "常見誤解與安全提醒": "頁面已用 Statevector 比對 74 種組合；自己的版本也要比對，不要只看圖",
+        "錄音重點": "請孩子回答：1. 用 Qiskit 重現八個範例在解決什麼？2. 我怎麼做？3. 哪裡容易錯？4. 生活中或真實的量子電腦哪裡會用到？",
+        "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q124｜用 Qiskit 重現八個範例",
+        "難度 1–5": 4,
+        "沿用簡報頁": [
+          "量子電路入門：八個範例（slides/output/basic-circuits.pptx）p28–29",
+          "如何操作量子電腦（slides/QC_Operation_Talk.pptx）p27"
+        ],
+        "沿用 3D 場景": [
+          "bc:bell",
+          "bc:grover"
+        ],
+        "需新增素材": [
+          "◆ 八範例 notebook"
+        ],
+        "沿用文件": [],
+        "YouTube 關鍵字 1": "用 Qiskit 重現八個範例 quantum computing explained beginner",
+        "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E7%94%A8+Qiskit+%E9%87%8D%E7%8F%BE%E5%85%AB%E5%80%8B%E7%AF%84%E4%BE%8B+quantum+computing+explained+beginner",
+        "影片用途 1": "課前暖身",
+        "YouTube 關鍵字 2": "用 Qiskit 重現八個範例 在本機模擬器重現八個範例，與頁內結果比對 hands on demo",
+        "YouTube 連結 2": "https://www.youtube.com/results?search_query=%E7%94%A8+Qiskit+%E9%87%8D%E7%8F%BE%E5%85%AB%E5%80%8B%E7%AF%84%E4%BE%8B+%E5%9C%A8%E6%9C%AC%E6%A9%9F%E6%A8%A1%E6%93%AC%E5%99%A8%E9%87%8D%E7%8F%BE%E5%85%AB%E5%80%8B%E7%AF%84%E4%BE%8B%EF%BC%8C%E8%88%87%E9%A0%81%E5%85%A7%E7%B5%90%E6%9E%9C%E6%AF%94%E5%B0%8D+hands+on+demo",
+        "影片用途 2": "課中實作參考",
+        "YouTube 關鍵字 3": "用 Qiskit 重現八個範例 quantum computing lecture visualization",
+        "YouTube 連結 3": "https://www.youtube.com/results?search_query=%E7%94%A8+Qiskit+%E9%87%8D%E7%8F%BE%E5%85%AB%E5%80%8B%E7%AF%84%E4%BE%8B+quantum+computing+lecture+visualization",
+        "影片用途 3": "課後延伸"
+      }
+    },
+    {
+      "lessonId": "Q125",
+      "sourceRow": {
+        "總課次": 125,
+        "學程": "量子電腦學程",
+        "階段": "第四階段 深化與產業",
+        "模組": "QM08 動手寫量子電路：從八個範例到自己的線路",
+        "模組內課次": 13,
+        "課程主題": "量測 1 次與 1000 次",
+        "對象與上課方式": "國中以上；逐步播放振幅長條、量測 1000 次，再用本機 Qiskit 模擬器重現",
+        "學習目標": "用頁內的量測按鈕理解單次結果與統計結果的差別",
+        "2 小時課程流程": "00–10 任務開場：量測 1 次與 1000 次\n10–25 概念示範：用頁內的量測按鈕理解單次結果與統計結果的差別\n25–65 父子共同實作：每個範例各量 1 次與 1000 次，比較和理論機率的差距\n65–75 休息／走動／聊天\n75–105 孩子獨立改造：估算要幾次才能把機率估到 ±2%\n105–115 角色互換：孩子教爸爸操作與原理\n115–120 錄音總結、作品命名、版本存檔",
+        "動手任務": "每個範例各量 1 次與 1000 次，比較和理論機率的差距",
+        "孩子獨立改造": "估算要幾次才能把機率估到 ±2%",
+        "好玩機制": "科學實驗",
+        "作品／交付": "量測比較表",
+        "生活技能支線": "重複實驗",
+        "家長課前準備": "basic-circuits（任一範例）",
+        "課後延伸": "15–30 分鐘自由改造；寫三句學習日誌：我做了什麼、哪裡卡住、下次想加什麼。",
+        "驗收標準": "完成「量測比較表」；能不用看稿說出核心原理；能指出至少一個錯誤、限制或注意事項（例如：1000 次的比例仍有約 ±1.6% 的統計誤差）。",
+        "常見誤解與安全提醒": "1000 次的比例仍有約 ±1.6% 的統計誤差",
+        "錄音重點": "請孩子回答：1. 量測 1 次與 1000 次在解決什麼？2. 我怎麼做？3. 哪裡容易錯？4. 生活中或真實的量子電腦哪裡會用到？",
+        "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q125｜量測 1 次與 1000 次",
+        "難度 1–5": 3,
+        "沿用簡報頁": [
+          "如何操作量子電腦（slides/QC_Operation_Talk.pptx）p32"
+        ],
+        "沿用 3D 場景": [
+          "bc:bell",
+          "o:qubit"
+        ],
+        "需新增素材": [],
+        "沿用文件": [],
+        "YouTube 關鍵字 1": "量測 1 次與 1000 次 quantum computing explained beginner",
+        "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E9%87%8F%E6%B8%AC+1+%E6%AC%A1%E8%88%87+1000+%E6%AC%A1+quantum+computing+explained+beginner",
+        "影片用途 1": "課前暖身",
+        "YouTube 關鍵字 2": "量測 1 次與 1000 次 用頁內的量測按鈕理解單次結果與統計結果的 hands on demo",
+        "YouTube 連結 2": "https://www.youtube.com/results?search_query=%E9%87%8F%E6%B8%AC+1+%E6%AC%A1%E8%88%87+1000+%E6%AC%A1+%E7%94%A8%E9%A0%81%E5%85%A7%E7%9A%84%E9%87%8F%E6%B8%AC%E6%8C%89%E9%88%95%E7%90%86%E8%A7%A3%E5%96%AE%E6%AC%A1%E7%B5%90%E6%9E%9C%E8%88%87%E7%B5%B1%E8%A8%88%E7%B5%90%E6%9E%9C%E7%9A%84+hands+on+demo",
+        "影片用途 2": "課中實作參考",
+        "YouTube 關鍵字 3": "量測 1 次與 1000 次 quantum computing lecture visualization",
+        "YouTube 連結 3": "https://www.youtube.com/results?search_query=%E9%87%8F%E6%B8%AC+1+%E6%AC%A1%E8%88%87+1000+%E6%AC%A1+quantum+computing+lecture+visualization",
+        "影片用途 3": "課後延伸"
+      }
+    },
+    {
+      "lessonId": "Q126",
+      "sourceRow": {
+        "總課次": 126,
+        "學程": "量子電腦學程",
+        "階段": "第四階段 深化與產業",
+        "模組": "QM08 動手寫量子電路：從八個範例到自己的線路",
+        "模組內課次": 14,
+        "課程主題": "加入雜訊：八個範例在真實世界會怎樣",
+        "對象與上課方式": "國中以上；逐步播放振幅長條、量測 1000 次，再用本機 Qiskit 模擬器重現",
+        "學習目標": "在本機模擬器加入雜訊模型，觀察 Bell、GHZ、Grover 的結果如何變差",
+        "2 小時課程流程": "00–10 任務開場：加入雜訊：八個範例在真實世界會怎樣\n10–25 概念示範：在本機模擬器加入雜訊模型，觀察 Bell、GHZ、Grover 的結果如何變差\n25–65 父子共同實作：用同一條線路跑理想與有雜訊兩種模擬，比較直方圖\n65–75 休息／走動／聊天\n75–105 孩子獨立改造：把雜訊加倍，找出哪個範例最先看不出答案\n105–115 角色互換：孩子教爸爸操作與原理\n115–120 錄音總結、作品命名、版本存檔",
+        "動手任務": "用同一條線路跑理想與有雜訊兩種模擬，比較直方圖",
+        "孩子獨立改造": "把雜訊加倍，找出哪個範例最先看不出答案",
+        "好玩機制": "故障注入",
+        "作品／交付": "理想 vs 雜訊比較圖",
+        "生活技能支線": "理論和現實的差距",
+        "家長課前準備": "本機模擬器（qiskit-aer 雜訊模型）",
+        "課後延伸": "15–30 分鐘自由改造；寫三句學習日誌：我做了什麼、哪裡卡住、下次想加什麼。",
+        "驗收標準": "完成「理想 vs 雜訊比較圖」；能不用看稿說出核心原理；能指出至少一個錯誤、限制或注意事項（例如：模擬器的雜訊模型是假設，參數要寫清楚）。",
+        "常見誤解與安全提醒": "模擬器的雜訊模型是假設，參數要寫清楚",
+        "錄音重點": "請孩子回答：1. 加入雜訊：八個範例在真實世界會怎樣在解決什麼？2. 我怎麼做？3. 哪裡容易錯？4. 生活中或真實的量子電腦哪裡會用到？",
+        "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q126｜加入雜訊：八個範例在真實世界會怎樣",
+        "難度 1–5": 4,
+        "沿用簡報頁": [
+          "如何操作量子電腦（slides/QC_Operation_Talk.pptx）p47–48"
+        ],
+        "沿用 3D 場景": [
+          "bc:ghz",
+          "bc:grover"
+        ],
+        "需新增素材": [
+          "◆ 雜訊模型 notebook"
+        ],
+        "沿用文件": [],
+        "YouTube 關鍵字 1": "加入雜訊：八個範例在真實世界會怎樣 quantum computing explained beginner",
+        "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E5%8A%A0%E5%85%A5%E9%9B%9C%E8%A8%8A%EF%BC%9A%E5%85%AB%E5%80%8B%E7%AF%84%E4%BE%8B%E5%9C%A8%E7%9C%9F%E5%AF%A6%E4%B8%96%E7%95%8C%E6%9C%83%E6%80%8E%E6%A8%A3+quantum+computing+explained+beginner",
+        "影片用途 1": "課前暖身",
+        "YouTube 關鍵字 2": "加入雜訊：八個範例在真實世界會怎樣 在本機模擬器加入雜訊模型，觀察 Bell hands on demo",
+        "YouTube 連結 2": "https://www.youtube.com/results?search_query=%E5%8A%A0%E5%85%A5%E9%9B%9C%E8%A8%8A%EF%BC%9A%E5%85%AB%E5%80%8B%E7%AF%84%E4%BE%8B%E5%9C%A8%E7%9C%9F%E5%AF%A6%E4%B8%96%E7%95%8C%E6%9C%83%E6%80%8E%E6%A8%A3+%E5%9C%A8%E6%9C%AC%E6%A9%9F%E6%A8%A1%E6%93%AC%E5%99%A8%E5%8A%A0%E5%85%A5%E9%9B%9C%E8%A8%8A%E6%A8%A1%E5%9E%8B%EF%BC%8C%E8%A7%80%E5%AF%9F+Bell+hands+on+demo",
+        "影片用途 2": "課中實作參考",
+        "YouTube 關鍵字 3": "加入雜訊：八個範例在真實世界會怎樣 quantum computing lecture visualization",
+        "YouTube 連結 3": "https://www.youtube.com/results?search_query=%E5%8A%A0%E5%85%A5%E9%9B%9C%E8%A8%8A%EF%BC%9A%E5%85%AB%E5%80%8B%E7%AF%84%E4%BE%8B%E5%9C%A8%E7%9C%9F%E5%AF%A6%E4%B8%96%E7%95%8C%E6%9C%83%E6%80%8E%E6%A8%A3+quantum+computing+lecture+visualization",
+        "影片用途 3": "課後延伸"
+      }
+    },
+    {
+      "lessonId": "Q127",
+      "sourceRow": {
+        "總課次": 127,
+        "學程": "量子電腦學程",
+        "階段": "第四階段 深化與產業",
+        "模組": "QM08 動手寫量子電路：從八個範例到自己的線路",
+        "模組內課次": 15,
+        "課程主題": "專題：設計自己的線路",
+        "對象與上課方式": "國中以上；逐步播放振幅長條、量測 1000 次，再用本機 Qiskit 模擬器重現",
+        "學習目標": "用學過的閘設計一條能說明一個概念的線路，並在模擬器驗證",
+        "2 小時課程流程": "00–10 任務開場：專題：設計自己的線路\n10–25 概念示範：用學過的閘設計一條能說明一個概念的線路，並在模擬器驗證\n25–65 父子共同實作：寫出目標、畫線路、預測結果、用模擬器驗證\n65–75 休息／走動／聊天\n75–105 孩子獨立改造：加一個「故意出錯」的版本，說明差別\n105–115 角色互換：孩子教爸爸操作與原理\n115–120 錄音總結、作品命名、版本存檔",
+        "動手任務": "寫出目標、畫線路、預測結果、用模擬器驗證",
+        "孩子獨立改造": "加一個「故意出錯」的版本，說明差別",
+        "好玩機制": "Maker 挑戰",
+        "作品／交付": "自己的線路與驗證報告",
+        "生活技能支線": "從目標反推設計",
+        "家長課前準備": "本機模擬器",
+        "課後延伸": "15–30 分鐘自由改造；寫三句學習日誌：我做了什麼、哪裡卡住、下次想加什麼。",
+        "驗收標準": "完成「自己的線路與驗證報告」；能不用看稿說出核心原理；能指出至少一個錯誤、限制或注意事項（例如：先寫預測再跑，避免看結果才找理由）。",
+        "常見誤解與安全提醒": "先寫預測再跑，避免看結果才找理由",
+        "錄音重點": "請孩子回答：1. 專題：設計自己的線路在解決什麼？2. 我怎麼做？3. 哪裡容易錯？4. 生活中或真實的量子電腦哪裡會用到？",
+        "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q127｜專題：設計自己的線路",
+        "難度 1–5": 4,
+        "沿用簡報頁": [],
+        "沿用 3D 場景": [],
+        "需新增素材": [
+          "◆ 專題模板"
+        ],
+        "沿用文件": [],
+        "YouTube 關鍵字 1": "專題：設計自己的線路 quantum computing explained beginner",
+        "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E5%B0%88%E9%A1%8C%EF%BC%9A%E8%A8%AD%E8%A8%88%E8%87%AA%E5%B7%B1%E7%9A%84%E7%B7%9A%E8%B7%AF+quantum+computing+explained+beginner",
+        "影片用途 1": "課前暖身",
+        "YouTube 關鍵字 2": "專題：設計自己的線路 用學過的閘設計一條能說明一個概念的線路， hands on demo",
+        "YouTube 連結 2": "https://www.youtube.com/results?search_query=%E5%B0%88%E9%A1%8C%EF%BC%9A%E8%A8%AD%E8%A8%88%E8%87%AA%E5%B7%B1%E7%9A%84%E7%B7%9A%E8%B7%AF+%E7%94%A8%E5%AD%B8%E9%81%8E%E7%9A%84%E9%96%98%E8%A8%AD%E8%A8%88%E4%B8%80%E6%A2%9D%E8%83%BD%E8%AA%AA%E6%98%8E%E4%B8%80%E5%80%8B%E6%A6%82%E5%BF%B5%E7%9A%84%E7%B7%9A%E8%B7%AF%EF%BC%8C+hands+on+demo",
+        "影片用途 2": "課中實作參考",
+        "YouTube 關鍵字 3": "專題：設計自己的線路 quantum computing lecture visualization",
+        "YouTube 連結 3": "https://www.youtube.com/results?search_query=%E5%B0%88%E9%A1%8C%EF%BC%9A%E8%A8%AD%E8%A8%88%E8%87%AA%E5%B7%B1%E7%9A%84%E7%B7%9A%E8%B7%AF+quantum+computing+lecture+visualization",
+        "影片用途 3": "課後延伸"
+      }
+    },
+    {
+      "lessonId": "Q128",
+      "sourceRow": {
+        "總課次": 128,
+        "學程": "量子電腦學程",
+        "階段": "第四階段 深化與產業",
+        "模組": "QM08 動手寫量子電路：從八個範例到自己的線路",
+        "模組內課次": 16,
+        "課程主題": "模組發表：量子電路展",
+        "對象與上課方式": "國中以上；逐步播放振幅長條、量測 1000 次，再用本機 Qiskit 模擬器重現",
+        "學習目標": "向家人展示自己的線路，回答三個問題",
+        "2 小時課程流程": "00–10 任務開場：模組發表：量子電路展\n10–25 概念示範：向家人展示自己的線路，回答三個問題\n25–65 父子共同實作：每人 5 分鐘：線路、振幅逐步、量測結果\n65–75 休息／走動／聊天\n75–105 孩子獨立改造：根據觀眾問題修改說明\n105–115 角色互換：孩子教爸爸操作與原理\n115–120 錄音總結、作品命名、版本存檔",
+        "動手任務": "每人 5 分鐘：線路、振幅逐步、量測結果",
+        "孩子獨立改造": "根據觀眾問題修改說明",
+        "好玩機制": "首映會",
+        "作品／交付": "量子電路展海報",
+        "生活技能支線": "發表與回饋",
+        "家長課前準備": "發表模板",
+        "課後延伸": "15–30 分鐘自由改造；寫三句學習日誌：我做了什麼、哪裡卡住、下次想加什麼。",
+        "驗收標準": "完成「量子電路展海報」；能不用看稿說出核心原理；能指出至少一個錯誤、限制或注意事項（例如：截圖與程式要註明出處）。",
+        "常見誤解與安全提醒": "截圖與程式要註明出處",
+        "錄音重點": "請孩子回答：1. 模組發表：量子電路展在解決什麼？2. 我怎麼做？3. 哪裡容易錯？4. 生活中或真實的量子電腦哪裡會用到？",
+        "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q128｜模組發表：量子電路展",
+        "難度 1–5": 3,
+        "沿用簡報頁": [],
+        "沿用 3D 場景": [],
+        "需新增素材": [
+          "◆ 發表模板"
+        ],
+        "沿用文件": [],
+        "YouTube 關鍵字 1": "模組發表：量子電路展 quantum computing explained beginner",
+        "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E6%A8%A1%E7%B5%84%E7%99%BC%E8%A1%A8%EF%BC%9A%E9%87%8F%E5%AD%90%E9%9B%BB%E8%B7%AF%E5%B1%95+quantum+computing+explained+beginner",
+        "影片用途 1": "課前暖身",
+        "YouTube 關鍵字 2": "模組發表：量子電路展 向家人展示自己的線路，回答三個問題 hands on demo",
+        "YouTube 連結 2": "https://www.youtube.com/results?search_query=%E6%A8%A1%E7%B5%84%E7%99%BC%E8%A1%A8%EF%BC%9A%E9%87%8F%E5%AD%90%E9%9B%BB%E8%B7%AF%E5%B1%95+%E5%90%91%E5%AE%B6%E4%BA%BA%E5%B1%95%E7%A4%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E7%B7%9A%E8%B7%AF%EF%BC%8C%E5%9B%9E%E7%AD%94%E4%B8%89%E5%80%8B%E5%95%8F%E9%A1%8C+hands+on+demo",
+        "影片用途 2": "課中實作參考",
+        "YouTube 關鍵字 3": "模組發表：量子電路展 quantum computing lecture visualization",
+        "YouTube 連結 3": "https://www.youtube.com/results?search_query=%E6%A8%A1%E7%B5%84%E7%99%BC%E8%A1%A8%EF%BC%9A%E9%87%8F%E5%AD%90%E9%9B%BB%E8%B7%AF%E5%B1%95+quantum+computing+lecture+visualization",
+        "影片用途 3": "課後延伸"
+      }
+    },
+    {
+      "lessonId": "Q129",
+      "sourceRow": {
+        "總課次": 129,
+        "學程": "量子電腦學程",
+        "階段": "第四階段 深化與產業",
+        "模組": "QM09 量子電腦的供電與機房工程",
+        "模組內課次": 1,
+        "課程主題": "電從哪裡來、到哪裡去",
+        "對象與上課方式": "工程同仁、電力電子背景；把量子電腦當成一個要供電、要備援的工程系統",
+        "學習目標": "認識量子電腦整套系統的用電全景：冷凍、控制電子、設施",
+        "2 小時課程流程": "00–10 任務開場：電從哪裡來、到哪裡去\n10–25 概念示範：認識量子電腦整套系統的用電全景：冷凍、控制電子、設施\n25–65 父子共同實作：在 power1000 全景場景點出每一條電路，填用電清單\n65–75 休息／走動／聊天\n75–105 孩子獨立改造：比較超導、離子阱、中性原子各自的大用電設備\n105–115 角色互換：孩子教爸爸操作與原理\n115–120 錄音總結、作品命名、版本存檔",
+        "動手任務": "在 power1000 全景場景點出每一條電路，填用電清單",
+        "孩子獨立改造": "比較超導、離子阱、中性原子各自的大用電設備",
+        "好玩機制": "尋寶",
+        "作品／交付": "用電全景圖",
+        "生活技能支線": "看見能源的流向",
+        "家長課前準備": "power1000.html#overview；供電簡報",
+        "課後延伸": "15–30 分鐘自由改造；寫三句學習日誌：我做了什麼、哪裡卡住、下次想加什麼。",
+        "驗收標準": "完成「用電全景圖」；能不用看稿說出核心原理；能指出至少一個錯誤、限制或注意事項（例如：耗電量本身不是最難的問題，難的是不能斷電與低干擾）。",
+        "常見誤解與安全提醒": "耗電量本身不是最難的問題，難的是不能斷電與低干擾",
+        "錄音重點": "請孩子回答：1. 電從哪裡來、到哪裡去在解決什麼？2. 我怎麼做？3. 哪裡容易錯？4. 生活中或真實的量子電腦哪裡會用到？",
+        "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q129｜電從哪裡來、到哪裡去",
+        "難度 1–5": 3,
+        "沿用簡報頁": [
+          "技術分享：量子電腦的供電設計（slides/output/qc-power-supply.pptx）p2–6",
+          "量子電腦的周邊系統（slides/QC_Peripheral_Systems_Talk.pptx）p30"
+        ],
+        "沿用 3D 場景": [
+          "pw:overview",
+          "p:infra"
+        ],
+        "需新增素材": [],
+        "沿用文件": [
+          "量子電腦供電設計：文獻回顧與我們的切入點（docs/量子電腦供電設計文獻回顧與我們切入點.md）§1"
+        ],
+        "YouTube 關鍵字 1": "電從哪裡來、到哪裡去 quantum computing explained beginner",
+        "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E9%9B%BB%E5%BE%9E%E5%93%AA%E8%A3%A1%E4%BE%86%E3%80%81%E5%88%B0%E5%93%AA%E8%A3%A1%E5%8E%BB+quantum+computing+explained+beginner",
+        "影片用途 1": "課前暖身",
+        "YouTube 關鍵字 2": "電從哪裡來、到哪裡去 認識量子電腦整套系統的用電全景：冷凍、控 hands on demo",
+        "YouTube 連結 2": "https://www.youtube.com/results?search_query=%E9%9B%BB%E5%BE%9E%E5%93%AA%E8%A3%A1%E4%BE%86%E3%80%81%E5%88%B0%E5%93%AA%E8%A3%A1%E5%8E%BB+%E8%AA%8D%E8%AD%98%E9%87%8F%E5%AD%90%E9%9B%BB%E8%85%A6%E6%95%B4%E5%A5%97%E7%B3%BB%E7%B5%B1%E7%9A%84%E7%94%A8%E9%9B%BB%E5%85%A8%E6%99%AF%EF%BC%9A%E5%86%B7%E5%87%8D%E3%80%81%E6%8E%A7+hands+on+demo",
+        "影片用途 2": "課中實作參考",
+        "YouTube 關鍵字 3": "電從哪裡來、到哪裡去 quantum computing lecture visualization",
+        "YouTube 連結 3": "https://www.youtube.com/results?search_query=%E9%9B%BB%E5%BE%9E%E5%93%AA%E8%A3%A1%E4%BE%86%E3%80%81%E5%88%B0%E5%93%AA%E8%A3%A1%E5%8E%BB+quantum+computing+lecture+visualization",
+        "影片用途 3": "課後延伸"
+      }
+    },
+    {
+      "lessonId": "Q130",
+      "sourceRow": {
+        "總課次": 130,
+        "學程": "量子電腦學程",
+        "階段": "第四階段 深化與產業",
+        "模組": "QM09 量子電腦的供電與機房工程",
+        "模組內課次": 2,
+        "課程主題": "斷電的代價：2 分鐘換 2–5 天",
+        "對象與上課方式": "工程同仁、電力電子背景；把量子電腦當成一個要供電、要備援的工程系統",
+        "學習目標": "理解冷卻鏈一斷電就要重新降溫的時間代價，以及備援的設計邏輯",
+        "2 小時課程流程": "00–10 任務開場：斷電的代價：2 分鐘換 2–5 天\n10–25 概念示範：理解冷卻鏈一斷電就要重新降溫的時間代價，以及備援的設計邏輯\n25–65 父子共同實作：用斷電時間軸場景模擬不同備援方案的結果\n65–75 休息／走動／聊天\n75–105 孩子獨立改造：替一間實驗室寫一張斷電處置卡\n105–115 角色互換：孩子教爸爸操作與原理\n115–120 錄音總結、作品命名、版本存檔",
+        "動手任務": "用斷電時間軸場景模擬不同備援方案的結果",
+        "孩子獨立改造": "替一間實驗室寫一張斷電處置卡",
+        "好玩機制": "故障注入",
+        "作品／交付": "斷電時間軸與處置卡",
+        "生活技能支線": "事先準備應變計畫",
+        "家長課前準備": "power1000.html#outage",
+        "課後延伸": "15–30 分鐘自由改造；寫三句學習日誌：我做了什麼、哪裡卡住、下次想加什麼。",
+        "驗收標準": "完成「斷電時間軸與處置卡」；能不用看稿說出核心原理；能指出至少一個錯誤、限制或注意事項（例如：保護的是冷卻鏈的連續運轉，不是每台儀器都要長時間備援）。",
+        "常見誤解與安全提醒": "保護的是冷卻鏈的連續運轉，不是每台儀器都要長時間備援",
+        "錄音重點": "請孩子回答：1. 斷電的代價：2 分鐘換 2–5 天在解決什麼？2. 我怎麼做？3. 哪裡容易錯？4. 生活中或真實的量子電腦哪裡會用到？",
+        "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q130｜斷電的代價：2 分鐘換 2–5 天",
+        "難度 1–5": 3,
+        "沿用簡報頁": [
+          "技術分享：量子電腦的供電設計（slides/output/qc-power-supply.pptx）p7–8"
+        ],
+        "沿用 3D 場景": [
+          "pw:outage",
+          "p:monitor"
+        ],
+        "需新增素材": [],
+        "沿用文件": [
+          "量子電腦供電設計：文獻回顧與我們的切入點（docs/量子電腦供電設計文獻回顧與我們切入點.md）§2"
+        ],
+        "YouTube 關鍵字 1": "斷電的代價：2 分鐘換 2–5 天 quantum computing explained beginner",
+        "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E6%96%B7%E9%9B%BB%E7%9A%84%E4%BB%A3%E5%83%B9%EF%BC%9A2+%E5%88%86%E9%90%98%E6%8F%9B+2%E2%80%935+%E5%A4%A9+quantum+computing+explained+beginner",
+        "影片用途 1": "課前暖身",
+        "YouTube 關鍵字 2": "斷電的代價：2 分鐘換 2–5 天 理解冷卻鏈一斷電就要重新降溫的時間代價， hands on demo",
+        "YouTube 連結 2": "https://www.youtube.com/results?search_query=%E6%96%B7%E9%9B%BB%E7%9A%84%E4%BB%A3%E5%83%B9%EF%BC%9A2+%E5%88%86%E9%90%98%E6%8F%9B+2%E2%80%935+%E5%A4%A9+%E7%90%86%E8%A7%A3%E5%86%B7%E5%8D%BB%E9%8F%88%E4%B8%80%E6%96%B7%E9%9B%BB%E5%B0%B1%E8%A6%81%E9%87%8D%E6%96%B0%E9%99%8D%E6%BA%AB%E7%9A%84%E6%99%82%E9%96%93%E4%BB%A3%E5%83%B9%EF%BC%8C+hands+on+demo",
+        "影片用途 2": "課中實作參考",
+        "YouTube 關鍵字 3": "斷電的代價：2 分鐘換 2–5 天 quantum computing lecture visualization",
+        "YouTube 連結 3": "https://www.youtube.com/results?search_query=%E6%96%B7%E9%9B%BB%E7%9A%84%E4%BB%A3%E5%83%B9%EF%BC%9A2+%E5%88%86%E9%90%98%E6%8F%9B+2%E2%80%935+%E5%A4%A9+quantum+computing+lecture+visualization",
+        "影片用途 3": "課後延伸"
+      }
+    },
+    {
+      "lessonId": "Q131",
+      "sourceRow": {
+        "總課次": 131,
+        "學程": "量子電腦學程",
+        "階段": "第四階段 深化與產業",
+        "模組": "QM09 量子電腦的供電與機房工程",
+        "模組內課次": 3,
+        "課程主題": "冷卻鏈不斷電與壓縮機驅動",
+        "對象與上課方式": "工程同仁、電力電子背景；把量子電腦當成一個要供電、要備援的工程系統",
+        "學習目標": "認識超導平台最優先的切入點：冷卻鏈不斷電整套方案、壓縮機變頻驅動與安靜電源",
+        "2 小時課程流程": "00–10 任務開場：冷卻鏈不斷電與壓縮機驅動\n10–25 概念示範：認識超導平台最優先的切入點：冷卻鏈不斷電整套方案、壓縮機變頻驅動與安靜電源\n25–65 父子共同實作：畫出冷卻鏈的供電架構，標出 UPS、精密空調、冷卻水蓄冷的位置\n65–75 休息／走動／聊天\n75–105 孩子獨立改造：比較壓縮機直接接市電與加變頻驅動的差別\n105–115 角色互換：孩子教爸爸操作與原理\n115–120 錄音總結、作品命名、版本存檔",
+        "動手任務": "畫出冷卻鏈的供電架構，標出 UPS、精密空調、冷卻水蓄冷的位置",
+        "孩子獨立改造": "比較壓縮機直接接市電與加變頻驅動的差別",
+        "好玩機制": "真實任務",
+        "作品／交付": "冷卻鏈供電架構圖",
+        "生活技能支線": "分層保護重要設備",
+        "家長課前準備": "供電簡報 p28–29；產品開發計畫第 1、4 項",
+        "課後延伸": "15–30 分鐘自由改造；寫三句學習日誌：我做了什麼、哪裡卡住、下次想加什麼。",
+        "驗收標準": "完成「冷卻鏈供電架構圖」；能不用看稿說出核心原理；能指出至少一個錯誤、限制或注意事項（例如：壓縮機停太久冷凍機會回溫；備援時間要依回溫曲線決定）。",
+        "常見誤解與安全提醒": "壓縮機停太久冷凍機會回溫；備援時間要依回溫曲線決定",
+        "錄音重點": "請孩子回答：1. 冷卻鏈不斷電與壓縮機驅動在解決什麼？2. 我怎麼做？3. 哪裡容易錯？4. 生活中或真實的量子電腦哪裡會用到？",
+        "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q131｜冷卻鏈不斷電與壓縮機驅動",
+        "難度 1–5": 4,
+        "沿用簡報頁": [
+          "技術分享：量子電腦的供電設計（slides/output/qc-power-supply.pptx）p28–29",
+          "技術分享：量子電腦的供電設計（slides/output/qc-power-supply.pptx）p62",
+          "技術分享：量子電腦的供電設計（slides/output/qc-power-supply.pptx）p65",
+          "量子電腦的周邊系統（slides/QC_Peripheral_Systems_Talk.pptx）p8"
+        ],
+        "沿用 3D 場景": [
+          "p:pulsetube",
+          "pw:outage"
+        ],
+        "需新增素材": [],
+        "沿用文件": [
+          "量子電腦供電設計：文獻回顧與我們的切入點（docs/量子電腦供電設計文獻回顧與我們切入點.md）§6",
+          "我們量子供電產品開發計畫（docs/我們量子供電產品開發計畫.md）§1、§4"
+        ],
+        "YouTube 關鍵字 1": "冷卻鏈不斷電與壓縮機驅動 quantum computing explained beginner",
+        "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E5%86%B7%E5%8D%BB%E9%8F%88%E4%B8%8D%E6%96%B7%E9%9B%BB%E8%88%87%E5%A3%93%E7%B8%AE%E6%A9%9F%E9%A9%85%E5%8B%95+quantum+computing+explained+beginner",
+        "影片用途 1": "課前暖身",
+        "YouTube 關鍵字 2": "冷卻鏈不斷電與壓縮機驅動 認識超導平台最優先的切入點：冷卻鏈不斷電 hands on demo",
+        "YouTube 連結 2": "https://www.youtube.com/results?search_query=%E5%86%B7%E5%8D%BB%E9%8F%88%E4%B8%8D%E6%96%B7%E9%9B%BB%E8%88%87%E5%A3%93%E7%B8%AE%E6%A9%9F%E9%A9%85%E5%8B%95+%E8%AA%8D%E8%AD%98%E8%B6%85%E5%B0%8E%E5%B9%B3%E5%8F%B0%E6%9C%80%E5%84%AA%E5%85%88%E7%9A%84%E5%88%87%E5%85%A5%E9%BB%9E%EF%BC%9A%E5%86%B7%E5%8D%BB%E9%8F%88%E4%B8%8D%E6%96%B7%E9%9B%BB+hands+on+demo",
+        "影片用途 2": "課中實作參考",
+        "YouTube 關鍵字 3": "冷卻鏈不斷電與壓縮機驅動 quantum computing lecture visualization",
+        "YouTube 連結 3": "https://www.youtube.com/results?search_query=%E5%86%B7%E5%8D%BB%E9%8F%88%E4%B8%8D%E6%96%B7%E9%9B%BB%E8%88%87%E5%A3%93%E7%B8%AE%E6%A9%9F%E9%A9%85%E5%8B%95+quantum+computing+lecture+visualization",
+        "影片用途 3": "課後延伸"
+      }
+    },
+    {
+      "lessonId": "Q132",
+      "sourceRow": {
+        "總課次": 132,
+        "學程": "量子電腦學程",
+        "階段": "第四階段 深化與產業",
+        "模組": "QM09 量子電腦的供電與機房工程",
+        "模組內課次": 4,
+        "課程主題": "精密 DC 源與雜訊預算",
+        "對象與上課方式": "工程同仁、電力電子背景；把量子電腦當成一個要供電、要備援的工程系統",
+        "學習目標": "知道儀器級精密 DC 源的要求，以及差模漣波怎麼逐級衰減",
+        "2 小時課程流程": "00–10 任務開場：精密 DC 源與雜訊預算\n10–25 概念示範：知道儀器級精密 DC 源的要求，以及差模漣波怎麼逐級衰減\n25–65 父子共同實作：沿供電鏈填一張雜訊預算表\n65–75 休息／走動／聊天\n75–105 孩子獨立改造：找出濾波器擋不住的雜訊類型\n105–115 角色互換：孩子教爸爸操作與原理\n115–120 錄音總結、作品命名、版本存檔",
+        "動手任務": "沿供電鏈填一張雜訊預算表",
+        "孩子獨立改造": "找出濾波器擋不住的雜訊類型",
+        "好玩機制": "基準測試",
+        "作品／交付": "雜訊預算表",
+        "生活技能支線": "預算觀念用在雜訊上",
+        "家長課前準備": "供電簡報 p9–17",
+        "課後延伸": "15–30 分鐘自由改造；寫三句學習日誌：我做了什麼、哪裡卡住、下次想加什麼。",
+        "驗收標準": "完成「雜訊預算表」；能不用看稿說出核心原理；能指出至少一個錯誤、限制或注意事項（例如：前級電源的規格會影響後面所有精密儀器）。",
+        "常見誤解與安全提醒": "前級電源的規格會影響後面所有精密儀器",
+        "錄音重點": "請孩子回答：1. 精密 DC 源與雜訊預算在解決什麼？2. 我怎麼做？3. 哪裡容易錯？4. 生活中或真實的量子電腦哪裡會用到？",
+        "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q132｜精密 DC 源與雜訊預算",
+        "難度 1–5": 4,
+        "沿用簡報頁": [
+          "技術分享：量子電腦的供電設計（slides/output/qc-power-supply.pptx）p9–17"
+        ],
+        "沿用 3D 場景": [],
+        "需新增素材": [],
+        "沿用文件": [
+          "量子電腦供電設計：文獻回顧與我們的切入點（docs/量子電腦供電設計文獻回顧與我們切入點.md）§3.1"
+        ],
+        "YouTube 關鍵字 1": "精密 DC 源與雜訊預算 quantum computing explained beginner",
+        "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E7%B2%BE%E5%AF%86+DC+%E6%BA%90%E8%88%87%E9%9B%9C%E8%A8%8A%E9%A0%90%E7%AE%97+quantum+computing+explained+beginner",
+        "影片用途 1": "課前暖身",
+        "YouTube 關鍵字 2": "精密 DC 源與雜訊預算 知道儀器級精密 DC 源的要求，以及差模 hands on demo",
+        "YouTube 連結 2": "https://www.youtube.com/results?search_query=%E7%B2%BE%E5%AF%86+DC+%E6%BA%90%E8%88%87%E9%9B%9C%E8%A8%8A%E9%A0%90%E7%AE%97+%E7%9F%A5%E9%81%93%E5%84%80%E5%99%A8%E7%B4%9A%E7%B2%BE%E5%AF%86+DC+%E6%BA%90%E7%9A%84%E8%A6%81%E6%B1%82%EF%BC%8C%E4%BB%A5%E5%8F%8A%E5%B7%AE%E6%A8%A1+hands+on+demo",
+        "影片用途 2": "課中實作參考",
+        "YouTube 關鍵字 3": "精密 DC 源與雜訊預算 quantum computing lecture visualization",
+        "YouTube 連結 3": "https://www.youtube.com/results?search_query=%E7%B2%BE%E5%AF%86+DC+%E6%BA%90%E8%88%87%E9%9B%9C%E8%A8%8A%E9%A0%90%E7%AE%97+quantum+computing+lecture+visualization",
+        "影片用途 3": "課後延伸"
+      }
+    },
+    {
+      "lessonId": "Q133",
+      "sourceRow": {
+        "總課次": 133,
+        "學程": "量子電腦學程",
+        "階段": "第四階段 深化與產業",
+        "模組": "QM09 量子電腦的供電與機房工程",
+        "模組內課次": 5,
+        "課程主題": "機房要求：防振、接地與電磁干擾",
+        "對象與上課方式": "工程同仁、電力電子背景；把量子電腦當成一個要供電、要備援的工程系統",
+        "學習目標": "讀懂現場勘查規格，理解現成電源產品為什麼不夠",
+        "2 小時課程流程": "00–10 任務開場：機房要求：防振、接地與電磁干擾\n10–25 概念示範：讀懂現場勘查規格，理解現成電源產品為什麼不夠\n25–65 父子共同實作：照勘查規格做一張機房檢查表\n65–75 休息／走動／聊天\n75–105 孩子獨立改造：挑一項最難的要求，寫出困難點與可能解法\n105–115 角色互換：孩子教爸爸操作與原理\n115–120 錄音總結、作品命名、版本存檔",
+        "動手任務": "照勘查規格做一張機房檢查表",
+        "孩子獨立改造": "挑一項最難的要求，寫出困難點與可能解法",
+        "好玩機制": "真實任務",
+        "作品／交付": "機房勘查檢查表",
+        "生活技能支線": "把規格變成檢查清單",
+        "家長課前準備": "供電簡報 p18–25；周邊系統指南",
+        "課後延伸": "15–30 分鐘自由改造；寫三句學習日誌：我做了什麼、哪裡卡住、下次想加什麼。",
+        "驗收標準": "完成「機房勘查檢查表」；能不用看稿說出核心原理；能指出至少一個錯誤、限制或注意事項（例如：合規的漏電流在量子實驗室也可能是雜訊源）。",
+        "常見誤解與安全提醒": "合規的漏電流在量子實驗室也可能是雜訊源",
+        "錄音重點": "請孩子回答：1. 機房要求：防振、接地與電磁干擾在解決什麼？2. 我怎麼做？3. 哪裡容易錯？4. 生活中或真實的量子電腦哪裡會用到？",
+        "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q133｜機房要求：防振、接地與電磁干擾",
+        "難度 1–5": 4,
+        "沿用簡報頁": [
+          "技術分享：量子電腦的供電設計（slides/output/qc-power-supply.pptx）p18–25",
+          "量子電腦的周邊系統（slides/QC_Peripheral_Systems_Talk.pptx）p32–33"
+        ],
+        "沿用 3D 場景": [
+          "p:infra"
+        ],
+        "需新增素材": [],
+        "沿用文件": [
+          "量子電腦供電設計：文獻回顧與我們的切入點（docs/量子電腦供電設計文獻回顧與我們切入點.md）§3.2–3.4",
+          "周邊系統連接與啟動指南（docs/周邊系統連接與啟動指南.md）"
+        ],
+        "YouTube 關鍵字 1": "機房要求：防振、接地與電磁干擾 quantum computing explained beginner",
+        "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E6%A9%9F%E6%88%BF%E8%A6%81%E6%B1%82%EF%BC%9A%E9%98%B2%E6%8C%AF%E3%80%81%E6%8E%A5%E5%9C%B0%E8%88%87%E9%9B%BB%E7%A3%81%E5%B9%B2%E6%93%BE+quantum+computing+explained+beginner",
+        "影片用途 1": "課前暖身",
+        "YouTube 關鍵字 2": "機房要求：防振、接地與電磁干擾 讀懂現場勘查規格，理解現成電源產品為什麼 hands on demo",
+        "YouTube 連結 2": "https://www.youtube.com/results?search_query=%E6%A9%9F%E6%88%BF%E8%A6%81%E6%B1%82%EF%BC%9A%E9%98%B2%E6%8C%AF%E3%80%81%E6%8E%A5%E5%9C%B0%E8%88%87%E9%9B%BB%E7%A3%81%E5%B9%B2%E6%93%BE+%E8%AE%80%E6%87%82%E7%8F%BE%E5%A0%B4%E5%8B%98%E6%9F%A5%E8%A6%8F%E6%A0%BC%EF%BC%8C%E7%90%86%E8%A7%A3%E7%8F%BE%E6%88%90%E9%9B%BB%E6%BA%90%E7%94%A2%E5%93%81%E7%82%BA%E4%BB%80%E9%BA%BC+hands+on+demo",
+        "影片用途 2": "課中實作參考",
+        "YouTube 關鍵字 3": "機房要求：防振、接地與電磁干擾 quantum computing lecture visualization",
+        "YouTube 連結 3": "https://www.youtube.com/results?search_query=%E6%A9%9F%E6%88%BF%E8%A6%81%E6%B1%82%EF%BC%9A%E9%98%B2%E6%8C%AF%E3%80%81%E6%8E%A5%E5%9C%B0%E8%88%87%E9%9B%BB%E7%A3%81%E5%B9%B2%E6%93%BE+quantum+computing+lecture+visualization",
+        "影片用途 3": "課後延伸"
+      }
+    },
+    {
+      "lessonId": "Q134",
+      "sourceRow": {
+        "總課次": 134,
+        "學程": "量子電腦學程",
+        "階段": "第四階段 深化與產業",
+        "模組": "QM09 量子電腦的供電與機房工程",
+        "模組內課次": 6,
+        "課程主題": "接地與共模：上百台儀器一起漏電",
+        "對象與上課方式": "工程同仁、電力電子背景；把量子電腦當成一個要供電、要備援的工程系統",
+        "學習目標": "理解接地迴路與共模雜訊在大型系統中如何放大",
+        "2 小時課程流程": "00–10 任務開場：接地與共模：上百台儀器一起漏電\n10–25 概念示範：理解接地迴路與共模雜訊在大型系統中如何放大\n25–65 父子共同實作：在接地場景增加儀器數，觀察共模電流變化\n65–75 休息／走動／聊天\n75–105 孩子獨立改造：提出一種接地拓樸改善方案並說明取捨\n105–115 角色互換：孩子教爸爸操作與原理\n115–120 錄音總結、作品命名、版本存檔",
+        "動手任務": "在接地場景增加儀器數，觀察共模電流變化",
+        "孩子獨立改造": "提出一種接地拓樸改善方案並說明取捨",
+        "好玩機制": "偵探辦案",
+        "作品／交付": "接地拓樸比較圖",
+        "生活技能支線": "系統變大，小問題會放大",
+        "家長課前準備": "power1000.html#ground",
+        "課後延伸": "15–30 分鐘自由改造；寫三句學習日誌：我做了什麼、哪裡卡住、下次想加什麼。",
+        "驗收標準": "完成「接地拓樸比較圖」；能不用看稿說出核心原理；能指出至少一個錯誤、限制或注意事項（例如：單點接地在大系統不一定可行，要依頻段設計）。",
+        "常見誤解與安全提醒": "單點接地在大系統不一定可行，要依頻段設計",
+        "錄音重點": "請孩子回答：1. 接地與共模：上百台儀器一起漏電在解決什麼？2. 我怎麼做？3. 哪裡容易錯？4. 生活中或真實的量子電腦哪裡會用到？",
+        "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q134｜接地與共模：上百台儀器一起漏電",
+        "難度 1–5": 4,
+        "沿用簡報頁": [
+          "技術分享：量子電腦的供電設計（slides/output/qc-power-supply.pptx）p21–22",
+          "技術分享：量子電腦的供電設計（slides/output/qc-power-supply.pptx）p54"
+        ],
+        "沿用 3D 場景": [
+          "pw:ground"
+        ],
+        "需新增素材": [],
+        "沿用文件": [
+          "1,000 量子位元系統供電設計（docs/1000量子位元系統供電設計.md）§6"
+        ],
+        "YouTube 關鍵字 1": "接地與共模：上百台儀器一起漏電 quantum computing explained beginner",
+        "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E6%8E%A5%E5%9C%B0%E8%88%87%E5%85%B1%E6%A8%A1%EF%BC%9A%E4%B8%8A%E7%99%BE%E5%8F%B0%E5%84%80%E5%99%A8%E4%B8%80%E8%B5%B7%E6%BC%8F%E9%9B%BB+quantum+computing+explained+beginner",
+        "影片用途 1": "課前暖身",
+        "YouTube 關鍵字 2": "接地與共模：上百台儀器一起漏電 理解接地迴路與共模雜訊在大型系統中如何放 hands on demo",
+        "YouTube 連結 2": "https://www.youtube.com/results?search_query=%E6%8E%A5%E5%9C%B0%E8%88%87%E5%85%B1%E6%A8%A1%EF%BC%9A%E4%B8%8A%E7%99%BE%E5%8F%B0%E5%84%80%E5%99%A8%E4%B8%80%E8%B5%B7%E6%BC%8F%E9%9B%BB+%E7%90%86%E8%A7%A3%E6%8E%A5%E5%9C%B0%E8%BF%B4%E8%B7%AF%E8%88%87%E5%85%B1%E6%A8%A1%E9%9B%9C%E8%A8%8A%E5%9C%A8%E5%A4%A7%E5%9E%8B%E7%B3%BB%E7%B5%B1%E4%B8%AD%E5%A6%82%E4%BD%95%E6%94%BE+hands+on+demo",
+        "影片用途 2": "課中實作參考",
+        "YouTube 關鍵字 3": "接地與共模：上百台儀器一起漏電 quantum computing lecture visualization",
+        "YouTube 連結 3": "https://www.youtube.com/results?search_query=%E6%8E%A5%E5%9C%B0%E8%88%87%E5%85%B1%E6%A8%A1%EF%BC%9A%E4%B8%8A%E7%99%BE%E5%8F%B0%E5%84%80%E5%99%A8%E4%B8%80%E8%B5%B7%E6%BC%8F%E9%9B%BB+quantum+computing+lecture+visualization",
+        "影片用途 3": "課後延伸"
+      }
+    },
+    {
+      "lessonId": "Q135",
+      "sourceRow": {
+        "總課次": 135,
+        "學程": "量子電腦學程",
+        "階段": "第四階段 深化與產業",
+        "模組": "QM09 量子電腦的供電與機房工程",
+        "模組內課次": 7,
+        "課程主題": "磁場與配電佈局：母線離冷凍機多遠",
+        "對象與上課方式": "工程同仁、電力電子背景；把量子電腦當成一個要供電、要備援的工程系統",
+        "學習目標": "估算大電流母線的磁場，理解配電佈局對量子位元的影響",
+        "2 小時課程流程": "00–10 任務開場：磁場與配電佈局：母線離冷凍機多遠\n10–25 概念示範：估算大電流母線的磁場，理解配電佈局對量子位元的影響\n25–65 父子共同實作：在磁場場景移動母線位置，記錄冷凍機處的磁場\n65–75 休息／走動／聊天\n75–105 孩子獨立改造：替一間機房畫配電佈局草圖\n105–115 角色互換：孩子教爸爸操作與原理\n115–120 錄音總結、作品命名、版本存檔",
+        "動手任務": "在磁場場景移動母線位置，記錄冷凍機處的磁場",
+        "孩子獨立改造": "替一間機房畫配電佈局草圖",
+        "好玩機制": "設計改造",
+        "作品／交付": "配電佈局草圖",
+        "生活技能支線": "空間規劃",
+        "家長課前準備": "power1000.html#field",
+        "課後延伸": "15–30 分鐘自由改造；寫三句學習日誌：我做了什麼、哪裡卡住、下次想加什麼。",
+        "驗收標準": "完成「配電佈局草圖」；能不用看稿說出核心原理；能指出至少一個錯誤、限制或注意事項（例如：量子晶片還有磁屏蔽，但殘留場要求很嚴，距離仍然重要）。",
+        "常見誤解與安全提醒": "量子晶片還有磁屏蔽，但殘留場要求很嚴，距離仍然重要",
+        "錄音重點": "請孩子回答：1. 磁場與配電佈局：母線離冷凍機多遠在解決什麼？2. 我怎麼做？3. 哪裡容易錯？4. 生活中或真實的量子電腦哪裡會用到？",
+        "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q135｜磁場與配電佈局：母線離冷凍機多遠",
+        "難度 1–5": 4,
+        "沿用簡報頁": [
+          "技術分享：量子電腦的供電設計（slides/output/qc-power-supply.pptx）p23–24"
+        ],
+        "沿用 3D 場景": [
+          "pw:field"
+        ],
+        "需新增素材": [],
+        "沿用文件": [
+          "量子電腦供電設計：文獻回顧與我們的切入點（docs/量子電腦供電設計文獻回顧與我們切入點.md）§3.2"
+        ],
+        "YouTube 關鍵字 1": "磁場與配電佈局：母線離冷凍機多遠 quantum computing explained beginner",
+        "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E7%A3%81%E5%A0%B4%E8%88%87%E9%85%8D%E9%9B%BB%E4%BD%88%E5%B1%80%EF%BC%9A%E6%AF%8D%E7%B7%9A%E9%9B%A2%E5%86%B7%E5%87%8D%E6%A9%9F%E5%A4%9A%E9%81%A0+quantum+computing+explained+beginner",
+        "影片用途 1": "課前暖身",
+        "YouTube 關鍵字 2": "磁場與配電佈局：母線離冷凍機多遠 估算大電流母線的磁場，理解配電佈局對量子 hands on demo",
+        "YouTube 連結 2": "https://www.youtube.com/results?search_query=%E7%A3%81%E5%A0%B4%E8%88%87%E9%85%8D%E9%9B%BB%E4%BD%88%E5%B1%80%EF%BC%9A%E6%AF%8D%E7%B7%9A%E9%9B%A2%E5%86%B7%E5%87%8D%E6%A9%9F%E5%A4%9A%E9%81%A0+%E4%BC%B0%E7%AE%97%E5%A4%A7%E9%9B%BB%E6%B5%81%E6%AF%8D%E7%B7%9A%E7%9A%84%E7%A3%81%E5%A0%B4%EF%BC%8C%E7%90%86%E8%A7%A3%E9%85%8D%E9%9B%BB%E4%BD%88%E5%B1%80%E5%B0%8D%E9%87%8F%E5%AD%90+hands+on+demo",
+        "影片用途 2": "課中實作參考",
+        "YouTube 關鍵字 3": "磁場與配電佈局：母線離冷凍機多遠 quantum computing lecture visualization",
+        "YouTube 連結 3": "https://www.youtube.com/results?search_query=%E7%A3%81%E5%A0%B4%E8%88%87%E9%85%8D%E9%9B%BB%E4%BD%88%E5%B1%80%EF%BC%9A%E6%AF%8D%E7%B7%9A%E9%9B%A2%E5%86%B7%E5%87%8D%E6%A9%9F%E5%A4%9A%E9%81%A0+quantum+computing+lecture+visualization",
+        "影片用途 3": "課後延伸"
+      }
+    },
+    {
+      "lessonId": "Q136",
+      "sourceRow": {
+        "總課次": 136,
+        "學程": "量子電腦學程",
+        "階段": "第四階段 深化與產業",
+        "模組": "QM09 量子電腦的供電與機房工程",
+        "模組內課次": 8,
+        "課程主題": "離子阱的供電：ppm 與 nV",
+        "對象與上課方式": "工程同仁、電力電子背景；把量子電腦當成一個要供電、要備援的工程系統",
+        "學習目標": "認識阱 RF 振幅 ppm 穩定、DC 電極 nV/√Hz、雷射 nA 等級的精密需求",
+        "2 小時課程流程": "00–10 任務開場：離子阱的供電：ppm 與 nV\n10–25 概念示範：認識阱 RF 振幅 ppm 穩定、DC 電極 nV/√Hz、雷射 nA 等級的精密需求\n25–65 父子共同實作：整理離子阱各子系統的供電要求表\n65–75 休息／走動／聊天\n75–105 孩子獨立改造：說明為什麼離子阱要的是毫秒級備援\n105–115 角色互換：孩子教爸爸操作與原理\n115–120 錄音總結、作品命名、版本存檔",
+        "動手任務": "整理離子阱各子系統的供電要求表",
+        "孩子獨立改造": "說明為什麼離子阱要的是毫秒級備援",
+        "好玩機制": "資料偵探",
+        "作品／交付": "離子阱供電需求表",
+        "生活技能支線": "不同系統不同重點",
+        "家長課前準備": "供電簡報 p30–37；atoms.html#ionsys",
+        "課後延伸": "15–30 分鐘自由改造；寫三句學習日誌：我做了什麼、哪裡卡住、下次想加什麼。",
+        "驗收標準": "完成「離子阱供電需求表」；能不用看稿說出核心原理；能指出至少一個錯誤、限制或注意事項（例如：市電諧波是離子阱的頭號敵人）。",
+        "常見誤解與安全提醒": "市電諧波是離子阱的頭號敵人",
+        "錄音重點": "請孩子回答：1. 離子阱的供電：ppm 與 nV在解決什麼？2. 我怎麼做？3. 哪裡容易錯？4. 生活中或真實的量子電腦哪裡會用到？",
+        "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q136｜離子阱的供電：ppm 與 nV",
+        "難度 1–5": 4,
+        "沿用簡報頁": [
+          "技術分享：量子電腦的供電設計（slides/output/qc-power-supply.pptx）p30–37",
+          "離子阱與中性原子量子電腦（slides/Ion_NeutralAtom_Talk.pptx）p11"
+        ],
+        "沿用 3D 場景": [
+          "a:ionsys"
+        ],
+        "需新增素材": [],
+        "沿用文件": [
+          "量子電腦供電設計：文獻回顧與我們的切入點（docs/量子電腦供電設計文獻回顧與我們切入點.md）§7–11"
+        ],
+        "YouTube 關鍵字 1": "離子阱的供電：ppm 與 nV quantum computing explained beginner",
+        "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E9%9B%A2%E5%AD%90%E9%98%B1%E7%9A%84%E4%BE%9B%E9%9B%BB%EF%BC%9Appm+%E8%88%87+nV+quantum+computing+explained+beginner",
+        "影片用途 1": "課前暖身",
+        "YouTube 關鍵字 2": "離子阱的供電：ppm 與 nV 認識阱 RF 振幅 ppm 穩定、DC  hands on demo",
+        "YouTube 連結 2": "https://www.youtube.com/results?search_query=%E9%9B%A2%E5%AD%90%E9%98%B1%E7%9A%84%E4%BE%9B%E9%9B%BB%EF%BC%9Appm+%E8%88%87+nV+%E8%AA%8D%E8%AD%98%E9%98%B1+RF+%E6%8C%AF%E5%B9%85+ppm+%E7%A9%A9%E5%AE%9A%E3%80%81DC++hands+on+demo",
+        "影片用途 2": "課中實作參考",
+        "YouTube 關鍵字 3": "離子阱的供電：ppm 與 nV quantum computing lecture visualization",
+        "YouTube 連結 3": "https://www.youtube.com/results?search_query=%E9%9B%A2%E5%AD%90%E9%98%B1%E7%9A%84%E4%BE%9B%E9%9B%BB%EF%BC%9Appm+%E8%88%87+nV+quantum+computing+lecture+visualization",
+        "影片用途 3": "課後延伸"
+      }
+    },
+    {
+      "lessonId": "Q137",
+      "sourceRow": {
+        "總課次": 137,
+        "學程": "量子電腦學程",
+        "階段": "第四階段 深化與產業",
+        "模組": "QM09 量子電腦的供電與機房工程",
+        "模組內課次": 9,
+        "課程主題": "中性原子的供電：保護熱穩態",
+        "對象與上課方式": "工程同仁、電力電子背景；把量子電腦當成一個要供電、要備援的工程系統",
+        "學習目標": "知道中性原子整套最省電，但雷射最敏感，要保護的是熱穩態",
+        "2 小時課程流程": "00–10 任務開場：中性原子的供電：保護熱穩態\n10–25 概念示範：知道中性原子整套最省電，但雷射最敏感，要保護的是熱穩態\n25–65 父子共同實作：整理中性原子供電需求，與離子阱比較\n65–75 休息／走動／聊天\n75–105 孩子獨立改造：推論中性原子擴大後會卡在哪裡\n105–115 角色互換：孩子教爸爸操作與原理\n115–120 錄音總結、作品命名、版本存檔",
+        "動手任務": "整理中性原子供電需求，與離子阱比較",
+        "孩子獨立改造": "推論中性原子擴大後會卡在哪裡",
+        "好玩機制": "資料偵探",
+        "作品／交付": "中性原子供電需求表",
+        "生活技能支線": "找出真正的限制",
+        "家長課前準備": "供電簡報 p38–43；atoms.html#atomsys",
+        "課後延伸": "15–30 分鐘自由改造；寫三句學習日誌：我做了什麼、哪裡卡住、下次想加什麼。",
+        "驗收標準": "完成「中性原子供電需求表」；能不用看稿說出核心原理；能指出至少一個錯誤、限制或注意事項（例如：光鑷強度雜訊會造成參量加熱）。",
+        "常見誤解與安全提醒": "光鑷強度雜訊會造成參量加熱",
+        "錄音重點": "請孩子回答：1. 中性原子的供電：保護熱穩態在解決什麼？2. 我怎麼做？3. 哪裡容易錯？4. 生活中或真實的量子電腦哪裡會用到？",
+        "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q137｜中性原子的供電：保護熱穩態",
+        "難度 1–5": 4,
+        "沿用簡報頁": [
+          "技術分享：量子電腦的供電設計（slides/output/qc-power-supply.pptx）p38–43"
+        ],
+        "沿用 3D 場景": [
+          "a:atomsys"
+        ],
+        "需新增素材": [],
+        "沿用文件": [
+          "量子電腦供電設計：文獻回顧與我們的切入點（docs/量子電腦供電設計文獻回顧與我們切入點.md）§12–15"
+        ],
+        "YouTube 關鍵字 1": "中性原子的供電：保護熱穩態 quantum computing explained beginner",
+        "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E4%B8%AD%E6%80%A7%E5%8E%9F%E5%AD%90%E7%9A%84%E4%BE%9B%E9%9B%BB%EF%BC%9A%E4%BF%9D%E8%AD%B7%E7%86%B1%E7%A9%A9%E6%85%8B+quantum+computing+explained+beginner",
+        "影片用途 1": "課前暖身",
+        "YouTube 關鍵字 2": "中性原子的供電：保護熱穩態 知道中性原子整套最省電，但雷射最敏感，要 hands on demo",
+        "YouTube 連結 2": "https://www.youtube.com/results?search_query=%E4%B8%AD%E6%80%A7%E5%8E%9F%E5%AD%90%E7%9A%84%E4%BE%9B%E9%9B%BB%EF%BC%9A%E4%BF%9D%E8%AD%B7%E7%86%B1%E7%A9%A9%E6%85%8B+%E7%9F%A5%E9%81%93%E4%B8%AD%E6%80%A7%E5%8E%9F%E5%AD%90%E6%95%B4%E5%A5%97%E6%9C%80%E7%9C%81%E9%9B%BB%EF%BC%8C%E4%BD%86%E9%9B%B7%E5%B0%84%E6%9C%80%E6%95%8F%E6%84%9F%EF%BC%8C%E8%A6%81+hands+on+demo",
+        "影片用途 2": "課中實作參考",
+        "YouTube 關鍵字 3": "中性原子的供電：保護熱穩態 quantum computing lecture visualization",
+        "YouTube 連結 3": "https://www.youtube.com/results?search_query=%E4%B8%AD%E6%80%A7%E5%8E%9F%E5%AD%90%E7%9A%84%E4%BE%9B%E9%9B%BB%EF%BC%9A%E4%BF%9D%E8%AD%B7%E7%86%B1%E7%A9%A9%E6%85%8B+quantum+computing+lecture+visualization",
+        "影片用途 3": "課後延伸"
+      }
+    },
+    {
+      "lessonId": "Q138",
+      "sourceRow": {
+        "總課次": 138,
+        "學程": "量子電腦學程",
+        "階段": "第四階段 深化與產業",
+        "模組": "QM09 量子電腦的供電與機房工程",
+        "模組內課次": 10,
+        "課程主題": "三平台比較：三種 UPS 設計邏輯",
+        "對象與上課方式": "工程同仁、電力電子背景；把量子電腦當成一個要供電、要備援的工程系統",
+        "學習目標": "比較三平台的單套功率與供電特性，推論三種不同的 UPS 設計",
+        "2 小時課程流程": "00–10 任務開場：三平台比較：三種 UPS 設計邏輯\n10–25 概念示範：比較三平台的單套功率與供電特性，推論三種不同的 UPS 設計\n25–65 父子共同實作：填三平台供電特性比較表\n65–75 休息／走動／聊天\n75–105 孩子獨立改造：替其中一個平台寫一段 UPS 設計說明\n105–115 角色互換：孩子教爸爸操作與原理\n115–120 錄音總結、作品命名、版本存檔",
+        "動手任務": "填三平台供電特性比較表",
+        "孩子獨立改造": "替其中一個平台寫一段 UPS 設計說明",
+        "好玩機制": "產品評審",
+        "作品／交付": "三平台供電比較表",
+        "生活技能支線": "依需求選方案",
+        "家長課前準備": "供電簡報 p44–46",
+        "課後延伸": "15–30 分鐘自由改造；寫三句學習日誌：我做了什麼、哪裡卡住、下次想加什麼。",
+        "驗收標準": "完成「三平台供電比較表」；能不用看稿說出核心原理；能指出至少一個錯誤、限制或注意事項（例如：公開數字有限，部分是推論；要標明哪些是推論）。",
+        "常見誤解與安全提醒": "公開數字有限，部分是推論；要標明哪些是推論",
+        "錄音重點": "請孩子回答：1. 三平台比較：三種 UPS 設計邏輯在解決什麼？2. 我怎麼做？3. 哪裡容易錯？4. 生活中或真實的量子電腦哪裡會用到？",
+        "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q138｜三平台比較：三種 UPS 設計邏輯",
+        "難度 1–5": 4,
+        "沿用簡報頁": [
+          "技術分享：量子電腦的供電設計（slides/output/qc-power-supply.pptx）p44–46",
+          "離子阱與中性原子量子電腦（slides/Ion_NeutralAtom_Talk.pptx）p43–44"
+        ],
+        "沿用 3D 場景": [
+          "a:compare"
+        ],
+        "需新增素材": [],
+        "沿用文件": [
+          "量子電腦供電設計：文獻回顧與我們的切入點（docs/量子電腦供電設計文獻回顧與我們切入點.md）§16–18"
+        ],
+        "YouTube 關鍵字 1": "三平台比較：三種 UPS 設計邏輯 quantum computing explained beginner",
+        "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E4%B8%89%E5%B9%B3%E5%8F%B0%E6%AF%94%E8%BC%83%EF%BC%9A%E4%B8%89%E7%A8%AE+UPS+%E8%A8%AD%E8%A8%88%E9%82%8F%E8%BC%AF+quantum+computing+explained+beginner",
+        "影片用途 1": "課前暖身",
+        "YouTube 關鍵字 2": "三平台比較：三種 UPS 設計邏輯 比較三平台的單套功率與供電特性，推論三種 hands on demo",
+        "YouTube 連結 2": "https://www.youtube.com/results?search_query=%E4%B8%89%E5%B9%B3%E5%8F%B0%E6%AF%94%E8%BC%83%EF%BC%9A%E4%B8%89%E7%A8%AE+UPS+%E8%A8%AD%E8%A8%88%E9%82%8F%E8%BC%AF+%E6%AF%94%E8%BC%83%E4%B8%89%E5%B9%B3%E5%8F%B0%E7%9A%84%E5%96%AE%E5%A5%97%E5%8A%9F%E7%8E%87%E8%88%87%E4%BE%9B%E9%9B%BB%E7%89%B9%E6%80%A7%EF%BC%8C%E6%8E%A8%E8%AB%96%E4%B8%89%E7%A8%AE+hands+on+demo",
+        "影片用途 2": "課中實作參考",
+        "YouTube 關鍵字 3": "三平台比較：三種 UPS 設計邏輯 quantum computing lecture visualization",
+        "YouTube 連結 3": "https://www.youtube.com/results?search_query=%E4%B8%89%E5%B9%B3%E5%8F%B0%E6%AF%94%E8%BC%83%EF%BC%9A%E4%B8%89%E7%A8%AE+UPS+%E8%A8%AD%E8%A8%88%E9%82%8F%E8%BC%AF+quantum+computing+lecture+visualization",
+        "影片用途 3": "課後延伸"
+      }
+    },
+    {
+      "lessonId": "Q139",
+      "sourceRow": {
+        "總課次": 139,
+        "學程": "量子電腦學程",
+        "階段": "第四階段 深化與產業",
+        "模組": "QM09 量子電腦的供電與機房工程",
+        "模組內課次": 11,
+        "課程主題": "規模計算器：位元數一變，什麼先爆？",
+        "對象與上課方式": "工程同仁、電力電子背景；把量子電腦當成一個要供電、要備援的工程系統",
+        "學習目標": "用規模計算器看 1,000 位元系統的線路、通道與用電如何放大",
+        "2 小時課程流程": "00–10 任務開場：規模計算器：位元數一變，什麼先爆？\n10–25 概念示範：用規模計算器看 1,000 位元系統的線路、通道與用電如何放大\n25–65 父子共同實作：把位元數從 100 調到 1,000、10,000，記錄最先超標的項目\n65–75 休息／走動／聊天\n75–105 孩子獨立改造：提出一個讓規模多撐一級的改變\n105–115 角色互換：孩子教爸爸操作與原理\n115–120 錄音總結、作品命名、版本存檔",
+        "動手任務": "把位元數從 100 調到 1,000、10,000，記錄最先超標的項目",
+        "孩子獨立改造": "提出一個讓規模多撐一級的改變",
+        "好玩機制": "效能競賽",
+        "作品／交付": "規模放大紀錄表",
+        "生活技能支線": "找瓶頸",
+        "家長課前準備": "power1000.html#scale",
+        "課後延伸": "15–30 分鐘自由改造；寫三句學習日誌：我做了什麼、哪裡卡住、下次想加什麼。",
+        "驗收標準": "完成「規模放大紀錄表」；能不用看稿說出核心原理；能指出至少一個錯誤、限制或注意事項（例如：估算依參考架構，實際系統會不同）。",
+        "常見誤解與安全提醒": "估算依參考架構，實際系統會不同",
+        "錄音重點": "請孩子回答：1. 規模計算器：位元數一變，什麼先爆？在解決什麼？2. 我怎麼做？3. 哪裡容易錯？4. 生活中或真實的量子電腦哪裡會用到？",
+        "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q139｜規模計算器：位元數一變，什麼先爆？",
+        "難度 1–5": 4,
+        "沿用簡報頁": [
+          "技術分享：量子電腦的供電設計（slides/output/qc-power-supply.pptx）p47–48"
+        ],
+        "沿用 3D 場景": [
+          "pw:scale"
+        ],
+        "需新增素材": [],
+        "沿用文件": [
+          "1,000 量子位元系統供電設計（docs/1000量子位元系統供電設計.md）§1–2"
+        ],
+        "YouTube 關鍵字 1": "規模計算器：位元數一變，什麼先爆？ quantum computing explained beginner",
+        "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E8%A6%8F%E6%A8%A1%E8%A8%88%E7%AE%97%E5%99%A8%EF%BC%9A%E4%BD%8D%E5%85%83%E6%95%B8%E4%B8%80%E8%AE%8A%EF%BC%8C%E4%BB%80%E9%BA%BC%E5%85%88%E7%88%86%EF%BC%9F+quantum+computing+explained+beginner",
+        "影片用途 1": "課前暖身",
+        "YouTube 關鍵字 2": "規模計算器：位元數一變，什麼先爆？ 用規模計算器看 1,000 位元系統的線 hands on demo",
+        "YouTube 連結 2": "https://www.youtube.com/results?search_query=%E8%A6%8F%E6%A8%A1%E8%A8%88%E7%AE%97%E5%99%A8%EF%BC%9A%E4%BD%8D%E5%85%83%E6%95%B8%E4%B8%80%E8%AE%8A%EF%BC%8C%E4%BB%80%E9%BA%BC%E5%85%88%E7%88%86%EF%BC%9F+%E7%94%A8%E8%A6%8F%E6%A8%A1%E8%A8%88%E7%AE%97%E5%99%A8%E7%9C%8B+1%2C000+%E4%BD%8D%E5%85%83%E7%B3%BB%E7%B5%B1%E7%9A%84%E7%B7%9A+hands+on+demo",
+        "影片用途 2": "課中實作參考",
+        "YouTube 關鍵字 3": "規模計算器：位元數一變，什麼先爆？ quantum computing lecture visualization",
+        "YouTube 連結 3": "https://www.youtube.com/results?search_query=%E8%A6%8F%E6%A8%A1%E8%A8%88%E7%AE%97%E5%99%A8%EF%BC%9A%E4%BD%8D%E5%85%83%E6%95%B8%E4%B8%80%E8%AE%8A%EF%BC%8C%E4%BB%80%E9%BA%BC%E5%85%88%E7%88%86%EF%BC%9F+quantum+computing+lecture+visualization",
+        "影片用途 3": "課後延伸"
+      }
+    },
+    {
+      "lessonId": "Q140",
+      "sourceRow": {
+        "總課次": 140,
+        "學程": "量子電腦學程",
+        "階段": "第四階段 深化與產業",
+        "模組": "QM09 量子電腦的供電與機房工程",
+        "模組內課次": 12,
+        "課程主題": "低溫熱預算：熱帳怎麼變成電",
+        "對象與上課方式": "工程同仁、電力電子背景；把量子電腦當成一個要供電、要備援的工程系統",
+        "學習目標": "逐層估算低溫熱負載，理解冷卻功率如何換成室溫用電",
+        "2 小時課程流程": "00–10 任務開場：低溫熱預算：熱帳怎麼變成電\n10–25 概念示範：逐層估算低溫熱負載，理解冷卻功率如何換成室溫用電\n25–65 父子共同實作：在熱預算場景逐層加總熱負載\n65–75 休息／走動／聊天\n75–105 孩子獨立改造：比較不同線材或多工方案對熱預算的影響\n105–115 角色互換：孩子教爸爸操作與原理\n115–120 錄音總結、作品命名、版本存檔",
+        "動手任務": "在熱預算場景逐層加總熱負載",
+        "孩子獨立改造": "比較不同線材或多工方案對熱預算的影響",
+        "好玩機制": "基準測試",
+        "作品／交付": "逐層熱預算表",
+        "生活技能支線": "一層一層算清楚",
+        "家長課前準備": "power1000.html#heat；peripherals.html#wiring",
+        "課後延伸": "15–30 分鐘自由改造；寫三句學習日誌：我做了什麼、哪裡卡住、下次想加什麼。",
+        "驗收標準": "完成「逐層熱預算表」；能不用看稿說出核心原理；能指出至少一個錯誤、限制或注意事項（例如：越低溫，每瓦冷卻要付出的室溫電力越多）。",
+        "常見誤解與安全提醒": "越低溫，每瓦冷卻要付出的室溫電力越多",
+        "錄音重點": "請孩子回答：1. 低溫熱預算：熱帳怎麼變成電在解決什麼？2. 我怎麼做？3. 哪裡容易錯？4. 生活中或真實的量子電腦哪裡會用到？",
+        "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q140｜低溫熱預算：熱帳怎麼變成電",
+        "難度 1–5": 5,
+        "沿用簡報頁": [
+          "技術分享：量子電腦的供電設計（slides/output/qc-power-supply.pptx）p49–50",
+          "量子電腦的周邊系統（slides/QC_Peripheral_Systems_Talk.pptx）p16"
+        ],
+        "沿用 3D 場景": [
+          "pw:heat",
+          "p:wiring"
+        ],
+        "需新增素材": [],
+        "沿用文件": [
+          "1,000 量子位元系統供電設計（docs/1000量子位元系統供電設計.md）§3"
+        ],
+        "YouTube 關鍵字 1": "低溫熱預算：熱帳怎麼變成電 quantum computing explained beginner",
+        "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E4%BD%8E%E6%BA%AB%E7%86%B1%E9%A0%90%E7%AE%97%EF%BC%9A%E7%86%B1%E5%B8%B3%E6%80%8E%E9%BA%BC%E8%AE%8A%E6%88%90%E9%9B%BB+quantum+computing+explained+beginner",
+        "影片用途 1": "課前暖身",
+        "YouTube 關鍵字 2": "低溫熱預算：熱帳怎麼變成電 逐層估算低溫熱負載，理解冷卻功率如何換成 hands on demo",
+        "YouTube 連結 2": "https://www.youtube.com/results?search_query=%E4%BD%8E%E6%BA%AB%E7%86%B1%E9%A0%90%E7%AE%97%EF%BC%9A%E7%86%B1%E5%B8%B3%E6%80%8E%E9%BA%BC%E8%AE%8A%E6%88%90%E9%9B%BB+%E9%80%90%E5%B1%A4%E4%BC%B0%E7%AE%97%E4%BD%8E%E6%BA%AB%E7%86%B1%E8%B2%A0%E8%BC%89%EF%BC%8C%E7%90%86%E8%A7%A3%E5%86%B7%E5%8D%BB%E5%8A%9F%E7%8E%87%E5%A6%82%E4%BD%95%E6%8F%9B%E6%88%90+hands+on+demo",
+        "影片用途 2": "課中實作參考",
+        "YouTube 關鍵字 3": "低溫熱預算：熱帳怎麼變成電 quantum computing lecture visualization",
+        "YouTube 連結 3": "https://www.youtube.com/results?search_query=%E4%BD%8E%E6%BA%AB%E7%86%B1%E9%A0%90%E7%AE%97%EF%BC%9A%E7%86%B1%E5%B8%B3%E6%80%8E%E9%BA%BC%E8%AE%8A%E6%88%90%E9%9B%BB+quantum+computing+lecture+visualization",
+        "影片用途 3": "課後延伸"
+      }
+    },
+    {
+      "lessonId": "Q141",
+      "sourceRow": {
+        "總課次": 141,
+        "學程": "量子電腦學程",
+        "階段": "第四階段 深化與產業",
+        "模組": "QM09 量子電腦的供電與機房工程",
+        "模組內課次": 13,
+        "課程主題": "從 1,000 到 10,000：MW 級與低溫電源轉換",
+        "對象與上課方式": "工程同仁、電力電子背景；把量子電腦當成一個要供電、要備援的工程系統",
+        "學習目標": "理解擴展到萬位元時的用電量級與低溫電源轉換的研發方向",
+        "2 小時課程流程": "00–10 任務開場：從 1,000 到 10,000：MW 級與低溫電源轉換\n10–25 概念示範：理解擴展到萬位元時的用電量級與低溫電源轉換的研發方向\n25–65 父子共同實作：整理 1,000 與 10,000 位元的用電組成比較\n65–75 休息／走動／聊天\n75–105 孩子獨立改造：列出低溫電源轉換的兩個關鍵困難\n105–115 角色互換：孩子教爸爸操作與原理\n115–120 錄音總結、作品命名、版本存檔",
+        "動手任務": "整理 1,000 與 10,000 位元的用電組成比較",
+        "孩子獨立改造": "列出低溫電源轉換的兩個關鍵困難",
+        "好玩機制": "工程答辯",
+        "作品／交付": "擴展用電比較表",
+        "生活技能支線": "想清楚下一步的瓶頸",
+        "家長課前準備": "供電簡報 p51–57",
+        "課後延伸": "15–30 分鐘自由改造；寫三句學習日誌：我做了什麼、哪裡卡住、下次想加什麼。",
+        "驗收標準": "完成「擴展用電比較表」；能不用看稿說出核心原理；能指出至少一個錯誤、限制或注意事項（例如：萬位元系統的數字是推論，誤差可能很大）。",
+        "常見誤解與安全提醒": "萬位元系統的數字是推論，誤差可能很大",
+        "錄音重點": "請孩子回答：1. 從 1,000 到 10,000：MW 級與低溫電源轉換在解決什麼？2. 我怎麼做？3. 哪裡容易錯？4. 生活中或真實的量子電腦哪裡會用到？",
+        "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q141｜從 1,000 到 10,000：MW 級與低溫電源轉換",
+        "難度 1–5": 5,
+        "沿用簡報頁": [
+          "技術分享：量子電腦的供電設計（slides/output/qc-power-supply.pptx）p26–27",
+          "技術分享：量子電腦的供電設計（slides/output/qc-power-supply.pptx）p51–57"
+        ],
+        "沿用 3D 場景": [
+          "pw:scale"
+        ],
+        "需新增素材": [],
+        "沿用文件": [
+          "1,000 量子位元系統供電設計（docs/1000量子位元系統供電設計.md）§4–8",
+          "量子電腦供電設計：文獻回顧與我們的切入點（docs/量子電腦供電設計文獻回顧與我們切入點.md）§4–5"
+        ],
+        "YouTube 關鍵字 1": "從 1,000 到 10,000：MW 級與低溫電源轉換 quantum computing explained beginner",
+        "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E5%BE%9E+1%2C000+%E5%88%B0+10%2C000%EF%BC%9AMW+%E7%B4%9A%E8%88%87%E4%BD%8E%E6%BA%AB%E9%9B%BB%E6%BA%90%E8%BD%89%E6%8F%9B+quantum+computing+explained+beginner",
+        "影片用途 1": "課前暖身",
+        "YouTube 關鍵字 2": "從 1,000 到 10,000：MW 級與低溫電源轉換 理解擴展到萬位元時的用電量級與低溫電源轉 hands on demo",
+        "YouTube 連結 2": "https://www.youtube.com/results?search_query=%E5%BE%9E+1%2C000+%E5%88%B0+10%2C000%EF%BC%9AMW+%E7%B4%9A%E8%88%87%E4%BD%8E%E6%BA%AB%E9%9B%BB%E6%BA%90%E8%BD%89%E6%8F%9B+%E7%90%86%E8%A7%A3%E6%93%B4%E5%B1%95%E5%88%B0%E8%90%AC%E4%BD%8D%E5%85%83%E6%99%82%E7%9A%84%E7%94%A8%E9%9B%BB%E9%87%8F%E7%B4%9A%E8%88%87%E4%BD%8E%E6%BA%AB%E9%9B%BB%E6%BA%90%E8%BD%89+hands+on+demo",
+        "影片用途 2": "課中實作參考",
+        "YouTube 關鍵字 3": "從 1,000 到 10,000：MW 級與低溫電源轉換 quantum computing lecture visualization",
+        "YouTube 連結 3": "https://www.youtube.com/results?search_query=%E5%BE%9E+1%2C000+%E5%88%B0+10%2C000%EF%BC%9AMW+%E7%B4%9A%E8%88%87%E4%BD%8E%E6%BA%AB%E9%9B%BB%E6%BA%90%E8%BD%89%E6%8F%9B+quantum+computing+lecture+visualization",
+        "影片用途 3": "課後延伸"
+      }
+    },
+    {
+      "lessonId": "Q142",
+      "sourceRow": {
+        "總課次": 142,
+        "學程": "量子電腦學程",
+        "階段": "第四階段 深化與產業",
+        "模組": "QM09 量子電腦的供電與機房工程",
+        "模組內課次": 14,
+        "課程主題": "我們的切入點：產品 × 平台矩陣",
+        "對象與上課方式": "工程同仁、電力電子背景；把量子電腦當成一個要供電、要備援的工程系統",
+        "學習目標": "讀懂我們在三平台的切入點與產品矩陣，判斷優先順序",
+        "2 小時課程流程": "00–10 任務開場：我們的切入點：產品 × 平台矩陣\n10–25 概念示範：讀懂我們在三平台的切入點與產品矩陣，判斷優先順序\n25–65 父子共同實作：在矩陣上標出每個產品對應的平台與成熟度\n65–75 休息／走動／聊天\n75–105 孩子獨立改造：提出一個矩陣上還沒有的產品構想\n105–115 角色互換：孩子教爸爸操作與原理\n115–120 錄音總結、作品命名、版本存檔",
+        "動手任務": "在矩陣上標出每個產品對應的平台與成熟度",
+        "孩子獨立改造": "提出一個矩陣上還沒有的產品構想",
+        "好玩機制": "產品評審",
+        "作品／交付": "產品 × 平台矩陣",
+        "生活技能支線": "用矩陣做決策",
+        "家長課前準備": "供電簡報 p28–29、p73–74",
+        "課後延伸": "15–30 分鐘自由改造；寫三句學習日誌：我做了什麼、哪裡卡住、下次想加什麼。",
+        "驗收標準": "完成「產品 × 平台矩陣」；能不用看稿說出核心原理；能指出至少一個錯誤、限制或注意事項（例如：矩陣是規劃工具，要隨客戶回饋更新）。",
+        "常見誤解與安全提醒": "矩陣是規劃工具，要隨客戶回饋更新",
+        "錄音重點": "請孩子回答：1. 我們的切入點：產品 × 平台矩陣在解決什麼？2. 我怎麼做？3. 哪裡容易錯？4. 生活中或真實的量子電腦哪裡會用到？",
+        "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q142｜我們的切入點：產品 × 平台矩陣",
+        "難度 1–5": 4,
+        "沿用簡報頁": [
+          "技術分享：量子電腦的供電設計（slides/output/qc-power-supply.pptx）p12",
+          "技術分享：量子電腦的供電設計（slides/output/qc-power-supply.pptx）p28–29",
+          "技術分享：量子電腦的供電設計（slides/output/qc-power-supply.pptx）p73–74"
+        ],
+        "沿用 3D 場景": [],
+        "需新增素材": [],
+        "沿用文件": [
+          "量子電腦供電設計：文獻回顧與我們的切入點（docs/量子電腦供電設計文獻回顧與我們切入點.md）§6、§11、§15"
+        ],
+        "YouTube 關鍵字 1": "我們的切入點：產品 × 平台矩陣 quantum computing explained beginner",
+        "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E6%88%91%E5%80%91%E7%9A%84%E5%88%87%E5%85%A5%E9%BB%9E%EF%BC%9A%E7%94%A2%E5%93%81+%C3%97+%E5%B9%B3%E5%8F%B0%E7%9F%A9%E9%99%A3+quantum+computing+explained+beginner",
+        "影片用途 1": "課前暖身",
+        "YouTube 關鍵字 2": "我們的切入點：產品 × 平台矩陣 讀懂我們在三平台的切入點與產品矩陣，判斷 hands on demo",
+        "YouTube 連結 2": "https://www.youtube.com/results?search_query=%E6%88%91%E5%80%91%E7%9A%84%E5%88%87%E5%85%A5%E9%BB%9E%EF%BC%9A%E7%94%A2%E5%93%81+%C3%97+%E5%B9%B3%E5%8F%B0%E7%9F%A9%E9%99%A3+%E8%AE%80%E6%87%82%E6%88%91%E5%80%91%E5%9C%A8%E4%B8%89%E5%B9%B3%E5%8F%B0%E7%9A%84%E5%88%87%E5%85%A5%E9%BB%9E%E8%88%87%E7%94%A2%E5%93%81%E7%9F%A9%E9%99%A3%EF%BC%8C%E5%88%A4%E6%96%B7+hands+on+demo",
+        "影片用途 2": "課中實作參考",
+        "YouTube 關鍵字 3": "我們的切入點：產品 × 平台矩陣 quantum computing lecture visualization",
+        "YouTube 連結 3": "https://www.youtube.com/results?search_query=%E6%88%91%E5%80%91%E7%9A%84%E5%88%87%E5%85%A5%E9%BB%9E%EF%BC%9A%E7%94%A2%E5%93%81+%C3%97+%E5%B9%B3%E5%8F%B0%E7%9F%A9%E9%99%A3+quantum+computing+lecture+visualization",
+        "影片用途 3": "課後延伸"
+      }
+    },
+    {
+      "lessonId": "Q143",
+      "sourceRow": {
+        "總課次": 143,
+        "學程": "量子電腦學程",
+        "階段": "第四階段 深化與產業",
+        "模組": "QM09 量子電腦的供電與機房工程",
+        "模組內課次": 15,
+        "課程主題": "三階段路線圖與 11 個開發項目",
+        "對象與上課方式": "工程同仁、電力電子背景；把量子電腦當成一個要供電、要備援的工程系統",
+        "學習目標": "認識三階段路線圖、11 個項目的依賴關係與檢查點",
+        "2 小時課程流程": "00–10 任務開場：三階段路線圖與 11 個開發項目\n10–25 概念示範：認識三階段路線圖、11 個項目的依賴關係與檢查點\n25–65 父子共同實作：在路線圖與開發計畫場景整理項目依賴圖\n65–75 休息／走動／聊天\n75–105 孩子獨立改造：挑一個項目，寫出它的完成判準\n105–115 角色互換：孩子教爸爸操作與原理\n115–120 錄音總結、作品命名、版本存檔",
+        "動手任務": "在路線圖與開發計畫場景整理項目依賴圖",
+        "孩子獨立改造": "挑一個項目，寫出它的完成判準",
+        "好玩機制": "時間機器",
+        "作品／交付": "項目依賴圖",
+        "生活技能支線": "規劃專案順序",
+        "家長課前準備": "power1000.html#roadmap、#devplan；產品開發計畫",
+        "課後延伸": "15–30 分鐘自由改造；寫三句學習日誌：我做了什麼、哪裡卡住、下次想加什麼。",
+        "驗收標準": "完成「項目依賴圖」；能不用看稿說出核心原理；能指出至少一個錯誤、限制或注意事項（例如：路線圖是計畫，不是承諾；每個檢查點都要重新評估）。",
+        "常見誤解與安全提醒": "路線圖是計畫，不是承諾；每個檢查點都要重新評估",
+        "錄音重點": "請孩子回答：1. 三階段路線圖與 11 個開發項目在解決什麼？2. 我怎麼做？3. 哪裡容易錯？4. 生活中或真實的量子電腦哪裡會用到？",
+        "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q143｜三階段路線圖與 11 個開發項目",
+        "難度 1–5": 4,
+        "沿用簡報頁": [
+          "技術分享：量子電腦的供電設計（slides/output/qc-power-supply.pptx）p58–72"
+        ],
+        "沿用 3D 場景": [
+          "pw:roadmap",
+          "pw:devplan"
+        ],
+        "需新增素材": [],
+        "沿用文件": [
+          "我們量子供電產品開發計畫（docs/我們量子供電產品開發計畫.md）",
+          "1,000 量子位元系統供電設計（docs/1000量子位元系統供電設計.md）§9"
+        ],
+        "YouTube 關鍵字 1": "三階段路線圖與 11 個開發項目 quantum computing explained beginner",
+        "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E4%B8%89%E9%9A%8E%E6%AE%B5%E8%B7%AF%E7%B7%9A%E5%9C%96%E8%88%87+11+%E5%80%8B%E9%96%8B%E7%99%BC%E9%A0%85%E7%9B%AE+quantum+computing+explained+beginner",
+        "影片用途 1": "課前暖身",
+        "YouTube 關鍵字 2": "三階段路線圖與 11 個開發項目 認識三階段路線圖、11 個項目的依賴關係 hands on demo",
+        "YouTube 連結 2": "https://www.youtube.com/results?search_query=%E4%B8%89%E9%9A%8E%E6%AE%B5%E8%B7%AF%E7%B7%9A%E5%9C%96%E8%88%87+11+%E5%80%8B%E9%96%8B%E7%99%BC%E9%A0%85%E7%9B%AE+%E8%AA%8D%E8%AD%98%E4%B8%89%E9%9A%8E%E6%AE%B5%E8%B7%AF%E7%B7%9A%E5%9C%96%E3%80%8111+%E5%80%8B%E9%A0%85%E7%9B%AE%E7%9A%84%E4%BE%9D%E8%B3%B4%E9%97%9C%E4%BF%82+hands+on+demo",
+        "影片用途 2": "課中實作參考",
+        "YouTube 關鍵字 3": "三階段路線圖與 11 個開發項目 quantum computing lecture visualization",
+        "YouTube 連結 3": "https://www.youtube.com/results?search_query=%E4%B8%89%E9%9A%8E%E6%AE%B5%E8%B7%AF%E7%B7%9A%E5%9C%96%E8%88%87+11+%E5%80%8B%E9%96%8B%E7%99%BC%E9%A0%85%E7%9B%AE+quantum+computing+lecture+visualization",
+        "影片用途 3": "課後延伸"
+      }
+    },
+    {
+      "lessonId": "Q144",
+      "sourceRow": {
+        "總課次": 144,
+        "學程": "量子電腦學程",
+        "階段": "第四階段 深化與產業",
+        "模組": "QM09 量子電腦的供電與機房工程",
+        "模組內課次": 16,
+        "課程主題": "畢業專題：替一台量子電腦寫供電規格書",
+        "對象與上課方式": "工程同仁、電力電子背景；把量子電腦當成一個要供電、要備援的工程系統",
+        "學習目標": "整合本模組，替指定平台與規模寫一份供電與機房規格書",
+        "2 小時課程流程": "00–10 任務開場：畢業專題：替一台量子電腦寫供電規格書\n10–25 概念示範：整合本模組，替指定平台與規模寫一份供電與機房規格書\n25–65 父子共同實作：選平台與位元數，完成用電、備援、接地、磁場、熱預算五章\n65–75 休息／走動／聊天\n75–105 孩子獨立改造：加一章「文獻缺口與我們的機會」\n105–115 角色互換：孩子教爸爸操作與原理\n115–120 錄音總結、作品命名、版本存檔",
+        "動手任務": "選平台與位元數，完成用電、備援、接地、磁場、熱預算五章",
+        "孩子獨立改造": "加一章「文獻缺口與我們的機會」",
+        "好玩機制": "畢業工作坊",
+        "作品／交付": "供電規格書",
+        "生活技能支線": "把知識寫成可交付的文件",
+        "家長課前準備": "本模組所有資料",
+        "課後延伸": "15–30 分鐘自由改造；寫三句學習日誌：我做了什麼、哪裡卡住、下次想加什麼。",
+        "驗收標準": "完成「供電規格書」；能不用看稿說出核心原理；能指出至少一個錯誤、限制或注意事項（例如：標清楚哪些是公開數據、哪些是推論）。",
+        "常見誤解與安全提醒": "標清楚哪些是公開數據、哪些是推論",
+        "錄音重點": "請孩子回答：1. 畢業專題：替一台量子電腦寫供電規格書在解決什麼？2. 我怎麼做？3. 哪裡容易錯？4. 生活中或真實的量子電腦哪裡會用到？",
+        "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q144｜畢業專題：替一台量子電腦寫供電規格書",
+        "難度 1–5": 5,
+        "沿用簡報頁": [
+          "技術分享：量子電腦的供電設計（slides/output/qc-power-supply.pptx）p75–76"
+        ],
+        "沿用 3D 場景": [
+          "pw:overview"
+        ],
+        "需新增素材": [
+          "◆ 規格書模板"
+        ],
+        "沿用文件": [
+          "量子電腦供電設計：文獻回顧與我們的切入點（docs/量子電腦供電設計文獻回顧與我們切入點.md）§19–20"
+        ],
+        "YouTube 關鍵字 1": "畢業專題：替一台量子電腦寫供電規格書 quantum computing explained beginner",
+        "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E7%95%A2%E6%A5%AD%E5%B0%88%E9%A1%8C%EF%BC%9A%E6%9B%BF%E4%B8%80%E5%8F%B0%E9%87%8F%E5%AD%90%E9%9B%BB%E8%85%A6%E5%AF%AB%E4%BE%9B%E9%9B%BB%E8%A6%8F%E6%A0%BC%E6%9B%B8+quantum+computing+explained+beginner",
+        "影片用途 1": "課前暖身",
+        "YouTube 關鍵字 2": "畢業專題：替一台量子電腦寫供電規格書 整合本模組，替指定平台與規模寫一份供電與 hands on demo",
+        "YouTube 連結 2": "https://www.youtube.com/results?search_query=%E7%95%A2%E6%A5%AD%E5%B0%88%E9%A1%8C%EF%BC%9A%E6%9B%BF%E4%B8%80%E5%8F%B0%E9%87%8F%E5%AD%90%E9%9B%BB%E8%85%A6%E5%AF%AB%E4%BE%9B%E9%9B%BB%E8%A6%8F%E6%A0%BC%E6%9B%B8+%E6%95%B4%E5%90%88%E6%9C%AC%E6%A8%A1%E7%B5%84%EF%BC%8C%E6%9B%BF%E6%8C%87%E5%AE%9A%E5%B9%B3%E5%8F%B0%E8%88%87%E8%A6%8F%E6%A8%A1%E5%AF%AB%E4%B8%80%E4%BB%BD%E4%BE%9B%E9%9B%BB%E8%88%87+hands+on+demo",
+        "影片用途 2": "課中實作參考",
+        "YouTube 關鍵字 3": "畢業專題：替一台量子電腦寫供電規格書 quantum computing lecture visualization",
+        "YouTube 連結 3": "https://www.youtube.com/results?search_query=%E7%95%A2%E6%A5%AD%E5%B0%88%E9%A1%8C%EF%BC%9A%E6%9B%BF%E4%B8%80%E5%8F%B0%E9%87%8F%E5%AD%90%E9%9B%BB%E8%85%A6%E5%AF%AB%E4%BE%9B%E9%9B%BB%E8%A6%8F%E6%A0%BC%E6%9B%B8+quantum+computing+lecture+visualization",
         "影片用途 3": "課後延伸"
       }
     }

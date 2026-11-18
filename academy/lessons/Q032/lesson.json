@@ -25,7 +25,7 @@
     "沿用簡報頁": [
       "超導量子電腦的核心：JJ 與微波讀取（slides/JJ_Microwave_Readout_Talk.pptx）p20",
       "超導量子電腦的核心：JJ 與微波讀取（slides/JJ_Microwave_Readout_Talk.pptx）p37",
-      "Transmon 筆記簡報（slides/transmon.pptx）p12"
+      "Transmon 筆記簡報（27 頁，含 3D 十二章導覽）（slides/transmon.pptx）p12"
     ],
     "沿用 3D 場景": [
       "i:potential"
@@ -33,6 +33,7 @@
     "需新增素材": [
       "★ transmon 參數設計器（工具）"
     ],
+    "沿用文件": [],
     "YouTube 關鍵字 1": "模組發表：設計我的 transmon quantum computing explained beginner",
     "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E6%A8%A1%E7%B5%84%E7%99%BC%E8%A1%A8%EF%BC%9A%E8%A8%AD%E8%A8%88%E6%88%91%E7%9A%84+transmon+quantum+computing+explained+beginner",
     "影片用途 1": "課前暖身",
@@ -43,7 +44,7 @@
     "YouTube 連結 3": "https://www.youtube.com/results?search_query=%E6%A8%A1%E7%B5%84%E7%99%BC%E8%A1%A8%EF%BC%9A%E8%A8%AD%E8%A8%88%E6%88%91%E7%9A%84+transmon+quantum+computing+lecture+visualization",
     "影片用途 3": "課後延伸"
   },
-  "curriculumSha256": "493446a21451c8a5c08a1723cfd04436e51cbfa4806049b55a765d22ecf2ba53",
+  "curriculumSha256": "eb081f5848bd31bd8d734680a2d88f6821b6b30fa5d9ff1d813d06872e8f71c3",
   "episodePaths": [],
   "minutes": 120,
   "status": "planned"

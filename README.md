@@ -37,8 +37,8 @@
    - 量子金魚 008 Deutsch 演算法：[`slides/output/qfish008-deutsch-algorithm.pptx`](slides/output/qfish008-deutsch-algorithm.pptx)（30 頁，含講稿；依影片逐字稿整理，另附「案例實算」：紅綠球搖獎機、振幅逐步計算、四種黑盒子、現場猜謎；每個案例都有按鈕直接開啟 3D 動畫）；PDF：[`slides/pdf/QFISH008_Deutsch_Algorithm.pdf`](slides/pdf/QFISH008_Deutsch_Algorithm.pdf)
    - 製作流程與產生器：[`slides/README.md`](slides/README.md)
 9. [3D 動畫 ↔ PPT 簡報對照表](#3d-動畫--ppt-簡報對照)（摘要見下方；完整逐場景表格：[`docs/動畫與簡報對照表.md`](docs/動畫與簡報對照表.md)；5 個動畫頁、56 個場景／章節，逐一列出對應的簡報頁碼與動畫網址；`python3 slides/build/anim_ppt_map.py` 重新產生並檢查缺口）
-10. [課程擴充規劃：量子電腦學院（參考父子科技學院格式，6 模組 × 16 堂）](docs/量子電腦學院_課程擴充規劃.md)（現有 223 頁簡報與 47 個 3D 場景的盤點、Q001–Q096 課表、新增動畫與簡報清單）
-   - 學程資料夾：[`academy/`](academy/README.md)（96 堂課綱、每堂教案、製作指南、製作狀態）
+10. [課程擴充規劃：量子電腦學院（參考父子科技學院格式，9 模組 × 16 堂 = 144 堂）](docs/量子電腦學院_課程擴充規劃.md)（現有簡報與 3D 場景的盤點、Q001–Q144 課表、新增動畫與簡報清單；第 7 節為 2026-11-18 第二次擴充）
+   - 學程資料夾：[`academy/`](academy/README.md)（144 堂課綱、每堂教案、製作指南、製作狀態；Q001–Q003 已有 v1 與 v2 動畫展示版）
 11. [量子電腦供電設計：文獻回顧與我們的切入點](docs/量子電腦供電設計文獻回顧與我們切入點.md)（超導、離子阱、中性原子三平台分篇細部分析：精密電源、不斷電與分層備援、低干擾設計、能耗擴展，以及我們的產品 × 平台矩陣）
     - 簡報：[`slides/output/qc-power-supply.pptx`](slides/output/qc-power-supply.pptx)（77 頁，含講稿）；PDF：[`slides/pdf/QC_Power_Supply.pdf`](slides/pdf/QC_Power_Supply.pdf)
     - 簡報內容檔：[`slides/reports/qc-power.js`](slides/reports/qc-power.js)（`cd slides && node build_deck.js reports/qc-power.js` 重新產生）

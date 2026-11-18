@@ -22,12 +22,19 @@
     "錄音重點": "請孩子回答：1. 隱形傳態：傳狀態不傳東西在解決什麼？2. 我怎麼做？3. 哪裡容易錯？4. 生活中或真實的量子電腦哪裡會用到？",
     "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q011｜隱形傳態：傳狀態不傳東西",
     "難度 1–5": 2,
-    "沿用簡報頁": [],
-    "沿用 3D 場景": [
-      "o:circuit"
+    "沿用簡報頁": [
+      "量子電路入門：八個範例（slides/output/basic-circuits.pptx）p15–17"
     ],
-    "需新增素材": [
-      "◆ 漫畫分鏡頁"
+    "沿用 3D 場景": [
+      "o:circuit",
+      "bc:teleport"
+    ],
+    "需新增素材": [],
+    "沿用文件": [],
+    "2026-11-18 補充素材": [
+      "簡報 G p15–17",
+      "場景 bc:teleport",
+      "已有動畫，取消：◆ 漫畫分鏡頁"
     ],
     "YouTube 關鍵字 1": "隱形傳態：傳狀態不傳東西 quantum computing explained beginner",
     "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E9%9A%B1%E5%BD%A2%E5%82%B3%E6%85%8B%EF%BC%9A%E5%82%B3%E7%8B%80%E6%85%8B%E4%B8%8D%E5%82%B3%E6%9D%B1%E8%A5%BF+quantum+computing+explained+beginner",
@@ -39,7 +46,7 @@
     "YouTube 連結 3": "https://www.youtube.com/results?search_query=%E9%9A%B1%E5%BD%A2%E5%82%B3%E6%85%8B%EF%BC%9A%E5%82%B3%E7%8B%80%E6%85%8B%E4%B8%8D%E5%82%B3%E6%9D%B1%E8%A5%BF+quantum+computing+lecture+visualization",
     "影片用途 3": "課後延伸"
   },
-  "curriculumSha256": "493446a21451c8a5c08a1723cfd04436e51cbfa4806049b55a765d22ecf2ba53",
+  "curriculumSha256": "eb081f5848bd31bd8d734680a2d88f6821b6b30fa5d9ff1d813d06872e8f71c3",
   "episodePaths": [],
   "minutes": 120,
   "status": "planned"
