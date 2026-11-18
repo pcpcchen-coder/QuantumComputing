@@ -25,6 +25,12 @@ LESSONS = {'Q001': 'q001-not-faster', 'Q002': 'q002-coin-and-arrow', 'Q003': 'q0
            'Q004': 'q004-gates-rotate', 'Q005': 'q005-phase-hidden', 'Q006': 'q006-interference-waves',
            'Q007': 'q007-two-to-the-n', 'Q008': 'q008-entangled-dice', 'Q009': 'q009-circuit-score',
            'Q010': 'q010-first-program'}
+# Q011 起不必改這裡：各課 authoring/qxxx/prepare_content.py 寫 LESSON, SLUG, ... = 'Qxxx', 'qxxx-slug', ... 就自動登記
+import re as _re
+for _pc in sorted(Path(__file__).resolve().parents[1].glob('q[0-9][0-9][0-9]/prepare_content.py')):
+    _m = _re.search(r"LESSON, SLUG[^=]*=\s*'(Q\d{3})',\s*'([a-z0-9-]+)'", _pc.read_text(encoding='utf-8'))
+    if _m:
+        LESSONS.setdefault(_m.group(1), _m.group(2))
 FPS, FADE = 30, 0.55
 EMU = 12700  # per pt
 PIC = (20, 72, 704, 396)            # pt：簡報上截圖／影片中錄影的位置
@@ -130,7 +136,7 @@ class Lesson:
                 elif kind == 'sweep': acts.append({'t': t, 'kind': 'sweep', 'label': a[1], 'from': a[2], 'to': a[3], 'secs': a[4]})
             page = Q / PAGES[d['page']][0]
             spec = {'url': page.as_uri() + '#' + d['hash'], 'duration': tm['duration'], 'actions': acts,
-                    'shot_t': st[d['shot'][0]] + d['shot'][1], 'settle': d.get('settle', 4000 if d['page'] in ('tr', 'bc') else 2500),
+                    'shot_t': st[d['shot'][0]] + d['shot'][1], 'settle': d.get('settle', 2500 if d['page'] == 'op' else 4000),
                     'video_out': str(self.E / 'assets/visuals' / f"demo_{d['key']}.webm"),
                     'shot_out': str(self.E / 'assets/visuals' / f"demo_{d['key']}.png")}
             sp = self.E / 'work' / f"spec_{d['key']}.json"; dump(sp, spec)

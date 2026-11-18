@@ -55,7 +55,9 @@ def main(lid, short, date, outdir):
     (P / 'youtube-description.txt').write_text(desc, encoding='utf-8')
     dump(P / 'youtube-metadata.json', {'title': f'父子科技學院 {lid}｜{title}（動畫展示版）', 'description': desc, 'privacyStatus': 'private',
                                        'madeForKids': None, 'reviewStatus': 'needs-parent-review', 'publicationMode': 'manual-user-upload'})
-    shutil.copyfile(HERE / 'fact_check_v2.md', P / 'fact-check-v2.md')
+    fc = [f for f in sorted(HERE.glob('fact_check_v2*.md')) if f'\n## {lid}\n' in f.read_text(encoding='utf-8')]
+    assert fc, f'no v2 fact check covers {lid}'
+    shutil.copyfile(fc[0], P / 'fact-check-v2.md')
     shutil.copyfile(L.v1 / 'production/fact-check.md', P / 'fact-check-v1.md')
     # 教材：v1 教材＋動畫展示導覽
     cz = E / 'output/classroom.zip'

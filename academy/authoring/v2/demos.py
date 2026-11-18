@@ -17,6 +17,12 @@ PAGES = {
     'op': ('animations/operation.html', 'https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html'),
     'tr': ('animations/transmon-3d.html', 'https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html'),
     'bc': ('animations/basic-circuits.html', 'https://pcpcchen-coder.github.io/QuantumComputing/animations/basic-circuits.html'),
+    # 以下頁面 Q011 起可用（jj = JJ 與微波讀取、lc = LC 與約瑟夫森接面、pe = 周邊系統、at = 離子阱與中性原子、pw = 1000 位元供電）
+    'jj': ('animations/index.html', 'https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html'),
+    'lc': ('animations/lc-vs-jj.html', 'https://pcpcchen-coder.github.io/QuantumComputing/animations/lc-vs-jj.html'),
+    'pe': ('animations/peripherals.html', 'https://pcpcchen-coder.github.io/QuantumComputing/animations/peripherals.html'),
+    'at': ('animations/atoms.html', 'https://pcpcchen-coder.github.io/QuantumComputing/animations/atoms.html'),
+    'pw': ('animations/power1000.html', 'https://pcpcchen-coder.github.io/QuantumComputing/animations/power1000.html'),
 }
 
 DEMOS = {
@@ -131,7 +137,7 @@ import importlib.util as _ilu
 from pathlib import Path as _P
 for _f in sorted((_P(__file__).resolve().parent / 'demos_extra').glob('q*.py')):
     _sp = _ilu.spec_from_file_location(_f.stem, _f); _m = _ilu.module_from_spec(_sp); _sp.loader.exec_module(_m)
-    DEMOS[_m.LESSON] = _m.DEMOS
+    DEMOS[_m.LESSON] = list(_m.DEMOS[_m.LESSON]) if isinstance(_m.DEMOS, dict) else list(_m.DEMOS)  # 清單或 {'Qxxx': [...]} 皆可
 
 for lesson, ds in DEMOS.items():
     for d in ds:
