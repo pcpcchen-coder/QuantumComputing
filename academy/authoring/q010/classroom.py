@@ -43,7 +43,7 @@ qc = QuantumCircuit(2, 2)
 # qc.x([0, 1])   # Ψ⁻：01 和 10，差在負號
 
 # 第二段：照著樂譜加動作
-qc.h(0)                         # 阿達瑪閘：第一顆（q0）進入疊加
+qc.h(0)                         # 哈達瑪閘：第一顆（q0）進入疊加
 qc.cx(0, 1)                     # 受控反閘：q0 是 1 時，翻轉 q1
 qc.measure([0, 1], [0, 1])      # 把兩顆的結果寫進紀錄
 print(qc.draw())
@@ -193,7 +193,7 @@ def html():
         '<div class="hgrid"><span class="ylab" style="top:-2mm">1000</span><span class="ylab" style="top:37mm">500</span>'
         '<span class="ylab" style="bottom:-2mm">0</span></div><div class="xlab"><span>00</span><span>01</span><span>10</span><span>11</span></div>'
         '<p class="note">位元字串的最右邊是第一顆（q0）。兩根柱子為什麼不一樣高？＿＿＿＿＿＿＿＿＿＿＿＿</p>',
-        '<h2>成就 5：另外三種貝爾態</h2><p class="lead">在線路最前面加一個 X 閘（反閘）。先預測，再跑，和原本並排比較。</p>'
+        '<h2>成就 5：另外三種貝爾態</h2><p class="lead">在線路最前面加一個 X 閘（翻轉閘）。先預測，再跑，和原本並排比較。</p>'
         '<table class="rec"><tr><th>名稱</th><th>線路最前面加</th><th>我的預測</th><th>實際結果</th><th>和原本差在哪</th></tr>'
         + ''.join(f'<tr><td>{n}</td><td>{g}</td><td></td><td></td><td></td></tr>' for n, g, *_ in VARIANTS) + '</table>'
         '<pre class="code"># 程式的改造區：拿掉其中一行前面的 #\n# qc.x(0)\n# qc.x(1)\n# qc.x([0, 1])\nqc.h(0)\nqc.cx(0, 1)\nqc.measure([0, 1], [0, 1])</pre>'
