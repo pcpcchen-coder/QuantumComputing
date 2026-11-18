@@ -1,6 +1,6 @@
 /* 擷取「離子阱與中性原子」3D 場景截圖，供簡報使用，並自動計算裁切範圍。
  * 用法：node shoot_atoms.js [名稱 ...]   （需要 Playwright + Chromium）
- * 操作計畫：atoms_plan_ion.json（場景 1–8）、atoms_plan_atom.json（場景 9–17）
+ * 操作計畫：atoms_plan_ion.json（場景 1–9）、atoms_plan_atom.json（場景 10–18）
  *   格式 { "<名稱>": { "id": "<場景代號，預設同名稱>", "act": [{"click":"按鈕文字開頭"}, {"slider":["標籤片段", 值]}, {"wait": 毫秒}], "wait": 毫秒 } }
  * 輸出：../figures/3d_atoms/<名稱>.jpg（2560×1440）與 atoms_crops.json（去掉背景的裁切範圍）
  */

@@ -28,11 +28,11 @@
    - 演講稿：[`speech/量子電腦操作演講稿.md`](speech/量子電腦操作演講稿.md)
    - 3D 互動動畫：[`animations/operation.html`](animations/operation.html)（12 個場景，離線可用）
 7. [技術分享（第四篇）：離子阱與中性原子量子電腦——系統、量子位元、操作與量測](#技術分享第四篇離子阱與中性原子量子電腦)
-   - 簡報：[`slides/Ion_NeutralAtom_Talk.pptx`](slides/Ion_NeutralAtom_Talk.pptx)（56 頁，含講者備註；PDF：[`slides/pdf/Ion_NeutralAtom_Talk.pdf`](slides/pdf/Ion_NeutralAtom_Talk.pdf)）
+   - 簡報：[`slides/Ion_NeutralAtom_Talk.pptx`](slides/Ion_NeutralAtom_Talk.pptx)（57 頁，含講者備註；PDF：[`slides/pdf/Ion_NeutralAtom_Talk.pdf`](slides/pdf/Ion_NeutralAtom_Talk.pdf)）
    - 演講稿：[`speech/離子阱與中性原子演講稿.md`](speech/離子阱與中性原子演講稿.md)
    - 系統指南：[`docs/離子阱與中性原子系統指南.md`](docs/離子阱與中性原子系統指南.md)（子系統、連接清單、啟動校準流程、異常處置、設施與電力）
-   - 教學紀錄：[`docs/離子阱與中性原子師生對話教學紀錄.md`](docs/離子阱與中性原子師生對話教學紀錄.md)（師生對話形式，6 課：離子阱怎麼運算 / 讀取（超導對照）、氫邁射、中性原子怎麼運算 / 讀取、頻率基準與原子鐘、MS 閘 vs 芮德堡 CZ）
-   - 3D 互動動畫：[`animations/atoms.html`](animations/atoms.html)（17 個場景，離線可用）
+   - 教學紀錄：[`docs/離子阱與中性原子師生對話教學紀錄.md`](docs/離子阱與中性原子師生對話教學紀錄.md)（師生對話形式，7 課：離子阱怎麼運算 / 讀取（超導對照）、氫邁射、中性原子怎麼運算 / 讀取、頻率基準與原子鐘、MS 閘 vs 芮德堡 CZ、光子互連）
+   - 3D 互動動畫：[`animations/atoms.html`](animations/atoms.html)（18 個場景，離線可用）
 8. [影片報告簡報：《量子超級英雄》影片轉 PPT](#影片報告簡報量子超級英雄影片轉-ppt)
    - #049 超導量子位元：[`slides/output/ep049-superconducting-qubit.pptx`](slides/output/ep049-superconducting-qubit.pptx)（16 頁，含講稿）
    - 量子金魚 008 Deutsch 演算法：[`slides/output/qfish008-deutsch-algorithm.pptx`](slides/output/qfish008-deutsch-algorithm.pptx)（30 頁，含講稿；依影片逐字稿整理，另附「案例實算」：紅綠球搖獎機、振幅逐步計算、四種黑盒子、現場猜謎；每個案例都有按鈕直接開啟 3D 動畫）；PDF：[`slides/pdf/QFISH008_Deutsch_Algorithm.pdf`](slides/pdf/QFISH008_Deutsch_Algorithm.pdf)
@@ -90,7 +90,7 @@ python3 slides/build/anim_ppt_map.py
 | [`index.html`](https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html)：JJ 元件與微波讀取 | 11 | [`JJ_Microwave_Readout_Talk.pptx`](slides/JJ_Microwave_Readout_Talk.pptx) | ✅ 全部有 |
 | [`peripherals.html`](https://pcpcchen-coder.github.io/QuantumComputing/animations/peripherals.html)：量子電腦周邊系統 | 10 | [`QC_Peripheral_Systems_Talk.pptx`](slides/QC_Peripheral_Systems_Talk.pptx) | ✅ 全部有 |
 | [`operation.html`](https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html)：如何操作量子電腦 | 12 | [`QC_Operation_Talk.pptx`](slides/QC_Operation_Talk.pptx)；[`qfish008-deutsch-algorithm.pptx`](slides/output/qfish008-deutsch-algorithm.pptx) | ✅ 全部有 |
-| [`atoms.html`](https://pcpcchen-coder.github.io/QuantumComputing/animations/atoms.html)：離子阱與中性原子 | 17 | [`Ion_NeutralAtom_Talk.pptx`](slides/Ion_NeutralAtom_Talk.pptx) | ✅ 全部有 |
+| [`atoms.html`](https://pcpcchen-coder.github.io/QuantumComputing/animations/atoms.html)：離子阱與中性原子 | 18 | [`Ion_NeutralAtom_Talk.pptx`](slides/Ion_NeutralAtom_Talk.pptx) | ✅ 全部有 |
 | [`transmon-3d.html`](https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html)：Transmon 3D（12 章） | 14 | [`transmon.pptx`](slides/transmon.pptx)；[`qfish008-deutsch-algorithm.pptx`](slides/output/qfish008-deutsch-algorithm.pptx) | ✅ 全部有 |
 | [`power1000.html`](https://pcpcchen-coder.github.io/QuantumComputing/animations/power1000.html)：1,000 位元供電設計 | 8 | [`qc-power-supply.pptx`](slides/output/qc-power-supply.pptx) | ✅ 全部有 |
 | [`lc-vs-jj.html`](https://pcpcchen-coder.github.io/QuantumComputing/animations/lc-vs-jj.html)：LC 與約瑟夫森接面（2D 圖解） | 7 | [`transmon.pptx`](slides/transmon.pptx) | ✅ 全部有 |
@@ -106,7 +106,7 @@ python3 slides/build/anim_ppt_map.py
 | **index.html** | JJ | bloch p5、6；cooper p7、8；jj p12、13；potential p10、15、19；washboard p16；squid p17；fab p21；chip p27、36；dispersive p28、29；iq p31；fridge p32、33 |
 | **peripherals.html** | 周邊 | overview p3、11、35、36；pulsetube p8；dilution p9；cooldown p12；wiring p14–16；electronics p20、21；software p25；infra p30–33；monitor p27、28；bringup p26、37 |
 | **operation.html** | 操作 | qubit p7、8；gates p18、19；pulse p14、20、21；register p9、10、43；twoqubit p23；circuit p25、28；readout p30、31、33；interference p38、39（另 qfish008 p14、15、18、25）；grover p40；shor p41；qec p49、50；workflow p3、52 |
-| **atoms.html** | 離子阱 | ionsys p6；paul p7；ionqubit p13、16、19；modes p17；ms p18；qccd p20；ionflow p21、22；hmaser p23、24；atomsys p27；tweezer p30；atomqubit p33、34；rydberg p36–38；zoned p39；imaging p40；atomflow p41；atomclock p42；compare p47、48 |
+| **atoms.html** | 離子阱 | ionsys p6；paul p7；ionqubit p13、16、19；modes p17；ms p18；qccd p20；ionflow p21、22；hmaser p23、24；photonic p25；atomsys p28；tweezer p31；atomqubit p34、35；rydberg p37–39；zoned p40；imaging p41；atomflow p42；atomclock p43；compare p48、49 |
 | **transmon-3d.html** | transmon | chip p1、10、11、17、18、27；junction p4、5、18；potential p6–8、12、14、15、18；control p16、18、19；readout p16、18、19；case p16、18、20；grover p18、21；shor p18、22；bv p18、23；surface p18、24；surgery p18、25；stack p18、26；deutsch p21（另 qfish008 p13、20、23）；deutsch-lab p21（另 qfish008 p21、22、24） |
 | **power1000.html** | 供電 | overview p47、52、56；scale p48、51、55；heat p49、50；ground p22、54；outage p7、53；field p24；roadmap p57–59；devplan p60–72 |
 | **lc-vs-jj.html** | transmon | s1 p4、5；s2 p5；s3 p8、14；s4 p14；s5 p6；s6drag p16；s6 p7 |
@@ -311,18 +311,18 @@ cd slides/build && node build_operation.js
 
 | 路徑 | 說明 |
 |---|---|
-| `slides/Ion_NeutralAtom_Talk.pptx` | 56 頁簡報：離子阱系統與操作（含運算與讀取總覽、超導對照、氫邁射頻率基準）、中性原子系統與操作（含運算與讀取總覽、頻率基準與原子鐘）、三平台比較（含供電切入分析）、總結；每頁有講者備註 |
+| `slides/Ion_NeutralAtom_Talk.pptx` | 57 頁簡報：離子阱系統與操作（含運算與讀取總覽、超導對照、氫邁射頻率基準、光子互連）、中性原子系統與操作（含運算與讀取總覽、頻率基準與原子鐘）、三平台比較（含供電切入分析）、總結；每頁有講者備註 |
 | `speech/離子阱與中性原子演講稿.md` | 與講者備註同步的演講稿、時間規劃、60 分鐘精簡版、Q&A 準備 |
-| `docs/離子阱與中性原子師生對話教學紀錄.md` | 師生對話形式的 6 課：運算與讀取（超導對照）、氫邁射、中性原子運算與讀取、頻率基準、MS 閘 vs 芮德堡 CZ；附三平台總對照與迷思整理 |
+| `docs/離子阱與中性原子師生對話教學紀錄.md` | 師生對話形式的 7 課：運算與讀取（超導對照）、氫邁射、中性原子運算與讀取、頻率基準、MS 閘 vs 芮德堡 CZ、光子互連；附三平台總對照與迷思整理 |
 | `docs/離子阱與中性原子系統指南.md` | 兩個平台的子系統、連接清單、從開機到上線的步驟、日常監控與異常、設施與電力比較；運算與讀取問答（含超導對照）、頻率基準與氫邁射 |
-| `animations/atoms.html` | 17 個 3D 場景（與其他動畫共用核心程式；Paul 阱軌跡、離子鏈正規模、MS 閘、芮德堡阻斷、多位元狀態向量、氫邁射起振等為即時數值計算） |
+| `animations/atoms.html` | 18 個 3D 場景（與其他動畫共用核心程式；Paul 阱軌跡、離子鏈正規模、MS 閘、芮德堡阻斷、多位元狀態向量、氫邁射起振等為即時數值計算） |
 | `slides/figures/atoms/`、`slides/figures/3d_atoms/` | 簡報用物理圖表與 3D 場景截圖 |
 
 ### 簡報架構
 
 1. **開場**：人造原子 vs 真的原子、DiVincenzo 五條件在兩個平台的實現
 2. **離子阱：系統**：系統全景、Paul 阱與 Mathieu 穩定條件、真空與裝載、雷射與光學（¹⁷¹Yb⁺）、電子與控制
-3. **離子阱：操作**：量子位元編碼、一個 shot 的流程、雷射冷卻、光泵浦與單位元閘、集體振動、Mølmer–Sørensen 閘、螢光讀取、QCCD、運算與讀取一次走完、超導 vs 離子阱對照、氫邁射與相位誤差估算、擴展路線
+3. **離子阱：操作**：量子位元編碼、一個 shot 的流程、雷射冷卻、光泵浦與單位元閘、集體振動、Mølmer–Sørensen 閘、螢光讀取、QCCD、運算與讀取一次走完、超導 vs 離子阱對照、氫邁射與相位誤差估算、光子互連、擴展路線
 4. **中性原子：系統**：系統全景、磁光阱、光鑷（SLM / AOD）、裝載成像與重排、雷射與光學（⁸⁷Rb）
 5. **中性原子：操作**：編碼、全域 + 局部單位元閘、芮德堡原子、芮德堡阻斷、CZ 閘、MS 閘 vs 芮德堡 CZ、分區架構、成像讀取、運算與讀取一次走完、頻率基準（微波鏈 + 雷射鏈）與原子鐘、原子損失與連續運轉、類比模擬
 6. **三平台比較**：綜合比較表、時間尺度、連接性與並行、錯誤率與錯誤更正進展、系統與設施需求、供電切入分析、主要廠商
@@ -340,15 +340,16 @@ cd slides/build && node build_operation.js
 | 6 | `qccd` | QCCD 搬運架構：分段電極、分區、接面、共冷、時間預算 |
 | 7 | `ionflow` | 離子阱運算與讀取總覽：5 顆離子跑完冷卻 → 光泵浦 → 全域微波 / Raman 定址 → 任意配對 MS 閘 → 螢光讀取；5 位元狀態向量、500 shots 統計、與超導的時間尺度對照 |
 | 8 | `hmaser` | 氫邁射：解離器、六極磁鐵選態、鐵氟龍儲存泡 + 銅腔起振（可關選態器 / 調流量）、鎖相 10 MHz → 12.6 GHz；Allan 偏差與 Ramsey 相位誤差 |
-| 9 | `atomsys` | 中性原子系統全景：MOT、光鑷光路（SLM + AOD）、芮德堡雷射、相機與即時控制 |
-| 10 | `tweezer` | 光鑷裝載與重排：隨機裝載、成像、AOD 搬運成無缺陷陣列 |
-| 11 | `atomqubit` | ⁸⁷Rb 量子位元：能階、全域微波與局部定址 |
-| 12 | `rydberg` | 芮德堡阻斷：距離與阻斷半徑、四能階數值演化、CZ 協定 |
-| 13 | `zoned` | 分區架構：儲存 / 糾纏 / 讀取區、並行 CZ、中途量測 |
-| 14 | `imaging` | 螢光成像讀取：推出 \|1⟩、相機影像、直方圖與閾值 |
-| 15 | `atomflow` | 中性原子運算與讀取總覽：裝載重排 → 光泵浦 → 全域 / 定址閘 → AOD 搬運 → 芮德堡 CZ → 推出 + 成像；6 位元狀態向量、三平台時間尺度 |
-| 16 | `atomclock` | 頻率基準：氫邁射 / 銣鐘 → 6.835 GHz、光頻梳、ULE 參考腔鎖芮德堡雷射、原子噴泉鐘；類氫結構表、雷射線寬 vs CZ 錯誤 |
-| 17 | `compare` | 三平台比較：連接性、閘速度、相干時間、規模 |
+| 9 | `photonic` | 光子互連：兩個模組的通訊離子各放一顆糾纏光子 → 光纖 → 分光鏡雙光子干涉 → 偵測器宣告遠端糾纏 → 本地 MS 交給記憶離子；成功率統計與 ½η² 理論、光子可分辨對照 |
+| 10 | `atomsys` | 中性原子系統全景：MOT、光鑷光路（SLM + AOD）、芮德堡雷射、相機與即時控制 |
+| 11 | `tweezer` | 光鑷裝載與重排：隨機裝載、成像、AOD 搬運成無缺陷陣列 |
+| 12 | `atomqubit` | ⁸⁷Rb 量子位元：能階、全域微波與局部定址 |
+| 13 | `rydberg` | 芮德堡阻斷：距離與阻斷半徑、四能階數值演化、CZ 協定 |
+| 14 | `zoned` | 分區架構：儲存 / 糾纏 / 讀取區、並行 CZ、中途量測 |
+| 15 | `imaging` | 螢光成像讀取：推出 \|1⟩、相機影像、直方圖與閾值 |
+| 16 | `atomflow` | 中性原子運算與讀取總覽：裝載重排 → 光泵浦 → 全域 / 定址閘 → AOD 搬運 → 芮德堡 CZ → 推出 + 成像；6 位元狀態向量、三平台時間尺度 |
+| 17 | `atomclock` | 頻率基準：氫邁射 / 銣鐘 → 6.835 GHz、光頻梳、ULE 參考腔鎖芮德堡雷射、原子噴泉鐘；類氫結構表、雷射線寬 vs CZ 錯誤 |
+| 18 | `compare` | 三平台比較：連接性、閘速度、相干時間、規模 |
 
 ### 重新產生
 
