@@ -10,6 +10,7 @@
 | 看每堂教案 | `lessons/Qxxx/brief.md`、`lessons/Qxxx/lesson.json` |
 | 看製作進度 | [製作狀態](PRODUCTION_STATUS.md) |
 | 製作一集 | [製作指南](docs/PRODUCTION_GUIDE.md) |
+| 製作 v2 動畫展示版（在投影片之間插入 3D 動畫實際操作錄影） | `authoring/v2/`（`demos.py` 寫段落與操作，`build_v2.py` 錄影、簡報、組裝，`qc_v2.py` 驗收，`deliver_v2.py` 交付） |
 | 改課綱 | 改 `curriculum/lessons_data.py`，再跑 `python3 academy/curriculum/build_curriculum.py` |
 
 ## 已定案的決策（2026-11-07）
