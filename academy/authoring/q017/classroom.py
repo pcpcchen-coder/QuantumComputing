@@ -193,7 +193,7 @@ SHEET_HEADER = ['條件', '一枚硬幣', '理由', '一顆燈泡', '理由', '�
 SHEET_ROWS = [['① 定義清楚、可擴充的量子位元（能疊加的兩個狀態）'], ['② 能初始化成 0'], ['③ 維持得比一個閘久很多'],
               ['④ 能做量子閘'], ['⑤ 能讀出每一顆'], ['結論：缺哪一條？代價是什麼？']]
 
-EXTRA_CSS = '''table.rec td{height:24mm;font-size:10.5pt}table.rec th:first-child{width:30mm}
+EXTRA_CSS = '''table.rec td{height:24mm;font-size:10.5pt}table.rec th:first-child{width:40mm}table.r3 th:nth-child(2){width:30mm}
 .chk li{margin:2.5mm 0;font-size:13pt;list-style:none}.chk li:before{content:"□ "}.chk{padding-left:2mm}
 table.demo td{font-size:10.5pt;height:auto}table.demo th:first-child{width:34mm}'''
 
@@ -220,7 +220,7 @@ def html():
         '<p>人造原子（transmon）：做在晶片上、閘很快；把電感換成約瑟夫森接面，能階不等距，才能只挑 0 和 1；要冷到 10 mK。</p></div>',
         '<h2>換你改造：生活裡的二態系統</h2><p class="lead">找一個生活中的二態系統，用五條件逐條檢核，寫出它缺哪一條。</p>'
         '<div class="box"><p>我找到的二態系統：＿＿＿＿＿＿＿＿　它的兩個狀態：＿＿＿＿＿＿ 和 ＿＿＿＿＿＿</p></div>'
-        '<table class="rec" style="margin-top:3mm"><tr><th>條件</th><th>✓ / ✗ / 不適用</th><th>理由</th></tr>'
+        '<table class="rec r3" style="margin-top:3mm"><tr><th>條件</th><th>判定 ✓ ✗</th><th>理由</th></tr>'
         + ''.join(f'<tr><td>{c}</td><td></td><td></td></tr>' for c in CONDS) + '</table>'
         '<div class="box" style="margin-top:3mm"><p>它缺哪一條：</p><div class="line"></div>'
         '<p>如果真要把它變成量子位元，要補上什麼：</p><div class="line"></div></div>',
