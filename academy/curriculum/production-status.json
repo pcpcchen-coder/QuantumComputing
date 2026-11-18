@@ -697,7 +697,13 @@
     "Q133": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q133-site-vibration-grounding-v2",
+        "evidence": "academy/episodes/q133-site-vibration-grounding-v2/delivery.json"
+      }
     },
     "Q134": {
       "status": "planned",
