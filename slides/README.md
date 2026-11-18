@@ -10,7 +10,9 @@
 
 《量子金魚》008 Deutsch 演算法：`episodes/qfish008.js` → `output/qfish008-deutsch-algorithm.pptx`（30 張，含講稿；PDF：`pdf/QFISH008_Deutsch_Algorithm.pdf`）。依影片逐字稿整理，並加上「案例實算（補充）」：振幅逐步計算、四種黑盒子、現場猜謎，每頁都有紫色按鈕直接開啟對應的 3D 動畫（`animations/transmon-3d.html#deutsch`、`#deutsch-lab`、`animations/operation.html#interference`）。3D 截圖以 `node capture_3d_deutsch.js` 重新擷取到 `figures/3d_deutsch/`。
 
-引擎也可以用在非影片的報告：`reports/qc-power-delta.js` → `output/qc-power-supply-delta.pptx`（量子電腦供電設計，超導／離子阱／中性原子三平台，77 張，含講稿）。這類內容不需要 `time` 欄位。
+引擎也可以用在非影片的報告：`reports/qc-power.js` → `output/qc-power-supply.pptx`（量子電腦供電設計，超導／離子阱／中性原子三平台，77 張，含講稿）。這類內容不需要 `time` 欄位。
+
+《八個基礎量子電路》：`reports/basic-circuits.js` → `output/basic-circuits.pptx`（32 張，含講稿；PDF：`pdf/Basic_Quantum_Circuits.pdf`）。疊加、干涉、Bell、GHZ、隱形傳態、Deutsch、BV、Grover 各有電路圖與振幅逐步長條，右上角「▶ 動畫」按鈕開到 `animations/basic-circuits.html` 的對應範例；振幅數值都和動畫頁的模擬器一致。截圖以 `node capture_basic_circuits.js` 重新擷取到 `figures/basic_circuits/`。
 
 ## 每集的製作流程
 
@@ -60,9 +62,9 @@
 | `summary` | 重點整理（深色） | `points[]` |
 | `flow` | 流程／供電鏈（橫向方塊＋箭頭） | `steps[{head, body, tone}]`、`boxHeight`、`lead`、`bullets[]`、`callout` |
 | `closing` | 討論題＋延伸觀看（深色） | `question`、`prompts[]`、`refs[]`；可選 `questionKicker`、`refsHead` 改兩個小標 |
-| `circuit` | 量子線路圖（原生圖形）＋各階段狀態卡 | `circuit{wires[], cols[{g:[閘,…]} / {blk, tone} / {m:[true,false]}], marks[{after, label}]}`、`stages[{head, eq, body, tone}]`、`callout` |
-| `amps` | 振幅長條（金＝正、紅＝負，與 3D 動畫第 7 章同畫法） | `lead`、`panels[{head, amps[4], note, tone, focus}]`、`labels[]`、`callout` |
-| `scene3d` | 3D 動畫截圖＋說明＋「開啟 3D 動畫」超連結按鈕 | `image`（1–2 張）、`imageLabels[]`、`caption`、`bullets[]`、`link{label, url}`；`layout: "wide"` 讓兩張截圖橫排在上 |
+| `circuit` | 量子線路圖（原生圖形）＋各階段狀態卡 | `circuit{wires[], cols[{g:[閘,…]} / {cx:[控制, 目標]} / {cz:[a, b]} / {blk, tone} / {m:[true,false]}], marks[{after, label}]}`、`circuitHeight`、`stages[{head, eq, body, tone}]`、`callout` |
+| `amps` | 振幅長條（金＝正、紅＝負，與 3D 動畫第 7 章同畫法） | `lead`、`panels[{head, amps[], note, tone, focus}]`、`labels[]`（長條數與 amps 相同；超過 4 根時數值縮小、0 不標）、`callout` |
+| `scene3d` | 3D 動畫截圖＋說明＋「開啟 3D 動畫」超連結按鈕 | `image`（1–2 張）、`imageLabels[]`、`caption`、`bullets[]`、`link{label, url, prefix}`（`prefix` 改按鈕前綴）；`layout: "wide"` 讓兩張截圖橫排在上 |
 
 共通欄位：`section`（PowerPoint 章節）、`time`、`notes`；`scene{label, url, prefix}` 會在右上角加一顆可點的「▶ 3D」小按鈕（`prefix` 可改按鈕前綴，例如「動畫」）。
 

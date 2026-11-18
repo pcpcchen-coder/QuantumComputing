@@ -1,7 +1,7 @@
 /*
  * 量子電腦供電設計：文獻回顧與我們的切入點（簡報版；超導、離子阱、中性原子三平台）
  * 內容來源：docs/量子電腦供電設計文獻回顧與我們切入點.md
- * 產生：cd slides && node build_deck.js reports/qc-power-delta.js
+ * 產生：cd slides && node build_deck.js reports/qc-power.js
  *
  * 規則：數字都來自報告引用的文獻；標「推論」的是根據文獻做的工程判斷。
  */
@@ -12,7 +12,7 @@ module.exports = {
     subject: "量子電腦供電、備援、低干擾設計文獻回顧",
     series: "技術分享｜量子電腦的供電設計",
     footer: "量子電腦供電設計｜文獻回顧與我們切入點",
-    output: "qc-power-supply-delta.pptx",
+    output: "qc-power-supply.pptx",
   },
   slides: [
     // ───────── 開場 ─────────

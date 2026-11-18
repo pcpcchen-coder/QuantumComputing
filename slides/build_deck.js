@@ -536,14 +536,16 @@ function ampText(v) {
 
 /**
  * 量子線路圖（原生圖形，可在 PowerPoint 裡編輯）
- * circuit: { wires: ["q0  |0⟩", …], cols: [{ g: ["H", null] } | { blk: "U_f", tone } | { m: [true, false] }],
+ * circuit: { wires: ["q0  |0⟩", …], cols: [{ g: ["H", null] } | { cx: [控制, 目標] } | { cz: [a, b] } | { blk: "U_f", tone } | { m: [true, false] }],
  *            marks: [{ after: 欄索引（-1 = 最左）, label: "①" }] }
  */
 function drawCircuit(slide, cir, x, y, w, h) {
   const pres = _pres;
   const nW = cir.wires.length, nC = cir.cols.length;
   const labW = cir.labelWidth || 1.85, x0 = x + labW, x1 = x + w - 0.15;
-  const dy = Math.min(1.05, (h - 0.7) / Math.max(nW - 1, 1));
+  // 有圓圈編號時，底部多留空間，避免編號壓到最下面那條導線
+  const reserve = cir.marks && cir.marks.length ? 1.4 : 0.7;
+  const dy = Math.min(1.05, (h - reserve) / Math.max(nW - 1, 1));
   const wy = cir.wires.map((_, i) => y + 0.55 + i * dy);
   const dx = (x1 - x0) / nC, gs = 0.62;
   const colX = (i) => x0 + dx * (i + 0.5);
@@ -566,6 +568,19 @@ function drawCircuit(slide, cir, x, y, w, h) {
   cir.cols.forEach((col, i) => {
     const cx = colX(i);
     if (col.g) col.g.forEach((g, q) => { if (g) gate(cx, wy[q], g, HEX.lt1, C().text2, `circ-g-${i}-${q}`); });
+    if (col.cx) { // CNOT：cx: [控制, 目標]（導線索引）
+      const [qc, qt] = col.cx, yc = wy[qc], yt = wy[qt], r = 0.21;
+      slide.addShape(pres.shapes.LINE, { x: cx, y: Math.min(yc, yt), w: 0, h: Math.abs(yt - yc), line: { color: HEX.dk2, width: 1.75 }, objectName: `circ-cx-line-${i}` });
+      slide.addShape(pres.shapes.OVAL, { x: cx - 0.09, y: yc - 0.09, w: 0.18, h: 0.18, fill: { color: HEX.dk2 }, line: { type: "none" }, objectName: `circ-cx-ctrl-${i}` });
+      slide.addShape(pres.shapes.OVAL, { x: cx - r, y: yt - r, w: 2 * r, h: 2 * r, fill: { color: HEX.lt1 }, line: { color: HEX.dk2, width: 1.75 }, objectName: `circ-cx-tgt-${i}` });
+      slide.addShape(pres.shapes.LINE, { x: cx - r, y: yt, w: 2 * r, h: 0, line: { color: HEX.dk2, width: 1.75 }, objectName: `circ-cx-h-${i}` });
+      slide.addShape(pres.shapes.LINE, { x: cx, y: yt - r, w: 0, h: 2 * r, line: { color: HEX.dk2, width: 1.75 }, objectName: `circ-cx-v-${i}` });
+    }
+    if (col.cz) { // CZ：cz: [位元, 位元]（兩端都畫實心點）
+      const ys = col.cz.map((q) => wy[q]);
+      slide.addShape(pres.shapes.LINE, { x: cx, y: Math.min(...ys), w: 0, h: Math.max(...ys) - Math.min(...ys), line: { color: HEX.dk2, width: 1.75 }, objectName: `circ-cz-line-${i}` });
+      ys.forEach((yy, k) => slide.addShape(pres.shapes.OVAL, { x: cx - 0.09, y: yy - 0.09, w: 0.18, h: 0.18, fill: { color: HEX.dk2 }, line: { type: "none" }, objectName: `circ-cz-dot-${i}-${k}` }));
+    }
     if (col.blk) {
       const top = wy[0] - gs / 2 - 0.05, bot = wy[nW - 1] + gs / 2 + 0.05;
       gate(cx, (top + bot) / 2, col.blk, TONE_HEX[col.tone || "quantum"], C().background1, `circ-blk-${i}`, Math.min(dx - 0.2, 1.25), bot - top);
@@ -631,13 +646,13 @@ R.amps = async (pres, s) => {
     const gx = px + 0.18, gw = pw - 0.36, gTop = y0 + 0.75, gBot = y0 + ph - noteH - 0.45;
     const mid = (gTop + gBot) / 2, half = (gBot - gTop) / 2 - 0.2;
     slide.addShape(pres.shapes.LINE, { x: gx, y: mid, w: gw, h: 0, line: { color: HEX.accent6, width: 1 }, objectName: `amp-axis-${i}` });
-    const bw = gw / labels.length;
+    const bw = gw / labels.length, dense = labels.length > 4; // 長條多時縮小數值、省略 0
     pn.amps.forEach((a, k) => {
       const bx = gx + k * bw + bw * 0.18, bwid = bw * 0.64, hh = Math.abs(a) * half;
       if (hh > 0.005) slide.addShape(pres.shapes.RECTANGLE, { x: bx, y: a > 0 ? mid - hh : mid, w: bwid, h: hh, fill: { color: a > 0 ? HEX.accent2 : HEX.accent4 }, line: { type: "none" }, objectName: `amp-bar-${i}-${k}` });
       const ty = a >= 0 ? mid - hh - 0.3 : mid + hh + 0.02;
-      slide.addText(ampText(a), { x: gx + k * bw - 0.05, y: ty, w: bw + 0.1, h: 0.28, fontSize: 11, bold: true, fontFace: EQ_FONT, color: a < 0 ? C().accent4 : C().text2, align: "center", margin: 0, isTextBox: true, objectName: `amp-val-${i}-${k}` });
-      slide.addText(labels[k], { x: gx + k * bw - 0.05, y: gBot + 0.02, w: bw + 0.1, h: 0.3, fontSize: 12, fontFace: EQ_FONT, color: C().text2, align: "center", margin: 0, isTextBox: true, objectName: `amp-ket-${i}-${k}` });
+      if (!(dense && Math.abs(a) < 1e-9)) slide.addText(ampText(a), { x: gx + k * bw - 0.05, y: ty, w: bw + 0.1, h: 0.28, fontSize: dense ? 9 : 11, bold: true, fontFace: EQ_FONT, color: a < 0 ? C().accent4 : C().text2, align: "center", margin: 0, isTextBox: true, objectName: `amp-val-${i}-${k}` });
+      slide.addText(labels[k], { x: gx + k * bw - 0.05, y: gBot + 0.02, w: bw + 0.1, h: 0.3, fontSize: dense ? 10 : 12, fontFace: EQ_FONT, color: C().text2, align: "center", margin: 0, isTextBox: true, objectName: `amp-ket-${i}-${k}` });
     });
     if (pn.note) slide.addText(runs(pn.note, { fontSize: 12, color: C().text1 }), { x: px + 0.12, y: y0 + ph - noteH - 0.08, w: pw - 0.24, h: noteH, margin: 0, valign: "top", isTextBox: true, objectName: `amp-note-${i}` });
   });
@@ -677,7 +692,7 @@ R.scene3d = async (pres, s) => {
   bulletBox(slide, s.bullets, rx, TOP, rw, BOTTOM - TOP - btnH - 0.2, { fontSize: s.fontSize || 15, space: 8 });
   if (s.link) {
     slide.addShape(pres.shapes.ROUNDED_RECTANGLE, { x: rx, y: BOTTOM - btnH, w: rw, h: btnH, rectRadius: 0.12, fill: { color: C().accent3 }, line: { type: "none" }, objectName: "scene-btn-bg" });
-    slide.addText(`▶ 開啟 3D 動畫：${s.link.label}`, { x: rx, y: BOTTOM - btnH, w: rw, h: btnH, fontSize: 15, bold: true, color: C().background1, align: "center", valign: "middle", margin: 0, isTextBox: true, hyperlink: { url: s.link.url, tooltip: s.link.url }, objectName: "scene-btn" });
+    slide.addText(`▶ ${s.link.prefix || "開啟 3D 動畫"}：${s.link.label}`, { x: rx, y: BOTTOM - btnH, w: rw, h: btnH, fontSize: 15, bold: true, color: C().background1, align: "center", valign: "middle", margin: 0, isTextBox: true, hyperlink: { url: s.link.url, tooltip: s.link.url }, objectName: "scene-btn" });
   }
   if (s.notes) slide.addNotes(s.notes);
   return slide;
@@ -714,7 +729,7 @@ async function scene3dWide(pres, slide, s, imgs) {
   if (s.link) {
     const bx = MX + CW - btnW, by = BOTTOM - 0.62;
     slide.addShape(pres.shapes.ROUNDED_RECTANGLE, { x: bx, y: by, w: btnW, h: 0.62, rectRadius: 0.12, fill: { color: C().accent3 }, line: { type: "none" }, objectName: "scene-btn-bg" });
-    slide.addText(`▶ 開啟 3D 動畫：${s.link.label}`, { x: bx, y: by, w: btnW, h: 0.62, fontSize: 14, bold: true, color: C().background1, align: "center", valign: "middle", margin: 0, isTextBox: true, hyperlink: { url: s.link.url, tooltip: s.link.url }, objectName: "scene-btn" });
+    slide.addText(`▶ ${s.link.prefix || "開啟 3D 動畫"}：${s.link.label}`, { x: bx, y: by, w: btnW, h: 0.62, fontSize: 14, bold: true, color: C().background1, align: "center", valign: "middle", margin: 0, isTextBox: true, hyperlink: { url: s.link.url, tooltip: s.link.url }, objectName: "scene-btn" });
   }
   if (s.notes) slide.addNotes(s.notes);
   return slide;
