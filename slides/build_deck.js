@@ -536,7 +536,7 @@ function ampText(v) {
 
 /**
  * 量子線路圖（原生圖形，可在 PowerPoint 裡編輯）
- * circuit: { wires: ["q0  |0⟩", …], cols: [{ g: ["H", null] } | { cx: [控制, 目標] } | { blk: "U_f", tone } | { m: [true, false] }],
+ * circuit: { wires: ["q0  |0⟩", …], cols: [{ g: ["H", null] } | { cx: [控制, 目標] } | { cz: [a, b] } | { blk: "U_f", tone } | { m: [true, false] }],
  *            marks: [{ after: 欄索引（-1 = 最左）, label: "①" }] }
  */
 function drawCircuit(slide, cir, x, y, w, h) {
@@ -575,6 +575,11 @@ function drawCircuit(slide, cir, x, y, w, h) {
       slide.addShape(pres.shapes.OVAL, { x: cx - r, y: yt - r, w: 2 * r, h: 2 * r, fill: { color: HEX.lt1 }, line: { color: HEX.dk2, width: 1.75 }, objectName: `circ-cx-tgt-${i}` });
       slide.addShape(pres.shapes.LINE, { x: cx - r, y: yt, w: 2 * r, h: 0, line: { color: HEX.dk2, width: 1.75 }, objectName: `circ-cx-h-${i}` });
       slide.addShape(pres.shapes.LINE, { x: cx, y: yt - r, w: 0, h: 2 * r, line: { color: HEX.dk2, width: 1.75 }, objectName: `circ-cx-v-${i}` });
+    }
+    if (col.cz) { // CZ：cz: [位元, 位元]（兩端都畫實心點）
+      const ys = col.cz.map((q) => wy[q]);
+      slide.addShape(pres.shapes.LINE, { x: cx, y: Math.min(...ys), w: 0, h: Math.max(...ys) - Math.min(...ys), line: { color: HEX.dk2, width: 1.75 }, objectName: `circ-cz-line-${i}` });
+      ys.forEach((yy, k) => slide.addShape(pres.shapes.OVAL, { x: cx - 0.09, y: yy - 0.09, w: 0.18, h: 0.18, fill: { color: HEX.dk2 }, line: { type: "none" }, objectName: `circ-cz-dot-${i}-${k}` }));
     }
     if (col.blk) {
       const top = wy[0] - gs / 2 - 0.05, bot = wy[nW - 1] + gs / 2 + 0.05;

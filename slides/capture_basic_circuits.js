@@ -1,4 +1,4 @@
-// 擷取「六個基礎量子電路」簡報用截圖 → slides/figures/basic_circuits/
+// 擷取「八個基礎量子電路」簡報用截圖 → slides/figures/basic_circuits/
 // 用法：node slides/capture_basic_circuits.js（需 Playwright 與 Chromium；離線可用）
 const { chromium } = require('playwright');
 const fs = require('fs');
@@ -38,6 +38,8 @@ const PAGE = 'file://' + path.resolve(__dirname, '../animations/basic-circuits.h
   await open('bell', 2); await measure(); await shot('bell_final');         // Φ⁺：只有 00、11
   await open('deutsch', 3); await shot('deutsch_oracle');                   // 黑盒之後：q0 = 1 的兩根變號
   await open('bv', 4); await measure(); await shot('bv_final');             // 密碼 101
+  await open('teleport', 4); await measure(); await shot('teleport_final');  // q2 = ψ，q0 不再是 ψ
+  await open('grover', 4, '3 顆（N = 8）'); await shot('grover_oracle');     // 3 顆位元、第 2 輪標記後：答案變號、平均線
 
   await b.close();
 })();
