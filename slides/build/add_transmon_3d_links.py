@@ -27,7 +27,12 @@ ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 PPTX = os.path.join(ROOT, "slides", "transmon.pptx")
 BASE = os.path.join(ROOT, "slides", "build", "transmon_base.pptx")   # 原始 17 頁（未加動畫連結）
 FIG = os.path.join(ROOT, "slides", "figures", "3d_transmon")
-ANIM = "../animations/transmon-3d.html"   # 相對於 slides/transmon.pptx
+ANIM = "https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html"   # GitHub Pages 網址
+LCJJ = "https://pcpcchen-coder.github.io/QuantumComputing/animations/lc-vs-jj.html"     # 2D 圖解：LC vs JJ
+LC_STEPS = {   # lc-vs-jj.html 的段落錨點 → 按鈕文字
+    "s1": "電流與磁通", "s2": "正弦驅動", "s3": "能階間距", "s4": "只停在 |0⟩|1⟩",
+    "s5": "泰勒展開", "s6drag": "DRAG", "s6": "差別總表",
+}
 
 FONT = "Microsoft JhengHei"
 INK = RGBColor(0x16, 0x18, 0x1D)
@@ -37,6 +42,7 @@ GOLD = RGBColor(0xC9, 0xA2, 0x27)
 TEAL = RGBColor(0x17, 0x87, 0x7F)
 GRAY = RGBColor(0x7D, 0x87, 0x96)
 WHITE = RGBColor(0xFF, 0xFF, 0xFF)
+COPPER = RGBColor(0xB8, 0x5C, 0x2E)   # 2D 圖解按鈕（與 3D 青綠色按鈕區分）
 
 TAG_LINK = "anim-link"          # 按鈕 shape 名稱前綴
 TAG_SLIDE = "anim-3d-slide"     # 新增投影片的標記 shape 名稱
@@ -46,6 +52,7 @@ CHAPTERS = {
     "chip": (1, "晶片"), "junction": (2, "約瑟夫森結"), "potential": (3, "位能井"),
     "control": (4, "操控"), "readout": (5, "讀取"), "case": (6, "案例"),
     "grover": (7, "振幅長條"), "shor": (8, "Shor"),
+    "bv": (9, "BV 密碼"), "surface": (10, "表面碼"), "surgery": (11, "邏輯閘"), "stack": (12, "軟體堆疊"),
     "deutsch": (7, "Deutsch"), "deutsch-lab": (7, "自由實驗"),
 }
 
@@ -100,13 +107,14 @@ def textbox(slide, x, y, w, h, paras, size=12, color=INK2, align=PP_ALIGN.LEFT,
     return tb
 
 
-def pill(slide, x, y, w, h, hash_, label=None, size=10):
-    """可點的圓角按鈕：shape 與文字都帶超連結。"""
+def pill(slide, x, y, w, h, hash_, label=None, size=10, href=None, color=None):
+    """可點的圓角按鈕：shape 與文字都帶超連結。href 不給時連到 transmon-3d.html#hash_。"""
+    href = href or url(hash_)
     sh = slide.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, Emu(x), Emu(y), Emu(w), Emu(h))
     sh.name = f"{TAG_LINK}_{hash_}"
     sh.adjustments[0] = 0.5
     sh.fill.solid()
-    sh.fill.fore_color.rgb = TEAL
+    sh.fill.fore_color.rgb = color or TEAL
     sh.line.fill.background()
     sh.shadow.inherit = False
     tf = sh.text_frame
@@ -119,8 +127,8 @@ def pill(slide, x, y, w, h, hash_, label=None, size=10):
     r = p.add_run()
     r.text = label or pill_label(hash_)
     style_run(r, size, WHITE, bold=True)
-    r.hyperlink.address = url(hash_)
-    sh.click_action.hyperlink.address = url(hash_)
+    r.hyperlink.address = href
+    sh.click_action.hyperlink.address = href
     # 文字超連結顏色跟隨文字（PowerPoint 2019+），避免變成藍底線
     hl = r._r.find(".//{http://schemas.openxmlformats.org/drawingml/2006/main}hlinkClick")
     if hl is not None:
@@ -140,6 +148,26 @@ def picture(slide, name, x, y, w, link=None):
         pic.click_action.hyperlink.address = url(link)
     pic.line.color.rgb = RGBColor(0xD5, 0xDA, 0xE0)
     pic.line.width = Pt(0.75)
+    return pic
+
+
+def picture_fit(slide, name, x, y, w, h, link=None):
+    """等比例縮放後置中放進 w × h 的框（截圖比例不一時用），框底填深色。"""
+    from PIL import Image
+    iw, ih = Image.open(os.path.join(FIG, name + ".jpg")).size
+    if abs(iw / ih - w / h) < 0.02:
+        return picture(slide, name, x, y, w, link=link)
+    frame = slide.shapes.add_shape(MSO_SHAPE.RECTANGLE, Emu(x), Emu(y), Emu(w), Emu(h))
+    frame.name = f"{TAG_LINK}_frame_{name}"
+    frame.fill.solid(); frame.fill.fore_color.rgb = RGBColor(0x0A, 0x0C, 0x11)
+    frame.line.color.rgb = RGBColor(0xD5, 0xDA, 0xE0); frame.line.width = Pt(0.75); frame.shadow.inherit = False
+    scale = min(w / iw, h / ih)
+    pw, ph = int(iw * scale), int(ih * scale)
+    pic = slide.shapes.add_picture(os.path.join(FIG, name + ".jpg"), Emu(x + (w - pw) // 2), Emu(y + (h - ph) // 2),
+                                   width=Emu(pw), height=Emu(ph))
+    pic.name = f"{TAG_LINK}_img_{name}"
+    if link:
+        pic.click_action.hyperlink.address = url(link)
     return pic
 
 
@@ -187,6 +215,9 @@ EXISTING = {   # 投影片頁碼（1 起算）→ 章節
     15: ["potential"],
     16: ["control", "readout", "case"],
 }
+EXISTING_LC = {   # 投影片頁碼 → lc-vs-jj.html 段落（放在 3D 按鈕左邊，銅色）
+    4: ["s1"], 5: ["s1", "s2"], 6: ["s5"], 7: ["s6"], 8: ["s3"], 14: ["s3", "s4"], 16: ["s6drag"],
+}
 
 
 def add_existing_buttons(prs):
@@ -195,14 +226,23 @@ def add_existing_buttons(prs):
         s = slides[no - 1]
         if no == 1:   # 封面：放在標題區下方
             pill(s, Inches(0.55), Inches(4.55), Inches(2.3), Inches(0.34), "chip",
-                 label="▶ 開啟 3D 互動動畫（8 章）", size=11)
+                 label="▶ 開啟 3D 互動動畫（12 章）", size=11)
+            pill(s, Inches(3.0), Inches(4.55), Inches(2.3), Inches(0.34), "lc-cover",
+                 label="▶ 2D 圖解：LC vs JJ", size=11, href=LCJJ, color=COPPER)
         else:
             w = Inches(1.75)
             gap = Inches(0.08)
             x = SW - Inches(0.25) - len(hashes) * w - (len(hashes) - 1) * gap
             for k, h in enumerate(hashes):
                 pill(s, x + k * (w + gap), PILL_Y, w, PILL_H, h, size=9)
+            lw = Inches(1.5)
+            for k, sec in enumerate(reversed(EXISTING_LC.get(no, []))):
+                pill(s, x - (k + 1) * (lw + gap), PILL_Y, lw, PILL_H, f"lc-{sec}",
+                     label=f"▶ 圖解：{LC_STEPS[sec]}", size=9, href=f"{LCJJ}#{sec}", color=COPPER)
         lines = [f"{pill_label(h)[2:]}　{url(h)}" for h in hashes]
+        lines += [f"2D 圖解：{LC_STEPS[sec]}　{LCJJ}#{sec}" for sec in EXISTING_LC.get(no, [])]
+        if no == 1:
+            lines.append(f"2D 圖解：LC vs JJ　{LCJJ}")
         add_notes(s, NOTE_MARK + "\n" + "\n".join(lines))
 
 
@@ -231,49 +271,56 @@ def layout(prs, name):
 def new_section(prs):
     s = prs.slides.add_slide(layout(prs, "SECTION"))
     ph = list(s.placeholders)
-    texts = ["04", "用 3D 動畫走一遍", "transmon-3d.html 八章：晶片 → 約瑟夫森結 → 位能井 → 操控 → 讀取 → 案例 → 振幅長條 → Shor"]
+    texts = ["04", "用 3D 動畫走一遍", "transmon-3d.html 十二章：晶片 → 約瑟夫森結 → 位能井 → 操控 → 讀取 → 案例 → 振幅長條 → Shor → BV 密碼 → 表面碼 → 邏輯閘 → 軟體堆疊"]
     for p, t in zip(ph, texts):
         p.text = t
     marker(s)
     pill(s, Inches(0.6), Inches(4.35), Inches(2.4), Inches(0.36), "chip", label="▶ 開啟 3D 互動動畫", size=12)
     add_notes(s, "接下來不講新公式，而是打開 3D 動畫，把前面三段講的東西實際動起來看一次，"
-                 "再往前多走三步：多顆位元的頻率配置、兩位元的振幅運算，以及 Shor 演算法。\n\n"
+                 "再往前走：多顆位元的頻率配置、兩位元的振幅運算、Shor 與 BV 演算法，"
+                 "最後看錯誤更正（表面碼、lattice surgery 與魔術態）和把程式變成微波的軟體堆疊。\n\n"
                  + NOTE_MARK + "\n" + url("chip"))
     return s
 
 
 def new_tour(prs):
     s = prs.slides.add_slide(layout(prs, "CONTENT"))
-    set_title(s, "3D 動畫導覽：八章一覽")
+    set_title(s, "3D 動畫導覽：十二章一覽")
     marker(s)
     rows = [
-        ("chip", "一顆 transmon 的俯視圖", "十字電容板、SQUID、XY／Z 線與讀取共振腔；送 π 脈衝看激發與 T₁ 衰減", "第 10、11 頁"),
-        ("junction", "約瑟夫森結：非線性電感的本體", "拖動相位差 φ，看 I = I_c sin φ 與 L_J = L_J0 / cos φ；交流約瑟夫森效應", "第 4、5 頁"),
-        ("potential", "cos 位能井：能階不再等距", "cos 井 vs 拋物線、能階越往上越密、量子單擺類比", "第 6–8、14、15 頁"),
-        ("control", "用微波轉動布洛赫球", "X／Y 軸 π、π/2 脈衝，Rabi 振盪與 P(|1⟩)", "第 16、19 頁"),
-        ("readout", "色散讀取：從頻移讀出狀態", "±χ 頻移、反射相位、IQ 點群與量測統計", "第 16、19 頁"),
-        ("case", "案例：三顆可調 transmon 的頻率配置", "SQUID 調頻、頻率碰撞、XY 寫入串擾、CZ 閘", "第 16、20 頁"),
-        ("grover", "振幅長條：糾纏、Grover 與 Deutsch", "CZ 產生糾纏、Oracle＋擴散、Deutsch 一次查詢", "第 21 頁"),
-        ("shor", "Shor 演算法：用 QFT 找週期，分解 15", "模指數、量子傅立葉轉換、連分數與 gcd", "第 22 頁"),
+        ("chip", "一顆 transmon 的俯視圖", "十字電容、SQUID、XY／Z 線、讀取共振腔；π 脈衝與 T₁", "p10、11"),
+        ("junction", "約瑟夫森結：非線性電感", "拖動相位差 φ：I = I_c sin φ、L_J = L_J0 / cos φ", "p4、5"),
+        ("potential", "cos 位能井：能階不再等距", "cos 井 vs 拋物線、能階越往上越密、量子單擺", "p6–8、14、15"),
+        ("control", "用微波轉動布洛赫球", "X／Y 軸 π、π/2 脈衝，Rabi 振盪與 P(|1⟩)", "p16、19"),
+        ("readout", "色散讀取：從頻移讀出狀態", "±χ 頻移、IQ 點群、讀取鏈與重設", "p16、19"),
+        ("case", "案例：三顆可調 transmon", "SQUID 調頻、頻率碰撞、XY 串擾、CZ 閘", "p16、20"),
+        ("grover", "振幅長條：糾纏、Grover、Deutsch", "CZ 產生糾纏、Oracle＋擴散、一次查詢", "p21"),
+        ("shor", "Shor：用 QFT 找週期，分解 15", "模指數、量子傅立葉轉換、連分數與 gcd", "p22"),
+        ("bv", "BV：3 顆位元一次猜中密碼", "H → 黑盒子 → H → 量測；在 transmon 上的時間與誤差", "p23"),
+        ("surface", "量子錯誤更正：表面碼", "穩定子、亮點配對解碼、邏輯錯誤、碼距與閾值", "p24"),
+        ("surgery", "Lattice surgery 與魔術態蒸餾", "縫合補丁做邏輯 CNOT、T 閘傳送、15-to-1 蒸餾", "p25"),
+        ("stack", "編譯與控制軟體堆疊", "分解、映射、路由、最佳化、排程脈衝、回饋、校準", "p26"),
     ]
-    x0, y0 = Inches(0.5), Inches(1.0)
-    rh = Inches(0.47)
+    x0, y0 = Inches(0.4), Inches(0.98)
+    cw, rh, gap = Inches(4.55), Inches(0.62), Inches(0.1)
     for k, (h, title, desc, pages) in enumerate(rows):
-        y = y0 + k * rh
-        if k % 2 == 0:
-            bg = s.shapes.add_shape(MSO_SHAPE.RECTANGLE, x0, y, SW - 2 * x0, rh)
-            bg.fill.solid(); bg.fill.fore_color.rgb = CARD; bg.line.fill.background(); bg.shadow.inherit = False
-            bg.name = "row-bg"
-        pill(s, x0 + Inches(0.08), y + Inches(0.1), Inches(1.75), Inches(0.27), h, size=9)
-        textbox(s, x0 + Inches(1.98), y + Inches(0.05), Inches(5.6), Inches(0.4),
-                [[(title, {"bold": True, "color": INK, "size": 11, "link": url(h)})], desc], size=9, space=0)
-        textbox(s, x0 + Inches(7.6), y, Inches(1.4), rh, [pages], size=9, color=GRAY,
-                align=PP_ALIGN.RIGHT, anchor=MSO_ANCHOR.MIDDLE)
-    textbox(s, x0, Inches(4.83), Inches(9), Inches(0.25),
-            ["點按鈕或標題即開啟動畫（連結為相對路徑 ../animations/transmon-3d.html#章節，請保持 slides/ 與 animations/ 的相對位置；需連網載入 three.js）。"
-             " 另有捷徑：#deutsch 直接進第 7 章 Deutsch 步驟、#deutsch-lab 進自由實驗。"], size=8, color=GRAY)
-    add_notes(s, "這張是 3D 動畫的目錄。每一列左邊的按鈕可以直接跳到該章，右邊是本簡報對應的頁碼。"
-                 "前三章對應第一、二段的觀念，第四、五章對應控制與讀取，第六到八章是延伸：從一顆位元走到多顆位元和演算法。\n\n"
+        col, row = divmod(k, 6)
+        x, y = x0 + col * (cw + gap), y0 + row * rh
+        bg = s.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, x, y + Inches(0.03), cw, rh - Inches(0.06))
+        bg.adjustments[0] = 0.12
+        bg.fill.solid(); bg.fill.fore_color.rgb = CARD; bg.line.fill.background(); bg.shadow.inherit = False
+        bg.name = "row-bg"
+        pill(s, x + Inches(0.08), y + Inches(0.1), Inches(1.45), Inches(0.24), h, size=8)
+        textbox(s, x + Inches(0.08), y + Inches(0.37), Inches(1.45), Inches(0.2), [pages], size=8, color=GRAY,
+                align=PP_ALIGN.CENTER)
+        textbox(s, x + Inches(1.62), y + Inches(0.08), cw - Inches(1.7), Inches(0.5),
+                [[(title, {"bold": True, "color": INK, "size": 10.5, "link": url(h)})], desc], size=8.5, space=1)
+    textbox(s, x0, Inches(4.75), Inches(9.2), Inches(0.3),
+            ["點按鈕或標題即開啟線上動畫（GitHub Pages：" + ANIM + "#章節）；離線時可改開 repo 內的 animations/transmon-3d.html。"
+             " 捷徑：#deutsch、#deutsch-lab。銅色「▶ 圖解」按鈕開啟 2D 圖解 lc-vs-jj.html（LC 與 JJ 的線性／非線性對照）。"], size=7.5, color=GRAY)
+    add_notes(s, "這張是 3D 動畫的目錄。每一格左邊的按鈕可以直接跳到該章，按鈕下方是本簡報對應的頁碼。"
+                 "前三章對應第一、二段的觀念，第四、五章對應控制與讀取，第六到九章從一顆位元走到多顆位元和演算法，"
+                 "第十、十一章是量子錯誤更正，第十二章是把程式變成微波的軟體堆疊。\n\n"
                  + NOTE_MARK + "\n" + "\n".join(f"第 {CHAPTERS[r[0]][0]} 章　{url(r[0])}" for r in rows))
     return s
 
@@ -287,7 +334,7 @@ def two_image_slide(prs, title, imgs, caps, hashes, bullets, notes, pill_labels=
     xs = [Inches(0.45), Inches(0.45) + iw + Inches(0.12)]
     y = Inches(1.0)
     for k, (img, cap) in enumerate(zip(imgs, caps)):
-        picture(s, img, xs[k], y, iw, link=hashes[min(k, len(hashes) - 1)])
+        picture_fit(s, img, xs[k], y, iw, ih, link=hashes[min(k, len(hashes) - 1)])
         textbox(s, xs[k], y + ih + Inches(0.05), iw, Inches(0.25), [cap], size=9, color=GRAY, align=PP_ALIGN.CENTER)
     # 下方按鈕列
     bw = Inches(1.95)
@@ -305,7 +352,7 @@ def two_image_slide(prs, title, imgs, caps, hashes, bullets, notes, pill_labels=
             paras.append(b)
     textbox(s, bx, Inches(1.0), SW - bx - Inches(0.35), Inches(3.75), paras, size=10, space=6)
     textbox(s, Inches(0.45), Inches(4.05), Inches(6.2), Inches(0.75),
-            ["動畫網址：" + "　".join(f"{ANIM}#{h}" for h in hashes)], size=8, color=GRAY)
+            ["動畫網址：" + "\n".join(f"{ANIM}#{h}" for h in hashes)], size=8, color=GRAY)
     add_notes(s, notes + "\n\n" + NOTE_MARK + "\n" + "\n".join(f"{pill_label(h)[2:]}　{url(h)}" for h in hashes))
     return s
 
@@ -367,6 +414,65 @@ def build_new(prs):
         "第 8 章走完 Shor 演算法：量子電腦只負責找週期，前後都是古典計算。"
         "重點畫面是第 4、5 步：糾纏讓計數暫存器只剩一把間隔 r 的梳子，QFT 再把它變成間隔 Q/r 的尖峰，"
         "量測後用連分數就能求出 r，進而用 gcd 分解 15。"))
+    out.append(two_image_slide(
+        prs, "BV：3 顆位元一次猜中密碼",
+        ["ch9_bv_query", "ch9_bv_measure"],
+        ["步驟 ③：查詢一次，s·x 為奇數的項翻成負號", "步驟 ⑤：再做 H 後干涉，量到的就是 s = 101"],
+        ["bv"],
+        [("① 題目", "黑盒子藏 3 位元密碼 s，只回答 s·x 的奇偶；古典要問 3 次（n 位元問 n 次）。"),
+         ("② 均勻疊加", "三顆都做 H，8 個 x 同時存在。"),
+         ("③ 查詢一次", "|x⟩ → (−1)^(s·x)|x⟩，答案寫進正負號。"),
+         ("④ 干涉", "再做一次 H，除了 |s⟩ 以外全部抵消。"),
+         ("⑤ 量測", "一次查詢就拿到完整密碼。"),
+         ("⑥ 真實硬體", "6 個 H（20–50 ns）＋虛擬 Z，約 100 ns，遠短於 T₁；讀取約 1 μs 後主動重設。"),
+         ("⑦–⑧", "教科書版用輔助位元與 phase kickback；自由實驗可換密碼、和古典比賽。")],
+        "第 9 章是一個完整的基本操作案例：用 3 顆位元跑 Bernstein–Vazirani 演算法。"
+        "會用到前面所有的操作：XY 線的 H 閘、虛擬 Z、色散讀取與重設。重點是第 3、4 步："
+        "黑盒子只查詢一次，就把密碼寫進每一項的正負號，再用 H 讓正負號干涉，只剩 |s⟩ 這一項。"))
+    out.append(two_image_slide(
+        prs, "量子錯誤更正：表面碼",
+        ["ch10_surface_layout", "ch10_surface_error"],
+        ["步驟 ①：d = 3，9 顆資料位元＋8 顆量測位元", "步驟 ③：D5 的 X 錯誤讓兩個 Z 穩定子亮起"],
+        ["surface"],
+        [("① 結構", "17 顆實體位元存 1 顆邏輯位元：資訊分散在糾纏態裡，不是複製。"),
+         ("② 一個週期", "約 1 μs：量測位元與鄰居做 CZ，再讀出穩定子的奇偶。"),
+         ("③–④ 抓錯", "Z 穩定子抓 X 錯誤、X 穩定子抓 Z 錯誤；Y 錯誤兩種都亮。"),
+         ("⑤ 邊界", "落單的亮點配到邊界上。"),
+         ("⑥ 邏輯錯誤", "d = 3 只能修 1 個錯；兩個錯誤可能騙過解碼器。"),
+         ("⑦ 碼距與閾值", "d = 5、7 需 49、97 顆（2d² − 1）；實體錯誤率低於約 1% 時，碼距越大越可靠。"),
+         ("⑧ 自由實驗", "點位元注入錯誤、解碼、跑統計。")],
+        "第 10 章是量子錯誤更正。表面碼不直接量資料位元，而是量相鄰位元的奇偶（穩定子），"
+        "所以不會破壞疊加。錯誤會讓附近的穩定子亮起來，解碼器把亮點兩兩配對，推回錯誤的位置。"
+        "碼距越大能修的錯越多，但前提是實體錯誤率要低於閾值。"))
+    out.append(two_image_slide(
+        prs, "Lattice surgery 與魔術態蒸餾",
+        ["ch11_merge", "ch11_distill"],
+        ["步驟 ②：打開接縫，量出 X_A ⊗ X_B", "步驟 ⑥：15 顆髒魔術態蒸餾出 1 顆乾淨的"],
+        ["surgery"],
+        [("① 為什麼", "表面碼負責「存」；Eastin–Knill 定理說不能所有邏輯閘都靠橫向閘完成。"),
+         ("②–③ 合併與拆開", "不移動位元，只改量哪些穩定子：縫合兩塊補丁量出聯合奇偶，再拆開。"),
+         ("④ 邏輯 CNOT", "一塊輔助補丁＋三次聯合量測。"),
+         ("⑤ T 閘", "消耗一顆魔術態，用閘傳送做出 T。"),
+         ("⑥–⑦ 蒸餾", "15-to-1：錯誤率 p → 35p³；10⁻³ 兩輪後約 10⁻²¹，足夠跑 Shor。"),
+         ("⑧ 自由實驗", "自己縫合、拆開、蒸餾。")],
+        "第 11 章接著第 10 章：表面碼只負責把資訊存好，要計算還得做邏輯閘。"
+        "Clifford 閘用 lattice surgery——把兩塊補丁縫在一起量出聯合奇偶、再拆開；"
+        "真正帶來量子優勢的 T 閘，則要消耗事先蒸餾好的魔術態。蒸餾的錯誤率是三次方下降，一到兩輪就夠。"))
+    out.append(two_image_slide(
+        prs, "編譯與控制軟體堆疊",
+        ["ch12_route", "ch12_pulse"],
+        ["步驟 ④：直線晶片上不相鄰就插 SWAP", "步驟 ⑥：排程後每條線的奈秒時間軸"],
+        ["stack"],
+        [("① 全貌", "七層：從一行演算法，一路翻成某條同軸線上、某個奈秒的微波波形。"),
+         ("② 分解", "H、CNOT 換成原生閘：Rz、√X、CZ。"),
+         ("③ 映射", "依今天的校準資料，挑相鄰、錯誤率最低的實體位元。"),
+         ("④ 路由", "不相鄰就插 SWAP（每個 SWAP = 3 個 CZ）。"),
+         ("⑤ 最佳化", "H·H 抵消、合併 Rz、虛擬 Z（0 ns）。"),
+         ("⑥ 排程與脈衝", "ASAP 並行，但相鄰 CZ 不能同時做（頻率碰撞）。"),
+         ("⑦–⑧ 回饋與校準", "FPGA 幾百 ns 內完成量測回饋；參數會漂移，要依依賴圖定期重新校準。")],
+        "最後一章跟著一個電路走完整條軟體堆疊。動畫裡的編譯器是真的在跑："
+        "分解成原生閘、依校準資料映射到實體位元、插 SWAP 路由、最佳化、排程成脈衝，再模擬出結果。"
+        "這也是第 16 頁「控制與讀取」在系統層級的樣子。"))
     return out
 
 

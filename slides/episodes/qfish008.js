@@ -13,8 +13,8 @@
  * 連結是相對於 slides/output/ 的路徑，請保持 slides/ 與 animations/ 的相對位置不變。
  */
 
-const T3D = "../../animations/transmon-3d.html";
-const OP = "../../animations/operation.html";
+const T3D = "https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html";
+const OP = "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html";
 const S = {
   deutsch: { label: "Deutsch 步驟", url: `${T3D}#deutsch` },
   lab: { label: "自由實驗", url: `${T3D}#deutsch-lab` },

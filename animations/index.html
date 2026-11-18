@@ -5,6 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>JJ 與微波讀取 3D 動畫</title>
 <link rel="stylesheet" href="css/style.css">
+<style>/* 外部 css 載入失敗時仍維持深色底，並顯示啟動錯誤 */
+html,body{background:#070c16;color:#e8eef8}
+#boot-error{position:fixed;inset:0;z-index:99;display:grid;place-items:center;padding:24px;background:#070c16;color:#e8eef8;
+  font:15px/1.7 "Microsoft JhengHei","PingFang TC","Noto Sans TC",system-ui,sans-serif;text-align:center}
+#boot-error[hidden]{display:none}
+#boot-error div{max-width:640px}
+#boot-error a{color:#8ef0ff;word-break:break-all}
+</style>
 </head>
 <body>
 <canvas id="gl"></canvas>
@@ -40,6 +48,30 @@
 <script src="js/scenes/09_dispersive.js"></script>
 <script src="js/scenes/10_iq.js"></script>
 <script src="js/scenes/11_fridge.js"></script>
-<script>App.start();</script>
+<div id="boot-error" hidden><div id="boot-error-msg"></div></div>
+<script>
+// 啟動檢查：缺檔或無法使用 WebGL 時顯示原因，而不是一片空白
+(function () {
+  var box = document.getElementById('boot-error'), msg = document.getElementById('boot-error-msg');
+  var page = location.pathname.split('/').pop() || 'index.html';
+  var online = 'https://pcpcchen-coder.github.io/QuantumComputing/animations/' + page + location.hash;
+  function fail(text) {
+    msg.innerHTML = text + (location.href.indexOf(online.split('#')[0]) === 0 ? '' :
+      '<br><br>也可以直接開啟線上版：<br><a href="' + online + '">' + online + '</a>');
+    box.hidden = false;
+  }
+  if (typeof THREE === 'undefined' || typeof App === 'undefined') {
+    fail('找不到動畫需要的程式檔（<b>css/</b>、<b>js/</b>、<b>lib/</b> 資料夾）。<br>' +
+         '請下載整個 <b>animations</b> 資料夾後再開啟這個 HTML，不要只下載單一檔案，' +
+         '也不要在 GitHub 網頁、雲端硬碟或通訊軟體的預覽裡開啟。');
+    return;
+  }
+  try { App.start(); } catch (err) {
+    fail(/WebGL/i.test(String(err && err.message)) ?
+      '這個瀏覽器無法啟用 WebGL，所以 3D 場景無法顯示。<br>請改用桌面版 Chrome、Edge、Safari 或 Firefox，並確認已開啟「硬體加速」。' :
+      '動畫啟動失敗：' + (err && err.message));
+  }
+})();
+</script>
 </body>
 </html>

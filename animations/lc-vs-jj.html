@@ -1,0 +1,650 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>LC 與約瑟夫森接面</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Noto+Sans+TC:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap">
+<style>
+/* Layout: single reading column; each step pairs a short explanation with an interactive figure (two columns wide, stacked narrow). Teal = linear LC, copper = Josephson junction. */
+:root{
+  --bg:#EDF1F0; --surface:#F8FAF9; --ink:#14201D; --muted:#566863; --rule:#C9D4D0; --grid:#DCE4E1;
+  --lc:#1D6A8B; --jj:#B65C12; --hit:#2C8A55; --miss:#A3B0AC; --band:rgba(182,92,18,.14); --band-lc:rgba(29,106,139,.14); --q:#7348A3; --band-q:rgba(115,72,163,.13);
+  --font-body:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;
+  --font-display:"Space Grotesk","Noto Sans TC","PingFang TC",sans-serif;
+  --font-mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0E1513; --surface:#151E1B; --ink:#E1E9E6; --muted:#93A49F; --rule:#2B3733; --grid:#1F2A27;
+  --lc:#63B5D8; --jj:#EF9B55; --hit:#5DCB8C; --miss:#4F5C58; --band:rgba(239,155,85,.18); --band-lc:rgba(99,181,216,.18); --q:#B99BE0; --band-q:rgba(185,155,224,.16); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0E1513; --surface:#151E1B; --ink:#E1E9E6; --muted:#93A49F; --rule:#2B3733; --grid:#1F2A27;
+  --lc:#63B5D8; --jj:#EF9B55; --hit:#5DCB8C; --miss:#4F5C58; --band:rgba(239,155,85,.18); --band-lc:rgba(99,181,216,.18); --q:#B99BE0; --band-q:rgba(185,155,224,.16); color-scheme:dark}
+
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:16px;line-height:1.75;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+main{max-width:1040px;margin:0 auto;padding-block:40px 64px;display:flex;flex-direction:column;gap:56px}
+h1,h2,h3{font-family:var(--font-display);text-wrap:balance;margin:0;line-height:1.3}
+h1{font-size:clamp(30px,5vw,46px);font-weight:700;letter-spacing:-.01em}
+h2{font-size:clamp(21px,3vw,27px);font-weight:700}
+h3{font-size:17px;font-weight:700}
+p{margin:0}
+.eyebrow{font-family:var(--font-mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.lc{color:var(--lc)} .jj{color:var(--jj)} .q{color:var(--q)}
+code,.m{font-family:var(--font-mono);font-size:.92em}
+.eq{font-family:var(--font-mono);font-size:15px;background:var(--surface);border:1px solid var(--rule);border-radius:6px;padding:10px 14px;overflow-x:auto;line-height:1.6}
+
+header{display:flex;flex-direction:column;gap:18px}
+header .lead{max-width:62ch;color:var(--muted);font-size:17px}
+.cast{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:8px}
+.cast article{background:var(--surface);border:1px solid var(--rule);border-radius:10px;padding:18px;display:grid;grid-template-columns:120px 1fr;gap:16px;align-items:center}
+.cast article>div{min-width:0;display:flex;flex-direction:column;gap:6px}
+.cast svg{width:120px;height:auto}
+.cast .tag{font-family:var(--font-mono);font-size:12px;color:var(--muted)}
+.cast.lcbox h3{color:var(--lc)}
+
+section.step{display:flex;flex-direction:column;gap:18px;border-top:1px solid var(--rule);padding-top:28px}
+.step-head{display:flex;flex-direction:column;gap:6px}
+.pair{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:28px;align-items:start}
+.pair.wide{grid-template-columns:1fr}
+.text{display:flex;flex-direction:column;gap:14px;max-width:65ch;min-width:0}
+.fig{background:var(--surface);border:1px solid var(--rule);border-radius:10px;padding:14px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.fig svg{width:100%;height:auto;display:block}
+.legend{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:13px;color:var(--muted)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend i{display:inline-block;width:18px;height:3px;border-radius:2px}
+.control{display:flex;flex-direction:column;gap:4px}
+.control label{display:flex;justify-content:space-between;gap:8px;font-size:14px}
+.control output{font-family:var(--font-mono);font-variant-numeric:tabular-nums}
+input[type=range]{width:100%;accent-color:var(--jj)}
+input[type=range]:focus-visible{outline:2px solid var(--lc);outline-offset:3px}
+.readout{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px}
+.readout div{border:1px solid var(--rule);border-radius:6px;padding:8px 10px;display:flex;flex-direction:column;gap:2px;min-width:0}
+.readout small{font-size:12px;color:var(--muted);line-height:1.4}
+.readout b{font-family:var(--font-mono);font-weight:500;font-size:17px;font-variant-numeric:tabular-nums}
+.note{font-size:14px;color:var(--muted)}
+.twin{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.twin>div{min-width:0}
+.twin h3{font-size:14px;margin-bottom:4px}
+.quad{display:grid;grid-template-columns:1fr 1fr;gap:14px 16px}
+.quad>div{min-width:0}
+.quad h3{font-size:14px;margin-bottom:2px}
+.quad p{font-size:12.5px;color:var(--muted);line-height:1.5}
+
+table{border-collapse:collapse;width:100%;min-width:560px;font-size:15px}
+.tablewrap{overflow-x:auto;background:var(--surface);border:1px solid var(--rule);border-radius:10px}
+th,td{text-align:left;padding:10px 14px;border-bottom:1px solid var(--rule);vertical-align:top}
+th{font-family:var(--font-display);font-size:14px;color:var(--muted);font-weight:500}
+tr:last-child td{border-bottom:none}
+
+/* SVG */
+.ax{stroke:var(--muted);stroke-width:1}
+.gr{stroke:var(--grid);stroke-width:1}
+.gr-d{stroke:var(--muted);stroke-width:1;stroke-dasharray:3 4;opacity:.7}
+.c-lc{stroke:var(--lc);fill:none;stroke-width:2.5;stroke-linejoin:round}
+.c-jj{stroke:var(--jj);fill:none;stroke-width:2.5;stroke-linejoin:round}
+.c-lc-d{stroke:var(--lc);fill:none;stroke-width:2;stroke-dasharray:6 5}
+.c-dr{stroke:var(--q);fill:none;stroke-width:2.5;stroke-linejoin:round}
+.f-band-q{fill:var(--band-q)}
+.c-q{stroke:var(--muted);fill:none;stroke-width:1.8;stroke-dasharray:2 4}
+.f-lc{fill:var(--lc)} .f-jj{fill:var(--jj)} .f-bg{fill:var(--surface)}
+.f-band{fill:var(--band)} .f-band-lc{fill:var(--band-lc)}
+.diff{fill:var(--band)}
+.lv-lc{stroke:var(--lc);stroke-width:2}
+.lv-jj{stroke:var(--jj);stroke-width:2}
+.hit{stroke:var(--hit);stroke-width:4}
+.miss{stroke:var(--miss);stroke-width:4}
+.wire{stroke:var(--ink);stroke-width:2;fill:none;stroke-linecap:round}
+text{font-family:var(--font-mono);font-size:11px;fill:var(--muted)}
+text.t-q{fill:var(--q)} text.t-lc{fill:var(--lc)} text.t-jj{fill:var(--jj)} text.t-ink{fill:var(--ink)} text.t-hit{fill:var(--hit)}
+text.big{font-size:13px}
+text.cjk{font-family:var(--font-body)}
+
+@media (max-width:760px){
+  .pair{grid-template-columns:1fr}
+  .twin,.quad{grid-template-columns:1fr}
+  .cast article{grid-template-columns:90px 1fr}
+  .cast svg{width:90px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<main>
+<header>
+  <span class="eyebrow">超導量子電路 · 圖解</span>
+  <h1>一條直線，一條正弦</h1>
+  <p class="lead">LC 電路和約瑟夫森接面（JJ）長得很像，都是「電容 + 一個儲存磁能的元件」。差別只在那個元件的電流–磁通關係：電感是直線，JJ 是正弦。下面四張互動圖從這條曲線一路推到「為什麼只有 JJ 能做 qubit」。</p>
+  <div class="cast">
+    <article>
+      <svg viewBox="0 0 200 140" aria-label="LC 電路示意圖">
+        <path class="wire" d="M50 20 H150 M50 120 H150 M50 20 V62 M50 78 V120 M150 20 V38 M150 102 V120"/>
+        <path class="wire" d="M30 62 H70 M30 78 H70"/>
+        <path class="wire" style="stroke:var(--lc)" d="M150 38 a8 8 0 0 1 0 16 a8 8 0 0 1 0 16 a8 8 0 0 1 0 16 a8 8 0 0 1 0 16"/>
+        <text x="80" y="74" class="t-ink big">C</text>
+        <text x="166" y="74" class="t-lc big">L</text>
+      </svg>
+      <div>
+        <h3 class="lc">LC 共振腔</h3>
+        <span class="tag">I = Φ / L　（直線）</span>
+        <span class="note">L 是常數，不管電流多大都一樣。</span>
+      </div>
+    </article>
+    <article>
+      <svg viewBox="0 0 200 140" aria-label="Transmon 電路示意圖">
+        <path class="wire" d="M50 20 H150 M50 120 H150 M50 20 V62 M50 78 V120 M150 20 V120"/>
+        <path class="wire" d="M30 62 H70 M30 78 H70"/>
+        <path class="wire" style="stroke:var(--jj);stroke-width:3" d="M138 58 L162 82 M162 58 L138 82"/>
+        <text x="80" y="74" class="t-ink big">C</text>
+        <text x="168" y="74" class="t-jj big">E_J</text>
+      </svg>
+      <div>
+        <h3 class="jj">約瑟夫森接面（transmon）</h3>
+        <span class="tag">I = I_c · sin(2πΦ/Φ₀)　（正弦）</span>
+        <span class="note">等效電感會隨電流改變。</span>
+      </div>
+    </article>
+  </div>
+</header>
+
+<!-- STEP 1 -->
+<section class="step" id="s1">
+  <div class="step-head">
+    <span class="eyebrow">第 1 步 · 本構關係</span>
+    <h2>電流與磁通：直線 vs 正弦</h2>
+  </div>
+  <div class="pair">
+    <div class="text">
+      <p>橫軸是相位 <code>φ = 2πΦ/Φ₀</code>，也就是換了單位的磁通。縱軸是流過元件的電流（以 <code>I_c</code> 為單位）。</p>
+      <p><b class="lc">電感</b>：<code>I = Φ/L</code>，永遠是直線。這裡選 <code>L = L_J0 = Φ₀/(2πI_c)</code>，讓它在原點附近和 JJ 重疊。</p>
+      <p><b class="jj">JJ</b>：<code>I = I_c sin φ</code>，電流最大只能到 <code>I_c</code>，之後就彎回來。</p>
+      <p>拖動滑桿看<b>切線</b>。切線斜率等於 <code>1/L</code>：直線斜率固定，所以電感固定；正弦的斜率一直在變，所以 JJ 的等效電感 <code>L_J = L_J0 / cos φ</code> 跟著變。</p>
+    </div>
+    <div class="fig">
+      <div class="legend"><span><i style="background:var(--lc)"></i>電感 I = φ</span><span><i style="background:var(--jj)"></i>JJ I = sin φ</span><span><i style="background:var(--muted);height:1px"></i>JJ 在此點的切線</span></div>
+      <svg id="fig1" viewBox="0 0 560 320" role="img" aria-label="電流對相位的關係圖"></svg>
+      <div class="control">
+        <label for="phi">相位 φ <output id="phiOut"></output></label>
+        <input type="range" id="phi" min="-4.71" max="4.71" step="0.01" value="0.6">
+      </div>
+      <div class="readout">
+        <div><small>電感電流 I/I_c</small><b class="lc" id="r1a"></b></div>
+        <div><small>JJ 電流 I/I_c</small><b class="jj" id="r1b"></b></div>
+        <div><small>JJ 等效電感 L_J / L_J0</small><b class="jj" id="r1c"></b></div>
+      </div>
+      <p class="note" id="r1note"></p>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2 -->
+<section class="step" id="s2">
+  <div class="step-head">
+    <span class="eyebrow">第 2 步 · 疊加原理測試</span>
+    <h2>用正弦波去推，輸出長什麼樣？</h2>
+  </div>
+  <div class="pair">
+    <div class="text">
+      <p>對兩個元件施加同一個磁通 <code>φ(t) = A·sin(ωt)</code>，看流出來的電流。</p>
+      <p><b class="lc">線性系統</b>：輸出還是頻率 ω 的純正弦，振幅跟 A 成正比。輸入加倍，輸出就加倍。線性系統<b>不會產生新的頻率</b>。</p>
+      <p><b class="jj">JJ</b>：輸出是 <code>sin(A·sin ωt)</code>，波峰被壓平，而且冒出 3ω、5ω… 的<b>諧波</b>。產生新頻率是非線性的指紋。</p>
+      <p>把 A 調小，JJ 幾乎變回純正弦。這就是為什麼「弱驅動的 transmon 很像線性共振腔」。</p>
+    </div>
+    <div class="fig">
+      <div class="legend"><span><i style="background:var(--lc)"></i>電感電流</span><span><i style="background:var(--jj)"></i>JJ 電流</span></div>
+      <svg id="fig2a" viewBox="0 0 560 240" role="img" aria-label="時域電流波形"></svg>
+      <svg id="fig2b" viewBox="0 0 560 190" role="img" aria-label="諧波頻譜"></svg>
+      <div class="control">
+        <label for="amp">驅動振幅 A（rad） <output id="ampOut"></output></label>
+        <input type="range" id="amp" min="0.1" max="3" step="0.01" value="1.4">
+      </div>
+      <div class="readout">
+        <div><small>輸入加倍，輸出峰值變成（電感）</small><b class="lc" id="r2a"></b></div>
+        <div><small>輸入加倍，輸出峰值變成（JJ）</small><b class="jj" id="r2b"></b></div>
+        <div><small>JJ 的 3ω 諧波 / 基頻</small><b class="jj" id="r2c"></b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 3 -->
+<section class="step" id="s3">
+  <div class="step-head">
+    <span class="eyebrow">第 3 步 · 位能與量子能階</span>
+    <h2>拋物線的能階等間距，餘弦的不是</h2>
+  </div>
+  <div class="pair">
+    <div class="text">
+      <p>把電流對磁通積分就得到位能。</p>
+      <p><b class="lc">LC</b>：<code>U = Φ²/2L</code>，是拋物線。量子化後能階<b>完全等間距</b>：<code>E_n = ħω(n + ½)</code>。</p>
+      <p><b class="jj">JJ</b>：<code>U = −E_J cos φ</code>。愈往上，餘弦位能井比拋物線<b>更寬、更扁</b>，能階就愈擠，間距一階比一階小。</p>
+      <p>右邊的能階是把 transmon Hamiltonian <code>H = 4E_C n² − E_J cos φ</code> 在電荷基底上直接數值對角化算出來的，不是近似公式。這裡固定 <code>E_C/h = 250 MHz</code>，你可以調 <code>E_J/E_C</code>。</p>
+    </div>
+    <div class="fig">
+      <div class="twin">
+        <div><h3 class="lc">LC：U = E_J φ²/2</h3><svg id="fig3a" viewBox="0 0 320 330" role="img" aria-label="LC 拋物線位能與能階"></svg></div>
+        <div><h3 class="jj">Transmon：U = E_J(1 − cos φ)</h3><svg id="fig3b" viewBox="0 0 320 330" role="img" aria-label="Transmon 餘弦位能與能階"></svg></div>
+      </div>
+      <div class="control">
+        <label for="ratio">E_J / E_C <output id="ratioOut"></output></label>
+        <input type="range" id="ratio" min="10" max="120" step="1" value="50">
+      </div>
+      <div class="readout">
+        <div><small>LC：每一階間距</small><b class="lc" id="r3a"></b></div>
+        <div><small>Transmon：ω₀₁ / ω₁₂</small><b class="jj" id="r3b"></b></div>
+        <div><small>非諧性 α = ω₁₂ − ω₀₁</small><b class="jj" id="r3c"></b></div>
+      </div>
+      <p class="note">右側數字是相鄰能階的躍遷頻率（GHz）。E_J/E_C 調低時，能階會冒出位能井頂端（虛線），系統進入對電荷雜訊敏感的區域。</p>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 4 -->
+<section class="step" id="s4">
+  <div class="step-head">
+    <span class="eyebrow">第 4 步 · 用微波去驅動</span>
+    <h2>能不能只停在 |0⟩ 和 |1⟩？</h2>
+  </div>
+  <div class="pair wide">
+    <div class="text">
+      <p>每條直線代表一個躍遷 <code>|n⟩→|n+1⟩</code> 的頻率，陰影帶是頻率對準 <code>ω₀₁</code> 的驅動微波。<b class="lc">LC</b> 的所有躍遷疊在同一個頻率上，驅動會讓它一路往上爬（變成同調態），沒辦法只用兩個能階。<b class="jj">Transmon</b> 的躍遷彼此錯開 |α|，驅動只打得到 0→1，所以可以當成一個兩能階的 qubit。不過脈衝如果太短，還是會漏到 |2⟩，第 6 步會處理這個問題。跟上面共用 <code>E_J/E_C</code> 滑桿。</p>
+    </div>
+    <div class="fig">
+      <svg id="fig4" viewBox="0 0 680 210" role="img" aria-label="躍遷頻率與驅動"></svg>
+      <div class="legend"><span><i style="background:var(--hit);height:4px"></i>被驅動打到（共振）</span><span><i style="background:var(--miss);height:4px"></i>沒打到（失諧）</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 5 -->
+<section class="step" id="s5">
+  <div class="step-head">
+    <span class="eyebrow">第 5 步 · 非線性藏在哪裡</span>
+    <h2>泰勒展開：多出來的四次項</h2>
+  </div>
+  <div class="pair">
+    <div class="text">
+      <div class="eq">−E_J cos φ ≈ −E_J + <span class="lc">E_J φ²/2</span> <span class="jj">− E_J φ⁴/24</span> + …</div>
+      <p><b class="lc">二次項</b>就是一個普通電感，單獨存在時是簡諧振子。</p>
+      <p><b class="jj">四次項</b>讓位能比拋物線低（陰影區域），這就是非線性的來源，也是能階變擠的原因。只保留到四次項的近似（灰色點線）已經很貼近真正的餘弦，所以 transmon 常被近似成「Kerr 振子」，非諧性 α ≈ −E_C。</p>
+      <p>為什麼一定是餘弦？穿隧的是電荷 2e 的 Cooper pair，電荷是一對一對離散的。離散的電荷在共軛的相位空間裡就變成 2π 週期函數，而週期函數不可能是拋物線。</p>
+    </div>
+    <div class="fig">
+      <div class="legend"><span><i style="background:var(--jj)"></i>1 − cos φ（真正的 JJ）</span><span><i style="background:var(--lc)"></i>φ²/2（只留二次項）</span><span><i style="background:var(--muted)"></i>φ²/2 − φ⁴/24</span></div>
+      <svg id="fig5" viewBox="0 0 560 300" role="img" aria-label="餘弦位能與泰勒展開比較"></svg>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 6 -->
+<section class="step" id="s6drag">
+  <div class="step-head">
+    <span class="eyebrow">第 6 步 · 實務問題：快速脈衝的洩漏</span>
+    <h2>DRAG：讓脈衝在 ω₁₂ 上挖一個洞</h2>
+  </div>
+  <div class="pair">
+    <div class="text">
+      <p>非諧性 |α| 只有 200～300 MHz。閘做得愈快，退相干的時間就愈少，但脈衝愈短，<b>頻譜就愈寬</b>（時間與頻寬互為倒數）。頻譜的尾巴一旦碰到 <code>ω₁₂ = ω₀₁ + α</code>，就會把一部分佈居推到 |2⟩。這叫<b>洩漏</b>（leakage），而且 |2⟩ 已經不在 qubit 的計算空間裡。</p>
+      <p><b class="q">DRAG</b>（Derivative Removal by Adiabatic Gate，Motzoi 等人 2009）的做法很簡單：保留原本的高斯脈衝當 <b class="jj">I</b> 分量，再在正交的 <b class="q">Q</b> 分量加上它的導數：</p>
+      <div class="eq"><span class="q">Q(t) = −β · İ(t) / α</span></div>
+      <p>為什麼有效？把複數包絡 <code>Ω = I + iQ</code> 做傅立葉轉換，時間微分在頻域變成乘上頻率：</p>
+      <div class="eq">Ω̃(Δ) = Ĩ(Δ) · (1 − β·Δ/α)</div>
+      <p>β = 1 時，這個因子剛好在 <code>Δ = α</code>（也就是 1→2 躍遷）變成零。脈衝還是一樣快，只是在 ω₁₂ 那個頻率上沒有能量，所以推不動 |2⟩。看右上的頻譜圖，<span class="q">紫色曲線</span>在 α 的位置出現一個深谷。</p>
+      <p>右下兩張圖是三能階 transmon 的直接數值模擬（RK4 積分薛丁格方程式）。β 從 0 調到 1，閘結束時留在 |2⟩ 的機率會掉好幾個數量級。</p>
+      <p class="note">實務上 β 要用實驗校準，因為還有更高的能階、線路濾波造成的波形失真等等。常見做法是掃描 β，用 X(π/2)·Y(π) 對 Y(π/2)·X(π) 或 AllXY 這類序列找出誤差最小的點。另外 |2⟩ 會讓 |1⟩ 的頻率在脈衝期間被推開（AC Stark 位移），留下 0↔1 的相位誤差，通常靠微調驅動頻率或虛擬 Z 閘補償。這裡的圖只看洩漏。</p>
+    </div>
+    <div class="fig">
+      <div class="quad">
+        <div><h3>脈衝包絡</h3><p>I：高斯；Q：I 的導數 × (−β/α)</p><svg id="figD1" viewBox="0 0 320 210" role="img" aria-label="DRAG 脈衝的 I 與 Q 包絡"></svg></div>
+        <div><h3>脈衝頻譜（相對 ω₀₁）</h3><p>DRAG 在 Δ = α 挖出一個洞</p><svg id="figD2" viewBox="0 0 320 210" role="img" aria-label="脈衝頻譜"></svg></div>
+        <div><h3>脈衝期間 |2⟩ 的佔有率</h3><p>洩漏中途會先冒出來，結束時剩多少才算數</p><svg id="figD3" viewBox="0 0 320 210" role="img" aria-label="脈衝期間第二激發態佔有率"></svg></div>
+        <div><h3>閘結束後的洩漏 vs 閘長度</h3><p>對數座標；圓點是目前的閘長度</p><svg id="figD4" viewBox="0 0 320 210" role="img" aria-label="洩漏機率對閘長度"></svg></div>
+      </div>
+      <div class="legend"><span><i style="background:var(--jj)"></i>純高斯（只有 I）</span><span><i style="background:var(--q)"></i>DRAG（I + Q）</span></div>
+      <div class="control">
+        <label for="dT">π 脈衝長度 <output id="dTOut"></output></label>
+        <input type="range" id="dT" min="2" max="30" step="0.5" value="6">
+      </div>
+      <div class="control">
+        <label for="dA">非諧性 α <output id="dAOut"></output></label>
+        <input type="range" id="dA" min="-400" max="-120" step="5" value="-250">
+      </div>
+      <div class="control">
+        <label for="dB">DRAG 係數 β <output id="dBOut"></output></label>
+        <input type="range" id="dB" min="0" max="1.6" step="0.05" value="1">
+      </div>
+      <div class="readout">
+        <div><small>純高斯：結束後留在 |2⟩</small><b class="jj" id="rDa"></b></div>
+        <div><small>DRAG：結束後留在 |2⟩</small><b class="q" id="rDb"></b></div>
+        <div><small>洩漏降低倍數</small><b class="q" id="rDc"></b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="step" id="s6">
+  <div class="step-head">
+    <span class="eyebrow">總結</span>
+    <h2>一張表看完差別</h2>
+  </div>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th></th><th class="lc">LC 電路</th><th class="jj">約瑟夫森接面</th></tr></thead>
+      <tbody>
+        <tr><td>電流–磁通</td><td><code>I = Φ/L</code>，直線</td><td><code>I = I_c sin(2πΦ/Φ₀)</code>，正弦</td></tr>
+        <tr><td>電感</td><td>常數 L</td><td><code>L_J0 / cos φ</code>，隨電流改變</td></tr>
+        <tr><td>位能</td><td><code>Φ²/2L</code>，拋物線</td><td><code>−E_J cos φ</code>，餘弦</td></tr>
+        <tr><td>正弦驅動</td><td>輸出同頻率，振幅成正比</td><td>產生 3ω、5ω 諧波，會飽和</td></tr>
+        <tr><td>量子能階</td><td>等間距 ħω</td><td>愈高愈擠，α ≈ −E_C</td></tr>
+        <tr><td>能不能當 qubit</td><td>不能，驅動會一路往上爬</td><td>可以，0→1 可以單獨定址</td></tr>
+        <tr><td>快速閘的代價</td><td>（本來就不能當 qubit）</td><td>短脈衝頻譜太寬會洩漏到 |2⟩，用 DRAG 壓下來</td></tr>
+        <tr><td>耗散</td><td>超導時無耗散</td><td>超導時也無耗散（這點最珍貴）</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+</main>
+
+<script>
+(function(){
+const NS='http://www.w3.org/2000/svg';
+const PI=Math.PI;
+function S(tag,attrs,parent){const e=document.createElementNS(NS,tag);if(attrs)for(const k in attrs)e.setAttribute(k,attrs[k]);if(parent)parent.appendChild(e);return e;}
+function T(parent,x,y,str,cls,anchor){const t=S('text',{x:x,y:y,'text-anchor':anchor||'middle'},parent);if(cls)t.setAttribute('class',cls);t.textContent=str;return t;}
+function clear(s){while(s.firstChild)s.removeChild(s.firstChild);}
+function lin(d0,d1,r0,r1){return v=>r0+(v-d0)/(d1-d0)*(r1-r0);}
+function path(fn,x0,x1,n,sx,sy){let d='';for(let i=0;i<=n;i++){const x=x0+(x1-x0)*i/n;d+=(i?'L':'M')+sx(x).toFixed(1)+' '+sy(fn(x)).toFixed(1);}return d;}
+let clipN=0;
+function clip(svg,x,y,w,h){const id='c'+(++clipN);const defs=S('defs',null,svg);const cp=S('clipPath',{id:id},defs);S('rect',{x:x,y:y,width:w,height:h},cp);return 'url(#'+id+')';}
+const piLabels={'-3':'−3π/2','-2':'−π','-1':'−π/2','0':'0','1':'π/2','2':'π','3':'3π/2'};
+const fmt=(v,d)=>(v<0?'−':'')+Math.abs(v).toFixed(d);
+
+/* ---------- Figure 1: I vs phi ---------- */
+const f1=document.getElementById('fig1'), phiIn=document.getElementById('phi');
+function draw1(){
+  const phi=+phiIn.value; clear(f1);
+  const W=560,H=320,L=52,R=16,Tp=14,B=34;
+  const sx=lin(-1.5*PI,1.5*PI,L,W-R), sy=lin(-1.7,1.7,H-B,Tp);
+  for(let k=-3;k<=3;k++){const x=sx(k*PI/2);S('line',{x1:x,y1:Tp,x2:x,y2:H-B,class:'gr'},f1);T(f1,x,H-B+18,piLabels[k]);}
+  [-1.5,-1,-0.5,0.5,1,1.5].forEach(v=>S('line',{x1:L,y1:sy(v),x2:W-R,y2:sy(v),class:Math.abs(v)===1?'gr-d':'gr'},f1));
+  T(f1,L-8,sy(1)+4,'+I_c','t-ink','end');T(f1,L-8,sy(-1)+4,'−I_c','t-ink','end');T(f1,L-8,sy(0)+4,'0',null,'end');
+  S('line',{x1:L,y1:sy(0),x2:W-R,y2:sy(0),class:'ax'},f1);S('line',{x1:sx(0),y1:Tp,x2:sx(0),y2:H-B,class:'ax'},f1);
+  T(f1,W-R,H-4,'φ = 2πΦ/Φ₀',null,'end');
+  const cp=clip(f1,L,Tp,W-L-R,H-Tp-B);
+  const g=S('g',{'clip-path':cp},f1);
+  S('path',{d:path(x=>x,-1.5*PI,1.5*PI,2,sx,sy),class:'c-lc'},g);
+  S('path',{d:path(Math.sin,-1.5*PI,1.5*PI,300,sx,sy),class:'c-jj'},g);
+  // tangent
+  const s=Math.cos(phi),y0=Math.sin(phi),dx=0.9;
+  S('line',{x1:sx(phi-dx),y1:sy(y0-s*dx),x2:sx(phi+dx),y2:sy(y0+s*dx),class:'ax','stroke-width':1.5},g);
+  S('line',{x1:sx(phi),y1:sy(0),x2:sx(phi),y2:Math.min(sy(phi),sy(y0)),class:'gr-d'},g);
+  S('circle',{cx:sx(phi),cy:sy(phi),r:5,class:'f-lc'},g);
+  S('circle',{cx:sx(phi),cy:sy(y0),r:5.5,class:'f-jj'},g);
+  document.getElementById('phiOut').textContent=fmt(phi,2)+' rad  ('+fmt(phi/PI,2)+'π)';
+  document.getElementById('r1a').textContent=fmt(phi,3);
+  document.getElementById('r1b').textContent=fmt(y0,3);
+  const c=Math.cos(phi);
+  document.getElementById('r1c').textContent=Math.abs(c)<0.02?'→ ∞':fmt(1/c,2)+'×';
+  let note;
+  if(Math.abs(phi)<0.35) note='φ 很小：sin φ ≈ φ，JJ 跟普通電感幾乎一模一樣，這時它看起來是線性的。';
+  else if(Math.abs(c)<0.02) note='φ = ±π/2：電流到達 I_c，切線變水平，等效電感發散到無限大。';
+  else if(c<0) note='超過 π/2 之後，磁通再增加電流反而變小，等效電感變成負值。普通電感絕不會這樣。';
+  else note='直線和正弦分開了：同樣的磁通，JJ 給的電流比電感少，等效電感變大了 '+(1/c).toFixed(2)+' 倍。';
+  document.getElementById('r1note').textContent=note;
+}
+phiIn.addEventListener('input',draw1);
+
+/* ---------- Figure 2: drive response ---------- */
+function besselJ(n,x){const N=400;let s=0;for(let i=0;i<=N;i++){const t=PI*i/N;const w=(i===0||i===N)?0.5:1;s+=w*Math.cos(n*t-x*Math.sin(t));}return s/N;}
+const f2a=document.getElementById('fig2a'),f2b=document.getElementById('fig2b'),ampIn=document.getElementById('amp');
+function draw2(){
+  const A=+ampIn.value; clear(f2a); clear(f2b);
+  // time domain
+  const W=560,H=240,L=52,R=16,Tp=14,B=30, ym=Math.max(A,1)*1.15;
+  const sx=lin(0,4*PI,L,W-R), sy=lin(-ym,ym,H-B,Tp);
+  for(let k=0;k<=4;k++){const x=sx(k*PI);S('line',{x1:x,y1:Tp,x2:x,y2:H-B,class:'gr'},f2a);}
+  T(f2a,sx(2*PI),H-8,'時間 →（兩個週期）','cjk');
+  S('line',{x1:L,y1:sy(0),x2:W-R,y2:sy(0),class:'ax'},f2a);
+  [1,-1].forEach(v=>{S('line',{x1:L,y1:sy(v),x2:W-R,y2:sy(v),class:'gr-d'},f2a);T(f2a,L-8,sy(v)+4,v>0?'+I_c':'−I_c','t-ink','end');});
+  if(A>1.05){T(f2a,L-8,sy(A)+4,fmt(A,1),'t-lc','end');}
+  S('path',{d:path(t=>A*Math.sin(t),0,4*PI,300,sx,sy),class:'c-lc'},f2a);
+  S('path',{d:path(t=>Math.sin(A*Math.sin(t)),0,4*PI,400,sx,sy),class:'c-jj'},f2a);
+  // spectrum
+  const H2=190,B2=32,T2=36; const ks=[1,3,5,7];
+  const j1=Math.abs(besselJ(1,A));
+  const rel=ks.map(k=>Math.abs(besselJ(k,A))/j1*100);
+  const sy2=lin(0,100,H2-B2,T2);
+  [0,25,50,75,100].forEach(v=>{S('line',{x1:L,y1:sy2(v),x2:W-R,y2:sy2(v),class:'gr'},f2b);T(f2b,L-8,sy2(v)+4,v+'%',null,'end');});
+  T(f2b,L,12,'頻譜：各諧波振幅 / 基頻振幅','cjk','start');
+  const gw=(W-L-R)/4;
+  ks.forEach((k,i)=>{
+    const cx=L+gw*(i+0.5), bw=26;
+    const lv=k===1?100:0, jv=rel[i];
+    S('rect',{x:cx-bw-3,y:sy2(lv),width:bw,height:Math.max(sy2(0)-sy2(lv),1.5),class:'f-lc'},f2b);
+    S('rect',{x:cx+3,y:sy2(Math.min(jv,100)),width:bw,height:Math.max(sy2(0)-sy2(Math.min(jv,100)),1.5),class:'f-jj'},f2b);
+    T(f2b,cx-bw/2-3,sy2(lv)-5,lv.toFixed(0),'t-lc');
+    T(f2b,cx+bw/2+3,sy2(Math.min(jv,100))-5,jv<0.1?'0':jv.toFixed(jv<10?1:0),'t-jj');
+    T(f2b,cx,H2-B2+18,k+'ω','t-ink big');
+  });
+  S('line',{x1:L,y1:sy2(0),x2:W-R,y2:sy2(0),class:'ax'},f2b);
+  document.getElementById('ampOut').textContent=A.toFixed(2)+' rad';
+  const pk=a=>Math.sin(Math.min(a,PI/2));
+  document.getElementById('r2a').textContent='2.00 倍';
+  document.getElementById('r2b').textContent=(pk(2*A)/pk(A)).toFixed(2)+' 倍';
+  document.getElementById('r2c').textContent=rel[1].toFixed(1)+'%';
+}
+ampIn.addEventListener('input',draw2);
+
+/* ---------- Figure 3/4: levels ---------- */
+const EC=0.25; // GHz
+function transmonLevels(EJ,k){
+  const N=25,n=2*N+1,d=[];for(let i=0;i<n;i++){const q=i-N;d.push(4*EC*q*q);}
+  const e2=(EJ/2)*(EJ/2);
+  function count(x){let c=0,q=d[0]-x;if(q<0)c++;for(let i=1;i<n;i++){q=d[i]-x-e2/(q===0?1e-300:q);if(q<0)c++;}return c;}
+  const lo0=-EJ-1,hi0=4*EC*N*N+EJ+1,out=[];
+  for(let j=0;j<k;j++){let lo=lo0,hi=hi0;for(let it=0;it<70;it++){const m=(lo+hi)/2;if(count(m)>j)hi=m;else lo=m;}out.push((lo+hi)/2+EJ);}
+  return out;
+}
+const f3a=document.getElementById('fig3a'),f3b=document.getElementById('fig3b'),f4=document.getElementById('fig4'),ratioIn=document.getElementById('ratio');
+const sub=['₀','₁','₂','₃','₄','₅'];
+function drawWell(svg,U,levels,cls,txtCls,ymax,wellTop){
+  clear(svg);
+  const W=320,H=330,L=34,R=84,Tp=12,B=30;
+  const sx=lin(-PI,PI,L,W-R), sy=lin(0,ymax,H-B,Tp);
+  [-2,0,2].forEach(k=>{const x=sx(k*PI/2);S('line',{x1:x,y1:Tp,x2:x,y2:H-B,class:'gr'},svg);T(svg,x,H-B+16,piLabels[k]);});
+  T(svg,sx(-PI),H-B+16,'−π');T(svg,sx(PI),H-B+16,'π');
+  S('line',{x1:L,y1:H-B,x2:W-R,y2:H-B,class:'ax'},svg);
+  T(svg,L-4,Tp+8,'GHz',null,'end');
+  for(let v=0;v<=ymax;v+=(ymax>30?10:5)){T(svg,L-4,sy(v)+4,v.toFixed(0),null,'end');}
+  const cp=clip(svg,L,Tp,W-L-R,H-Tp-B);
+  const g=S('g',{'clip-path':cp},svg);
+  if(wellTop!==null&&wellTop<ymax){S('line',{x1:L,y1:sy(wellTop),x2:W-R,y2:sy(wellTop),class:'gr-d'},g);}
+  S('path',{d:path(U,-PI,PI,240,sx,sy),class:cls==='lv-lc'?'c-lc':'c-jj'},g);
+  levels.forEach((E,n)=>{
+    if(E>ymax)return;
+    // find turning points
+    let lo=0,hi=PI;
+    if(U(PI)<=E){lo=PI;}else{for(let it=0;it<40;it++){const m=(lo+hi)/2;if(U(m)<E)lo=m;else hi=m;}}
+    S('line',{x1:sx(-lo),y1:sy(E),x2:sx(lo),y2:sy(E),class:cls,'stroke-dasharray':U(PI)<=E?'5 4':null},g);
+    T(svg,sx(0),sy(E)-4,'|'+n+'⟩',txtCls);
+  });
+  // spacing labels
+  for(let n=0;n<levels.length-1;n++){
+    const a=levels[n],b=levels[n+1];if(b>ymax)break;
+    const x=W-R+10;
+    S('line',{x1:x,y1:sy(a),x2:x,y2:sy(b),class:cls,'stroke-width':1.2},svg);
+    S('line',{x1:x-3,y1:sy(a),x2:x+3,y2:sy(a),class:cls,'stroke-width':1.2},svg);
+    S('line',{x1:x-3,y1:sy(b),x2:x+3,y2:sy(b),class:cls,'stroke-width':1.2},svg);
+    T(svg,x+7,(sy(a)+sy(b))/2+4,(b-a).toFixed(2),txtCls,'start');
+  }
+}
+function draw3(){
+  const r=+ratioIn.value, EJ=r*EC, wp=Math.sqrt(8*EJ*EC);
+  const lc=[0,1,2,3,4,5].map(n=>wp*(n+0.5));
+  const tr=transmonLevels(EJ,6);
+  const ymax=wp*4.9;
+  drawWell(f3a,x=>EJ*x*x/2,lc,'lv-lc','t-lc',ymax,null);
+  drawWell(f3b,x=>EJ*(1-Math.cos(x)),tr,'lv-jj','t-jj',ymax,2*EJ);
+  const w01=tr[1]-tr[0],w12=tr[2]-tr[1],alpha=w12-w01;
+  document.getElementById('ratioOut').textContent=r+'　(E_J/h = '+EJ.toFixed(2)+' GHz)';
+  document.getElementById('r3a').textContent=wp.toFixed(3)+' GHz（每階相同）';
+  document.getElementById('r3b').textContent=w01.toFixed(3)+' / '+w12.toFixed(3)+' GHz';
+  document.getElementById('r3c').textContent=fmt(alpha*1000,0)+' MHz';
+  draw4(wp,tr);
+}
+function draw4(wp,tr){
+  clear(f4);
+  const W=680,H=210,L=110,R=20;
+  const tw=[0,1,2,3].map(n=>tr[n+1]-tr[n]);
+  let fmin=Math.min(...tw,wp),fmax=Math.max(...tw,wp);
+  const pad=Math.max((fmax-fmin)*0.12,0.1);fmin-=pad;fmax+=pad;
+  const sx=lin(fmin,fmax,L,W-R);
+  const rows=[{y:70,label:'LC',cls:'t-lc'},{y:150,label:'Transmon',cls:'t-jj'}];
+  const axisY=180;
+  S('line',{x1:L,y1:axisY,x2:W-R,y2:axisY,class:'ax'},f4);
+  const step=(fmax-fmin)>2?0.5:((fmax-fmin)>0.8?0.2:0.1);
+  for(let v=Math.ceil(fmin/step)*step;v<=fmax;v+=step){const x=sx(v);S('line',{x1:x,y1:axisY,x2:x,y2:axisY+4,class:'ax'},f4);T(f4,x,axisY+17,v.toFixed(1));}
+  T(f4,L-10,axisY+17,'頻率 GHz','cjk','end');
+  rows.forEach(r=>{T(f4,L-10,r.y-14,r.label,r.cls+' big','end');S('line',{x1:L,y1:r.y,x2:W-R,y2:r.y,class:'gr'},f4);});
+  const bw=10;
+  // LC row
+  S('rect',{x:sx(wp)-bw/2,y:18,width:bw,height:rows[0].y-18,class:'f-band-lc'},f4);
+  S('line',{x1:sx(wp),y1:rows[0].y,x2:sx(wp),y2:rows[0].y-44,class:'hit'},f4);
+  T(f4,sx(wp)+(sx(wp)>W-200?-10:10),rows[0].y-30,'0→1 = 1→2 = 2→3 = 3→4 全部重疊','cjk t-hit',sx(wp)>W-200?'end':'start');
+  T(f4,sx(wp)+(sx(wp)>W-200?-10:10),rows[0].y-14,'驅動一路往上爬','cjk',sx(wp)>W-200?'end':'start');
+  // transmon row
+  const drive=tw[0];
+  S('rect',{x:sx(drive)-bw/2,y:rows[0].y+14,width:bw,height:rows[1].y-rows[0].y-12,class:'f-band'},f4);
+  T(f4,sx(drive),rows[0].y+8,'驅動 @ ω₀₁','cjk t-jj','middle');
+  tw.forEach((f,i)=>{
+    const hit=Math.abs(f-drive)<0.02;
+    const x=sx(f);
+    S('line',{x1:x,y1:rows[1].y,x2:x,y2:rows[1].y-38,class:hit?'hit':'miss'},f4);
+    T(f4,x,rows[1].y-44+ (i%2?0:0),i+'→'+(i+1),hit?'t-hit':null);
+    T(f4,x,rows[1].y+14,f.toFixed(2),hit?'t-hit':null);
+  });
+}
+ratioIn.addEventListener('input',draw3);
+
+/* ---------- Figure 5: Taylor ---------- */
+function draw5(){
+  const f=document.getElementById('fig5');clear(f);
+  const W=560,H=300,L=46,R=16,Tp=14,B=32;
+  const sx=lin(-PI,PI,L,W-R), sy=lin(-0.2,3,H-B,Tp);
+  [-2,-1,0,1,2].forEach(k=>{const x=sx(k*PI/2);S('line',{x1:x,y1:Tp,x2:x,y2:H-B,class:'gr'},f);T(f,x,H-B+18,piLabels[k]);});
+  [0,1,2,3].forEach(v=>{S('line',{x1:L,y1:sy(v),x2:W-R,y2:sy(v),class:v===0?'ax':'gr'},f);T(f,L-8,sy(v)+4,v+'',null,'end');});
+  T(f,L-8,Tp+4,'U/E_J',null,'end');
+  const cp=clip(f,L,Tp,W-L-R,H-Tp-B);const g=S('g',{'clip-path':cp},f);
+  // shaded difference between parabola and cosine
+  let d='';const n=200;
+  for(let i=0;i<=n;i++){const x=-PI+2*PI*i/n;d+=(i?'L':'M')+sx(x).toFixed(1)+' '+sy(Math.min(x*x/2,3.2)).toFixed(1);}
+  for(let i=n;i>=0;i--){const x=-PI+2*PI*i/n;d+='L'+sx(x).toFixed(1)+' '+sy(1-Math.cos(x)).toFixed(1);}
+  S('path',{d:d+'Z',class:'diff'},g);
+  S('path',{d:path(x=>x*x/2,-PI,PI,200,sx,sy),class:'c-lc-d'},g);
+  S('path',{d:path(x=>x*x/2-x*x*x*x/24,-PI,PI,200,sx,sy),class:'c-q'},g);
+  S('path',{d:path(x=>1-Math.cos(x),-PI,PI,200,sx,sy),class:'c-jj'},g);
+  T(f,sx(2.05),sy(2.35),'四次項造成的差距','cjk t-jj','end');
+  T(f,sx(0),H-6,'φ');
+}
+
+/* ---------- Figure 6: DRAG ---------- */
+function makePulse(T,beta,al){
+  const sig=T/4,c=T/2,off=Math.exp(-(c*c)/(2*sig*sig));
+  const e=t=>Math.exp(-((t-c)*(t-c))/(2*sig*sig));
+  let a=0;const N=800;for(let i=0;i<=N;i++){const w=(i===0||i===N)?.5:1;a+=w*(e(T*i/N)-off);}a*=T/N;
+  const A=PI/a;
+  return {x:t=>A*(e(t)-off), y:t=>beta*A*((t-c)/(sig*sig))*e(t)/al, A:A};
+}
+function simDrag(T,beta,al,rec){
+  const p=makePulse(T,beta,al),s2=Math.SQRT2,steps=Math.round(300+45*T),dt=T/steps;
+  const y=new Float64Array([1,0,0,0,0,0]),k1=new Float64Array(6),k2=new Float64Array(6),k3=new Float64Array(6),k4=new Float64Array(6),tm=new Float64Array(6);
+  function f(t,v,o){const a=p.x(t)/2,b=p.y(t)/2;const r0=v[0],i0=v[1],r1=v[2],i1=v[3],r2=v[4],i2=v[5];
+    const h0r=a*r1+b*i1,h0i=a*i1-b*r1;
+    const h1r=a*r0-b*i0+s2*(a*r2+b*i2),h1i=a*i0+b*r0+s2*(a*i2-b*r2);
+    const h2r=s2*(a*r1-b*i1)+al*r2,h2i=s2*(a*i1+b*r1)+al*i2;
+    o[0]=h0i;o[1]=-h0r;o[2]=h1i;o[3]=-h1r;o[4]=h2i;o[5]=-h2r;}
+  const every=Math.max(1,Math.floor(steps/160));
+  if(rec)rec.push([0,0]);
+  for(let k=0;k<steps;k++){const t=k*dt;
+    f(t,y,k1);for(let i=0;i<6;i++)tm[i]=y[i]+dt/2*k1[i];
+    f(t+dt/2,tm,k2);for(let i=0;i<6;i++)tm[i]=y[i]+dt/2*k2[i];
+    f(t+dt/2,tm,k3);for(let i=0;i<6;i++)tm[i]=y[i]+dt*k3[i];
+    f(t+dt,tm,k4);for(let i=0;i<6;i++)y[i]+=dt/6*(k1[i]+2*k2[i]+2*k3[i]+k4[i]);
+    if(rec&&((k+1)%every===0||k===steps-1))rec.push([(k+1)*dt,y[4]*y[4]+y[5]*y[5]]);
+  }
+  return y[4]*y[4]+y[5]*y[5];
+}
+const TXT=T;
+const dTIn=document.getElementById('dT'),dAIn=document.getElementById('dA'),dBIn=document.getElementById('dB');
+let sweepKey='',sweep=null;
+function sciHTML(v){if(v<1e-10)return '< 10⁻¹⁰';const e=Math.floor(Math.log10(v)),m=v/Math.pow(10,e);const sup={'-':'⁻','0':'⁰','1':'¹','2':'²','3':'³','4':'⁴','5':'⁵','6':'⁶','7':'⁷','8':'⁸','9':'⁹'};return m.toFixed(1)+' × 10'+String(e).split('').map(ch=>sup[ch]).join('');}
+function panel(svg,xr,yr,opt){
+  clear(svg);const W=320,H=210,L=opt.L||44,R=10,Tp=10,B=30;
+  const sx=lin(xr[0],xr[1],L,W-R),sy=opt.log?(v=>lin(Math.log10(yr[0]),Math.log10(yr[1]),H-B,Tp)(Math.log10(Math.max(v,yr[0])))):lin(yr[0],yr[1],H-B,Tp);
+  (opt.yt||[]).forEach(t=>{S('line',{x1:L,y1:sy(t[0]),x2:W-R,y2:sy(t[0]),class:'gr'},svg);T(svg,L-5,sy(t[0])+4,t[1],null,'end');});
+  (opt.xt||[]).forEach(t=>{S('line',{x1:sx(t[0]),y1:Tp,x2:sx(t[0]),y2:H-B,class:'gr'},svg);T(svg,sx(t[0]),H-B+15,t[1]);});
+  S('line',{x1:L,y1:H-B,x2:W-R,y2:H-B,class:'ax'},svg);
+  if(opt.xl)T(svg,W-R,H-3,opt.xl,'cjk','end');
+  const g=S('g',{'clip-path':clip(svg,L,Tp,W-L-R,H-Tp-B)},svg);
+  return {sx,sy,g,L,R,Tp,B,W,H};
+}
+function ticks(a,b,n){const span=b-a,raw=span/n,mag=Math.pow(10,Math.floor(Math.log10(raw)));const st=[1,2,5,10].map(m=>m*mag).find(m=>span/m<=n)||10*mag;const out=[];for(let v=Math.ceil(a/st)*st;v<=b+1e-9;v+=st)out.push(+v.toFixed(6));return out;}
+function drawDrag(){
+  const T=+dTIn.value,aM=+dAIn.value,beta=+dBIn.value,al=2*PI*aM/1000;
+  document.getElementById('dTOut').textContent=T.toFixed(1)+' ns';
+  document.getElementById('dAOut').textContent=aM+' MHz';
+  document.getElementById('dBOut').textContent=beta.toFixed(2)+(Math.abs(beta)<1e-9?'（關閉 DRAG）':Math.abs(beta-1)<1e-9?'（理論值）':'');
+  const pg=makePulse(T,0,al),pd=makePulse(T,beta,al);
+  const toMHz=w=>w/(2*PI)*1000;
+  // D1 envelope
+  let ymax=0,ymin=0;for(let i=0;i<=200;i++){const t=T*i/200;ymax=Math.max(ymax,toMHz(pd.x(t)),toMHz(pd.y(t)));ymin=Math.min(ymin,toMHz(pd.y(t)));}
+  ymax*=1.1;ymin=Math.min(ymin*1.1,-ymax*0.15);
+  const P1=panel(document.getElementById('figD1'),[0,T],[ymin,ymax],{yt:ticks(ymin,ymax,4).map(v=>[v,v.toFixed(0)]),xt:ticks(0,T,4).map(v=>[v,v+'']),xl:'時間 ns',L:40});
+  S('line',{x1:P1.L,y1:P1.sy(0),x2:P1.W-P1.R,y2:P1.sy(0),class:'ax'},P1.g);
+  TXT(document.getElementById('figD1'),P1.L+2,P1.Tp+10,'MHz',null,'start');
+  S('path',{d:path(t=>toMHz(pd.x(t)),0,T,200,P1.sx,P1.sy),class:'c-jj'},P1.g);
+  S('path',{d:path(t=>toMHz(pd.y(t)),0,T,200,P1.sx,P1.sy),class:'c-dr'},P1.g);
+  // D2 spectrum
+  const d0=1.9*al,d1=-0.9*al; // al<0 → d0 negative
+  function spec(p){const N=500,out=[];let F0=0;
+    const val=D=>{let re=0,im=0;for(let i=0;i<=N;i++){const t=T*i/N,w=(i===0||i===N)?.5:1,x=p.x(t),y=p.y(t),c=Math.cos(D*t),s=Math.sin(D*t);re+=w*(x*c-y*s);im+=w*(x*s+y*c);}return re*re+im*im;};
+    F0=val(0);const Ds=[];for(let i=0;i<=300;i++)Ds.push(d0+(d1-d0)*i/300);if(beta>0.05){const z=al/beta;if(z>d0&&z<d1)Ds.push(z-1e-4,z,z+1e-4);}Ds.sort((u,v)=>u-v);Ds.forEach(D=>out.push([D,10*Math.log10(Math.max(val(D)/F0,1e-12))]));return out;}
+  const sg=spec(pg),sd=spec(pd);
+  const xm=[toMHz(d0),toMHz(d1)];
+  const P2=panel(document.getElementById('figD2'),xm,[-80,5],{yt:[[0,'0'],[-20,'−20'],[-40,'−40'],[-60,'−60'],[-80,'−80']],xt:ticks(xm[0],xm[1],4).map(v=>[v,v.toFixed(0)]),xl:'Δ = ω − ω₀₁（MHz）',L:40});
+  TXT(document.getElementById('figD2'),P2.L+2,P2.Tp+10,'dB',null,'start');
+  S('line',{x1:P2.sx(aM),y1:P2.Tp,x2:P2.sx(aM),y2:P2.H-P2.B,class:'gr-d'},P2.g);
+  TXT(document.getElementById('figD2'),P2.sx(aM)+4,P2.H-P2.B-8,'ω₁₂（Δ = α）','cjk t-ink','start');
+  const line=(arr,cls)=>{let d='';arr.forEach((q,i)=>{d+=(i?'L':'M')+P2.sx(toMHz(q[0])).toFixed(1)+' '+P2.sy(Math.max(q[1],-85)).toFixed(1);});S('path',{d:d,class:cls},P2.g);};
+  line(sg,'c-jj');line(sd,'c-dr');
+  // D3 P2(t)
+  const rg=[],rd=[];const lg=simDrag(T,0,al,rg),ld=simDrag(T,beta,al,rd);
+  let pm=0;rg.concat(rd).forEach(q=>pm=Math.max(pm,q[1]));pm=Math.max(pm*1.15*100,0.01);
+  const P3=panel(document.getElementById('figD3'),[0,T],[0,pm],{yt:ticks(0,pm,4).map(v=>[v,v+'%']),xt:ticks(0,T,4).map(v=>[v,v+'']),xl:'時間 ns',L:44});
+  const pl=(arr,cls)=>{let d='';arr.forEach((q,i)=>{d+=(i?'L':'M')+P3.sx(q[0]).toFixed(1)+' '+P3.sy(q[1]*100).toFixed(1);});S('path',{d:d,class:cls},P3.g);};
+  pl(rg,'c-jj');pl(rd,'c-dr');
+  // D4 sweep
+  const key=aM+'|'+beta;
+  if(key!==sweepKey){sweepKey=key;sweep=[];for(let t=2;t<=30;t+=1){sweep.push([t,simDrag(t,0,al),simDrag(t,beta,al)]);}}
+  const P4=panel(document.getElementById('figD4'),[2,30],[1e-10,1],{log:true,yt:[[1,'1'],[1e-2,'10⁻²'],[1e-4,'10⁻⁴'],[1e-6,'10⁻⁶'],[1e-8,'10⁻⁸'],[1e-10,'10⁻¹⁰']],xt:[[5,'5'],[10,'10'],[15,'15'],[20,'20'],[25,'25'],[30,'30']],xl:'閘長度 ns',L:44});
+  [[1,'c-jj'],[2,'c-dr']].forEach(([k,cls])=>{let d='';sweep.forEach((q,i)=>{d+=(i?'L':'M')+P4.sx(q[0]).toFixed(1)+' '+P4.sy(q[k]).toFixed(1);});S('path',{d:d,class:cls},P4.g);});
+  S('line',{x1:P4.sx(T),y1:P4.Tp,x2:P4.sx(T),y2:P4.H-P4.B,class:'gr-d'},P4.g);
+  S('circle',{cx:P4.sx(T),cy:P4.sy(lg),r:4.5,class:'f-jj'},P4.g);
+  S('circle',{cx:P4.sx(T),cy:P4.sy(ld),r:4.5,style:'fill:var(--q)'},P4.g);
+  document.getElementById('rDa').textContent=sciHTML(lg);
+  document.getElementById('rDb').textContent=sciHTML(ld);
+  const ratio=lg/Math.max(ld,1e-14);
+  document.getElementById('rDc').textContent=ratio>=1?(ratio>=1000?sciHTML(ratio).replace(/^1\.0 × /,''):ratio.toFixed(1))+' 倍':'反而變多（'+(1/ratio).toFixed(1)+' 倍）';
+}
+let dragQueued=false;
+function queueDrag(){if(dragQueued)return;dragQueued=true;requestAnimationFrame(()=>{dragQueued=false;drawDrag();});}
+[dTIn,dAIn,dBIn].forEach(el=>el.addEventListener('input',queueDrag));
+
+draw1();draw2();draw3();draw5();drawDrag();
+})();
+</script>
+</body>
+</html>

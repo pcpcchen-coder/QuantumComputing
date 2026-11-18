@@ -8,7 +8,7 @@ App.register({
 <span style="color:#ff5a5f">■</span> <b>RF</b>：RF 源 → 螺旋共振器升壓（約 100–300 V、數十 MHz）→ 阱的 RF 電極，產生囚禁位勢。<br>
 <span style="color:#ff9f43">■</span> <b>DC</b>：多通道 DAC（數十到數百通道）→ 分段電極，決定離子位置、搬運離子。<br>
 <span style="color:#b388ff">■</span> <b>微波</b>：12.6 GHz 號角，直接驅動量子位元（單位元閘）。<br>
-<span style="color:#38c6d9">■</span> <b>資料 / 時脈</b>：FPGA 時序控制（ARTIQ 類）以奈秒精度指揮所有 AOM、DAC、RF；PMT / 相機計數回傳；銣鐘 10 MHz 同步。<br>
+<span style="color:#38c6d9">■</span> <b>資料 / 時脈</b>：FPGA 時序控制（ARTIQ 類）以奈秒精度指揮所有 AOM、DAC、RF；PMT / 相機計數回傳；銣鐘（或氫邁射，場景 8）的 10 MHz 同步所有頻率。<br>
 <span style="color:#ffd166">■</span> <b>電力</b>、<span style="color:#4fa3ff">■</span> <b>冷卻水</b>：雷射與電子的散熱、恆溫空調（光學桌要 ±0.1 °C 等級）。</p>
 <p>數值為代表值，實際依系統而異。</p>`,
   camera: { pos: [1.4, 10.2, 10.6], target: [0.9, 0.9, -1.1] },
@@ -91,7 +91,7 @@ App.register({
     const RZ = -4.6;
     D({ pos: [-5.6, 0, RZ], w: 0.7, h: 1.5, d: 0.7, label: '控制電腦', labelDy: 0.7, leds: 3 });
     D({ pos: [-3.9, 0, RZ], w: 1.0, h: 2.0, d: 0.8, label: 'FPGA 時序控制<br>（ARTIQ 類）', cls: 'teal', leds: 6, ledColor: 0x38c6d9 });
-    D({ pos: [-2.4, 0, RZ], w: 0.6, h: 0.9, d: 0.6, label: '銣鐘 10 MHz', labelDy: 0.15, leds: 1, ledColor: 0x9fe8ff });
+    D({ pos: [-2.4, 0, RZ], w: 0.6, h: 0.9, d: 0.6, label: '銣鐘 / 氫邁射 10 MHz', labelDy: 0.15, leds: 1, ledColor: 0x9fe8ff });
     D({ pos: [-0.8, 0, RZ], w: 1.0, h: 2.0, d: 0.8, label: 'AOM 驅動<br>DDS', labelDy: 0.7, leds: 5, ledColor: 0xff5a5f });
     D({ pos: [1.0, 0, RZ], w: 1.0, h: 2.0, d: 0.8, label: '多通道 DAC<br>（阱電極 DC）', leds: 6, ledColor: 0xff9f43 });
     D({ pos: [2.8, 0, RZ], w: 0.9, h: 1.6, d: 0.8, label: 'RF 源<br>+ 放大器', labelDy: 1.0, leds: 3, ledColor: 0xff5a5f });

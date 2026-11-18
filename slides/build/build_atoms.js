@@ -16,10 +16,12 @@ const SPEECH = path.resolve(ROOT, '..', 'speech', '離子阱與中性原子演�
 const ANIM = 'animations/atoms.html';
 const SCENES = {
   ionsys: [1, '離子阱系統全景'], paul: [2, 'Paul 阱原理'], ionqubit: [3, '離子量子位元'], modes: [4, '離子鏈集體振動'], ms: [5, 'MS 閘'], qccd: [6, 'QCCD 搬運'],
-  atomsys: [7, '中性原子系統全景'], tweezer: [8, '光鑷裝載與重排'], atomqubit: [9, '原子量子位元'], rydberg: [10, '芮德堡阻斷'], zoned: [11, '分區架構'], imaging: [12, '螢光成像讀取'],
-  compare: [13, '三平台比較'],
+  ionflow: [7, '離子運算與讀取'], hmaser: [8, '氫邁射頻率基準'],
+  atomsys: [9, '中性原子系統全景'], tweezer: [10, '光鑷裝載與重排'], atomqubit: [11, '原子量子位元'], rydberg: [12, '芮德堡阻斷'], zoned: [13, '分區架構'], imaging: [14, '螢光成像讀取'],
+  atomflow: [15, '原子運算與讀取'], atomclock: [16, '頻率基準與原子鐘'],
+  compare: [17, '三平台比較'],
 };
-const D = makeDeck({ title: '離子阱與中性原子量子電腦：系統、量子位元、操作與量測', subject: 'Paul 阱、光鑷、雷射冷卻、MS 閘、芮德堡阻斷、螢光讀取與平台比較', footer: '離子阱與中性原子量子電腦 · 系統 · 量子位元 · 操作 · 量測', scenes: SCENES, animRel: '../animations/atoms.html' });
+const D = makeDeck({ title: '離子阱與中性原子量子電腦：系統、量子位元、操作與量測', subject: 'Paul 阱、光鑷、雷射冷卻、MS 閘、芮德堡阻斷、螢光讀取、氫邁射頻率基準與平台比較', footer: '離子阱與中性原子量子電腦 · 系統 · 量子位元 · 操作 · 量測', scenes: SCENES, animRel: 'https://pcpcchen-coder.github.io/QuantumComputing/animations/atoms.html' });
 const { pres, C, HEX, runs } = D;
 const CROP = JSON.parse(fs.readFileSync(path.join(__dirname, 'atoms_crops.json'), 'utf8'));
 /* 3D 截圖（自動裁掉背景）；name 可以是場景代號或額外截圖名稱（<場景>_<說明>） */
@@ -59,6 +61,9 @@ const QA = [
   ['這兩種平台需要稀釋冷凍機嗎？', '不需要。離子與原子本身是用雷射冷卻到 mK～μK，裝置主體在超高真空中、多半在室溫運作；部分離子阱系統把阱放在 4–20 K 的小型低溫恆溫器中（改善真空、降低電極雜訊），但遠比 10 mK 稀釋冷凍機簡單。主要的設施需求變成雷射、光學穩定度（恆溫、防振）與電子設備。'],
   ['離子在搬運時不會失去量子資訊嗎？', '只要電壓波形平滑、搬運速度與阱頻率匹配，離子的內部態（量子位元）幾乎不受影響；主要代價是運動被加熱，所以閘前要再冷卻（用另一種離子做共冷，不打擾量子位元）。目前 QCCD 系統的時間預算中，搬運與冷卻常佔多數。'],
   ['芮德堡態壽命很短，閘會不會很容易出錯？', '芮德堡態（n ≈ 50–70）的壽命約 100 μs 量級，而 CZ 閘只需要約 0.2–0.5 μs，原子只在芮德堡態停留很短時間，所以衰變造成的錯誤約在 0.1% 量級。主要錯誤還包括雷射相位雜訊、原子溫度造成的多普勒失諧與位置誤差。'],
+  ['離子阱「用氫原子打微波」是什麼意思？', '指用氫邁射（氫原子鐘）當頻率基準：氫原子 21 公分線（1.42 GHz）在鐵氟龍泡與銅共振腔裡自我維持振盪，再把石英振盪器鎖上去輸出 10 MHz，所有微波合成器都鎖到它，產生相位穩定的 12.6 GHz 閘微波。它不直接操作量子位元；離子的 T₂ 長達秒級，控制微波若不夠穩，相位誤差就會變成 dephasing。很多實驗室用銣鐘或 GPS 馴服振盪器就夠，需要長時間相干時才用氫邁射（3D 場景 8、16）。'],
+  ['離子阱和中性原子的讀取，「亮」代表的狀態為什麼相反？', '離子阱用循環躍遷只讓 |1⟩ 發光，所以亮 = |1⟩，離子留在阱裡、可重新初始化；中性原子的標準做法是先把 |1⟩ 的原子推出光鑷，再拍照看剩下的原子，所以亮 = |0⟩，被推走的原子要重新裝載，原子意外遺失也會被讀成 |1⟩（3D 場景 7、15）。'],
+  ['中性原子的 MS 閘跟芮德堡 CZ 差在哪？', '中性原子不用 MS 閘：MS 需要共享的振動匯流排，只有帶電、靠庫侖力連成一串的離子才有；中性原子各自在光鑷裡，沒有共用振動，所以改用芮德堡阻斷。MS 是振動在相空間繞一圈留下幾何相位，原生形式 exp(−iπ/4·XX)，10–200 μs、全連接、> 99.9 %；芮德堡 CZ 是兩顆不能同時被激發，原生形式 diag(1,1,1,−1)，0.2–0.5 μs、要先搬到阻斷半徑內、可大量並行、約 99.5–99.7 %。兩者只差 Hadamard 與單位元 Z 旋轉，都是最大糾纏閘。'],
   ['兩種平台的用電大概多少？', '公開資料很少：Quantinuum Helios 官方說基本單元 < 40 kW，與 Oracle 合作的資料寫約 60 kW（不含外部空調）；中性原子沒有官方數字，研究論文的模型假設約 7 kW（256 顆，僅供參考）。主要負載是雷射與其冷卻、控制電子、精密空調，而不是低溫系統。'],
 ];
 
@@ -78,13 +83,13 @@ const QA = [
   const total = SLIDES.reduce((a, b) => a + b.min, 0);
   let md = `# 演講稿：離子阱與中性原子量子電腦 —— 系統、量子位元、操作與量測\n\n`;
   md += `> 本稿與 \`slides/Ion_NeutralAtom_Talk.pptx\` 的講者備註同步產生（來源：\`slides/build/build_atoms.js\`、\`atoms_slides_1.js\`、\`atoms_slides_2.js\`）。\n`;
-  md += `> 共 ${SLIDES.length} 張投影片，預估總時長約 ${Math.round(total)} 分鐘（含 Q&A 約 10 分鐘）。互動 3D 動畫：\`${ANIM}\`（13 個場景）；系統建置細節：\`docs/離子阱與中性原子系統指南.md\`。\n\n`;
+  md += `> 共 ${SLIDES.length} 張投影片，預估總時長約 ${Math.round(total)} 分鐘（含 Q&A 約 10 分鐘）。互動 3D 動畫：\`${ANIM}\`（17 個場景）；系統建置細節：\`docs/離子阱與中性原子系統指南.md\`。\n\n`;
   md += `## 使用方式\n\n- 標示【切換到 3D 場景 N】時，點投影片右上角按鈕，或開啟 \`${ANIM}#場景代號\`。\n- 3D 操作：← → 切換、空白鍵暫停、H 隱藏面板、F 全螢幕、R 重設視角。\n- 超導量子電腦的對照內容：\`animations/index.html\`（JJ 與讀取）、\`animations/peripherals.html\`（周邊系統）、\`animations/operation.html\`（操作）。\n\n## 時間規劃\n\n| 段落 | 投影片 | 時間（分） |\n|---|---|---|\n`;
   const secs = {};
   SLIDES.forEach((s, i) => { (secs[s.sec] ||= { a: i + 1, b: i + 1, t: 0 }); secs[s.sec].b = i + 1; secs[s.sec].t += s.min; });
   Object.entries(secs).forEach(([k, v]) => { md += `| ${k} | ${v.a}–${v.b} | ${Math.round(v.t * 10) / 10} |\n`; });
   const skip = SLIDES.map((s, i) => (s.optional ? i + 1 : 0)).filter(Boolean);
-  md += `\n### 60 分鐘精簡版建議\n\n- 可略過或快速帶過：第 ${skip.join('、')} 頁。\n- 3D 動畫只現場示範場景 1、5、7、8、10、13，其餘請聽眾會後自行操作。\n- 也可以只講一個平台：離子阱（01–02）或中性原子（03–04），再加 05 比較。\n\n---\n`;
+  md += `\n### 60 分鐘精簡版建議\n\n- 可略過或快速帶過：第 ${skip.join('、')} 頁。\n- 3D 動畫只現場示範場景 1、5、7、9、12、15、17，其餘請聽眾會後自行操作。\n- 也可以只講一個平台：離子阱（01–02）或中性原子（03–04），再加 05 比較。\n\n---\n`;
   cur = null;
   SLIDES.forEach((s, i) => {
     if (s.sec !== cur) { md += `\n## ${s.sec}\n`; cur = s.sec; }

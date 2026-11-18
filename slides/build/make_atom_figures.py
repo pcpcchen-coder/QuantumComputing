@@ -227,5 +227,42 @@ def fig_timescales():
     fig.tight_layout(); save(fig, "timescales.png")
 
 
+# 8. 頻率參考：Allan 偏差與 12.6 GHz 微波的 Ramsey 相位誤差（代表性經驗模型，與 animations/js/atoms/common.js 的 App.FREF 相同）
+def fig_clock():
+    refs = [
+        ("石英 OCXO", GRAY, lambda t: np.hypot(1e-12, 1.2e-15 * t / np.sqrt(2))),
+        ("銣鐘", "#E07B39", lambda t: np.sqrt((1e-11 / np.sqrt(t)) ** 2 + (5e-13) ** 2 + (1.9e-17 * t / np.sqrt(2)) ** 2)),
+        ("銫鐘", "#4C9A2A", lambda t: np.hypot(1e-11 / np.sqrt(t), 1e-14)),
+        ("氫邁射", PURPLE, lambda t: np.sqrt((1.5e-13 / t) ** 2 + (2e-14 / np.sqrt(t)) ** 2 + (7e-16) ** 2)),
+    ]
+    fig, ax = plt.subplots(1, 2, figsize=(11.5, 4.0))
+    tau = np.logspace(0, 5, 200)
+    for name, col, f in refs:
+        ax[0].loglog(tau, f(tau), color=col, lw=3 if name == "氫邁射" else 1.8, label=name)
+    ax[0].set_xlabel("平均時間 τ（秒）"); ax[0].set_ylabel("Allan 偏差 σ_y(τ)")
+    ax[0].set_title("頻率穩定度（代表值）"); ax[0].legend(fontsize=11, frameon=False, loc="upper right")
+    ax[0].axvspan(1, 86400, color=PURPLE, alpha=0.05)
+    ax[0].text(150, 3e-14, "氫邁射：1 秒～1 天最穩", color=PURPLE, fontsize=11)
+    T = np.logspace(-3, 2, 200); f0 = 12.6428e9
+    for name, col, f in refs:
+        ax[1].loglog(T, 2 * np.pi * f0 * f(T) * T, color=col, lw=3 if name == "氫邁射" else 1.8, label=name)
+    ax[1].axhline(1, color=RED, ls="--", lw=1.4); ax[1].text(1.2e-3, 1.4, "≈ 1 rad：量子位元相位糊掉", color=RED, fontsize=11)
+    ax[1].axvspan(1, 100, color=GOLD, alpha=0.08); ax[1].text(1.2, 1e-4, "離子 T₂\n秒級以上", color=GOLD, fontsize=11)
+    ax[1].text(1.5e-3, 2.2e-5, "< 0.1 秒由石英決定（所以氫邁射內部也鎖一顆石英）；銣、銫兩條線重疊", color=GRAY, fontsize=9.5)
+    ax[1].set_ylim(1e-5, 1e3)
+    ax[1].set_xlabel("Ramsey 自由演化時間 T（秒）"); ax[1].set_ylabel("相位誤差（rad）")
+    ax[1].set_title("12.6 GHz 閘微波在 T 內累積的相位誤差（粗估）")
+    from matplotlib.ticker import FuncFormatter, LogLocator
+    sci = FuncFormatter(lambda v, _: f"$10^{{{int(round(np.log10(v)))}}}$" if v > 0 else "")
+    for a in ax:
+        for axis in (a.xaxis, a.yaxis):
+            axis.set_major_locator(LogLocator(base=10, numticks=12)); axis.set_major_formatter(sci)
+    fig.tight_layout(); save(fig, "clock_stability.png")
+
+
 if __name__ == "__main__":
-    fig_mathieu(); fig_modes(); fig_ms(); fig_ion_hist(); fig_rydberg(); fig_loading(); fig_timescales()
+    import sys
+    ALL = {"mathieu": fig_mathieu, "modes": fig_modes, "ms": fig_ms, "ion_hist": fig_ion_hist, "rydberg": fig_rydberg,
+           "loading": fig_loading, "timescales": fig_timescales, "clock": fig_clock}
+    for k in (sys.argv[1:] or ALL):
+        ALL[k]()

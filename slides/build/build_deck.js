@@ -11,7 +11,7 @@ const ROOT = path.resolve(__dirname, '..');
 const FIG = path.join(ROOT, 'figures');
 const OUT = path.join(ROOT, 'JJ_Microwave_Readout_Talk.pptx');
 const SPEECH = path.resolve(ROOT, '..', 'speech', '演講稿.md');
-const ANIM_REL = '../animations/index.html'; // 相對於 pptx 的路徑
+const ANIM_REL = 'https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html'; // GitHub Pages 網址
 
 const SCENES = {
   bloch: [1, 'Bloch 球'], cooper: [2, 'Cooper pair'], jj: [3, 'JJ 結構'], potential: [4, '能階與非諧性'], washboard: [5, '洗衣板位勢'], squid: [6, 'SQUID'],
