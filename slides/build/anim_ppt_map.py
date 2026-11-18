@@ -31,6 +31,7 @@ PAGES = [  # (html, 場景 JS 目錄 or None, 說明)
     ("transmon-3d.html", None, "Transmon 3D（12 章）"),
     ("power1000.html", "inline", "1,000 位元供電設計"),
     ("lc-vs-jj.html", "sections", "LC 與約瑟夫森接面（2D 圖解）"),
+    ("basic-circuits.html", "engine", "六個基礎量子電路（2D 互動）"),
 ]
 DECK_NAMES = {
     "slides/JJ_Microwave_Readout_Talk.pptx": "JJ 與微波讀取",
@@ -40,12 +41,13 @@ DECK_NAMES = {
     "slides/transmon.pptx": "Transmon",
     "slides/output/qfish008-deutsch-algorithm.pptx": "量子金魚 008 Deutsch",
     "slides/output/qc-power-supply-delta.pptx": "量子電腦供電設計",
+    "slides/output/basic-circuits.pptx": "六個基礎量子電路",
 }
 DECK_SHORT = {   # README 精簡表用的簡稱
     "slides/JJ_Microwave_Readout_Talk.pptx": "JJ", "slides/QC_Peripheral_Systems_Talk.pptx": "周邊",
     "slides/QC_Operation_Talk.pptx": "操作", "slides/Ion_NeutralAtom_Talk.pptx": "離子阱",
     "slides/transmon.pptx": "transmon", "slides/output/qfish008-deutsch-algorithm.pptx": "qfish008",
-    "slides/output/qc-power-supply-delta.pptx": "供電",
+    "slides/output/qc-power-supply-delta.pptx": "供電", "slides/output/basic-circuits.pptx": "基礎電路",
 }
 
 
@@ -68,7 +70,7 @@ def readme_block(refs):
             "> 這一段由 `python3 slides/build/anim_ppt_map.py` 自動更新，請不要手動修改。", "",
             "| 動畫（線上版） | 場景數 | 對應簡報 | 狀態 |", "|---|---|---|---|"]
     rows = ["", "### 場景 → 投影片頁碼", "",
-            "主要簡報的頁碼不加前綴；其他簡報以簡稱標示（JJ、周邊、操作、離子阱、transmon、qfish008、供電）。", "",
+            "主要簡報的頁碼不加前綴；其他簡報以簡稱標示（JJ、周邊、操作、離子阱、transmon、qfish008、供電、基礎電路）。", "",
             "| 動畫 | 主要簡報 | 場景代號 → 頁碼 |", "|---|---|---|"]
     for html, js_dir, desc in PAGES:
         sc = scenes_of(html, js_dir)
@@ -118,6 +120,9 @@ def update_readme(refs):
 
 def scenes_of(html, js_dir):
     """回傳 [(id, 標題)]，依動畫中的順序。"""
+    if js_dir == "engine":  # basic-circuits.html：SCENES 陣列裡的 { id: "…", short: "…", title: "…" }
+        s = open(os.path.join(ANIM_DIR, html), encoding="utf-8").read()
+        return re.findall(r'id: "([\w-]+)", short: "[^"]*", title: "([^"]+)"', s)
     if js_dir == "sections":  # 單頁圖解：<section class="step" id="…"> 後面的 <h2>
         s = open(os.path.join(ANIM_DIR, html), encoding="utf-8").read()
         return [(sid, re.sub(r"<[^>]+>", "", t).strip())
