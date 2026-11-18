@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>基礎量子電路</title>
-<meta name="description" content="八個基礎量子電路的逐步互動動畫：疊加、干涉、Bell 態、GHZ 態、量子隱形傳態、Deutsch 演算法、Bernstein–Vazirani 演算法、Grover 搜尋。">
+<meta name="description" content="十個基礎量子電路的逐步互動動畫：疊加、干涉、Bell 態、GHZ 態、量子隱形傳態、Deutsch、Bernstein–Vazirani、Grover 搜尋、量子傅立葉轉換、Shor 演算法。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Noto+Sans+TC:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap">
@@ -29,6 +29,7 @@
   --on-gate:#0E1513; --hl:rgba(99,181,216,.12); --ghost:rgba(147,164,159,.18); color-scheme:dark}
 
 *{box-sizing:border-box}
+[hidden]{display:none!important}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:16px;line-height:1.75;
   padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
 main{max-width:1040px;margin:0 auto;padding-block:40px 64px;display:flex;flex-direction:column;gap:28px}
@@ -81,7 +82,8 @@ button:focus-visible{outline:2px solid var(--pos);outline-offset:2px}
 #circ .g-H rect{fill:var(--h)} #circ .g-X rect{fill:var(--x)} #circ .g-Z rect{fill:var(--z)} #circ .g-RY rect{fill:var(--hit)}
 #circ .g-RY text{font-size:14px}
 #circ .cz line{stroke:var(--z);stroke-width:2} #circ .cz circle{fill:var(--z)}
-#circ .blk rect{stroke:none} #circ .blk-oracle rect{fill:var(--z)} #circ .blk-diff rect{fill:var(--h)}
+#circ .blk rect{stroke:none} #circ .blk-oracle rect{fill:var(--z)} #circ .blk-diff rect{fill:var(--h)} #circ .blk-perm rect{fill:var(--x)}
+#circ .cp line,#circ .sw line{stroke:var(--z);stroke-width:2} #circ .cp circle{fill:var(--z)} #circ text.cpl{font-size:11px;fill:var(--z);font-weight:500}
 #circ .blk text{font-family:var(--font-body);font-weight:700;font-size:14px;fill:var(--on-gate);text-anchor:middle;dominant-baseline:central}
 #circ .cx line,#circ .cx circle.t{stroke:var(--x);stroke-width:2;fill:none}
 #circ .cx circle.c{fill:var(--x)}
@@ -125,6 +127,11 @@ button:focus-visible{outline:2px solid var(--pos);outline-offset:2px}
 .blochs:empty{display:none}
 .bloch{width:200px;height:auto;display:block}
 .blochs.two .bloch{width:160px}
+.blochs.three .bloch{width:132px}
+.dial{width:22px;height:22px;display:block}
+.dial circle{fill:none;stroke:var(--rule);stroke-width:1.5}
+.dial line{stroke:var(--neg);stroke-width:2.4;stroke-linecap:round}
+.statewrap.mag .track{background:linear-gradient(var(--grid),var(--grid)) bottom/100% 1px no-repeat}
 .bloch .sph{fill:none;stroke:var(--muted);stroke-width:1.2}
 .bloch .eq{fill:none;stroke:var(--muted);stroke-width:1}
 .bloch .eq.back{stroke-dasharray:3 4;opacity:.6}
@@ -164,7 +171,7 @@ footer{border-top:1px solid var(--rule);padding-top:16px;font-size:13.5px;color:
 
 @media (max-width:820px){
   .grid2{grid-template-columns:1fr}
-  .bloch{width:170px} .blochs.two .bloch{width:150px}
+  .bloch{width:170px} .blochs.two .bloch{width:150px} .blochs.three .bloch{width:108px}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 </style>
@@ -173,8 +180,9 @@ footer{border-top:1px solid var(--rule);padding-top:16px;font-size:13.5px;color:
 <main>
 <header>
   <span class="eyebrow">量子電路入門 · 互動動畫</span>
-  <h1>八個基礎量子電路</h1>
-  <p class="lead">從一顆位元的疊加，一路做到量子隱形傳態、「查詢一次就猜中密碼」和 Grover 搜尋。每個電路都能一步一步播放：上面看閘作用在哪裡，中間看振幅怎麼變，右邊可以實際量測幾千次，看機率是否和預期相同。</p>
+  <h1>十個基礎量子電路</h1>
+  <p class="lead">從一顆位元的疊加，一路做到量子隱形傳態、「查詢一次就猜中密碼」、Grover 搜尋，最後用量子傅立葉轉換和 Shor 演算法分解 15。每個電路都能一步一步播放：上面看閘作用在哪裡，中間看振幅怎麼變，右邊可以實際量測幾千次，看機率是否和預期相同。</p>
+  <p class="note">還不熟悉振幅、相位、量測？建議先讀 <a href="quantum-basics.html">〈量子理論基礎：看電路前的 6 堂課〉</a>。</p>
   <p class="note">讀法和 Qiskit 相同：電路圖 q0 在最上面，但寫成位元字串時 <b>q0 在最右邊</b>，例如 <code>|01⟩</code> 代表 q1 = 0、q0 = 1。快捷鍵：<kbd>←</kbd>/<kbd>→</kbd> 上一步/下一步，<kbd>空白鍵</kbd> 播放。</p>
 </header>
 
@@ -204,10 +212,10 @@ footer{border-top:1px solid var(--rule);padding-top:16px;font-size:13.5px;color:
 <div class="grid2">
   <div class="card">
     <div class="card-top"><h3>振幅與機率</h3>
-      <div class="legend"><span><i style="background:var(--pos)"></i>正振幅</span><span><i style="background:var(--neg)"></i>負振幅</span><span id="meanKey" hidden><i style="height:0;border-top:2px dashed var(--hit);border-radius:0"></i>平均值</span></div></div>
-    <p class="note">柱子往上是正振幅、往下是負振幅，長度 1 頂到虛線。量到某個結果的機率 = 振幅²。</p>
-    <div class="statewrap">
-      <div class="axis" aria-hidden="true"><span>+1</span><span>0</span><span>−1</span></div>
+      <div class="legend"><span id="legPos"><i style="background:var(--pos)"></i>正振幅</span><span id="legNeg"><i style="background:var(--neg)"></i>負振幅</span><span id="legPhase" hidden><i style="height:0;width:14px;border-top:2.4px solid var(--neg);border-radius:0"></i>指針 = 相位</span><span id="meanKey" hidden><i style="height:0;border-top:2px dashed var(--hit);border-radius:0"></i>平均值</span></div></div>
+    <p class="note" id="barNote">柱子往上是正振幅、往下是負振幅，長度 1 頂到虛線。量到某個結果的機率 = 振幅²。</p>
+    <div class="statewrap" id="statewrap">
+      <div class="axis" id="axis" aria-hidden="true"><span>+1</span><span>0</span><span>−1</span></div>
       <div class="bars" id="bars"></div>
       <div class="blochs" id="blochs"></div>
     </div>
@@ -240,70 +248,98 @@ footer{border-top:1px solid var(--rule);padding-top:16px;font-size:13.5px;color:
 </div>
 
 <footer>
-  <span>所有振幅都由頁面內建的狀態向量模擬器即時計算，和 Qiskit 的 <code>Statevector</code> 結果一致（Grover 的擴散步驟照理想的「對平均值翻轉」計算；用 H、X、多控制 Z 組成的實際電路會多一個整體負號，機率完全相同）。為了看得清楚，振幅長條在兩步之間做線性內插；Bloch 向量則照閘真正的旋轉軸轉動。</span>
+  <span>所有振幅都由頁面內建的狀態向量模擬器即時計算，和 Qiskit 的 <code>Statevector</code> 結果一致（Grover 的擴散步驟照理想的「對平均值翻轉」計算；用 H、X、多控制 Z 組成的實際電路會多一個整體負號，機率完全相同）。QFT 與 Shor 的振幅是複數：長條長度是振幅的大小，下面的指針是相位（0° 朝右、逆時針為正）。為了看得清楚，振幅長條在兩步之間做線性內插；Bloch 向量則照閘真正的旋轉軸轉動。</span>
   <span><a href="https://pcpcchen-coder.github.io/QuantumComputing/">← 回動畫首頁</a>（線上版）</span>
 </footer>
 </main>
 
 <script id="engine">
 /* ===== 引擎：狀態向量模擬、範例定義、Qiskit 程式碼產生（不碰 DOM，可在 Node 測試） ===== */
+/* 狀態 = { re: [...], im: [...] }，第 i 項是 |i⟩ 的振幅；i 的第 q 個位元就是 q 號位元（和 Qiskit 相同） */
 const R2 = Math.SQRT1_2;
 const H = q => ({ g: "H", q }), X = q => ({ g: "X", q }), Z = q => ({ g: "Z", q }), CX = (c, t) => ({ g: "CX", c, t });
 const RY = (q, th, py) => ({ g: "RY", q, th, py });       // py：Qiskit 程式碼裡的角度寫法
 const CZ = (...qs) => ({ g: "CZ", qs });                   // 2 顆是 CZ，3 顆是 CCZ（全部是 1 才變號）
-const BLK = (kind, label, ops) => ({ g: "BLK", kind, label, ops }); // 方塊：內部依序作用 ops；kind = "diff" 時照理想擴散計算
+const CP = (c, t, th, py, lab) => ({ g: "CP", c, t, th, py, lab }); // 受控相位：兩顆都是 1 時乘上 e^{iθ}
+const SWAP = (a, b) => ({ g: "SWAP", a, b });
+const BLK = (kind, label, ops, extra) => ({ g: "BLK", kind, label, ops, ...extra }); // 方塊：kind = "diff" 理想擴散、"perm" 置換（Shor 的模冪 Oracle）
 
 function applyOp(s, n, op) {
-  const N = 1 << n;
-  if (op.g === "H") { const m = 1 << op.q; for (let i = 0; i < N; i++) if (!(i & m)) { const a = s[i], b = s[i | m]; s[i] = (a + b) * R2; s[i | m] = (a - b) * R2; } }
-  else if (op.g === "X") { const m = 1 << op.q; for (let i = 0; i < N; i++) if (!(i & m)) { const a = s[i]; s[i] = s[i | m]; s[i | m] = a; } }
-  else if (op.g === "Z") { const m = 1 << op.q; for (let i = 0; i < N; i++) if (i & m) s[i] = -s[i]; }
-  else if (op.g === "CX") { const mc = 1 << op.c, mt = 1 << op.t; for (let i = 0; i < N; i++) if ((i & mc) && !(i & mt)) { const a = s[i]; s[i] = s[i | mt]; s[i | mt] = a; } }
-  else if (op.g === "RY") { const m = 1 << op.q, c = Math.cos(op.th / 2), sn = Math.sin(op.th / 2); for (let i = 0; i < N; i++) if (!(i & m)) { const a = s[i], b = s[i | m]; s[i] = c * a - sn * b; s[i | m] = sn * a + c * b; } }
-  else if (op.g === "CZ") { const m = op.qs.reduce((x, q) => x | (1 << q), 0); for (let i = 0; i < N; i++) if ((i & m) === m) s[i] = -s[i]; }
+  const N = 1 << n, re = s.re, im = s.im;
+  const swap = (i, j) => { let t = re[i]; re[i] = re[j]; re[j] = t; t = im[i]; im[i] = im[j]; im[j] = t; };
+  if (op.g === "H") { const m = 1 << op.q; for (let i = 0; i < N; i++) if (!(i & m)) { const j = i | m, ar = re[i], ai = im[i], br = re[j], bi = im[j]; re[i] = (ar + br) * R2; im[i] = (ai + bi) * R2; re[j] = (ar - br) * R2; im[j] = (ai - bi) * R2; } }
+  else if (op.g === "X") { const m = 1 << op.q; for (let i = 0; i < N; i++) if (!(i & m)) swap(i, i | m); }
+  else if (op.g === "Z") { const m = 1 << op.q; for (let i = 0; i < N; i++) if (i & m) { re[i] = -re[i]; im[i] = -im[i]; } }
+  else if (op.g === "CX") { const mc = 1 << op.c, mt = 1 << op.t; for (let i = 0; i < N; i++) if ((i & mc) && !(i & mt)) swap(i, i | mt); }
+  else if (op.g === "RY") { const m = 1 << op.q, c = Math.cos(op.th / 2), sn = Math.sin(op.th / 2); for (let i = 0; i < N; i++) if (!(i & m)) { const j = i | m, ar = re[i], ai = im[i], br = re[j], bi = im[j]; re[i] = c * ar - sn * br; im[i] = c * ai - sn * bi; re[j] = sn * ar + c * br; im[j] = sn * ai + c * bi; } }
+  else if (op.g === "CZ") { const m = op.qs.reduce((x, q) => x | (1 << q), 0); for (let i = 0; i < N; i++) if ((i & m) === m) { re[i] = -re[i]; im[i] = -im[i]; } }
+  else if (op.g === "CP") { const m = (1 << op.c) | (1 << op.t), c = Math.cos(op.th), sn = Math.sin(op.th); for (let i = 0; i < N; i++) if ((i & m) === m) { const ar = re[i], ai = im[i]; re[i] = c * ar - sn * ai; im[i] = sn * ar + c * ai; } }
+  else if (op.g === "SWAP") { const ma = 1 << op.a, mb = 1 << op.b; for (let i = 0; i < N; i++) if ((i & ma) && !(i & mb)) swap(i, (i & ~ma) | mb); }
   else if (op.g === "BLK") {
-    // 擴散 = 2|s⟩⟨s| − I：每個振幅對平均值翻轉。用 H、X、CZ 組成的電路會多一個整體負號（量不到），這裡照理想算
-    if (op.kind === "diff") { let m = 0; for (let i = 0; i < N; i++) m += s[i]; m /= N; for (let i = 0; i < N; i++) s[i] = 2 * m - s[i]; }
-    else op.ops.forEach(o => applyOp(s, n, o));
+    if (op.kind === "diff") { // 擴散 = 2|s⟩⟨s| − I：每個振幅對平均值翻轉（H、X、CZ 組成的電路會多一個整體負號，量不到）
+      let mr = 0, mi = 0; for (let i = 0; i < N; i++) { mr += re[i]; mi += im[i]; } mr /= N; mi /= N;
+      for (let i = 0; i < N; i++) { re[i] = 2 * mr - re[i]; im[i] = 2 * mi - im[i]; }
+    } else if (op.kind === "perm") { // |i⟩ → |perm(i)⟩
+      const r2 = re.slice(), i2 = im.slice(); for (let i = 0; i < N; i++) { const j = op.perm(i); re[j] = r2[i]; im[j] = i2[i]; }
+    } else op.ops.forEach(o => applyOp(s, n, o));
   }
 }
-/* 單看第 q 顆位元的 Bloch 向量（振幅都是實數，所以 y = 0）；長度 < 1 表示它和別的位元糾纏 */
-function reducedBloch(state, n, q) {
-  const m = 1 << q; let x = 0, z = 0, nrm = 0;
-  state.forEach(a => nrm += a * a);
-  for (let i = 0; i < state.length; i++) { const a = state[i]; z += (i & m ? -1 : 1) * a * a; if (!(i & m)) x += 2 * a * state[i | m]; }
-  return [x / (nrm || 1), 0, z / (nrm || 1)];
+const prob = (s, i) => s.re[i] * s.re[i] + s.im[i] * s.im[i];
+/* 單看第 q 顆位元的 Bloch 向量；長度 < 1 表示它和別的位元糾纏 */
+function reducedBloch(s, n, q) {
+  const m = 1 << q, N = s.re.length; let x = 0, y = 0, z = 0, nrm = 0;
+  for (let i = 0; i < N; i++) {
+    const p = prob(s, i); nrm += p; z += (i & m ? -1 : 1) * p;
+    if (!(i & m)) { const j = i | m; x += 2 * (s.re[i] * s.re[j] + s.im[i] * s.im[j]); y += 2 * (s.re[i] * s.im[j] - s.im[i] * s.re[j]); } // ρ01 = a_i·conj(a_j)
+  }
+  return [x / (nrm || 1), y / (nrm || 1), z / (nrm || 1)];
 }
 function simulate(n, steps) {
-  const s = new Float64Array(1 << n); s[0] = 1;
-  const out = [Array.from(s)];
-  for (const st of steps) { for (const col of st.cols) for (const op of col) applyOp(s, n, op); out.push(Array.from(s)); }
+  const N = 1 << n, s = { re: new Float64Array(N), im: new Float64Array(N) }; s.re[0] = 1;
+  const cp = () => ({ re: Array.from(s.re), im: Array.from(s.im) });
+  const out = [cp()];
+  for (const st of steps) { for (const col of st.cols) for (const op of col) applyOp(s, n, op); out.push(cp()); }
   return out;
 }
 function bits(i, n) { let t = ""; for (let q = n - 1; q >= 0; q--) t += (i >> q) & 1; return t; }
 /* 量測部分位元的機率：key 為 q(高)…q(低) 的位元字串 */
-function marginal(state, n, meas) {
+function marginal(s, n, meas) {
   const qs = [...meas].sort((a, b) => b - a), out = {};
-  state.forEach((a, i) => { const p = a * a; if (p < 1e-12) return; const k = qs.map(q => (i >> q) & 1).join(""); out[k] = (out[k] || 0) + p; });
+  for (let i = 0; i < s.re.length; i++) { const p = prob(s, i); if (p < 1e-12) continue; const k = qs.map(q => (i >> q) & 1).join(""); out[k] = (out[k] || 0) + p; }
   return out;
 }
-/* 把狀態寫成 (|00⟩ + |11⟩)/√2 這種好讀的形式 */
-function ketString(state, n) {
-  const nz = []; state.forEach((a, i) => { if (Math.abs(a) > 1e-9) nz.push([i, a]); });
-  const mag = Math.abs(nz[0][1]);
-  const same = nz.every(([, a]) => Math.abs(Math.abs(a) - mag) < 1e-6);
+/* 相位寫法：+、−、+ i、− i，其他寫成 e^{iθ}（θ 以度表示） */
+function phaseTerm(re, im, first) {
+  const ang = Math.atan2(im, re) * 180 / Math.PI, near = (a, b) => Math.abs(((a - b + 540) % 360) - 180) < 0.05;
+  if (near(ang, 0)) return first ? "" : " + ";
+  if (near(ang, 180)) return first ? "−" : " − ";
+  if (near(ang, 90)) return first ? "i" : " + i";
+  if (near(ang, -90)) return first ? "−i" : " − i";
+  const deg = Math.round(ang);
+  return (first ? "" : " + ") + (deg < 0 ? `e^{−i${-deg}°}` : `e^{i${deg}°}`);
+}
+/* 把狀態寫成 (|00⟩ + |11⟩)/√2 這種好讀的形式；label(i) 可改寫每一項的標籤 */
+function ketString(s, n, label = i => bits(i, n)) {
+  const nz = []; for (let i = 0; i < s.re.length; i++) if (prob(s, i) > 1e-12) nz.push(i);
+  const mag = Math.sqrt(prob(s, nz[0]));
+  const same = nz.every(i => Math.abs(Math.sqrt(prob(s, i)) - mag) < 1e-6);
   const DEN = [[1, ""], [R2, "√2"], [0.5, "2"], [R2 / 2, "2√2"], [0.25, "4"]];
   const den = same && DEN.find(([v]) => Math.abs(v - mag) < 1e-6);
   if (den) {
-    let body = nz.map(([i, a], k) => (a < 0 ? (k ? " − " : "−") : (k ? " + " : "")) + "|" + bits(i, n) + "⟩").join("");
+    const body = nz.map((i, k) => phaseTerm(s.re[i], s.im[i], !k) + "|" + label(i) + "⟩").join("");
     if (!den[1]) return body;
-    if (nz.length === 1) return body.replace(/^(−?)/, "$1") + " / " + den[1];
-    return "(" + body + ") / " + den[1];
+    return (nz.length === 1 ? body : "(" + body + ")") + " / " + den[1];
   }
-  return nz.map(([i, a], k) => (a < 0 ? (k ? " − " : "−") : (k ? " + " : "")) + Math.abs(a).toFixed(3) + "|" + bits(i, n) + "⟩").join("");
+  return nz.map((i, k) => {
+    const a = Math.sqrt(prob(s, i)), ph = phaseTerm(s.re[i], s.im[i], !k);
+    return (ph.includes("e^") ? ph + "·" : ph) + a.toFixed(3) + "|" + label(i) + "⟩";
+  }).join("");
 }
 const fmtAmp = a => (Math.abs(a) < 5e-4 ? "0" : (a > 0 ? "+" : "−") + Math.abs(a).toFixed(3).replace(/^0/, ""));
 const fmtPct = p => (p < 5e-4 ? "" : (p > 0.9995 ? "100%" : (p * 100).toFixed(Math.abs(p * 100 - Math.round(p * 100)) < 0.05 ? 0 : 1) + "%"));
+const gcd = (a, b) => (b ? gcd(b, a % b) : Math.abs(a));
+const sup = n => String(n).replace(/\d/g, d => "⁰¹²³⁴⁵⁶⁷⁸⁹"[d]);
+const powmod = (a, e, m) => { let r = 1; for (let i = 0; i < e; i++) r = (r * a) % m; return r; };
 
 const SCENES = [
   {
@@ -490,11 +526,11 @@ const SCENES = [
       // 先模擬，再把機率寫進說明
       const st = simulate(n, steps), pct = v => (v * 100).toFixed(1).replace(/\.0$/, "") + "%";
       // steps[i] 做完之後的狀態是 st[i + 1]
-      const pT = i => st[i + 1][ti] ** 2, mean = i => st[i + 1].reduce((a, b) => a + b, 0) / N;
+      const pT = i => prob(st[i + 1], ti), mean = i => st[i + 1].re.reduce((a, b) => a + b, 0) / N;
       steps[0].cap = `每個答案的振幅都是 ${(1 / Math.sqrt(N)).toFixed(3)}，機率各 ${pct(1 / N)}。這時候量測，猜中的機率只有 1/${N}。`;
       for (let r = 1; r <= k; r++) {
         const io = 2 * r - 1, id = 2 * r;
-        steps[io].cap = `Oracle 認得答案，只把 |${t}⟩ 的振幅變號（${fmtAmp(st[io][ti])} → ${fmtAmp(st[io + 1][ti])}），其他不變。機率還沒變，答案仍是 ${pct(pT(io))}；但看綠色虛線，平均值被拉低到 ${fmtAmp(mean(io))}。` +
+        steps[io].cap = `Oracle 認得答案，只把 |${t}⟩ 的振幅變號（${fmtAmp(st[io].re[ti])} → ${fmtAmp(st[io + 1].re[ti])}），其他不變。機率還沒變，答案仍是 ${pct(pT(io))}；但看綠色虛線，平均值被拉低到 ${fmtAmp(mean(io))}。` +
           (r === 1 ? "方塊裡的閘：先用 X 把答案變成全 1，再用多控制 Z 變號，最後 X 還原。" : "");
         const drop = pT(id) < pT(id - 2) - 1e-9, same = Math.abs(pT(id) - pT(id - 2)) < 1e-9;
         steps[id].cap = "擴散把每個振幅對平均值翻轉：a → 2 × 平均 − a。" + (same
@@ -513,15 +549,100 @@ const SCENES = [
         links: [["operation.html#grover", "如何操作量子電腦 · Grover 搜尋：振幅放大"], ["transmon-3d.html#grover", "Transmon 3D · 第 7 章 振幅長條：糾纏、Grover 與 Deutsch"]]
       };
     }
+  },
+  {
+    id: "qft", short: "QFT", title: "量子傅立葉轉換：把位置變成頻率",
+    lead: "QFT 把每個基底態 |x⟩ 變成「大小全部一樣、相位一格一格轉」的疊加：|y⟩ 的相位是 360° × x × y / 8。x 越大，相位轉得越快，就像不同頻率的波。輸入有週期時，輸出只剩少數幾個尖峰，這是 Shor 演算法找週期的關鍵。",
+    opts: [
+      { key: "inp", label: "輸入", def: "basis", choices: [["basis", "基底態 |x⟩"], ["p2", "週期 2"], ["p4", "週期 4、位移 1"]] },
+      { key: "x", label: "x（q2 q1 q0，點一下切換）", def: "001", bits: 3, when: o => o.inp === "basis" }
+    ],
+    build(o) {
+      const xs = o.x, xv = parseInt(xs, 2), basis = o.inp === "basis";
+      let prep, prepCap;
+      if (basis) {
+        const ones = [0, 1, 2].filter(q => xs[2 - q] === "1");
+        prep = [ones.map(X)];
+        prepCap = ones.length ? `用 X 把輸入設成 |${xv}⟩（二進位 ${xs}）。` : "輸入是 |0⟩，不用加任何閘。";
+      } else if (o.inp === "p2") { prep = [[H(1), H(2)]]; prepCap = "q1、q2 做 H，q0 保持 0：輸入是 |0⟩、|2⟩、|4⟩、|6⟩ 的疊加，每隔 2 格出現一次，週期 r = 2。"; }
+      else { prep = [[X(0), H(2)]]; prepCap = "X 把 q0 設成 1、H 讓 q2 疊加：輸入是 |1⟩、|5⟩ 的疊加，週期 r = 4、從 1 開始（位移 1）。"; }
+      const d = (45 * xv) % 360;
+      const out = basis
+        ? `交換 q0、q2 之後，位元的權重對上了：每個 |y⟩ 的大小都是 1/√8（各 12.5%），相位是 360° × ${xv} × y / 8，也就是每往右一格多轉 ${d}°。看長條下面的相位指針，x 越大轉得越快。`
+        : o.inp === "p2"
+          ? "交換 q0、q2 之後，輸出只剩 |0⟩ 和 |4⟩，各 50%：尖峰落在 8 / r = 4 的倍數上。週期越短，尖峰間隔越大，這就是「位置變頻率」。"
+          : "交換 q0、q2 之後，輸出是 |0⟩、|2⟩、|4⟩、|6⟩，各 25%：尖峰落在 8 / r = 2 的倍數上。位移 1 只改變每個尖峰的相位，不改變尖峰的位置，所以量測只會看到週期。";
+      return {
+        n: 3, meas: [0, 1, 2], view: "phase", dec: true, ketLabel: i => String(i), bloch: basis ? [0, 1, 2] : [],
+        steps: [
+          { t: "準備輸入", cols: prep, cap: prepCap + (basis ? " 右邊三顆 Bloch 球分別是 q0、q1、q2。" : "") },
+          { t: "q2：H 和兩個受控相位", cols: [[H(2)], [CP(1, 2, Math.PI / 2, "pi / 2", "π/2")], [CP(0, 2, Math.PI / 4, "pi / 4", "π/4")]],
+            cap: basis ? `q2 先做 H，再依 q1、q0 的值加上 90°、45° 的相位。做完後 q2 = (|0⟩ + e^{i·${d}°}|1⟩)/√2：x 的三個位元都被寫進 q2 的相位（360° × ${xv} / 8 = ${d}°），q2 的 Bloch 向量轉到赤道上這個角度。`
+              : "q2 先做 H，再依 q1、q0 的值加上 90°、45° 的相位：較低位元的資訊被寫進 q2 的相位。" },
+          { t: "q1：H 和一個受控相位", cols: [[H(1)], [CP(0, 1, Math.PI / 2, "pi / 2", "π/2")]],
+            cap: basis ? `q1 做 H，再依 q0 加上 90°。做完後 q1 的相位是 ${(2 * d) % 360}°，轉速是 q2 的兩倍。` : "q1 做 H，再依 q0 加上 90° 的相位。" },
+          { t: "q0：H", cols: [[H(0)]], cap: basis ? `q0 只做 H，相位是 ${(4 * d) % 360}°（只可能是 0° 或 180°），轉速是 q2 的四倍。三顆位元各自轉 1×、2×、4× 的角度。` : "q0 只做 H。" },
+          { t: "SWAP：把位元順序反過來", cols: [[SWAP(0, 2)]], cap: out }
+        ],
+        init: "起點：三顆位元都在 |000⟩。這個範例的標籤用十進位：|5⟩ 就是 |101⟩。",
+        take: "QFT 是 Shor 演算法與量子相位估計的核心。它只用 n 個 H 和約 n²/2 個受控相位閘，就完成 2ⁿ 點的傅立葉轉換；古典 FFT 需要約 n × 2ⁿ 次運算。但答案藏在振幅裡，量測一次只能抽出一個 y，所以 QFT 要搭配有週期結構的輸入才有用。",
+        links: [["#shor", "本頁 · Shor 演算法（QFT 的應用）"], ["transmon-3d.html#shor", "Transmon 3D · 第 8 章 Shor：QFT 找週期分解 15"]]
+      };
+    }
+  },
+  {
+    id: "shor", short: "Shor", title: "Shor 演算法：用週期分解 15",
+    lead: "要分解 N = 15：選一個和 15 互質的 a，找出 aˣ mod 15 的週期 r（讓 aʳ mod 15 = 1 的最小 r），再用最大公因數算出因數。最難的「找週期」交給量子電路：3 顆計數位元 + 4 顆工作位元，模冪 Oracle 再加上逆 QFT。",
+    opts: [{ key: "a", label: "a", def: "7", choices: [["7", "7"], ["2", "2"], ["11", "11"], ["14", "14"]] }],
+    build(o) {
+      const a = +o.a, N = 15, table = [...Array(8).keys()].map(x => powmod(a, x, N));
+      let r = 1; while (powmod(a, r, N) !== 1) r++;
+      const perm = i => (i & 7) + 8 * ((i >> 3) ^ table[i & 7]);
+      const peaks = [...Array(r).keys()].map(s => s * 8 / r);
+      const iqft = [[SWAP(0, 2)], [H(0)], [CP(0, 1, -Math.PI / 2, "-pi / 2", "−π/2")], [H(1)], [CP(0, 2, -Math.PI / 4, "-pi / 4", "−π/4")], [CP(1, 2, -Math.PI / 2, "-pi / 2", "−π/2")], [H(2)]];
+      return {
+        n: 7, meas: [0, 1, 2], view: "count",
+        ketLabel: i => `${i & 7}⟩|${i >> 3}`,
+        steps: [
+          { t: "H：計數暫存器同時是 0–7", cols: [[H(0), H(1), H(2)]], cap: "三顆計數位元（q0–q2）做 H，x 同時是 0 到 7；工作暫存器（q3–q6）還是 0。右邊長條是計數暫存器 x 的機率：每個 12.5%。" },
+          { t: `模冪 Oracle：算出 ${a}ˣ mod 15`, cols: [[BLK("perm", `${a}ˣ\nmod 15`, [], { perm, a })]],
+            cap: `Oracle 一次算出所有 x 的 ${a}ˣ mod 15，寫進工作暫存器：${table.map((v, x) => `x = ${x} → ${v}`).join("、")}。數值每 ${r} 格重複一次，週期 r = ${r}。注意計數暫存器的機率還是各 12.5%：週期藏在 x 和工作暫存器的糾纏裡，要靠干涉才拿得出來。` },
+          { t: "逆 QFT（只作用在計數暫存器）", cols: iqft, box: "逆 QFT（QFT†）", boxQ: [0, 2],
+            cap: `逆 QFT 讓週期互相干涉：只剩 y = ${peaks.join("、")}（8 / r = ${8 / r} 的倍數），各 ${(100 / r).toFixed(0)}%。量到 y 之後，y / 8 ≈ s / r（s 是隨機的整數），約分就能讀出 r。按「量測 1 次」看看古典後處理怎麼算出因數。` }
+        ],
+        init: `起點：7 顆位元都在 0。q0–q2 是計數暫存器 x，q3–q6 是工作暫存器。這裡選 a = ${a}。`,
+        verdict: key => {
+          const y = parseInt(key, 2);
+          if (!y) return "→ y = 0：y / 8 = 0，沒有資訊，再量一次";
+          const g = gcd(y, 8), s = y / g, rr = 8 / g;
+          if (powmod(a, rr, N) !== 1) return `→ y = ${y}：${y}/8 = ${s}/${rr}，但 ${a}${sup(rr)} mod 15 = ${powmod(a, rr, N)} ≠ 1，r 不是 ${rr}；試 ${rr} 的倍數或再量一次`;
+          const h = powmod(a, rr / 2, N);
+          if (h === N - 1) return `→ y = ${y}：r = ${rr}，但 ${a}${sup(rr / 2)} mod 15 = 14 ≡ −1，只得到 1 和 15：換一個 a`;
+          return `→ y = ${y}：${y}/8 = ${s}/${rr} → r = ${rr} → ${a}${sup(rr / 2)} mod 15 = ${h}，gcd(${h - 1}, 15) = ${gcd(h - 1, N)}、gcd(${h + 1}, 15) = ${gcd(h + 1, N)} → 15 = ${gcd(h - 1, N)} × ${gcd(h + 1, N)} ✓`;
+        },
+        take: "Shor 演算法（1994）能在多項式時間內分解大整數，威脅 RSA 加密。量子電腦只負責「找週期」：H 做疊加、模冪 Oracle 把週期寫進糾纏、逆 QFT 讓週期干涉成尖峰；選 a、約分、算最大公因數都是古典計算。分解 15 只是示範：2025 年的估計顯示，破解 RSA‑2048 約需一百萬個有雜訊的實體量子位元，目前的硬體還差很遠。動畫把模冪寫成一個方塊；實際硬體要拆成許多受控乘法閘。",
+        links: [["#qft", "本頁 · 量子傅立葉轉換"], ["transmon-3d.html#shor", "Transmon 3D · 第 8 章 Shor：可自選 N、a、計數位元數"]]
+      };
+    }
   }
 ];
 
 /* 產生可直接執行的 Qiskit 程式碼 */
 function qiskitCode(sc, o, b) {
   const shown = sc.opts.filter(op => !op.when || op.when(o));
-  const flat = b.steps.flatMap(st => st.cols.flat()).flatMap(op => op.g === "BLK" ? op.ops : [op]);
+  const flat = b.steps.flatMap(st => st.cols.flat()).flatMap(op => op.g === "BLK" ? [op, ...op.ops] : [op]);
   const L = ["from qiskit import QuantumCircuit", "from qiskit.primitives import StatevectorSampler"];
-  if (flat.some(op => op.g === "RY")) L.push("from math import pi");
+  if (flat.some(op => op.g === "RY" || op.g === "CP")) L.push("from math import pi");
+  const perm = flat.find(op => op.g === "BLK" && op.kind === "perm");
+  if (perm) L.push("import numpy as np", "from qiskit.circuit.library import UnitaryGate", "",
+    "def mod_exp_oracle(a, N=15, t=3, m=4):",
+    '    """|x⟩|w⟩ → |x⟩|w ⊕ (a^x mod N)⟩：x 在 q0–q2，w 在 q3–q6（實際硬體要拆成受控乘法閘）"""',
+    "    dim = 2 ** (t + m)",
+    "    U = np.zeros((dim, dim))",
+    "    for x in range(2 ** t):",
+    "        for w in range(2 ** m):",
+    "            U[x + 2 ** t * (w ^ pow(a, x, N)), x + 2 ** t * w] = 1",
+    '    return UnitaryGate(U, label=f"{a}^x mod {N}")');
   L.push("", `# ${sc.title}` + (shown.length ? "（" + shown.map(op => op.label.replace(/（.*/, "") + " = " + (op.bits ? o[op.key] : op.choices.find(c => c[0] === o[op.key])[1])).join("，") + "）" : ""),
     `qc = QuantumCircuit(${b.n}, ${b.meas.length})`);
   // 依序輸出；相鄰、同一種的單位元閘合併成一行，例如 qc.h([0, 1])
@@ -532,6 +653,9 @@ function qiskitCode(sc, o, b) {
       if (op.g === "CX") { L.push(`qc.cx(${op.c}, ${op.t})`); i++; continue; }
       if (op.g === "CZ") { L.push(op.qs.length === 2 ? `qc.cz(${op.qs.join(", ")})` : `qc.ccz(${op.qs.join(", ")})`); i++; continue; }
       if (op.g === "RY") { L.push(`qc.ry(${op.py}, ${op.q})`); i++; continue; }
+      if (op.g === "CP") { L.push(`qc.cp(${op.py}, ${op.c}, ${op.t})`); i++; continue; }
+      if (op.g === "SWAP") { L.push(`qc.swap(${op.a}, ${op.b})`); i++; continue; }
+      if (op.g === "BLK" && op.kind === "perm") { L.push(`qc.append(mod_exp_oracle(${op.a}), range(7))`); i++; continue; }
       if (op.g === "BLK") {
         L.push(op.kind === "diff" ? "# 擴散：H、X、多控制 Z、X、H（這樣接會多一個整體負號，不影響機率）" : "# 標記：把答案變成全 1、多控制 Z 變號、再還原");
         emit(op.ops); i++; continue;
@@ -556,7 +680,7 @@ function qiskitCode(sc, o, b) {
     "print(counts)  # 位元字串的最右邊是 q0");
   return L.join("\n");
 }
-if (typeof module !== "undefined") module.exports = { SCENES, simulate, marginal, ketString, qiskitCode, bits, reducedBloch };
+if (typeof module !== "undefined") module.exports = { SCENES, simulate, marginal, ketString, qiskitCode, bits, reducedBloch, prob };
 </script>
 
 <script>
@@ -658,8 +782,9 @@ if (typeof module !== "undefined") module.exports = { SCENES, simulate, marginal
       r.addEventListener("click", () => { stop(); go(si + 1); });
       if (st.box) {
         const g = el("g", { class: "box op", "data-si": si + 1 }, svg);
-        el("rect", { x: x1 + 5, y: Y0 - 30, width: x2 - x1 - 10, height: (b.n - 1) * RH + 60, rx: 6 }, g);
-        el("text", { x: (x1 + x2) / 2, y: Y0 - 36, "text-anchor": "middle" }, g, st.box);
+        const [qa, qb] = st.boxQ || [0, b.n - 1];
+        el("rect", { x: x1 + 5, y: yq(qa) - 30, width: x2 - x1 - 10, height: (qb - qa) * RH + 60, rx: 6 }, g);
+        el("text", { x: (x1 + x2) / 2, y: yq(qa) - 36, "text-anchor": "middle" }, g, st.box);
       }
     });
     // 導線與標籤
@@ -684,11 +809,22 @@ if (typeof module !== "undefined") module.exports = { SCENES, simulate, marginal
           g = el("g", { class: "op cz", "data-si": c.si }, svg);
           el("line", { x1: x, x2: x, y1: yq(Math.min(...op.qs)), y2: yq(Math.max(...op.qs)) }, g);
           op.qs.forEach(q => el("circle", { cx: x, cy: yq(q), r: 6 }, g));
+        } else if (op.g === "CP") {
+          g = el("g", { class: "op cp", "data-si": c.si }, svg); const yc = yq(op.c), yt = yq(op.t);
+          el("line", { x1: x, x2: x, y1: yc, y2: yt }, g);
+          el("circle", { cx: x, cy: yc, r: 5.5 }, g); el("circle", { cx: x, cy: yt, r: 5.5 }, g);
+          el("text", { class: "cpl", x: x + 6, y: Math.min(yc, yt) + 24 }, g, op.lab);
+          el("title", {}, g, `受控相位 ${op.lab}：兩顆都是 1 時乘上 e^{i${op.lab}}`);
+        } else if (op.g === "SWAP") {
+          g = el("g", { class: "op sw", "data-si": c.si }, svg); const ya = yq(op.a), yb = yq(op.b);
+          el("line", { x1: x, x2: x, y1: ya, y2: yb }, g);
+          [ya, yb].forEach(y => { el("line", { x1: x - 7, x2: x + 7, y1: y - 7, y2: y + 7 }, g); el("line", { x1: x - 7, x2: x + 7, y1: y + 7, y2: y - 7 }, g); });
         } else if (op.g === "BLK") {
           g = el("g", { class: `op blk blk-${op.kind}`, "data-si": c.si }, svg);
-          el("rect", { x: x - 22, y: yq(0) - 20, width: 44, height: (b.n - 1) * RH + 40, rx: 6 }, g);
-          el("text", { x, y: yq(0) + (b.n - 1) * RH / 2 }, g, op.label);
-          el("title", {}, g, op.kind === "diff" ? "擴散：H、X、多控制 Z、X、H" : "標記：X（答案為 0 的位元）、多控制 Z、X");
+          const w = op.kind === "perm" ? 66 : 44, lines = op.label.split("\n"), yc = yq(0) + (b.n - 1) * RH / 2;
+          el("rect", { x: x - w / 2, y: yq(0) - 20, width: w, height: (b.n - 1) * RH + 40, rx: 6 }, g);
+          lines.forEach((t, j) => el("text", { x, y: yc + (j - (lines.length - 1) / 2) * 18 }, g, t));
+          el("title", {}, g, op.kind === "diff" ? "擴散：H、X、多控制 Z、X、H" : op.kind === "perm" ? "模冪 Oracle：|x⟩|w⟩ → |x⟩|w ⊕ aˣ mod 15⟩" : "標記：X（答案為 0 的位元）、多控制 Z、X");
         } else {
           g = el("g", { class: `op gate g-${op.g}`, "data-si": c.si }, svg);
           el("rect", { x: x - 17, y: yq(op.q) - 17, width: 34, height: 34, rx: 6 }, g);
@@ -718,22 +854,50 @@ if (typeof module !== "undefined") module.exports = { SCENES, simulate, marginal
 
   /* --- 振幅長條 --- */
   let barEls = [], meanEl = null;
+  const NOTES = {
+    real: "柱子往上是正振幅、往下是負振幅，長度 1 頂到虛線。量到某個結果的機率 = 振幅²。",
+    phase: "振幅是複數：長條長度是振幅的大小（頂到虛線是 1），下面的指針是相位（0° 朝右、逆時針轉）。機率 = 大小²，相位要靠干涉才看得出來。",
+    count: "長條是計數暫存器 x（q0–q2）的機率；它和工作暫存器糾纏在一起，所以這裡畫機率、不畫振幅。"
+  };
   function buildBars() {
     const box = $("bars"); box.innerHTML = ""; barEls = [];
-    const N = 1 << b.n;
+    const view = b.view || "real", N = view === "count" ? 1 << b.meas.length : 1 << b.n, nb = view === "count" ? b.meas.length : b.n;
     box.classList.toggle("dense", N > 8);
+    $("statewrap").classList.toggle("mag", view !== "real");
+    $("axis").innerHTML = view === "real" ? "<span>+1</span><span>0</span><span>−1</span>" : view === "phase" ? "<span>1</span><span>½</span><span>0</span>" : "<span>100%</span><span>50%</span><span>0</span>";
+    $("barNote").textContent = NOTES[view];
+    $("legPos").hidden = $("legNeg").hidden = view !== "real"; $("legPhase").hidden = view !== "phase";
     for (let i = 0; i < N; i++) {
       const col = document.createElement("div"); col.className = "bcol";
-      col.innerHTML = `<div class="track"><div class="fill"></div></div><span class="lbl">${N > 8 ? bits(i, b.n) : "|" + bits(i, b.n) + "⟩"}</span><span class="amp"></span><span class="pr"></span>`;
+      const lbl = view === "count" || b.dec ? `|${i}⟩` : N > 8 ? bits(i, b.n) : "|" + bits(i, b.n) + "⟩";
+      col.innerHTML = `<div class="track"><div class="fill"></div></div><span class="lbl" title="${bits(i, nb)}">${lbl}</span>` +
+        (view === "phase" ? '<svg class="dial" viewBox="-12 -12 24 24" aria-hidden="true"><circle r="10"/><line x1="0" y1="0" x2="9" y2="0"/></svg>' : "") +
+        '<span class="amp"></span><span class="pr"></span>';
       box.appendChild(col);
-      barEls.push({ fill: col.querySelector(".fill"), amp: col.querySelector(".amp"), pr: col.querySelector(".pr") });
+      barEls.push({ fill: col.querySelector(".fill"), amp: col.querySelector(".amp"), pr: col.querySelector(".pr"), dial: col.querySelector(".dial line") });
     }
     meanEl = null;
     if (b.meanLine) { meanEl = document.createElement("div"); meanEl.className = "mean"; box.appendChild(meanEl); }
     $("meanKey").hidden = !b.meanLine;
   }
   function paintBars(v) {
-    v.forEach((a, i) => {
+    const view = b.view || "real";
+    if (view === "count") {
+      const p = new Array(barEls.length).fill(0);
+      for (let i = 0; i < v.re.length; i++) p[i & (barEls.length - 1)] += prob(v, i);
+      p.forEach((x, i) => { const e = barEls[i]; e.fill.className = "fill p"; e.fill.style.bottom = "0"; e.fill.style.top = ""; e.fill.style.height = Math.min(1, x) * 100 + "%"; e.amp.textContent = ""; e.pr.textContent = fmtPct(x); });
+      return;
+    }
+    if (view === "phase") {
+      barEls.forEach((e, i) => {
+        const m = Math.sqrt(prob(v, i)), ph = Math.atan2(v.im[i], v.re[i]);
+        e.fill.className = "fill p"; e.fill.style.bottom = "0"; e.fill.style.top = ""; e.fill.style.height = Math.min(1, m) * 100 + "%";
+        e.dial.setAttribute("x2", m > 5e-3 ? (9 * Math.cos(ph)).toFixed(2) : 0); e.dial.setAttribute("y2", m > 5e-3 ? (-9 * Math.sin(ph)).toFixed(2) : 0);
+        e.amp.textContent = m > 5e-3 ? "∠" + ((Math.round(ph * 180 / Math.PI) + 360) % 360) + "°" : ""; e.pr.textContent = fmtPct(m * m);
+      });
+      return;
+    }
+    v.re.forEach((a, i) => {
       const e = barEls[i], h = Math.min(1, Math.abs(a)) * 50;
       e.fill.className = "fill " + (a < 0 ? "n" : "p");
       if (a >= 0) { e.fill.style.bottom = "50%"; e.fill.style.top = ""; } else { e.fill.style.top = "50%"; e.fill.style.bottom = ""; }
@@ -741,7 +905,7 @@ if (typeof module !== "undefined") module.exports = { SCENES, simulate, marginal
       e.amp.textContent = fmtAmp(a); e.pr.textContent = fmtPct(a * a);
     });
     if (meanEl) { // 長條區高 160px，振幅 0 在 80px，+1 在 0px
-      const m = v.reduce((x, y) => x + y, 0) / v.length;
+      const m = v.re.reduce((x, y) => x + y, 0) / v.re.length;
       meanEl.style.top = (80 - m * 80) + "px"; meanEl.style.width = $("bars").scrollWidth + "px";
       meanEl.title = "平均值 " + fmtAmp(m);
     }
@@ -785,10 +949,10 @@ if (typeof module !== "undefined") module.exports = { SCENES, simulate, marginal
     $("blochs").innerHTML = "";
     const qs = b.n === 1 ? [0] : (b.bloch || []);
     spheres = qs.map(q => makeSphere(q, b.n === 1 ? "q0" : `單看 q${q}`));
-    $("blochs").classList.toggle("two", qs.length > 1);
+    $("blochs").classList.toggle("two", qs.length === 2); $("blochs").classList.toggle("three", qs.length > 2);
     $("blochNote").hidden = !(b.n > 1 && qs.length);
   }
-  const blochOf = s => [2 * s[0] * s[1], 0, s[0] * s[0] - s[1] * s[1]];
+  const blochOf = s => [2 * s[0] * s[1], 0, s[0] * s[0] - s[1] * s[1]]; // 1 顆位元、實數振幅 [a0, a1]
   const AXIS = { H: [R2, 0, R2], X: [1, 0, 0], Z: [0, 0, 1] };
   function rot(v, a, th) {
     const c = Math.cos(th), s = Math.sin(th), d = dot(a, v);
@@ -797,14 +961,14 @@ if (typeof module !== "undefined") module.exports = { SCENES, simulate, marginal
   }
   /* 1 顆位元：第 st 步內部、進度 t 時的 Bloch 向量（照閘真正的旋轉軸轉 π） */
   function blochPath(st, t) {
-    const ops = b.steps[st - 1].cols.flat(); let v = blochOf(states[st - 1]);
+    const ops = b.steps[st - 1].cols.flat(); let v = blochOf(states[st - 1].re);
     const seg = t * ops.length;
     ops.forEach((op, i) => { const f = Math.max(0, Math.min(1, seg - i)); if (f > 0) v = rot(v, AXIS[op.g], Math.PI * f); });
     return v;
   }
   /* 依目前（可能是內插中的）振幅畫所有 Bloch 球；path 為 1 顆位元時的真實旋轉路徑 */
   function paintSpheres(state, path) {
-    if (b.n === 1 && spheres[0]) { spheres[0].set(path || blochOf(state.map(a => a / (Math.hypot(...state) || 1)))); return; }
+    if (b.n === 1 && spheres[0]) { const m = Math.hypot(...state.re) || 1; spheres[0].set(path || blochOf(state.re.map(a => a / m))); return; }
     spheres.forEach(sp => sp.set(reducedBloch(state, b.n, sp.q)));
   }
 
@@ -814,7 +978,7 @@ if (typeof module !== "undefined") module.exports = { SCENES, simulate, marginal
     const from = shown ?? states[nk], to = states[nk], prevK = k;
     k = nk;
     circuitState(); captionRender(); dotsRender();
-    $("ket").textContent = "|ψ⟩ = " + ketString(to, b.n);
+    $("ket").textContent = "|ψ⟩ = " + ketString(to, b.n, b.ketLabel);
     clearShots();
     if (anim) cancelAnimationFrame(anim);
     const adjacent = Math.abs(prevK - nk) === 1;
@@ -823,7 +987,7 @@ if (typeof module !== "undefined") module.exports = { SCENES, simulate, marginal
     const ease = t => t < .5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
     const tick = now => {
       const t = Math.min(1, (now - t0) / D), e = ease(t);
-      const cur = from.map((a, i) => a + (to[i] - a) * e);
+      const cur = { re: from.re.map((a, i) => a + (to.re[i] - a) * e), im: from.im.map((a, i) => a + (to.im[i] - a) * e) };
       shown = cur; paintBars(cur);
       paintSpheres(cur, b.n === 1 && adjacent ? (nk > prevK ? blochPath(nk, e) : blochPath(prevK, 1 - e)) : null);
       if (t < 1) anim = requestAnimationFrame(tick); else { anim = null; shown = to; paintBars(to); paintSpheres(to); }
