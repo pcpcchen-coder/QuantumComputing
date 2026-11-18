@@ -194,7 +194,7 @@ def html():
         '<p>1. 拿掉的卡：＿＿＿＿＿＿＿＿　我預測出錯的結果：＿＿＿＿＿＿＿＿＿＿＿＿</p><div class="line"></div>'
         '<p>2. 拿掉的卡：＿＿＿＿＿＿＿＿　我預測出錯的結果：＿＿＿＿＿＿＿＿＿＿＿＿</p><div class="line"></div>'
         '<p>3. 很久都不重新校準，會怎樣？</p><div class="line"></div>'
-        '<p>4. 用 operation.html#pulse 驗證：失諧 10 MHz 時，箭頭停在哪裡？＿＿＿＿＿＿＿＿＿＿</p></div>',
+        '<p>4. 用 operation.html#pulse 驗證：失諧 10 MHz 時，箭頭停在哪裡？＿＿＿＿＿＿</p></div>',
         '<h2>說明卡：我的校準流程</h2><div class="box"><p>作品名稱：＿＿＿＿＿＿＿＿＿＿＿＿　日期：＿＿＿＿＿＿</p>'
         '<p>1. 初始化在解決什麼？</p><div class="line"></div><p>2. 為什麼校準的順序不能亂排？</p><div class="line"></div>'
         '<p>3. 生活中哪件事也要「先做 A 才能做 B」？</p><div class="line"></div></div>'
