@@ -4,7 +4,7 @@
 
 ## 筆記目錄
 
-> 所有簡報都另附 PDF 版：[`slides/pdf/`](slides/pdf/)（`JJ_Microwave_Readout_Talk.pdf`、`QC_Peripheral_Systems_Talk.pdf`、`QC_Operation_Talk.pdf`、`Ion_NeutralAtom_Talk.pdf`、`transmon.pdf`、`QC_Power_Supply_Delta.pdf`、`QFISH008_Deutsch_Algorithm.pdf`）。
+> 所有簡報都另附 PDF 版：[`slides/pdf/`](slides/pdf/)（`JJ_Microwave_Readout_Talk.pdf`、`QC_Peripheral_Systems_Talk.pdf`、`QC_Operation_Talk.pdf`、`Ion_NeutralAtom_Talk.pdf`、`transmon.pdf`、`QC_Power_Supply.pdf`、`QFISH008_Deutsch_Algorithm.pdf`）。
 
 1. [約瑟夫森結（JJ）：巨觀量子波、相位差與「穿隧」的真正意義](notes/josephson-junction-wave-and-tunneling.md)
 2. [Transmon：約瑟夫森電感、電路結構與量子位元機制](notes/transmon-josephson-inductance.md)
@@ -40,8 +40,8 @@
 10. [課程擴充規劃：量子電腦學院（參考父子科技學院格式，6 模組 × 16 堂）](docs/量子電腦學院_課程擴充規劃.md)（現有 223 頁簡報與 47 個 3D 場景的盤點、Q001–Q096 課表、新增動畫與簡報清單）
    - 學程資料夾：[`academy/`](academy/README.md)（96 堂課綱、每堂教案、製作指南、製作狀態）
 11. [量子電腦供電設計：文獻回顧與我們的切入點](docs/量子電腦供電設計文獻回顧與我們切入點.md)（超導、離子阱、中性原子三平台分篇細部分析：精密電源、不斷電與分層備援、低干擾設計、能耗擴展，以及我們的產品 × 平台矩陣）
-    - 簡報：[`slides/output/qc-power-supply-delta.pptx`](slides/output/qc-power-supply-delta.pptx)（77 頁，含講稿）；PDF：[`slides/pdf/QC_Power_Supply_Delta.pdf`](slides/pdf/QC_Power_Supply_Delta.pdf)
-    - 簡報內容檔：[`slides/reports/qc-power-delta.js`](slides/reports/qc-power-delta.js)（`cd slides && node build_deck.js reports/qc-power-delta.js` 重新產生）
+    - 簡報：[`slides/output/qc-power-supply.pptx`](slides/output/qc-power-supply.pptx)（77 頁，含講稿）；PDF：[`slides/pdf/QC_Power_Supply.pdf`](slides/pdf/QC_Power_Supply.pdf)
+    - 簡報內容檔：[`slides/reports/qc-power.js`](slides/reports/qc-power.js)（`cd slides && node build_deck.js reports/qc-power.js` 重新產生）
     - 1,000 位元系統供電設計：[`docs/1000量子位元系統供電設計.md`](docs/1000量子位元系統供電設計.md)（線路與熱預算估算、設施用電與備援、接地與磁場、七層技術、我們三階段路線圖；簡報第 47–59 頁）
     - 互動動畫：[`animations/power1000.html`](animations/power1000.html)（8 個 2D 互動場景：全景、規模計算器、低溫熱預算、接地與共模、斷電時間軸、磁場與配電佈局、路線圖、開發計畫；離線可用）
     - 產品開發計畫：[`docs/我們量子供電產品開發計畫.md`](docs/我們量子供電產品開發計畫.md)（三階段路線圖 11 個項目：要做出什麼、開發步驟、困難與解法、檢查點）
@@ -84,7 +84,7 @@ python3 slides/build/anim_ppt_map.py
 | [`operation.html`](https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html)：如何操作量子電腦 | 12 | [`QC_Operation_Talk.pptx`](slides/QC_Operation_Talk.pptx)；[`qfish008-deutsch-algorithm.pptx`](slides/output/qfish008-deutsch-algorithm.pptx) | ✅ 全部有 |
 | [`atoms.html`](https://pcpcchen-coder.github.io/QuantumComputing/animations/atoms.html)：離子阱與中性原子 | 13 | [`Ion_NeutralAtom_Talk.pptx`](slides/Ion_NeutralAtom_Talk.pptx) | ✅ 全部有 |
 | [`transmon-3d.html`](https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html)：Transmon 3D（12 章） | 14 | [`transmon.pptx`](slides/transmon.pptx)；[`qfish008-deutsch-algorithm.pptx`](slides/output/qfish008-deutsch-algorithm.pptx) | ✅ 全部有 |
-| [`power1000.html`](https://pcpcchen-coder.github.io/QuantumComputing/animations/power1000.html)：1,000 位元供電設計 | 8 | [`qc-power-supply-delta.pptx`](slides/output/qc-power-supply-delta.pptx) | ✅ 全部有 |
+| [`power1000.html`](https://pcpcchen-coder.github.io/QuantumComputing/animations/power1000.html)：1,000 位元供電設計 | 8 | [`qc-power-supply.pptx`](slides/output/qc-power-supply.pptx) | ✅ 全部有 |
 | [`lc-vs-jj.html`](https://pcpcchen-coder.github.io/QuantumComputing/animations/lc-vs-jj.html)：LC 與約瑟夫森接面（2D 圖解） | 7 | [`transmon.pptx`](slides/transmon.pptx) | ✅ 全部有 |
 
 ### 場景 → 投影片頁碼
