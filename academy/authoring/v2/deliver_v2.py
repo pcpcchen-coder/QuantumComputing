@@ -59,7 +59,13 @@ def main(lid, short, date, outdir):
     shutil.copyfile(L.v1 / 'production/fact-check.md', P / 'fact-check-v1.md')
     # 教材：v1 教材＋動畫展示導覽
     cz = E / 'output/classroom.zip'
-    shutil.copyfile(L.v1 / 'output/classroom.zip', cz)
+    if (L.v1 / 'output/classroom.zip').is_file():
+        shutil.copyfile(L.v1 / 'output/classroom.zip', cz)
+    else:  # Q004 起沒有單獨交付 v1，直接打包 v1 的 classroom 資料夾
+        with zipfile.ZipFile(cz, 'w', zipfile.ZIP_DEFLATED) as z:
+            for f in sorted((L.v1 / 'classroom').rglob('*')):
+                if f.is_file():
+                    z.write(f, f.relative_to(L.v1 / 'classroom'))
     guide = [f'# {lid} 動畫展示導覽（v2）\n', '影片裡的動畫展示都可以自己操作。線上版不用下載；也可以下載 pcpcchen-coder/QuantumComputing 後，用瀏覽器開啟 `animations/` 裡的檔案。\n']
     for d in L.demos:
         guide.append(f"## {d['title']}\n\n- 開啟：{PAGES[d['page']][1]}#{d['hash']}（{d['scene']}）\n- 影片中的旁白：\n"

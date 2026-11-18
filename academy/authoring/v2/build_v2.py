@@ -21,7 +21,10 @@ Q = HERE.parents[2]
 sys.path.insert(0, str(HERE))
 from demos import DEMOS, PAGES  # noqa: E402
 
-LESSONS = {'Q001': 'q001-not-faster', 'Q002': 'q002-coin-and-arrow', 'Q003': 'q003-measure-and-shots'}
+LESSONS = {'Q001': 'q001-not-faster', 'Q002': 'q002-coin-and-arrow', 'Q003': 'q003-measure-and-shots',
+           'Q004': 'q004-gates-rotate', 'Q005': 'q005-phase-hidden', 'Q006': 'q006-interference-waves',
+           'Q007': 'q007-two-to-the-n', 'Q008': 'q008-entangled-dice', 'Q009': 'q009-circuit-score',
+           'Q010': 'q010-first-program'}
 FPS, FADE = 30, 0.55
 EMU = 12700  # per pt
 PIC = (20, 72, 704, 396)            # pt：簡報上截圖／影片中錄影的位置
@@ -122,10 +125,12 @@ class Lesson:
                 elif kind == 'id': acts.append({'t': t, 'kind': 'id', 'id': a[1]})
                 elif kind == 'slider': acts.append({'t': t, 'kind': 'slider', 'label': a[1], 'value': a[2]})
                 elif kind == 'toggle': acts.append({'t': t, 'kind': 'toggle', 'label': a[1], 'value': a[2]})
+                elif kind == 'sel': acts.append({'t': t, 'kind': 'sel', 'sel': a[1]})
+                elif kind == 'js': acts.append({'t': t, 'kind': 'js', 'code': a[1]})
                 elif kind == 'sweep': acts.append({'t': t, 'kind': 'sweep', 'label': a[1], 'from': a[2], 'to': a[3], 'secs': a[4]})
             page = Q / PAGES[d['page']][0]
             spec = {'url': page.as_uri() + '#' + d['hash'], 'duration': tm['duration'], 'actions': acts,
-                    'shot_t': st[d['shot'][0]] + d['shot'][1], 'settle': 4000 if d['page'] == 'tr' else 2500,
+                    'shot_t': st[d['shot'][0]] + d['shot'][1], 'settle': d.get('settle', 4000 if d['page'] in ('tr', 'bc') else 2500),
                     'video_out': str(self.E / 'assets/visuals' / f"demo_{d['key']}.webm"),
                     'shot_out': str(self.E / 'assets/visuals' / f"demo_{d['key']}.png")}
             sp = self.E / 'work' / f"spec_{d['key']}.json"; dump(sp, spec)

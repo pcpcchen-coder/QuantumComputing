@@ -44,6 +44,11 @@ const { chromium } = require('playwright');
     } else if (a.kind === 'id') {
       const ok = await p.evaluate((id) => { const el = document.getElementById(id); if (!el) return false; window.__flash(el); el.click(); return true; }, a.id);
       if (!ok) throw new Error('id not found: ' + a.id);
+    } else if (a.kind === 'sel') {
+      const ok = await p.evaluate((q) => { const el = document.querySelector(q); if (!el) return false; window.__flash(el); el.click(); return true; }, a.sel);
+      if (!ok) throw new Error('selector not found: ' + a.sel);
+    } else if (a.kind === 'js') {
+      await p.evaluate((code) => { (0, eval)(code); }, a.code);
     } else if (a.kind === 'slider') {
       await p.evaluate(([t, v]) => window.__flash(window.__setSlider(t, v)), [a.label, a.value]);
     } else if (a.kind === 'toggle') {

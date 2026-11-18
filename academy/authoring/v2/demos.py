@@ -9,11 +9,14 @@
   ('sweep', '滑桿標籤', 起, 迄, 秒)    逐步拖動滑桿
   ('toggle', '開關標籤', True/False)
   ('id', 'DOM id')                    transmon-3d.html 用 id 點按鈕
+  ('sel', 'CSS 選擇器')                其他頁面（例如 basic-circuits.html）用選擇器點元素
+  ('js', '程式碼')                     在頁面執行一段程式（最後手段）
 """
 
 PAGES = {
     'op': ('animations/operation.html', 'https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html'),
     'tr': ('animations/transmon-3d.html', 'https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html'),
+    'bc': ('animations/basic-circuits.html', 'https://pcpcchen-coder.github.io/QuantumComputing/animations/basic-circuits.html'),
 }
 
 DEMOS = {
@@ -122,6 +125,13 @@ DEMOS = {
       points=[('九十度', '零和一各約五百次'), ('再跑一次', '數字會差一點'), ('六十度', '零約七百五十次')], shot=(2, 3.5)),
 ],
 }
+
+# Q004 起每課的動畫展示段放在 demos_extra/qxxx.py（定義 LESSON 與 DEMOS 清單）
+import importlib.util as _ilu
+from pathlib import Path as _P
+for _f in sorted((_P(__file__).resolve().parent / 'demos_extra').glob('q*.py')):
+    _sp = _ilu.spec_from_file_location(_f.stem, _f); _m = _ilu.module_from_spec(_sp); _sp.loader.exec_module(_m)
+    DEMOS[_m.LESSON] = _m.DEMOS
 
 for lesson, ds in DEMOS.items():
     for d in ds:
