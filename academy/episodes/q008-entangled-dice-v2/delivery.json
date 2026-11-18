@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q008",
+  "version": "Q008-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-18",
+  "episodePath": "academy/episodes/q008-entangled-dice-v2",
+  "basedOn": "academy/episodes/q008-entangled-dice（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 406.976,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "shrink",
+      "title": "動畫展示：箭頭縮成一點",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#register"
+    },
+    {
+      "key": "circuit",
+      "title": "動畫展示：兩步做出貝爾態",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/basic-circuits.html#bell"
+    },
+    {
+      "key": "measure",
+      "title": "動畫展示：一起量和只量一顆",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#register"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.2,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q008-entangled-dice-v2-zh-TW.mp4": {
+      "bytes": 78925561,
+      "sha256": "5c9fb0bff8ddd70ff857d76b41227d2ccd12404443ab744ea295092586547a21"
+    },
+    "q008-entangled-dice-v2-master.mp4": {
+      "bytes": 81820407,
+      "sha256": "2a730e0ae0f808d937a755f628d06274116238b452286510cbdcb59685b33069"
+    },
+    "narration-only.mp3": {
+      "bytes": 9769108,
+      "sha256": "8b1c36c00e640fec8f9f04aa497ea0a0bbda130cc07313d2b8d1d88c0e332a33"
+    }
+  },
+  "package": {
+    "filename": "Q008-v2_量子電腦學程_糾纏骰子_動畫展示版_2026-11-18.zip",
+    "bytes": 174148895,
+    "sha256": "5b4f09f4cc38d67a0ac0da35f512b2030493fa48620f79e6390a74a464f6d1dc",
+    "parts": [
+      {
+        "name": "Q008-v2_量子電腦學程_糾纏骰子_動畫展示版_2026-11-18.zip.part01",
+        "bytes": 29360128,
+        "sha256": "e9ddc3e0b717cf465b7769cec32b0cf0ac5de8c163eaf86fd23399c2bcb3f440"
+      },
+      {
+        "name": "Q008-v2_量子電腦學程_糾纏骰子_動畫展示版_2026-11-18.zip.part02",
+        "bytes": 29360128,
+        "sha256": "97bcc7471ab281b058e3532c000c4791b6cb28c7216487ac9b51c19bbfcdf261"
+      },
+      {
+        "name": "Q008-v2_量子電腦學程_糾纏骰子_動畫展示版_2026-11-18.zip.part03",
+        "bytes": 29360128,
+        "sha256": "089e88997eed5c63247cb3a4cf3d570854e296f902b34850fbe81cae9b3e108f"
+      },
+      {
+        "name": "Q008-v2_量子電腦學程_糾纏骰子_動畫展示版_2026-11-18.zip.part04",
+        "bytes": 29360128,
+        "sha256": "747a944aec07339332ca2ecb5cf0b45b0ec811d018496d8bdd054fd44110e189"
+      },
+      {
+        "name": "Q008-v2_量子電腦學程_糾纏骰子_動畫展示版_2026-11-18.zip.part05",
+        "bytes": 29360128,
+        "sha256": "0c2462721ad01f2c60a4382a8cfb62f0958c4cb3c6f8a1abc80b165901e60c67"
+      },
+      {
+        "name": "Q008-v2_量子電腦學程_糾纏骰子_動畫展示版_2026-11-18.zip.part06",
+        "bytes": 27348255,
+        "sha256": "d4975277cf13e9a38a4c0b5904326d77238bc5f80d9bed7b890c3c97965d7ca1"
+      }
+    ],
+    "handedOver": "2026-11-18 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔"
+}

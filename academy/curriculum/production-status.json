@@ -40,37 +40,79 @@
     "Q004": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q004-gates-rotate-v2",
+        "evidence": "academy/episodes/q004-gates-rotate-v2/delivery.json"
+      }
     },
     "Q005": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q005-phase-hidden-v2",
+        "evidence": "academy/episodes/q005-phase-hidden-v2/delivery.json"
+      }
     },
     "Q006": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q006-interference-waves-v2",
+        "evidence": "academy/episodes/q006-interference-waves-v2/delivery.json"
+      }
     },
     "Q007": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q007-two-to-the-n-v2",
+        "evidence": "academy/episodes/q007-two-to-the-n-v2/delivery.json"
+      }
     },
     "Q008": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q008-entangled-dice-v2",
+        "evidence": "academy/episodes/q008-entangled-dice-v2/delivery.json"
+      }
     },
     "Q009": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q009-circuit-score-v2",
+        "evidence": "academy/episodes/q009-circuit-score-v2/delivery.json"
+      }
     },
     "Q010": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q010-first-program-v2",
+        "evidence": "academy/episodes/q010-first-program-v2/delivery.json"
+      }
     },
     "Q011": {
       "status": "planned",

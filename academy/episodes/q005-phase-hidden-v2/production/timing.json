@@ -1,0 +1,389 @@
+{
+  "version": 2,
+  "opening": 60.277,
+  "scenes": [
+    {
+      "page": 1,
+      "kind": "slide",
+      "v1slide": 1,
+      "title": "相位：看不見卻最重要",
+      "duration": 27.288,
+      "sentences": [
+        {
+          "text": "歡迎回到父子科技學院的量子電腦學程，我是陳犀牛，今天是量子第五堂，相位：看不見卻最重要，這是依課綱製作的課前教學版，並非實際上課錄音。",
+          "start": 0.0,
+          "end": 12.736009000000001
+        },
+        {
+          "text": "上一堂我們把量子閘想成轉箭頭，知道每一個閘都是繞著某一根軸旋轉。",
+          "start": 12.916009,
+          "end": 19.460023
+        },
+        {
+          "text": "今天要找一個藏起來的東西：兩支箭頭測量起來一模一樣，卻會帶來完全不同的結果。",
+          "start": 19.640023,
+          "end": 27.072041
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q005-phase-hidden/audio/slide_01.mp3"
+    },
+    {
+      "page": 2,
+      "kind": "slide",
+      "v1slide": 2,
+      "title": "三個重點",
+      "duration": 20.28,
+      "sentences": [
+        {
+          "text": "今天有三個重點：什麼是相位；為什麼直接測量看不見它；怎樣先轉一下再測量，就能把它找出來。",
+          "start": 0.0,
+          "end": 8.824014
+        },
+        {
+          "text": "我們會玩一個盲測遊戲，爸爸偷偷動手腳，你要當偵探把它找出來。",
+          "start": 9.004014,
+          "end": 15.428028000000001
+        },
+        {
+          "text": "今天的作品，是一張相位猜猜看紀錄。",
+          "start": 15.608028000000001,
+          "end": 20.064037
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q005-phase-hidden/audio/slide_02.mp3"
+    },
+    {
+      "page": 3,
+      "kind": "slide",
+      "v1slide": 3,
+      "title": "同樣機率，不同相位",
+      "duration": 21.84,
+      "sentences": [
+        {
+          "text": "想像布洛赫球的赤道上有兩支箭頭，一支指向前方，另一支指向正後方。",
+          "start": 0.0,
+          "end": 6.592018
+        },
+        {
+          "text": "兩支箭頭都躺在赤道上，所以測量時都是一半零、一半一，機率完全一樣。",
+          "start": 6.772018,
+          "end": 13.820022999999999
+        },
+        {
+          "text": "它們差的是繞著赤道轉圈的角度，這個角度就叫做相位，兩支箭頭的相位正好差了半圈。",
+          "start": 14.000022999999999,
+          "end": 21.624036999999998
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q005-phase-hidden/audio/slide_03.mp3"
+    },
+    {
+      "page": 4,
+      "kind": "demo",
+      "demo": "hidden",
+      "title": "動畫展示：相位轉了，測量看不出來",
+      "duration": 22.704,
+      "sentences": [
+        {
+          "text": "打開量子位元場景，先按加號那一顆，把箭頭放到赤道，再一次跑一千次測量。",
+          "start": 0.0,
+          "end": 7.408005
+        },
+        {
+          "text": "零和一大約各五百次；接著把相位滑桿拖到一百八十度，箭頭轉到赤道的另一邊。",
+          "start": 7.588005,
+          "end": 14.87601
+        },
+        {
+          "text": "清除統計再跑一千次，結果還是各五百次左右，直接測量完全看不出相位轉過了。",
+          "start": 15.05601,
+          "end": 22.488028
+        }
+      ],
+      "audio": "audio/demo_hidden.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#qubit"
+    },
+    {
+      "page": 5,
+      "kind": "slide",
+      "v1slide": 4,
+      "title": "相位翻轉閘",
+      "duration": 25.584,
+      "sentences": [
+        {
+          "text": "有一個閘專門轉相位，叫做相位翻轉閘，它會繞著從北極到南極那根直立的軸轉半圈。",
+          "start": 0.0,
+          "end": 7.456009
+        },
+        {
+          "text": "箭頭如果在北極，繞著直立的軸轉，方向根本不會變；箭頭如果在赤道前方，就會被轉到正後方。",
+          "start": 7.636009,
+          "end": 16.316009
+        },
+        {
+          "text": "轉完之後，得到零和一的機率還是一半一半，只有相位變了，所以光看測量結果，分不出有沒有轉過。",
+          "start": 16.496009,
+          "end": 25.368027
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q005-phase-hidden/audio/slide_04.mp3"
+    },
+    {
+      "page": 6,
+      "kind": "slide",
+      "v1slide": 5,
+      "title": "比一比：直接量和先轉再量",
+      "duration": 24.288,
+      "sentences": [
+        {
+          "text": "直接測量的話，有沒有翻轉相位，結果都是一半一半，怎麼量都看不出差別。",
+          "start": 0.0,
+          "end": 7.336009000000001
+        },
+        {
+          "text": "可是先用哈達瑪閘轉一下再測量，前方的箭頭會回到北極，後方的箭頭會跑到南極。",
+          "start": 7.516009,
+          "end": 15.260023
+        },
+        {
+          "text": "原本看不見的相位差，就變成了零和一的差別；看不見，不代表不存在，只是要設計對的實驗。",
+          "start": 15.440023,
+          "end": 24.072041
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q005-phase-hidden/audio/slide_05.mp3"
+    },
+    {
+      "page": 7,
+      "kind": "slide",
+      "v1slide": 6,
+      "title": "盲測的規則",
+      "duration": 21.576,
+      "sentences": [
+        {
+          "text": "盲測的規則是：一開始箭頭在北極，先用一次哈達瑪閘，把它放到赤道上。",
+          "start": 0.0,
+          "end": 7.264014
+        },
+        {
+          "text": "接著爸爸偷偷決定，要不要加一個相位翻轉閘，你不能偷看。",
+          "start": 7.444014,
+          "end": 13.340023
+        },
+        {
+          "text": "最後你再用一次哈達瑪閘，然後測量：理想情況下，沒加會得到零，有加會得到一。",
+          "start": 13.520023,
+          "end": 21.360022999999998
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q005-phase-hidden/audio/slide_06.mp3"
+    },
+    {
+      "page": 8,
+      "kind": "demo",
+      "demo": "blindtest",
+      "title": "動畫展示：盲測的兩種答案",
+      "duration": 24.288,
+      "sentences": [
+        {
+          "text": "換到單位元閘場景，按重設回到北極，再按哈達瑪閘，箭頭躺到赤道上。",
+          "start": 0.0,
+          "end": 7.24
+        },
+        {
+          "text": "假設爸爸沒有加相位翻轉，再按一次哈達瑪閘，箭頭轉回北極，得到零的機率是百分之百。",
+          "start": 7.42,
+          "end": 15.572018
+        },
+        {
+          "text": "再試一次有加的情況：哈達瑪、相位翻轉、哈達瑪，箭頭最後停在南極，一定得到一。",
+          "start": 15.752018,
+          "end": 24.072018
+        }
+      ],
+      "audio": "audio/demo_blindtest.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#gates"
+    },
+    {
+      "page": 9,
+      "kind": "slide",
+      "v1slide": 7,
+      "title": "實驗：相位猜猜看",
+      "duration": 21.6,
+      "sentences": [
+        {
+          "text": "每一回都照同樣的步驟：爸爸出題，你按哈達瑪閘，測量，再把猜測寫進紀錄表。",
+          "start": 0.0,
+          "end": 8.008005
+        },
+        {
+          "text": "爸爸公布答案後對一對，猜對就記一分，連續玩十回。",
+          "start": 8.188005,
+          "end": 13.724014
+        },
+        {
+          "text": "也可以故意試一回不轉、直接測量就猜，你會發現只能碰運氣，大約猜對一半。",
+          "start": 13.904014,
+          "end": 21.384014
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q005-phase-hidden/audio/slide_07.mp3"
+    },
+    {
+      "page": 10,
+      "kind": "slide",
+      "v1slide": 8,
+      "title": "三維動畫：單位元閘場景",
+      "duration": 24.264,
+      "sentences": [
+        {
+          "text": "也可以在三維動畫的單位元閘場景裡試：先按重設回到北極，再依序按哈達瑪、相位翻轉、哈達瑪。",
+          "start": 0.0,
+          "end": 9.112018
+        },
+        {
+          "text": "沒有加相位翻轉的時候，箭頭最後回到北極；加了之後，箭頭停在南極。",
+          "start": 9.292018,
+          "end": 16.676032
+        },
+        {
+          "text": "暫停影片，先猜猜看：如果把相位翻轉閘按兩次，箭頭最後會停在哪裡？",
+          "start": 16.856032,
+          "end": 24.04805
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q005-phase-hidden/audio/slide_08.mp3"
+    },
+    {
+      "page": 11,
+      "kind": "slide",
+      "v1slide": 9,
+      "title": "盲測遊戲：出題者和偵探",
+      "duration": 19.392,
+      "sentences": [
+        {
+          "text": "玩遊戲的時候分工：爸爸是出題者，用紙遮住螢幕，偷偷決定加不加。",
+          "start": 0.0,
+          "end": 6.592018
+        },
+        {
+          "text": "你是偵探，只能用哈達瑪閘和測量來破案，說出答案時還要講出理由。",
+          "start": 6.772018,
+          "end": 13.676032
+        },
+        {
+          "text": "幾回之後交換角色，換你出題，爸爸當偵探。",
+          "start": 13.856031999999999,
+          "end": 19.176032
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q005-phase-hidden/audio/slide_09.mp3"
+    },
+    {
+      "page": 12,
+      "kind": "slide",
+      "v1slide": 10,
+      "title": "換你設計關卡",
+      "duration": 24.24,
+      "sentences": [
+        {
+          "text": "下半場換你設計關卡：把一個相位翻轉閘拆成兩步，用兩個只轉四分之一圈的相位閘來代替。",
+          "start": 0.0,
+          "end": 7.888005
+        },
+        {
+          "text": "先試試只加一步：哈達瑪閘之後測量，結果會變成一半一半，偵探沒辦法確定。",
+          "start": 8.068005,
+          "end": 15.740023
+        },
+        {
+          "text": "加滿兩步，相位才差了半圈，結果又變成一定得到一；把這個關卡寫下來，拿去考爸爸。",
+          "start": 15.920023,
+          "end": 24.024037
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q005-phase-hidden/audio/slide_10.mp3"
+    },
+    {
+      "page": 13,
+      "kind": "demo",
+      "demo": "twostep",
+      "title": "動畫展示：兩步的關卡",
+      "duration": 28.296,
+      "sentences": [
+        {
+          "text": "再看兩步的關卡：重設之後按哈達瑪，接著只按一次四分之一圈的相位閘，再按哈達瑪。",
+          "start": 0.0,
+          "end": 7.744014
+        },
+        {
+          "text": "箭頭停在赤道上，讀數顯示零和一各佔一半，偵探沒辦法確定爸爸做了什麼。",
+          "start": 7.924014,
+          "end": 14.900023000000001
+        },
+        {
+          "text": "重設再來一次，這回連按兩次四分之一圈的相位閘，最後的哈達瑪把箭頭送到南極。",
+          "start": 15.080023,
+          "end": 22.560023
+        },
+        {
+          "text": "兩個四分之一圈合起來，效果就和一個相位翻轉閘一樣。",
+          "start": 22.740023,
+          "end": 28.084037000000002
+        }
+      ],
+      "audio": "audio/demo_twostep.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#gates"
+    },
+    {
+      "page": 14,
+      "kind": "slide",
+      "v1slide": 11,
+      "title": "兩小時的相位偵探社",
+      "duration": 24.576,
+      "sentences": [
+        {
+          "text": "兩小時的安排是：開場十分鐘，認識相位十五分鐘，接著四十分鐘玩盲測遊戲，然後休息十分鐘。",
+          "start": 0.0,
+          "end": 8.776009
+        },
+        {
+          "text": "下半場三十分鐘設計兩步的關卡；接著十分鐘交換角色，由你教爸爸，為什麼直接測量看不到相位。",
+          "start": 8.956009,
+          "end": 17.852018
+        },
+        {
+          "text": "最後五分鐘錄音總結，替相位猜猜看紀錄取名字，存一個版本。",
+          "start": 18.032018,
+          "end": 24.360023
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q005-phase-hidden/audio/slide_11.mp3"
+    },
+    {
+      "page": 15,
+      "kind": "slide",
+      "v1slide": 12,
+      "title": "最後一關：教爸爸看見相位",
+      "duration": 28.752,
+      "sentences": [
+        {
+          "text": "最後一關，請不看稿說出：什麼是相位？兩支機率一樣的箭頭，差在哪裡？",
+          "start": 0.0,
+          "end": 7.984014
+        },
+        {
+          "text": "再說明怎樣才能看見相位，並指出一個限制：直接測量看不出相位，一定要先轉一下再量。",
+          "start": 8.164014,
+          "end": 16.532019
+        },
+        {
+          "text": "今天的作品是相位猜猜看紀錄，下一堂我們要學干涉，看看波怎麼互相抵消，相位又怎麼決定結果；我是陳犀牛，保持好奇，我們下次見！",
+          "start": 16.712018999999998,
+          "end": 28.536032999999996
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q005-phase-hidden/audio/slide_12.mp3"
+    }
+  ]
+}

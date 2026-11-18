@@ -1,0 +1,32 @@
+父子科技學院 量子電腦學程 Q006｜干涉：波可以互相抵消（v2・含 3D 動畫展示）
+
+這是依課綱製作的課前教學版，不是實際上課錄音。
+
+父子科技學院量子電腦學程 Q006「干涉：波可以互相抵消」新版（v2）：在原本的教學投影片之間，插入本學程 3D 互動動畫的實際操作示範。
+
+這一版新增的動畫展示
+・一個負號決定結果（https://pcpcchen-coder.github.io/QuantumComputing/animations/basic-circuits.html#interference）
+・轉到九十度，再轉到底（https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#interference）
+・八條路一起干涉（https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#interference）
+
+動畫都可以在瀏覽器直接開啟，自己動手操作。
+
+章節
+00:00 陳犀牛系列片頭
+01:00 干涉：波可以互相抵消
+01:25 三個重點
+01:48 水波會相加
+02:13 雙狹縫實驗
+02:40 比一比：機率和振幅
+03:04 動畫展示：一個負號決定結果
+03:36 相位決定亮或暗
+04:05 動畫展示：轉到九十度，再轉到底
+04:42 實驗一：水盆裡的波
+05:06 實驗二：三維動畫
+05:32 科學實驗：實驗員和安全官
+05:56 換你改造：預測亮或暗
+06:18 動畫展示：八條路一起干涉
+06:53 兩小時的干涉實驗室
+07:20 最後一關：教爸爸什麼是干涉
+
+旁白：微軟 zh-TW-YunJheNeural 神經語音合成（Edge-TTS／Azure 語音服務，同一聲音同一格式）。字幕已燒入影片，開啟 CC 可能重疊。

@@ -7,13 +7,13 @@
 | Q001 | 開學任務：量子電腦不是「更快的電腦」 | 已製作並驗收／待使用者上傳；v2 動畫展示版已製作並驗收 | `academy/episodes/q001-not-faster`<br>v2 動畫展示版：`academy/episodes/q001-not-faster-v2` |
 | Q002 | 硬幣與箭頭：位元 vs 量子位元 | 已製作並驗收／待使用者上傳；v2 動畫展示版已製作並驗收 | `academy/episodes/q002-coin-and-arrow`<br>v2 動畫展示版：`academy/episodes/q002-coin-and-arrow-v2` |
 | Q003 | 一看就變：測量與 shots | 已製作並驗收／待使用者上傳；v2 動畫展示版已製作並驗收 | `academy/episodes/q003-measure-and-shots`<br>v2 動畫展示版：`academy/episodes/q003-measure-and-shots-v2` |
-| Q004 | 量子閘就是轉箭頭 | 規劃完成 | — |
-| Q005 | 相位：看不見卻最重要 | 規劃完成 | — |
-| Q006 | 干涉：波可以互相抵消 | 規劃完成 | — |
-| Q007 | 兩顆、三顆、五十顆：2ⁿ 有多大 | 規劃完成 | — |
-| Q008 | 糾纏：一對神祕骰子 | 規劃完成 | — |
-| Q009 | 量子線路像樂譜 | 規劃完成 | — |
-| Q010 | 第一個量子程式：Bell 態 | 規劃完成 | — |
+| Q004 | 量子閘就是轉箭頭 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q004-gates-rotate-v2` |
+| Q005 | 相位：看不見卻最重要 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q005-phase-hidden-v2` |
+| Q006 | 干涉：波可以互相抵消 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q006-interference-waves-v2` |
+| Q007 | 兩顆、三顆、五十顆：2ⁿ 有多大 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q007-two-to-the-n-v2` |
+| Q008 | 糾纏：一對神祕骰子 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q008-entangled-dice-v2` |
+| Q009 | 量子線路像樂譜 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q009-circuit-score-v2` |
+| Q010 | 第一個量子程式：Bell 態 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q010-first-program-v2` |
 | Q011 | 隱形傳態：傳狀態不傳東西 | 規劃完成 | — |
 | Q012 | Deutsch–Jozsa：一次看穿 | 規劃完成 | — |
 | Q013 | Grover：16 個抽屜找寶藏 | 規劃完成 | — |

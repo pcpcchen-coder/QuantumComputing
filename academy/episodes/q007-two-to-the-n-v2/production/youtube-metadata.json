@@ -1,0 +1,8 @@
+{
+  "title": "父子科技學院 Q007｜兩顆、三顆、五十顆：2ⁿ 有多大（動畫展示版）",
+  "description": "父子科技學院 量子電腦學程 Q007｜兩顆、三顆、五十顆：2ⁿ 有多大（v2・含 3D 動畫展示）\n\n這是依課綱製作的課前教學版，不是實際上課錄音。\n\n父子科技學院量子電腦學程 Q007「兩顆、三顆、五十顆：2ⁿ 有多大」新版（v2）：在原本的教學投影片之間，插入本學程 3D 互動動畫的實際操作示範。\n\n這一版新增的動畫展示\n・每多一顆，位置翻倍（https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#register）\n・振幅很多，讀出來很少（https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#register）\n・記憶體曲線（https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#register）\n\n動畫都可以在瀏覽器直接開啟，自己動手操作。\n\n章節\n00:00 陳犀牛系列片頭\n01:00 兩顆、三顆、五十顆：2ⁿ 有多大\n01:26 三個重點\n01:52 數一數：有幾種組合\n02:11 動畫展示：每多一顆，位置翻倍\n02:34 每一種組合，一個振幅\n02:56 比一比：普通位元和量子位元\n03:16 動畫展示：振幅很多，讀出來很少\n03:35 記憶體爆炸\n04:01 動畫展示：記憶體曲線\n04:27 動手做：米粒和杯子\n04:50 競速：記憶體爆炸\n05:12 競速規則：計算手和裁判\n05:36 換你查查看\n06:00 兩小時的記憶體競速\n06:28 最後一關：教爸爸翻倍的威力\n\n旁白：微軟 zh-TW-YunJheNeural 神經語音合成（Edge-TTS／Azure 語音服務，同一聲音同一格式）。字幕已燒入影片，開啟 CC 可能重疊。\n",
+  "privacyStatus": "private",
+  "madeForKids": null,
+  "reviewStatus": "needs-parent-review",
+  "publicationMode": "manual-user-upload"
+}
