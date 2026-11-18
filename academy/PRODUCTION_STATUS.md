@@ -4,9 +4,9 @@
 
 | 課次 | 主題 | 狀態 | 製作資料夾 |
 |---|---|---|---|
-| Q001 | 開學任務：量子電腦不是「更快的電腦」 | 已製作並驗收／待使用者上傳 | `academy/episodes/q001-not-faster` |
-| Q002 | 硬幣與箭頭：位元 vs 量子位元 | 已製作並驗收／待使用者上傳 | `academy/episodes/q002-coin-and-arrow` |
-| Q003 | 一看就變：測量與 shots | 已製作並驗收／待使用者上傳 | `academy/episodes/q003-measure-and-shots` |
+| Q001 | 開學任務：量子電腦不是「更快的電腦」 | 已製作並驗收／待使用者上傳；v2 動畫展示版已製作並驗收 | `academy/episodes/q001-not-faster`<br>v2 動畫展示版：`academy/episodes/q001-not-faster-v2` |
+| Q002 | 硬幣與箭頭：位元 vs 量子位元 | 已製作並驗收／待使用者上傳；v2 動畫展示版已製作並驗收 | `academy/episodes/q002-coin-and-arrow`<br>v2 動畫展示版：`academy/episodes/q002-coin-and-arrow-v2` |
+| Q003 | 一看就變：測量與 shots | 已製作並驗收／待使用者上傳；v2 動畫展示版已製作並驗收 | `academy/episodes/q003-measure-and-shots`<br>v2 動畫展示版：`academy/episodes/q003-measure-and-shots-v2` |
 | Q004 | 量子閘就是轉箭頭 | 規劃完成 | — |
 | Q005 | 相位：看不見卻最重要 | 規劃完成 | — |
 | Q006 | 干涉：波可以互相抵消 | 規劃完成 | — |

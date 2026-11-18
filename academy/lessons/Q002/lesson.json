@@ -45,7 +45,8 @@
   },
   "curriculumSha256": "493446a21451c8a5c08a1723cfd04436e51cbfa4806049b55a765d22ecf2ba53",
   "episodePaths": [
-    "academy/episodes/q002-coin-and-arrow"
+    "academy/episodes/q002-coin-and-arrow",
+    "academy/episodes/q002-coin-and-arrow-v2"
   ],
   "minutes": 120,
   "status": "verified"
