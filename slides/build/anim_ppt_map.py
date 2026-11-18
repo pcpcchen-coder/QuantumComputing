@@ -40,14 +40,14 @@ DECK_NAMES = {
     "slides/Ion_NeutralAtom_Talk.pptx": "離子阱與中性原子",
     "slides/transmon.pptx": "Transmon",
     "slides/output/qfish008-deutsch-algorithm.pptx": "量子金魚 008 Deutsch",
-    "slides/output/qc-power-supply-delta.pptx": "量子電腦供電設計",
+    "slides/output/qc-power-supply.pptx": "量子電腦供電設計",
     "slides/output/basic-circuits.pptx": "六個基礎量子電路",
 }
 DECK_SHORT = {   # README 精簡表用的簡稱
     "slides/JJ_Microwave_Readout_Talk.pptx": "JJ", "slides/QC_Peripheral_Systems_Talk.pptx": "周邊",
     "slides/QC_Operation_Talk.pptx": "操作", "slides/Ion_NeutralAtom_Talk.pptx": "離子阱",
     "slides/transmon.pptx": "transmon", "slides/output/qfish008-deutsch-algorithm.pptx": "qfish008",
-    "slides/output/qc-power-supply-delta.pptx": "供電", "slides/output/basic-circuits.pptx": "基礎電路",
+    "slides/output/qc-power-supply.pptx": "供電", "slides/output/basic-circuits.pptx": "基礎電路",
 }
 
 
