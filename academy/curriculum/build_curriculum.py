@@ -125,7 +125,7 @@ def build():
         st = status['lessons'][lid]
         (d / 'lesson.json').write_text(json.dumps({
             'lessonId': lid, 'sourceRow': s, 'curriculumSha256': sha,
-            'episodePaths': [st['episodePath']] if st.get('episodePath') else [],
+            'episodePaths': ([st['episodePath']] if st.get('episodePath') else []) + ([st['v2']['episodePath']] if st.get('v2') else []),
             'minutes': 120, 'status': st['status']}, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
         reuse = [f'- 簡報：{x}' for x in s['沿用簡報頁']] + \
                 [f'- 3D 場景：[`{c}`]({scene_link(c, 3)})' for c in s['沿用 3D 場景']]
@@ -168,9 +168,13 @@ def build():
     for les in lessons:
         st = status['lessons'][les['lessonId']]
         ep = f'`{st["episodePath"]}`' if st.get('episodePath') else '—'
+        if st.get('v2'):
+            ep += f'<br>v2 動畫展示版：`{st["v2"]["episodePath"]}`'
         state = label.get(st['status'], st['status'])
         if st.get('publication'):
             state += f'／{label.get(st["publication"], st["publication"])}'
+        if st.get('v2'):
+            state += '；v2 動畫展示版已製作並驗收'
         rows.append(f'| {les["lessonId"]} | {les["sourceRow"]["課程主題"]} | {state} | {ep} |')
     (ACADEMY / 'PRODUCTION_STATUS.md').write_text('\n'.join(rows) + '\n', encoding='utf-8')
     print(f'{len(lessons)} lessons; catalog sha256 {sha[:12]}')
