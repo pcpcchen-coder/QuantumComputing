@@ -729,6 +729,11 @@ nav.chapters {
   const qLabels = [0, 1, 2].map(k => bTag("", 0, 0, "mono small " + QCLS[k]));
   const zoneLabels = ["同頻", "1→2", "1→2", "雙光子", "雙光子"].map(t => bTag(t, 0, 0, "mono small red"));
   const ghostLabel = bTag("反例路徑", 0, 0, "mono small red");
+  // CZ 原理看板（步驟 5 起顯示）：左＝能階圖、右上＝磁通脈衝期間、右下＝四種輸入對照
+  const czCv = document.createElement("canvas"); czCv.width = 1600; czCv.height = 640;
+  const czCx = czCv.getContext("2d"), czTex = new THREE.CanvasTexture(czCv); czTex.encoding = THREE.sRGBEncoding; czTex.anisotropy = 4;
+  const czBoard = new THREE.Mesh(new THREE.PlaneGeometry(15.2, 15.2 * 640 / 1600), new THREE.MeshBasicMaterial({ map: czTex, transparent: true, depthWrite: false }));
+  czBoard.position.set(0.6, 9.4, -4.8); czBoard.rotation.x = -0.22; czBoard.visible = false; cs.add(czBoard);
 
   // =====================================================================
   // 第 7 章：振幅長條——糾纏與 Grover 搜尋（兩顆位元，|q1 q2⟩，索引 = 2·q1 + q2）
@@ -1222,8 +1227,10 @@ nav.chapters {
   const capEl = $("caption"), capK = $("capK"), capP = $("capP"), capBar = $("capBar");
   const csS = { step: 0, t: 0, cue: 0, playing: true, auto: true, anchor: null,
     phi: [0, 0, 0], phiT: [0, 0, 0], exc: [0, 0, 0], zones: false, hiZone: -1,
-    sweep: null, cz: null, ghost: null, pulse: null };
-  let czP20 = 0, czPhase = 0, czDone = false, ghostFlash = 0;
+    sweep: null, cz: null, ghost: null, pulse: null, slow: null, czHi: null, czRow: [], noJJ: false };
+  let czP20 = 0, czPhase = 0, czDone = false, ghostFlash = 0, czU = -1, czF0 = 5.30, czF1 = 5.383, czKey = "";
+  const CZCAM = { target: [0.6, 5.0, CZ0 - 2.6], pos: [1.2, 12.0, CZ0 + 21.5] };       // 自由實驗：看板＋頻率尺＋晶片
+  const CZCAM1 = { target: [3.5, 9.1, CZ0 - 4.8], pos: [3.5, 13.7, CZ0 + 15.7] };        // CZ 原理：正對看板
   const ALLOC = [phiFor(0, 4.90), 0, phiFor(2, 5.30)];
   const smooth = u => u * u * (3 - 2 * u);
   const fNow = k => fOf(k, csS.phi[k]);
@@ -1243,6 +1250,7 @@ nav.chapters {
     const fT = fNow(1) - QC.alpha;
     if (fT > fOf(2, 0) + 0.002) { showCaption(`Q3 最高只到 ${fOf(2, 0).toFixed(3)} GHz，到不了交會點 ${fT.toFixed(3)} GHz（只能往下調）。`, 0, 1); return; }
     csS.cz = { t: 0, p0: csS.phiT[2], p1: phiFor(2, fT) }; czP20 = 0; czPhase = 0; czDone = false;
+    czU = 0; czF0 = fOf(2, csS.cz.p0); czF1 = fOf(2, csS.cz.p1);
   }
   function startGhost() { csS.ghost = { t: 0, f0: fNow(2), f1: fNow(1) + QC.alpha }; }
   function collisions(f) {
@@ -1321,7 +1329,27 @@ nav.chapters {
         [10.5, "再送 5.30 GHz 的 π 脈衝給 Q3：一樣只打中 Q3。", "q2", () => firePulse(2)],
         [14, "任意狀態都由「角度 × 旋轉軸」的組合寫入；SQUID 只決定頻率，不負責寫入。", "chip"],
       ], dur: 18.5 },
-    { name: "CZ 閘", title: "⑤ CZ 閘：刻意短暫拜訪碰撞點",
+    { name: "CZ 原理", title: "⑤ CZ 原理：為什麼只有 |11⟩ 會變號？",
+      body: `<p>CZ 只做一件事：<b>兩顆都是 1 時，狀態乘上 −1</b>。難處在於閘必須「知道兩顆同時是 1」。記號 <b>|Q3 Q2⟩</b>：左邊是要被 Z 線移動的 Q3，右邊是 Q2。</p>
+      <p>上方看板<b>左邊是能階圖</b>：橫軸是 Q3 的頻率，縱軸是各狀態的總能量。能量只能在<b>總能量相等（共振）</b>的兩個狀態之間交換，差太多就跳不過去（耦合 g 只有約 10 MHz）。</p>
+      <p>・<b>一份能量</b>：|10⟩（Q3 有）和 |01⟩（Q2 有）一直差 200 MHz 以上 → 不交換。<br>・<b>兩份能量</b>：|11⟩（各一份）斜率 1，|20⟩（兩份都在 Q3）斜率 2 而且少了 283 MHz（JJ 的非諧性）→ 在 <b>f_Q3 = f_Q2 − α = 5.383 GHz</b> 交會。</p>
+      <p>所以在 5.383 GHz，<b>只有 |11⟩ 找得到交換對象</b>。<b>右上</b>是真正做閘時的磁通脈衝：|11⟩ 流到 |20⟩ 再流回來，繞一整圈，就像 Rabi 振盪轉 2π 回到起點會多一個 −1。<b>右下</b>是四種輸入的對照。</p>`,
+      extra: CZHTML,
+      setup() { setPhi(ALLOC, true); csS.zones = false; csS.exc = [0, 0, 0]; },
+      cues: [
+        [0.3, "CZ 只把 |11⟩ 變號。問題是：閘怎麼「知道」兩顆都是 1？答案藏在上方看板的能階圖裡（記號 |Q3 Q2⟩）。", "cz"],
+        [6, "先看一份能量（能階圖下半）：|10⟩ 是 Q3 有一份、|01⟩ 是 Q2 有一份，兩者差 200 MHz，遠大於耦合 g ≈ 10 MHz → 能量跳不過去。", "cz", () => { csS.czHi = "one"; csS.czRow = [1, 2]; }],
+        [12.5, "再看兩份能量（上半）：|11⟩ 各一份；|20⟩ 兩份都在 Q3，比 2 × f₀₁ 少 283 MHz——這就是 JJ 造成的非諧性。", "cz", () => { csS.czHi = "two"; csS.czRow = [3]; }],
+        [19, "慢動作：用 Z 線把 Q3 往上移。|20⟩ 的斜率是 2、|11⟩ 是 1，兩條線越來越近……", "s2", () => { csS.czHi = "both"; csS.slow = { t: 0, p0: csS.phi[2], p1: phiFor(2, fNow(1) - QC.alpha) }; }],
+        [25, "在 5.383 GHz 交會：|11⟩ 和 |20⟩ 能量相等（共振）；同一時間 |10⟩、|01⟩ 還差 283 MHz。只有 |11⟩ 有交換對象！", "cz", () => { csS.czRow = [3]; }],
+        [31, "真正做閘時不會慢慢移，而是一個幾十 ns 的快速脈衝。先回到 5.30 GHz，再用 XY 線把兩顆都寫成 |1⟩（|11⟩）。", "q1", () => { setPhi(ALLOC); csS.czHi = null; csS.czRow = []; firePulse(1); }],
+        [32.4, null, null, () => firePulse(2)],
+        [34.5, "Z 線送出磁通脈衝（右上）：Q3 跳到 5.383、停住、再回來；|20⟩ 的比例從 0 升到 100% 再回到 0——兩份能量全跑到 Q3，又分回來。", "s2", () => { csS.czRow = [3]; startCZ(); }],
+        [41, "繞完一整圈回到 |11⟩，相位轉了 180°，多了一個 −1：就像 Rabi 振盪轉 2π 回到起點會差一個負號（第 4 章）。只有 |11⟩ 繞圈，所以這個 −1 是看得到的相對相位。", "cz"],
+        [48, "其他三種輸入沒有交換對象，只因 Q3 頻率暫時改變而多一點可預測的相位，用虛擬 Z 補掉 → 結果正好是 CZ：只有 |11⟩ 變號。", "cz", () => { csS.czRow = [0, 1, 2, 3]; }],
+        [55, "如果沒有 JJ（α = 0，紅色虛線）：|20⟩ 要到 5.10 GHz 才和 |11⟩ 交會，但那裡 |10⟩、|01⟩ 也同時共振，單顆能量也會互換 → 分不出「兩顆都是 1」。", "cz", () => { csS.noJJ = true; csS.czRow = [1, 2, 3]; }],
+      ], dur: 63 },
+    { name: "CZ 實戰", title: "⑥ CZ 實戰：交會點就是平常的碰撞點",
       body: `<p>要讓 Q2、Q3 互動，就用磁通脈衝把 Q3 推到 <b>f_Q2 − α = 5.383 GHz</b>。這時 |11⟩ 與 |20⟩ 能量相同，|11⟩ 繞一圈回來多一個 <b>−1 相位</b>，這就是 CZ。</p>
       <p>這個交會點正是平常要避開的「0→1 撞 1→2」碰撞點。另一條路（|11⟩↔|02⟩）要把 Q3 降到 4.817 GHz，途中會掃過 Q2 的 5.10 GHz，造成 |01⟩↔|10⟩ 交換錯誤，所以不選。</p>`,
       extra: CZHTML,
@@ -1335,8 +1363,8 @@ nav.chapters {
         [18, "|11⟩ 的振幅流到 |20⟩ 又流回來，多了一個 −1 相位：CZ 完成，Q3 回到原本的地址。", "q2"],
         [22, "反例：若改走 |11⟩↔|02⟩，Q3 得降到 4.817 GHz，途中會掃過 Q2 的 5.10 → 交換錯誤。", "ruler", () => { csS.hiZone = 1; startGhost(); }],
       ], dur: 28 },
-    { name: "自由實驗", title: "⑥ 換你操作：Z 能調什麼、不能調什麼",
-      body: `<p>拖動三條 Z 線的磁通，試著製造或消除碰撞；再送 π 脈衝看看串擾，或做一次 CZ。</p>
+    { name: "自由實驗", title: "⑦ 換你操作：Z 能調什麼、不能調什麼",
+      body: `<p>拖動三條 Z 線的磁通，試著製造或消除碰撞；再送 π 脈衝看看串擾，或做一次 CZ。拖動 Q2、Q3 時，上方的能階圖會跟著移動，可以觀察交會點在哪裡、為什麼 Q3 到不了就做不了 CZ。</p>
       <p><b>Z 只能調 f₀₁</b>。非諧性（電容幾何）、T₁/T₂（材料缺陷）、耦合強度 g、讀取腔頻率都調不了，要靠校準逐顆處理。目標從來不是讓每顆一樣，而是<b>每顆放在各自的地址</b>，要互動時才短暫對上。</p>`,
       extra: FREEHTML, free: true,
       setup() { setPhi(ALLOC); csS.zones = false; },
@@ -1346,8 +1374,9 @@ nav.chapters {
   function setStep(i) {
     i = Math.max(0, Math.min(STEPS.length - 1, i));
     const S = csS; S.step = i; S.t = 0; S.cue = 0; S.playing = true; S.anchor = null; S.hiZone = -1;
-    S.sweep = null; S.cz = null; S.ghost = null; S.pulse = null;
-    czP20 = 0; czPhase = 0; czDone = false; ghostFlash = 0;
+    S.sweep = null; S.cz = null; S.ghost = null; S.pulse = null; S.slow = null; S.czHi = null; S.czRow = []; S.noJJ = false;
+    czP20 = 0; czPhase = 0; czDone = false; ghostFlash = 0; czU = -1; czKey = "";
+    if (cur === 5) setCam(i === 4 ? CZCAM1 : i === 6 ? CZCAM : null);
     csPulses.forEach(s => s.material.opacity = 0);
     cplMat.forEach(m => m.emissiveIntensity = 0);
     capEl.classList.remove("show");
@@ -1401,9 +1430,10 @@ nav.chapters {
       if (u < 3) v = smooth(u / 3); else if (u < 8) v = 1; else if (u < 11) v = 1 - smooth((u - 8) / 3); else { v = 0; S.sweep = null; }
       S.phi[0] = S.phiT[0] = 0.2 * v;
     }
+    if (S.slow) { const u = Math.min(1, (S.slow.t += dt) / 5.5); S.phi[2] = S.phiT[2] = S.slow.p0 + (S.slow.p1 - S.slow.p0) * smooth(u); if (u >= 1) S.slow = null; }
     let czEnv = 0;
     if (S.cz) {
-      const c = S.cz, u = (c.t += dt); let ud = 0;
+      const c = S.cz, u = (c.t += dt); let ud = 0; czU = Math.min(5, u);
       if (u < 1) czEnv = smooth(u); else if (u < 4) { czEnv = 1; ud = (u - 1) / 3; } else if (u < 5) { czEnv = 1 - smooth(u - 4); ud = 1; } else { ud = 1; S.cz = null; czDone = true; }
       if (S.cz) S.phi[2] = c.p0 + (c.p1 - c.p0) * czEnv;
       czP20 = Math.pow(Math.sin(Math.PI * ud), 2); czPhase = 180 * ud;
@@ -1497,6 +1527,96 @@ nav.chapters {
     const p20 = $("c6p20");
     if (p20) { p20.textContent = czP20.toFixed(2); $("c6ph").textContent = czPhase.toFixed(0) + "°" + (czDone ? "（= −1，CZ 完成）" : ""); $("c6bar").style.width = (czP20 * 100).toFixed(1) + "%"; }
     if (st.free) syncSliders();
+    czBoard.visible = S.step === 4 || S.step === 6;
+    if (czBoard.visible) drawCZ(f);
+  }
+
+  // CZ 原理看板
+  function drawCZ(f) {
+    const S = csS, f2 = f[1], f3 = f[2], al = QC.alpha;
+    const key = [f2.toFixed(4), f3.toFixed(4), S.czHi, S.czRow.join(""), S.noJJ, czU.toFixed(2), czDone].join("|");
+    if (key === czKey) return; czKey = key;
+    const c = czCx, W = 1600, H = 640, TC = "'Noto Sans TC', sans-serif", MO = "'JetBrains Mono', monospace";
+    c.clearRect(0, 0, W, H); c.fillStyle = "rgba(14,18,25,0.92)"; c.strokeStyle = "rgba(232,235,240,0.14)"; c.lineWidth = 2; rr(c, 2, 2, W - 4, H - 4, 18); c.fill(); c.stroke();
+    c.textBaseline = "middle"; c.textAlign = "left";
+    const txt = (t, x, y, col = "#e8ebf0", font = `500 22px ${TC}`, al2 = "left") => { c.fillStyle = col; c.font = font; c.textAlign = al2; c.fillText(t, x, y); c.textAlign = "left"; };
+    const seg = (x1, y1, x2, y2, col, w = 3, dash) => { c.strokeStyle = col; c.lineWidth = w; c.setLineDash(dash || []); c.beginPath(); c.moveTo(x1, y1); c.lineTo(x2, y2); c.stroke(); c.setLineDash([]); };
+    const dot = (x, y, r, col) => { c.fillStyle = col; c.beginPath(); c.arc(x, y, r, 0, Math.PI * 2); c.fill(); };
+    // ---- 左：能階圖 ----
+    txt("① 能階圖（記號 |Q3 Q2⟩）", 28, 34, "#d6b04a", `700 25px ${TC}`);
+    const X0 = 150, X1 = 760, FMIN = 5.05, FMAX = 5.55, xf = v => X0 + (v - FMIN) / (FMAX - FMIN) * (X1 - X0);
+    const T0 = 80, T1 = 330, EMIN = 9.80, EMAX = 10.86, yT = e => T1 - (e - EMIN) / (EMAX - EMIN) * (T1 - T0);
+    const B0 = 408, B1 = 540, yB = e => B1 - (e - 5.0) / 0.56 * (B1 - B0);
+    [[T0, T1, "two", "兩份", "能量"], [B0, B1, "one", "一份", "能量"]].forEach(([a, b, k, n1, n2]) => {
+      const hi = S.czHi === k || S.czHi === "both";
+      c.fillStyle = hi ? "rgba(214,176,74,0.07)" : "rgba(255,255,255,0.02)"; c.strokeStyle = hi ? "#d6b04a" : "rgba(152,161,176,0.3)"; c.lineWidth = hi ? 3 : 1.5;
+      rr(c, X0 - 10, a - 14, X1 - X0 + 20, b - a + 28, 8); c.fill(); c.stroke();
+      txt(n1, 70, (a + b) / 2 - 14, hi ? "#d6b04a" : "#98a1b0", `700 22px ${TC}`, "center");
+      txt(n2, 70, (a + b) / 2 + 14, hi ? "#d6b04a" : "#98a1b0", `700 22px ${TC}`, "center");
+    });
+    c.save(); c.beginPath(); c.rect(X0 - 8, T0 - 12, X1 - X0 + 16, T1 - T0 + 24); c.clip();
+    const curve = (fn, col, w, dash) => { c.strokeStyle = col; c.lineWidth = w; c.setLineDash(dash || []); c.beginPath(); for (let i = 0; i <= 80; i++) { const v = FMIN + (FMAX - FMIN) * i / 80, y = yT(fn(v)); i ? c.lineTo(xf(v), y) : c.moveTo(xf(v), y); } c.stroke(); c.setLineDash([]); };
+    curve(() => 2 * f2 + al, "#5a6272", 2.5);
+    curve(v => f2 + v, "#d6b04a", 4);
+    curve(v => 2 * v + al, "#d77b45", 4);
+    if (S.noJJ) curve(v => 2 * v, "#f0625a", 3, [10, 8]);
+    c.restore();
+    txt("|20⟩ 兩份都在 Q3", X1 - 4, yT(2 * FMAX + al) - 16, "#d77b45", `700 19px ${TC}`, "right");
+    txt("|11⟩ 各一份", X1 - 4, yT(f2 + FMAX) + 20, "#d6b04a", `700 19px ${TC}`, "right");
+    txt("|02⟩ 兩份都在 Q2", X1 - 4, yT(2 * f2 + al) - 14, "#98a1b0", `600 17px ${TC}`, "right");
+    const xs = f2 - al;
+    if (xs > FMIN && xs < FMAX) { c.strokeStyle = "#35b8ac"; c.lineWidth = 3; c.beginPath(); c.arc(xf(xs), yT(f2 + xs), 15, 0, Math.PI * 2); c.stroke(); txt(`交會 ${xs.toFixed(3)}`, xf(xs) + 20, yT(f2 + xs) + 24, "#35b8ac", `700 18px ${MO}`, "right"); }
+    if (S.noJJ) { dot(xf(f2), yT(2 * f2), 8, "#f0625a"); txt("沒有 JJ：交會在 " + f2.toFixed(2), xf(f2) + 14, yT(2 * f2) + 24, "#ef7a73", `700 18px ${TC}`); }
+    seg(xf(FMIN), yB(f2), xf(FMAX), yB(f2), "#d6b04a", 4);
+    seg(xf(FMIN), yB(FMIN), xf(FMAX), yB(FMAX), "#d77b45", 4);
+    txt("|10⟩ Q3 一份", X1 - 4, yB(FMAX) + 20, "#d77b45", `700 19px ${TC}`, "right");
+    txt("|01⟩ Q2 一份", X0 + 6, yB(f2) - 16, "#d6b04a", `700 19px ${TC}`);
+    if (S.noJJ) { dot(xf(f2), yB(f2), 8, "#f0625a"); txt("這裡也共振！", xf(f2) + 14, yB(f2) + 22, "#ef7a73", `700 18px ${TC}`); }
+    for (let v = 5.1; v < 5.56; v += 0.1) { seg(xf(v), B1 + 14, xf(v), B1 + 22, "#98a1b0", 2); txt(v.toFixed(1), xf(v), B1 + 38, "#98a1b0", `500 18px ${MO}`, "center"); }
+    txt("Q3 的頻率（GHz）", (X0 + X1) / 2, B1 + 70, "#98a1b0", `600 19px ${TC}`, "center");
+    // 目前 Q3 頻率的游標與兩個能量差
+    const xm = xf(Math.max(FMIN, Math.min(FMAX, f3))), d2 = Math.abs(f2 - f3 - al) * 1000, d1 = Math.abs(f3 - f2) * 1000;
+    seg(xm, T0 - 12, xm, B1 + 12, "#ffffff", 2.5, [6, 6]);
+    dot(xm, yT(f2 + f3), 7, "#d6b04a"); dot(xm, yT(2 * f3 + al), 7, "#d77b45"); dot(xm, yB(f2), 7, "#d6b04a"); dot(xm, yB(f3), 7, "#d77b45");
+    const res2 = d2 < 15, gapTxt = d => d < 15 ? `差 ${d.toFixed(0)} MHz → 共振，交換 ✓` : `差 ${d.toFixed(0)} MHz ≫ g → 不交換`;
+    txt("|11⟩ 與 |20⟩：" + gapTxt(d2), (X0 + X1) / 2, (T1 + B0) / 2, res2 ? "#35b8ac" : "#cfd5de", `700 20px ${TC}`, "center");
+    txt("|10⟩ 與 |01⟩：" + gapTxt(d1), X0 + 4, B0 + 6, d1 < 15 ? "#ef7a73" : "#cfd5de", `700 19px ${TC}`);
+    // ---- 右上：脈衝期間 ----
+    txt("② 磁通脈衝期間（實際約 50 ns，動畫放慢）", 830, 34, "#d6b04a", `700 25px ${TC}`);
+    const PX0 = 900, PX1 = 1360, tx = u => PX0 + u / 5 * (PX1 - PX0);
+    const env = u => u < 1 ? smooth(u) : u < 4 ? 1 : u < 5 ? 1 - smooth(u - 4) : 0, ud = u => u < 1 ? 0 : u < 4 ? (u - 1) / 3 : 1;
+    const fy = u => 160 - env(u) * 62, py = u => 300 - Math.pow(Math.sin(Math.PI * ud(u)), 2) * 95;
+    seg(PX0, 300, PX1, 300, "rgba(152,161,176,0.5)", 1.5); seg(PX0, 160, PX1, 160, "rgba(152,161,176,0.25)", 1.5);
+    txt(`Q3 頻率 ${czF0.toFixed(2)} → ${czF1.toFixed(3)} GHz`, 840, 74, "#d77b45", `700 19px ${TC}`);
+    txt("P(|20⟩)：兩份能量都在 Q3", 840, 186, "#35b8ac", `700 19px ${TC}`);
+    const trace = (fy2, col, upto, w) => { c.strokeStyle = col; c.lineWidth = w; c.beginPath(); for (let i = 0; i <= 100; i++) { const u = 5 * i / 100; if (u > upto + 1e-9) break; i ? c.lineTo(tx(u), fy2(u)) : c.moveTo(tx(u), fy2(u)); } c.stroke(); };
+    c.globalAlpha = 0.25; trace(fy, "#d77b45", 5, 3); trace(py, "#35b8ac", 5, 3); c.globalAlpha = 1;
+    if (czU >= 0) { trace(fy, "#d77b45", czU, 4); trace(py, "#35b8ac", czU, 4); seg(tx(czU), 90, tx(czU), 306, "#ffffff", 2); }
+    txt("0%", PX0 - 10, 300, "#98a1b0", `500 16px ${MO}`, "right"); txt("100%", PX0 - 10, 205, "#98a1b0", `500 16px ${MO}`, "right");
+    // 相位指針
+    const cx0 = 1480, cy0 = 190, rad = 60, ang = czPhase * Math.PI / 180;
+    c.strokeStyle = "rgba(152,161,176,0.5)"; c.lineWidth = 2; c.beginPath(); c.arc(cx0, cy0, rad, 0, Math.PI * 2); c.stroke();
+    seg(cx0, cy0, cx0 + rad * Math.cos(ang), cy0 - rad * Math.sin(ang), czDone ? "#f0625a" : "#d6b04a", 5);
+    txt("+1", cx0 + rad + 8, cy0, "#98a1b0", `600 17px ${MO}`); txt("−1", cx0 - rad - 8, cy0, czDone ? "#ef7a73" : "#98a1b0", `700 17px ${MO}`, "right");
+    txt("|11⟩ 的相位", cx0, cy0 - rad - 22, "#cfd5de", `700 19px ${TC}`, "center");
+    txt(czDone ? "180° → 乘上 −1" : `${czPhase.toFixed(0)}°`, cx0, cy0 + rad + 24, czDone ? "#ef7a73" : "#cfd5de", `700 19px ${TC}`, "center");
+    // ---- 右下：四種輸入 ----
+    txt("③ 四種輸入各發生什麼", 830, 352, "#d6b04a", `700 25px ${TC}`);
+    const rows = [
+      ["|00⟩", "沒有能量", "—", "|00⟩"],
+      ["|01⟩", "Q2 一份", `|10⟩ 差 ${d1.toFixed(0)} MHz ✗`, "|01⟩ ＋局部相位"],
+      ["|10⟩", "Q3 一份", `|01⟩ 差 ${d1.toFixed(0)} MHz ✗`, "|10⟩ ＋局部相位"],
+      ["|11⟩", "各一份", `|20⟩ 差 ${d2.toFixed(0)} MHz ${res2 ? "✓" : "✗"}`, czDone ? "−|11⟩ ＋局部相位" : "（繞一圈後揭曉）"],
+    ];
+    const CX = [845, 935, 1060, 1325];
+    [["輸入", 0], ["意思", 1], ["交換對象", 2], ["結束後", 3]].forEach(([t, k]) => txt(t, CX[k], 392, "#98a1b0", `600 18px ${TC}`));
+    rows.forEach((r, i) => {
+      const y = 430 + i * 40, hi = S.czRow.includes(i);
+      if (hi) { c.fillStyle = "rgba(214,176,74,0.14)"; rr(c, 832, y - 18, 750, 36, 6); c.fill(); }
+      r.forEach((t, k) => txt(t, CX[k], y, i === 3 && k === 3 && czDone ? "#ef7a73" : k === 0 ? "#e8ebf0" : "#cfd5de", k === 0 ? `700 20px ${MO}` : `600 19px ${TC}`));
+    });
+    txt("局部相位用虛擬 Z（0 ns）補掉 → 只剩 |11⟩ 的 −1：這就是 CZ。", 845, 600, "#35b8ac", `700 19px ${TC}`);
+    czTex.needsUpdate = true;
   }
 
   // =====================================================================
@@ -1573,7 +1693,7 @@ nav.chapters {
     });
     circTex.needsUpdate = true;
   }
-  if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => { circKey = ""; });
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => { circKey = ""; czKey = ""; });
 
   const G7STEPS = [
     { name: "糾纏", title: "① 糾纏：CZ 只翻一個負號", circuit: C_BELL,
