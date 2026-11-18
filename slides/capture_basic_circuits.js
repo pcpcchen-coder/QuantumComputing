@@ -37,7 +37,6 @@ const PAGE = 'file://' + path.resolve(__dirname, '../animations/basic-circuits.h
   await open('interference', 2); await measure(); await shot('interf_z');   // Z 之後：機率仍各半，Bloch 指向 −x
   await open('bell', 2); await measure(); await shot('bell_final');         // Φ⁺：只有 00、11
   await open('deutsch', 3); await shot('deutsch_oracle');                   // 黑盒之後：q0 = 1 的兩根變號
-  await open('deutsch', 4); await measure(); await shot('deutsch_final');   // 量到 q0 = 1 → 平衡
   await open('bv', 4); await measure(); await shot('bv_final');             // 密碼 101
 
   await b.close();
