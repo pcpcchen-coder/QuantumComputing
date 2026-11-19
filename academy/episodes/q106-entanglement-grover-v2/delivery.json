@@ -99,7 +99,23 @@
   "drive": {
     "folderId": "1bi-WOn7ipXPr978g1JqWu1DFCPwySyyb",
     "uploaded": "2026-11-19",
-    "files": [],
-    "complete": false
+    "files": [
+      {
+        "name": "Q106 糾纏與Grover：糾纏與兩位元 Grover（動畫展示版）.mp4",
+        "id": "1LIhH8TITMsHyGZeBipr9vhp4DMR4LpRC",
+        "link": "https://drive.google.com/file/d/1LIhH8TITMsHyGZeBipr9vhp4DMR4LpRC/view?usp=drivesdk"
+      },
+      {
+        "name": "Q106 糾纏與Grover（動畫展示版）簡報.pptx",
+        "id": "1pn9KUxoCnHCNMC_F6kNgNrPTqRtQ-dPw",
+        "link": "https://docs.google.com/presentation/d/1pn9KUxoCnHCNMC_F6kNgNrPTqRtQ-dPw/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true"
+      },
+      {
+        "name": "Q106 糾纏與Grover 教材.zip",
+        "id": "11lxzGg14hWdxsIF9p8tb8w10__Kvdvsy",
+        "link": "https://drive.google.com/file/d/11lxzGg14hWdxsIF9p8tb8w10__Kvdvsy/view?usp=drivesdk"
+      }
+    ],
+    "complete": true
   }
 }

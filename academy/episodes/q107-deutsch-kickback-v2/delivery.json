@@ -99,7 +99,23 @@
   "drive": {
     "folderId": "1bi-WOn7ipXPr978g1JqWu1DFCPwySyyb",
     "uploaded": "2026-11-19",
-    "files": [],
-    "complete": false
+    "files": [
+      {
+        "name": "Q107 相位回踢盲測：Deutsch 演算法與相位回踢（動畫展示版）.mp4",
+        "id": "1lC_PS6s7I7qbWhtzA3rtOvI8NfSCNAyH",
+        "link": "https://drive.google.com/file/d/1lC_PS6s7I7qbWhtzA3rtOvI8NfSCNAyH/view?usp=drivesdk"
+      },
+      {
+        "name": "Q107 相位回踢盲測（動畫展示版）簡報.pptx",
+        "id": "11jh_iZVBUUqx7i4jKsnOBSjX1Cm_6Tq7",
+        "link": "https://docs.google.com/presentation/d/11jh_iZVBUUqx7i4jKsnOBSjX1Cm_6Tq7/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true"
+      },
+      {
+        "name": "Q107 相位回踢盲測 教材.zip",
+        "id": "14-l-nhCu1f311HF8YUoQVO-_lYfqfGU8",
+        "link": "https://drive.google.com/file/d/14-l-nhCu1f311HF8YUoQVO-_lYfqfGU8/view?usp=drivesdk"
+      }
+    ],
+    "complete": true
   }
 }
