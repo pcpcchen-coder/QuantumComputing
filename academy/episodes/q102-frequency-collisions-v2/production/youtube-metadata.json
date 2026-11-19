@@ -1,0 +1,8 @@
+{
+  "title": "父子科技學院 Q102｜頻率配置與頻率碰撞（動畫展示版）",
+  "description": "父子科技學院 量子電腦學程 Q102｜頻率配置與頻率碰撞（v2・含 3D 動畫展示）\n\n這是依課綱製作的課前教學版，不是實際上課錄音。\n\n父子科技學院量子電腦學程 Q102「頻率配置與頻率碰撞」新版（v2）：在原本的教學投影片之間，插入本學程 3D 互動動畫的實際操作示範。\n\n這一版新增的動畫展示\n・撞上隱藏的頻率（https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#case）\n・禁區和旁觀者（https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#case）\n・找第二個空位（https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#case）\n\n動畫都可以在瀏覽器直接開啟，自己動手操作。\n\n章節\n00:00 陳犀牛系列片頭\n01:00 頻率配置與頻率碰撞\n01:30 今天的頭目戰：三關\n01:52 為什麼頻率要錯開\n02:21 鄰居的五個禁區\n02:53 動畫展示：撞上隱藏的頻率\n03:34 比一比：棋盤格和地址\n04:01 動畫展示：禁區和旁觀者\n04:40 排頻率三步\n05:10 我們真的檢查了一次\n05:37 動畫展示：找第二個空位\n06:13 哪裡容易錯\n06:46 頭目戰：排頻師和頭目\n07:10 換你改造：五顆位元\n07:33 兩小時的排頻率實驗室\n07:59 最後一關：教爸爸排頻率\n\n旁白：微軟 zh-TW-YunJheNeural 神經語音合成（Edge-TTS／Azure 語音服務，同一聲音同一格式）。字幕已燒入影片，開啟 CC 可能重疊。\n",
+  "privacyStatus": "private",
+  "madeForKids": null,
+  "reviewStatus": "needs-parent-review",
+  "publicationMode": "manual-user-upload"
+}

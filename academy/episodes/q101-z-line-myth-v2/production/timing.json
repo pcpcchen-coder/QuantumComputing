@@ -1,0 +1,399 @@
+{
+  "version": 2,
+  "opening": 60.277,
+  "scenes": [
+    {
+      "page": 1,
+      "kind": "slide",
+      "v1slide": 1,
+      "title": "迷思修正：Z 線不是把位元調成一樣",
+      "duration": 32.448,
+      "sentences": [
+        {
+          "text": "歡迎回到父子科技學院的量子電腦學程，我是陳犀牛，今天是量子第一百零一堂，迷思修正：磁通線不是把位元調成一樣，這是依課綱製作的課前教學版，並非實際上課錄音。",
+          "start": 0.0,
+          "end": 14.128005
+        },
+        {
+          "text": "上一堂我們學到，微波驅動線負責寫入狀態，超導量子干涉元件加上磁通線，負責決定每顆位元的頻率。",
+          "start": 14.308005,
+          "end": 23.540022999999998
+        },
+        {
+          "text": "今天要當偵探，抓出一個聽起來很合理、其實方向相反的想法，再用三維動畫找證據把它修正。",
+          "start": 23.720022999999998,
+          "end": 32.232040999999995
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q101-z-line-myth/audio/slide_01.mp3"
+    },
+    {
+      "page": 2,
+      "kind": "slide",
+      "v1slide": 2,
+      "title": "偵探辦案：今天的案子",
+      "duration": 27.384,
+      "sentences": [
+        {
+          "text": "案子是這樣的：有個學生說，只要把磁通線控制好，就能把很多顆位元調成特性差不多、甚至一模一樣。",
+          "start": 0.0,
+          "end": 8.968005
+        },
+        {
+          "text": "這句話有一部分對、一部分錯，偵探的工作，就是把對的留下，把錯的圈出來，再找出證據。",
+          "start": 9.148005,
+          "end": 18.164014
+        },
+        {
+          "text": "今天的作品是一張迷思修正卡：左邊寫錯的說法，右邊寫正確的說法，下面附上動畫裡找到的證據。",
+          "start": 18.344014,
+          "end": 27.168028
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q101-z-line-myth/audio/slide_02.mp3"
+    },
+    {
+      "page": 3,
+      "kind": "slide",
+      "v1slide": 3,
+      "title": "線索一：本來就是量子位元",
+      "duration": 24.912,
+      "sentences": [
+        {
+          "text": "第一個線索：學生以為，是微波驅動線讓電路來回振盪，電路才變成量子位元。",
+          "start": 0.0,
+          "end": 7.720000000000001
+        },
+        {
+          "text": "其實因果反了：十字電容加上約瑟夫森接面，晶片一冷下來本來就是量子位元，而且幾乎都待在零態。",
+          "start": 7.9,
+          "end": 16.964014
+        },
+        {
+          "text": "微波驅動線做的事，是送出一道對準頻率的微波脈衝，改變它的狀態，也就是寫入。",
+          "start": 17.144014,
+          "end": 24.696032
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q101-z-line-myth/audio/slide_03.mp3"
+    },
+    {
+      "page": 4,
+      "kind": "slide",
+      "v1slide": 4,
+      "title": "線索二：Z 線能做什麼",
+      "duration": 25.848,
+      "sentences": [
+        {
+          "text": "第二個線索：磁通線的電流產生磁通，穿過兩個約瑟夫森接面圍成的小迴路，就能改變位元的頻率。",
+          "start": 0.0,
+          "end": 8.536009
+        },
+        {
+          "text": "它的用途不只修正製程誤差，還能閃開材料裡會飄移的小缺陷，以及做雙位元閘時短暫調整頻率。",
+          "start": 8.716009,
+          "end": 16.940023
+        },
+        {
+          "text": "不過頻率最高點在磁通是零的地方，所以只能往下調；離這個甜蜜點越遠，越容易受磁通雜訊干擾。",
+          "start": 17.120023,
+          "end": 25.632041
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q101-z-line-myth/audio/slide_04.mp3"
+    },
+    {
+      "page": 5,
+      "kind": "demo",
+      "demo": "squid",
+      "title": "動畫展示：磁通線只能往下調",
+      "duration": 38.904,
+      "sentences": [
+        {
+          "text": "打開晶片動畫的案例章，進入自由實驗，按回到製程原貌，三顆的磁通都歸零，左邊小圖上的點都疊在曲線最高點。",
+          "start": 0.0,
+          "end": 10.048005
+        },
+        {
+          "text": "現在把第一顆的磁通慢慢加大，它的點沿著曲線往下滑，頻率尺上的青色線也往左移，頻率一路往下掉。",
+          "start": 10.228005,
+          "end": 19.004013999999998
+        },
+        {
+          "text": "第一顆移開之後，它身上的紅圈消失了，只剩第二、三顆之間還有碰撞；離開最高點，青色線還會微微抖動，代表磁通雜訊開始有影響。",
+          "start": 19.184013999999998,
+          "end": 30.792018999999996
+        },
+        {
+          "text": "把滑桿拉回零，青色線回到最高點，再也上不去，所以磁通線只能把頻率往下調。",
+          "start": 30.972018999999996,
+          "end": 38.692018999999995
+        }
+      ],
+      "audio": "audio/demo_squid.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#case"
+    },
+    {
+      "page": 6,
+      "kind": "slide",
+      "v1slide": 5,
+      "title": "線索三：Z 只調得動頻率",
+      "duration": 26.088,
+      "sentences": [
+        {
+          "text": "第三個線索最重要：磁通線只調得動一個參數，就是頻率。",
+          "start": 0.0,
+          "end": 5.704014
+        },
+        {
+          "text": "非諧性由電容的形狀決定，壽命由材料缺陷決定，和鄰居的耦合強度、讀取共振腔的頻率，也都是做好就固定，磁通線一個都調不動。",
+          "start": 5.884014,
+          "end": 17.444014
+        },
+        {
+          "text": "所以調成特性一模一樣本來就做不到；每顆位元的差異，要靠校準軟體逐顆記錄、逐顆處理。",
+          "start": 17.624014,
+          "end": 25.872019
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q101-z-line-myth/audio/slide_05.mp3"
+    },
+    {
+      "page": 7,
+      "kind": "slide",
+      "v1slide": 6,
+      "title": "頻率一樣反而是災難",
+      "duration": 23.4,
+      "sentences": [
+        {
+          "text": "更關鍵的是，就算頻率真的調成一樣，也不是好事，反而是災難。",
+          "start": 0.0,
+          "end": 6.5200000000000005
+        },
+        {
+          "text": "相鄰兩顆頻率一樣，就會互相交換能量；送給其中一顆的微波脈衝，也分不清到底要打哪一顆，這叫串擾。",
+          "start": 6.7,
+          "end": 15.668005
+        },
+        {
+          "text": "所以正確做法叫頻率配置：平常每顆位元停在各自分配到的頻率，彼此刻意錯開。",
+          "start": 15.848005,
+          "end": 23.184014
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q101-z-line-myth/audio/slide_06.mp3"
+    },
+    {
+      "page": 8,
+      "kind": "demo",
+      "demo": "crosstalk",
+      "title": "動畫展示：頻率太近就串擾",
+      "duration": 34.056,
+      "sentences": [
+        {
+          "text": "回到案例章的第一步：三顆可調的超導量子位元排成一列，剛做好的時候，磁通都是零。",
+          "start": 0.0,
+          "end": 8.032018
+        },
+        {
+          "text": "看上方的頻率尺，第一顆和第二顆的線幾乎疊在一起，被紅色帶子罩住，三顆外面也都亮起紅圈，右邊面板寫著碰撞三處。",
+          "start": 8.212018,
+          "end": 18.764036
+        },
+        {
+          "text": "接著換到自由實驗，按回到製程原貌，只對第一顆送一道翻轉脈衝。",
+          "start": 18.944036,
+          "end": 25.152041
+        },
+        {
+          "text": "第一顆亮起青光，可是隔壁的第二顆也跟著微微發亮，頻率太近，脈衝分不清目標，這就是串擾。",
+          "start": 25.332041,
+          "end": 33.844059
+        }
+      ],
+      "audio": "audio/demo_crosstalk.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#case"
+    },
+    {
+      "page": 9,
+      "kind": "slide",
+      "v1slide": 7,
+      "title": "耦合什麼時候打開",
+      "duration": 28.752,
+      "sentences": [
+        {
+          "text": "那兩顆位元要合作時怎麼辦？這時磁通線送出一個很快的脈衝，把其中一顆短暫推到特定的頻率，讓兩顆對上。",
+          "start": 0.0,
+          "end": 10.336009
+        },
+        {
+          "text": "對上的那段時間，兩顆就能交換能量、互相影響，像把耦合打開；做完立刻調回原位，耦合又像關上了。",
+          "start": 10.516009,
+          "end": 19.892018
+        },
+        {
+          "text": "動畫裡的例子，是把第三顆往上推一小段，停留幾十奈秒再回來，就完成一個受控相位翻轉閘。",
+          "start": 20.072018,
+          "end": 28.536032
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q101-z-line-myth/audio/slide_07.mp3"
+    },
+    {
+      "page": 10,
+      "kind": "demo",
+      "demo": "coupling",
+      "title": "動畫展示：調開，需要時才對上",
+      "duration": 37.56,
+      "sentences": [
+        {
+          "text": "最後一段，在自由實驗先按回到製程原貌，第一、二顆擠在一起，紅色帶子和紅圈都冒出來。",
+          "start": 0.0,
+          "end": 8.704014
+        },
+        {
+          "text": "再按回到配置，三顆各自搬到相隔大約兩億赫茲的位置，紅色全部消失，這就是頻率配置。",
+          "start": 8.884014,
+          "end": 17.012019000000002
+        },
+        {
+          "text": "想讓第二顆和第三顆合作，就按受控相位翻轉閘，第三顆被短暫往上推，兩顆中間的耦合電容亮起青光，紅圈也刻意亮起來。",
+          "start": 17.192019000000002,
+          "end": 27.792019000000003
+        },
+        {
+          "text": "幾秒後第三顆回到原本的位置，青光熄滅，耦合又關上；右邊面板的相位累積到一百八十度，閘就完成了。",
+          "start": 27.972019000000003,
+          "end": 37.348028000000006
+        }
+      ],
+      "audio": "audio/demo_coupling.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#case"
+    },
+    {
+      "page": 11,
+      "kind": "slide",
+      "v1slide": 8,
+      "title": "樂團比喻：Z 是調音師",
+      "duration": 21.096,
+      "sentences": [
+        {
+          "text": "用樂團來比喻：磁通線是調音師，任務是把每把樂器調到各自分配到的音，而不是全部調成同一個音。",
+          "start": 0.0,
+          "end": 8.248005000000001
+        },
+        {
+          "text": "要合奏的時候，指揮才讓兩把樂器短暫對上同一個音，演奏完又分開。",
+          "start": 8.428005,
+          "end": 14.804014000000002
+        },
+        {
+          "text": "記住一句話：位元之間不一樣不是問題，不穩定才是問題。",
+          "start": 14.984014000000002,
+          "end": 20.880023
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q101-z-line-myth/audio/slide_08.mp3"
+    },
+    {
+      "page": 12,
+      "kind": "slide",
+      "v1slide": 9,
+      "title": "偵探辦案：偵探和嫌疑人",
+      "duration": 26.616,
+      "sentences": [
+        {
+          "text": "實作時我們來玩偵探辦案：你是偵探，負責操作動畫、找證據；爸爸扮演嫌疑人，負責說出錯誤的說法。",
+          "start": 0.0,
+          "end": 9.736009000000001
+        },
+        {
+          "text": "在案例章的自由實驗，把位元的頻率調近，看紅色帶子什麼時候冒出來；再調開，看它什麼時候消失。",
+          "start": 9.916009,
+          "end": 18.788027
+        },
+        {
+          "text": "每找到一個證據，就寫進證據欄：哪一步、看到什麼、證明了哪一句話是錯的。",
+          "start": 18.968027,
+          "end": 26.400045
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q101-z-line-myth/audio/slide_09.mp3"
+    },
+    {
+      "page": 13,
+      "kind": "slide",
+      "v1slide": 10,
+      "title": "換你改造：三十秒迷思修正",
+      "duration": 21.192,
+      "sentences": [
+        {
+          "text": "下半場換你改造：寫一段三十秒的迷思修正說明，像在跟同學講解一樣。",
+          "start": 0.0,
+          "end": 6.760000000000001
+        },
+        {
+          "text": "結構只有三句：大家常以為什麼，其實是什麼，證據在哪裡。",
+          "start": 6.94,
+          "end": 13.076009
+        },
+        {
+          "text": "寫好之後計時念一次，超過三十秒就刪掉多餘的字，念得太快就換成更簡單的說法。",
+          "start": 13.256009,
+          "end": 20.976009
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q101-z-line-myth/audio/slide_10.mp3"
+    },
+    {
+      "page": 14,
+      "kind": "slide",
+      "v1slide": 11,
+      "title": "兩小時的偵探辦案",
+      "duration": 25.368,
+      "sentences": [
+        {
+          "text": "兩小時的安排是：開場十分鐘，概念示範十五分鐘，接著四十分鐘一起在案例章把頻率調近再調開，然後休息十分鐘。",
+          "start": 0.0,
+          "end": 9.784014
+        },
+        {
+          "text": "下半場三十分鐘寫迷思修正說明，接著十分鐘交換角色，由你教爸爸怎麼操作、為什麼要錯開頻率。",
+          "start": 9.964014,
+          "end": 18.908028
+        },
+        {
+          "text": "最後五分鐘錄音總結，替迷思修正卡取名字，存一個版本。",
+          "start": 19.088028,
+          "end": 25.152042
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q101-z-line-myth/audio/slide_11.mp3"
+    },
+    {
+      "page": 15,
+      "kind": "slide",
+      "v1slide": 12,
+      "title": "最後一關：教爸爸修正迷思",
+      "duration": 26.544,
+      "sentences": [
+        {
+          "text": "最後一關，請不看稿說出：磁通線能調什麼、不能調什麼？為什麼頻率要錯開？",
+          "start": 0.0,
+          "end": 7.912018
+        },
+        {
+          "text": "再指出一個注意事項：頻率太近會發生碰撞和串擾，所以配置時要刻意錯開。",
+          "start": 8.092018,
+          "end": 15.068027
+        },
+        {
+          "text": "今天的作品是迷思修正卡，下一堂我們要學頻率配置與頻率碰撞，親手替三顆位元排頻率；我是陳犀牛，保持好奇，我們下次見！",
+          "start": 15.248027,
+          "end": 26.328027
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q101-z-line-myth/audio/slide_12.mp3"
+    }
+  ]
+}

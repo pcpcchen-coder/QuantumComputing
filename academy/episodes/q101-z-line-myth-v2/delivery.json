@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q101",
+  "version": "Q101-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-19",
+  "episodePath": "academy/episodes/q101-z-line-myth-v2",
+  "basedOn": "academy/episodes/q101-z-line-myth（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 480.466667,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "squid",
+      "title": "動畫展示：磁通線只能往下調",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#case"
+    },
+    {
+      "key": "crosstalk",
+      "title": "動畫展示：頻率太近就串擾",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#case"
+    },
+    {
+      "key": "coupling",
+      "title": "動畫展示：調開，需要時才對上",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#case"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.4,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q101-z-line-myth-v2-zh-TW.mp4": {
+      "bytes": 87841357,
+      "sha256": "ce04013137a482c6b0026ddd6040e84b6a562af58f07565bffad99125a1c7e97"
+    },
+    "q101-z-line-myth-v2-master.mp4": {
+      "bytes": 90485499,
+      "sha256": "5faa784a60b9cafe92b152c038bb6deb683dea06a8f193113c193cbe24b99616"
+    },
+    "narration-only.mp3": {
+      "bytes": 11532244,
+      "sha256": "8adb23102bacb2e7585bc55852bc04ed32893c7e3c2198fa612cae3179563ea7"
+    }
+  },
+  "package": {
+    "filename": "Q101-v2_量子電腦學程_迷思修正_動畫展示版_2026-11-19.zip",
+    "bytes": 193781859,
+    "sha256": "0681948983dc3cbe10d3493145410fdc7b0b1120cadd929cadb08d7cd66a7e2f",
+    "parts": [
+      {
+        "name": "Q101-v2_量子電腦學程_迷思修正_動畫展示版_2026-11-19.zip.part01",
+        "bytes": 29360128,
+        "sha256": "52ce5e76eccc41f61cf4ad935d324c4459708ec9c761928bba488bc653a9255d"
+      },
+      {
+        "name": "Q101-v2_量子電腦學程_迷思修正_動畫展示版_2026-11-19.zip.part02",
+        "bytes": 29360128,
+        "sha256": "b619a209da14d5eeb921827203b3ec5fe043df46008904164e0014ae428bb1ec"
+      },
+      {
+        "name": "Q101-v2_量子電腦學程_迷思修正_動畫展示版_2026-11-19.zip.part03",
+        "bytes": 29360128,
+        "sha256": "90d32677581961dff83b3107e632532a35eaf701c45ef3badb0836459544b293"
+      },
+      {
+        "name": "Q101-v2_量子電腦學程_迷思修正_動畫展示版_2026-11-19.zip.part04",
+        "bytes": 29360128,
+        "sha256": "dfe4671a1346eb9af4132e2ae6b2ec00655d835c4c6e4c15b51af3814201489f"
+      },
+      {
+        "name": "Q101-v2_量子電腦學程_迷思修正_動畫展示版_2026-11-19.zip.part05",
+        "bytes": 29360128,
+        "sha256": "28f84786c17098183676fd4b7273dce74e9867052ca5ac7434e1763a2bfdbbae"
+      },
+      {
+        "name": "Q101-v2_量子電腦學程_迷思修正_動畫展示版_2026-11-19.zip.part06",
+        "bytes": 29360128,
+        "sha256": "1d5b4c84d7cccf0af67415a342aad9a3c9ef11c992ea345c0db39399e69a7c4b"
+      },
+      {
+        "name": "Q101-v2_量子電腦學程_迷思修正_動畫展示版_2026-11-19.zip.part07",
+        "bytes": 17621091,
+        "sha256": "4dc4561bccd707e67c3ee6992be26df5884ff6498f17e983ab1eff7764c1be05"
+      }
+    ],
+    "handedOver": "2026-11-19 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1bi-WOn7ipXPr978g1JqWu1DFCPwySyyb",
+    "uploaded": "2026-11-19",
+    "files": [
+      {
+        "name": "Q101 迷思修正：Z 線不是把位元調成一樣（動畫展示版）.mp4",
+        "id": "1NQ2BJd5l5EbQ8iMTNvjrQSmGbB5BO-bR",
+        "link": "https://drive.google.com/file/d/1NQ2BJd5l5EbQ8iMTNvjrQSmGbB5BO-bR/view?usp=drivesdk"
+      },
+      {
+        "name": "Q101 迷思修正（動畫展示版）簡報.pptx",
+        "id": "1HKa_lYqPO422dpECO34XtgK0qoXIBva8",
+        "link": "https://docs.google.com/presentation/d/1HKa_lYqPO422dpECO34XtgK0qoXIBva8/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true"
+      },
+      {
+        "name": "Q101 迷思修正 教材.zip",
+        "id": "1VQRJX-NOaR4Lo2blo-QL8mfl0GL8FX8M",
+        "link": "https://drive.google.com/file/d/1VQRJX-NOaR4Lo2blo-QL8mfl0GL8FX8M/view?usp=drivesdk"
+      }
+    ]
+  }
+}

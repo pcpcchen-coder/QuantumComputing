@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q102",
+  "version": "Q102-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-19",
+  "episodePath": "academy/episodes/q102-frequency-collisions-v2",
+  "basedOn": "academy/episodes/q102-frequency-collisions（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 509.376,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "hidden",
+      "title": "動畫展示：撞上隱藏的頻率",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#case"
+    },
+    {
+      "key": "address",
+      "title": "動畫展示：禁區和旁觀者",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#case"
+    },
+    {
+      "key": "hunt",
+      "title": "動畫展示：找第二個空位",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#case"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.5,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q102-frequency-collisions-v2-zh-TW.mp4": {
+      "bytes": 89514599,
+      "sha256": "899c85a15170f194be18628eb941edc1e9829cce334cf9caad9067fc8fecb435"
+    },
+    "q102-frequency-collisions-v2-master.mp4": {
+      "bytes": 92128278,
+      "sha256": "249bc616b0728b840936acb9d1a393160131b4abfc3fc84185baab8e76d86b64"
+    },
+    "narration-only.mp3": {
+      "bytes": 12226324,
+      "sha256": "4abf6079e345ac3c0d10fa5bf74ae7da1d984bf732df7be7c5152d144321a08c"
+    }
+  },
+  "package": {
+    "filename": "Q102-v2_量子電腦學程_頻率配置與碰撞_動畫展示版_2026-11-19.zip",
+    "bytes": 197742334,
+    "sha256": "def46d8b01acc9d69ef635c51b0ea910945d88febdc448ae57481cb83a3f74f7",
+    "parts": [
+      {
+        "name": "Q102-v2_量子電腦學程_頻率配置與碰撞_動畫展示版_2026-11-19.zip.part01",
+        "bytes": 29360128,
+        "sha256": "bdfe7cae57a7e5e974f5287a573648de96622dbd21d4bd160dd97678b8c3e2e4"
+      },
+      {
+        "name": "Q102-v2_量子電腦學程_頻率配置與碰撞_動畫展示版_2026-11-19.zip.part02",
+        "bytes": 29360128,
+        "sha256": "e6c34b2dc71dd3df3f9adb3e18bd144aa5a2371ddb3d64d718d6d85e347aa267"
+      },
+      {
+        "name": "Q102-v2_量子電腦學程_頻率配置與碰撞_動畫展示版_2026-11-19.zip.part03",
+        "bytes": 29360128,
+        "sha256": "d786c0d0f319a83358c09bf2933bc0c3c45f7e62a24635838cceb27cd4f6de00"
+      },
+      {
+        "name": "Q102-v2_量子電腦學程_頻率配置與碰撞_動畫展示版_2026-11-19.zip.part04",
+        "bytes": 29360128,
+        "sha256": "823145bace80ec643a2608eb60a1fbb311cd93d97eeb6aa4081cd3cbc3b65364"
+      },
+      {
+        "name": "Q102-v2_量子電腦學程_頻率配置與碰撞_動畫展示版_2026-11-19.zip.part05",
+        "bytes": 29360128,
+        "sha256": "202d3e2be00c817ede03218c09ceb14792c50c8e940a0adef48d54f7118cd5b5"
+      },
+      {
+        "name": "Q102-v2_量子電腦學程_頻率配置與碰撞_動畫展示版_2026-11-19.zip.part06",
+        "bytes": 29360128,
+        "sha256": "40f9baaffb4a99bcbffe65cf7bae1414ab2b4bf3c2d7cb459535280ad85dbc8c"
+      },
+      {
+        "name": "Q102-v2_量子電腦學程_頻率配置與碰撞_動畫展示版_2026-11-19.zip.part07",
+        "bytes": 21581566,
+        "sha256": "dc14efabb6b99a69153f7c2f24fb0ba751c3ad9ad657ba6ec2d7cfb56ce65a32"
+      }
+    ],
+    "handedOver": "2026-11-19 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1bi-WOn7ipXPr978g1JqWu1DFCPwySyyb",
+    "uploaded": "2026-11-19",
+    "files": [
+      {
+        "name": "Q102 頻率配置與碰撞：頻率配置與頻率碰撞（動畫展示版）.mp4",
+        "id": "1x1QJreZg7mdZYOIxPT8tBnVi9LIFEYua",
+        "link": "https://drive.google.com/file/d/1x1QJreZg7mdZYOIxPT8tBnVi9LIFEYua/view?usp=drivesdk"
+      },
+      {
+        "name": "Q102 頻率配置與碰撞（動畫展示版）簡報.pptx",
+        "id": "16ziIbAM01PNMp-rmuOR0RXtB-ArNS-ax",
+        "link": "https://docs.google.com/presentation/d/16ziIbAM01PNMp-rmuOR0RXtB-ArNS-ax/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true"
+      },
+      {
+        "name": "Q102 頻率配置與碰撞 教材.zip",
+        "id": "1OZhaQrLdF5NUanSW_Je_uI2rTbFKKIeR",
+        "link": "https://drive.google.com/file/d/1OZhaQrLdF5NUanSW_Je_uI2rTbFKKIeR/view?usp=drivesdk"
+      }
+    ]
+  }
+}

@@ -525,12 +525,24 @@
     "Q101": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q101-z-line-myth-v2",
+        "evidence": "academy/episodes/q101-z-line-myth-v2/delivery.json"
+      }
     },
     "Q102": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q102-frequency-collisions-v2",
+        "evidence": "academy/episodes/q102-frequency-collisions-v2/delivery.json"
+      }
     },
     "Q103": {
       "status": "planned",
