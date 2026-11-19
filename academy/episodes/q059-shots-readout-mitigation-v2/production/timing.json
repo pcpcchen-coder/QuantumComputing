@@ -1,0 +1,394 @@
+{
+  "version": 2,
+  "opening": 60.277,
+  "scenes": [
+    {
+      "page": 1,
+      "kind": "slide",
+      "v1slide": 1,
+      "title": "重複次數、統計誤差與讀取誤差緩解",
+      "duration": 30.888,
+      "sentences": [
+        {
+          "text": "歡迎回到父子科技學院的量子電腦學程，我是陳犀牛，今天是量子第五十九堂，重複次數、統計誤差與讀取誤差緩解，這是依課綱製作的課前教學版，並非實際上課錄音。",
+          "start": 0.0,
+          "end": 13.864014000000001
+        },
+        {
+          "text": "上一堂我們學會先轉再量，把計數變成期望值；最後留下一個問題：到底要重複幾次才夠準？",
+          "start": 14.044014,
+          "end": 22.340023000000002
+        },
+        {
+          "text": "今天要當資料偵探：量出來的數字和理想值對不上時，查出是運氣不好，還是儀器讀錯了。",
+          "start": 22.520023000000002,
+          "end": 30.672041
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q059-shots-readout-mitigation/audio/slide_01.mp3"
+    },
+    {
+      "page": 2,
+      "kind": "slide",
+      "v1slide": 2,
+      "title": "三步：估誤差、抓讀錯、修回來",
+      "duration": 26.232,
+      "sentences": [
+        {
+          "text": "今天分三步：先學統計誤差怎麼估，再用校準線路抓出讀取錯誤，最後用混淆矩陣把結果修回來。",
+          "start": 0.0,
+          "end": 8.656009000000001
+        },
+        {
+          "text": "今天的好玩機制是資料偵探：同一個實驗的數字偏掉了，我們要找證據，判斷是哪一個嫌疑犯造成的。",
+          "start": 8.836009,
+          "end": 17.228027
+        },
+        {
+          "text": "今天的作品是一張誤差緩解前後比較表，記下原始的數字、緩解後的數字，還有各自的誤差範圍。",
+          "start": 17.408027,
+          "end": 26.016032000000003
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q059-shots-readout-mitigation/audio/slide_02.mp3"
+    },
+    {
+      "page": 3,
+      "kind": "slide",
+      "v1slide": 3,
+      "title": "兩種誤差：運氣與儀器",
+      "duration": 26.76,
+      "sentences": [
+        {
+          "text": "第一點：統計誤差來自運氣；量子結果本來就隨機，就像丟一千次硬幣，也不會剛好五百次正面。",
+          "start": 0.0,
+          "end": 8.824014
+        },
+        {
+          "text": "第二點：讀取誤差來自儀器；量子位元明明是零，讀取電路卻偶爾判成一，或把一判成零。",
+          "start": 9.004014,
+          "end": 17.348028
+        },
+        {
+          "text": "第三點：統計誤差會隨著重複次數增加而縮小；讀取誤差不管跑幾次都在，而且總是把結果往同一邊推。",
+          "start": 17.528028,
+          "end": 26.544037
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q059-shots-readout-mitigation/audio/slide_03.mp3"
+    },
+    {
+      "page": 4,
+      "kind": "slide",
+      "v1slide": 4,
+      "title": "統計誤差怎麼估",
+      "duration": 27.744,
+      "sentences": [
+        {
+          "text": "估統計誤差的公式是：機率乘上一減機率，除以重複次數，再開根號；機率剛好一半時，誤差最大。",
+          "start": 0.0,
+          "end": 9.352018000000001
+        },
+        {
+          "text": "機率一半時，跑一百次誤差大約百分之五，一千次大約百分之一點六，一萬次只剩百分之零點五左右。",
+          "start": 9.532018,
+          "end": 18.308027000000003
+        },
+        {
+          "text": "想把誤差壓到正負百分之一，大約要兩千五百次；次數變四倍誤差才減半，精度提高十倍要一百倍的次數。",
+          "start": 18.488027000000002,
+          "end": 27.528027
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q059-shots-readout-mitigation/audio/slide_04.mp3"
+    },
+    {
+      "page": 5,
+      "kind": "demo",
+      "demo": "halve",
+      "title": "動畫展示：四倍次數，誤差減半",
+      "duration": 28.968,
+      "sentences": [
+        {
+          "text": "打開量子位元場景，按加號把箭頭放到赤道，再按一次跑一千次；左邊面板最下面，估計值後面寫著正負零點零一六。",
+          "start": 0.0,
+          "end": 10.216009
+        },
+        {
+          "text": "再連按三次，總共四千次，誤差變成正負零點零零八；次數是原來的四倍，誤差只剩一半。",
+          "start": 10.396009,
+          "end": 19.052018
+        },
+        {
+          "text": "再按十二次，總共一萬六千次，誤差剩零點零零四；右下角小圖的灰色帶就是誤差範圍，越往右越窄。",
+          "start": 19.232018,
+          "end": 28.752018
+        }
+      ],
+      "audio": "audio/demo_halve.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#qubit"
+    },
+    {
+      "page": 6,
+      "kind": "slide",
+      "v1slide": 5,
+      "title": "讀取錯誤：混淆矩陣",
+      "duration": 28.224,
+      "sentences": [
+        {
+          "text": "怎麼抓讀取錯誤？先跑校準線路：準備零量一千次，再用翻轉閘準備一，也量一千次，看儀器讀對多少。",
+          "start": 0.0,
+          "end": 10.408005000000001
+        },
+        {
+          "text": "例如準備零時有二十次讀成一，準備一時有八十次讀成零；把這四個比例排成一張表，就叫混淆矩陣。",
+          "start": 10.588005,
+          "end": 19.292019000000003
+        },
+        {
+          "text": "一讀成零比較常見，因為讀取要花一點時間，一在讀的途中可能掉回零，這和能量弛豫時間有關。",
+          "start": 19.472019000000003,
+          "end": 28.008028000000003
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q059-shots-readout-mitigation/audio/slide_05.mp3"
+    },
+    {
+      "page": 7,
+      "kind": "demo",
+      "demo": "calib",
+      "title": "動畫展示：校準就是先考儀器",
+      "duration": 37.584,
+      "sentences": [
+        {
+          "text": "打開超導元件與微波讀取動畫的狀態判別場景；它每次隨機準備零或一，藍點是準備零，紅點是準備一，這就是校準線路在做的事。",
+          "start": 0.0,
+          "end": 10.984014
+        },
+        {
+          "text": "金色斜線是判別閾值；左下角讀數寫著，準備零卻判成一幾乎是零，準備一卻判成零明顯比較多。",
+          "start": 11.164014,
+          "end": 19.820023
+        },
+        {
+          "text": "原因是一在讀取途中可能掉回零；把讀取期間的能量弛豫開關關掉，準備一判成零的比例就大幅下降。",
+          "start": 20.000023,
+          "end": 28.728028
+        },
+        {
+          "text": "這兩個讀錯的比例，就是混淆矩陣裡對角線以外的兩格；先量好它們，等一下才能把結果修回來。",
+          "start": 28.908027999999998,
+          "end": 37.372042
+        }
+      ],
+      "audio": "audio/demo_calib.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#iq"
+    },
+    {
+      "page": 8,
+      "kind": "slide",
+      "v1slide": 6,
+      "title": "緩解：三步還原",
+      "duration": 28.152,
+      "sentences": [
+        {
+          "text": "緩解也是三步：第一步照常做實驗，例如加態跑一萬次，一出現四千七百次，比例是零點四七。",
+          "start": 0.0,
+          "end": 8.752018
+        },
+        {
+          "text": "第二步扣掉誤報：零點四七減去零讀成一的零點零二，剩零點四五；第三步除以零點九，也就是零點九二減零點零二。",
+          "start": 8.932018,
+          "end": 18.836032
+        },
+        {
+          "text": "算出來是零點五，剛好回到加態的理想值；這一步其實就是把量到的分佈，乘上混淆矩陣的反矩陣。",
+          "start": 19.016032,
+          "end": 27.936031999999997
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q059-shots-readout-mitigation/audio/slide_06.mp3"
+    },
+    {
+      "page": 9,
+      "kind": "demo",
+      "demo": "mitigate",
+      "title": "動畫展示：打開讀取誤差緩解",
+      "duration": 37.536,
+      "sentences": [
+        {
+          "text": "回到操作動畫的讀取與統計場景，把準備角度設成零度，只準備零；再把兩團雲的間距調小，讓讀取變差。",
+          "start": 0.0,
+          "end": 9.544014
+        },
+        {
+          "text": "平面上的點本該全是藍色，靠近粉紅閾值的右側卻有一些被判成紅色；混淆矩陣寫著，零讀成一大約百分之十四。",
+          "start": 9.724014,
+          "end": 19.436032
+        },
+        {
+          "text": "先關掉讀取誤差緩解，讀數寫著未緩解，期望值只有零點七左右，和理想的一差了一截。",
+          "start": 19.616032,
+          "end": 27.840046
+        },
+        {
+          "text": "再打開緩解，用混淆矩陣把結果反推回去，期望值回到接近一；不過它只修讀取，修不了量子閘的錯誤。",
+          "start": 28.020046,
+          "end": 37.32406
+        }
+      ],
+      "audio": "audio/demo_mitigate.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#readout"
+    },
+    {
+      "page": 10,
+      "kind": "slide",
+      "v1slide": 7,
+      "title": "偵探辦案：運氣還是儀器",
+      "duration": 28.896,
+      "sentences": [
+        {
+          "text": "來辦一個案子：加態理論上一半一半，實測一的比例卻是零點四七，偏了零點零三，嫌疑犯是誰？",
+          "start": 0.0,
+          "end": 8.56
+        },
+        {
+          "text": "只跑一千次時，統計誤差約零點零一六，偏零點零三還可能是運氣；跑到一萬次，誤差剩零點零零五，偏差卻還在。",
+          "start": 8.74,
+          "end": 19.052018
+        },
+        {
+          "text": "偏差是誤差的六倍，運氣不太可能這麼差，嫌疑犯就是讀取；用校準結果緩解，比例回到零點五，破案。",
+          "start": 19.232018,
+          "end": 28.680023
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q059-shots-readout-mitigation/audio/slide_07.mp3"
+    },
+    {
+      "page": 11,
+      "kind": "slide",
+      "v1slide": 8,
+      "title": "常見誤解：次數加倍就好",
+      "duration": 29.064,
+      "sentences": [
+        {
+          "text": "第一個常見誤解：次數加倍，誤差就減半；其實要加四倍才減半，因為誤差跟著次數的平方根縮小。",
+          "start": 0.0,
+          "end": 8.776009
+        },
+        {
+          "text": "第二個誤解，是以為讀取誤差緩解什麼都能修；它只修讀取這一關，閘做錯、狀態跑掉，它都管不到。",
+          "start": 8.956009,
+          "end": 18.092018
+        },
+        {
+          "text": "第三個要注意：緩解要除以比一小的數，誤差範圍會跟著放大，得多跑一些次數；請暫停影片，寫下這三個誤解錯在哪裡。",
+          "start": 18.272018,
+          "end": 28.848027000000002
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q059-shots-readout-mitigation/audio/slide_08.mp3"
+    },
+    {
+      "page": 12,
+      "kind": "slide",
+      "v1slide": 9,
+      "title": "資料偵探：找出嫌疑犯",
+      "duration": 28.872,
+      "sentences": [
+        {
+          "text": "偵探遊戲這樣玩：爸爸在模擬器裡偷偷設定讀取錯誤率，或者完全不設，只把量到的結果交給孩子。",
+          "start": 0.0,
+          "end": 8.68
+        },
+        {
+          "text": "孩子當偵探，先把次數加到一萬次，看偏差有沒有縮小；如果偏差忽正忽負、越跑越小，嫌疑犯就是運氣。",
+          "start": 8.86,
+          "end": 18.764014
+        },
+        {
+          "text": "如果偏差一直偏向同一邊、加了次數也不消失，就跑校準線路量出混淆矩陣，修完回到理想值，讀取就是兇手。",
+          "start": 18.944014,
+          "end": 28.656032
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q059-shots-readout-mitigation/audio/slide_09.mp3"
+    },
+    {
+      "page": 13,
+      "kind": "slide",
+      "v1slide": 10,
+      "title": "換你改造：正負百分之一要幾次",
+      "duration": 27.24,
+      "sentences": [
+        {
+          "text": "下半場換你改造：把公式反過來，重複次數等於機率乘一減機率，再除以想要的誤差的平方。",
+          "start": 0.0,
+          "end": 8.296009
+        },
+        {
+          "text": "機率一半、誤差百分之一：零點二五除以萬分之一，就是兩千五百次；如果機率只有一成，九百次就夠。",
+          "start": 8.476009,
+          "end": 17.492018
+        },
+        {
+          "text": "如果要把期望值估到正負零點零一，它的誤差是機率誤差的兩倍，算下來大約要一萬次；再用模擬器跑跑看驗證。",
+          "start": 17.672018,
+          "end": 27.024036000000002
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q059-shots-readout-mitigation/audio/slide_10.mp3"
+    },
+    {
+      "page": 14,
+      "kind": "slide",
+      "v1slide": 11,
+      "title": "兩小時的資料偵探",
+      "duration": 31.128,
+      "sentences": [
+        {
+          "text": "兩小時這樣安排：開場和看動畫共二十五分鐘，接著四十分鐘用模擬器跑三種次數、畫誤差，再做一次校正，然後休息十分鐘。",
+          "start": 0.0,
+          "end": 10.864014000000001
+        },
+        {
+          "text": "下半場三十分鐘自己算正負百分之一要幾次，再跑模擬驗證；接著十分鐘交換角色，由你教爸爸怎麼分辨兩種誤差。",
+          "start": 11.044014,
+          "end": 20.924014
+        },
+        {
+          "text": "最後五分鐘錄音總結，替比較表取名字、存版本；生活中也一樣，看到一個數字，先問它的可信範圍有多大。",
+          "start": 21.104014,
+          "end": 30.912019
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q059-shots-readout-mitigation/audio/slide_11.mp3"
+    },
+    {
+      "page": 15,
+      "kind": "slide",
+      "v1slide": 12,
+      "title": "最後一關：教爸爸分辨兩種誤差",
+      "duration": 30.528,
+      "sentences": [
+        {
+          "text": "最後一關，請不看稿說出：統計誤差怎麼估？為什麼重複次數要變四倍，誤差才會減一半？",
+          "start": 0.0,
+          "end": 9.016009
+        },
+        {
+          "text": "再說出讀取誤差怎麼校準、怎麼緩解，並指出一個限制：緩解只修讀取，而且會讓誤差範圍變大一點。",
+          "start": 9.196009,
+          "end": 18.404014
+        },
+        {
+          "text": "今天的作品是誤差緩解前後比較表；下一堂是動態線路，在線路中途量測、依結果即時調整；我是陳犀牛，保持好奇，我們下次見！",
+          "start": 18.584014,
+          "end": 30.312019
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q059-shots-readout-mitigation/audio/slide_12.mp3"
+    }
+  ]
+}

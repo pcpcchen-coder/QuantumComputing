@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q059",
+  "version": "Q059-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-18",
+  "episodePath": "academy/episodes/q059-shots-readout-mitigation-v2",
+  "basedOn": "academy/episodes/q059-shots-readout-mitigation（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 508.096,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "halve",
+      "title": "動畫展示：四倍次數，誤差減半",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#qubit"
+    },
+    {
+      "key": "calib",
+      "title": "動畫展示：校準就是先考儀器",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#iq"
+    },
+    {
+      "key": "mitigate",
+      "title": "動畫展示：打開讀取誤差緩解",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#readout"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.4,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q059-shots-readout-mitigation-v2-zh-TW.mp4": {
+      "bytes": 90837606,
+      "sha256": "dce103e5d30ea00f67316081a19054e4ceb8a951eee0a39b7f4b60b81db2596c"
+    },
+    "q059-shots-readout-mitigation-v2-master.mp4": {
+      "bytes": 93282243,
+      "sha256": "22435427724a2d93e2231860c14709c5072a4d97f8b6c0d660b57386e62418f8"
+    },
+    "narration-only.mp3": {
+      "bytes": 12195796,
+      "sha256": "c3ddd4a182b4c9f2c88ed6d36882fef6cf6c073af4a6a3b45750f7298fd56a9b"
+    }
+  },
+  "package": {
+    "filename": "Q059-v2_量子電腦學程_次數與讀取誤差_動畫展示版_2026-11-18.zip",
+    "bytes": 200428125,
+    "sha256": "1a227d0c5a923247ae6cfff7b3a8ce3b913b153a3248a7884d38ce09b57bd5d5",
+    "parts": [
+      {
+        "name": "Q059-v2_量子電腦學程_次數與讀取誤差_動畫展示版_2026-11-18.zip.part01",
+        "bytes": 29360128,
+        "sha256": "04a4ca55504dded1b04768bfc02f97128ffc3574b689fcfe7d629a57f67b4292"
+      },
+      {
+        "name": "Q059-v2_量子電腦學程_次數與讀取誤差_動畫展示版_2026-11-18.zip.part02",
+        "bytes": 29360128,
+        "sha256": "67354bbc5ed04771c423063a84c74342ec616fdb37e3a5806bb25d20b58430aa"
+      },
+      {
+        "name": "Q059-v2_量子電腦學程_次數與讀取誤差_動畫展示版_2026-11-18.zip.part03",
+        "bytes": 29360128,
+        "sha256": "d8646e83a2e41e72c72254b8f7286b4e92b54d7eaf2fc6b8bb8fc2dafb89f90b"
+      },
+      {
+        "name": "Q059-v2_量子電腦學程_次數與讀取誤差_動畫展示版_2026-11-18.zip.part04",
+        "bytes": 29360128,
+        "sha256": "b66cf2ac3e3afe0ee331a93483714efc4ed353a22db2b28fe0e9b108aca412eb"
+      },
+      {
+        "name": "Q059-v2_量子電腦學程_次數與讀取誤差_動畫展示版_2026-11-18.zip.part05",
+        "bytes": 29360128,
+        "sha256": "881937bd01cb4ac9c01bfe906cbcc2ac710bc752709471cde2b801ae9c962014"
+      },
+      {
+        "name": "Q059-v2_量子電腦學程_次數與讀取誤差_動畫展示版_2026-11-18.zip.part06",
+        "bytes": 29360128,
+        "sha256": "ef0ea9e3dbcc1d7460cbf8def3f45cc99e7aa86bda5f73411996d2c4be6dff67"
+      },
+      {
+        "name": "Q059-v2_量子電腦學程_次數與讀取誤差_動畫展示版_2026-11-18.zip.part07",
+        "bytes": 24267357,
+        "sha256": "b5482b6d42060225065d744181122618da1c30cb4f61c61c3833c4b22a84dfc3"
+      }
+    ],
+    "handedOver": "2026-11-18 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔"
+}
