@@ -346,7 +346,13 @@
     "Q052": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q052-pulse-area-phase-v2",
+        "evidence": "academy/episodes/q052-pulse-area-phase-v2/delivery.json"
+      }
     },
     "Q053": {
       "status": "planned",
@@ -372,12 +378,24 @@
     "Q056": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q056-transpile-routing-v2",
+        "evidence": "academy/episodes/q056-transpile-routing-v2/delivery.json"
+      }
     },
     "Q057": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q057-qiskit-bell-ghz-v2",
+        "evidence": "academy/episodes/q057-qiskit-bell-ghz-v2/delivery.json"
+      }
     },
     "Q058": {
       "status": "planned",

@@ -1,0 +1,8 @@
+{
+  "title": "父子科技學院 Q052｜微波脈衝：面積與相位（動畫展示版）",
+  "description": "父子科技學院 量子電腦學程 Q052｜微波脈衝：面積與相位（v2・含 3D 動畫展示）\n\n這是依課綱製作的課前教學版，不是實際上課錄音。\n\n父子科技學院量子電腦學程 Q052「微波脈衝：面積與相位」新版（v2）：在原本的教學投影片之間，插入本學程 3D 互動動畫的實際操作示範。\n\n這一版新增的動畫展示\n・面積一格一格加（https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#pulse）\n・粉紅色的旋轉軸（https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#pulse）\n・兩顆四分之一圈按鈕（https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#control）\n\n動畫都可以在瀏覽器直接開啟，自己動手操作。\n\n章節\n00:00 陳犀牛系列片頭\n01:00 微波脈衝：面積與相位\n01:33 三步：面積、相位、闖關\n02:02 一段微波脈衝的樣子\n02:31 脈衝的四個旋鈕\n02:59 比一比：一百八十度和九十度\n03:28 面積＝振幅×時間\n03:57 動畫展示：面積一格一格加\n04:37 相位決定繞哪條軸\n05:09 動畫展示：粉紅色的旋轉軸\n06:01 常見誤解：面積一樣就一樣？\n06:33 闖關：脈衝設計師和關主\n07:06 動畫展示：兩顆四分之一圈按鈕\n07:46 換你改造：加入失諧\n08:18 兩小時的脈衝闖關\n08:50 最後一關：教爸爸設計脈衝\n\n旁白：微軟 zh-TW-YunJheNeural 神經語音合成（Edge-TTS／Azure 語音服務，同一聲音同一格式）。字幕已燒入影片，開啟 CC 可能重疊。\n",
+  "privacyStatus": "private",
+  "madeForKids": null,
+  "reviewStatus": "needs-parent-review",
+  "publicationMode": "manual-user-upload"
+}

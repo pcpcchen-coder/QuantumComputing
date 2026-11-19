@@ -55,12 +55,12 @@
 | Q049 | 一次量子計算的生命週期 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q049-job-lifecycle-v2` |
 | Q050 | 初始化與校準 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q050-init-calibration-v2` |
 | Q051 | 看懂後端校準資料 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q051-backend-calibration-v2` |
-| Q052 | 微波脈衝：面積與相位 | 規劃完成 | — |
+| Q052 | 微波脈衝：面積與相位 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q052-pulse-area-phase-v2` |
 | Q053 | DRAG 與虛擬 Z | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q053-drag-virtual-z-v2` |
 | Q054 | 任意旋轉 = 三個旋轉 | 規劃完成 | — |
 | Q055 | 兩位元閘：CZ 與交叉共振 | 規劃完成 | — |
-| Q056 | 轉譯：邏輯線路到硬體 | 規劃完成 | — |
-| Q057 | Qiskit 實作：Bell 與 GHZ | 規劃完成 | — |
+| Q056 | 轉譯：邏輯線路到硬體 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q056-transpile-routing-v2` |
+| Q057 | Qiskit 實作：Bell 與 GHZ | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q057-qiskit-bell-ghz-v2` |
 | Q058 | 量測基底與期望值 | 規劃完成 | — |
 | Q059 | shots、統計誤差與讀取誤差緩解 | 規劃完成 | — |
 | Q060 | 動態線路 | 規劃完成 | — |

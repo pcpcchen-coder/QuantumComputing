@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q057",
+  "version": "Q057-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-18",
+  "episodePath": "academy/episodes/q057-qiskit-bell-ghz-v2",
+  "basedOn": "academy/episodes/q057-qiskit-bell-ghz（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 499.413,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "ghz",
+      "title": "動畫展示：三顆一起糾纏",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/basic-circuits.html#ghz"
+    },
+    {
+      "key": "code",
+      "title": "動畫展示：多一顆，多一行",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/basic-circuits.html#ghz"
+    },
+    {
+      "key": "noise",
+      "title": "動畫展示：三顆加上雜訊",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#circuit"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.5,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q057-qiskit-bell-ghz-v2-zh-TW.mp4": {
+      "bytes": 83743564,
+      "sha256": "89060ddf97e05972e7e518febdef9e92e57df2fff87f93e384f6e6fe7a97675b"
+    },
+    "q057-qiskit-bell-ghz-v2-master.mp4": {
+      "bytes": 85945101,
+      "sha256": "d29ffbefce3fbadd887b282e66f485190aea45ab9b27e5792b5205e03e1e67e2"
+    },
+    "narration-only.mp3": {
+      "bytes": 11987284,
+      "sha256": "6a5e2127c401699f93dd2078596c7d4e77c91549ee5e698591ef7fbff90c893f"
+    }
+  },
+  "package": {
+    "filename": "Q057-v2_量子電腦學程_Bell 與 GHZ 實作_動畫展示版_2026-11-18.zip",
+    "bytes": 185437219,
+    "sha256": "3a13308f56f5dd7838c3a5213cbe39828015364360697f9f016686b7790ffd2c",
+    "parts": [
+      {
+        "name": "Q057-v2_量子電腦學程_Bell 與 GHZ 實作_動畫展示版_2026-11-18.zip.part01",
+        "bytes": 29360128,
+        "sha256": "3eed278c99aa91572c6f6afb1da6dfadc6e24571280412f854d5974eb759d74a"
+      },
+      {
+        "name": "Q057-v2_量子電腦學程_Bell 與 GHZ 實作_動畫展示版_2026-11-18.zip.part02",
+        "bytes": 29360128,
+        "sha256": "394082bd3368b5d06eac7cdca57b542881b2066f0e44187b91e14c21703d03db"
+      },
+      {
+        "name": "Q057-v2_量子電腦學程_Bell 與 GHZ 實作_動畫展示版_2026-11-18.zip.part03",
+        "bytes": 29360128,
+        "sha256": "3524e13911a872d285d98984e69bc653fdd42c65ec2f3ebfd8b7cf0517cf3d24"
+      },
+      {
+        "name": "Q057-v2_量子電腦學程_Bell 與 GHZ 實作_動畫展示版_2026-11-18.zip.part04",
+        "bytes": 29360128,
+        "sha256": "f564d055da3c146afd71194167c13697afa14d9775ac2c1bc8ee3b6a55db43e6"
+      },
+      {
+        "name": "Q057-v2_量子電腦學程_Bell 與 GHZ 實作_動畫展示版_2026-11-18.zip.part05",
+        "bytes": 29360128,
+        "sha256": "f67cb862bf6511be14b045d99ff5127139d6275b3a1065891b704794cff38db3"
+      },
+      {
+        "name": "Q057-v2_量子電腦學程_Bell 與 GHZ 實作_動畫展示版_2026-11-18.zip.part06",
+        "bytes": 29360128,
+        "sha256": "ac630d472eb1c8a551d8d0b100f3b9322ab611cffc498f26d427c6321ba64145"
+      },
+      {
+        "name": "Q057-v2_量子電腦學程_Bell 與 GHZ 實作_動畫展示版_2026-11-18.zip.part07",
+        "bytes": 9276451,
+        "sha256": "78ca43a7a456b39e5f7344cce18daec975a3e98043e3f8ab35273ea482085628"
+      }
+    ],
+    "handedOver": "2026-11-18 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "status": "pending",
+    "note": "Drive 權杖過期（HTTP 401），檔案已排入待上傳清單，權杖更新後補傳"
+  }
+}
