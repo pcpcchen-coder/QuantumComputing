@@ -28,7 +28,7 @@ LESSON = 'Q066'
 _Q = 'q 參數'
 
 _LIST = [
- dict(key='saddle', after=4, page='at', hash='paul', scene='離子阱 3D 場景 2：Paul 阱原理',
+ dict(key='saddle', pmap=[0, 1, 2, 1], after=4, page='at', hash='paul', scene='離子阱 3D 場景 2：Paul 阱原理',
       title='動畫展示：翻面的鞍形', sub='三維動畫：保羅阱原理——射頻開和關',
       sentences=[
        '打開離子阱動畫的保羅阱場景，左邊這片藍色曲面就是鞍形位勢，它一直不停地上下翻面。',
@@ -39,7 +39,7 @@ _LIST = [
                (2, 1.0, ('toggle', 'RF 開', False)),
                (3, 1.0, ('toggle', 'RF 開', True))],
       points=[('鞍形位勢', '一直上下翻面'), ('射頻開', '穩定：被困住'), ('射頻關', '鞍面攤平、逃逸')], shot=(1, 4.0)),
- dict(key='qscan', after=6, page='at', hash='paul', scene='離子阱 3D 場景 2：Paul 阱原理',
+ dict(key='qscan', pmap=[0, 0, 1, 2], after=6, page='at', hash='paul', scene='離子阱 3D 場景 2：Paul 阱原理',
       title='動畫展示：翻轉參數的界線', sub='三維動畫：保羅阱原理——改翻轉參數',
       sentences=[
        '回到保羅阱場景，左邊面板的翻轉參數現在是零點四，讀數寫著穩定，慢擺動四點二四兆赫，射頻三十兆赫。',
@@ -50,7 +50,7 @@ _LIST = [
                (2, 1.5, ('slider', _Q, 0.95)),
                (3, 0.8, ('slider', _Q, 0.7))],
       points=[('q = 0.40', '穩定，慢擺動 4.24 MHz'), ('q = 0.95', '不穩定、衝出圖框'), ('q = 0.70', '穩定，7.42 MHz')], shot=(2, 8.0)),
- dict(key='linear', after=8, page='at', hash='paul', scene='離子阱 3D 場景 2：Paul 阱原理（右：線性 Paul 阱）',
+ dict(key='linear', pmap=[0, 1, 2, 2], after=8, page='at', hash='paul', scene='離子阱 3D 場景 2：Paul 阱原理（右：線性 Paul 阱）',
       title='動畫展示：線性保羅阱', sub='三維動畫：保羅阱原理——四根桿子和離子鏈',
       sentences=[
        '保羅阱場景的右邊，是真的離子阱常用的線性保羅阱：四根桿子中間，五顆離子排成一串。',
