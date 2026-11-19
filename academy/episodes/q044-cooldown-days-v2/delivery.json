@@ -101,6 +101,25 @@
     "folderName": "量子電腦學程 Q041–Q070 動畫展示版（v2）",
     "uploadedAt": "2026-11-18",
     "uploadedBy": "製作代理（Claude，Drive API，上傳後比對 md5）",
-    "files": []
+    "files": [
+      {
+        "name": "Q044 降溫要幾天：降溫一次要幾天（動畫展示版）.mp4",
+        "id": "17fG9aWZzgJbVE08ai4xHL6Hxd2GDbEYf",
+        "size": 84180388,
+        "link": "https://drive.google.com/file/d/17fG9aWZzgJbVE08ai4xHL6Hxd2GDbEYf/view?usp=drivesdk"
+      },
+      {
+        "name": "Q044 降溫要幾天（動畫展示版）簡報.pptx",
+        "id": "1GolVquVtiIJm_xBpKTmFg2cFNar_Y3Or",
+        "size": 3278662,
+        "link": "https://docs.google.com/presentation/d/1GolVquVtiIJm_xBpKTmFg2cFNar_Y3Or/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true"
+      },
+      {
+        "name": "Q044 降溫要幾天 教材.zip",
+        "id": "1NkgQCUoH3RZrVrxlfkvNbo34Q25ueX6u",
+        "size": 458025,
+        "link": "https://drive.google.com/file/d/1NkgQCUoH3RZrVrxlfkvNbo34Q25ueX6u/view?usp=drivesdk"
+      }
+    ]
   }
 }
