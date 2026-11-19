@@ -95,5 +95,31 @@
     ],
     "handedOver": "2026-11-18 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
   },
-  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔"
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1eZLiQdOHdFov3xfVLuJtqORZ4fjXzXXV",
+    "folderName": "量子電腦學程 Q041–Q070 動畫展示版（v2）",
+    "uploadedAt": "2026-11-18",
+    "uploadedBy": "製作代理（Claude，Drive API，上傳後比對 md5）",
+    "files": [
+      {
+        "name": "Q058 先轉再量：量測基底與期望值（動畫展示版）.mp4",
+        "id": "1QRp80EBunvL0yJKVhw7Ju-jiHhWQKDtZ",
+        "size": 85975702,
+        "link": "https://drive.google.com/file/d/1QRp80EBunvL0yJKVhw7Ju-jiHhWQKDtZ/view?usp=drivesdk"
+      },
+      {
+        "name": "Q058 先轉再量（動畫展示版）簡報.pptx",
+        "id": "1hfwqvhLcIodBt22WgOCR7dYvnqardgo2",
+        "size": 3273436,
+        "link": "https://docs.google.com/presentation/d/1hfwqvhLcIodBt22WgOCR7dYvnqardgo2/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true"
+      },
+      {
+        "name": "Q058 先轉再量 教材.zip",
+        "id": "1d3ZVLJWQBYT4d70B63NIjUd12axMgw5U",
+        "size": 357818,
+        "link": "https://drive.google.com/file/d/1d3ZVLJWQBYT4d70B63NIjUd12axMgw5U/view?usp=drivesdk"
+      }
+    ]
+  }
 }

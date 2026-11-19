@@ -102,7 +102,29 @@
   },
   "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
   "drive": {
-    "status": "pending",
-    "note": "Drive 權杖過期（HTTP 401），檔案已排入待上傳清單，權杖更新後補傳"
+    "folderId": "1eZLiQdOHdFov3xfVLuJtqORZ4fjXzXXV",
+    "folderName": "量子電腦學程 Q041–Q070 動畫展示版（v2）",
+    "uploadedAt": "2026-11-18",
+    "uploadedBy": "製作代理（Claude，Drive API，上傳後比對 md5）",
+    "files": [
+      {
+        "name": "Q056 轉譯與最少交換閘：轉譯：邏輯線路到硬體（動畫展示版）.mp4",
+        "id": "1ug7Q5p-n_cZ0cFWJRdOWz3irGJ6nBIrJ",
+        "size": 93166127,
+        "link": "https://drive.google.com/file/d/1ug7Q5p-n_cZ0cFWJRdOWz3irGJ6nBIrJ/view?usp=drivesdk"
+      },
+      {
+        "name": "Q056 轉譯與最少交換閘（動畫展示版）簡報.pptx",
+        "id": "1448-62L9TwFswWIDQ8anLx6iITU4eyBg",
+        "size": 3384640,
+        "link": "https://docs.google.com/presentation/d/1448-62L9TwFswWIDQ8anLx6iITU4eyBg/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true"
+      },
+      {
+        "name": "Q056 轉譯與最少交換閘 教材.zip",
+        "id": "1C7LU_zvoxZ3hRE2XaDXXZdnGvpJTSaBS",
+        "size": 410719,
+        "link": "https://drive.google.com/file/d/1C7LU_zvoxZ3hRE2XaDXXZdnGvpJTSaBS/view?usp=drivesdk"
+      }
+    ]
   }
 }

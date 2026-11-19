@@ -57,20 +57,20 @@
 | Q051 | 看懂後端校準資料 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q051-backend-calibration-v2` |
 | Q052 | 微波脈衝：面積與相位 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q052-pulse-area-phase-v2` |
 | Q053 | DRAG 與虛擬 Z | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q053-drag-virtual-z-v2` |
-| Q054 | 任意旋轉 = 三個旋轉 | 規劃完成 | — |
-| Q055 | 兩位元閘：CZ 與交叉共振 | 規劃完成 | — |
+| Q054 | 任意旋轉 = 三個旋轉 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q054-zyz-decomposition-v2` |
+| Q055 | 兩位元閘：CZ 與交叉共振 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q055-cz-cross-resonance-v2` |
 | Q056 | 轉譯：邏輯線路到硬體 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q056-transpile-routing-v2` |
 | Q057 | Qiskit 實作：Bell 與 GHZ | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q057-qiskit-bell-ghz-v2` |
-| Q058 | 量測基底與期望值 | 規劃完成 | — |
-| Q059 | shots、統計誤差與讀取誤差緩解 | 規劃完成 | — |
-| Q060 | 動態線路 | 規劃完成 | — |
-| Q061 | QFT 與相位估計 | 規劃完成 | — |
-| Q062 | Shor：用干涉找週期 | 規劃完成 | — |
+| Q058 | 量測基底與期望值 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q058-basis-expectation-v2` |
+| Q059 | shots、統計誤差與讀取誤差緩解 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q059-shots-readout-mitigation-v2` |
+| Q060 | 動態線路 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q060-dynamic-circuits-v2` |
+| Q061 | QFT 與相位估計 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q061-qft-phase-estimation-v2` |
+| Q062 | Shor：用干涉找週期 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q062-shor-period-v2` |
 | Q063 | 快在哪？加速的等級 | 規劃完成 | — |
 | Q064 | 模組專題：在模擬器跑我的線路 | 規劃完成 | — |
 | Q065 | 人造原子 vs 真的原子 | 規劃完成 | — |
 | Q066 | Paul 阱：旋轉鞍形電場 | 規劃完成 | — |
-| Q067 | 離子阱系統全景 | 規劃完成 | — |
+| Q067 | 離子阱系統全景 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q067-ion-trap-system-v2` |
 | Q068 | ¹⁷¹Yb⁺ 量子位元與雷射冷卻 | 規劃完成 | — |
 | Q069 | 離子鏈的集體振動 | 規劃完成 | — |
 | Q070 | Mølmer–Sørensen 閘 | 規劃完成 | — |

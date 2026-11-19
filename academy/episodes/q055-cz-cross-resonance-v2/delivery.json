@@ -95,5 +95,31 @@
     ],
     "handedOver": "2026-11-18 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
   },
-  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔"
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1eZLiQdOHdFov3xfVLuJtqORZ4fjXzXXV",
+    "folderName": "量子電腦學程 Q041–Q070 動畫展示版（v2）",
+    "uploadedAt": "2026-11-18",
+    "uploadedBy": "製作代理（Claude，Drive API，上傳後比對 md5）",
+    "files": [
+      {
+        "name": "Q055 兩位元閘兩條路：兩位元閘：CZ 與交叉共振（動畫展示版）.mp4",
+        "id": "1gDSCRw3zmkMXbYgjMyu3WQZuCpfRTBLA",
+        "size": 92285156,
+        "link": "https://drive.google.com/file/d/1gDSCRw3zmkMXbYgjMyu3WQZuCpfRTBLA/view?usp=drivesdk"
+      },
+      {
+        "name": "Q055 兩位元閘兩條路（動畫展示版）簡報.pptx",
+        "id": "1BKFGTljkjW36JUDp-5CszJE0GhokwOM6",
+        "size": 3278553,
+        "link": "https://docs.google.com/presentation/d/1BKFGTljkjW36JUDp-5CszJE0GhokwOM6/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true"
+      },
+      {
+        "name": "Q055 兩位元閘兩條路 教材.zip",
+        "id": "1l3jBAX0PwmeoFomHRG6X2QqrNZiGxjq3",
+        "size": 432958,
+        "link": "https://drive.google.com/file/d/1l3jBAX0PwmeoFomHRG6X2QqrNZiGxjq3/view?usp=drivesdk"
+      }
+    ]
+  }
 }
