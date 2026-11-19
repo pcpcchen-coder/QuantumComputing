@@ -85,7 +85,7 @@
 | Q079 | 拓樸量子位元與 NV 色心 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q079-topological-nv-v2` |
 | Q080 | 平台大比較與供電分析 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q080-platform-comparison-power-v2` |
 | Q081 | 錯誤預算：線路能跑多深 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q081-error-budget-v2` |
-| Q082 | 錯誤緩解 | 規劃完成 | — |
+| Q082 | 錯誤緩解 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q082-error-mitigation-v2` |
 | Q083 | 重複碼：最簡單的錯誤更正 | 規劃完成 | — |
 | Q084 | 表面碼 | 規劃完成 | — |
 | Q085 | 低於門檻 | 規劃完成 | — |
