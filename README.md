@@ -55,6 +55,12 @@
     - 簡報：[`slides/output/basic-circuits.pptx`](slides/output/basic-circuits.pptx)（49 頁，含講稿；開頭「理論基礎」6 堂課 10 頁，每個範例都有電路圖、振幅逐步長條與表格，Grover 另有一頁 SAT 規則版 Oracle，右上角「▶ 動畫」按鈕直接開到該範例）；PDF：[`slides/pdf/Basic_Quantum_Circuits.pdf`](slides/pdf/Basic_Quantum_Circuits.pdf)；內容檔：[`slides/reports/basic-circuits.js`](slides/reports/basic-circuits.js)（`cd slides && node build_deck.js reports/basic-circuits.js` 重新產生，截圖用 `node slides/capture_basic_circuits.js` 重新擷取）
     - 網址加 `#superposition`、`#interference`、`#bell`、`#ghz`、`#teleport`、`#deutsch`、`#bv`、`#grover`、`#grover-sat`（Grover 的 SAT 版 Oracle）、`#qft`、`#shor` 可直接開啟指定範例；單一 HTML 檔，離線可用（字型需連網）；頁內模擬器支援複數振幅，92 種選項組合都已和 Qiskit `Statevector` 比對過，結果一致（Grover 的擴散照理想「對平均值翻轉」計算，和 H、X、多控制 Z 組成的電路只差一個整體負號）
 
+13. Shor 分解 15 逐閘解說：[`animations/shor-15.html`](animations/shor-15.html)（線上版 https://pcpcchen-coder.github.io/QuantumComputing/animations/shor-15.html）
+    - 以 N = 15、a = 7 為例，把 Shor 演算法拆到單一閘：7 顆量子位元（3 顆計數 + 4 顆工作）的配置、3 個 H、受控 ×7（3 個 Fredkin + 4 個 CNOT，循環右移 = ×8、全部翻轉 = ×(−1)）、受控 ×4（2 個 Fredkin）、U⁴ = I 不需要閘、3 顆位元逆 QFT（SWAP、H、受控相位閘）、量測與連分數後處理
+    - 逐閘播放器：19 欄電路可一欄一欄前進，同步顯示 7 位元狀態向量方格（振幅大小與相位指針）、計數暫存器機率與所有非零項
+    - 互動小工具：×7／×4 的位元追蹤（任選輸入 y）、量測工作暫存器後的塌縮、逆 QFT 干涉的相位箭頭相加、量測 1／1,000 次與即時連分數計算；另附相位回踢觀點、實驗用精簡版電路、閘數與 CNOT 換算表、Qiskit 程式碼（已用 Qiskit + Aer 驗證）
+    - 單一 HTML 檔，離線可用（字型需連網）
+
 ---
 
 ## 3D 動畫 ↔ PPT 簡報對照
@@ -97,6 +103,7 @@ python3 slides/build/anim_ppt_map.py
 | [`lc-vs-jj.html`](https://pcpcchen-coder.github.io/QuantumComputing/animations/lc-vs-jj.html)：LC 與約瑟夫森接面（2D 圖解） | 7 | [`transmon.pptx`](slides/transmon.pptx) | ✅ 全部有 |
 | [`basic-circuits.html`](https://pcpcchen-coder.github.io/QuantumComputing/animations/basic-circuits.html)：十個基礎量子電路（2D 互動） | 10 | [`basic-circuits.pptx`](slides/output/basic-circuits.pptx) | ✅ 全部有 |
 | [`quantum-basics.html`](https://pcpcchen-coder.github.io/QuantumComputing/animations/quantum-basics.html)：量子理論基礎 6 堂課（2D 互動） | 6 | [`basic-circuits.pptx`](slides/output/basic-circuits.pptx) | ✅ 全部有 |
+| [`shor-15.html`](https://pcpcchen-coder.github.io/QuantumComputing/animations/shor-15.html) | —（沒有場景代號） | 目前沒有簡報連結 | — |
 
 ### 場景 → 投影片頁碼
 

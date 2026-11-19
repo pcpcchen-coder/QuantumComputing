@@ -675,7 +675,7 @@ const SCENES = [
           return `→ y = ${y}：${y}/8 = ${s}/${rr} → r = ${rr} → ${a}${sup(rr / 2)} mod 15 = ${h}，gcd(${h - 1}, 15) = ${gcd(h - 1, N)}、gcd(${h + 1}, 15) = ${gcd(h + 1, N)} → 15 = ${gcd(h - 1, N)} × ${gcd(h + 1, N)} ✓`;
         },
         take: "Shor 演算法（1994）能在多項式時間內分解大整數，威脅 RSA 加密。量子電腦只負責「找週期」：H 做疊加、模冪 Oracle 把週期寫進糾纏、逆 QFT 讓週期干涉成尖峰；選 a、約分、算最大公因數都是古典計算。分解 15 只是示範：2025 年的估計顯示，破解 RSA‑2048 約需一百萬個有雜訊的實體量子位元，目前的硬體還差很遠。動畫把模冪寫成一個方塊；實際硬體要拆成許多受控乘法閘。",
-        links: [["#qft", "本頁 · 量子傅立葉轉換"], ["transmon-3d.html#shor", "Transmon 3D · 第 8 章 Shor：可自選 N、a、計數位元數"]]
+        links: [["#qft", "本頁 · 量子傅立葉轉換"], ["transmon-3d.html#shor", "Transmon 3D · 第 8 章 Shor：可自選 N、a、計數位元數"], ["shor-15.html", "Shor 分解 15 · 逐閘解說：把模冪方塊拆成 Fredkin 與 CNOT"]]
       };
     }
   }

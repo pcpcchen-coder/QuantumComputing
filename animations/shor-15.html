@@ -1,0 +1,1176 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Shor 分解 15</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Shor 演算法分解 15（a = 7）逐閘解說：7 顆量子位元的配置、H、Fredkin、CNOT、受控相位閘與逆 QFT，每一步的量子狀態都能播放檢視。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Noto+Sans+TC:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap">
+<style>
+/* 版面：一欄閱讀，章節照演算法的真實順序編號；中間一個「逐閘播放器」貫穿全文。
+   配色沿用 basic-circuits.html：H 藍、X/CNOT 莓紅、相位閘紫、SWAP/Fredkin 綠。 */
+:root{
+  --bg:#EDF1F0; --surface:#F8FAF9; --ink:#14201D; --muted:#566863; --rule:#C9D4D0; --grid:#DCE4E1;
+  --pos:#1D6A8B; --neg:#B65C12; --h:#1D6A8B; --x:#A23B5C; --z:#7348A3; --sw:#2C7A4E; --hit:#2C8A55;
+  --on-gate:#FFFFFF; --hl:rgba(29,106,139,.12); --fill:rgba(29,106,139,.22);
+  --font-body:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;
+  --font-display:"Space Grotesk","Noto Sans TC","PingFang TC",sans-serif;
+  --font-mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0E1513; --surface:#151E1B; --ink:#E1E9E6; --muted:#93A49F; --rule:#2B3733; --grid:#24302C;
+  --pos:#63B5D8; --neg:#EF9B55; --h:#63B5D8; --x:#E58AA6; --z:#B99BE0; --sw:#6CC892; --hit:#5DCB8C;
+  --on-gate:#0E1513; --hl:rgba(99,181,216,.14); --fill:rgba(99,181,216,.26); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0E1513; --surface:#151E1B; --ink:#E1E9E6; --muted:#93A49F; --rule:#2B3733; --grid:#24302C;
+  --pos:#63B5D8; --neg:#EF9B55; --h:#63B5D8; --x:#E58AA6; --z:#B99BE0; --sw:#6CC892; --hit:#5DCB8C;
+  --on-gate:#0E1513; --hl:rgba(99,181,216,.14); --fill:rgba(99,181,216,.26); color-scheme:dark}
+
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:16px;line-height:1.8;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+main{max-width:1040px;margin:0 auto;padding-block:40px 72px;display:flex;flex-direction:column;gap:56px}
+h1,h2,h3{font-family:var(--font-display);text-wrap:balance;margin:0;line-height:1.3}
+h1{font-size:clamp(30px,5vw,46px);font-weight:700;letter-spacing:-.01em}
+h2{font-size:clamp(22px,3vw,29px);font-weight:700}
+h3{font-size:18px;font-weight:700}
+p{margin:0}
+a{color:var(--pos)}
+code,.m{font-family:var(--font-mono);font-size:.9em}
+sub,sup{font-size:.72em;line-height:0}
+.eyebrow{font-family:var(--font-mono);font-size:12px;letter-spacing:.1em;color:var(--muted)}
+.prose{display:flex;flex-direction:column;gap:14px;max-width:70ch}
+.muted{color:var(--muted)}
+.note{font-size:14.5px;color:var(--muted)}
+button{font:inherit}
+button:focus-visible,a:focus-visible,select:focus-visible,[tabindex]:focus-visible{outline:2px solid var(--pos);outline-offset:2px}
+
+header{display:flex;flex-direction:column;gap:16px}
+header .lead{max-width:66ch;color:var(--muted);font-size:17.5px}
+.facts{display:flex;flex-wrap:wrap;gap:10px}
+.fact{display:flex;flex-direction:column;padding:8px 14px;border:1px solid var(--rule);border-radius:10px;background:var(--surface);min-width:118px}
+.fact small{font-family:var(--font-mono);font-size:11px;letter-spacing:.08em;color:var(--muted)}
+.fact b{font-family:var(--font-mono);font-size:19px;font-variant-numeric:tabular-nums}
+
+nav.toc{display:flex;flex-wrap:wrap;gap:6px 8px}
+nav.toc a{display:inline-flex;gap:8px;align-items:baseline;text-decoration:none;color:var(--ink);font-size:14px;
+  padding:5px 12px;border:1px solid var(--rule);border-radius:999px;background:var(--surface)}
+nav.toc a span{font-family:var(--font-mono);font-size:12px;color:var(--muted)}
+nav.toc a:hover{border-color:var(--pos)}
+
+section{display:flex;flex-direction:column;gap:20px;scroll-margin-top:16px}
+.sec-head{display:flex;gap:16px;align-items:flex-start}
+.num{flex:0 0 auto;width:44px;height:44px;border-radius:10px;border:2px solid var(--ink);display:grid;place-items:center;
+  font-family:var(--font-mono);font-weight:700;font-size:18px}
+.sec-head .t{display:flex;flex-direction:column;gap:4px;min-width:0}
+.sec-head .t p{color:var(--muted)}
+.sub{display:flex;flex-direction:column;gap:12px}
+
+.fig{background:var(--surface);border:1px solid var(--rule);border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.fig figcaption,.cap{font-size:14px;color:var(--muted)}
+.scroll{overflow-x:auto;min-width:0;-webkit-overflow-scrolling:touch}
+.scroll svg{display:block}
+.row2{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+.row2>*{min-width:0}
+
+.eq{font-family:var(--font-mono);font-size:15.5px;background:var(--surface);border:1px solid var(--rule);border-radius:8px;
+  padding:12px 16px;overflow-x:auto;white-space:nowrap;line-height:1.9}
+.eq .c{color:var(--muted)}
+.key{border-left:3px solid var(--hit);padding:2px 0 2px 14px}
+
+table{border-collapse:collapse;font-size:15px;width:100%}
+.tbl{overflow-x:auto;border:1px solid var(--rule);border-radius:10px;background:var(--surface)}
+th,td{padding:8px 12px;text-align:left;border-bottom:1px solid var(--rule);vertical-align:top}
+tr:last-child td{border-bottom:0}
+th{font-family:var(--font-mono);font-size:12px;letter-spacing:.06em;color:var(--muted);font-weight:500;white-space:nowrap}
+td.n,th.n{text-align:right;font-family:var(--font-mono);font-variant-numeric:tabular-nums}
+td.m{font-family:var(--font-mono);white-space:nowrap}
+tr.on td{background:var(--hl)}
+.ok{color:var(--hit);font-weight:700}
+.bad{color:var(--neg);font-weight:700}
+
+.btn{display:inline-flex;align-items:center;gap:6px;color:var(--ink);background:var(--surface);border:1px solid var(--rule);
+  border-radius:8px;padding:6px 12px;cursor:pointer;font-size:14px;line-height:1.4}
+.btn:hover{border-color:var(--pos)}
+.btn.primary{background:var(--pos);border-color:var(--pos);color:var(--on-gate);font-weight:700}
+.btn[aria-pressed="true"]{border-color:var(--pos);box-shadow:inset 0 0 0 1px var(--pos);color:var(--pos);font-weight:700}
+.btn.goto{align-self:flex-start;font-size:13.5px;color:var(--pos)}
+.btns{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+select{font:inherit;font-size:14px;color:var(--ink);background:var(--surface);border:1px solid var(--rule);border-radius:8px;padding:5px 8px}
+
+/* 電路圖（SVG） */
+svg text{font-family:var(--font-mono)}
+.wire{stroke:var(--muted);stroke-width:1.2}
+.wl{fill:var(--ink);font-size:12.5px}
+.wl tspan.i{fill:var(--muted)}
+.g-h{fill:var(--h)} .g-x{fill:var(--x)} .g-sw{fill:var(--sw)} .g-z{fill:var(--z)}
+.gt{fill:var(--on-gate);font-family:var(--font-display);font-weight:700;font-size:15px;text-anchor:middle;dominant-baseline:central}
+.gt.s{font-family:var(--font-mono);font-size:12px;font-weight:500}
+.cx-line{stroke:var(--x);stroke-width:1.8;fill:none} .cx-dot{fill:var(--x)}
+.oplus{fill:var(--surface);stroke:var(--x);stroke-width:1.8}
+.sw{stroke:var(--sw);stroke-width:2;fill:none} .sw-dot{fill:var(--sw)}
+.cp-line{stroke:var(--z);stroke-width:1.8} .cp-dot{fill:var(--z)}
+.cp-lab{fill:var(--z);font-size:11px;font-weight:700;paint-order:stroke;stroke:var(--surface);stroke-width:4px;stroke-linejoin:round}
+.meter{fill:var(--surface);stroke:var(--ink);stroke-width:1.4} .meter-n{stroke:var(--ink);stroke-width:1.4;fill:none}
+.idbox{fill:var(--surface);stroke:var(--muted);stroke-width:1.4;stroke-dasharray:4 3}
+.idt{fill:var(--muted);font-size:12px;text-anchor:middle;dominant-baseline:central}
+.col-hl{fill:var(--hl)}
+.stage-line{stroke:var(--muted);stroke-width:1;fill:none}
+.stage-lab{fill:var(--muted);font-size:11.5px;text-anchor:middle}
+.col.dim{opacity:.3}
+.col .hit{fill:transparent;cursor:pointer}
+.col:hover .hit{fill:var(--hl)}
+
+/* 播放器 */
+.player{background:var(--surface);border:1px solid var(--rule);border-radius:14px;padding:18px;display:flex;flex-direction:column;gap:16px}
+.stages{display:flex;gap:6px;overflow-x:auto;padding-bottom:2px}
+.stages button{flex:0 0 auto;display:flex;flex-direction:column;align-items:flex-start;padding:6px 12px;border:1px solid var(--rule);
+  border-radius:9px;background:var(--bg);color:var(--ink);cursor:pointer;text-align:left;line-height:1.35}
+.stages button small{font-family:var(--font-mono);font-size:10.5px;color:var(--muted)}
+.stages button b{font-size:14px}
+.stages button[aria-current="true"]{border-color:var(--pos);box-shadow:inset 0 0 0 1px var(--pos)}
+.stages button[aria-current="true"] small{color:var(--pos)}
+.ctrl{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.ctrl input[type=range]{flex:1 1 180px;accent-color:var(--pos);min-width:0}
+.stepno{font-family:var(--font-mono);font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+.pl-body{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:20px}
+@media (max-width:820px){.pl-body{grid-template-columns:minmax(0,1fr)}}
+.pl-desc{display:flex;flex-direction:column;gap:10px}
+.pl-desc .gate-name{font-family:var(--font-mono);font-size:13px;color:var(--pos)}
+.pl-state{display:flex;flex-direction:column;gap:10px;min-width:0}
+.readout{font-family:var(--font-mono);font-size:13px;background:var(--bg);border:1px solid var(--rule);border-radius:8px;padding:8px 12px;min-height:2.6em;overflow-x:auto;white-space:nowrap}
+.terms{font-family:var(--font-mono);font-size:12.5px;background:var(--bg);border:1px solid var(--rule);border-radius:8px;padding:8px 12px;
+  max-height:190px;overflow:auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:2px 16px;font-variant-numeric:tabular-nums}
+.mx .lab{fill:var(--muted);font-size:11.5px}
+.mx .lab.b{fill:var(--ink);font-size:12px}
+.mx .ring{fill:none;stroke:var(--grid);stroke-width:1.2}
+.mx .disk{fill:var(--fill);stroke:var(--pos);stroke-width:1.4}
+.mx .needle{stroke:var(--pos);stroke-width:2;stroke-linecap:round}
+.mx .cell{cursor:pointer}
+.mx .cell:hover .ring,.mx .cell:focus .ring{stroke:var(--pos)}
+.mx .bar{fill:var(--pos)}
+.mx .base{stroke:var(--rule)}
+.mx .pct{fill:var(--ink);font-size:11px;text-anchor:middle}
+
+/* 位元追蹤 */
+.trace{display:flex;flex-direction:column;gap:6px}
+.trow{display:grid;grid-template-columns:minmax(118px,180px) auto auto minmax(0,1fr);gap:12px;align-items:center}
+@media (max-width:560px){.trow{grid-template-columns:1fr auto auto}.trow .tn{grid-column:1/-1}}
+.trow .tl{font-family:var(--font-mono);font-size:13px}
+.bits{display:flex;gap:4px}
+.bitbox{width:34px;height:34px;border-radius:6px;border:1.5px solid var(--rule);display:grid;place-items:center;font-family:var(--font-mono);font-weight:700;background:var(--bg);position:relative}
+.bitbox.one{background:var(--pos);border-color:var(--pos);color:var(--on-gate)}
+.bitbox.mv{outline:2.5px solid var(--sw);outline-offset:2px}
+.bitbox.fl{outline:2.5px solid var(--x);outline-offset:2px}
+.bithead{display:flex;gap:4px}
+.bithead span{width:34px;text-align:center;font-family:var(--font-mono);font-size:11px;color:var(--muted)}
+.trow .dec{font-family:var(--font-mono);font-size:15px;font-weight:700;min-width:3ch;text-align:right;font-variant-numeric:tabular-nums}
+.trow .tn{font-size:13.5px;color:var(--muted)}
+.verdict{font-family:var(--font-mono);font-size:14px;padding:8px 12px;border-radius:8px;border:1px solid var(--hit);color:var(--hit);background:var(--bg);align-self:flex-start}
+
+/* 小格子列（計數暫存器 8 格） */
+.slots{display:flex;gap:6px;flex-wrap:wrap}
+.slot{display:flex;flex-direction:column;align-items:center;gap:2px;width:52px;padding:6px 0;border:1px solid var(--rule);border-radius:8px;background:var(--bg);font-family:var(--font-mono);font-size:12px;color:var(--muted)}
+.slot b{font-size:15px;color:var(--ink)}
+.slot.on{border-color:var(--pos);background:var(--hl)}
+.slot.on b{color:var(--pos)}
+
+.phasor text{font-size:11.5px;fill:var(--muted)}
+.phasor .axis{stroke:var(--grid);stroke-width:1}
+.phasor .circ{fill:none;stroke:var(--rule);stroke-dasharray:3 3}
+.phasor .a1{stroke:var(--pos);stroke-width:2.6;fill:none}
+.phasor .a2{stroke:var(--neg);stroke-width:2.6;fill:none}
+.phasor .res{stroke:var(--hit);stroke-width:3.2;fill:none}
+.phasor .h1{fill:var(--pos)} .phasor .h2{fill:var(--neg)} .phasor .hr{fill:var(--hit)}
+.phasor .zero{fill:var(--hit)}
+
+.hist .bar{fill:var(--pos)}
+.hist .theory{stroke:var(--hit);stroke-width:1.5;stroke-dasharray:5 4}
+.hist text{fill:var(--muted);font-size:11.5px}
+.hist .v{fill:var(--ink);text-anchor:middle}
+.hist .base{stroke:var(--rule)}
+
+.cfbox{font-family:var(--font-mono);font-size:14px;background:var(--bg);border:1px solid var(--rule);border-radius:8px;padding:12px 14px;display:flex;flex-direction:column;gap:4px;overflow-x:auto}
+
+pre{margin:0;background:var(--surface);border:1px solid var(--rule);border-radius:10px;padding:14px 16px;overflow-x:auto;font-family:var(--font-mono);font-size:13.5px;line-height:1.65}
+pre .cm{color:var(--muted)}
+.codehead{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+
+footer{border-top:1px solid var(--rule);padding-top:20px;font-size:14px;color:var(--muted);display:flex;flex-direction:column;gap:6px}
+</style>
+</head>
+<body>
+<main>
+
+<header>
+  <div class="eyebrow">Shor 演算法 · N = 15 · a = 7 · 逐閘解說</div>
+  <h1>Shor 分解 15：7 顆量子位元，每一個閘</h1>
+  <p class="lead">這一頁把 Shor 演算法拆到最底層，說明每顆量子位元負責什麼、每個閘為什麼放在那裡、做完之後狀態變成什麼。中間的播放器可以一個閘一個閘往前走，觀察 7 顆位元的完整狀態向量怎麼變化。</p>
+  <div class="facts">
+    <div class="fact"><small>要分解的數</small><b>N = 15</b></div>
+    <div class="fact"><small>選的底數</small><b>a = 7</b></div>
+    <div class="fact"><small>量子位元</small><b>3 + 4 = 7</b></div>
+    <div class="fact"><small>閘（不含量測）</small><b>19</b></div>
+    <div class="fact"><small>找到的週期</small><b>r = 4</b></div>
+    <div class="fact"><small>答案</small><b>15 = 3 × 5</b></div>
+  </div>
+  <nav class="toc" aria-label="章節">
+    <a href="#overview"><span>全貌</span>電路總覽</a>
+    <a href="#player"><span>▶</span>逐閘播放</a>
+    <a href="#s0"><span>0</span>找週期</a>
+    <a href="#s1"><span>1</span>位元配置</a>
+    <a href="#s2"><span>2</span>H 疊加</a>
+    <a href="#s3"><span>3</span>受控模乘</a>
+    <a href="#s4"><span>4</span>量測工作暫存器</a>
+    <a href="#s5"><span>5</span>逆 QFT</a>
+    <a href="#s6"><span>6</span>量測</a>
+    <a href="#s7"><span>7</span>古典後處理</a>
+    <a href="#summary"><span>Σ</span>總結</a>
+    <a href="#qiskit"><span>&lt;/&gt;</span>Qiskit</a>
+  </nav>
+</header>
+
+<!-- 全貌 -->
+<section id="overview">
+  <div class="sec-head"><div class="t"><div class="eyebrow">全貌</div><h2>整條電路先看一次</h2>
+    <p>先用「方塊」看大結構，之後再把每個方塊拆成真正的閘。</p></div></div>
+  <figure class="fig" style="margin:0">
+    <div class="scroll" id="fig-overview"></div>
+    <figcaption>上面 3 條線是計數暫存器（c0 是最低位），下面 4 條是工作暫存器（w0 是最低位）。黑點表示控制位元：只有控制位元是 1 的分支，才會執行方塊裡的乘法。c2 控制的 ×1 其實什麼都不做，所以虛線框裡不放任何閘。</figcaption>
+  </figure>
+  <div class="tbl"><table>
+    <thead><tr><th>步驟</th><th>做什麼</th><th>用到的閘</th><th>結果</th></tr></thead>
+    <tbody>
+      <tr><td class="m">① 初始化</td><td>把工作暫存器設成 1</td><td>X × 1</td><td class="m">|000⟩|0001⟩</td></tr>
+      <tr><td class="m">② 疊加</td><td>讓 x = 0…7 同時存在</td><td>H × 3</td><td class="m">Σ|x⟩|1⟩ / √8</td></tr>
+      <tr><td class="m">③ 模冪</td><td>算出 7ˣ mod 15</td><td>Fredkin × 5、CNOT × 4</td><td class="m">Σ|x⟩|7ˣ mod 15⟩ / √8</td></tr>
+      <tr><td class="m">④ 逆 QFT</td><td>讓週期干涉成尖峰</td><td>SWAP × 1、H × 3、受控相位 × 3</td><td>只剩 x = 0、2、4、6</td></tr>
+      <tr><td class="m">⑤ 量測</td><td>讀出計數暫存器</td><td>量測 × 3</td><td>0、2、4、6 各 25%</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<!-- 播放器 -->
+<section id="player">
+  <div class="sec-head"><div class="t"><div class="eyebrow">逐閘播放</div><h2>一個閘一個閘往前走</h2>
+    <p>點電路上的任一欄，或用下方按鈕前進後退。右邊的方格是 7 顆位元的完整狀態向量。</p></div></div>
+  <div class="player">
+    <div class="stages" id="pl-stages" role="toolbar" aria-label="跳到階段"></div>
+    <div class="scroll" id="pl-circ"></div>
+    <div class="ctrl">
+      <button class="btn" id="pl-reset" type="button" aria-label="回到起點">⏮ 起點</button>
+      <button class="btn" id="pl-prev" type="button" aria-label="上一個閘">◀ 上一步</button>
+      <button class="btn primary" id="pl-next" type="button" aria-label="下一個閘">下一步 ▶</button>
+      <button class="btn" id="pl-play" type="button" aria-pressed="false">自動播放</button>
+      <input type="range" id="pl-range" min="0" max="19" value="0" aria-label="目前步驟">
+      <span class="stepno" id="pl-no">0 / 19</span>
+    </div>
+    <div class="pl-body">
+      <div class="pl-desc">
+        <div class="gate-name" id="pl-gate"></div>
+        <h3 id="pl-title"></h3>
+        <p id="pl-text"></p>
+        <p class="note" id="pl-extra"></p>
+      </div>
+      <div class="pl-state">
+        <div class="scroll" id="pl-matrix"></div>
+        <div class="readout" id="pl-readout" aria-live="polite">點一個圓圈，這裡會顯示它的振幅與機率。</div>
+        <div class="cap">所有非零項（振幅 · |計數 c2c1c0⟩|工作 w3w2w1w0⟩）：</div>
+        <div class="terms" id="pl-terms"></div>
+      </div>
+    </div>
+    <p class="note">怎麼看方格：每一列是工作暫存器的一個值，每一欄是計數暫存器的一個值 x。圓的大小代表振幅大小，指針方向代表相位（朝右是正實數、朝左是負數、朝上是 +i），沒有圓的格子振幅是 0。最下面的長條是只看計數暫存器時，量到各個 x 的機率。</p>
+  </div>
+</section>
+
+<!-- 0 找週期 -->
+<section id="s0">
+  <div class="sec-head"><div class="num">0</div><div class="t"><div class="eyebrow">先備觀念</div><h2>把「分解質因數」換成「找週期」</h2>
+    <p>量子電腦只負責中間最難的一步，其他步驟都是古典計算。</p></div></div>
+  <div class="prose">
+    <p>直接嘗試分解一個大數很難，但數論告訴我們：只要找到函數 f(x) = aˣ mod N 的<b>週期 r</b>（最小的 r 讓 aʳ mod N = 1），就能用最大公因數算出 N 的因數。拿 a = 7、N = 15 來算：</p>
+  </div>
+  <div class="row2">
+    <div class="tbl"><table>
+      <thead><tr><th class="n">x</th><th class="n">7ˣ</th><th class="n">7ˣ mod 15</th><th>說明</th></tr></thead>
+      <tbody>
+        <tr><td class="n">0</td><td class="n">1</td><td class="n"><b>1</b></td><td>起點</td></tr>
+        <tr><td class="n">1</td><td class="n">7</td><td class="n"><b>7</b></td><td></td></tr>
+        <tr><td class="n">2</td><td class="n">49</td><td class="n"><b>4</b></td><td class="muted">49 = 3×15 + 4</td></tr>
+        <tr><td class="n">3</td><td class="n">343</td><td class="n"><b>13</b></td><td class="muted">343 = 22×15 + 13</td></tr>
+        <tr class="on"><td class="n">4</td><td class="n">2401</td><td class="n"><b>1</b></td><td>回到 1，週期 r = 4</td></tr>
+        <tr><td class="n">5</td><td class="n">16807</td><td class="n"><b>7</b></td><td class="muted">開始重複</td></tr>
+        <tr><td class="n">6</td><td class="n">…</td><td class="n"><b>4</b></td><td></td></tr>
+        <tr><td class="n">7</td><td class="n">…</td><td class="n"><b>13</b></td><td></td></tr>
+      </tbody>
+    </table></div>
+    <figure class="fig" style="margin:0">
+      <div id="fig-cycle" style="display:flex;justify-content:center"></div>
+      <figcaption>每次乘 7 再取 mod 15，數值在 1 → 7 → 4 → 13 → 1 這個環上繞，繞一圈要 4 步。</figcaption>
+    </figure>
+  </div>
+  <div class="prose">
+    <p>為什麼週期能拿來分解？因為 7⁴ ≡ 1 (mod 15)，代表 7⁴ − 1 是 15 的倍數，而 7⁴ − 1 可以拆成 (7² − 1)(7² + 1) = 48 × 50。15 的因數必定分散在這兩個數裡，所以 gcd(48, 15) = 3、gcd(50, 15) = 5 就把 15 拆開了。這招要成立需要兩個條件：r 是偶數，而且 a<sup>r/2</sup> mod N ≠ N − 1。a = 7 兩個條件都符合。</p>
+    <p>古典電腦找 r 只能一個一個試 x，數字一大（例如 2048 位元）就算不完。量子電腦的做法是：<b>把所有 x 同時放進疊加態，算出 7ˣ mod 15，再用干涉把週期「放大」成可以量測的訊號。</b></p>
+  </div>
+  <div class="eq">流程：選 a → 檢查 gcd(a, N) = 1 → <b>量子電路找 r</b> → r 是偶數？ → gcd(a<sup>r/2</sup> ± 1, N)<br><span class="c">本例：a = 7 → gcd(7, 15) = 1 ✓ → r = 4 → 偶數 ✓ → gcd(48, 15) = 3、gcd(50, 15) = 5</span></div>
+</section>
+
+<!-- 1 位元配置 -->
+<section id="s1">
+  <div class="sec-head"><div class="num">1</div><div class="t"><div class="eyebrow">量子位元配置</div><h2>7 顆位元分成兩個暫存器</h2>
+    <p>計數暫存器存放「指數 x」，工作暫存器存放「7ˣ mod 15 的值」。</p></div></div>
+  <div class="tbl"><table>
+    <thead><tr><th>暫存器</th><th>位元</th><th class="n">權重</th><th>用途</th><th>初始值</th></tr></thead>
+    <tbody>
+      <tr><td rowspan="3"><b>計數暫存器</b><br><span class="note">控制用</span></td><td class="m">c0</td><td class="n">1</td><td>控制 U¹（×7）</td><td class="m">|0⟩</td></tr>
+      <tr><td class="m">c1</td><td class="n">2</td><td>控制 U²（×4）</td><td class="m">|0⟩</td></tr>
+      <tr><td class="m">c2</td><td class="n">4</td><td>控制 U⁴（×1，不需要閘）</td><td class="m">|0⟩</td></tr>
+      <tr><td rowspan="4"><b>工作暫存器</b><br><span class="note">被乘的目標</span></td><td class="m">w0</td><td class="n">1</td><td rowspan="4">存 0…15 的整數，裝得下 mod 15 的所有餘數</td><td class="m">|1⟩</td></tr>
+      <tr><td class="m">w1</td><td class="n">2</td><td class="m">|0⟩</td></tr>
+      <tr><td class="m">w2</td><td class="n">4</td><td class="m">|0⟩</td></tr>
+      <tr><td class="m">w3</td><td class="n">8</td><td class="m">|0⟩</td></tr>
+    </tbody>
+  </table></div>
+  <div class="prose">
+    <p><b>位元順序。</b>本頁跟 Qiskit 一樣，編號 0 是最低位。寫成 ket 時最高位放左邊：|c2 c1 c0⟩、|w3 w2 w1 w0⟩。例如 |011⟩ 是 x = 3，|1101⟩ 是 13。</p>
+    <p><b>為什麼工作暫存器是 4 顆？</b>它要裝下 0 到 14 的餘數，2⁴ = 16 &gt; 15，4 顆剛好夠。一般來說需要 n = ⌈log₂N⌉ 顆。</p>
+    <p><b>為什麼計數暫存器只有 3 顆？</b>教科書建議用 2n = 8 顆，讓量到的 y/2ᵗ 足夠接近 s/r，連分數才算得出 r。本例的 r = 4 剛好整除 2³ = 8，量到的分數完全精確，所以 3 顆就夠。2001 年 IBM 用核磁共振（NMR）第一次分解 15，也是用 3 + 4 = 7 顆位元。</p>
+    <p><b>為什麼工作暫存器從 1 開始？</b>之後的受控閘做的都是「乘法」：把工作暫存器乘上 7、乘上 4。從 1 開始乘，最後得到的就是 7ˣ。如果從 0 開始，怎麼乘都是 0。</p>
+  </div>
+  <div class="eq">初始化：用 1 個 X 閘把 w0 從 |0⟩ 翻成 |1⟩<br>|ψ₀⟩ = |000⟩ ⊗ |0001⟩ <span class="c">　（計數 = 0，工作 = 1）</span></div>
+  <button class="btn goto" type="button" data-goto="1">在播放器看這一步 ↑</button>
+</section>
+
+<!-- 2 H -->
+<section id="s2">
+  <div class="sec-head"><div class="num">2</div><div class="t"><div class="eyebrow">Hadamard 閘</div><h2>3 個 H 閘：同時放進 x = 0 到 7</h2>
+    <p>這一步讓之後的乘法可以一次作用在 8 個 x 上。</p></div></div>
+  <div class="row2">
+    <div class="prose">
+      <p>H 閘把 |0⟩ 變成「一半 |0⟩、一半 |1⟩」的疊加：</p>
+      <div class="eq">H = (1/√2) [ 1  1 ; 1 −1 ]<br>H|0⟩ = (|0⟩ + |1⟩)/√2<br>H|1⟩ = (|0⟩ − |1⟩)/√2</div>
+      <p>對 c0、c1、c2 各做一次，三個括號乘開剛好是 8 項，每一項就是一個 3 位元的二進位數：</p>
+    </div>
+    <figure class="fig" style="margin:0">
+      <div class="scroll" id="fig-h"></div>
+      <figcaption>三個 H 互不相干，可以同時做，在電路上畫成同一欄。</figcaption>
+    </figure>
+  </div>
+  <div class="eq">(|0⟩+|1⟩)(|0⟩+|1⟩)(|0⟩+|1⟩) / √8<br>= ( |000⟩ + |001⟩ + |010⟩ + |011⟩ + |100⟩ + |101⟩ + |110⟩ + |111⟩ ) / √8<br>= (1/√8) Σ<sub>x=0..7</sub> |x⟩ <span class="c">　每項振幅 1/√8 ≈ 0.354，機率 1/8 = 12.5%</span></div>
+  <div class="eq">|ψ₁⟩ = (1/√8) Σ<sub>x=0..7</sub> |x⟩ ⊗ |0001⟩</div>
+  <p class="prose key">工作暫存器還沒被動到，所以兩個暫存器現在是「各過各的」（沒有糾纏）。</p>
+  <button class="btn goto" type="button" data-goto="2">在播放器看這一步 ↑</button>
+</section>
+
+<!-- 3 受控模乘 -->
+<section id="s3">
+  <div class="sec-head"><div class="num">3</div><div class="t"><div class="eyebrow">受控模乘法（模冪）</div><h2>把 7ˣ mod 15 寫進工作暫存器</h2>
+    <p>這是整個演算法最花閘的部分，也是週期被寫進量子態的地方。</p></div></div>
+
+  <div class="sub">
+    <h3>3.1　把指數拆成二進位</h3>
+    <div class="prose">
+      <p>我們要的是把 |x⟩|1⟩ 變成 |x⟩|7ˣ mod 15⟩。定義一個么正運算 <b>U|y⟩ = |7y mod 15⟩</b>（乘以 7 再取餘數）。因為 x = c0·1 + c1·2 + c2·4，所以</p>
+    </div>
+    <div class="eq">7ˣ = 7<sup>c0</sup> · 7<sup>2·c1</sup> · 7<sup>4·c2</sup>　⇒　U<sup>x</sup> = (U¹)<sup>c0</sup> · (U²)<sup>c1</sup> · (U⁴)<sup>c2</sup></div>
+    <div class="tbl"><table>
+      <thead><tr><th>控制位元</th><th>要做的運算</th><th>等於乘以</th><th>用到的閘</th></tr></thead>
+      <tbody>
+        <tr><td class="m">c0</td><td class="m">U¹</td><td class="m">7 mod 15 = <b>7</b></td><td>3 個 Fredkin + 4 個 CNOT</td></tr>
+        <tr><td class="m">c1</td><td class="m">U²</td><td class="m">49 mod 15 = <b>4</b></td><td>2 個 Fredkin</td></tr>
+        <tr><td class="m">c2</td><td class="m">U⁴</td><td class="m">2401 mod 15 = <b>1</b></td><td><b>不需要任何閘</b></td></tr>
+      </tbody>
+    </table></div>
+    <p class="prose">「受控」的意思是：控制位元是 |1⟩ 就執行，是 |0⟩ 就不動。控制位元處在疊加態時，兩個分支會同時發生，所以 8 個 x 各自拿到自己該乘的結果。</p>
+  </div>
+
+  <div class="sub">
+    <h3>3.2　×7 mod 15 的位元技巧</h3>
+    <div class="prose">
+      <p>15 這個數很特別：16 ≡ 1 (mod 15)。所以一個 4 位元數乘以 2 再 mod 15，結果正好是把位元<b>循環左移 1 格</b>（最高位繞回最低位）。由此得到兩個好用的結果：</p>
+    </div>
+    <div class="eq">循環右移 1 格 = 循環左移 3 格 = ×2³ = <b>×8</b> (mod 15)　<span class="c">← 3 個 SWAP</span><br>4 個位元全部翻轉：y → 15 − y = <b>×(−1)</b> (mod 15)　<span class="c">← 4 個 X</span><br>兩個合起來：×8 × (−1) = ×(−8) ≡ <b>×7</b> (mod 15)</div>
+    <p class="prose">下面可以選一個輸入 y，觀察 4 個位元在每一步怎麼移動。綠框是剛被 SWAP 交換的兩格，紅框是剛被 X 翻轉的格子。</p>
+    <div class="fig">
+      <div class="btns">
+        <span class="note">運算：</span>
+        <button class="btn" type="button" data-mode="7" aria-pressed="true">U¹：×7</button>
+        <button class="btn" type="button" data-mode="4" aria-pressed="false">U²：×4</button>
+        <span class="note" style="margin-left:8px">輸入 y：</span>
+        <select id="bt-y" aria-label="輸入 y"></select>
+      </div>
+      <div class="trace" id="bt-trace"></div>
+      <div class="verdict" id="bt-verdict"></div>
+    </div>
+    <p class="note">這個技巧只對 N = 15 這類「2ᵏ ≡ 1」的特例有效。一般的 N 要用量子加法器組成的模乘法電路，閘數多出很多。所以 N = 15 是最常拿來示範的例子。</p>
+  </div>
+
+  <div class="sub">
+    <h3>3.3　受控化：SWAP 變 Fredkin，X 變 CNOT</h3>
+    <div class="prose">
+      <p>要讓 U¹ 只在 c0 = 1 時執行，就把每個閘都加上 c0 當控制：</p>
+    </div>
+    <div class="tbl"><table>
+      <thead><tr><th>原本的閘</th><th>受控版本</th><th>作用</th></tr></thead>
+      <tbody>
+        <tr><td>SWAP(a, b)</td><td><b>Fredkin</b>（受控 SWAP, CSWAP）</td><td>控制位元 = 1 時交換 a、b，否則不動</td></tr>
+        <tr><td>X</td><td><b>CNOT</b>（受控 NOT）</td><td>控制位元 = 1 時翻轉目標，否則不動</td></tr>
+      </tbody>
+    </table></div>
+    <figure class="fig" style="margin:0">
+      <div class="scroll" id="fig-cu7"></div>
+      <figcaption>受控 U¹（×7 mod 15）的完整閘序列：3 個 Fredkin 做循環右移，4 個 CNOT 做全部翻轉。</figcaption>
+    </figure>
+    <div class="row2">
+      <figure class="fig" style="margin:0">
+        <div class="scroll" id="fig-fredkin" style="display:flex;align-items:center;gap:6px"></div>
+        <figcaption>硬體通常沒有原生的 Fredkin 閘，要拆成 CNOT、Toffoli、CNOT。Toffoli 再拆成 6 個 CNOT 加上 T、T†、H 等單位元閘，所以一個 Fredkin 約等於 8 個 CNOT。</figcaption>
+      </figure>
+      <div class="tbl"><table>
+        <thead><tr><th class="n">c</th><th class="n">a</th><th class="n">b</th><th>→</th><th class="n">a′</th><th class="n">b′</th></tr></thead>
+        <tbody>
+          <tr><td class="n">0</td><td class="n">x</td><td class="n">y</td><td></td><td class="n">x</td><td class="n">y</td></tr>
+          <tr><td class="n">1</td><td class="n">0</td><td class="n">0</td><td></td><td class="n">0</td><td class="n">0</td></tr>
+          <tr class="on"><td class="n">1</td><td class="n">0</td><td class="n">1</td><td></td><td class="n">1</td><td class="n">0</td></tr>
+          <tr class="on"><td class="n">1</td><td class="n">1</td><td class="n">0</td><td></td><td class="n">0</td><td class="n">1</td></tr>
+          <tr><td class="n">1</td><td class="n">1</td><td class="n">1</td><td></td><td class="n">1</td><td class="n">1</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+  </div>
+
+  <div class="sub">
+    <h3>3.4　受控 U²（×4）與 U⁴（×1）</h3>
+    <div class="row2">
+      <div class="prose">
+        <p>×4 = ×2²，也就是循環左移 2 格：w0 ↔ w2、w1 ↔ w3 兩組對調。只要 <b>2 個 Fredkin</b>，控制位元是 c1。</p>
+        <p>驗算：y = 7 = 0111，交換 w1、w3 得到 1101，再交換 w0、w2（兩個都是 1，沒變），結果 1101 = 13，而 7 × 4 = 28 = 15 + 13 ✓。</p>
+        <p>U⁴ 是 ×7⁴ = ×2401 ≡ ×1 (mod 15)，等於什麼都不做，所以 <b>c2 不接任何閘</b>。c2 還是有用：它經過 H 之後參與逆 QFT 的干涉，決定量測結果的最高位。</p>
+      </div>
+      <figure class="fig" style="margin:0">
+        <div class="scroll" id="fig-cu4"></div>
+        <figcaption>受控 U²（×4 mod 15）：2 個 Fredkin。</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <div class="sub">
+    <h3>3.5　做完之後：兩個暫存器糾纏在一起</h3>
+    <div class="eq">|ψ₂⟩ = (1/√8) Σ<sub>x=0..7</sub> |x⟩ ⊗ |7ˣ mod 15⟩</div>
+    <div class="tbl"><table>
+      <thead><tr><th>工作暫存器</th><th>二進位</th><th>和它綁在一起的 x</th><th>x 的差</th></tr></thead>
+      <tbody>
+        <tr><td class="n">1</td><td class="m">0001</td><td class="m">0 (000)、4 (100)</td><td class="n">4</td></tr>
+        <tr><td class="n">7</td><td class="m">0111</td><td class="m">1 (001)、5 (101)</td><td class="n">4</td></tr>
+        <tr><td class="n">4</td><td class="m">0100</td><td class="m">2 (010)、6 (110)</td><td class="n">4</td></tr>
+        <tr><td class="n">13</td><td class="m">1101</td><td class="m">3 (011)、7 (111)</td><td class="n">4</td></tr>
+      </tbody>
+    </table></div>
+    <p class="prose key">週期 4 已經藏在量子態裡：工作暫存器值相同的那些 x，彼此都相差 4。但現在直接量計數暫存器只會隨機得到 0 到 7 之一，看不出週期。下一步要用干涉把它變成看得出來的訊號。</p>
+    <div class="prose">
+      <p><b>另一種看法：相位回踢。</b>U 的本徵態是 |u<sub>s</sub>⟩ = ½ Σ<sub>k=0..3</sub> e<sup>−2πi·sk/4</sup> |7ᵏ mod 15⟩，本徵值是 e<sup>2πi·s/4</sup>，s = 0, 1, 2, 3。起始的 |1⟩ 剛好等於 ½(|u₀⟩+|u₁⟩+|u₂⟩+|u₃⟩)。受控 U 作用在本徵態上時，工作暫存器不變，反而把相位 e<sup>2πi·s/4</sup> 「踢回」控制位元。所以計數暫存器裡記的是相位 s/r，逆 QFT 再把這個相位讀出來。這就是量子相位估計（QPE）的觀點，兩種看法結果完全相同。</p>
+    </div>
+  </div>
+
+  <div class="sub">
+    <h3>3.6　實驗用的精簡版</h3>
+    <div class="row2">
+      <div class="prose">
+        <p>受控 U¹ 的輸入其實永遠是 |0001⟩，不需要一個對所有 y 都正確的乘法器。c0 = 1 時只要把 0001 變成 0111，也就是翻轉 w1、w2，<b>2 個 CNOT 就夠</b>，取代原本的 3 個 Fredkin + 4 個 CNOT。</p>
+        <p>早期分解 15 的實驗大多用這種「已知輸入」的精簡電路。它的結果和完整版一模一樣（本頁的數值已用 Qiskit 驗證），但只適用於這個特定例子，不能推廣成通用的分解程式。</p>
+      </div>
+      <figure class="fig" style="margin:0">
+        <div class="scroll" id="fig-compiled"></div>
+        <figcaption>精簡版受控 U¹：只對輸入 |0001⟩ 正確。</figcaption>
+      </figure>
+    </div>
+  </div>
+  <button class="btn goto" type="button" data-goto="12">在播放器看模乘完成後的狀態 ↑</button>
+</section>
+
+<!-- 4 量測工作暫存器 -->
+<section id="s4">
+  <div class="sec-head"><div class="num">4</div><div class="t"><div class="eyebrow">可選步驟</div><h2>（想像）量測工作暫存器</h2>
+    <p>這一步不做也可以，但做了比較容易看懂接下來的干涉。</p></div></div>
+  <div class="prose">
+    <p>如果現在量工作暫存器，會隨機得到 1、7、4、13 之一（各 25%）。量到之後，計數暫存器只剩下和它綁在一起的那兩個 x，而且它們相差 4。選一個量測結果看看：</p>
+  </div>
+  <div class="fig">
+    <div class="btns" id="cl-btns"><span class="note">量到 w =</span></div>
+    <div class="slots" id="cl-slots"></div>
+    <div class="eq" id="cl-eq"></div>
+  </div>
+  <p class="prose">真正的電路不需要這一步。根據「延遲量測原理」，先量工作暫存器或最後再量（甚至不量），計數暫存器的量測機率完全一樣。播放器裡的電路就沒有這一步。</p>
+</section>
+
+<!-- 5 逆 QFT -->
+<section id="s5">
+  <div class="sec-head"><div class="num">5</div><div class="t"><div class="eyebrow">逆量子傅立葉轉換（QFT†）</div><h2>用干涉把週期變成尖峰</h2>
+    <p>3 顆位元的逆 QFT 只要 7 個閘：1 個 SWAP、3 個 H、3 個受控相位閘。</p></div></div>
+  <div class="prose">
+    <p>QFT 把「位置」變成「頻率」。逆 QFT 的定義是：</p>
+  </div>
+  <div class="eq">QFT† |x⟩ = (1/√8) Σ<sub>y=0..7</sub> e<sup>−2πi·xy/8</sup> |y⟩　<span class="c">（x 每加 1，|y⟩ 的相位就多轉 −45°·y）</span></div>
+  <div class="prose">
+    <p>輸入是「每隔 4 格出現一次」的疊加時，只有頻率和週期對得上的 y 會互相加強，其他 y 會互相抵消。週期 r = 4，在 8 格裡重複 8/4 = 2 次，所以尖峰出現在 2 的倍數：y = 0、2、4、6。</p>
+  </div>
+
+  <div class="sub">
+    <h3>5.1　閘序列</h3>
+    <div class="row2">
+      <figure class="fig" style="margin:0">
+        <div class="scroll" id="fig-qft"></div>
+        <figcaption>3 顆位元的逆 QFT。紫色是受控相位閘 CP(θ)，標籤是角度。</figcaption>
+      </figure>
+      <div class="tbl"><table>
+        <thead><tr><th>#</th><th>閘</th><th>作用</th></tr></thead>
+        <tbody>
+          <tr><td class="n">1</td><td class="m">SWAP(c0, c2)</td><td>反轉位元順序</td></tr>
+          <tr><td class="n">2</td><td class="m">H(c0)</td><td>處理最高頻的那一位</td></tr>
+          <tr><td class="n">3</td><td class="m">CP(−π/2) c0–c1</td><td>c0、c1 都是 1 時乘上 −i</td></tr>
+          <tr><td class="n">4</td><td class="m">H(c1)</td><td></td></tr>
+          <tr><td class="n">5</td><td class="m">CP(−π/4) c0–c2</td><td>都是 1 時乘上 e<sup>−iπ/4</sup></td></tr>
+          <tr><td class="n">6</td><td class="m">CP(−π/2) c1–c2</td><td>都是 1 時乘上 −i</td></tr>
+          <tr><td class="n">7</td><td class="m">H(c2)</td><td>干涉完成</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+    <div class="prose">
+      <p><b>受控相位閘 CP(θ)</b> 的矩陣是 diag(1, 1, 1, e<sup>iθ</sup>)：只有兩顆位元都是 1 的項會乘上相位 e<sup>iθ</sup>，其他項不變。它對兩顆位元是對稱的，哪顆當控制都一樣。</p>
+      <p><b>為什麼 SWAP 放在最前面？</b>標準 QFT 電路的輸出位元順序是倒過來的，最後要用 SWAP 反轉回來。逆 QFT 是把 QFT 的閘倒著做、角度取負號，所以 SWAP 變成第一個閘。</p>
+    </div>
+  </div>
+
+  <div class="sub">
+    <h3>5.2　干涉：為什麼奇數 y 會消失</h3>
+    <div class="prose">
+      <p>假設工作暫存器是 w（第 4 步選的值），計數暫存器是 (|x₀⟩ + |x₀+4⟩)/√2。逆 QFT 之後，量到 y 的振幅是兩支箭頭相加：</p>
+    </div>
+    <div class="eq">振幅(y) = ¼ · ( e<sup>−2πi·x₀y/8</sup> + e<sup>−2πi·(x₀+4)y/8</sup> ) = ¼ · e<sup>−2πi·x₀y/8</sup> · ( 1 + e<sup>−iπy</sup> )<br><span class="c">y 偶數：e<sup>−iπy</sup> = +1 → 兩支同向，長度 ½ → 機率 ¼</span><br><span class="c">y 奇數：e<sup>−iπy</sup> = −1 → 兩支反向，互相抵消 → 機率 0</span></div>
+    <div class="fig">
+      <div class="btns" id="ph-w"><span class="note">工作暫存器 w =</span></div>
+      <div class="btns" id="ph-y"><span class="note">看 y =</span></div>
+      <div class="row2" style="align-items:center">
+        <div id="ph-svg" class="phasor" style="display:flex;justify-content:center"></div>
+        <div class="prose" id="ph-text" style="font-size:15px"></div>
+      </div>
+    </div>
+  </div>
+  <button class="btn goto" type="button" data-goto="19">在播放器看逆 QFT 完成後的狀態 ↑</button>
+</section>
+
+<!-- 6 量測 -->
+<section id="s6">
+  <div class="sec-head"><div class="num">6</div><div class="t"><div class="eyebrow">量測</div><h2>量測計數暫存器</h2>
+    <p>結果只會是 000、010、100、110 其中之一，各 25%。</p></div></div>
+  <div class="fig">
+    <div class="btns">
+      <button class="btn primary" type="button" id="ms-1">量測 1 次</button>
+      <button class="btn" type="button" id="ms-1000">量測 1,000 次</button>
+      <button class="btn" type="button" id="ms-clear">清除</button>
+      <span class="stepno" id="ms-total">共 0 次</span>
+    </div>
+    <div class="scroll" id="ms-hist"></div>
+    <div class="cap">長條是量測次數占比，綠色虛線是理論值 25%。每次量測都是從頁面模擬器算出的機率分布中抽樣。</div>
+  </div>
+  <div class="prose">
+    <p>每次量測只會得到<b>一個</b> y，量子電腦不會直接告訴你 r。但每一個 y 都滿足 y/8 = s/4（s 是 0 到 3 之間某個未知的整數），下一步用古典計算把 r 解出來。</p>
+  </div>
+</section>
+
+<!-- 7 古典後處理 -->
+<section id="s7">
+  <div class="sec-head"><div class="num">7</div><div class="t"><div class="eyebrow">古典後處理</div><h2>連分數找出 r，最大公因數找出因數</h2>
+    <p>從這裡開始都是一般電腦的工作。</p></div></div>
+  <div class="cfbox" id="cf-live"><span class="muted">先在第 6 步量測 1 次，這裡會用那次的結果一步一步算。</span></div>
+  <div class="tbl"><table>
+    <thead><tr><th>量到 y</th><th>y / 8</th><th>連分數漸近分數</th><th>候選 r</th><th>檢查 7ʳ mod 15</th><th>結果</th></tr></thead>
+    <tbody id="cf-table">
+      <tr data-y="0"><td class="m">000 (0)</td><td class="m">0</td><td class="m">0/1</td><td class="m">—</td><td>—</td><td class="bad">沒有資訊，重跑</td></tr>
+      <tr data-y="2"><td class="m">010 (2)</td><td class="m">1/4</td><td class="m">0/1, 1/4</td><td class="m">4</td><td class="m">7⁴ mod 15 = 1</td><td class="ok">r = 4</td></tr>
+      <tr data-y="4"><td class="m">100 (4)</td><td class="m">1/2</td><td class="m">0/1, 1/2</td><td class="m">2</td><td class="m">7² mod 15 = 4 ≠ 1</td><td>試 2 的倍數：r = 4 ✓</td></tr>
+      <tr data-y="6"><td class="m">110 (6)</td><td class="m">3/4</td><td class="m">0/1, 1/1, 3/4</td><td class="m">4</td><td class="m">7⁴ mod 15 = 1</td><td class="ok">r = 4</td></tr>
+    </tbody>
+  </table></div>
+  <div class="prose">
+    <p>直接成功的機率是 50%（y = 2 或 6）。y = 4 時多試一個倍數也能成功，只有 y = 0 需要重跑。實務上重複幾次，很快就能得到 r。</p>
+    <p>y = 4 會出問題，是因為 4/8 約分成 1/2，s = 2 和 r = 4 有公因數，分母變小了。這是連分數法的通病，解法就是檢查候選 r 的倍數，或多量幾次取最小公倍數。</p>
+  </div>
+  <div class="eq">r = 4 是偶數 ✓　　7<sup>r/2</sup> = 7² = 49 ≡ 4 (mod 15)，不等於 14 ✓<br>gcd(4 − 1, 15) = gcd(3, 15) = <b>3</b><br>gcd(4 + 1, 15) = gcd(5, 15) = <b>5</b><br><b>15 = 3 × 5</b></div>
+</section>
+
+<!-- 總結 -->
+<section id="summary">
+  <div class="sec-head"><div class="num">Σ</div><div class="t"><div class="eyebrow">總結</div><h2>每個閘各司其職</h2></div></div>
+  <div class="tbl"><table>
+    <thead><tr><th>階段</th><th>閘</th><th class="n">閘數</th><th class="n">換算成 CNOT（約）</th><th>目的</th></tr></thead>
+    <tbody>
+      <tr><td>初始化</td><td>X</td><td class="n">1</td><td class="n">0</td><td>工作暫存器 = 1</td></tr>
+      <tr><td>疊加</td><td>H</td><td class="n">3</td><td class="n">0</td><td>同時帶入 x = 0…7</td></tr>
+      <tr><td>受控 U¹ (×7)</td><td>Fredkin × 3、CNOT × 4</td><td class="n">7</td><td class="n">28</td><td>奇數 x 的分支乘 7</td></tr>
+      <tr><td>受控 U² (×4)</td><td>Fredkin × 2</td><td class="n">2</td><td class="n">16</td><td>x 的第 2 位是 1 的分支乘 4</td></tr>
+      <tr><td>受控 U⁴ (×1)</td><td>無</td><td class="n">0</td><td class="n">0</td><td>7⁴ ≡ 1，不用做</td></tr>
+      <tr><td>逆 QFT</td><td>SWAP、H × 3、CP × 3</td><td class="n">7</td><td class="n">9</td><td>干涉出週期</td></tr>
+      <tr><td>量測</td><td>量測 × 3</td><td class="n">3</td><td class="n">—</td><td>讀出 y</td></tr>
+      <tr><td><b>合計</b></td><td></td><td class="n"><b>19 + 3</b></td><td class="n"><b>約 53</b></td><td></td></tr>
+    </tbody>
+  </table></div>
+  <p class="note">換算方式：Fredkin ≈ 8 個 CNOT、SWAP = 3 個 CNOT、受控相位閘 = 2 個 CNOT 加單位元旋轉。實際數字會隨硬體的原生閘與編譯器最佳化而不同。</p>
+  <div class="row2">
+    <div class="prose">
+      <h3>三個關鍵角色</h3>
+      <p><b>H 閘負責「平行」</b>：把 8 個 x 同時放進疊加態。</p>
+      <p><b>受控 U 負責「寫入週期」</b>：讓工作暫存器和 x 糾纏，相差 4 的 x 綁在一起。</p>
+      <p><b>逆 QFT 負責「讀出週期」</b>：用干涉消掉不對的頻率，只留下 8/r 的整數倍。</p>
+    </div>
+    <div class="prose">
+      <h3>放大到真實的 RSA</h3>
+      <p>分解 15 只是示範。RSA-2048 的 N 有 2048 位元，計數暫存器要約 4000 顆位元，模乘法也不能再用循環移位的技巧，要用真正的量子算術電路，而且需要量子錯誤更正。2019 年 Gidney 與 Ekerå 估計約需 2,000 萬顆實體位元；2025 年 Gidney 把估計降到不到 100 萬顆有雜訊的實體位元，運算約一週。目前的硬體還差得很遠。</p>
+    </div>
+  </div>
+</section>
+
+<!-- Qiskit -->
+<section id="qiskit">
+  <div class="sec-head"><div class="num">&lt;/&gt;</div><div class="t"><div class="eyebrow">動手跑跑看</div><h2>Qiskit 程式碼</h2>
+    <p>和本頁電路一模一樣，已在 Qiskit + Aer 上驗證：量測結果約各 250 次的 000、010、100、110。</p></div></div>
+  <div class="codehead"><span class="note">需要 <code>pip install qiskit qiskit-aer</code></span><button class="btn" type="button" id="copy-code">複製程式碼</button></div>
+<pre id="code"><span class="cm"># Shor 演算法：N = 15, a = 7，3 顆計數位元 + 4 顆工作位元</span>
+import numpy as np
+from qiskit import QuantumCircuit, QuantumRegister, ClassicalRegister
+from qiskit_aer import AerSimulator
+
+c = QuantumRegister(3, "c")    <span class="cm"># 計數暫存器 c0..c2（c0 是最低位）</span>
+w = QuantumRegister(4, "w")    <span class="cm"># 工作暫存器 w0..w3（w0 是最低位）</span>
+m = ClassicalRegister(3, "m")
+qc = QuantumCircuit(c, w, m)
+
+<span class="cm"># ① 初始化：工作暫存器 = |0001⟩ = 1</span>
+qc.x(w[0])
+
+<span class="cm"># ② 疊加：計數暫存器 = x = 0..7</span>
+qc.h(c)
+
+<span class="cm"># ③ 受控 U¹：×7 mod 15 = 循環右移（×8）+ 全部翻轉（×(−1)）</span>
+qc.cswap(c[0], w[0], w[1])
+qc.cswap(c[0], w[1], w[2])
+qc.cswap(c[0], w[2], w[3])
+for q in w:
+    qc.cx(c[0], q)
+
+<span class="cm"># ③ 受控 U²：×4 mod 15 = 循環移 2 格</span>
+qc.cswap(c[1], w[1], w[3])
+qc.cswap(c[1], w[0], w[2])
+
+<span class="cm"># ③ 受控 U⁴：7⁴ ≡ 1 (mod 15)，不需要任何閘</span>
+
+<span class="cm"># ④ 逆 QFT</span>
+qc.swap(c[0], c[2])
+qc.h(c[0])
+qc.cp(-np.pi / 2, c[0], c[1])
+qc.h(c[1])
+qc.cp(-np.pi / 4, c[0], c[2])
+qc.cp(-np.pi / 2, c[1], c[2])
+qc.h(c[2])
+
+<span class="cm"># ⑤ 量測</span>
+qc.measure(c, m)
+
+counts = AerSimulator().run(qc, shots=1000).result().get_counts()
+print(counts)   <span class="cm"># 約 {'000': 250, '010': 250, '100': 250, '110': 250}</span>
+
+<span class="cm"># 古典後處理</span>
+from fractions import Fraction
+from math import gcd
+for bits in counts:
+    y = int(bits, 2)
+    r = Fraction(y, 8).limit_denominator(15).denominator
+    if y and pow(7, r, 15) != 1:      <span class="cm"># 例如 y = 4 → r = 2，試倍數</span>
+        r *= 2
+    if y and r % 2 == 0 and pow(7, r, 15) == 1:
+        h = pow(7, r // 2, 15)
+        print(bits, "→ r =", r, "→ 因數", gcd(h - 1, 15), gcd(h + 1, 15))</pre>
+</section>
+
+<footer>
+  <span>相關頁面：<a href="basic-circuits.html#shor">十個基礎量子電路 · Shor（把模冪畫成一個方塊，可切換 a = 7、2、11、14）</a>、<a href="transmon-3d.html#shor">Transmon 3D · 第 8 章 Shor</a>、<a href="../index.html">動畫首頁</a></span>
+  <span>本頁的狀態向量由頁面內建的 7 位元模擬器即時計算，最終機率與 Qiskit <code>Statevector</code> 一致。單一 HTML 檔，離線可用（字型需連網，離線時改用系統字型）。</span>
+</footer>
+</main>
+
+<script>
+"use strict";
+/* ================= 7 位元狀態向量模擬器 =================
+   位元編號：0=c0, 1=c1, 2=c2, 3=w0, 4=w1, 5=w2, 6=w3（和電路圖由上到下的線一致） */
+const NQ = 7, DIM = 1 << NQ;
+const bit = (i, k) => (i >> k) & 1;
+function zeroState() { const re = new Float64Array(DIM), im = new Float64Array(DIM); re[0] = 1; return { re, im }; }
+function cloneState(s) { return { re: s.re.slice(), im: s.im.slice() }; }
+function swapAmp(s, i, j) { let t = s.re[i]; s.re[i] = s.re[j]; s.re[j] = t; t = s.im[i]; s.im[i] = s.im[j]; s.im[j] = t; }
+function applyOp(s, op) {
+  const { re, im } = s;
+  switch (op.t) {
+    case "x": for (let i = 0; i < DIM; i++) if (!bit(i, op.q)) swapAmp(s, i, i | (1 << op.q)); break;
+    case "h": { const r = Math.SQRT1_2;
+      for (let i = 0; i < DIM; i++) if (!bit(i, op.q)) { const j = i | (1 << op.q);
+        const ar = re[i], ai = im[i], br = re[j], bi = im[j];
+        re[i] = (ar + br) * r; im[i] = (ai + bi) * r; re[j] = (ar - br) * r; im[j] = (ai - bi) * r; } break; }
+    case "cx": for (let i = 0; i < DIM; i++) if (bit(i, op.c) && !bit(i, op.q)) swapAmp(s, i, i | (1 << op.q)); break;
+    case "cswap": for (let i = 0; i < DIM; i++) if (bit(i, op.c) && bit(i, op.a) && !bit(i, op.b)) swapAmp(s, i, i ^ (1 << op.a) ^ (1 << op.b)); break;
+    case "swap": for (let i = 0; i < DIM; i++) if (bit(i, op.a) && !bit(i, op.b)) swapAmp(s, i, i ^ (1 << op.a) ^ (1 << op.b)); break;
+    case "cp": { const c = Math.cos(op.th), sn = Math.sin(op.th);
+      for (let i = 0; i < DIM; i++) if (bit(i, op.a) && bit(i, op.b)) { const a = re[i], b = im[i]; re[i] = a * c - b * sn; im[i] = a * sn + b * c; } break; }
+    default: break; // 量測、方塊等只畫圖不改變狀態
+  }
+}
+
+/* ================= 電路圖 ================= */
+function drawOp(op, x, Y, colW) {
+  const L = (q1, q2, cls) => `<line class="${cls}" x1="${x}" x2="${x}" y1="${Y(q1)}" y2="${Y(q2)}"/>`;
+  const dot = (q, cls) => `<circle class="${cls}" cx="${x}" cy="${Y(q)}" r="4.6"/>`;
+  const oplus = q => `<circle class="oplus" cx="${x}" cy="${Y(q)}" r="10"/><path class="cx-line" d="M${x - 10} ${Y(q)}h20M${x} ${Y(q) - 10}v20"/>`;
+  const cross = q => `<path class="sw" d="M${x - 6} ${Y(q) - 6}l12 12M${x + 6} ${Y(q) - 6}l-12 12"/>`;
+  const gbox = (q, label, cls) => `<rect class="${cls}" x="${x - 14}" y="${Y(q) - 14}" width="28" height="28" rx="5"/><text class="gt" x="${x}" y="${Y(q)}">${label}</text>`;
+  const span = qs => [Math.min(...qs), Math.max(...qs)];
+  switch (op.t) {
+    case "h": return gbox(op.q, "H", "g-h");
+    case "x": return gbox(op.q, "X", "g-x");
+    case "cx": return L(op.c, op.q, "cx-line") + dot(op.c, "cx-dot") + oplus(op.q);
+    case "ccx": { const [a, b] = span([...op.c, op.q]); return L(a, b, "cx-line") + op.c.map(q => dot(q, "cx-dot")).join("") + oplus(op.q); }
+    case "cswap": { const [a, b] = span([op.c, op.a, op.b]); return L(a, b, "sw") + dot(op.c, "sw-dot") + cross(op.a) + cross(op.b); }
+    case "swap": return L(op.a, op.b, "sw") + cross(op.a) + cross(op.b);
+    case "cp": { const ym = (Y(op.a) + Y(op.b)) / 2;
+      return L(op.a, op.b, "cp-line") + dot(op.a, "cp-dot") + dot(op.b, "cp-dot") +
+        `<text class="cp-lab" x="${x + 6}" y="${ym}" dominant-baseline="central">${op.label}</text>`; }
+    case "m": { const y = Y(op.q);
+      return `<rect class="meter" x="${x - 14}" y="${y - 13}" width="28" height="26" rx="4"/><path class="meter-n" d="M${x - 9} ${y + 6}a10 10 0 0 1 18 0M${x} ${y + 6}l6 -10"/>`; }
+    case "box": { const w = op.w || colW - 12, y1 = Y(op.q0) - 16, y2 = Y(op.q1) + 16; let s = "";
+      if (op.c !== undefined) s += L(op.c, op.q0, op.cls === "g-z" ? "cp-line" : "sw") + dot(op.c, op.cls === "g-z" ? "cp-dot" : "sw-dot");
+      s += `<rect class="${op.cls || "g-sw"}" x="${x - w / 2}" y="${y1}" width="${w}" height="${y2 - y1}" rx="6"/>`;
+      const ym = (y1 + y2) / 2;
+      if (op.sub) s += `<text class="gt" x="${x}" y="${ym - 9}">${op.label}</text><text class="gt s" x="${x}" y="${ym + 11}">${op.sub}</text>`;
+      else s += `<text class="gt" x="${x}" y="${ym}">${op.label}</text>`;
+      return s; }
+    case "id": { const w = op.w || colW - 12, y1 = Y(op.q0) - 16, y2 = Y(op.q1) + 16;
+      return L(op.c, op.q0, "wire") + `<circle cx="${x}" cy="${Y(op.c)}" r="4.6" style="fill:var(--muted)"/>` +
+        `<rect class="idbox" x="${x - w / 2}" y="${y1}" width="${w}" height="${y2 - y1}" rx="6"/>` +
+        `<text class="idt" x="${x}" y="${(y1 + y2) / 2 - 9}">${op.label}</text><text class="idt" x="${x}" y="${(y1 + y2) / 2 + 11}">${op.sub || ""}</text>`; }
+  }
+  return "";
+}
+function circuitSVG(cfg) {
+  const { wires, cols, stages = [], hi = -1, done = -1, colW = 46, rowH = 40, labelW = 76, clickable = false, aria = "量子電路圖" } = cfg;
+  const top = stages.length ? 36 : 12;
+  const W = labelW + cols.length * colW + 16, H = top + wires.length * rowH + 8;
+  const Y = q => top + rowH / 2 + q * rowH, X = c => labelW + colW / 2 + c * colW;
+  let s = `<svg viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="${aria}">`;
+  if (hi >= 0) s += `<rect class="col-hl" x="${X(hi) - colW / 2 + 1}" y="${top - 4}" width="${colW - 2}" height="${wires.length * rowH + 8}" rx="6"/>`;
+  stages.forEach(st => { const x1 = X(st.from) - colW / 2 + 4, x2 = X(st.to) + colW / 2 - 4;
+    s += `<path class="stage-line" d="M${x1} ${top - 6}v-6H${x2}v6"/><text class="stage-lab" x="${(x1 + x2) / 2}" y="${top - 18}">${st.label}</text>`; });
+  wires.forEach((w, q) => {
+    s += `<line class="wire" x1="${labelW - 4}" x2="${W - 8}" y1="${Y(q)}" y2="${Y(q)}"/>`;
+    s += `<text class="wl" x="${labelW - 10}" y="${Y(q)}" text-anchor="end" dominant-baseline="central">${w[0]} <tspan class="i">${w[1]}</tspan></text>`;
+  });
+  cols.forEach((col, c) => {
+    const dim = done >= 0 && c >= done ? " dim" : "";
+    s += `<g class="col${dim}" data-col="${c}">`;
+    if (clickable) s += `<rect class="hit" x="${X(c) - colW / 2}" y="${top - 4}" width="${colW}" height="${wires.length * rowH + 8}" rx="6"><title>第 ${c + 1} 欄</title></rect>`;
+    col.forEach(op => { s += drawOp(op, X(c), Y, colW); });
+    s += `</g>`;
+  });
+  return s + `</svg>`;
+}
+
+/* ================= 主電路（閘層級） ================= */
+const WIRES = [["c0", "|0⟩"], ["c1", "|0⟩"], ["c2", "|0⟩"], ["w0", "|0⟩"], ["w1", "|0⟩"], ["w2", "|0⟩"], ["w3", "|0⟩"]];
+const P = Math.PI;
+const COLS = [
+  [{ t: "x", q: 3 }],
+  [{ t: "h", q: 0 }, { t: "h", q: 1 }, { t: "h", q: 2 }],
+  [{ t: "cswap", c: 0, a: 3, b: 4 }],
+  [{ t: "cswap", c: 0, a: 4, b: 5 }],
+  [{ t: "cswap", c: 0, a: 5, b: 6 }],
+  [{ t: "cx", c: 0, q: 3 }],
+  [{ t: "cx", c: 0, q: 4 }],
+  [{ t: "cx", c: 0, q: 5 }],
+  [{ t: "cx", c: 0, q: 6 }],
+  [{ t: "cswap", c: 1, a: 4, b: 6 }],
+  [{ t: "cswap", c: 1, a: 3, b: 5 }],
+  [{ t: "swap", a: 0, b: 2 }],
+  [{ t: "h", q: 0 }],
+  [{ t: "cp", a: 0, b: 1, th: -P / 2, label: "−π/2" }],
+  [{ t: "h", q: 1 }],
+  [{ t: "cp", a: 0, b: 2, th: -P / 4, label: "−π/4" }],
+  [{ t: "cp", a: 1, b: 2, th: -P / 2, label: "−π/2" }],
+  [{ t: "h", q: 2 }],
+  [{ t: "m", q: 0 }, { t: "m", q: 1 }, { t: "m", q: 2 }],
+];
+const STAGES = [
+  { from: 0, to: 0, label: "初始", short: "①", name: "初始化", step: 1 },
+  { from: 1, to: 1, label: "疊加", short: "②", name: "H 疊加", step: 2 },
+  { from: 2, to: 8, label: "受控 U¹：×7 mod 15", short: "③", name: "受控 ×7", step: 9 },
+  { from: 9, to: 10, label: "U²：×4", short: "③", name: "受控 ×4", step: 11 },
+  { from: 11, to: 17, label: "逆 QFT", short: "④", name: "逆 QFT", step: 18 },
+  { from: 18, to: 18, label: "量測", short: "⑤", name: "量測", step: 19 },
+];
+// 每一步的說明：STEPS[s] 描述「已套用前 s 欄」之後的狀態
+const STEPS = [
+  { g: "起點", t: "7 顆位元全部是 |0⟩", d: "還沒有任何閘。狀態只有一項：|000⟩|0000⟩，振幅 1。" },
+  { g: "X(w0)", t: "把工作暫存器設成 1", d: "X 閘把 w0 從 0 翻成 1，工作暫存器變成 |0001⟩ = 1。之後的受控閘都是「乘法」，從 1 開始乘，最後才會得到 7ˣ。" },
+  { g: "H(c0)、H(c1)、H(c2)", t: "8 個 x 同時存在", d: "三顆計數位元各過一個 H，變成 x = 0…7 的等權重疊加。每一項的振幅是 1/√8 ≈ 0.354，機率 12.5%。工作暫存器全都還是 1，兩個暫存器還沒有糾纏。" },
+  { g: "Fredkin(c0; w0, w1)", t: "×7 開始：第 1 次交換", d: "只有 c0 = 1 的分支（奇數 x：1、3、5、7）會交換 w0 和 w1。那 4 項的工作暫存器從 0001 變成 0010 = 2；偶數 x 的分支不動。" },
+  { g: "Fredkin(c0; w1, w2)", t: "第 2 次交換", d: "c0 = 1 的分支交換 w1、w2：0010 → 0100 = 4。" },
+  { g: "Fredkin(c0; w2, w3)", t: "第 3 次交換：完成 ×8", d: "c0 = 1 的分支交換 w2、w3：0100 → 1000 = 8。三次交換合起來是 4 位元循環右移，等於 ×8 mod 15。" },
+  { g: "CNOT(c0 → w0)", t: "開始全部翻轉", d: "c0 = 1 的分支翻轉 w0：1000 → 1001 = 9。" },
+  { g: "CNOT(c0 → w1)", t: "翻轉 w1", d: "1001 → 1011 = 11。" },
+  { g: "CNOT(c0 → w2)", t: "翻轉 w2", d: "1011 → 1111 = 15。" },
+  { g: "CNOT(c0 → w3)", t: "受控 U¹ 完成：×7", d: "1111 → 0111 = 7。四個翻轉合起來是 y → 15 − y，也就是 ×(−1) mod 15；×8 再 ×(−1) 等於 ×7。現在奇數 x 的工作暫存器是 7，偶數 x 還是 1，兩個暫存器開始糾纏。" },
+  { g: "Fredkin(c1; w1, w3)", t: "×4 開始：交換 w1、w3", d: "只有 c1 = 1 的分支（x = 2、3、6、7）會動。x = 3、7 的 0111 變成 1101 = 13；x = 2、6 的 0001 交換兩個 0，沒有變化。" },
+  { g: "Fredkin(c1; w0, w2)", t: "受控 U² 完成：模冪算好了", d: "交換 w0、w2：x = 2、6 的 0001 → 0100 = 4；x = 3、7 的 1101 兩邊都是 1，不變。現在每個 x 都配上 7ˣ mod 15：1, 7, 4, 13, 1, 7, 4, 13。c2 控制的是 ×7⁴ = ×1，不需要閘。", x: "看方格：每一列（同一個工作暫存器值）的兩個 x 剛好相差 4，週期已經寫進量子態。但計數暫存器的長條還是 8 個 12.5%，直接量測看不出週期。" },
+  { g: "SWAP(c0, c2)", t: "逆 QFT 開始：反轉位元順序", d: "交換 c0、c2。例如 x = 1 (001) 變成 4 (100)、x = 3 (011) 變成 6 (110)。每一列仍然是兩個相差 4 的格子，只是位置對調。" },
+  { g: "H(c0)", t: "第一個 H：同一列的兩格開始干涉", d: "c0 現在存放原本的最高位。每一列的兩格剛好只差在 c0（例如 000 和 001），H 讓它們相加或相減：c0 = 1 那格抵消成 0，只剩 c0 = 0 的格子。" },
+  { g: "CP(−π/2) c0–c1", t: "受控相位：乘上 −i", d: "c0、c1 都是 1 的項乘上 e^(−iπ/2) = −i。這一步之前，所有 c0 = 1 的格子都已經是 0，所以狀態看起來沒變。" },
+  { g: "H(c1)", t: "第二個 H", d: "c1 分裂成 0、1 兩半，每一列變成 2 格，振幅大小 1/√8 ≈ 0.354。原本 c1 = 1 的那兩列（w = 4、13）出現負號，指針朝左。" },
+  { g: "CP(−π/4) c0–c2", t: "受控相位：乘上 e^(−iπ/4)", d: "c0、c2 都是 1 的項轉 −45°。此時 c0 = 1 的格子振幅都是 0，所以沒有可見變化。" },
+  { g: "CP(−π/2) c1–c2", t: "受控相位：乘上 −i", d: "c1、c2 都是 1 的項（x = 6、7 欄）轉 −90°，看工作暫存器 = 7、13 的那兩列指針怎麼轉。" },
+  { g: "H(c2)", t: "逆 QFT 完成：只剩 0、2、4、6", d: "最後一個 H 完成干涉。每一列都只剩 x = 0、2、4、6 四格，奇數格全部是 0。計數暫存器的長條變成四根 25%。", x: "四根長條的間距是 8/r = 2，量到的 y 除以 8 會是 0、¼、½、¾，也就是 s/4。" },
+  { g: "量測 c0、c1、c2", t: "量測：得到 0、2、4、6 之一", d: "量測計數暫存器，每次只得到一個 y：000、010、100、110 各 25%。量測不會改變上面的機率，接著用第 7 步的連分數算出 r = 4。" },
+];
+// 預先算好每一步的狀態
+const STATES = [zeroState()];
+COLS.forEach((col, i) => { const s = cloneState(STATES[i]); col.forEach(op => applyOp(s, op)); STATES.push(s); });
+const NSTEP = COLS.length; // 19
+const FINAL_P = (() => { const s = STATES[NSTEP]; const p = new Array(8).fill(0);
+  for (let i = 0; i < DIM; i++) p[i & 7] += s.re[i] ** 2 + s.im[i] ** 2; return p; })();
+
+/* ================= 小工具 ================= */
+const $ = id => document.getElementById(id);
+const bin = (v, n) => v.toString(2).padStart(n, "0");
+const minus = s => s.replace(/-/g, "−");
+function fmtC(re, im) {
+  const r = Math.abs(re) < 1e-9 ? 0 : re, i = Math.abs(im) < 1e-9 ? 0 : im;
+  if (!i) return minus((r >= 0 ? "+" : "") + r.toFixed(3));
+  if (!r) return minus((i >= 0 ? "+" : "") + i.toFixed(3) + "i");
+  return minus(`(${r.toFixed(3)} ${i < 0 ? "-" : "+"} ${Math.abs(i).toFixed(3)}i)`);
+}
+function polar(re, im) { const m = Math.hypot(re, im); let d = Math.atan2(im, re) * 180 / Math.PI; if (Math.abs(d) < 1e-6) d = 0; if (d <= -179.999) d = 180; return { m, d }; }
+
+/* ================= 靜態電路圖 ================= */
+$("fig-overview").innerHTML = circuitSVG({
+  wires: WIRES, colW: 68, aria: "Shor 演算法分解 15 的方塊電路",
+  stages: [{ from: 0, to: 0, label: "① 初始" }, { from: 1, to: 1, label: "② 疊加" }, { from: 2, to: 4, label: "③ 模冪 7ˣ mod 15" }, { from: 5, to: 5, label: "④ 逆 QFT" }, { from: 6, to: 6, label: "⑤ 量測" }],
+  cols: [
+    [{ t: "x", q: 3 }],
+    [{ t: "h", q: 0 }, { t: "h", q: 1 }, { t: "h", q: 2 }],
+    [{ t: "box", c: 0, q0: 3, q1: 6, label: "×7", sub: "U¹", w: 50 }],
+    [{ t: "box", c: 1, q0: 3, q1: 6, label: "×4", sub: "U²", w: 50 }],
+    [{ t: "id", c: 2, q0: 3, q1: 6, label: "×1", sub: "U⁴", w: 50 }],
+    [{ t: "box", q0: 0, q1: 2, label: "QFT†", w: 54, cls: "g-z" }],
+    [{ t: "m", q: 0 }, { t: "m", q: 1 }, { t: "m", q: 2 }],
+  ]
+});
+$("fig-h").innerHTML = circuitSVG({ wires: [["c0", "|0⟩"], ["c1", "|0⟩"], ["c2", "|0⟩"]], cols: [[{ t: "h", q: 0 }, { t: "h", q: 1 }, { t: "h", q: 2 }]], aria: "三個 H 閘" });
+const W5 = [["c0", ""], ["w0", ""], ["w1", ""], ["w2", ""], ["w3", ""]];
+$("fig-cu7").innerHTML = circuitSVG({
+  wires: W5, aria: "受控 ×7 mod 15 的閘序列",
+  stages: [{ from: 0, to: 2, label: "循環右移 = ×8" }, { from: 3, to: 6, label: "全部翻轉 = ×(−1)" }],
+  cols: [[{ t: "cswap", c: 0, a: 1, b: 2 }], [{ t: "cswap", c: 0, a: 2, b: 3 }], [{ t: "cswap", c: 0, a: 3, b: 4 }],
+    [{ t: "cx", c: 0, q: 1 }], [{ t: "cx", c: 0, q: 2 }], [{ t: "cx", c: 0, q: 3 }], [{ t: "cx", c: 0, q: 4 }]]
+});
+$("fig-cu4").innerHTML = circuitSVG({
+  wires: [["c1", ""], ["w0", ""], ["w1", ""], ["w2", ""], ["w3", ""]], aria: "受控 ×4 mod 15 的閘序列",
+  stages: [{ from: 0, to: 1, label: "循環移 2 格 = ×4" }],
+  cols: [[{ t: "cswap", c: 0, a: 2, b: 4 }], [{ t: "cswap", c: 0, a: 1, b: 3 }]]
+});
+$("fig-compiled").innerHTML = circuitSVG({
+  wires: [["c0", ""], ["w0", "|1⟩"], ["w1", "|0⟩"], ["w2", "|0⟩"], ["w3", "|0⟩"]], aria: "精簡版受控 ×7",
+  stages: [{ from: 0, to: 1, label: "0001 → 0111" }],
+  cols: [[{ t: "cx", c: 0, q: 2 }], [{ t: "cx", c: 0, q: 3 }]]
+});
+$("fig-fredkin").innerHTML =
+  circuitSVG({ wires: [["c", ""], ["a", ""], ["b", ""]], labelW: 34, cols: [[{ t: "cswap", c: 0, a: 1, b: 2 }]], aria: "Fredkin 閘" }) +
+  `<span style="font-family:var(--font-mono);font-size:22px;padding:0 4px">=</span>` +
+  circuitSVG({ wires: [["c", ""], ["a", ""], ["b", ""]], labelW: 34, cols: [[{ t: "cx", c: 2, q: 1 }], [{ t: "ccx", c: [0, 1], q: 2 }], [{ t: "cx", c: 2, q: 1 }]], aria: "Fredkin 拆成 CNOT、Toffoli、CNOT" });
+$("fig-qft").innerHTML = circuitSVG({
+  wires: [["c0", ""], ["c1", ""], ["c2", ""]], colW: 50, aria: "三位元逆 QFT",
+  cols: COLS.slice(11, 18)
+});
+
+/* 週期環 */
+(function cycle() {
+  const vals = [1, 7, 4, 13], R = 74, cx = 120, cy = 112;
+  let s = `<svg viewBox="0 0 240 224" width="240" height="224" role="img" aria-label="1、7、4、13 的循環">`;
+  s += `<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" style="fill:var(--muted)"/></marker></defs>`;
+  const pt = k => { const a = -Math.PI / 2 + k * Math.PI / 2; return [cx + R * Math.cos(a), cy + R * Math.sin(a)]; };
+  for (let k = 0; k < 4; k++) {
+    const a0 = -Math.PI / 2 + k * Math.PI / 2 + 0.36, a1 = -Math.PI / 2 + (k + 1) * Math.PI / 2 - 0.36;
+    const p0 = [cx + R * Math.cos(a0), cy + R * Math.sin(a0)], p1 = [cx + R * Math.cos(a1), cy + R * Math.sin(a1)];
+    s += `<path d="M${p0[0]} ${p0[1]}A${R} ${R} 0 0 1 ${p1[0]} ${p1[1]}" style="fill:none;stroke:var(--muted);stroke-width:1.5" marker-end="url(#ah)"/>`;
+    const am = -Math.PI / 2 + (k + .5) * Math.PI / 2;
+    s += `<text x="${cx + (R + 20) * Math.cos(am)}" y="${cy + (R + 20) * Math.sin(am)}" text-anchor="middle" dominant-baseline="central" style="fill:var(--muted);font-size:11px">×7</text>`;
+  }
+  vals.forEach((v, k) => { const [x, y] = pt(k);
+    s += `<circle cx="${x}" cy="${y}" r="21" style="fill:var(--surface);stroke:var(--pos);stroke-width:2"/><text x="${x}" y="${y}" text-anchor="middle" dominant-baseline="central" style="fill:var(--ink);font-size:16px;font-weight:700">${v}</text>`; });
+  s += `<text x="${cx}" y="${cy - 6}" text-anchor="middle" style="fill:var(--muted);font-size:12px">週期</text><text x="${cx}" y="${cy + 14}" text-anchor="middle" style="fill:var(--ink);font-size:18px;font-weight:700">r = 4</text></svg>`;
+  $("fig-cycle").innerHTML = s;
+})();
+
+/* ================= 播放器 ================= */
+let step = 0, timer = null;
+const stageBox = $("pl-stages");
+STAGES.forEach((st, i) => {
+  const b = document.createElement("button"); b.type = "button"; b.dataset.i = i;
+  b.innerHTML = `<small>${st.short} 欄 ${st.from + 1}${st.to > st.from ? "–" + (st.to + 1) : ""}</small><b>${st.name}</b>`;
+  b.addEventListener("click", () => { stopPlay(); setStep(st.step); });
+  stageBox.appendChild(b);
+});
+$("pl-circ").addEventListener("click", e => { const g = e.target.closest("[data-col]"); if (g) { stopPlay(); setStep(+g.dataset.col + 1); } });
+$("pl-prev").addEventListener("click", () => { stopPlay(); setStep(step - 1); });
+$("pl-next").addEventListener("click", () => { stopPlay(); setStep(step + 1); });
+$("pl-reset").addEventListener("click", () => { stopPlay(); setStep(0); });
+$("pl-range").addEventListener("input", e => { stopPlay(); setStep(+e.target.value); });
+$("pl-play").addEventListener("click", () => {
+  if (timer) { stopPlay(); return; }
+  if (step >= NSTEP) setStep(0);
+  $("pl-play").setAttribute("aria-pressed", "true"); $("pl-play").textContent = "暫停";
+  timer = setInterval(() => { if (step >= NSTEP) stopPlay(); else setStep(step + 1); }, 1700);
+});
+function stopPlay() { if (timer) clearInterval(timer); timer = null; $("pl-play").setAttribute("aria-pressed", "false"); $("pl-play").textContent = "自動播放"; }
+document.querySelectorAll("[data-goto]").forEach(b => b.addEventListener("click", () => {
+  stopPlay(); setStep(+b.dataset.goto);
+  $("player").scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
+}));
+
+function matrixSVG(s) {
+  // 找出有非零振幅的工作暫存器值
+  const rows = [];
+  for (let i = 0; i < DIM; i++) if (s.re[i] ** 2 + s.im[i] ** 2 > 1e-12) { const w = i >> 3; if (!rows.includes(w)) rows.push(w); }
+  rows.sort((a, b) => a - b);
+  const lw = 98, cw = 48, ch = 48, top = 38, barH = 64;
+  const W = lw + 8 * cw + 6, H = top + rows.length * ch + barH + 34;
+  let o = `<svg class="mx" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="狀態向量方格">`;
+  for (let x = 0; x < 8; x++) {
+    const cx = lw + x * cw + cw / 2;
+    o += `<text class="lab b" x="${cx}" y="14" text-anchor="middle">${bin(x, 3)}</text><text class="lab" x="${cx}" y="29" text-anchor="middle">x=${x}</text>`;
+  }
+  rows.forEach((w, r) => {
+    const cy = top + r * ch + ch / 2;
+    o += `<text class="lab b" x="${lw - 10}" y="${cy - 7}" text-anchor="end">w = ${w}</text><text class="lab" x="${lw - 10}" y="${cy + 9}" text-anchor="end">${bin(w, 4)}</text>`;
+    for (let x = 0; x < 8; x++) {
+      const i = (w << 3) | x, re = s.re[i], im = s.im[i], m = Math.hypot(re, im);
+      const cx = lw + x * cw + cw / 2, Rm = 19;
+      o += `<g class="cell" tabindex="0" data-i="${i}"><circle class="ring" cx="${cx}" cy="${cy}" r="${Rm}"/>`;
+      if (m > 1e-6) {
+        const rr = Rm * Math.min(1, m / 0.5), a = Math.atan2(im, re);
+        o += `<circle class="disk" cx="${cx}" cy="${cy}" r="${Math.max(rr, 2.5)}"/><line class="needle" x1="${cx}" y1="${cy}" x2="${cx + Rm * Math.cos(a)}" y2="${cy - Rm * Math.sin(a)}"/>`;
+      }
+      o += `</g>`;
+    }
+  });
+  // 計數暫存器邊際機率
+  const by = top + rows.length * ch + 14 + barH;
+  o += `<line class="base" x1="${lw}" x2="${lw + 8 * cw}" y1="${by}" y2="${by}"/><text class="lab" x="${lw - 10}" y="${by - barH / 2}" text-anchor="end">P(x)</text>`;
+  const p = new Array(8).fill(0);
+  for (let i = 0; i < DIM; i++) p[i & 7] += s.re[i] ** 2 + s.im[i] ** 2;
+  p.forEach((v, x) => {
+    const h = barH * Math.min(1, v / 0.5), cx = lw + x * cw + cw / 2;
+    if (v > 1e-9) o += `<rect class="bar" x="${cx - 13}" y="${by - Math.max(h, 1.5)}" width="26" height="${Math.max(h, 1.5)}" rx="2"/>`;
+    o += `<text class="pct" x="${cx}" y="${by + 15}">${v > 1e-9 ? (v * 100).toFixed(1).replace(/\.0$/, "") + "%" : "0"}</text>`;
+  });
+  return o + `</svg>`;
+}
+function showCell(i) {
+  const s = STATES[step], { m, d } = polar(s.re[i], s.im[i]);
+  const x = i & 7, w = i >> 3;
+  $("pl-readout").textContent = `x = ${x} (${bin(x, 3)})、w = ${w} (${bin(w, 4)})：振幅 ${fmtC(s.re[i], s.im[i])}　大小 ${m.toFixed(3)}　相位 ${minus(d.toFixed(0))}°　機率 ${(m * m * 100).toFixed(2)}%`;
+}
+$("pl-matrix").addEventListener("click", e => { const g = e.target.closest(".cell"); if (g) showCell(+g.dataset.i); });
+$("pl-matrix").addEventListener("mouseover", e => { const g = e.target.closest(".cell"); if (g) showCell(+g.dataset.i); });
+$("pl-matrix").addEventListener("focusin", e => { const g = e.target.closest(".cell"); if (g) showCell(+g.dataset.i); });
+
+function setStep(v) {
+  step = Math.max(0, Math.min(NSTEP, v));
+  const s = STATES[step];
+  $("pl-circ").innerHTML = circuitSVG({ wires: WIRES, cols: COLS, stages: STAGES, hi: step - 1, done: step, clickable: true, colW: 50, aria: "Shor 分解 15 的完整閘層級電路" });
+  $("pl-range").value = step; $("pl-no").textContent = `${step} / ${NSTEP}`;
+  const info = STEPS[step];
+  $("pl-gate").textContent = step ? `第 ${step} 欄 · ${info.g}` : info.g;
+  $("pl-title").textContent = info.t; $("pl-text").textContent = info.d;
+  $("pl-extra").textContent = info.x || ""; $("pl-extra").hidden = !info.x;
+  $("pl-matrix").innerHTML = matrixSVG(s);
+  $("pl-readout").textContent = "點一個圓圈，這裡會顯示它的振幅與機率。";
+  const terms = [];
+  for (let i = 0; i < DIM; i++) if (s.re[i] ** 2 + s.im[i] ** 2 > 1e-12) terms.push(`<span>${fmtC(s.re[i], s.im[i]).padStart(8, " ")} |${bin(i & 7, 3)}⟩|${bin(i >> 3, 4)}⟩</span>`);
+  $("pl-terms").innerHTML = `<span class="muted" style="grid-column:1/-1">共 ${terms.length} 項</span>` + terms.join("");
+  stageBox.querySelectorAll("button").forEach(b => {
+    const st = STAGES[+b.dataset.i]; b.setAttribute("aria-current", step - 1 >= st.from && step - 1 <= st.to ? "true" : "false");
+  });
+  $("pl-prev").disabled = step === 0; $("pl-next").disabled = step === NSTEP;
+}
+setStep(0);
+
+/* ================= 位元追蹤 ================= */
+const ySel = $("bt-y");
+for (let y = 1; y <= 14; y++) { const o = document.createElement("option"); o.value = y; o.textContent = `${y}（${bin(y, 4)}）`; ySel.appendChild(o); }
+ySel.value = "1";
+let btMode = 7;
+document.querySelectorAll("[data-mode]").forEach(b => b.addEventListener("click", () => {
+  btMode = +b.dataset.mode;
+  document.querySelectorAll("[data-mode]").forEach(x => x.setAttribute("aria-pressed", x === b ? "true" : "false"));
+  renderTrace();
+}));
+ySel.addEventListener("change", renderTrace);
+function renderTrace() {
+  const y0 = +ySel.value;
+  const ops = btMode === 7
+    ? [["SWAP(w0, w1)", "s", 0, 1, ""], ["SWAP(w1, w2)", "s", 1, 2, ""], ["SWAP(w2, w3)", "s", 2, 3, "三次交換 = 循環右移 = ×8"], ["X × 4（全部翻轉）", "x", 0, 0, "y → 15 − y = ×(−1)"]]
+    : [["SWAP(w1, w3)", "s", 1, 3, ""], ["SWAP(w0, w2)", "s", 0, 2, "兩組對調 = 循環移 2 格 = ×4"]];
+  let v = y0;
+  const rowHtml = (label, val, mark, note) => {
+    let bits = "";
+    for (let k = 3; k >= 0; k--) {
+      const on = (val >> k) & 1;
+      let cls = "bitbox" + (on ? " one" : "");
+      if (mark && mark.t === "s" && (k === mark.a || k === mark.b)) cls += " mv";
+      if (mark && mark.t === "x") cls += " fl";
+      bits += `<div class="${cls}">${on}</div>`;
+    }
+    return `<div class="trow"><span class="tl">${label}</span><div class="bits">${bits}</div><span class="dec">${val}</span><span class="tn">${note}</span></div>`;
+  };
+  let html = `<div class="trow"><span></span><div class="bithead"><span>w3</span><span>w2</span><span>w1</span><span>w0</span></div><span class="tn" style="text-align:right">十進位</span><span></span></div>`;
+  html += rowHtml("輸入 y", v, null, "");
+  ops.forEach(([label, t, a, b, note]) => {
+    if (t === "s") { if (((v >> a) & 1) !== ((v >> b) & 1)) v ^= (1 << a) | (1 << b); }
+    else v ^= 15;
+    html += rowHtml(label, v, { t, a, b }, note);
+  });
+  $("bt-trace").innerHTML = html;
+  const expect = (btMode * y0) % 15;
+  $("bt-verdict").textContent = `${btMode} × ${y0} = ${btMode * y0}，mod 15 = ${expect}　電路結果 = ${v}　${expect === v ? "✓ 一致" : "✗"}`;
+}
+renderTrace();
+
+/* ================= 量測工作暫存器 + 干涉指針 ================= */
+const W_X0 = { 1: 0, 7: 1, 4: 2, 13: 3 };
+let clW = 4, phW = 4, phY = 2;
+function mkBtns(boxId, values, get, set, fmt) {
+  const box = $(boxId);
+  values.forEach(v => {
+    const b = document.createElement("button"); b.type = "button"; b.className = "btn"; b.textContent = fmt(v); b.dataset.v = v;
+    b.addEventListener("click", () => { set(v); box.querySelectorAll("button").forEach(x => x.setAttribute("aria-pressed", +x.dataset.v === get() ? "true" : "false")); });
+    b.setAttribute("aria-pressed", v === get() ? "true" : "false");
+    box.appendChild(b);
+  });
+}
+mkBtns("cl-btns", [1, 7, 4, 13], () => clW, v => { clW = v; renderCollapse(); }, v => `${v}（${bin(v, 4)}）`);
+function renderCollapse() {
+  const x0 = W_X0[clW];
+  let h = "";
+  for (let x = 0; x < 8; x++) h += `<div class="slot${x === x0 || x === x0 + 4 ? " on" : ""}"><b>${x}</b>${bin(x, 3)}</div>`;
+  $("cl-slots").innerHTML = h;
+  $("cl-eq").innerHTML = `量到 w = ${clW}（機率 25%）→ 計數暫存器塌縮成<br>( |${bin(x0, 3)}⟩ + |${bin(x0 + 4, 3)}⟩ ) / √2　<span class="c">也就是 x = ${x0} 和 ${x0 + 4}，相差 4 = r</span>`;
+}
+renderCollapse();
+
+mkBtns("ph-w", [1, 7, 4, 13], () => phW, v => { phW = v; renderPhasor(); }, v => `${v}`);
+mkBtns("ph-y", [0, 1, 2, 3, 4, 5, 6, 7], () => phY, v => { phY = v; renderPhasor(); }, v => `${v}`);
+function renderPhasor() {
+  const x0 = W_X0[phW], x1 = x0 + 4, y = phY;
+  const a1 = -2 * Math.PI * x0 * y / 8, a2 = -2 * Math.PI * x1 * y / 8;
+  const S = 150, c = 120, L = 0.25; // 半徑 0.5 對應 75px
+  const P = (re, im) => [c + re * S, c - im * S];
+  const p1 = [L * Math.cos(a1), L * Math.sin(a1)], p2 = [p1[0] + L * Math.cos(a2), p1[1] + L * Math.sin(a2)];
+  const arrow = (from, to, cls, hcls) => {
+    const [x0p, y0p] = P(...from), [x1p, y1p] = P(...to); const len = Math.hypot(x1p - x0p, y1p - y0p);
+    if (len < 1) return "";
+    const ux = (x1p - x0p) / len, uy = (y1p - y0p) / len, hx = x1p - ux * 10, hy = y1p - uy * 10;
+    return `<line class="${cls}" x1="${x0p}" y1="${y0p}" x2="${hx}" y2="${hy}"/><path class="${hcls}" d="M${x1p} ${y1p}L${hx - uy * 5.5} ${hy + ux * 5.5}L${hx + uy * 5.5} ${hy - ux * 5.5}z"/>`;
+  };
+  let s = `<svg viewBox="0 0 240 240" width="240" height="240" role="img" aria-label="兩個相位箭頭相加">`;
+  s += `<line class="axis" x1="10" x2="230" y1="${c}" y2="${c}"/><line class="axis" x1="${c}" x2="${c}" y1="10" y2="230"/>`;
+  s += `<circle class="circ" cx="${c}" cy="${c}" r="${0.5 * S}"/><circle class="circ" cx="${c}" cy="${c}" r="${0.25 * S}"/>`;
+  s += `<text x="226" y="${c - 6}" text-anchor="end">實部</text><text x="${c + 6}" y="20">虛部</text><text x="${c + 0.5 * S + 3}" y="${c + 14}">½</text>`;
+  s += arrow([0, 0], p1, "a1", "h1") + arrow(p1, p2, "a2", "h2");
+  const sm = Math.hypot(...p2);
+  if (sm > 1e-6) s += arrow([0, 0], p2, "res", "hr"); else s += `<circle class="zero" cx="${c}" cy="${c}" r="5"/>`;
+  s += `</svg>`;
+  $("ph-svg").innerHTML = s;
+  const d1 = ((-45 * x0 * y) % 360 + 360) % 360, d2 = ((-45 * x1 * y) % 360 + 360) % 360;
+  const prob = sm * sm;
+  $("ph-text").innerHTML =
+    `<p>w = ${phW} → 計數暫存器是 (|${x0}⟩ + |${x1}⟩)/√2，看 y = ${y}（${bin(y, 3)}）。</p>` +
+    `<p><span style="color:var(--pos);font-weight:700">藍箭頭</span>：來自 |${x0}⟩，長 ¼，角度 −45° × ${x0} × ${y} ≡ ${d1}°</p>` +
+    `<p><span style="color:var(--neg);font-weight:700">橘箭頭</span>：來自 |${x1}⟩，長 ¼，角度 −45° × ${x1} × ${y} ≡ ${d2}°</p>` +
+    `<p>兩者相差 180° × ${y} ≡ ${(180 * y) % 360}°，${y % 2 ? "方向相反，<b>完全抵消</b>" : "方向相同，<b>互相加強</b>"}。</p>` +
+    `<p><span style="color:var(--hit);font-weight:700">綠箭頭（相加）</span>長度 ${sm.toFixed(2)} → 機率 ${(prob * 100).toFixed(0)}%</p>`;
+}
+renderPhasor();
+
+/* ================= 量測統計 ================= */
+const counts = new Array(8).fill(0); let total = 0, lastY = null;
+function sample() { let r = Math.random(), acc = 0; for (let k = 0; k < 8; k++) { acc += FINAL_P[k]; if (r < acc) return k; } return 7; }
+function renderHist() {
+  const lw = 40, bw = 54, H = 190, top = 18, base = top + 140;
+  const W = lw + 8 * bw + 8;
+  let s = `<svg class="hist" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="量測結果直方圖">`;
+  [0, 0.25, 0.5].forEach(v => { const y = base - v / 0.5 * 140; s += `<text x="${lw - 6}" y="${y + 4}" text-anchor="end">${v * 100}%</text>`; });
+  s += `<line class="base" x1="${lw}" x2="${W - 4}" y1="${base}" y2="${base}"/>`;
+  for (let k = 0; k < 8; k++) {
+    const cx = lw + k * bw + bw / 2, f = total ? counts[k] / total : 0, h = Math.min(1, f / 0.5) * 140;
+    if (h > 0) s += `<rect class="bar" x="${cx - 16}" y="${base - h}" width="32" height="${h}" rx="2"${k === lastY ? ' style="fill:var(--hit)"' : ""}/>`;
+    if (FINAL_P[k] > 1e-9) { const ty = base - FINAL_P[k] / 0.5 * 140; s += `<line class="theory" x1="${cx - 22}" x2="${cx + 22}" y1="${ty}" y2="${ty}"/>`; }
+    s += `<text class="v" x="${cx}" y="${base + 16}">${bin(k, 3)}</text><text x="${cx}" y="${base + 30}" text-anchor="middle">${counts[k]}</text>`;
+  }
+  $("ms-hist").innerHTML = s + `</svg>`;
+  $("ms-total").textContent = `共 ${total.toLocaleString()} 次` + (lastY !== null ? `　最近一次：${bin(lastY, 3)}（y = ${lastY}）` : "");
+}
+function contFrac(num, den, maxDen) {
+  const a = [], conv = []; let n = num, d = den;
+  while (d) { const q = Math.floor(n / d); a.push(q); [n, d] = [d, n - q * d]; }
+  let h1 = 1, h2 = 0, k1 = 0, k2 = 1;
+  for (const q of a) { const h = q * h1 + h2, k = q * k1 + k2; if (k > maxDen) break; conv.push([h, k]); h2 = h1; h1 = h; k2 = k1; k1 = k; }
+  return { a, conv };
+}
+const gcd = (a, b) => { while (b) [a, b] = [b, a % b]; return a; };
+const powmod = (b, e, m) => { let r = 1; for (let i = 0; i < e; i++) r = (r * b) % m; return r; };
+function renderCF(y) {
+  document.querySelectorAll("#cf-table tr").forEach(tr => tr.classList.toggle("on", +tr.dataset.y === y));
+  const L = [`量到 y = ${y}（${bin(y, 3)}）→ y / 2³ = ${y}/8`];
+  if (y === 0) { L.push("y = 0 → 分數是 0，看不出 r。這次失敗，重新執行電路。"); $("cf-live").innerHTML = L.map(t => `<span>${t}</span>`).join(""); return; }
+  const g = gcd(y, 8), { a, conv } = contFrac(y, 8, 15);
+  L.push(`約分：${y}/8 = ${y / g}/${8 / g}　連分數 [${a[0]}; ${a.slice(1).join(", ")}]`);
+  L.push(`漸近分數（分母 ≤ 15）：${conv.map(([h, k]) => `${h}/${k}`).join("、")}`);
+  let r = conv[conv.length - 1][1];
+  L.push(`候選 r = ${r}：7^${r} mod 15 = ${powmod(7, r, 15)} ${powmod(7, r, 15) === 1 ? "✓" : "≠ 1"}`);
+  if (powmod(7, r, 15) !== 1) { r *= 2; L.push(`試倍數 r = ${r}：7^${r} mod 15 = ${powmod(7, r, 15)} ✓`); }
+  const h = powmod(7, r / 2, 15);
+  L.push(`r = ${r} 是偶數，7^${r / 2} mod 15 = ${h}（≠ 14 ✓）`);
+  L.push(`gcd(${h} − 1, 15) = ${gcd(h - 1, 15)}　gcd(${h} + 1, 15) = ${gcd(h + 1, 15)}　→ <b>15 = ${gcd(h - 1, 15)} × ${gcd(h + 1, 15)}</b>`);
+  $("cf-live").innerHTML = L.map(t => `<span>${t}</span>`).join("");
+}
+$("ms-1").addEventListener("click", () => { const y = sample(); counts[y]++; total++; lastY = y; renderHist(); renderCF(y); });
+$("ms-1000").addEventListener("click", () => { let y = 0; for (let i = 0; i < 1000; i++) { y = sample(); counts[y]++; } total += 1000; lastY = y; renderHist(); renderCF(y); });
+$("ms-clear").addEventListener("click", () => { counts.fill(0); total = 0; lastY = null; renderHist();
+  $("cf-live").innerHTML = `<span class="muted">先在第 6 步量測 1 次，這裡會用那次的結果一步一步算。</span>`;
+  document.querySelectorAll("#cf-table tr").forEach(tr => tr.classList.remove("on")); });
+renderHist();
+
+/* ================= 複製程式碼 ================= */
+$("copy-code").addEventListener("click", () => {
+  const txt = $("code").innerText, btn = $("copy-code");
+  const done = ok => { btn.textContent = ok ? "已複製" : "請手動選取複製"; setTimeout(() => btn.textContent = "複製程式碼", 1800); };
+  try {
+    navigator.clipboard.writeText(txt).then(() => done(true), () => { selectCode(); done(false); });
+  } catch (e) { selectCode(); done(false); }
+});
+function selectCode() { const r = document.createRange(); r.selectNodeContents($("code")); const s = getSelection(); s.removeAllRanges(); s.addRange(r); }
+</script>
+</body>
+</html>
