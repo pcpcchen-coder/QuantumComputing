@@ -19,7 +19,7 @@
 | Q013 | Grover：16 個抽屜找寶藏 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q013-grover-treasure-v2` |
 | Q014 | 量子態很怕吵：雜訊與退相干 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q014-noise-decoherence-v2` |
 | Q015 | 迷你專案：量子逃脫室 | 規劃完成 | — |
-| Q016 | 成果發表：我的量子小百科 | 規劃完成 | — |
+| Q016 | 成果發表：我的量子小百科 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q016-quantum-glossary-v2` |
 | Q017 | 為什麼要做「人造原子」 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q017-artificial-atom-v2` |
 | Q018 | 超導：電阻消失、磁鐵懸浮 | 規劃完成 | — |
 | Q019 | Cooper pair 與能隙 | 規劃完成 | — |

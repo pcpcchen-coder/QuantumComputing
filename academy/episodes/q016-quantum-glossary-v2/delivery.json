@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q016",
+  "version": "Q016-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-19",
+  "episodePath": "academy/episodes/q016-quantum-glossary-v2",
+  "basedOn": "academy/episodes/q016-quantum-glossary（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 521.301,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "superposition",
+      "title": "動畫展示：疊加詞卡的畫面",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#qubit"
+    },
+    {
+      "key": "interference",
+      "title": "動畫展示：干涉詞卡的畫面",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#interference"
+    },
+    {
+      "key": "phase",
+      "title": "動畫展示：壞比喻差在哪裡",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#gates"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.5,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q016-quantum-glossary-v2-zh-TW.mp4": {
+      "bytes": 87121052,
+      "sha256": "e9e6b82b47bbedaea4a4305fcccbc7deb9a427ae83f69ae75b0228fabb7cb787"
+    },
+    "q016-quantum-glossary-v2-master.mp4": {
+      "bytes": 88885533,
+      "sha256": "121b0e1d98fa94496d2d2c69b424f664e3956ba7b07477ba0474702d6b2e59aa"
+    },
+    "narration-only.mp3": {
+      "bytes": 12512596,
+      "sha256": "50ebb1b474342a98c00f364dcd958158023ea5af10889ada87c8dfa2d8f97965"
+    }
+  },
+  "package": {
+    "filename": "Q016-v2_量子電腦學程_量子小百科_動畫展示版_2026-11-19.zip",
+    "bytes": 192670795,
+    "sha256": "9d60ffe28bfade6c4b78352283cc1a5febbd744d4aedcfcc2fa1645675bcdcae",
+    "parts": [
+      {
+        "name": "Q016-v2_量子電腦學程_量子小百科_動畫展示版_2026-11-19.zip.part01",
+        "bytes": 29360128,
+        "sha256": "36c86c92b0d3b119475773bbf749aaf13efea75deaa5fb7172a16e7b688fa980"
+      },
+      {
+        "name": "Q016-v2_量子電腦學程_量子小百科_動畫展示版_2026-11-19.zip.part02",
+        "bytes": 29360128,
+        "sha256": "bd4197a24cd2502d7088cd363db3c3ec684a238b3a39e424c21c5184133e9856"
+      },
+      {
+        "name": "Q016-v2_量子電腦學程_量子小百科_動畫展示版_2026-11-19.zip.part03",
+        "bytes": 29360128,
+        "sha256": "eaf5fe0baed7cf2791bfda11aa4db66a612a37dfa296dcdd110bd0a49ed11bdd"
+      },
+      {
+        "name": "Q016-v2_量子電腦學程_量子小百科_動畫展示版_2026-11-19.zip.part04",
+        "bytes": 29360128,
+        "sha256": "489e654c9e49129a3a95c30320231be8ea6dd9bd351976caed8e45b8f9bf57a0"
+      },
+      {
+        "name": "Q016-v2_量子電腦學程_量子小百科_動畫展示版_2026-11-19.zip.part05",
+        "bytes": 29360128,
+        "sha256": "9672bb71fe5387c1141e2edbb01bb4ee4e139912571e7b10d6a09d3172655529"
+      },
+      {
+        "name": "Q016-v2_量子電腦學程_量子小百科_動畫展示版_2026-11-19.zip.part06",
+        "bytes": 29360128,
+        "sha256": "03823a41c3dd27e2c640248cbcae719d26c35efb43272a755716a4246402d5f8"
+      },
+      {
+        "name": "Q016-v2_量子電腦學程_量子小百科_動畫展示版_2026-11-19.zip.part07",
+        "bytes": 16510027,
+        "sha256": "c8a6904954ca28a03ef7ff507d92f9fb7aab042660c6f4835f12f702f6e6cd15"
+      }
+    ],
+    "handedOver": "2026-11-19 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔"
+}
