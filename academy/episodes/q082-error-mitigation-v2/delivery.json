@@ -90,5 +90,29 @@
     ],
     "handedOver": "2026-11-19 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
   },
-  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔"
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1ZOQEWjgkBnzg6-88LtQiSOgQeO2JG9Wx",
+    "uploadedAt": "2026-11-19",
+    "files": [
+      {
+        "name": "Q082 錯誤緩解：錯誤緩解（動畫展示版）.mp4",
+        "id": "1dVg3lTMbRCwAppKI9_5jugYoZ9X2zpX7",
+        "bytes": 84608367,
+        "url": "https://drive.google.com/file/d/1dVg3lTMbRCwAppKI9_5jugYoZ9X2zpX7/view"
+      },
+      {
+        "name": "Q082 錯誤緩解（動畫展示版）簡報.pptx",
+        "id": "1gRxdGUaHdsrdWD0QUfNvf0RgaM4BaOlD",
+        "bytes": 3001874,
+        "url": "https://docs.google.com/presentation/d/1gRxdGUaHdsrdWD0QUfNvf0RgaM4BaOlD/edit"
+      },
+      {
+        "name": "Q082 錯誤緩解 教材.zip",
+        "id": "1taGpn7XDI8_6vdaKa-BrgLVJeaI6ZIp8",
+        "bytes": 285683,
+        "url": "https://drive.google.com/file/d/1taGpn7XDI8_6vdaKa-BrgLVJeaI6ZIp8/view"
+      }
+    ]
+  }
 }
