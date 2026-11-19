@@ -46,6 +46,7 @@
     - 1,000 位元系統供電設計：[`docs/1000量子位元系統供電設計.md`](docs/1000量子位元系統供電設計.md)（線路與熱預算估算、設施用電與備援、接地與磁場、七層技術、我們三階段路線圖；簡報第 47–59 頁）
     - 互動動畫：[`animations/power1000.html`](animations/power1000.html)（8 個 2D 互動場景：全景、規模計算器、低溫熱預算、接地與共模、斷電時間軸、磁場與配電佈局、路線圖、開發計畫；離線可用）
     - 產品開發計畫：[`docs/我們量子供電產品開發計畫.md`](docs/我們量子供電產品開發計畫.md)（三階段路線圖 11 個項目：要做出什麼、開發步驟、困難與解法、檢查點）
+    - QGP 量測規範草案：[`docs/QGP量測規範草案.md`](docs/QGP量測規範草案.md)（量子等級電源的 10 個量測項目、配置、報告格式與分級提案；v0.1，尚未實測驗證）；Word 版：[`docs/QGP量測規範草案.docx`](docs/QGP量測規範草案.docx)
 
 12. 基礎量子電路互動動畫：[`animations/basic-circuits.html`](animations/basic-circuits.html)（線上版 https://pcpcchen-coder.github.io/QuantumComputing/animations/basic-circuits.html）
     - 先備理論：[`animations/quantum-basics.html`](animations/quantum-basics.html)〈量子理論基礎：看電路前的 6 堂課〉（量子位元與振幅、相位、量測與 Born 規則、量子閘＝么正矩陣、張量積與糾纏、干涉；每堂都有可拖拉的互動圖，網址加 `#qubit`、`#phase`、`#measure`、`#gates`、`#tensor`、`#interference`）
