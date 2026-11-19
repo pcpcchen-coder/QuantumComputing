@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q076",
+  "version": "Q076-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-19",
+  "episodePath": "academy/episodes/q076-analog-quantum-simulation-v2",
+  "basedOn": "academy/episodes/q076-analog-quantum-simulation（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 475.946,
+  "pages": 14,
+  "demos": [
+    {
+      "key": "array",
+      "title": "動畫展示：先把原子排整齊",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/atoms.html#tweezer"
+    },
+    {
+      "key": "interaction",
+      "title": "動畫展示：間距和交互作用",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/atoms.html#rydberg"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.4,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q076-analog-quantum-simulation-v2-zh-TW.mp4": {
+      "bytes": 85246454,
+      "sha256": "44d637b71dc725430c89a1cab2c6bbff153bb36945f09c2ad6b73eb13e463eab"
+    },
+    "q076-analog-quantum-simulation-v2-master.mp4": {
+      "bytes": 87685021,
+      "sha256": "a75d568b61397efbc02cd526350e1bf857cd9de34e6371e79c36222ca5ebf565"
+    },
+    "narration-only.mp3": {
+      "bytes": 11424532,
+      "sha256": "06c80895fd7130e5bc04cd3c6703885d5dd64a42106c5187b6d25b9e65d8a06d"
+    }
+  },
+  "package": {
+    "filename": "Q076-v2_量子電腦學程_類比量子模擬_動畫展示版_2026-11-19.zip",
+    "bytes": 188210912,
+    "sha256": "516836abd97c563e06b2baaa336dae4cf396f1e5ba35a2204175e6ea4536f43f",
+    "parts": [
+      {
+        "name": "Q076-v2_量子電腦學程_類比量子模擬_動畫展示版_2026-11-19.zip.part01",
+        "bytes": 29360128,
+        "sha256": "c3fe4ef4d982f517d71dc83fc45f29c1341237efee095d69b8d4f2cfeb31ac6d"
+      },
+      {
+        "name": "Q076-v2_量子電腦學程_類比量子模擬_動畫展示版_2026-11-19.zip.part02",
+        "bytes": 29360128,
+        "sha256": "4a483431f874b128185ff14e621605641ecf565356d753281ef662b7468d9e35"
+      },
+      {
+        "name": "Q076-v2_量子電腦學程_類比量子模擬_動畫展示版_2026-11-19.zip.part03",
+        "bytes": 29360128,
+        "sha256": "909da3e73bf3ecba6cb5f5301d076972680ba49ce832fec3e22151c768bce9dc"
+      },
+      {
+        "name": "Q076-v2_量子電腦學程_類比量子模擬_動畫展示版_2026-11-19.zip.part04",
+        "bytes": 29360128,
+        "sha256": "b0b1fa3b3a56aca200bc58ed4eae5f12df93b3f876d14f37c15f4988fd406104"
+      },
+      {
+        "name": "Q076-v2_量子電腦學程_類比量子模擬_動畫展示版_2026-11-19.zip.part05",
+        "bytes": 29360128,
+        "sha256": "1c448e11618e028bf62698be3718a28e4a2b6c027ecf1962b601cbc0e57367c4"
+      },
+      {
+        "name": "Q076-v2_量子電腦學程_類比量子模擬_動畫展示版_2026-11-19.zip.part06",
+        "bytes": 29360128,
+        "sha256": "be1cb122ff679dcf53f3c8b237e8c3559d2f617d69cf8a20b3c0073ad64ba537"
+      },
+      {
+        "name": "Q076-v2_量子電腦學程_類比量子模擬_動畫展示版_2026-11-19.zip.part07",
+        "bytes": 12050144,
+        "sha256": "e50fb56f9fe5f31587f0af8eceaad414f99d19ea6f3b46bcec2f444c57f542bf"
+      }
+    ],
+    "handedOver": "2026-11-19 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔"
+}

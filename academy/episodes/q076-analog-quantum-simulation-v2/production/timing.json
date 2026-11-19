@@ -1,0 +1,368 @@
+{
+  "version": 2,
+  "opening": 60.277,
+  "scenes": [
+    {
+      "page": 1,
+      "kind": "slide",
+      "v1slide": 1,
+      "title": "類比量子模擬",
+      "duration": 29.592,
+      "sentences": [
+        {
+          "text": "歡迎回到父子科技學院的量子電腦學程，我是陳犀牛，今天是量子第七十六堂，類比量子模擬，這是依課綱製作的課前教學版，並非實際上課錄音。",
+          "start": 0.0,
+          "end": 12.064014
+        },
+        {
+          "text": "上一堂我們看到，中性原子處理器分成儲存、糾纏、讀取三個區，再用相機一次讀出整個陣列。",
+          "start": 12.244014,
+          "end": 21.092019
+        },
+        {
+          "text": "今天換一個角度：如果不把問題拆成一個一個量子閘，能不能讓原子陣列直接扮演我們想研究的材料？",
+          "start": 21.272019,
+          "end": 29.376033
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q076-analog-quantum-simulation/audio/slide_01.mp3"
+    },
+    {
+      "page": 2,
+      "kind": "slide",
+      "v1slide": 2,
+      "title": "三步：排原子、調旋鈕、看圖案",
+      "duration": 25.392,
+      "sentences": [
+        {
+          "text": "今天分三步：先把原子排成想研究的形狀，再調雷射的旋鈕，最後拍照看哪些原子被激發，排出什麼圖案。",
+          "start": 0.0,
+          "end": 9.496009
+        },
+        {
+          "text": "今天的好玩機制是科學實驗：先寫下預測，再動手實驗，最後比對預測和結果。",
+          "start": 9.676009,
+          "end": 17.468027
+        },
+        {
+          "text": "今天的作品，是一張相圖觀察紀錄，記下每一組間距和失諧，看到的是什麼圖案。",
+          "start": 17.648027,
+          "end": 25.176032
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q076-analog-quantum-simulation/audio/slide_02.mp3"
+    },
+    {
+      "page": 3,
+      "kind": "slide",
+      "v1slide": 3,
+      "title": "一條方程式，三個旋鈕",
+      "duration": 28.656,
+      "sentences": [
+        {
+          "text": "類比模擬用的方程式只有三項：第一項是雷射強度，讓每顆原子在基態和芮德堡態之間來回擺盪。",
+          "start": 0.0,
+          "end": 8.536009
+        },
+        {
+          "text": "第二項是失諧，也就是雷射頻率和芮德堡態差了多少；失諧為正，原子傾向被激發，失諧為負，原子傾向留在基態。",
+          "start": 8.716009,
+          "end": 19.028027
+        },
+        {
+          "text": "第三項是交互作用：兩顆原子都在芮德堡態時會互相推擠，距離越近代價越大，和距離的六次方成反比。",
+          "start": 19.208027,
+          "end": 28.440045
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q076-analog-quantum-simulation/audio/slide_03.mp3"
+    },
+    {
+      "page": 4,
+      "kind": "slide",
+      "v1slide": 4,
+      "title": "類比模擬的一輪",
+      "duration": 26.784,
+      "sentences": [
+        {
+          "text": "類比模擬的一輪也分四步：第一步用光鑷把原子排成方格、三角形或其他想研究的形狀。",
+          "start": 0.0,
+          "end": 7.888005
+        },
+        {
+          "text": "第二步讓所有原子從基態出發；第三步不拆成量子閘，而是照計畫慢慢調整雷射強度和失諧，讓整個陣列一起演化。",
+          "start": 8.068005,
+          "end": 17.804014000000002
+        },
+        {
+          "text": "第四步拍照，看最後哪些原子在芮德堡態；同一個實驗重複很多次，就能統計出最常出現的圖案。",
+          "start": 17.984014000000002,
+          "end": 26.568028
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q076-analog-quantum-simulation/audio/slide_04.mp3"
+    },
+    {
+      "page": 5,
+      "kind": "demo",
+      "demo": "array",
+      "title": "動畫展示：先把原子排整齊",
+      "duration": 35.256,
+      "sentences": [
+        {
+          "text": "類比模擬的第一步是排原子：打開光鑷場景，把陣列大小調成四乘四，金框就是我們想要的方格。",
+          "start": 0.0,
+          "end": 8.656009000000001
+        },
+        {
+          "text": "按裝載，紅色的原子雲閃現又淡掉，每支光鑷隨機抓到原子或空著；再按成像，金框裡的空位變成紅圈。",
+          "start": 8.836009,
+          "end": 18.260023
+        },
+        {
+          "text": "按重排，洋紅色的移動光鑷把外圍的青色原子一顆一顆搬進金框，把紅圈一個個補上。",
+          "start": 18.440023,
+          "end": 25.848028
+        },
+        {
+          "text": "右下角的插圖裡，紅線是不重排時填滿方格的機會，掉得很快；綠線是重排之後，幾乎貼在最上面。",
+          "start": 26.028028,
+          "end": 35.044036999999996
+        }
+      ],
+      "audio": "audio/demo_array.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/atoms.html#tweezer"
+    },
+    {
+      "page": 6,
+      "kind": "slide",
+      "v1slide": 5,
+      "title": "比一比：近一點、遠一點",
+      "duration": 26.352,
+      "sentences": [
+        {
+          "text": "比一比：在動畫的代表值裡，兩顆原子相距五微米，交互作用大約五十五兆赫，是雷射強度兩兆赫的二十幾倍。",
+          "start": 0.0,
+          "end": 9.736009000000001
+        },
+        {
+          "text": "距離拉到十微米，交互作用只剩不到一兆赫，比雷射強度還小，兩顆原子幾乎各做各的。",
+          "start": 9.916009,
+          "end": 17.780023
+        },
+        {
+          "text": "距離加倍，交互作用就剩六十四分之一；分界大約在八點七微米，動畫把它叫做阻斷半徑。",
+          "start": 17.960023,
+          "end": 26.136032
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q076-analog-quantum-simulation/audio/slide_05.mp3"
+    },
+    {
+      "page": 7,
+      "kind": "demo",
+      "demo": "interaction",
+      "title": "動畫展示：間距和交互作用",
+      "duration": 38.712,
+      "sentences": [
+        {
+          "text": "切到芮德堡阻斷場景，看右邊的雙原子能階圖，上方金色的字寫著交互作用，五微米時大約五十五兆赫。",
+          "start": 0.0,
+          "end": 9.112018
+        },
+        {
+          "text": "把原子間距慢慢拉到十二微米，金色的數字一路往下掉，最上面那條兩顆同時激發的能階，也跟著降回原來的位置。",
+          "start": 9.292018,
+          "end": 18.620023000000003
+        },
+        {
+          "text": "到了十二微米，交互作用只剩零點二九兆赫，比雷射強度小很多，阻斷球這時已經是灰色，表示不再阻斷。",
+          "start": 18.800023000000003,
+          "end": 28.152041000000004
+        },
+        {
+          "text": "再拉回四微米，數字跳到兩百多兆赫，鄰居同時被激發的代價非常大；陣列裡靠近的原子不能一起亮，就是從這裡來的。",
+          "start": 28.332041000000004,
+          "end": 38.500046000000005
+        }
+      ],
+      "audio": "audio/demo_interaction.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/atoms.html#rydberg"
+    },
+    {
+      "page": 8,
+      "kind": "slide",
+      "v1slide": 6,
+      "title": "有序相怎麼出現",
+      "duration": 25.776,
+      "sentences": [
+        {
+          "text": "有序的圖案是這樣出現的：一開始失諧為負，每顆原子都乖乖待在基態。",
+          "start": 0.0,
+          "end": 6.8080050000000005
+        },
+        {
+          "text": "接著把失諧慢慢調成正的，每顆原子都想被激發，可是靠得比阻斷半徑還近的兩顆，不能同時被激發。",
+          "start": 6.988005,
+          "end": 15.452019
+        },
+        {
+          "text": "照這個阻斷規則，間距比阻斷半徑小一點時，最划算的排法是隔一顆激發一顆，像棋盤一樣整齊，這就是有序相。",
+          "start": 15.632019,
+          "end": 25.560024
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q076-analog-quantum-simulation/audio/slide_06.mp3"
+    },
+    {
+      "page": 9,
+      "kind": "slide",
+      "v1slide": 7,
+      "title": "類比模擬拿來做什麼",
+      "duration": 30.36,
+      "sentences": [
+        {
+          "text": "為什麼說它在模擬磁性材料？把激發想成小磁鐵朝上，基態想成朝下，這條方程式就變成研究磁性常用的伊辛模型。",
+          "start": 0.0,
+          "end": 11.08
+        },
+        {
+          "text": "鄰居不能一起朝上，就像反鐵磁材料裡相鄰的小磁鐵喜歡一上一下，所以棋盤圖案很像反鐵磁的有序排列。",
+          "start": 11.26,
+          "end": 20.156009
+        },
+        {
+          "text": "簡報上的應用還有量子相變、自旋液體和圖的最佳化問題；已經有兩百五十六顆原子的類比機器放在雲端供人使用。",
+          "start": 20.336009,
+          "end": 30.144014
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q076-analog-quantum-simulation/audio/slide_07.mp3"
+    },
+    {
+      "page": 10,
+      "kind": "slide",
+      "v1slide": 8,
+      "title": "限制：不是萬能的",
+      "duration": 28.92,
+      "sentences": [
+        {
+          "text": "類比模擬也有限制：它只能模擬和硬體本身相像的模型，因為能調的旋鈕只有雷射強度、失諧和原子的排列。",
+          "start": 0.0,
+          "end": 9.496009
+        },
+        {
+          "text": "所以它不是通用計算；想算任意的問題，還是要回到數位模式，把演算法拆成一個一個量子閘。",
+          "start": 9.676009,
+          "end": 18.068027
+        },
+        {
+          "text": "好消息是同一套中性原子硬體兩種模式都能用：類比模式適合模擬和最佳化，數位模式則走向通用、可以錯誤更正的計算。",
+          "start": 18.248027,
+          "end": 28.704036000000002
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q076-analog-quantum-simulation/audio/slide_08.mp3"
+    },
+    {
+      "page": 11,
+      "kind": "slide",
+      "v1slide": 9,
+      "title": "科學實驗：先猜再排",
+      "duration": 29.856,
+      "sentences": [
+        {
+          "text": "實作的時候做一個紙上實驗：在桌上畫一排十三個點代表原子，再剪一段八點七公分的紙條，代表阻斷半徑。",
+          "start": 0.0,
+          "end": 9.544014
+        },
+        {
+          "text": "爸爸說出間距和失諧，你先寫下預測，再用硬幣放上被激發的原子，規則是紙條蓋得到的範圍裡只能有一枚，而且越多越好。",
+          "start": 9.724014,
+          "end": 20.156032000000003
+        },
+        {
+          "text": "失諧為負就一枚都不放；把結果畫進相圖觀察紀錄，再到芮德堡阻斷動畫裡拉間距滑桿，確認哪裡開始阻斷。",
+          "start": 20.336032000000003,
+          "end": 29.640046000000005
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q076-analog-quantum-simulation/audio/slide_09.mp3"
+    },
+    {
+      "page": 12,
+      "kind": "slide",
+      "v1slide": 10,
+      "title": "換你改造：類比和數位比一比",
+      "duration": 25.584,
+      "sentences": [
+        {
+          "text": "下半場換你改造：做一張表，比較類比模擬和數位線路，各寫兩個優點和一個缺點。",
+          "start": 0.0,
+          "end": 7.84
+        },
+        {
+          "text": "提示一：類比模擬不用把問題拆成大量的閘，整個陣列一起演化，很適合研究和硬體相像的材料。",
+          "start": 8.02,
+          "end": 16.532018
+        },
+        {
+          "text": "提示二：數位線路什麼演算法都能寫，還能做錯誤更正，可是要很多層閘，每一層都會帶進一點誤差。",
+          "start": 16.712018,
+          "end": 25.368027
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q076-analog-quantum-simulation/audio/slide_10.mp3"
+    },
+    {
+      "page": 13,
+      "kind": "slide",
+      "v1slide": 11,
+      "title": "兩小時的模擬實驗室",
+      "duration": 32.856,
+      "sentences": [
+        {
+          "text": "兩小時的安排是：開場十分鐘，認識三個旋鈕和有序相十五分鐘，接著四十分鐘做紙上阻斷實驗、操作動畫、畫相圖，然後休息十分鐘。",
+          "start": 0.0,
+          "end": 11.944014000000001
+        },
+        {
+          "text": "下半場三十分鐘比較類比和數位的優缺點，接著十分鐘交換角色，由你教爸爸怎麼調出有序的圖案。",
+          "start": 12.124014,
+          "end": 20.732019
+        },
+        {
+          "text": "最後五分鐘錄音總結，替相圖觀察紀錄取名字，存一個版本；就像天氣預報靠模型，用模型研究難以直接觀察的系統，是科學家的日常。",
+          "start": 20.912019,
+          "end": 32.640024000000004
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q076-analog-quantum-simulation/audio/slide_11.mp3"
+    },
+    {
+      "page": 14,
+      "kind": "slide",
+      "v1slide": 12,
+      "title": "最後一關：教爸爸類比模擬",
+      "duration": 31.56,
+      "sentences": [
+        {
+          "text": "最後一關，請不看稿說出：類比量子模擬和數位線路差在哪裡？有序的圖案是怎麼出現的？",
+          "start": 0.0,
+          "end": 8.872018
+        },
+        {
+          "text": "再指出一個限制：類比模擬只能模擬和硬體相像的模型，不是通用計算，不能拿來跑任意的演算法。",
+          "start": 9.052018,
+          "end": 17.612018
+        },
+        {
+          "text": "今天的作品是相圖觀察紀錄，下一堂我們離開原子，認識光子量子電腦，看分光鏡、相位器和單光子偵測怎麼做計算；我是陳犀牛，保持好奇，我們下次見！",
+          "start": 17.792018,
+          "end": 31.344036
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q076-analog-quantum-simulation/audio/slide_12.mp3"
+    }
+  ]
+}
