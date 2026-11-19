@@ -62,7 +62,7 @@ def _pw_sweep(label, a, b, secs):  # 在頁面內用 setInterval 逐步改滑桿
 
 
 _LIST = [
- dict(key='wiring', after=4, page='pw', hash='field', scene='1,000 位元供電互動動畫 場景 6：磁場與配電佈局',
+ dict(key='wiring', pmap=[0, None, 1, 2], after=4, page='pw', hash='field', scene='1,000 位元供電互動動畫 場景 6：磁場與配電佈局',
       title='動畫展示：三種配線，三種衰減', sub='互動動畫：磁場與配電佈局',
       sentences=[
        '打開磁場場景，先看預設的去回線成對：冷凍機在三公尺外，右上角讀數零點八微特斯拉，色塊從母線旁的紅黃條紋，經過綠色，慢慢褪成右邊的藍色。',
