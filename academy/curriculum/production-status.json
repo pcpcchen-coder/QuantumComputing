@@ -236,7 +236,13 @@
     "Q042": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q042-pulse-tube-v2",
+        "evidence": "academy/episodes/q042-pulse-tube-v2/delivery.json"
+      }
     },
     "Q043": {
       "status": "planned",

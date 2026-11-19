@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q042",
+  "version": "Q042-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-18",
+  "episodePath": "academy/episodes/q042-pulse-tube-v2",
+  "basedOn": "academy/episodes/q042-pulse-tube（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 494.613,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "valve",
+      "title": "動畫展示：旋轉閥切換高低壓",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/peripherals.html#pulsetube"
+    },
+    {
+      "key": "stages",
+      "title": "動畫展示：蓄冷器和兩級冷端",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/peripherals.html#pulsetube"
+    },
+    {
+      "key": "room",
+      "title": "動畫展示：機房裡的脈衝管",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/peripherals.html#overview"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.5,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q042-pulse-tube-v2-zh-TW.mp4": {
+      "bytes": 90731920,
+      "sha256": "72aa6d595e8266eba0fc4cd48f79f7890b7f8c20480aa72f45f957de795fdfd6"
+    },
+    "q042-pulse-tube-v2-master.mp4": {
+      "bytes": 93326115,
+      "sha256": "3b005e3d1a7d6f46fec9970b4f292ca15a6748878ae9048b8b3bd063b526df49"
+    },
+    "narration-only.mp3": {
+      "bytes": 11872084,
+      "sha256": "2dfc9f057b1656d545145981c6361d647be4400158e4068f464a3032697ea24e"
+    }
+  },
+  "package": {
+    "filename": "Q042-v2_量子電腦學程_脈衝管與壓縮機_動畫展示版_2026-11-18.zip",
+    "bytes": 200246980,
+    "sha256": "545050298eed2418d7e7656278d9493015c8f147e0556ce58a1cd9c54cc6779c",
+    "parts": [
+      {
+        "name": "Q042-v2_量子電腦學程_脈衝管與壓縮機_動畫展示版_2026-11-18.zip.part01",
+        "bytes": 29360128,
+        "sha256": "7008c00ef6923e82104346a942427b9fc9cec476d5f71349d80fc4bd9a9cae3f"
+      },
+      {
+        "name": "Q042-v2_量子電腦學程_脈衝管與壓縮機_動畫展示版_2026-11-18.zip.part02",
+        "bytes": 29360128,
+        "sha256": "c7887e77be8505558dbdee3b2744b0da848fdb5b4622c1cfe1f23344c55afa46"
+      },
+      {
+        "name": "Q042-v2_量子電腦學程_脈衝管與壓縮機_動畫展示版_2026-11-18.zip.part03",
+        "bytes": 29360128,
+        "sha256": "5f3639cb9ecda10268f24dc69d93a08c09829de185dee4219e3f880ad10e2849"
+      },
+      {
+        "name": "Q042-v2_量子電腦學程_脈衝管與壓縮機_動畫展示版_2026-11-18.zip.part04",
+        "bytes": 29360128,
+        "sha256": "b774c57d9585daa27c8033d6b0ef29ddfb70478d9880fc2ccb5c4116c05b41f6"
+      },
+      {
+        "name": "Q042-v2_量子電腦學程_脈衝管與壓縮機_動畫展示版_2026-11-18.zip.part05",
+        "bytes": 29360128,
+        "sha256": "e46762e40226cd15e8bcf87d9008a15136d9efd1d3af31c9d2949cf095444b8b"
+      },
+      {
+        "name": "Q042-v2_量子電腦學程_脈衝管與壓縮機_動畫展示版_2026-11-18.zip.part06",
+        "bytes": 29360128,
+        "sha256": "eaa3fe02b2bdbcba208ca28d847ec671a3c2b3420296942e7436d25372054631"
+      },
+      {
+        "name": "Q042-v2_量子電腦學程_脈衝管與壓縮機_動畫展示版_2026-11-18.zip.part07",
+        "bytes": 24086212,
+        "sha256": "cb9412d7faa02767c389a1fa2cfa68ea73663e5a6f3a4e7a9ec519f9de50f1f7"
+      }
+    ],
+    "handedOver": "2026-11-18 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1eZLiQdOHdFov3xfVLuJtqORZ4fjXzXXV",
+    "folderName": "量子電腦學程 Q041–Q070 動畫展示版（v2）",
+    "uploadedAt": "2026-11-18",
+    "uploadedBy": "製作代理（Claude，Drive API，上傳後比對 md5）",
+    "files": [
+      {
+        "name": "Q042 脈衝管與壓縮機：脈衝管與壓縮機（動畫展示版）.mp4",
+        "id": "1qyWboqBvPpzT7dqIZAiRyyA8bL2k3BLq",
+        "size": 90731920,
+        "link": "https://drive.google.com/file/d/1qyWboqBvPpzT7dqIZAiRyyA8bL2k3BLq/view?usp=drivesdk"
+      },
+      {
+        "name": "Q042 脈衝管與壓縮機（動畫展示版）簡報.pptx",
+        "id": "1ORBbLmkRSvumVO0pAGuMjrZrF0Q3Jrzs",
+        "size": 3609312,
+        "link": "https://docs.google.com/presentation/d/1ORBbLmkRSvumVO0pAGuMjrZrF0Q3Jrzs/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true"
+      },
+      {
+        "name": "Q042 脈衝管與壓縮機 教材.zip",
+        "id": "1iOfE6FRv6z-F-O29BW5e_7idxEjQsCCV",
+        "size": 434722,
+        "link": "https://drive.google.com/file/d/1iOfE6FRv6z-F-O29BW5e_7idxEjQsCCV/view?usp=drivesdk"
+      }
+    ]
+  }
+}
