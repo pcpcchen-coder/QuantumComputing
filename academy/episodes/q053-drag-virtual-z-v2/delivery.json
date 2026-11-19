@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q053",
+  "version": "Q053-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-18",
+  "episodePath": "academy/episodes/q053-drag-virtual-z-v2",
+  "basedOn": "academy/episodes/q053-drag-virtual-z（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 595.466667,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "shape",
+      "title": "動畫展示：三種脈衝的頻譜",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#pulse"
+    },
+    {
+      "key": "leak",
+      "title": "動畫展示：漏到第三能階有多少",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/lc-vs-jj.html#s6drag"
+    },
+    {
+      "key": "vz",
+      "title": "動畫展示：不花時間，卻改變後面",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#pulse"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.7,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q053-drag-virtual-z-v2-zh-TW.mp4": {
+      "bytes": 92636182,
+      "sha256": "92ab1a2398defb40aa0fd756f13ef64cf517eee5acb899d129f8d7ac3bcb4b29"
+    },
+    "q053-drag-virtual-z-v2-master.mp4": {
+      "bytes": 93640626,
+      "sha256": "cb417620ee109a81e25191a1e88a733d9efd957d7da61568f73b6fd492fa51f1"
+    },
+    "narration-only.mp3": {
+      "bytes": 14292436,
+      "sha256": "840f2010fb99ae1b30acb2ffa5628b139bac9c93cb93493bdaac3e6304b08f65"
+    }
+  },
+  "package": {
+    "filename": "Q053-v2_量子電腦學程_DRAG 與虛擬 Z_動畫展示版_2026-11-18.zip",
+    "bytes": 204709545,
+    "sha256": "3aadf360fbce66a902d81c87401d33821e9e59b5fffebce671974e91ce13da4c",
+    "parts": [
+      {
+        "name": "Q053-v2_量子電腦學程_DRAG 與虛擬 Z_動畫展示版_2026-11-18.zip.part01",
+        "bytes": 29360128,
+        "sha256": "0f6f174228409b544914d65ccae15584349be52f35d21ae8190e7e82a3288ebb"
+      },
+      {
+        "name": "Q053-v2_量子電腦學程_DRAG 與虛擬 Z_動畫展示版_2026-11-18.zip.part02",
+        "bytes": 29360128,
+        "sha256": "c739880e66902075355690cd7647494c2b9b454cff232090ec0ac2c7944fa07f"
+      },
+      {
+        "name": "Q053-v2_量子電腦學程_DRAG 與虛擬 Z_動畫展示版_2026-11-18.zip.part03",
+        "bytes": 29360128,
+        "sha256": "c0587cdeb2d85dc07b804ce458a16f3ccfaa0c62fd62c9c9f16987e7ef298bef"
+      },
+      {
+        "name": "Q053-v2_量子電腦學程_DRAG 與虛擬 Z_動畫展示版_2026-11-18.zip.part04",
+        "bytes": 29360128,
+        "sha256": "9d85ca052f7d47d93f96d45c975b71b46a681b4e421ca9a1513cddb3c839717e"
+      },
+      {
+        "name": "Q053-v2_量子電腦學程_DRAG 與虛擬 Z_動畫展示版_2026-11-18.zip.part05",
+        "bytes": 29360128,
+        "sha256": "eb0a7b8de91afeabfbd12ab6c075a18dc0f6a2e78bbe04cd01caa0b5e59faaa1"
+      },
+      {
+        "name": "Q053-v2_量子電腦學程_DRAG 與虛擬 Z_動畫展示版_2026-11-18.zip.part06",
+        "bytes": 29360128,
+        "sha256": "81de0d6bd6f5bf200d29c95dca128c3576843315ff4ac621b92ece73132e1baa"
+      },
+      {
+        "name": "Q053-v2_量子電腦學程_DRAG 與虛擬 Z_動畫展示版_2026-11-18.zip.part07",
+        "bytes": 28548777,
+        "sha256": "852c4c57dd597e3f00712867f515e2e0bc04ad5c4207810a249a3861dd95a45c"
+      }
+    ],
+    "handedOver": "2026-11-18 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1eZLiQdOHdFov3xfVLuJtqORZ4fjXzXXV",
+    "folderName": "量子電腦學程 Q041–Q070 動畫展示版（v2）",
+    "uploadedAt": "2026-11-18",
+    "uploadedBy": "製作代理（Claude，Drive API，上傳後比對 md5）",
+    "files": [
+      {
+        "name": "Q053 DRAG 與虛擬 Z：DRAG 與虛擬 Z（動畫展示版）.mp4",
+        "id": "1yTLGqg2jgjZ0LOKFeInHMNOQXX_rYB0S",
+        "size": 92636182,
+        "link": "https://drive.google.com/file/d/1yTLGqg2jgjZ0LOKFeInHMNOQXX_rYB0S/view?usp=drivesdk"
+      },
+      {
+        "name": "Q053 DRAG 與虛擬 Z（動畫展示版）簡報.pptx",
+        "id": "1rNGwTLGp1fm1S-6OQpPEU5KbVpAoI3qu",
+        "size": 3384570,
+        "link": "https://docs.google.com/presentation/d/1rNGwTLGp1fm1S-6OQpPEU5KbVpAoI3qu/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true"
+      },
+      {
+        "name": "Q053 DRAG 與虛擬 Z 教材.zip",
+        "id": "1OZxRikTILcw9isfdi1syXIwJLm5FCYvg",
+        "size": 423588,
+        "link": "https://drive.google.com/file/d/1OZxRikTILcw9isfdi1syXIwJLm5FCYvg/view?usp=drivesdk"
+      }
+    ]
+  }
+}

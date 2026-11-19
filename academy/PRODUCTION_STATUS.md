@@ -56,7 +56,7 @@
 | Q050 | 初始化與校準 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q050-init-calibration-v2` |
 | Q051 | 看懂後端校準資料 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q051-backend-calibration-v2` |
 | Q052 | 微波脈衝：面積與相位 | 規劃完成 | — |
-| Q053 | DRAG 與虛擬 Z | 規劃完成 | — |
+| Q053 | DRAG 與虛擬 Z | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q053-drag-virtual-z-v2` |
 | Q054 | 任意旋轉 = 三個旋轉 | 規劃完成 | — |
 | Q055 | 兩位元閘：CZ 與交叉共振 | 規劃完成 | — |
 | Q056 | 轉譯：邏輯線路到硬體 | 規劃完成 | — |

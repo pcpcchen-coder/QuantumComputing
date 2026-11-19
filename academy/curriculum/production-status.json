@@ -351,7 +351,13 @@
     "Q053": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q053-drag-virtual-z-v2",
+        "evidence": "academy/episodes/q053-drag-virtual-z-v2/delivery.json"
+      }
     },
     "Q054": {
       "status": "planned",
