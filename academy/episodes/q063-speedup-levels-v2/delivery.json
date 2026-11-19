@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q063",
+  "version": "Q063-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-18",
+  "episodePath": "academy/episodes/q063-speedup-levels-v2",
+  "basedOn": "academy/episodes/q063-speedup-levels（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 516.672,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "scale",
+      "title": "動畫展示：抽屜變多，輪數只多一點",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#grover"
+    },
+    {
+      "key": "exp",
+      "title": "動畫展示：指數級從哪裡來",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#shor"
+    },
+    {
+      "key": "output",
+      "title": "動畫展示：算完了，只讀到一個號碼",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#grover"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.5,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q063-speedup-levels-v2-zh-TW.mp4": {
+      "bytes": 87346028,
+      "sha256": "5acd6d323ae81ad39d9c4ada76f620089051a89161fafba9151c0f5ab7482393"
+    },
+    "q063-speedup-levels-v2-master.mp4": {
+      "bytes": 89111994,
+      "sha256": "96bc5161d73f81104608c951ba1376cc6ae42b57561b3d3737d731e9784b408b"
+    },
+    "narration-only.mp3": {
+      "bytes": 12401428,
+      "sha256": "bf0388444e90346f54540208fc6160529f6c67fa6985073e9a855a6641f9e0f0"
+    }
+  },
+  "package": {
+    "filename": "Q063-v2_量子電腦學程_加速的等級_動畫展示版_2026-11-18.zip",
+    "bytes": 193360751,
+    "sha256": "acd726a9162bcc763f742df88fdcdbf0a24c3748aec8d92d96c153affb9efd1b",
+    "parts": [
+      {
+        "name": "Q063-v2_量子電腦學程_加速的等級_動畫展示版_2026-11-18.zip.part01",
+        "bytes": 29360128,
+        "sha256": "a95d3301d55fa619d3c0c3828c899e5f74526a615e9b93ff93f9bc9545e61d68"
+      },
+      {
+        "name": "Q063-v2_量子電腦學程_加速的等級_動畫展示版_2026-11-18.zip.part02",
+        "bytes": 29360128,
+        "sha256": "b7bdf99a8842712fb985736d3c712ebb1fbaeb98f34ddfd827ca91b4bf9b4c98"
+      },
+      {
+        "name": "Q063-v2_量子電腦學程_加速的等級_動畫展示版_2026-11-18.zip.part03",
+        "bytes": 29360128,
+        "sha256": "5a46cc1518c50592deb0cd00acc1b428661346bbe65d25bb31661c8d955fb955"
+      },
+      {
+        "name": "Q063-v2_量子電腦學程_加速的等級_動畫展示版_2026-11-18.zip.part04",
+        "bytes": 29360128,
+        "sha256": "2360b8e602e2eeba16b30dca0cc93aae436f5d798f22967586a6e797328ece83"
+      },
+      {
+        "name": "Q063-v2_量子電腦學程_加速的等級_動畫展示版_2026-11-18.zip.part05",
+        "bytes": 29360128,
+        "sha256": "b1cc6fce93cc8074fb1bdffcbec7b13ee5e0e66bab8c46631c09ff56d97ee449"
+      },
+      {
+        "name": "Q063-v2_量子電腦學程_加速的等級_動畫展示版_2026-11-18.zip.part06",
+        "bytes": 29360128,
+        "sha256": "36c9b6662b757661dce06a6c64820138104ca91c1a03105c27f7413546cd44ed"
+      },
+      {
+        "name": "Q063-v2_量子電腦學程_加速的等級_動畫展示版_2026-11-18.zip.part07",
+        "bytes": 17199983,
+        "sha256": "ae85b035e23065710f81e146ebe802ba314f0ece85b6481b2cb4deec02b0872a"
+      }
+    ],
+    "handedOver": "2026-11-18 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1eZLiQdOHdFov3xfVLuJtqORZ4fjXzXXV",
+    "folderName": "量子電腦學程 Q041–Q070 動畫展示版（v2）",
+    "uploadedAt": "2026-11-18",
+    "uploadedBy": "製作代理（Claude，Drive API，上傳後比對 md5）",
+    "files": [
+      {
+        "name": "Q063 加速的等級：快在哪？加速的等級（動畫展示版）.mp4",
+        "id": "1_aK0eXAmFACRzEcTKboUoaJwCizuU90n",
+        "size": 87346028,
+        "link": "https://drive.google.com/file/d/1_aK0eXAmFACRzEcTKboUoaJwCizuU90n/view?usp=drivesdk"
+      },
+      {
+        "name": "Q063 加速的等級（動畫展示版）簡報.pptx",
+        "id": "1CCgeXki-dpI495-SodVgUbLanSV__iwS",
+        "size": 3274195,
+        "link": "https://docs.google.com/presentation/d/1CCgeXki-dpI495-SodVgUbLanSV__iwS/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true"
+      },
+      {
+        "name": "Q063 加速的等級 教材.zip",
+        "id": "1sunMmDiih1cyCY_elOAHIKIasfsQpKj2",
+        "size": 811135,
+        "link": "https://drive.google.com/file/d/1sunMmDiih1cyCY_elOAHIKIasfsQpKj2/view?usp=drivesdk"
+      }
+    ]
+  }
+}

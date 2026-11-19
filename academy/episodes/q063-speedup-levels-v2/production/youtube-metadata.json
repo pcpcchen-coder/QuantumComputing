@@ -1,0 +1,8 @@
+{
+  "title": "父子科技學院 Q063｜快在哪？加速的等級（動畫展示版）",
+  "description": "父子科技學院 量子電腦學程 Q063｜快在哪？加速的等級（v2・含 3D 動畫展示）\n\n這是依課綱製作的課前教學版，不是實際上課錄音。\n\n父子科技學院量子電腦學程 Q063「快在哪？加速的等級」新版（v2）：在原本的教學投影片之間，插入本學程 3D 互動動畫的實際操作示範。\n\n這一版新增的動畫展示\n・抽屜變多，輪數只多一點（https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#grover）\n・指數級從哪裡來（https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#shor）\n・算完了，只讀到一個號碼（https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#grover）\n\n動畫都可以在瀏覽器直接開啟，自己動手操作。\n\n章節\n00:00 陳犀牛系列片頭\n01:00 快在哪？加速的等級\n01:30 三步：分等級、算差距、找瓶頸\n01:56 快在哪？加速的等級在解決什麼\n02:26 加速等級表：四格\n02:54 平方級：格羅弗搜尋\n03:20 動畫展示：抽屜變多，輪數只多一點\n03:57 指數級：秀爾分解\n04:25 動畫展示：指數級從哪裡來\n05:03 古典模擬的極限\n05:33 哪些事不會變快\n06:05 動畫展示：算完了，只讀到一個號碼\n06:40 工程答辯：孩子提案、爸爸審查\n07:10 換你判斷：新聞說量子比較快\n07:36 兩小時的工程答辯\n08:07 最後一關：教爸爸加速的等級\n\n旁白：微軟 zh-TW-YunJheNeural 神經語音合成（Edge-TTS／Azure 語音服務，同一聲音同一格式）。字幕已燒入影片，開啟 CC 可能重疊。\n",
+  "privacyStatus": "private",
+  "madeForKids": null,
+  "reviewStatus": "needs-parent-review",
+  "publicationMode": "manual-user-upload"
+}

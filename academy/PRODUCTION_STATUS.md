@@ -66,7 +66,7 @@
 | Q060 | 動態線路 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q060-dynamic-circuits-v2` |
 | Q061 | QFT 與相位估計 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q061-qft-phase-estimation-v2` |
 | Q062 | Shor：用干涉找週期 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q062-shor-period-v2` |
-| Q063 | 快在哪？加速的等級 | 規劃完成 | — |
+| Q063 | 快在哪？加速的等級 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q063-speedup-levels-v2` |
 | Q064 | 模組專題：在模擬器跑我的線路 | 規劃完成 | — |
 | Q065 | 人造原子 vs 真的原子 | 規劃完成 | — |
 | Q066 | Paul 阱：旋轉鞍形電場 | 規劃完成 | — |
