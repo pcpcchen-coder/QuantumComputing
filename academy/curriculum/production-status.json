@@ -247,7 +247,13 @@
     "Q043": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q043-dilution-refrigerator-v2",
+        "evidence": "academy/episodes/q043-dilution-refrigerator-v2/delivery.json"
+      }
     },
     "Q044": {
       "status": "planned",
@@ -268,7 +274,13 @@
     "Q046": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q046-control-clock-v2",
+        "evidence": "academy/episodes/q046-control-clock-v2/delivery.json"
+      }
     },
     "Q047": {
       "status": "planned",

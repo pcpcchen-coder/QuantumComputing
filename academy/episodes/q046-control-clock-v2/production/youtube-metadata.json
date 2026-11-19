@@ -1,0 +1,8 @@
+{
+  "title": "父子科技學院 Q046｜控制電子與時脈（動畫展示版）",
+  "description": "父子科技學院 量子電腦學程 Q046｜控制電子與時脈（v2・含 3D 動畫展示）\n\n這是依課綱製作的課前教學版，不是實際上課錄音。\n\n父子科技學院量子電腦學程 Q046「控制電子與時脈」新版（v2）：在原本的教學投影片之間，插入本學程 3D 互動動畫的實際操作示範。\n\n這一版新增的動畫展示\n・機櫃與驅動波形（https://pcpcchen-coder.github.io/QuantumComputing/animations/peripherals.html#electronics）\n・走一次控制鏈（https://pcpcchen-coder.github.io/QuantumComputing/animations/peripherals.html#electronics）\n・相位差九十度（https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#pulse）\n\n動畫都可以在瀏覽器直接開啟，自己動手操作。\n\n章節\n00:00 陳犀牛系列片頭\n01:00 控制電子與時脈\n01:31 三步：認識、排練、搗蛋\n01:59 晶片只聽得懂微波\n02:22 機櫃裡的四類儀器\n02:56 外差混頻和直接合成\n03:29 動畫展示：機櫃與驅動波形\n04:15 控制鏈：六個站\n04:44 動畫展示：走一次控制鏈\n05:27 時脈：大家踩同一個節拍\n05:57 時間差一點，相位差多少\n06:27 動畫展示：相位差九十度\n07:08 誤解：每台都很準就好\n07:36 換你改造：一站慢半拍\n08:05 兩小時的人肉控制鏈\n08:39 最後一關：教爸爸畫控制鏈\n\n旁白：微軟 zh-TW-YunJheNeural 神經語音合成（Edge-TTS／Azure 語音服務，同一聲音同一格式）。字幕已燒入影片，開啟 CC 可能重疊。\n",
+  "privacyStatus": "private",
+  "madeForKids": null,
+  "reviewStatus": "needs-parent-review",
+  "publicationMode": "manual-user-upload"
+}

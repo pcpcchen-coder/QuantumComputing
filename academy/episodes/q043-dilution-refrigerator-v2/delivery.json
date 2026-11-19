@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q043",
+  "version": "Q043-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-18",
+  "episodePath": "academy/episodes/q043-dilution-refrigerator-v2",
+  "basedOn": "academy/episodes/q043-dilution-refrigerator（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 477.366667,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "ghs",
+      "title": "動畫展示：混合氣從哪裡來",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/peripherals.html#overview"
+    },
+    {
+      "key": "cycle",
+      "title": "動畫展示：跟著氦三繞一圈",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/peripherals.html#dilution"
+    },
+    {
+      "key": "balance",
+      "title": "動畫展示：熱負載和平衡溫度",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/peripherals.html#dilution"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.4,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q043-dilution-refrigerator-v2-zh-TW.mp4": {
+      "bytes": 89157765,
+      "sha256": "af16c48f9638383524a2a44528cccc6ecdda4a18838d3dd775ceeb5a546e1898"
+    },
+    "q043-dilution-refrigerator-v2-master.mp4": {
+      "bytes": 91877026,
+      "sha256": "b96dae861ef3741e848251edd87145cfabf019b0b2b35f4ab995949f2744c584"
+    },
+    "narration-only.mp3": {
+      "bytes": 11457940,
+      "sha256": "331cff2e3435ee33e8813d14d1f93fb8ed737d8cbf6828bd1bffa1cdb83ce47e"
+    }
+  },
+  "package": {
+    "filename": "Q043-v2_量子電腦學程_稀釋冷凍原理_動畫展示版_2026-11-18.zip",
+    "bytes": 196772475,
+    "sha256": "5266be62896ac28e0d795da5f3d45913df372124f2353982db659756221f7b22",
+    "parts": [
+      {
+        "name": "Q043-v2_量子電腦學程_稀釋冷凍原理_動畫展示版_2026-11-18.zip.part01",
+        "bytes": 29360128,
+        "sha256": "d2dec2bc666b5afd7813bbf2afc7bcf1950f277429920a5b60340be03d83617b"
+      },
+      {
+        "name": "Q043-v2_量子電腦學程_稀釋冷凍原理_動畫展示版_2026-11-18.zip.part02",
+        "bytes": 29360128,
+        "sha256": "12caf2bb97cb86245992ad9e546daeebcb3957c47db39d4ff9a5cdca432da9e9"
+      },
+      {
+        "name": "Q043-v2_量子電腦學程_稀釋冷凍原理_動畫展示版_2026-11-18.zip.part03",
+        "bytes": 29360128,
+        "sha256": "362f43377366c9d91b8449f90e285070d5344228ad11948f95073df2570838ea"
+      },
+      {
+        "name": "Q043-v2_量子電腦學程_稀釋冷凍原理_動畫展示版_2026-11-18.zip.part04",
+        "bytes": 29360128,
+        "sha256": "ca17fd70e731ab31037165860d1de8074ccd62b41a8cc12cecc47ace18b20686"
+      },
+      {
+        "name": "Q043-v2_量子電腦學程_稀釋冷凍原理_動畫展示版_2026-11-18.zip.part05",
+        "bytes": 29360128,
+        "sha256": "d6e19b323ce75e13f3e50787c87c5901b926ebfe842aeda15824e597f7694a6a"
+      },
+      {
+        "name": "Q043-v2_量子電腦學程_稀釋冷凍原理_動畫展示版_2026-11-18.zip.part06",
+        "bytes": 29360128,
+        "sha256": "b10f91ba265f1c77ac56a67956b267c61e34ac298c7e8bfd2cf21b54badc289b"
+      },
+      {
+        "name": "Q043-v2_量子電腦學程_稀釋冷凍原理_動畫展示版_2026-11-18.zip.part07",
+        "bytes": 20611707,
+        "sha256": "8d1c54e5a62b219372ea1fb667be8bd4dec053b2eef264b6a439a08e2b171921"
+      }
+    ],
+    "handedOver": "2026-11-18 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1eZLiQdOHdFov3xfVLuJtqORZ4fjXzXXV",
+    "folderName": "量子電腦學程 Q041–Q070 動畫展示版（v2）",
+    "uploadedAt": "2026-11-18",
+    "uploadedBy": "製作代理（Claude，Drive API，上傳後比對 md5）",
+    "files": []
+  }
+}
