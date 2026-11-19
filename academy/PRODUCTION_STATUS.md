@@ -106,8 +106,8 @@
 | Q100 | 第 2 課：transmon 怎麼寫入狀態 | 規劃完成 | — |
 | Q101 | 第 3 課：迷思修正——Z 線不是把位元調成一樣 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q101-z-line-myth-v2` |
 | Q102 | 第 4 課：頻率配置與頻率碰撞 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q102-frequency-collisions-v2` |
-| Q103 | 第 5 課：能階、共振與拉比振盪 | 規劃完成 | — |
-| Q104 | 第 6 課：色散讀取與重設 | 規劃完成 | — |
+| Q103 | 第 5 課：能階、共振與拉比振盪 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q103-rabi-oscillation-v2` |
+| Q104 | 第 6 課：色散讀取與重設 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q104-dispersive-readout-v2` |
 | Q105 | 第 7 課：BV 密碼——一次猜中三位元 | 規劃完成 | — |
 | Q106 | 第 8 課：糾纏與兩位元 Grover | 規劃完成 | — |
 | Q107 | 第 9 課：Deutsch 演算法與相位回踢 | 規劃完成 | — |
