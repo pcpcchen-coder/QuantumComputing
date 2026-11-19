@@ -90,5 +90,29 @@
     ],
     "handedOver": "2026-11-19 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
   },
-  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔"
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1ZOQEWjgkBnzg6-88LtQiSOgQeO2JG9Wx",
+    "uploadedAt": "2026-11-19",
+    "files": [
+      {
+        "name": "Q081 錯誤預算：錯誤預算：線路能跑多深（動畫展示版）.mp4",
+        "id": "1QJFCkxo5BSKuO1xNaAEouQdq-bCraju6",
+        "bytes": 81046260,
+        "url": "https://drive.google.com/file/d/1QJFCkxo5BSKuO1xNaAEouQdq-bCraju6/view"
+      },
+      {
+        "name": "Q081 錯誤預算（動畫展示版）簡報.pptx",
+        "id": "1Zl2YrNimAR9v_WIR_ghleVj9I_YYr49O",
+        "bytes": 2962179,
+        "url": "https://docs.google.com/presentation/d/1Zl2YrNimAR9v_WIR_ghleVj9I_YYr49O/edit"
+      },
+      {
+        "name": "Q081 錯誤預算 教材.zip",
+        "id": "1T1UVuYL_CFKTM4SFc7oAdUWLQRpE5YmL",
+        "bytes": 338437,
+        "url": "https://drive.google.com/file/d/1T1UVuYL_CFKTM4SFc7oAdUWLQRpE5YmL/view"
+      }
+    ]
+  }
 }
