@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q018",
+  "version": "Q018-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-19",
+  "episodePath": "academy/episodes/q018-superconductivity-v2",
+  "basedOn": "academy/episodes/q018-superconductivity（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 522.218,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "states",
+      "title": "動畫展示：超導態和正常態",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#cooper"
+    },
+    {
+      "key": "sweep",
+      "title": "動畫展示：慢慢升溫跨過臨界溫度",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#cooper"
+    },
+    {
+      "key": "notes",
+      "title": "動畫展示：用動畫練習寫筆記",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#cooper"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.5,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q018-superconductivity-v2-zh-TW.mp4": {
+      "bytes": 106057641,
+      "sha256": "d353fb136efc4b41a8544667a9e5e1d02234a5b118a42c3bed750be4275f3838"
+    },
+    "q018-superconductivity-v2-master.mp4": {
+      "bytes": 110821948,
+      "sha256": "ec019d293d5f116f6778decb6cfcb33133c25b3a949fe88527c8ff788c1e8e85"
+    },
+    "narration-only.mp3": {
+      "bytes": 12535060,
+      "sha256": "b94a025c2a747b402782fd85384b80b7750017954ca8924777b43cb9375bca75"
+    }
+  },
+  "package": {
+    "filename": "Q018-v2_量子電腦學程_超導現象_動畫展示版_2026-11-19.zip",
+    "bytes": 233869457,
+    "sha256": "9e1244b5a78dd3c5edef3afc6e00e3b8a81c0b1197b79b528a830d48df6231ee",
+    "parts": [
+      {
+        "name": "Q018-v2_量子電腦學程_超導現象_動畫展示版_2026-11-19.zip.part01",
+        "bytes": 29360128,
+        "sha256": "d40e1cb79a2ae3deb2b7f5dffa2e42a75a01b393c60701711eb3af2bf1131fc1"
+      },
+      {
+        "name": "Q018-v2_量子電腦學程_超導現象_動畫展示版_2026-11-19.zip.part02",
+        "bytes": 29360128,
+        "sha256": "1fba59f49a9e79e7a0d1fcdb606063780a6260bf1926f4b4e8dbe656e88c63db"
+      },
+      {
+        "name": "Q018-v2_量子電腦學程_超導現象_動畫展示版_2026-11-19.zip.part03",
+        "bytes": 29360128,
+        "sha256": "6c4e07c28d2211e134d8995079e97b1b23236772862001560e0486f506b650d0"
+      },
+      {
+        "name": "Q018-v2_量子電腦學程_超導現象_動畫展示版_2026-11-19.zip.part04",
+        "bytes": 29360128,
+        "sha256": "ef39910cb49aa4b9a4ce9929457c6b531a01c8f5e6eca012f291f19e49d91e74"
+      },
+      {
+        "name": "Q018-v2_量子電腦學程_超導現象_動畫展示版_2026-11-19.zip.part05",
+        "bytes": 29360128,
+        "sha256": "0943831dc37f6da6a093728f64f2f11d6d483085c4c65ffd0e88fec807f4866a"
+      },
+      {
+        "name": "Q018-v2_量子電腦學程_超導現象_動畫展示版_2026-11-19.zip.part06",
+        "bytes": 29360128,
+        "sha256": "a237d15b25b964476a0fb86779f84fc80a398e5a70a92ff6fdbeeab6b410d851"
+      },
+      {
+        "name": "Q018-v2_量子電腦學程_超導現象_動畫展示版_2026-11-19.zip.part07",
+        "bytes": 29360128,
+        "sha256": "b9d9b939e4f743f595dafd1f56fc83ee70ba4774b33c2236103df635356ea610"
+      },
+      {
+        "name": "Q018-v2_量子電腦學程_超導現象_動畫展示版_2026-11-19.zip.part08",
+        "bytes": 28348561,
+        "sha256": "f61888bd451d181135ac8031d3ec3e2e9eda0421a6c3600c8c99c588bdbe4d84"
+      }
+    ],
+    "handedOver": "2026-11-19 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1epfQVOXunbD9Vht37u62oOD9Dr-HKMSE",
+    "folder": "量子電腦學程 Q011–Q040 動畫展示版（v2）",
+    "files": [
+      {
+        "name": "Q018 超導現象：超導：電阻消失、磁鐵懸浮（動畫展示版）.mp4",
+        "id": "1XB0iSN965aqadpswt_K3W1uqqusC6y6x",
+        "link": "https://drive.google.com/file/d/1XB0iSN965aqadpswt_K3W1uqqusC6y6x/view?usp=drivesdk",
+        "bytes": 106057641
+      },
+      {
+        "name": "Q018 超導現象（動畫展示版）簡報.pptx",
+        "id": "13Y3bh1Qk8Y_ZvX3phDDfYs2vH8lZySOl",
+        "link": "https://docs.google.com/presentation/d/13Y3bh1Qk8Y_ZvX3phDDfYs2vH8lZySOl/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true",
+        "bytes": 3491565
+      },
+      {
+        "name": "Q018 超導現象 教材.zip",
+        "id": "1PpkipDY4VVTaQYbQFH6wl4dIhwh83Gag",
+        "link": "https://drive.google.com/file/d/1PpkipDY4VVTaQYbQFH6wl4dIhwh83Gag/view?usp=drivesdk",
+        "bytes": 499051
+      }
+    ]
+  }
+}
