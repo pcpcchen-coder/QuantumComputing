@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q047",
+  "version": "Q047-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-18",
+  "episodePath": "academy/episodes/q047-software-monitor-v2",
+  "basedOn": "academy/episodes/q047-software-monitor（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 554.2,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "stack",
+      "title": "動畫展示：程式往下，結果往上",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/peripherals.html#software"
+    },
+    {
+      "key": "water",
+      "title": "動畫展示：故障注入，冷卻水中斷",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/peripherals.html#monitor"
+    },
+    {
+      "key": "leakblock",
+      "title": "動畫展示：再注入兩種故障",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/peripherals.html#monitor"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.6,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q047-software-monitor-v2-zh-TW.mp4": {
+      "bytes": 92927460,
+      "sha256": "d1f91a355ba4d6f5c6654932a77650d18745ea625c7c10cbe6d2b06d6ea7e5ab"
+    },
+    "q047-software-monitor-v2-master.mp4": {
+      "bytes": 94448812,
+      "sha256": "fc2d6af18e6a5cc83b7270c371ebbed7656662c4bfdaa00072e25553d06b6bc9"
+    },
+    "narration-only.mp3": {
+      "bytes": 13302292,
+      "sha256": "6015115832787bd611e0116148a2363ba5b4ce0f42333d0776cc6a5b9d275593"
+    }
+  },
+  "package": {
+    "filename": "Q047-v2_量子電腦學程_監控與聯鎖_動畫展示版_2026-11-18.zip",
+    "bytes": 204833715,
+    "sha256": "93c814e3e1d436affdb2add662968497407afcc144db2cbab939dc0f97d6eb2e",
+    "parts": [
+      {
+        "name": "Q047-v2_量子電腦學程_監控與聯鎖_動畫展示版_2026-11-18.zip.part01",
+        "bytes": 29360128,
+        "sha256": "6b1ddab54fbc01d2567ec62f8eb0cfc8efc13fa972d300b48011506e3407ecf6"
+      },
+      {
+        "name": "Q047-v2_量子電腦學程_監控與聯鎖_動畫展示版_2026-11-18.zip.part02",
+        "bytes": 29360128,
+        "sha256": "e341578036aadf3aacbf239080b639a070c3f0da059c3619e193130379496595"
+      },
+      {
+        "name": "Q047-v2_量子電腦學程_監控與聯鎖_動畫展示版_2026-11-18.zip.part03",
+        "bytes": 29360128,
+        "sha256": "bff03da5ae108fcdf40e1ceb52f88b69805eac35aca999745af071181610cc8c"
+      },
+      {
+        "name": "Q047-v2_量子電腦學程_監控與聯鎖_動畫展示版_2026-11-18.zip.part04",
+        "bytes": 29360128,
+        "sha256": "4ea58ffc5166703ec6d88b235b31f4901eb7a5b0137c204c1e847394123cf048"
+      },
+      {
+        "name": "Q047-v2_量子電腦學程_監控與聯鎖_動畫展示版_2026-11-18.zip.part05",
+        "bytes": 29360128,
+        "sha256": "b0d6a970197b2307b121113d806a61b285b7a3f61c970f56db839b5c25f54bc1"
+      },
+      {
+        "name": "Q047-v2_量子電腦學程_監控與聯鎖_動畫展示版_2026-11-18.zip.part06",
+        "bytes": 29360128,
+        "sha256": "275f30cf8c4c6f71e68a4ac1c64159a29ba2a3615a8aa778ff00d1bda17cae53"
+      },
+      {
+        "name": "Q047-v2_量子電腦學程_監控與聯鎖_動畫展示版_2026-11-18.zip.part07",
+        "bytes": 28672947,
+        "sha256": "38f13b4b62039ed595732123698a121aa616067cbe30520fc6f537b5e20593df"
+      }
+    ],
+    "handedOver": "2026-11-18 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔"
+}

@@ -269,7 +269,13 @@
     "Q045": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q045-cryo-wiring-v2",
+        "evidence": "academy/episodes/q045-cryo-wiring-v2/delivery.json"
+      }
     },
     "Q046": {
       "status": "planned",
@@ -285,12 +291,24 @@
     "Q047": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q047-software-monitor-v2",
+        "evidence": "academy/episodes/q047-software-monitor-v2/delivery.json"
+      }
     },
     "Q048": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q048-zero-to-online-v2",
+        "evidence": "academy/episodes/q048-zero-to-online-v2/delivery.json"
+      }
     },
     "Q049": {
       "status": "planned",
@@ -306,7 +324,13 @@
     "Q050": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q050-init-calibration-v2",
+        "evidence": "academy/episodes/q050-init-calibration-v2/delivery.json"
+      }
     },
     "Q051": {
       "status": "planned",

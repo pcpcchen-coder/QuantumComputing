@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q045",
+  "version": "Q045-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-18",
+  "episodePath": "academy/episodes/q045-cryo-wiring-v2",
+  "basedOn": "academy/episodes/q045-cryo-wiring（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 543.594,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "lines",
+      "title": "動畫展示：輸入線和輸出線",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/peripherals.html#wiring"
+    },
+    {
+      "key": "budget",
+      "title": "動畫展示：線越多，冷板越紅",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/peripherals.html#wiring"
+    },
+    {
+      "key": "material",
+      "title": "動畫展示：換線材，熱帳過關",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/power1000.html#heat"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.5,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q045-cryo-wiring-v2-zh-TW.mp4": {
+      "bytes": 95479555,
+      "sha256": "6e60a1aac7f0916f0a7abce65cea75fe0ebdf026439b28039b6beb9213193d01"
+    },
+    "q045-cryo-wiring-v2-master.mp4": {
+      "bytes": 97777396,
+      "sha256": "0c7caef0a9d860e72141b1d0ecc91f32e10b41ad22b92563cc6d2292ba4dcd51"
+    },
+    "narration-only.mp3": {
+      "bytes": 13047700,
+      "sha256": "ca4151f1d450c7dcde9e1bca13acfd9309abfa1bf6c06bdb5f579b0eb9e26076"
+    }
+  },
+  "package": {
+    "filename": "Q045-v2_量子電腦學程_低溫佈線熱預算_動畫展示版_2026-11-18.zip",
+    "bytes": 210551095,
+    "sha256": "554fe4ae8c674db8c74398c046640512d415916d5ead5ad6723742352db6b514",
+    "parts": [
+      {
+        "name": "Q045-v2_量子電腦學程_低溫佈線熱預算_動畫展示版_2026-11-18.zip.part01",
+        "bytes": 29360128,
+        "sha256": "75d2c1dd43b70c81ad4e07aefb0a8cdd662754f23093bfaf61145942459b53a4"
+      },
+      {
+        "name": "Q045-v2_量子電腦學程_低溫佈線熱預算_動畫展示版_2026-11-18.zip.part02",
+        "bytes": 29360128,
+        "sha256": "84c20599f8b0410032f70fe5eb0ca33f78e6b5949e1023a3f129f0ebf3d2102f"
+      },
+      {
+        "name": "Q045-v2_量子電腦學程_低溫佈線熱預算_動畫展示版_2026-11-18.zip.part03",
+        "bytes": 29360128,
+        "sha256": "99ce714a96b60fe03c96dd1e58fa471e0b11309ac62b333295c623f0cab45654"
+      },
+      {
+        "name": "Q045-v2_量子電腦學程_低溫佈線熱預算_動畫展示版_2026-11-18.zip.part04",
+        "bytes": 29360128,
+        "sha256": "c1e420dec6a6f850e7184237f43f6eca826ffe5737552212370261da03b82809"
+      },
+      {
+        "name": "Q045-v2_量子電腦學程_低溫佈線熱預算_動畫展示版_2026-11-18.zip.part05",
+        "bytes": 29360128,
+        "sha256": "6c7299df8056f9ee3bd1602f68e4098116f31292092b16ad2a88104565c97fc6"
+      },
+      {
+        "name": "Q045-v2_量子電腦學程_低溫佈線熱預算_動畫展示版_2026-11-18.zip.part06",
+        "bytes": 29360128,
+        "sha256": "179169c871d46a776bddaf906f8c0d150cf7c13213257954c211aa5937d9f47d"
+      },
+      {
+        "name": "Q045-v2_量子電腦學程_低溫佈線熱預算_動畫展示版_2026-11-18.zip.part07",
+        "bytes": 29360128,
+        "sha256": "8ac11f735c3625934ee2e4612972d143ae4e882108cd684eb61057f116599543"
+      },
+      {
+        "name": "Q045-v2_量子電腦學程_低溫佈線熱預算_動畫展示版_2026-11-18.zip.part08",
+        "bytes": 5030199,
+        "sha256": "0ab84ff36d4926e24139041119d538b0e7f5f178c3812f770e2f40aa354e1724"
+      }
+    ],
+    "handedOver": "2026-11-18 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔"
+}

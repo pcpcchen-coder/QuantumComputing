@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q050",
+  "version": "Q050-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-18",
+  "episodePath": "academy/episodes/q050-init-calibration-v2",
+  "basedOn": "academy/episodes/q050-init-calibration（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 561.216,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "reset",
+      "title": "動畫展示：量完之後怎麼歸零",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#readout"
+    },
+    {
+      "key": "pulse",
+      "title": "動畫展示：脈衝面積與頻率",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#pulse"
+    },
+    {
+      "key": "steps",
+      "title": "動畫展示：每一步在量什麼",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/peripherals.html#bringup"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.6,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q050-init-calibration-v2-zh-TW.mp4": {
+      "bytes": 93080987,
+      "sha256": "c6687f32b27cbfb843cde3c8f2cee15d33cf7a9b4d1ca45d143db0ffe9b06c05"
+    },
+    "q050-init-calibration-v2-master.mp4": {
+      "bytes": 94000206,
+      "sha256": "c636c79c11bd1c28e38265a688da07366f9e44c6faef0d9e526242e4b33e2aa8"
+    },
+    "narration-only.mp3": {
+      "bytes": 13470484,
+      "sha256": "a3c24b4a8d3b9d35637e7e423bba81af2cdd5153971e63cc4443319d472e3c4a"
+    }
+  },
+  "package": {
+    "filename": "Q050-v2_量子電腦學程_歸零與九步校準_動畫展示版_2026-11-18.zip",
+    "bytes": 204638630,
+    "sha256": "35081ed2184371c880b87927a058aef645c2e205e960bc1f67fe6d9399ca5646",
+    "parts": [
+      {
+        "name": "Q050-v2_量子電腦學程_歸零與九步校準_動畫展示版_2026-11-18.zip.part01",
+        "bytes": 29360128,
+        "sha256": "dbf5500f00dc1c93151f3c4c53a769a838c055ce9d364ae319b87828b490f468"
+      },
+      {
+        "name": "Q050-v2_量子電腦學程_歸零與九步校準_動畫展示版_2026-11-18.zip.part02",
+        "bytes": 29360128,
+        "sha256": "340d04703eb925963e948095efe6516514fc7a3e5c2b2cb90bf7b909edede384"
+      },
+      {
+        "name": "Q050-v2_量子電腦學程_歸零與九步校準_動畫展示版_2026-11-18.zip.part03",
+        "bytes": 29360128,
+        "sha256": "8cb47ba73b3a5ac15b22f59bf837955e00528b3f652ac99e1f7a013011b15574"
+      },
+      {
+        "name": "Q050-v2_量子電腦學程_歸零與九步校準_動畫展示版_2026-11-18.zip.part04",
+        "bytes": 29360128,
+        "sha256": "8f5e79723c05e046e60032cd9e8912014527a48ab9ff7007f7334e495e2e04c0"
+      },
+      {
+        "name": "Q050-v2_量子電腦學程_歸零與九步校準_動畫展示版_2026-11-18.zip.part05",
+        "bytes": 29360128,
+        "sha256": "51d7ac72d3aaa8dfff42d226b5e3a67cf0c01f881fb3bfb342eaa2585b8aed42"
+      },
+      {
+        "name": "Q050-v2_量子電腦學程_歸零與九步校準_動畫展示版_2026-11-18.zip.part06",
+        "bytes": 29360128,
+        "sha256": "164dbdc29604a8c80fadf6bef68a2694ffbfa9204facadc444e857071b64ae3f"
+      },
+      {
+        "name": "Q050-v2_量子電腦學程_歸零與九步校準_動畫展示版_2026-11-18.zip.part07",
+        "bytes": 28477862,
+        "sha256": "3db82347fae5fd15799502e9efbf8b6367315aea86ceb16aa94111497030e4fd"
+      }
+    ],
+    "handedOver": "2026-11-18 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔"
+}
