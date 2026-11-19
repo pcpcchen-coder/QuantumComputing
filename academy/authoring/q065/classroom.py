@@ -146,7 +146,7 @@ FILES = {
 SHEET_HEADER = ['條件', '超導（人造原子）', '離子阱', '中性原子', '證據來源（頁碼／動畫）', '挑錯紀錄']
 SHEET_ROWS = [[f'{n} {c}'] for n, c in CONDS] + [[r[0]] for r in RULER]
 
-EXTRA_CSS = '''table.card td{height:15mm;font-size:11pt}table.card td.c{width:46mm;font-weight:700}table.card td.s{width:16mm;text-align:center;color:#4a6a88}
+EXTRA_CSS = '''table.card td{height:13.5mm;font-size:11pt}table.card td.c{width:46mm;font-weight:700}table.card td.s{width:22mm;white-space:nowrap;text-align:center;color:#4a6a88}
 .cut h3{margin:0 0 1.5mm}.cut .meta{font-size:10.5pt;margin:0 0 2mm;color:#35506b}.cut{margin-bottom:5mm}
 table.rul td{height:12mm;font-size:11pt}table.rec td{height:13mm}
 .chk li{margin:2.2mm 0;font-size:12.5pt;list-style:none}.chk li:before{content:"□ "}.chk{padding-left:2mm}'''

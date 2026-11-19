@@ -18,7 +18,7 @@ SRC = {
     'ion_talk': f'{REPO} slides/Ion_NeutralAtom_Talk.pptx（第 3、4 頁）',
     'ion_cmp': f'{REPO} slides/Ion_NeutralAtom_Talk.pptx（第 31、39、40、41、42、46 頁）',
     'jj_talk': f'{REPO} slides/JJ_Microwave_Readout_Talk.pptx（第 3、10 頁）',
-    'op_talk': f'{REPO} slides/QC_Operation_Talk.pptx（第 13 頁）',
+    'op_talk': f'{REPO} slides/QC_Operation_Talk.pptx（第 13、53 頁）',
     'divincenzo': 'https://en.wikipedia.org/wiki/DiVincenzo%27s_criteria',
     'tiqc': 'https://en.wikipedia.org/wiki/Trapped-ion_quantum_computer',
     'naqc': 'https://en.wikipedia.org/wiki/Neutral_atom_quantum_computer',
@@ -45,8 +45,8 @@ SOURCE_RECORDS = [
     {'id': 'jj_talk', 'title': 'JJ 元件與微波讀取（內部技術分享簡報）第 3 頁「為什麼是超導量子電腦？」、第 10 頁「為什麼需要非線性？」',
      'publisher': REPO, 'url': SRC['jj_talk'],
      'usedFor': '10 mK、單量子位元閘 20–50 ns、T₁／T₂ 約 0.1–1 ms、製程變異造成頻率散佈；LC 能階等間距，JJ 使間距變小，只選 |0⟩、|1⟩'},
-    {'id': 'op_talk', 'title': '如何操作量子電腦（內部技術分享簡報）第 13 頁「初始化：每個 shot 都要回到 |0⟩」', 'publisher': REPO, 'url': SRC['op_talk'],
-     'usedFor': '被動重置：10 mK 下熱平衡幾乎全在 |0⟩；主動重置'},
+    {'id': 'op_talk', 'title': '如何操作量子電腦（內部技術分享簡報）第 13 頁「初始化：每個 shot 都要回到 |0⟩」、第 53 頁「重點回顧」', 'publisher': REPO, 'url': SRC['op_talk'],
+     'usedFor': '被動重置：10 mK 下熱平衡幾乎全在 |0⟩；主動重置；單位元閘 = 微波脈衝、兩位元閘 = CZ / CR（教材解答）'},
     {'id': 'divincenzo', 'title': "DiVincenzo's criteria", 'publisher': 'Wikipedia（2026-11-18 取得 wikitext）', 'url': SRC['divincenzo'],
      'usedFor': '前五條：可擴展且定義清楚的量子位元、初始化、相干時間、通用量子閘組、針對單一量子位元的量測'},
     {'id': 'tiqc', 'title': 'Trapped-ion quantum computer', 'publisher': 'Wikipedia（2026-11-18 取得 wikitext）', 'url': SRC['tiqc'],
@@ -179,7 +179,7 @@ if __name__ == '__main__':
         here=HERE, lesson=LESSON, slug=SLUG, title=TITLE, topic=TOPIC, header_en='QUANTUM 101', checked=CHECKED,
         src=SRC, source_records=SOURCE_RECORDS, scenes=SCENES, visible=VISIBLE, board=BOARD,
         source_method='Repo slides (Ion_NeutralAtom_Talk.pptx p3-4, p31, p39-42, p46; JJ_Microwave_Readout_Talk.pptx p3, p10; '
-                      'QC_Operation_Talk.pptx p13; incl. speaker notes) read with python-pptx by the producing agent; Wikipedia '
+                      'QC_Operation_Talk.pptx p13, p53; incl. speaker notes) read with python-pptx by the producing agent; Wikipedia '
                       "DiVincenzo's criteria / Trapped-ion quantum computer / Neutral atom quantum computer wikitext fetched 2026-11-18; "
                       'animation source (atoms 13_compare.js, 07_atomsys.js; scenes/04_potential.js) read and the scene states confirmed '
                       'with 1600×900 Chromium (swiftshader) screenshots (/home/user/qwork/q065shots/); ratios checked in python '
