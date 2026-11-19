@@ -774,7 +774,13 @@
     "Q140": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q140-cryo-heat-budget-v2",
+        "evidence": "academy/episodes/q140-cryo-heat-budget-v2/delivery.json"
+      }
     },
     "Q141": {
       "status": "planned",
@@ -789,7 +795,13 @@
     "Q143": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q143-roadmap-11-projects-v2",
+        "evidence": "academy/episodes/q143-roadmap-11-projects-v2/delivery.json"
+      }
     },
     "Q144": {
       "status": "planned",

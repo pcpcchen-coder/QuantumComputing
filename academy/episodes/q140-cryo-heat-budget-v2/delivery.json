@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q140",
+  "version": "Q140-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-19",
+  "episodePath": "academy/episodes/q140-cryo-heat-budget-v2",
+  "basedOn": "academy/episodes/q140-cryo-heat-budget（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 538.24,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "wiring",
+      "title": "動畫展示：線一多，冷板先喊緊",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/peripherals.html#wiring"
+    },
+    {
+      "key": "ledger",
+      "title": "動畫展示：用冷卻硬撐",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/power1000.html#heat"
+    },
+    {
+      "key": "wires",
+      "title": "動畫展示：換線，比加冷卻省",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/power1000.html#heat"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.5,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q140-cryo-heat-budget-v2-zh-TW.mp4": {
+      "bytes": 96062639,
+      "sha256": "2f022de887bbb6eeb7c69e6d48b634c691ee925676302567a6accce02b60a8a4"
+    },
+    "q140-cryo-heat-budget-v2-master.mp4": {
+      "bytes": 98591149,
+      "sha256": "dc6a4f09c30c687cd22d00a5ab5ce240ffe45057930235174f4c8f3a14a46a5b"
+    },
+    "narration-only.mp3": {
+      "bytes": 12919252,
+      "sha256": "d63e1512ac6ac3eab06b60e70ebdb22655054f8d00566b178955dd8f1e1292e4"
+    }
+  },
+  "package": {
+    "filename": "Q140-v2_量子電腦學程_低溫熱預算_動畫展示版_2026-11-19.zip",
+    "bytes": 211802536,
+    "sha256": "8849e8f5b26526d4fc09722488d7c03b3219ea93f89ffd843681123cf77e601c",
+    "parts": [
+      {
+        "name": "Q140-v2_量子電腦學程_低溫熱預算_動畫展示版_2026-11-19.zip.part01",
+        "bytes": 29360128,
+        "sha256": "bdbb4c1a36331121be2e59757c6c7e537867755eadd86e87fb5aa4e143f55c5f"
+      },
+      {
+        "name": "Q140-v2_量子電腦學程_低溫熱預算_動畫展示版_2026-11-19.zip.part02",
+        "bytes": 29360128,
+        "sha256": "58ae2862621a68ded8feb73fe074d66027f04e33ae4fa60b74f9611d6fe27b0e"
+      },
+      {
+        "name": "Q140-v2_量子電腦學程_低溫熱預算_動畫展示版_2026-11-19.zip.part03",
+        "bytes": 29360128,
+        "sha256": "12d04f3283660db4ebc50c5ca70f840a4dda73411b4d86403bc6d30941e8b79b"
+      },
+      {
+        "name": "Q140-v2_量子電腦學程_低溫熱預算_動畫展示版_2026-11-19.zip.part04",
+        "bytes": 29360128,
+        "sha256": "7269b4aa7851117d2ef9ac6e0d292adc24eebaca3e59ca44a8e4ad37f86c2ad5"
+      },
+      {
+        "name": "Q140-v2_量子電腦學程_低溫熱預算_動畫展示版_2026-11-19.zip.part05",
+        "bytes": 29360128,
+        "sha256": "262ad7229e229a9e0a5296f4eaa3b0b9c3d39fe0748e20b9f43fab16c8a04e92"
+      },
+      {
+        "name": "Q140-v2_量子電腦學程_低溫熱預算_動畫展示版_2026-11-19.zip.part06",
+        "bytes": 29360128,
+        "sha256": "d2676f876b57234db0d0be94c7e8d17d851efb158fa55eef684f880899b12ad5"
+      },
+      {
+        "name": "Q140-v2_量子電腦學程_低溫熱預算_動畫展示版_2026-11-19.zip.part07",
+        "bytes": 29360128,
+        "sha256": "8f4e4dc9412b5458a7be07a124bccd20f629ebe149b45f93a23947128ddac40e"
+      },
+      {
+        "name": "Q140-v2_量子電腦學程_低溫熱預算_動畫展示版_2026-11-19.zip.part08",
+        "bytes": 6281640,
+        "sha256": "02ae2f4709f65fd0aa7a40f4eaf5c358fb6e02930e5af1e91c1b1d407f955e17"
+      }
+    ],
+    "handedOver": "2026-11-19 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "status": "pending: Drive token expired (HTTP 401) on 2026-11-19; queued in /home/user/qwork/pending-uploads.txt",
+    "folderId": "19TfKYX25oeVvzZEsGfFYyF8D3W3tknd7"
+  }
+}
