@@ -93,7 +93,7 @@ def _pw_card(text):  # 點 #svg 裡含指定文字的 g.pp（devplan 卡片會�
 
 
 _LIST = [
- dict(key='power', pmap=[0, 1, 2, 2], after=6, page='pw', hash='overview', scene='1,000 位元供電互動動畫 場景 1：全景',
+ dict(key='power', pmap=[0, 1, None, 2], after=6, page='pw', hash='overview', scene='1,000 位元供電互動動畫 場景 1：全景',
       title='動畫展示：用電與備援章的數字', sub='互動動畫：電從哪裡來、到哪裡去',
       sentences=[
        '打開供電互動動畫的全景，左邊面板下方有三行數字：設施總功率中點約兩百千瓦，冷卻鏈約八十千瓦，不斷電系統八十到兩百七十千瓦。',
