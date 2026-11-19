@@ -144,7 +144,7 @@
 | Q138 | 三平台比較：三種 UPS 設計邏輯 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q138-three-platform-ups-v2` |
 | Q139 | 規模計算器：位元數一變，什麼先爆？ | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q139-scale-calculator-v2` |
 | Q140 | 低溫熱預算：熱帳怎麼變成電 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q140-cryo-heat-budget-v2` |
-| Q141 | 從 1,000 到 10,000：MW 級與低溫電源轉換 | 規劃完成 | — |
-| Q142 | 我們的切入點：產品 × 平台矩陣 | 規劃完成 | — |
+| Q141 | 從 1,000 到 10,000：MW 級與低溫電源轉換 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q141-mw-cryo-conversion-v2` |
+| Q142 | 我們的切入點：產品 × 平台矩陣 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q142-product-platform-matrix-v2` |
 | Q143 | 三階段路線圖與 11 個開發項目 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q143-roadmap-11-projects-v2` |
-| Q144 | 畢業專題：替一台量子電腦寫供電規格書 | 規劃完成 | — |
+| Q144 | 畢業專題：替一台量子電腦寫供電規格書 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q144-power-spec-capstone-v2` |

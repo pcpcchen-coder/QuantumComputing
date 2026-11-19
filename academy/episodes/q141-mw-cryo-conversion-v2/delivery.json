@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q141",
+  "version": "Q141-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-19",
+  "episodePath": "academy/episodes/q141-mw-cryo-conversion-v2",
+  "basedOn": "academy/episodes/q141-mw-cryo-conversion（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 545.45,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "mw",
+      "title": "動畫展示：一萬位元的電費單",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/power1000.html#scale"
+    },
+    {
+      "key": "conv8",
+      "title": "動畫展示：第八項，四克耳文電源",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/power1000.html#devplan"
+    },
+    {
+      "key": "stage3",
+      "title": "動畫展示：從第八項到百萬瓦",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/power1000.html#devplan"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.6,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q141-mw-cryo-conversion-v2-zh-TW.mp4": {
+      "bytes": 89888261,
+      "sha256": "53f642bfe0eee86b1c0e5c5a95b72ebe778977b7b6871b6cf41d0aca7b45dc8f"
+    },
+    "q141-mw-cryo-conversion-v2-master.mp4": {
+      "bytes": 91099980,
+      "sha256": "0cf5bcd35b0c0efc140b35a389df75c9363901fd1c858ecd1c0d684e448d9339"
+    },
+    "narration-only.mp3": {
+      "bytes": 13092628,
+      "sha256": "cdc76f239c7e8402929ea03f7205f1a99dc96a980913ef03f30fcefbd82be299"
+    }
+  },
+  "package": {
+    "filename": "Q141-v2_量子電腦學程_百萬瓦級擴展_動畫展示版_2026-11-19.zip",
+    "bytes": 198296879,
+    "sha256": "2c9ea5cb569626832a271d5e91f891286d5d3a31e7b97834bf88e5a3fce77b8b",
+    "parts": [
+      {
+        "name": "Q141-v2_量子電腦學程_百萬瓦級擴展_動畫展示版_2026-11-19.zip.part01",
+        "bytes": 29360128,
+        "sha256": "19f9aee1fc7e2fea44993b34c4c80ab832f118f8dabc0d0d68f63f9471107bb8"
+      },
+      {
+        "name": "Q141-v2_量子電腦學程_百萬瓦級擴展_動畫展示版_2026-11-19.zip.part02",
+        "bytes": 29360128,
+        "sha256": "549ecec2ab3f26c846707afe39a629a697d47e66802c582e7cd3f14f143d6f85"
+      },
+      {
+        "name": "Q141-v2_量子電腦學程_百萬瓦級擴展_動畫展示版_2026-11-19.zip.part03",
+        "bytes": 29360128,
+        "sha256": "0d2c931c52221fd3eda52715d6587a781c5ea46ec969c6849e211559e2862f4e"
+      },
+      {
+        "name": "Q141-v2_量子電腦學程_百萬瓦級擴展_動畫展示版_2026-11-19.zip.part04",
+        "bytes": 29360128,
+        "sha256": "1da1cebda385f9e6f1b3a9facfd31b518699cf578234e7e9814f22c8dd7850c6"
+      },
+      {
+        "name": "Q141-v2_量子電腦學程_百萬瓦級擴展_動畫展示版_2026-11-19.zip.part05",
+        "bytes": 29360128,
+        "sha256": "a3935eada970efa383b69a838e913798346b4694c6288e237712db5d87d37ae9"
+      },
+      {
+        "name": "Q141-v2_量子電腦學程_百萬瓦級擴展_動畫展示版_2026-11-19.zip.part06",
+        "bytes": 29360128,
+        "sha256": "ee791cbbecf0efd18d3d0148d8e83a000dc2e965d279ca7a93d684656adee40a"
+      },
+      {
+        "name": "Q141-v2_量子電腦學程_百萬瓦級擴展_動畫展示版_2026-11-19.zip.part07",
+        "bytes": 22136111,
+        "sha256": "a101ed2271ff99c74de65be038c1e81479a96f1a418652a49e92ced3a875f8f4"
+      }
+    ],
+    "handedOver": "2026-11-19 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "status": "pending: Drive token expired (HTTP 401) on 2026-11-19; queued in /home/user/qwork/pending-uploads.txt",
+    "folderId": "19TfKYX25oeVvzZEsGfFYyF8D3W3tknd7"
+  }
+}

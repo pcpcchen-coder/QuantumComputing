@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q144",
+  "version": "Q144-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-19",
+  "episodePath": "academy/episodes/q144-power-spec-capstone-v2",
+  "basedOn": "academy/episodes/q144-power-spec-capstone（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 543.402,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "power",
+      "title": "動畫展示：用電與備援章的數字",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/power1000.html#overview"
+    },
+    {
+      "key": "risks",
+      "title": "動畫展示：三章各對一個痛點",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/power1000.html#overview"
+    },
+    {
+      "key": "gaps",
+      "title": "動畫展示：把缺口寫成機會",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/power1000.html#devplan"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.5,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q144-power-spec-capstone-v2-zh-TW.mp4": {
+      "bytes": 91885850,
+      "sha256": "889917204ec5db78f1ee51c44d086be0183d60589150b13de5fac8a99c172215"
+    },
+    "q144-power-spec-capstone-v2-master.mp4": {
+      "bytes": 93161594,
+      "sha256": "b4df426d12cbd45f4065df98ef2816ae990d1e2903769f8a0784b02e5b5dbadb"
+    },
+    "narration-only.mp3": {
+      "bytes": 13043092,
+      "sha256": "10d6df4604c22c50d6798a90d8efdb948424e965b953c32e4e7427bb7df98ac5"
+    }
+  },
+  "package": {
+    "filename": "Q144-v2_量子電腦學程_畢業專題_動畫展示版_2026-11-19.zip",
+    "bytes": 202398597,
+    "sha256": "bc6f25094657dfd21ffc4ce9c84751f9440aeb7a331f049cb6bbee27eb7cc849",
+    "parts": [
+      {
+        "name": "Q144-v2_量子電腦學程_畢業專題_動畫展示版_2026-11-19.zip.part01",
+        "bytes": 29360128,
+        "sha256": "535cb4b56700e62126b6c82638f58f3e70b5d853075335af2abba4f6b4afe193"
+      },
+      {
+        "name": "Q144-v2_量子電腦學程_畢業專題_動畫展示版_2026-11-19.zip.part02",
+        "bytes": 29360128,
+        "sha256": "2393fdac8434897590a90fd529424f58caf5d7ad698740c4bd22f315b6428ae1"
+      },
+      {
+        "name": "Q144-v2_量子電腦學程_畢業專題_動畫展示版_2026-11-19.zip.part03",
+        "bytes": 29360128,
+        "sha256": "0e3149616b4fa2af569a8234d0b2f2587c75b9fddaebc4e77ff79dcfb450b613"
+      },
+      {
+        "name": "Q144-v2_量子電腦學程_畢業專題_動畫展示版_2026-11-19.zip.part04",
+        "bytes": 29360128,
+        "sha256": "2d72d4d48461cdf498dcd4d0e5074564900e1cf53016044e06d39a66fceca292"
+      },
+      {
+        "name": "Q144-v2_量子電腦學程_畢業專題_動畫展示版_2026-11-19.zip.part05",
+        "bytes": 29360128,
+        "sha256": "cf06701f3e9d2f9c43d9f2a84cabbc40122b3d2bc5faaf6a1c2d0357e5180394"
+      },
+      {
+        "name": "Q144-v2_量子電腦學程_畢業專題_動畫展示版_2026-11-19.zip.part06",
+        "bytes": 29360128,
+        "sha256": "7d30c00887a04bca40b49f6d38dd0e45d23dc96b77ed4d88862b880dc8faf52c"
+      },
+      {
+        "name": "Q144-v2_量子電腦學程_畢業專題_動畫展示版_2026-11-19.zip.part07",
+        "bytes": 26237829,
+        "sha256": "6806138112284da364f4ed109d352ef8522f787280308184e0fb099ca815e31e"
+      }
+    ],
+    "handedOver": "2026-11-19 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "status": "pending: Drive token expired (HTTP 401) on 2026-11-19; queued in /home/user/qwork/pending-uploads.txt",
+    "folderId": "19TfKYX25oeVvzZEsGfFYyF8D3W3tknd7"
+  }
+}
