@@ -109,8 +109,8 @@
 | Q103 | 第 5 課：能階、共振與拉比振盪 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q103-rabi-oscillation-v2` |
 | Q104 | 第 6 課：色散讀取與重設 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q104-dispersive-readout-v2` |
 | Q105 | 第 7 課：BV 密碼——一次猜中三位元 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q105-bv-secret-v2` |
-| Q106 | 第 8 課：糾纏與兩位元 Grover | 規劃完成 | — |
-| Q107 | 第 9 課：Deutsch 演算法與相位回踢 | 規劃完成 | — |
+| Q106 | 第 8 課：糾纏與兩位元 Grover | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q106-entanglement-grover-v2` |
+| Q107 | 第 9 課：Deutsch 演算法與相位回踢 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q107-deutsch-kickback-v2` |
 | Q108 | 第 10 課：Shor 演算法——自選 N、a 找週期 | 規劃完成 | — |
 | Q109 | 第 11 課：表面碼——穩定子與匹配解碼 | 規劃完成 | — |
 | Q110 | 第 12 課：lattice surgery 與魔術態蒸餾 | 規劃完成 | — |

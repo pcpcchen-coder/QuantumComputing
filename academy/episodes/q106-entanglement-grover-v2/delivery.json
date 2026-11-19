@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q106",
+  "version": "Q106-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-19",
+  "episodePath": "academy/episodes/q106-entanglement-grover-v2",
+  "basedOn": "academy/episodes/q106-entanglement-grover（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 532.181,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "bell",
+      "title": "動畫展示：一個負號做出貝爾態",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#grover"
+    },
+    {
+      "key": "grover",
+      "title": "動畫展示：標記、擴散、一次找到",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#grover"
+    },
+    {
+      "key": "more",
+      "title": "動畫展示：換答案、加位元",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/basic-circuits.html#grover"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.5,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q106-entanglement-grover-v2-zh-TW.mp4": {
+      "bytes": 87035665,
+      "sha256": "b94e2eb6ef4539e45188facec5d9f4c175f5e0ae198db8261483c7dde40a27bc"
+    },
+    "q106-entanglement-grover-v2-master.mp4": {
+      "bytes": 88671734,
+      "sha256": "4f197273e1c0bb74e0eba3f45922bc6330eb64db1de71d58fb9631ee0fe9c1b1"
+    },
+    "narration-only.mp3": {
+      "bytes": 12774100,
+      "sha256": "219de2b3e1f59b9b082bc7c0670149dececa6dc9319ce8ded9d5fb9380a3af53"
+    }
+  },
+  "package": {
+    "filename": "Q106-v2_量子電腦學程_糾纏與Grover_動畫展示版_2026-11-19.zip",
+    "bytes": 192342051,
+    "sha256": "c73a44210d6e3c969ae321e8324c94ea8895c9a07a5e923406bb225a53179ed5",
+    "parts": [
+      {
+        "name": "Q106-v2_量子電腦學程_糾纏與Grover_動畫展示版_2026-11-19.zip.part01",
+        "bytes": 29360128,
+        "sha256": "bd11aa3371cc6d7be15e16464b8077ded38bc2a000cf958ff4a307932b050232"
+      },
+      {
+        "name": "Q106-v2_量子電腦學程_糾纏與Grover_動畫展示版_2026-11-19.zip.part02",
+        "bytes": 29360128,
+        "sha256": "bbf7386f606a372db0203a8b4238b50c43b272a34b6eb60161d1045903cbfe47"
+      },
+      {
+        "name": "Q106-v2_量子電腦學程_糾纏與Grover_動畫展示版_2026-11-19.zip.part03",
+        "bytes": 29360128,
+        "sha256": "9246a9903a1c70dd2c3bc65e76a0e294458de2cbbd291635313bb1ab22954dfe"
+      },
+      {
+        "name": "Q106-v2_量子電腦學程_糾纏與Grover_動畫展示版_2026-11-19.zip.part04",
+        "bytes": 29360128,
+        "sha256": "1279b2dd8966cdd5d49e7a006ed13e0331dcab205a12a689797675af6aa03a0b"
+      },
+      {
+        "name": "Q106-v2_量子電腦學程_糾纏與Grover_動畫展示版_2026-11-19.zip.part05",
+        "bytes": 29360128,
+        "sha256": "778e98e21819ceab0b6fe046bee4951ac69dbf60f6c3ec2b6da2bd6c0630ae77"
+      },
+      {
+        "name": "Q106-v2_量子電腦學程_糾纏與Grover_動畫展示版_2026-11-19.zip.part06",
+        "bytes": 29360128,
+        "sha256": "94b35363d01ca5df60af524e5d1ae0e60dc1ce23ed49519ba782f935143624da"
+      },
+      {
+        "name": "Q106-v2_量子電腦學程_糾纏與Grover_動畫展示版_2026-11-19.zip.part07",
+        "bytes": 16181283,
+        "sha256": "9eb3da4f74743aa15190bf1857be269c224f8588ae7568624777fe2100a23925"
+      }
+    ],
+    "handedOver": "2026-11-19 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1bi-WOn7ipXPr978g1JqWu1DFCPwySyyb",
+    "uploaded": "2026-11-19",
+    "files": [],
+    "complete": false
+  }
+}
