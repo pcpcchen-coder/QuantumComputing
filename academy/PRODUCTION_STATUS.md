@@ -137,7 +137,7 @@
 | Q131 | 冷卻鏈不斷電與壓縮機驅動 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q131-cooling-chain-ups-v2` |
 | Q132 | 精密 DC 源與雜訊預算 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q132-dc-noise-budget-v2` |
 | Q133 | 機房要求：防振、接地與電磁干擾 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q133-site-vibration-grounding-v2` |
-| Q134 | 接地與共模：上百台儀器一起漏電 | 規劃完成 | — |
+| Q134 | 接地與共模：上百台儀器一起漏電 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q134-grounding-common-mode-v2` |
 | Q135 | 磁場與配電佈局：母線離冷凍機多遠 | 規劃完成 | — |
 | Q136 | 離子阱的供電：ppm 與 nV | 規劃完成 | — |
 | Q137 | 中性原子的供電：保護熱穩態 | 規劃完成 | — |
