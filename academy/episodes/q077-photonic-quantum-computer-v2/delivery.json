@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q077",
+  "version": "Q077-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-19",
+  "episodePath": "academy/episodes/q077-photonic-quantum-computer-v2",
+  "basedOn": "academy/episodes/q077-photonic-quantum-computer（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 424.682,
+  "pages": 13,
+  "demos": [
+    {
+      "key": "mzi",
+      "title": "動畫展示：把干涉圖當成光路",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#interference"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.3,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q077-photonic-quantum-computer-v2-zh-TW.mp4": {
+      "bytes": 78295194,
+      "sha256": "03604486e481a3ef6585f083bdc93a78de310bcec42490bdb4dcce5ad301eb83"
+    },
+    "q077-photonic-quantum-computer-v2-master.mp4": {
+      "bytes": 81008284,
+      "sha256": "06bff440c025ea22dae2144c82f1b0eb2a1864dad512d921b765689ffeb36ec2"
+    },
+    "narration-only.mp3": {
+      "bytes": 10194196,
+      "sha256": "92666402d7223b43e302ad893059667c4f5785357e59a374fd0bbbeec58ec92f"
+    }
+  },
+  "package": {
+    "filename": "Q077-v2_量子電腦學程_光子量子電腦_動畫展示版_2026-11-19.zip",
+    "bytes": 172885769,
+    "sha256": "879e24e0d5eb57fff869a0c8608d8cf7585e86a0d3ec060c30007236fb18f803",
+    "parts": [
+      {
+        "name": "Q077-v2_量子電腦學程_光子量子電腦_動畫展示版_2026-11-19.zip.part01",
+        "bytes": 29360128,
+        "sha256": "b3908b317d03a3c06ba0436bb1c072135bac021f97eadb357dea69f42c40d4aa"
+      },
+      {
+        "name": "Q077-v2_量子電腦學程_光子量子電腦_動畫展示版_2026-11-19.zip.part02",
+        "bytes": 29360128,
+        "sha256": "a2584ff340d588125111a1a251ce9ba4d8e9fc8760278ae72718e82022dcade1"
+      },
+      {
+        "name": "Q077-v2_量子電腦學程_光子量子電腦_動畫展示版_2026-11-19.zip.part03",
+        "bytes": 29360128,
+        "sha256": "f1efeb930f6d2d3a6d6e3f443a7b2bf3f7e050480be0e1dd924b8a4db1aa6813"
+      },
+      {
+        "name": "Q077-v2_量子電腦學程_光子量子電腦_動畫展示版_2026-11-19.zip.part04",
+        "bytes": 29360128,
+        "sha256": "957b4f49473331d99922a77ae31878e83e20b1c4d0774b325a3267fe2e4a467c"
+      },
+      {
+        "name": "Q077-v2_量子電腦學程_光子量子電腦_動畫展示版_2026-11-19.zip.part05",
+        "bytes": 29360128,
+        "sha256": "925b1eba152bb91b0aa604e70fff98be783243140e6466c187e60a81e4f45dce"
+      },
+      {
+        "name": "Q077-v2_量子電腦學程_光子量子電腦_動畫展示版_2026-11-19.zip.part06",
+        "bytes": 26085129,
+        "sha256": "830261d69a9fa9ab0af4f350b13ad22b9bf4cf0f1332a75631ca1c2658d2ba0c"
+      }
+    ],
+    "handedOver": "2026-11-19 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔"
+}

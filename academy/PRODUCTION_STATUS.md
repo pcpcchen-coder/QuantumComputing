@@ -80,7 +80,7 @@
 | Q074 | 芮德堡阻斷與 CZ | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q074-rydberg-blockade-cz-v2` |
 | Q075 | 分區架構與成像讀取 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q075-zoned-imaging-v2` |
 | Q076 | 類比量子模擬 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q076-analog-quantum-simulation-v2` |
-| Q077 | 光子量子電腦 | 規劃完成 | — |
+| Q077 | 光子量子電腦 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q077-photonic-quantum-computer-v2` |
 | Q078 | 半導體自旋量子位元 | 規劃完成 | — |
 | Q079 | 拓樸量子位元與 NV 色心 | 規劃完成 | — |
 | Q080 | 平台大比較與供電分析 | 規劃完成 | — |

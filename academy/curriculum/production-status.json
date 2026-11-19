@@ -441,7 +441,13 @@
     "Q077": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q077-photonic-quantum-computer-v2",
+        "evidence": "academy/episodes/q077-photonic-quantum-computer-v2/delivery.json"
+      }
     },
     "Q078": {
       "status": "planned",
