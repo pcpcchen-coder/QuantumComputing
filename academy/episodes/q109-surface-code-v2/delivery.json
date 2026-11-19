@@ -95,5 +95,27 @@
     ],
     "handedOver": "2026-11-19 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
   },
-  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔"
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1bi-WOn7ipXPr978g1JqWu1DFCPwySyyb",
+    "uploaded": "2026-11-19",
+    "files": [
+      {
+        "name": "Q109 表面碼解碼：表面碼：穩定子與匹配解碼（動畫展示版）.mp4",
+        "id": "1YIr79B5kRgSTKzwvO01OXd-NvCWMQ8Iq",
+        "link": "https://drive.google.com/file/d/1YIr79B5kRgSTKzwvO01OXd-NvCWMQ8Iq/view?usp=drivesdk"
+      },
+      {
+        "name": "Q109 表面碼解碼（動畫展示版）簡報.pptx",
+        "id": "19p93mdfyX_tCVfQGI1_K_k1qVAOjtQoT",
+        "link": "https://docs.google.com/presentation/d/19p93mdfyX_tCVfQGI1_K_k1qVAOjtQoT/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true"
+      },
+      {
+        "name": "Q109 表面碼解碼 教材.zip",
+        "id": "12q9jc_sU85JyMYKphqMtVlwqCo2J4SIV",
+        "link": "https://drive.google.com/file/d/12q9jc_sU85JyMYKphqMtVlwqCo2J4SIV/view?usp=drivesdk"
+      }
+    ],
+    "complete": true
+  }
 }

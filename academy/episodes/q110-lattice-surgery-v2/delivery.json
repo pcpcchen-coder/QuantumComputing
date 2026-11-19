@@ -1,0 +1,126 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q110",
+  "version": "Q110-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-19",
+  "episodePath": "academy/episodes/q110-lattice-surgery-v2",
+  "basedOn": "academy/episodes/q110-lattice-surgery（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 571.7,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "merge",
+      "title": "動畫展示：縫起來，再拆開",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#surgery"
+    },
+    {
+      "key": "distill",
+      "title": "動畫展示：十五顆進，一顆出",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#surgery"
+    },
+    {
+      "key": "stress",
+      "title": "動畫展示：原料越髒，丟得越多",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#surgery"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.6,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q110-lattice-surgery-v2-zh-TW.mp4": {
+      "bytes": 93559498,
+      "sha256": "ff0b1b54d7827a4d1eb667c19fbd304e202e291ae6546add57cb66451ee09118"
+    },
+    "q110-lattice-surgery-v2-master.mp4": {
+      "bytes": 94569102,
+      "sha256": "1d6d6ab426ed044b784dd775945c25a60a3216ce6b89b4b0eadb2cc466c56471"
+    },
+    "narration-only.mp3": {
+      "bytes": 13721620,
+      "sha256": "2cdcde0537dce3d0415367f2a1ef8c1dea789ad19761d8193f9008a32cab3b91"
+    }
+  },
+  "package": {
+    "filename": "Q110-v2_量子電腦學程_魔術態蒸餾_動畫展示版_2026-11-19.zip",
+    "bytes": 206127492,
+    "sha256": "211c34477d5c65f0fba644b947bb82c0dc45f9fbc97b07b64b03bdc88d3ef2fa",
+    "parts": [
+      {
+        "name": "Q110-v2_量子電腦學程_魔術態蒸餾_動畫展示版_2026-11-19.zip.part01",
+        "bytes": 29360128,
+        "sha256": "7c1601a8eb3702621ea23d5666ca5c9f862a45a16f596b3f44566203bc8daef1"
+      },
+      {
+        "name": "Q110-v2_量子電腦學程_魔術態蒸餾_動畫展示版_2026-11-19.zip.part02",
+        "bytes": 29360128,
+        "sha256": "636e90218aae6a0b7fd96bcb8f1ef62b01459dd3dada33da6ff1d51ec27a53de"
+      },
+      {
+        "name": "Q110-v2_量子電腦學程_魔術態蒸餾_動畫展示版_2026-11-19.zip.part03",
+        "bytes": 29360128,
+        "sha256": "60d128476c399f901a908c6c073beeaeff60f2ff3555cddfebcc4e16bde1ddd4"
+      },
+      {
+        "name": "Q110-v2_量子電腦學程_魔術態蒸餾_動畫展示版_2026-11-19.zip.part04",
+        "bytes": 29360128,
+        "sha256": "19a1f09bea9d270cd0b844c7f7f15c090aab01b52e2da7294a5ff293da5a2238"
+      },
+      {
+        "name": "Q110-v2_量子電腦學程_魔術態蒸餾_動畫展示版_2026-11-19.zip.part05",
+        "bytes": 29360128,
+        "sha256": "aa9842ad71d3d0b1591ac38cc9181e5f5220885d1a20bdfb4f8b2354854ddf78"
+      },
+      {
+        "name": "Q110-v2_量子電腦學程_魔術態蒸餾_動畫展示版_2026-11-19.zip.part06",
+        "bytes": 29360128,
+        "sha256": "d36aa312463c481ef08a068b9fc45aefc10408510818b9b07575c5a5677ff9a8"
+      },
+      {
+        "name": "Q110-v2_量子電腦學程_魔術態蒸餾_動畫展示版_2026-11-19.zip.part07",
+        "bytes": 29360128,
+        "sha256": "2040a6952b980933f19400e430dc627e051a497f5e327ee8779e4abceb84b0e2"
+      },
+      {
+        "name": "Q110-v2_量子電腦學程_魔術態蒸餾_動畫展示版_2026-11-19.zip.part08",
+        "bytes": 606596,
+        "sha256": "bef6109a63cad78408d83b64b94f404a499d33417bbcebb4049792261a863d26"
+      }
+    ],
+    "handedOver": "2026-11-19 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1bi-WOn7ipXPr978g1JqWu1DFCPwySyyb",
+    "uploaded": "2026-11-19",
+    "files": [
+      {
+        "name": "Q110 魔術態蒸餾：Lattice surgery 與魔術態蒸餾（動畫展示版）.mp4",
+        "id": "1QCaZtXAOPlYO1Tw-2qK51gND9qCFAEWC",
+        "link": "https://drive.google.com/file/d/1QCaZtXAOPlYO1Tw-2qK51gND9qCFAEWC/view?usp=drivesdk"
+      },
+      {
+        "name": "Q110 魔術態蒸餾（動畫展示版）簡報.pptx",
+        "id": "18c-GwBqtEenpPRhb53L0nVwXBsVPYy-4",
+        "link": "https://docs.google.com/presentation/d/18c-GwBqtEenpPRhb53L0nVwXBsVPYy-4/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true"
+      },
+      {
+        "name": "Q110 魔術態蒸餾 教材.zip",
+        "id": "1PJQptEFFRiiWucrc0X0v85SshbkcgPyC",
+        "link": "https://drive.google.com/file/d/1PJQptEFFRiiWucrc0X0v85SshbkcgPyC/view?usp=drivesdk"
+      }
+    ],
+    "complete": true
+  }
+}
