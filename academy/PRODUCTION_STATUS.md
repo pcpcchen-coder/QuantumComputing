@@ -78,7 +78,7 @@
 | Q072 | 磁光阱與光鑷 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q072-mot-optical-tweezers-v2` |
 | Q073 | 裝載與重排 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q073-loading-rearrangement-v2` |
 | Q074 | 芮德堡阻斷與 CZ | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q074-rydberg-blockade-cz-v2` |
-| Q075 | 分區架構與成像讀取 | 規劃完成 | — |
+| Q075 | 分區架構與成像讀取 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q075-zoned-imaging-v2` |
 | Q076 | 類比量子模擬 | 規劃完成 | — |
 | Q077 | 光子量子電腦 | 規劃完成 | — |
 | Q078 | 半導體自旋量子位元 | 規劃完成 | — |

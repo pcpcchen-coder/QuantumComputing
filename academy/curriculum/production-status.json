@@ -419,7 +419,13 @@
     "Q075": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q075-zoned-imaging-v2",
+        "evidence": "academy/episodes/q075-zoned-imaging-v2/delivery.json"
+      }
     },
     "Q076": {
       "status": "planned",
