@@ -379,7 +379,13 @@
     "Q055": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q055-cz-cross-resonance-v2",
+        "evidence": "academy/episodes/q055-cz-cross-resonance-v2/delivery.json"
+      }
     },
     "Q056": {
       "status": "planned",
