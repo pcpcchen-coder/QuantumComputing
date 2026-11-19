@@ -40,12 +40,12 @@
   },
   "largeFiles": {
     "q132-dc-noise-budget-v2-zh-TW.mp4": {
-      "bytes": 93528162,
-      "sha256": "6380bbb42fb427c0f9ebae29e45192f49c57503a429a6fad12abc335d8c37793"
+      "bytes": 93470594,
+      "sha256": "6e25ea711226d33cbd21df86f9f2925348e1e35b9fe050460e9124956cf3c003"
     },
     "q132-dc-noise-budget-v2-master.mp4": {
-      "bytes": 95348552,
-      "sha256": "915fd3cf28dd1d61cadd7fcaaa8e43cb0850a7e17af611e999ad6b17f91129e2"
+      "bytes": 95288859,
+      "sha256": "0eb4aa12390ca23faa63d02976ca42ce8f1d1435c7c935af5967032057d70054"
     },
     "narration-only.mp3": {
       "bytes": 12957844,
@@ -54,48 +54,48 @@
   },
   "package": {
     "filename": "Q132-v2_量子電腦學程_雜訊預算_動畫展示版_2026-11-18.zip",
-    "bytes": 205944708,
-    "sha256": "80a20d9eda1263a29a8f41c8d790e880111006f44539b45161b2e578d70c3dbe",
+    "bytes": 205905372,
+    "sha256": "51d1b2139ff96ea0372d5063f58bb0252358e2348e74c92f227b8f82aafee0ff",
     "parts": [
       {
         "name": "Q132-v2_量子電腦學程_雜訊預算_動畫展示版_2026-11-18.zip.part01",
         "bytes": 29360128,
-        "sha256": "b130053819d9f29f1351af33eb8c53a60201c29a500e2796030786be25073d62"
+        "sha256": "1b118558b7c14e687e1e59b5debe66ad6a902bffb5b1b3d1d3bd9a0239daf01e"
       },
       {
         "name": "Q132-v2_量子電腦學程_雜訊預算_動畫展示版_2026-11-18.zip.part02",
         "bytes": 29360128,
-        "sha256": "41b43c9c500e0f11c0d8e64f6a46166be7a490033dc8ec78f4c6e57a174981db"
+        "sha256": "f0de05444414712acf0061bd443e2890d7495b45da47b4829eb4aa0db9d3c00a"
       },
       {
         "name": "Q132-v2_量子電腦學程_雜訊預算_動畫展示版_2026-11-18.zip.part03",
         "bytes": 29360128,
-        "sha256": "a822993ec63cb0d33861b873694582b38d2b8a761d76306d9e181a2ab2cb0d3c"
+        "sha256": "f61a7f46e2452bc659b4ba4191f98891b9eed0757988144d91b32a1163ba658f"
       },
       {
         "name": "Q132-v2_量子電腦學程_雜訊預算_動畫展示版_2026-11-18.zip.part04",
         "bytes": 29360128,
-        "sha256": "195a10db8e2484b2ee2e031caf6c70dff742155848790de2635c1c13e160f208"
+        "sha256": "2dab2d99f1c6b74784495aef6040ca2ae9a6197ea6da3fdc1b21b42dcbe7cef5"
       },
       {
         "name": "Q132-v2_量子電腦學程_雜訊預算_動畫展示版_2026-11-18.zip.part05",
         "bytes": 29360128,
-        "sha256": "0a6491519667b7f6ac7cb2197b55b214146adddad5a28429b6de84bd5e6a6eb7"
+        "sha256": "20be131297cc6068ec37969dbcee4983b700ceb7475f6bc3f1eb1f467cdaf281"
       },
       {
         "name": "Q132-v2_量子電腦學程_雜訊預算_動畫展示版_2026-11-18.zip.part06",
         "bytes": 29360128,
-        "sha256": "1f2a5582fb40b1d455671ecf04851649389a33b339132c59f6082fe3395e84a6"
+        "sha256": "96f1848d1dda64e163e9507823e87036f0f6d0fda8230c6f7c8c7ea4221ef300"
       },
       {
         "name": "Q132-v2_量子電腦學程_雜訊預算_動畫展示版_2026-11-18.zip.part07",
         "bytes": 29360128,
-        "sha256": "437ead03f3f16cca6ac717ab139e3fb5d174f833af326300062f202ef26a162d"
+        "sha256": "2f95713a15b564202e760b44a9cc0995863f4a95bd3fd8a7b0ba4371036a4e02"
       },
       {
         "name": "Q132-v2_量子電腦學程_雜訊預算_動畫展示版_2026-11-18.zip.part08",
-        "bytes": 423812,
-        "sha256": "9cd43c4a330a3a4f9bd50ce55add0d1b2be134e2a523fcb1f71eed272c3f658c"
+        "bytes": 384476,
+        "sha256": "3cf52850db45ebb3d78fe81b263fb359239768b4b87f03926940cfd26bf28881"
       }
     ],
     "handedOver": "2026-11-18 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
