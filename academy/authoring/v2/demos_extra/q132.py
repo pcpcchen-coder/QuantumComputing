@@ -57,7 +57,7 @@ def _pw_pp(n):  # 點全景場景的紅色痛點 n
 
 
 _LIST = [
- dict(key='electronics', after=3, page='pe', hash='electronics', scene='周邊系統 3D 場景 6：室溫控制電子學',
+ dict(key='electronics', pmap=[0, 0, 1, 2], after=3, page='pe', hash='electronics', scene='周邊系統 3D 場景 6：室溫控制電子學',
       title='動畫展示：精密直流在哪裡', sub='三維動畫：控制電子機櫃裡的直流電流源',
       sentences=[
        '打開周邊系統動畫的控制電子學場景，中間這座機櫃從上到下排著九個模組，倒數第二個就是直流電流源，負責磁通偏壓。',
@@ -66,7 +66,7 @@ _LIST = [
        '最上面的銣原子鐘一閃一閃，代表所有儀器都對齊同一個十兆赫的參考時脈；最下面那個模組，負責放大器的偏壓和泵浦。'],
       actions=[],
       points=[('直流電流源', '磁通偏壓，從來不停'), ('脈衝封包', '一輪一輪送與讀'), ('銣原子鐘', '十兆赫參考時脈')], shot=(1, 4.0)),
- dict(key='overview', after=5, page='pw', hash='overview', scene='1,000 位元供電互動動畫 場景 1：全景',
+ dict(key='overview', pmap=[0, 1, 0, 2], after=5, page='pw', hash='overview', scene='1,000 位元供電互動動畫 場景 1：全景',
       title='動畫展示：一百一十台精密直流', sub='互動動畫：乾淨匯流排與精密直流',
       sentences=[
        '回到供電互動動畫的全景，中間那條是乾淨匯流排，後面接著控制電子、時脈與網路，還有一百一十台精密直流。',
@@ -75,7 +75,7 @@ _LIST = [
        '再取消控制與量測接不斷電系統，乾淨那一條的粒子流完就停了；在真實的機器裡，偏壓一跳，量子位元就得重新校準。'],
       actions=[(1, 0.3, _pw_pp(4)), (2, 0.3, _pw_tog('模擬斷電', True)), (3, 1.0, _pw_tog('控制與量測接 UPS', False))],
       points=[('乾淨匯流排', '接一百一十台精密直流'), ('四號痛點', '單台合格不等於整體'), ('取消保護', '乾淨那條停下來')], shot=(1, 6.0)),
- dict(key='ground', after=10, page='pw', hash='ground', scene='1,000 位元供電互動動畫 場景 4：接地與共模',
+ dict(key='ground', pmap=[None, 0, 1, 2], after=10, page='pw', hash='ground', scene='1,000 位元供電互動動畫 場景 4：接地與共模',
       title='動畫展示：繞過濾波器的電流', sub='互動動畫：接地與共模',
       sentences=[
        '打開供電互動動畫的接地與共模場景，上面一排是儀器，每台都畫了一個電容符號，紅點就是漏進保護地線的電流。',

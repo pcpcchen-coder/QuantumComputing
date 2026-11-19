@@ -77,7 +77,7 @@ def _pw_card(text):  # 點路線圖（roadmap）裡含指定文字的卡片；�
 
 
 _LIST = [
- dict(key='compare', after=3, page='at', hash='compare', scene='離子阱與中性原子 3D 場景 13：三平台比較',
+ dict(key='compare', pmap=[None, 0, 1, 2], after=3, page='at', hash='compare', scene='離子阱與中性原子 3D 場景 13：三平台比較',
       title='動畫展示：三個平台站一排', sub='三維動畫：超導、離子阱、中性原子並排比較',
       sentences=[
        '打開離子阱與中性原子動畫的第十三個場景，三平台比較：左邊是超導，中間是離子阱，右邊是中性原子。',
@@ -86,7 +86,7 @@ _LIST = [
        '按下規模，柱子換成已展示的位元數：超導標著一千一百二十一，離子阱九十八，中性原子的陣列有六千一百顆。'],
       actions=[(3, 0.3, ('click', '規模'))],
       points=[('超導', '旁邊有 10 mK 稀釋冷凍機'), ('離子阱、中性原子', '沒有冷凍機'), ('規模', '位元多，不等於用電多')], shot=(3, 4.0)),
- dict(key='outage', after=6, page='pw', hash='outage', scene='1,000 位元供電互動動畫 場景 5：斷電時間軸',
+ dict(key='outage', pmap=[None, 0, 1, 2], after=6, page='pw', hash='outage', scene='1,000 位元供電互動動畫 場景 5：斷電時間軸',
       title='動畫展示：電池加大，只是延後', sub='互動動畫：斷電時間軸（方案 C）',
       sentences=[
        '回到供電互動動畫的斷電時間軸，先看面板：冷卻鏈負載寫著五十五到一百一十千瓦，這是一千位元設施的估算。',
@@ -95,7 +95,7 @@ _LIST = [
        '面板的停機時間仍寫著約三到五天；所以超導的不斷電系統是撐到發電機接手，不是靠電池撐完整場停電。'],
       actions=[(1, 0.3, _pw_sel('備援方案', 'gen')), (2, 0.4, _pw_sl('UPS 撐住冷卻鏈的時間', 60))],
       points=[('方案 C', '有 UPS，發電機沒起來'), ('UPS 撐 15 → 60 分鐘', '升溫只往後推'), ('停機時間', '仍約 3–5 天')], shot=(2, 5.0)),
- dict(key='roadmap', after=9, page='pw', hash='roadmap', scene='1,000 位元供電互動動畫 場景 7：三階段路線圖',
+ dict(key='roadmap', pmap=[None, 0, 1, 2], after=9, page='pw', hash='roadmap', scene='1,000 位元供電互動動畫 場景 7：三階段路線圖',
       title='動畫展示：一個想法，三種零件', sub='互動動畫：三階段路線圖（規劃建議）',
       sentences=[
        '換到供電互動動畫的路線圖，卡片分成三欄：零到一年建立案例與規格，一到三年進入供應鏈，三到七年做下一代架構。',
