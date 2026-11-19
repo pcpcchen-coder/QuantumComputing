@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q139",
+  "version": "Q139-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-19",
+  "episodePath": "academy/episodes/q139-scale-calculator-v2",
+  "basedOn": "academy/episodes/q139-scale-calculator（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 541.888,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "climb",
+      "title": "動畫展示：一級一級往上調",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/power1000.html#scale"
+    },
+    {
+      "key": "power",
+      "title": "動畫展示：省電救得了線嗎？",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/power1000.html#scale"
+    },
+    {
+      "key": "cryo",
+      "title": "動畫展示：低溫控制加多工",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/power1000.html#scale"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.6,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q139-scale-calculator-v2-zh-TW.mp4": {
+      "bytes": 89006950,
+      "sha256": "d0f923064120e68144e958f82dd0e722f3bbff3e86e3726509467263c196536a"
+    },
+    "q139-scale-calculator-v2-master.mp4": {
+      "bytes": 90435503,
+      "sha256": "a7b7169f489e2beb0fa166070932867efee7cb961145fbecac972f94c14d8958"
+    },
+    "narration-only.mp3": {
+      "bytes": 13006804,
+      "sha256": "eff9ebcd8852b0d1bcf13d2dec37970387d54650eb2e3d4447fe16c17e93a266"
+    }
+  },
+  "package": {
+    "filename": "Q139-v2_量子電腦學程_規模計算器_動畫展示版_2026-11-19.zip",
+    "bytes": 196615933,
+    "sha256": "eb486008b8709a61beb6d7ef7cc74d129f7f0f95645c3006aa8bac70ddf2302c",
+    "parts": [
+      {
+        "name": "Q139-v2_量子電腦學程_規模計算器_動畫展示版_2026-11-19.zip.part01",
+        "bytes": 29360128,
+        "sha256": "20922db3c36945c573dfc96d22e60428e34a5cba61c6e6f5732416efa4d4a0a4"
+      },
+      {
+        "name": "Q139-v2_量子電腦學程_規模計算器_動畫展示版_2026-11-19.zip.part02",
+        "bytes": 29360128,
+        "sha256": "4b98c25363837904c33b52107a496a8ea227896cef290da811d55bbe376d58e4"
+      },
+      {
+        "name": "Q139-v2_量子電腦學程_規模計算器_動畫展示版_2026-11-19.zip.part03",
+        "bytes": 29360128,
+        "sha256": "d21c0f5183f85a017df2a0f8a96c13f8374a749ba04c4a4387991c993c5ed8b8"
+      },
+      {
+        "name": "Q139-v2_量子電腦學程_規模計算器_動畫展示版_2026-11-19.zip.part04",
+        "bytes": 29360128,
+        "sha256": "9b7aece15654ebcd158d149b56435d753199bdeccdd2d2a221e314c1fcaf39c2"
+      },
+      {
+        "name": "Q139-v2_量子電腦學程_規模計算器_動畫展示版_2026-11-19.zip.part05",
+        "bytes": 29360128,
+        "sha256": "3fb6f7f433a3c575f75418cf62804b85199cf58532bacffcdf6681d733297faa"
+      },
+      {
+        "name": "Q139-v2_量子電腦學程_規模計算器_動畫展示版_2026-11-19.zip.part06",
+        "bytes": 29360128,
+        "sha256": "a03c2dc0c0bbdfb2766b1565f694605f0b0a20405000c67f556a1707b66a1bcd"
+      },
+      {
+        "name": "Q139-v2_量子電腦學程_規模計算器_動畫展示版_2026-11-19.zip.part07",
+        "bytes": 20455165,
+        "sha256": "e697b45752eb7103cdc4676e7bdc195601c2bf5bf71d35551fa6b829c77d7263"
+      }
+    ],
+    "handedOver": "2026-11-19 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "19TfKYX25oeVvzZEsGfFYyF8D3W3tknd7",
+    "uploaded": "2026-11-18",
+    "md5Verified": true,
+    "files": [
+      {
+        "name": "Q139 規模計算器：規模計算器：位元數一變，什麼先爆？（動畫展示版）.mp4",
+        "id": "1LxgDFRil6geqdnd0-0LG7Lx_ehF9UKpM",
+        "link": "https://drive.google.com/file/d/1LxgDFRil6geqdnd0-0LG7Lx_ehF9UKpM/view?usp=drivesdk"
+      },
+      {
+        "name": "Q139 規模計算器（動畫展示版）簡報.pptx",
+        "id": "1UXSUHACiEf_FdiEe70ni3_Z98CGMJtqE",
+        "link": "https://docs.google.com/presentation/d/1UXSUHACiEf_FdiEe70ni3_Z98CGMJtqE/edit?usp=drivesdk"
+      },
+      {
+        "name": "Q139 規模計算器 教材.zip",
+        "id": "1qrDdyZ8VGp7hxtipXm_2aZKb4QPiS1bq",
+        "link": "https://drive.google.com/file/d/1qrDdyZ8VGp7hxtipXm_2aZKb4QPiS1bq/view?usp=drivesdk"
+      }
+    ]
+  }
+}

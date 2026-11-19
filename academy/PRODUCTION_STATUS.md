@@ -140,9 +140,9 @@
 | Q134 | 接地與共模：上百台儀器一起漏電 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q134-grounding-common-mode-v2` |
 | Q135 | 磁場與配電佈局：母線離冷凍機多遠 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q135-busbar-field-layout-v2` |
 | Q136 | 離子阱的供電：ppm 與 nV | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q136-ion-trap-power-v2` |
-| Q137 | 中性原子的供電：保護熱穩態 | 規劃完成 | — |
-| Q138 | 三平台比較：三種 UPS 設計邏輯 | 規劃完成 | — |
-| Q139 | 規模計算器：位元數一變，什麼先爆？ | 規劃完成 | — |
+| Q137 | 中性原子的供電：保護熱穩態 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q137-neutral-atom-power-v2` |
+| Q138 | 三平台比較：三種 UPS 設計邏輯 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q138-three-platform-ups-v2` |
+| Q139 | 規模計算器：位元數一變，什麼先爆？ | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q139-scale-calculator-v2` |
 | Q140 | 低溫熱預算：熱帳怎麼變成電 | 規劃完成 | — |
 | Q141 | 從 1,000 到 10,000：MW 級與低溫電源轉換 | 規劃完成 | — |
 | Q142 | 我們的切入點：產品 × 平台矩陣 | 規劃完成 | — |
