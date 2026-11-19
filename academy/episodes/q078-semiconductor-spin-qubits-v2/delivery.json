@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q078",
+  "version": "Q078-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-19",
+  "episodePath": "academy/episodes/q078-semiconductor-spin-qubits-v2",
+  "basedOn": "academy/episodes/q078-semiconductor-spin-qubits（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 413.333,
+  "pages": 13,
+  "demos": [
+    {
+      "key": "compare",
+      "title": "動畫展示：先認識比較的對手",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/atoms.html#compare"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.2,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q078-semiconductor-spin-qubits-v2-zh-TW.mp4": {
+      "bytes": 79179929,
+      "sha256": "b154706f16abaf51864279e3ba6c2e4ffde48fec9a5d538e893f7677b61f8dbc"
+    },
+    "q078-semiconductor-spin-qubits-v2-master.mp4": {
+      "bytes": 81923753,
+      "sha256": "68eac5d850a5807ff3ac83c21d05d434ba815e72d6ba4c6d37ab48560b26baf4"
+    },
+    "narration-only.mp3": {
+      "bytes": 9921748,
+      "sha256": "64668cff5792dcb56a9c003b293866ddd766d53e450bb0a784e13b3596d6329d"
+    }
+  },
+  "package": {
+    "filename": "Q078-v2_量子電腦學程_半導體自旋量子位元_動畫展示版_2026-11-19.zip",
+    "bytes": 174547377,
+    "sha256": "533b5e07dc3511b0f3bc52f95b32e65d29e1955d47f48968b94fd89787786b4b",
+    "parts": [
+      {
+        "name": "Q078-v2_量子電腦學程_半導體自旋量子位元_動畫展示版_2026-11-19.zip.part01",
+        "bytes": 29360128,
+        "sha256": "c78bf51534667232ea6a28f32cdf990f838767362269bf707dcbe31ac7bc7717"
+      },
+      {
+        "name": "Q078-v2_量子電腦學程_半導體自旋量子位元_動畫展示版_2026-11-19.zip.part02",
+        "bytes": 29360128,
+        "sha256": "9a3244418966eeac7f2d52c6b18fa8cf6524bf8ea59d83fe87b91a426fdba6ad"
+      },
+      {
+        "name": "Q078-v2_量子電腦學程_半導體自旋量子位元_動畫展示版_2026-11-19.zip.part03",
+        "bytes": 29360128,
+        "sha256": "403e6979d2af0c42ae6289ce22dfc470e461b849ba6b02274cc239f24a6da2ae"
+      },
+      {
+        "name": "Q078-v2_量子電腦學程_半導體自旋量子位元_動畫展示版_2026-11-19.zip.part04",
+        "bytes": 29360128,
+        "sha256": "7f29ca7ae5c0b909b23cd69a64d633bd004e5a57cb402dd1d650eb64571828c1"
+      },
+      {
+        "name": "Q078-v2_量子電腦學程_半導體自旋量子位元_動畫展示版_2026-11-19.zip.part05",
+        "bytes": 29360128,
+        "sha256": "fc764103c0e5753cc54f662f340931029947c8f7f93d902d4f39c499fffebdc6"
+      },
+      {
+        "name": "Q078-v2_量子電腦學程_半導體自旋量子位元_動畫展示版_2026-11-19.zip.part06",
+        "bytes": 27746737,
+        "sha256": "9962b22e2e94076815076adcf4ffe0bf5e65f52adf31fdf2764067db481aac4a"
+      }
+    ],
+    "handedOver": "2026-11-19 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔"
+}
