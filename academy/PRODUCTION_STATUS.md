@@ -48,13 +48,13 @@
 | Q042 | 脈衝管與壓縮機 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q042-pulse-tube-v2` |
 | Q043 | 稀釋冷凍原理 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q043-dilution-refrigerator-v2` |
 | Q044 | 降溫一次要幾天 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q044-cooldown-days-v2` |
-| Q045 | 低溫佈線與熱負載 | 規劃完成 | — |
+| Q045 | 低溫佈線與熱負載 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q045-cryo-wiring-v2` |
 | Q046 | 控制電子與時脈 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q046-control-clock-v2` |
-| Q047 | 軟體、監控與聯鎖 | 規劃完成 | — |
-| Q048 | 從零到上線 | 規劃完成 | — |
+| Q047 | 軟體、監控與聯鎖 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q047-software-monitor-v2` |
+| Q048 | 從零到上線 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q048-zero-to-online-v2` |
 | Q049 | 一次量子計算的生命週期 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q049-job-lifecycle-v2` |
-| Q050 | 初始化與校準 | 規劃完成 | — |
-| Q051 | 看懂後端校準資料 | 規劃完成 | — |
+| Q050 | 初始化與校準 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q050-init-calibration-v2` |
+| Q051 | 看懂後端校準資料 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q051-backend-calibration-v2` |
 | Q052 | 微波脈衝：面積與相位 | 規劃完成 | — |
 | Q053 | DRAG 與虛擬 Z | 規劃完成 | — |
 | Q054 | 任意旋轉 = 三個旋轉 | 規劃完成 | — |

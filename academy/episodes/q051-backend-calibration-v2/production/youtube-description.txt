@@ -1,0 +1,32 @@
+父子科技學院 量子電腦學程 Q051｜看懂後端校準資料（v2・含 3D 動畫展示）
+
+這是依課綱製作的課前教學版，不是實際上課錄音。
+
+父子科技學院量子電腦學程 Q051「看懂後端校準資料」新版（v2）：在原本的教學投影片之間，插入本學程 3D 互動動畫的實際操作示範。
+
+這一版新增的動畫展示
+・表上的數字從哪裡來（https://pcpcchen-coder.github.io/QuantumComputing/animations/peripherals.html#bringup）
+・讀取錯誤從哪裡來（https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#iq）
+・編譯器也在讀校準表（https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#stack）
+
+動畫都可以在瀏覽器直接開啟，自己動手操作。
+
+章節
+00:00 陳犀牛系列片頭
+01:00 看懂後端校準資料
+01:30 三步：讀表、比較、挑選
+01:53 校準資料：機器的體檢表
+02:18 動畫展示：表上的數字從哪裡來
+03:02 兩種壽命：位元能撐多久
+03:29 比一比：單位元閘和雙位元閘
+03:54 動畫展示：讀取錯誤從哪裡來
+04:42 偵探三招
+05:09 虛構後端：犀牛六號
+05:40 挑兩顆跑貝爾態
+06:14 動畫展示：編譯器也在讀校準表
+07:00 資料偵探：偵探和證人
+07:24 換你改造：後端體檢報告
+07:48 兩小時的資料偵探
+08:17 最後一關：教爸爸讀資料
+
+旁白：微軟 zh-TW-YunJheNeural 神經語音合成（Edge-TTS／Azure 語音服務，同一聲音同一格式）。字幕已燒入影片，開啟 CC 可能重疊。

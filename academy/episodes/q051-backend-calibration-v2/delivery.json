@@ -1,0 +1,130 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q051",
+  "version": "Q051-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-18",
+  "episodePath": "academy/episodes/q051-backend-calibration-v2",
+  "basedOn": "academy/episodes/q051-backend-calibration（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 533.269,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "source",
+      "title": "動畫展示：表上的數字從哪裡來",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/peripherals.html#bringup"
+    },
+    {
+      "key": "readout",
+      "title": "動畫展示：讀取錯誤從哪裡來",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#iq"
+    },
+    {
+      "key": "mapping",
+      "title": "動畫展示：編譯器也在讀校準表",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#stack"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.5,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q051-backend-calibration-v2-zh-TW.mp4": {
+      "bytes": 98187873,
+      "sha256": "44fcddf5d6bf5d23ad91960e291cb5386a10c1b8e7a190d35f3c2644ae106b29"
+    },
+    "q051-backend-calibration-v2-master.mp4": {
+      "bytes": 101115348,
+      "sha256": "67c77f543974f43d0e400ab4a78ff2e8f973602291c6b838ec5000338248d1ca"
+    },
+    "narration-only.mp3": {
+      "bytes": 12800020,
+      "sha256": "28d71543c70f2ccd589068a9335a30abf93c47f47f19ec61135d4098fa7b5a5f"
+    }
+  },
+  "package": {
+    "filename": "Q051-v2_量子電腦學程_看懂校準資料_動畫展示版_2026-11-18.zip",
+    "bytes": 216272200,
+    "sha256": "dd033439898e93032692574797ade47e082f19243711143e87c2def895855e47",
+    "parts": [
+      {
+        "name": "Q051-v2_量子電腦學程_看懂校準資料_動畫展示版_2026-11-18.zip.part01",
+        "bytes": 29360128,
+        "sha256": "a49497e23ebd4eb931c2db012a1b6c792c324edbee8f5a07bdf01c79d30ff2dc"
+      },
+      {
+        "name": "Q051-v2_量子電腦學程_看懂校準資料_動畫展示版_2026-11-18.zip.part02",
+        "bytes": 29360128,
+        "sha256": "2bcef12d729788834b50e66a7d5c4fca901e4400f8126206306bd88b342776d2"
+      },
+      {
+        "name": "Q051-v2_量子電腦學程_看懂校準資料_動畫展示版_2026-11-18.zip.part03",
+        "bytes": 29360128,
+        "sha256": "21f9759908822b73a5004ea8c3d2dd493d2180f9f0d8ac82d0ce139fea05e2cd"
+      },
+      {
+        "name": "Q051-v2_量子電腦學程_看懂校準資料_動畫展示版_2026-11-18.zip.part04",
+        "bytes": 29360128,
+        "sha256": "899316c2ce429ac8e953566d49623d9cfb9f3aef3f9ea9fc96250a8314b2d51f"
+      },
+      {
+        "name": "Q051-v2_量子電腦學程_看懂校準資料_動畫展示版_2026-11-18.zip.part05",
+        "bytes": 29360128,
+        "sha256": "f7becba338ada4c75a0c19f8c2023420346012fc419248292b7a87d5a5eed128"
+      },
+      {
+        "name": "Q051-v2_量子電腦學程_看懂校準資料_動畫展示版_2026-11-18.zip.part06",
+        "bytes": 29360128,
+        "sha256": "4aaaa96052eed1e21158eea15a26128bc789e1101c9fef642f8cda2d032bee27"
+      },
+      {
+        "name": "Q051-v2_量子電腦學程_看懂校準資料_動畫展示版_2026-11-18.zip.part07",
+        "bytes": 29360128,
+        "sha256": "bc1059b0c637aca4125fd95d5f832f5dcb9de3c1bc7b4b12d53d03f381ef486f"
+      },
+      {
+        "name": "Q051-v2_量子電腦學程_看懂校準資料_動畫展示版_2026-11-18.zip.part08",
+        "bytes": 10751304,
+        "sha256": "520ffb10e8798855a813b97965de9f808cf1869f3bacf71d5943557cc2df0090"
+      }
+    ],
+    "handedOver": "2026-11-18 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1eZLiQdOHdFov3xfVLuJtqORZ4fjXzXXV",
+    "folderName": "量子電腦學程 Q041–Q070 動畫展示版（v2）",
+    "uploadedAt": "2026-11-18",
+    "uploadedBy": "製作代理（Claude，Drive API，上傳後比對 md5）",
+    "files": [
+      {
+        "name": "Q051 看懂校準資料：看懂後端校準資料（動畫展示版）.mp4",
+        "id": "1r9aNJWxMIGtiQcKz-Pyr-aZAGudP8-zK",
+        "size": 98187873,
+        "link": "https://drive.google.com/file/d/1r9aNJWxMIGtiQcKz-Pyr-aZAGudP8-zK/view?usp=drivesdk"
+      },
+      {
+        "name": "Q051 看懂校準資料（動畫展示版）簡報.pptx",
+        "id": "1XR2U2aVZGgcmkLzJzIeGW-qgQn_1Myb_",
+        "size": 3381595,
+        "link": "https://docs.google.com/presentation/d/1XR2U2aVZGgcmkLzJzIeGW-qgQn_1Myb_/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true"
+      },
+      {
+        "name": "Q051 看懂校準資料 教材.zip",
+        "id": "1c73ODKM9SI2fZI0MGs1rMy1XDTnK_bvN",
+        "size": 461050,
+        "link": "https://drive.google.com/file/d/1c73ODKM9SI2fZI0MGs1rMy1XDTnK_bvN/view?usp=drivesdk"
+      }
+    ]
+  }
+}
