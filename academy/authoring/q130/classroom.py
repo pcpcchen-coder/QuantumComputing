@@ -203,11 +203,11 @@ SHEET_HEADER = ['案例', '市電停幾分鐘', '冷卻鏈接 UPS？', 'UPS 撐�
 SHEET_ROWS = ([['A', '1', '否', '0', '否'], ['A', '5', '否', '0', '否'], ['B', '180', '是', '15', '是'],
                ['C', '10', '是', '15', '否'], ['C', '16', '是', '15', '否'], ['C', '60', '是', '15', '否'], ['自己設計', '', '', '', '']])
 
-EXTRA_CSS = '''.axis{position:relative;height:42mm;border-left:1.5pt solid #0b2540;border-bottom:1.5pt solid #0b2540;margin:4mm 0 10mm 8mm}
+EXTRA_CSS = '''.axis{position:relative;height:42mm;border-left:1.5pt solid #0b2540;border-bottom:1.5pt solid #0b2540;margin:4mm 0 10mm 14mm}
 .axis .red{position:absolute;left:0;right:0;top:45%;border-top:1.2pt dashed #c0392b}
 .axis .red span{position:absolute;right:0;top:-5mm;color:#c0392b;font-size:9pt}
 .axis .tick{position:absolute;bottom:-6mm;font-size:9pt;color:#4a6a88;transform:translateX(-50%)}
-.axis .yl{position:absolute;left:-8mm;font-size:8.5pt;color:#4a6a88}
+.axis .yl{position:absolute;left:-13mm;white-space:nowrap;font-size:8.5pt;color:#4a6a88}
 table.rec td{height:8mm}.chk li{margin:2.5mm 0;font-size:13pt;list-style:none}.chk li:before{content:"□ "}.chk{padding-left:2mm}
 .card{border:1.4pt solid #0b2540;border-radius:3mm;padding:3mm 4mm;margin-top:3mm}.card .row{border-bottom:1pt dashed #4a6a88;height:8.5mm;margin-top:1mm}
 pre.code{font-size:8.5pt;background:#f2f6fa;border:1pt solid #cfdde8;padding:2.5mm;margin:2mm 0;white-space:pre-wrap}'''
@@ -230,7 +230,7 @@ def html():
     pages = [
         '<h2>斷電時間軸</h2><p class="lead">跟著 power1000.html#outage 故障注入：每一題都在下面的時間軸做記號。</p>'
         '<p>開場先猜：冷卻停兩分鐘，要多久才能恢復？ □ 幾分鐘　□ 幾小時　□ 幾天　因為＿＿＿＿＿＿＿＿＿＿</p>'
-        '<div class="axis"><span class="yl" style="top:0">300 K</span><span class="yl" style="top:40%">1 K</span><span class="yl" style="bottom:0">10 mK</span>'
+        '<div class="axis"><span class="yl" style="top:0">300 K</span><span class="yl" style="top:41%">1 K</span><span class="yl" style="bottom:0">10 mK</span>'
         f'<div class="red"><span>1 K 紅線：超過要完整校準</span></div>{ticks}</div>'
         '<table class="rec"><tr><th>題目（爸爸注入的故障）</th><th>我的預測</th><th>超過 1 K 的時間點</th><th>停機多久</th></tr>'
         + ''.join(f'<tr><td>{a}</td><td></td><td></td><td></td></tr>' for a in

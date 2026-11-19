@@ -15,4 +15,3 @@
 
 教材：斷電時間軸、可執行的 `outage_timeline.py`（純 Python，不需套件）、實驗室斷電處置卡、備援案例紀錄表、三個容易錯的地方、教爸爸檢核表、解答（`academy/authoring/q130/classroom.py`）。
 v2 動畫展示段：peripherals.html#cooldown（重新降溫為什麼要好幾天）、power1000.html#outage（A／B／C 三種方案）、peripherals.html#monitor（冷卻水中斷與聯鎖），見 `academy/authoring/v2/demos_extra/q130.py`。
-這是依課綱製作的課前教學版，不是實際上課錄音。
