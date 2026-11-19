@@ -97,7 +97,29 @@
   },
   "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
   "drive": {
-    "status": "pending",
-    "note": "Drive 權杖過期（HTTP 401），檔案已排入待上傳清單，權杖更新後補傳"
+    "folderId": "1eZLiQdOHdFov3xfVLuJtqORZ4fjXzXXV",
+    "folderName": "量子電腦學程 Q041–Q070 動畫展示版（v2）",
+    "uploadedAt": "2026-11-18",
+    "uploadedBy": "製作代理（Claude，Drive API，上傳後比對 md5）",
+    "files": [
+      {
+        "name": "Q046 控制鏈與時脈：控制電子與時脈（動畫展示版）.mp4",
+        "id": "1FNz_GVBWXL3gBpdNn4URsVQ_j2zn0BK3",
+        "size": 91128269,
+        "link": "https://drive.google.com/file/d/1FNz_GVBWXL3gBpdNn4URsVQ_j2zn0BK3/view?usp=drivesdk"
+      },
+      {
+        "name": "Q046 控制鏈與時脈（動畫展示版）簡報.pptx",
+        "id": "1SDNrBvbPZ_DXrnOZdrCEtocrF2lzn_L_",
+        "size": 3577579,
+        "link": "https://docs.google.com/presentation/d/1SDNrBvbPZ_DXrnOZdrCEtocrF2lzn_L_/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true"
+      },
+      {
+        "name": "Q046 控制鏈與時脈 教材.zip",
+        "id": "1R8QdcHIt9Fr48gHsKk2u2gTM1eAbhqWO",
+        "size": 436774,
+        "link": "https://drive.google.com/file/d/1R8QdcHIt9Fr48gHsKk2u2gTM1eAbhqWO/view?usp=drivesdk"
+      }
+    ]
   }
 }
