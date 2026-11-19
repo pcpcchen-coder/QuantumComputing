@@ -397,7 +397,13 @@
     "Q073": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q073-loading-rearrangement-v2",
+        "evidence": "academy/episodes/q073-loading-rearrangement-v2/delivery.json"
+      }
     },
     "Q074": {
       "status": "planned",
