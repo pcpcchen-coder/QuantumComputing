@@ -75,7 +75,7 @@
 | Q069 | 離子鏈的集體振動 | 規劃完成 | — |
 | Q070 | Mølmer–Sørensen 閘 | 規劃完成 | — |
 | Q071 | 螢光讀取與 QCCD | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q071-fluorescence-qccd-v2` |
-| Q072 | 磁光阱與光鑷 | 規劃完成 | — |
+| Q072 | 磁光阱與光鑷 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q072-mot-optical-tweezers-v2` |
 | Q073 | 裝載與重排 | 規劃完成 | — |
 | Q074 | 芮德堡阻斷與 CZ | 規劃完成 | — |
 | Q075 | 分區架構與成像讀取 | 規劃完成 | — |
