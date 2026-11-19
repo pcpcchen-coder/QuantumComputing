@@ -97,7 +97,25 @@
   },
   "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
   "drive": {
-    "status": "pending: Drive token expired (HTTP 401) on 2026-11-19; queued in /home/user/qwork/pending-uploads.txt",
-    "folderId": "19TfKYX25oeVvzZEsGfFYyF8D3W3tknd7"
+    "folderId": "19TfKYX25oeVvzZEsGfFYyF8D3W3tknd7",
+    "uploaded": "2026-11-18",
+    "md5Verified": true,
+    "files": [
+      {
+        "name": "Q141 百萬瓦級擴展：從 1,000 到 10,000：MW 級與低溫電源轉換（動畫展示版）.mp4",
+        "id": "1j_X2Mjecoa0w6XQaJLBe6jORnUG_j2GF",
+        "link": "https://drive.google.com/file/d/1j_X2Mjecoa0w6XQaJLBe6jORnUG_j2GF/view?usp=drivesdk"
+      },
+      {
+        "name": "Q141 百萬瓦級擴展（動畫展示版）簡報.pptx",
+        "id": "17KhwJk2xUB1cFlLDHtqufnVueaqyQfcj",
+        "link": "https://docs.google.com/presentation/d/17KhwJk2xUB1cFlLDHtqufnVueaqyQfcj/edit?usp=drivesdk"
+      },
+      {
+        "name": "Q141 百萬瓦級擴展 教材.zip",
+        "id": "1_kS_qYLw-kVtRsghzfeEu2ubfaz4uMHc",
+        "link": "https://drive.google.com/file/d/1_kS_qYLw-kVtRsghzfeEu2ubfaz4uMHc/view?usp=drivesdk"
+      }
+    ]
   }
 }

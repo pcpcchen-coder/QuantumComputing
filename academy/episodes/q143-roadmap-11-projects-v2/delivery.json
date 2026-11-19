@@ -97,7 +97,25 @@
   },
   "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
   "drive": {
-    "status": "pending: Drive token expired (HTTP 401) on 2026-11-19; queued in /home/user/qwork/pending-uploads.txt",
-    "folderId": "19TfKYX25oeVvzZEsGfFYyF8D3W3tknd7"
+    "folderId": "19TfKYX25oeVvzZEsGfFYyF8D3W3tknd7",
+    "uploaded": "2026-11-18",
+    "md5Verified": true,
+    "files": [
+      {
+        "name": "Q143 三階段路線圖：三階段路線圖與 11 個開發項目（動畫展示版）.mp4",
+        "id": "1qPslgzMjELndHfSDJyvVqdhy-yjq8pj-",
+        "link": "https://drive.google.com/file/d/1qPslgzMjELndHfSDJyvVqdhy-yjq8pj-/view?usp=drivesdk"
+      },
+      {
+        "name": "Q143 三階段路線圖（動畫展示版）簡報.pptx",
+        "id": "11lBQVMHacHmZyIEadLk2wUHUCFFmQ7H3",
+        "link": "https://docs.google.com/presentation/d/11lBQVMHacHmZyIEadLk2wUHUCFFmQ7H3/edit?usp=drivesdk"
+      },
+      {
+        "name": "Q143 三階段路線圖 教材.zip",
+        "id": "1sjk2HUn57xY4qmfEzaYjNLiZWnTJmqjB",
+        "link": "https://drive.google.com/file/d/1sjk2HUn57xY4qmfEzaYjNLiZWnTJmqjB/view?usp=drivesdk"
+      }
+    ]
   }
 }

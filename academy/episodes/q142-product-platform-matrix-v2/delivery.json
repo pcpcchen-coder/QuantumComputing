@@ -92,7 +92,25 @@
   },
   "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
   "drive": {
-    "status": "pending: Drive token expired (HTTP 401) on 2026-11-19; queued in /home/user/qwork/pending-uploads.txt",
-    "folderId": "19TfKYX25oeVvzZEsGfFYyF8D3W3tknd7"
+    "folderId": "19TfKYX25oeVvzZEsGfFYyF8D3W3tknd7",
+    "uploaded": "2026-11-18",
+    "md5Verified": true,
+    "files": [
+      {
+        "name": "Q142 產品平台矩陣：我們的切入點：產品 × 平台矩陣（動畫展示版）.mp4",
+        "id": "1qh83Bv8X-tDTNyEU4Bx7nIDAPnysGcTp",
+        "link": "https://drive.google.com/file/d/1qh83Bv8X-tDTNyEU4Bx7nIDAPnysGcTp/view?usp=drivesdk"
+      },
+      {
+        "name": "Q142 產品平台矩陣（動畫展示版）簡報.pptx",
+        "id": "1Gbh5y8-bYjlHgIxLf-m5txocuFoz83oh",
+        "link": "https://docs.google.com/presentation/d/1Gbh5y8-bYjlHgIxLf-m5txocuFoz83oh/edit?usp=drivesdk"
+      },
+      {
+        "name": "Q142 產品平台矩陣 教材.zip",
+        "id": "1aLS-pKHfsSr-hy0SG1reQb6X-b6LoKGB",
+        "link": "https://drive.google.com/file/d/1aLS-pKHfsSr-hy0SG1reQb6X-b6LoKGB/view?usp=drivesdk"
+      }
+    ]
   }
 }
