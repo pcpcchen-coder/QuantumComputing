@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q058",
+  "version": "Q058-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-18",
+  "episodePath": "academy/episodes/q058-basis-expectation-v2",
+  "basedOn": "academy/episodes/q058-basis-expectation（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 510.869,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "basis",
+      "title": "動畫展示：先轉再量",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#readout"
+    },
+    {
+      "key": "expect",
+      "title": "動畫展示：從柱子算期望值",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#qubit"
+    },
+    {
+      "key": "blind",
+      "title": "動畫展示：盲測練習",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#gates"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.6,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q058-basis-expectation-v2-zh-TW.mp4": {
+      "bytes": 85975702,
+      "sha256": "fd41b26b0c471b60f40a09190c678759ae33ce85be67738197aeea4c4fb8bf4c"
+    },
+    "q058-basis-expectation-v2-master.mp4": {
+      "bytes": 87783408,
+      "sha256": "7a5079d3f4d05e536abf926cc0957877685035663d19d3d5b365ed1d80396a8b"
+    },
+    "narration-only.mp3": {
+      "bytes": 12262612,
+      "sha256": "76f76ff1f941d144b08de928d4431408afdc1304ca07c3e42ad5aaa05d742746"
+    }
+  },
+  "package": {
+    "filename": "Q058-v2_量子電腦學程_先轉再量_動畫展示版_2026-11-18.zip",
+    "bytes": 190015519,
+    "sha256": "1f3bff807ceabe19ee67ff42b2d6f8dad6989d3d7d49aac9f6b7ab9809dc324b",
+    "parts": [
+      {
+        "name": "Q058-v2_量子電腦學程_先轉再量_動畫展示版_2026-11-18.zip.part01",
+        "bytes": 29360128,
+        "sha256": "f6b7c11a9f1bf0318e3bc3abc2cf038015353981e2e24daafcb5f8f489426de8"
+      },
+      {
+        "name": "Q058-v2_量子電腦學程_先轉再量_動畫展示版_2026-11-18.zip.part02",
+        "bytes": 29360128,
+        "sha256": "db3f7aa216f56a851b3fe2fa3e0fc0a3bd4831c822c582e234033bf2781a3f28"
+      },
+      {
+        "name": "Q058-v2_量子電腦學程_先轉再量_動畫展示版_2026-11-18.zip.part03",
+        "bytes": 29360128,
+        "sha256": "8d0e165aa7371b28f723cb097b955ad7dd7af0f2b9822f2c029b2dd16368164c"
+      },
+      {
+        "name": "Q058-v2_量子電腦學程_先轉再量_動畫展示版_2026-11-18.zip.part04",
+        "bytes": 29360128,
+        "sha256": "500031f6d76e423c1ea45ab381bb3c82a3c9e698f8ca054a7606aa9be20c6a4d"
+      },
+      {
+        "name": "Q058-v2_量子電腦學程_先轉再量_動畫展示版_2026-11-18.zip.part05",
+        "bytes": 29360128,
+        "sha256": "e7e2eb819d36380efbf61fad7881b4613fbf6c6dc47bc2ee2a2e02b1822bb618"
+      },
+      {
+        "name": "Q058-v2_量子電腦學程_先轉再量_動畫展示版_2026-11-18.zip.part06",
+        "bytes": 29360128,
+        "sha256": "310ed854fd9df3dd5f69638677562dfa63b0d3c5c5b1920165f0e230c74c14d9"
+      },
+      {
+        "name": "Q058-v2_量子電腦學程_先轉再量_動畫展示版_2026-11-18.zip.part07",
+        "bytes": 13854751,
+        "sha256": "68cccc38d5ecbac0efa22f76e736ffd8fe98a37ac38fc00722ef6e281d01cc9a"
+      }
+    ],
+    "handedOver": "2026-11-18 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔"
+}
