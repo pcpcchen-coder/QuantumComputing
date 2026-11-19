@@ -1,0 +1,399 @@
+{
+  "version": 2,
+  "opening": 60.277,
+  "scenes": [
+    {
+      "page": 1,
+      "kind": "slide",
+      "v1slide": 1,
+      "title": "範例 1：疊加——量子硬幣與兩種疊加態",
+      "duration": 32.856,
+      "sentences": [
+        {
+          "text": "歡迎回到父子科技學院的量子電腦學程，我是陳犀牛，今天是量子第一百一十四堂，範例一，疊加，量子硬幣與兩種疊加態，這是依課綱製作的課前教學版，並非實際上課錄音。",
+          "start": 0.0,
+          "end": 14.368005
+        },
+        {
+          "text": "上一堂講好了讀圖的三個約定，今天進入八個範例的第一個：只用一顆位元和一個哈達瑪閘，做出一枚量子硬幣。",
+          "start": 14.548005,
+          "end": 23.852019
+        },
+        {
+          "text": "今天要記住一句話：正號和負號這兩種疊加態，量到零和一的機率完全一樣，差別只在一個正負號。",
+          "start": 24.032019,
+          "end": 32.640024
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q114-plus-minus-coin/audio/slide_01.mp3"
+    },
+    {
+      "page": 2,
+      "kind": "slide",
+      "v1slide": 2,
+      "title": "盲測：只看結果，猜是哪一種",
+      "duration": 26.784,
+      "sentences": [
+        {
+          "text": "今天的玩法叫盲測：爸爸偷偷準備兩種疊加態的其中一種，你只能看量測結果，猜是哪一種。",
+          "start": 0.0,
+          "end": 8.200000000000001
+        },
+        {
+          "text": "分三步：先準備，從零態或一態出發，再做哈達瑪閘；接著量測一千次；最後根據次數下判斷。",
+          "start": 8.38,
+          "end": 17.660000000000004
+        },
+        {
+          "text": "先劇透：只看次數，你會猜不出來；今天的作品是一張兩種疊加態的對照表，把原因寫清楚。",
+          "start": 17.840000000000003,
+          "end": 26.568005000000003
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q114-plus-minus-coin/audio/slide_02.mp3"
+    },
+    {
+      "page": 3,
+      "kind": "slide",
+      "v1slide": 3,
+      "title": "範例 1：一條線、一個閘",
+      "duration": 26.304,
+      "sentences": [
+        {
+          "text": "先看簡報第五頁的範例一：只有一條線、一個哈達瑪閘和一個量測；起點是零態，這時候去量，一定得到零。",
+          "start": 0.0,
+          "end": 9.184014
+        },
+        {
+          "text": "做完哈達瑪閘，零和一的振幅都是正的零點七零七，平方後各占一半，布洛赫球的箭頭從北極轉到赤道上。",
+          "start": 9.364014,
+          "end": 18.500023
+        },
+        {
+          "text": "量測時才隨機決定結果，像丟一枚公平的硬幣；重複一千次，大約各五百次。",
+          "start": 18.680023,
+          "end": 26.088027999999998
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q114-plus-minus-coin/audio/slide_03.mp3"
+    },
+    {
+      "page": 4,
+      "kind": "slide",
+      "v1slide": 4,
+      "title": "量子硬幣不只是「不知道」",
+      "duration": 25.248,
+      "sentences": [
+        {
+          "text": "簡報特別提醒：量測之前兩種可能同時存在，這和硬幣蓋在手底下、只是我們不知道，並不一樣。",
+          "start": 0.0,
+          "end": 8.824014
+        },
+        {
+          "text": "證據是兩個振幅之後還能互相干涉，有時相消、有時相加；只是「不知道」的硬幣，做不到這件事。",
+          "start": 9.004014,
+          "end": 17.612019
+        },
+        {
+          "text": "干涉留給下一堂；今天先記住，疊加態除了機率，還帶著每個振幅的正負號。",
+          "start": 17.792019,
+          "end": 25.032019
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q114-plus-minus-coin/audio/slide_04.mp3"
+    },
+    {
+      "page": 5,
+      "kind": "slide",
+      "v1slide": 5,
+      "title": "從一態出發：另一種疊加態",
+      "duration": 24.96,
+      "sentences": [
+        {
+          "text": "如果起點換成一態呢？線路前面先加一個翻轉閘，把零翻成一，再做哈達瑪閘。",
+          "start": 0.0,
+          "end": 8.344014
+        },
+        {
+          "text": "結果零的振幅是正零點七零七，一的振幅是負零點七零七；這叫負號疊加態，剛才那一種叫正號疊加態。",
+          "start": 8.524014,
+          "end": 17.564014
+        },
+        {
+          "text": "在布洛赫球上，正號疊加態指向赤道的一邊，負號疊加態指向正對面的另一邊。",
+          "start": 17.744014,
+          "end": 24.744014
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q114-plus-minus-coin/audio/slide_05.mp3"
+    },
+    {
+      "page": 6,
+      "kind": "demo",
+      "demo": "plusminus",
+      "title": "動畫展示：正號和負號兩種疊加態",
+      "duration": 36.528,
+      "sentences": [
+        {
+          "text": "打開線路入門動畫的疊加範例，起始態是零；按下一步做哈達瑪閘，兩根柱子都是朝上的藍色，橘色箭頭倒向赤道。",
+          "start": 0.0,
+          "end": 10.048005
+        },
+        {
+          "text": "現在把起始態換成一，線路前面多了一個酒紅色的翻轉閘；從起點按下一步，箭頭轉到南極，一的柱子升到頂。",
+          "start": 10.228005,
+          "end": 19.868005
+        },
+        {
+          "text": "再按一次下一步做哈達瑪閘，一的柱子翻到下面，變成橘色的負零點七零七，箭頭停在赤道的另一邊。",
+          "start": 20.048005,
+          "end": 28.752019
+        },
+        {
+          "text": "兩次柱子下面都寫著百分之五十，不同的只有一那根柱子的方向，和箭頭指的位置。",
+          "start": 28.932019,
+          "end": 36.316033
+        }
+      ],
+      "audio": "audio/demo_plusminus.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/basic-circuits.html#superposition"
+    },
+    {
+      "page": 7,
+      "kind": "slide",
+      "v1slide": 6,
+      "title": "機率一樣，差在正負號",
+      "duration": 23.304,
+      "sentences": [
+        {
+          "text": "機率是振幅自己乘自己：正零點七零七和負零點七零七，乘完都大約是零點五。",
+          "start": 0.0,
+          "end": 7.192018
+        },
+        {
+          "text": "所以兩種疊加態量到零和一的機率完全一樣，都是一半一半，負號在平方之後就不見了。",
+          "start": 7.372018,
+          "end": 15.020023
+        },
+        {
+          "text": "這就是簡報第六頁的標題：機率一樣，差在正負號；這個量不到的正負號，叫做相位。",
+          "start": 15.200023,
+          "end": 23.088028
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q114-plus-minus-coin/audio/slide_06.mp3"
+    },
+    {
+      "page": 8,
+      "kind": "demo",
+      "demo": "equator",
+      "title": "動畫展示：赤道上的兩個對面",
+      "duration": 32.352,
+      "sentences": [
+        {
+          "text": "換到三維動畫的量子位元場景，按加號那一顆，箭頭躺到赤道上；一次跑一千次，右邊兩根柱子差不多一樣高。",
+          "start": 0.0,
+          "end": 9.496009
+        },
+        {
+          "text": "現在把相位滑桿推到一百八十度，箭頭沿著赤道轉到正對面，這個位置就是負號那一種疊加態。",
+          "start": 9.676009,
+          "end": 17.708027
+        },
+        {
+          "text": "青色的理論線一動也不動，左邊面板的理論機率仍然是零點五和零點五。",
+          "start": 17.888027,
+          "end": 24.216032000000002
+        },
+        {
+          "text": "清除統計後再跑一千次，兩根柱子還是差不多一樣高；箭頭的方向，量測看不出來。",
+          "start": 24.396032,
+          "end": 32.140046000000005
+        }
+      ],
+      "audio": "audio/demo_equator.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#qubit"
+    },
+    {
+      "page": 9,
+      "kind": "slide",
+      "v1slide": 7,
+      "title": "作品：兩種疊加態對照表",
+      "duration": 29.568,
+      "sentences": [
+        {
+          "text": "把今天的發現整理成對照表：每一列寫起點、做了哪些閘、兩個振幅、機率，還有箭頭在布洛赫球的哪裡。",
+          "start": 0.0,
+          "end": 9.616009
+        },
+        {
+          "text": "正號那一列，是零態加哈達瑪閘，兩個振幅都是正的；負號那一列，是一態加哈達瑪閘，一的振幅是負的。",
+          "start": 9.796009,
+          "end": 19.700023
+        },
+        {
+          "text": "兩列的機率欄完全相同，不同的只有振幅的正負號和箭頭方向；表格最下面，再留一列記量測一千次的次數。",
+          "start": 19.880023,
+          "end": 29.352041
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q114-plus-minus-coin/audio/slide_07.mp3"
+    },
+    {
+      "page": 10,
+      "kind": "slide",
+      "v1slide": 8,
+      "title": "盲測規則：只給看次數",
+      "duration": 26.784,
+      "sentences": [
+        {
+          "text": "盲測這樣玩：爸爸背著你，在動畫或程式裡選零或一當起點，做完哈達瑪閘，只把量測一千次的次數給你看。",
+          "start": 0.0,
+          "end": 9.664014
+        },
+        {
+          "text": "你根據次數猜：是正號，還是負號？連續猜好幾回，記下猜對幾次。",
+          "start": 9.844014,
+          "end": 17.924014
+        },
+        {
+          "text": "只靠次數，猜對的機會大約一半，和亂猜差不多；這正好證明，量測分不出這兩種疊加態。",
+          "start": 18.104014,
+          "end": 26.568027999999998
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q114-plus-minus-coin/audio/slide_08.mp3"
+    },
+    {
+      "page": 11,
+      "kind": "demo",
+      "demo": "blind",
+      "title": "動畫展示：只看次數的盲測",
+      "duration": 33.144,
+      "sentences": [
+        {
+          "text": "接著在動畫裡試一回盲測：起始態選一，頁面直接停在最後一步，也就是負號那一種疊加態。",
+          "start": 0.0,
+          "end": 8.224014
+        },
+        {
+          "text": "先按三次量測一次，綠框裡的結果每次都可能不同，才三次，還看不出比例。",
+          "start": 8.404014,
+          "end": 15.956032
+        },
+        {
+          "text": "再按量測一千次，綠色的次數條一路往右拉，最後零和一都停在灰色理論底色的一半附近。",
+          "start": 16.136032,
+          "end": 23.80805
+        },
+        {
+          "text": "把起始態換回零，變成正號那一種，再量一千次，一樣是大約各半；只看次數，分不出是哪一種。",
+          "start": 23.98805,
+          "end": 32.932064000000004
+        }
+      ],
+      "audio": "audio/demo_blind.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/basic-circuits.html#superposition"
+    },
+    {
+      "page": 12,
+      "kind": "slide",
+      "v1slide": 9,
+      "title": "父子共同實作：零和一各做一次",
+      "duration": 27.192,
+      "sentences": [
+        {
+          "text": "上半場一起實作：打開線路入門動畫的疊加範例，起始態先選零、再選一，各自按下一步做到最後。",
+          "start": 0.0,
+          "end": 9.016009
+        },
+        {
+          "text": "每次都看三樣東西：柱子的顏色和方向、柱子下面的機率、右邊布洛赫球的箭頭，再各量測一千次。",
+          "start": 9.196009,
+          "end": 18.428027
+        },
+        {
+          "text": "把看到的寫進對照表；兩次的量測次數會有點不同，那只是隨機的差異，不是正負號造成的。",
+          "start": 18.608027,
+          "end": 26.976032
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q114-plus-minus-coin/audio/slide_09.mp3"
+    },
+    {
+      "page": 13,
+      "kind": "slide",
+      "v1slide": 10,
+      "title": "換你改造：再加一個哈達瑪閘",
+      "duration": 27.144,
+      "sentences": [
+        {
+          "text": "下半場換你預測：在哈達瑪閘後面再加一個哈達瑪閘，正號和負號兩種疊加態，各會變成什麼？",
+          "start": 0.0,
+          "end": 8.536009
+        },
+        {
+          "text": "寫下預測再跑教材的小程式；我們真的跑過：零態出發回到零態，一態出發回到一態，都是百分之百。",
+          "start": 8.716009,
+          "end": 17.996009
+        },
+        {
+          "text": "量起來一樣是一半一半的兩種疊加態，多一個哈達瑪閘之後，結果卻完全相反；正負號在這裡現身了。",
+          "start": 18.176009,
+          "end": 26.928027
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q114-plus-minus-coin/audio/slide_10.mp3"
+    },
+    {
+      "page": 14,
+      "kind": "slide",
+      "v1slide": 11,
+      "title": "兩小時的盲測實驗",
+      "duration": 30.936,
+      "sentences": [
+        {
+          "text": "兩小時的安排是：開場十分鐘，概念示範十五分鐘，接著四十分鐘從零和一各做一次、比較柱子和次數，然後休息十分鐘。",
+          "start": 0.0,
+          "end": 10.576009
+        },
+        {
+          "text": "下半場三十分鐘，預測再加一個哈達瑪閘會怎樣，再驗證；接著十分鐘角色互換，由你教爸爸操作和原理。",
+          "start": 10.756009,
+          "end": 20.324014
+        },
+        {
+          "text": "最後五分鐘錄音總結、替作品命名、存一個版本；今天的生活技能是：看不見的差異，要靠設計實驗才找得出來。",
+          "start": 20.504013999999998,
+          "end": 30.720022999999998
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q114-plus-minus-coin/audio/slide_11.mp3"
+    },
+    {
+      "page": 15,
+      "kind": "slide",
+      "v1slide": 12,
+      "title": "最後一關：教爸爸兩種疊加態",
+      "duration": 33.576,
+      "sentences": [
+        {
+          "text": "最後一關請不看稿說出：兩種疊加態各是怎麼做出來的？它們的機率一樣在哪裡，振幅又差在哪裡？",
+          "start": 0.0,
+          "end": 9.376009
+        },
+        {
+          "text": "再指出一個容易錯的地方：量測一千次看不出兩者的差別，要再加一個哈達瑪閘，或在模擬器裡看振幅，才分得出來。",
+          "start": 9.556009,
+          "end": 19.388027
+        },
+        {
+          "text": "今天的作品是兩種疊加態對照表，下一堂是範例二，干涉：哈達瑪閘、相位翻轉閘、哈達瑪閘，合起來等於翻轉閘；我是陳犀牛，保持好奇，我們下次見！",
+          "start": 19.568027,
+          "end": 33.360045
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q114-plus-minus-coin/audio/slide_12.mp3"
+    }
+  ]
+}

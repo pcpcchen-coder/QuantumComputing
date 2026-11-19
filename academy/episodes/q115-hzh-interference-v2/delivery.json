@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q115",
+  "version": "Q115-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-19",
+  "episodePath": "academy/episodes/q115-hzh-interference-v2",
+  "basedOn": "academy/episodes/q115-hzh-interference（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 482.176,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "hzh",
+      "title": "動畫展示：三步走完，負號變成結果",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/basic-circuits.html#interference"
+    },
+    {
+      "key": "noz",
+      "title": "動畫展示：拿掉中間的閘",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/basic-circuits.html#interference"
+    },
+    {
+      "key": "paths",
+      "title": "動畫展示：兩條路的箭頭相加",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#interference"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.4,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q115-hzh-interference-v2-zh-TW.mp4": {
+      "bytes": 84039696,
+      "sha256": "0539997ceade09829fc720a3c47357bcc2752be170d93bf272bddaee45d0716c"
+    },
+    "q115-hzh-interference-v2-master.mp4": {
+      "bytes": 86289444,
+      "sha256": "649db58da03e1a68ec8148a7570fbdb33dbf26a9de39e59989fdfd5bb26373fd"
+    },
+    "narration-only.mp3": {
+      "bytes": 11573716,
+      "sha256": "af41295fd782d792f63d605e79e58a6108a2827100c900cef84977b576ef0576"
+    }
+  },
+  "package": {
+    "filename": "Q115-v2_量子電腦學程_干涉實驗_動畫展示版_2026-11-19.zip",
+    "bytes": 185755304,
+    "sha256": "966f80cec2316950591958fc2ba7a6cad46896dfc157de7644de7e8105732d87",
+    "parts": [
+      {
+        "name": "Q115-v2_量子電腦學程_干涉實驗_動畫展示版_2026-11-19.zip.part01",
+        "bytes": 29360128,
+        "sha256": "49457f9d146ee7b304c690eaeb7345af4c699234d73592050f918b8e0982449b"
+      },
+      {
+        "name": "Q115-v2_量子電腦學程_干涉實驗_動畫展示版_2026-11-19.zip.part02",
+        "bytes": 29360128,
+        "sha256": "7300988e64cad69ed589c97bba8ed89c888ff71f18dadb542ebd16a34a6942e9"
+      },
+      {
+        "name": "Q115-v2_量子電腦學程_干涉實驗_動畫展示版_2026-11-19.zip.part03",
+        "bytes": 29360128,
+        "sha256": "c791f07bbf9c80001a3d3451fd668020fa30819b0410bfa5007b42996afb2ba4"
+      },
+      {
+        "name": "Q115-v2_量子電腦學程_干涉實驗_動畫展示版_2026-11-19.zip.part04",
+        "bytes": 29360128,
+        "sha256": "767ee36d8bbfa1d3018e72a3f2146ec66b6d86802dc198dcfd6e6632b417c055"
+      },
+      {
+        "name": "Q115-v2_量子電腦學程_干涉實驗_動畫展示版_2026-11-19.zip.part05",
+        "bytes": 29360128,
+        "sha256": "4336a077ea78bcfd4bf29c647c99dd1db80dbf6cd2096ddd5838d3210d0ba7f4"
+      },
+      {
+        "name": "Q115-v2_量子電腦學程_干涉實驗_動畫展示版_2026-11-19.zip.part06",
+        "bytes": 29360128,
+        "sha256": "f17acee19149cc0dd93c9d8f6485798768e5c7a302d73fbc25a84967777cc42e"
+      },
+      {
+        "name": "Q115-v2_量子電腦學程_干涉實驗_動畫展示版_2026-11-19.zip.part07",
+        "bytes": 9594536,
+        "sha256": "9644bce02ffb6273f34424f93481a6bce3bbf9253b8865a88a9e6c133d584a92"
+      }
+    ],
+    "handedOver": "2026-11-19 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1bi-WOn7ipXPr978g1JqWu1DFCPwySyyb",
+    "uploaded": "2026-11-19",
+    "files": [
+      {
+        "name": "Q115 干涉實驗：範例 2：干涉——H‑Z‑H = X（動畫展示版）.mp4",
+        "id": "1sTVFBLKRNqeYZJvWiUuYmVV_6_MLCCgz",
+        "link": "https://drive.google.com/file/d/1sTVFBLKRNqeYZJvWiUuYmVV_6_MLCCgz/view?usp=drivesdk"
+      },
+      {
+        "name": "Q115 干涉實驗（動畫展示版）簡報.pptx",
+        "id": "1SwU71ZLJHgqMFtKQ755C8pqLdlfpYkrC",
+        "link": "https://docs.google.com/presentation/d/1SwU71ZLJHgqMFtKQ755C8pqLdlfpYkrC/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true"
+      },
+      {
+        "name": "Q115 干涉實驗 教材.zip",
+        "id": "1izeIofaDpNA9qQJMUyTUlNXGTqCghiEC",
+        "link": "https://drive.google.com/file/d/1izeIofaDpNA9qQJMUyTUlNXGTqCghiEC/view?usp=drivesdk"
+      }
+    ],
+    "complete": true
+  }
+}

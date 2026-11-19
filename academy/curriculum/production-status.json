@@ -646,22 +646,46 @@
     "Q112": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q112-teach-back-v2",
+        "evidence": "academy/episodes/q112-teach-back-v2/delivery.json"
+      }
     },
     "Q113": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q113-reading-conventions-v2",
+        "evidence": "academy/episodes/q113-reading-conventions-v2/delivery.json"
+      }
     },
     "Q114": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q114-plus-minus-coin-v2",
+        "evidence": "academy/episodes/q114-plus-minus-coin-v2/delivery.json"
+      }
     },
     "Q115": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q115-hzh-interference-v2",
+        "evidence": "academy/episodes/q115-hzh-interference-v2/delivery.json"
+      }
     },
     "Q116": {
       "status": "planned",

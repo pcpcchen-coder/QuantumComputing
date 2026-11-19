@@ -115,10 +115,10 @@
 | Q109 | 第 11 課：表面碼——穩定子與匹配解碼 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q109-surface-code-v2` |
 | Q110 | 第 12 課：lattice surgery 與魔術態蒸餾 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q110-lattice-surgery-v2` |
 | Q111 | 第 13 課：編譯與控制軟體堆疊 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q111-software-stack-v2` |
-| Q112 | 模組發表：換你當老師 | 規劃完成 | — |
-| Q113 | 讀圖之前：三個約定與今天用到的閘 | 規劃完成 | — |
-| Q114 | 範例 1：疊加——量子硬幣與 |+⟩、|−⟩ | 規劃完成 | — |
-| Q115 | 範例 2：干涉——H‑Z‑H = X | 規劃完成 | — |
+| Q112 | 模組發表：換你當老師 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q112-teach-back-v2` |
+| Q113 | 讀圖之前：三個約定與今天用到的閘 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q113-reading-conventions-v2` |
+| Q114 | 範例 1：疊加——量子硬幣與 |+⟩、|−⟩ | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q114-plus-minus-coin-v2` |
+| Q115 | 範例 2：干涉——H‑Z‑H = X | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q115-hzh-interference-v2` |
 | Q116 | 範例 3：Bell 態——四種糾纏 | 規劃完成 | — |
 | Q117 | 範例 4：GHZ——CNOT 一路串下去 | 規劃完成 | — |
 | Q118 | 範例 5：隱形傳態——四種 ψ | 規劃完成 | — |
