@@ -95,5 +95,29 @@
     ],
     "handedOver": "2026-11-19 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
   },
-  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔"
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1ZOQEWjgkBnzg6-88LtQiSOgQeO2JG9Wx",
+    "uploadedAt": "2026-11-19",
+    "files": [
+      {
+        "name": "Q075 分區架構與成像讀取：分區架構與成像讀取（動畫展示版）.mp4",
+        "id": "1dis6Qfs4uwDIzsArVuvsGijaj0u1rR54",
+        "bytes": 88373144,
+        "url": "https://drive.google.com/file/d/1dis6Qfs4uwDIzsArVuvsGijaj0u1rR54/view"
+      },
+      {
+        "name": "Q075 分區架構與成像讀取（動畫展示版）簡報.pptx",
+        "id": "1Ay84Mj7BBmjr6dwp8-nA7Q6CDKeAUKn4",
+        "bytes": 3485803,
+        "url": "https://docs.google.com/presentation/d/1Ay84Mj7BBmjr6dwp8-nA7Q6CDKeAUKn4/edit"
+      },
+      {
+        "name": "Q075 分區架構與成像讀取 教材.zip",
+        "id": "1_l4m2jyDRwKZje5ZwYx1a-rqMUucQzBg",
+        "bytes": 324340,
+        "url": "https://drive.google.com/file/d/1_l4m2jyDRwKZje5ZwYx1a-rqMUucQzBg/view"
+      }
+    ]
+  }
 }
