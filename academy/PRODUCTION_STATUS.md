@@ -16,8 +16,8 @@
 | Q010 | 第一個量子程式：Bell 態 | 規劃完成 | — |
 | Q011 | 隱形傳態：傳狀態不傳東西 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q011-teleportation-v2` |
 | Q012 | Deutsch–Jozsa：一次看穿 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q012-deutsch-jozsa-v2` |
-| Q013 | Grover：16 個抽屜找寶藏 | 規劃完成 | — |
-| Q014 | 量子態很怕吵：雜訊與退相干 | 規劃完成 | — |
+| Q013 | Grover：16 個抽屜找寶藏 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q013-grover-treasure-v2` |
+| Q014 | 量子態很怕吵：雜訊與退相干 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q014-noise-decoherence-v2` |
 | Q015 | 迷你專案：量子逃脫室 | 規劃完成 | — |
 | Q016 | 成果發表：我的量子小百科 | 規劃完成 | — |
 | Q017 | 為什麼要做「人造原子」 | 規劃完成 | — |

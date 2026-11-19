@@ -97,12 +97,24 @@
     "Q013": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q013-grover-treasure-v2",
+        "evidence": "academy/episodes/q013-grover-treasure-v2/delivery.json"
+      }
     },
     "Q014": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q014-noise-decoherence-v2",
+        "evidence": "academy/episodes/q014-noise-decoherence-v2/delivery.json"
+      }
     },
     "Q015": {
       "status": "planned",
