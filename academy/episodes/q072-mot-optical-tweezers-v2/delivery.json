@@ -100,5 +100,29 @@
     ],
     "handedOver": "2026-11-18 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
   },
-  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔"
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1ZOQEWjgkBnzg6-88LtQiSOgQeO2JG9Wx",
+    "uploadedAt": "2026-11-19",
+    "files": [
+      {
+        "name": "Q072 磁光阱與光鑷：磁光阱與光鑷（動畫展示版）.mp4",
+        "id": "1jO4dcDJIDFab_o0Gr5aHSWanTdDdYyxT",
+        "bytes": 94113781,
+        "url": "https://drive.google.com/file/d/1jO4dcDJIDFab_o0Gr5aHSWanTdDdYyxT/view"
+      },
+      {
+        "name": "Q072 磁光阱與光鑷（動畫展示版）簡報.pptx",
+        "id": "1bxnY_Jvg3QTs6JiOa5Rk0FjBjvozfMay",
+        "bytes": 4151283,
+        "url": "https://docs.google.com/presentation/d/1bxnY_Jvg3QTs6JiOa5Rk0FjBjvozfMay/edit"
+      },
+      {
+        "name": "Q072 磁光阱與光鑷 教材.zip",
+        "id": "1xsjvuyX7f6p9hYqfCuVqemyMxuKrjuk3",
+        "bytes": 425212,
+        "url": "https://drive.google.com/file/d/1xsjvuyX7f6p9hYqfCuVqemyMxuKrjuk3/view"
+      }
+    ]
+  }
 }
