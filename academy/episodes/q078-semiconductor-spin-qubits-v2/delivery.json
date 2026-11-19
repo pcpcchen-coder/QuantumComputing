@@ -80,5 +80,29 @@
     ],
     "handedOver": "2026-11-19 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
   },
-  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔"
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1ZOQEWjgkBnzg6-88LtQiSOgQeO2JG9Wx",
+    "uploadedAt": "2026-11-19",
+    "files": [
+      {
+        "name": "Q078 半導體自旋量子位元：半導體自旋量子位元（動畫展示版）.mp4",
+        "id": "1VMY4OZ85VtYcZd9cx4m1VINu_wNmFojr",
+        "bytes": 79179929,
+        "url": "https://drive.google.com/file/d/1VMY4OZ85VtYcZd9cx4m1VINu_wNmFojr/view"
+      },
+      {
+        "name": "Q078 半導體自旋量子位元（動畫展示版）簡報.pptx",
+        "id": "11Bov5hpaYq_SSMeX_MomhdkqlI0t9X_I",
+        "bytes": 2882062,
+        "url": "https://docs.google.com/presentation/d/11Bov5hpaYq_SSMeX_MomhdkqlI0t9X_I/edit"
+      },
+      {
+        "name": "Q078 半導體自旋量子位元 教材.zip",
+        "id": "173yCNZZ1Ge9E_hzii8qN8NlC1JL-K1p4",
+        "bytes": 329811,
+        "url": "https://drive.google.com/file/d/173yCNZZ1Ge9E_hzii8qN8NlC1JL-K1p4/view"
+      }
+    ]
+  }
 }
