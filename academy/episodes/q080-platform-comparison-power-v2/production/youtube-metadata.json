@@ -1,0 +1,8 @@
+{
+  "title": "父子科技學院 Q080｜平台大比較與供電分析（動畫展示版）",
+  "description": "父子科技學院 量子電腦學程 Q080｜平台大比較與供電分析（v2・含 3D 動畫展示）\n\n這是依課綱製作的課前教學版，不是實際上課錄音。\n\n父子科技學院量子電腦學程 Q080「平台大比較與供電分析」新版（v2）：在原本的教學投影片之間，插入本學程 3D 互動動畫的實際操作示範。\n\n這一版新增的動畫展示\n・比速度，也比比值（https://pcpcchen-coder.github.io/QuantumComputing/animations/atoms.html#compare）\n・誰連得到誰（https://pcpcchen-coder.github.io/QuantumComputing/animations/atoms.html#compare）\n・超導斷電的代價（https://pcpcchen-coder.github.io/QuantumComputing/animations/power1000.html#outage）\n\n動畫都可以在瀏覽器直接開啟，自己動手操作。\n\n章節\n00:00 陳犀牛系列片頭\n01:00 平台大比較與供電分析\n01:33 三步：比五項、定權重、排名次\n02:01 時間尺度：誰的閘最快\n02:32 快不一定贏：看比值\n03:03 動畫展示：比速度，也比比值\n03:45 連接性：誰能和誰做閘\n04:14 動畫展示：誰連得到誰\n04:46 錯誤率：誰做得最準\n05:18 設施與用電\n05:52 斷電怎麼辦\n06:25 動畫展示：超導斷電的代價\n06:57 產品評審：爸爸推銷、你評分\n07:28 換你改造：換一組權重\n07:54 兩小時的評審會議\n08:26 最後一關：教爸爸比平台\n\n旁白：微軟 zh-TW-YunJheNeural 神經語音合成（Edge-TTS／Azure 語音服務，同一聲音同一格式）。字幕已燒入影片，開啟 CC 可能重疊。\n",
+  "privacyStatus": "private",
+  "madeForKids": null,
+  "reviewStatus": "needs-parent-review",
+  "publicationMode": "manual-user-upload"
+}

@@ -83,7 +83,7 @@
 | Q077 | 光子量子電腦 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q077-photonic-quantum-computer-v2` |
 | Q078 | 半導體自旋量子位元 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q078-semiconductor-spin-qubits-v2` |
 | Q079 | 拓樸量子位元與 NV 色心 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q079-topological-nv-v2` |
-| Q080 | 平台大比較與供電分析 | 規劃完成 | — |
+| Q080 | 平台大比較與供電分析 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q080-platform-comparison-power-v2` |
 | Q081 | 錯誤預算：線路能跑多深 | 規劃完成 | — |
 | Q082 | 錯誤緩解 | 規劃完成 | — |
 | Q083 | 重複碼：最簡單的錯誤更正 | 規劃完成 | — |
