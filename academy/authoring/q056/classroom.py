@@ -230,7 +230,7 @@ SHEET_HEADER = ['題卡', '耦合圖', '起始擺法', '我的 SWAP 數', '爸�
 SHEET_ROWS = [[c, b] for c in CARDS for b in BOARDS]
 
 EXTRA_CSS = '''svg.bd{display:block;margin:0 auto}.bd circle{fill:#fff;stroke:#0b2540;stroke-width:1.4}
-.bd line{stroke:#35a9d6;stroke-width:3.2}.bd text{font-size:7px;fill:#4a6a88;font-family:sans-serif}
+.bd line{stroke:#35a9d6;stroke-width:3.2}.bd text{font-size:6px;font-weight:700;fill:#4a6a88;font-family:sans-serif}
 .bds{display:grid;grid-template-columns:1fr 1fr;gap:4mm;margin-top:3mm}.bds h3,.bl h3{font-size:12.5pt;margin:0 0 1mm}
 .cards{display:grid;grid-template-columns:1fr 1fr;gap:4mm}.cards .cut{padding:3.5mm 4.5mm;height:74mm}
 .cards h3{font-size:15pt;margin:0 0 1.5mm}.cards p{margin:1.2mm 0;font-size:11.5pt}.cards .g{font-size:13pt;font-weight:700;color:#0b2540}
@@ -238,19 +238,19 @@ table.rc td{height:9.5mm;text-align:center}table.rc th{text-align:center;font-si
 .chk li{margin:2mm 0;font-size:12.5pt;list-style:none}.chk li:before{content:"□ "}.chk{padding-left:2mm}'''
 
 LAYOUT = {   # 圓點座標（mm）
-    '線形 5 顆': [(12 + 34 * i, 12) for i in range(5)],
-    '方格 3×3': [(12 + 30 * (i % 3), 12 + 30 * (i // 3)) for i in range(9)],
-    '重六角小片 7 顆': [(12, 12), (42, 12), (72, 12), (42, 42), (12, 72), (42, 72), (72, 72)],
+    '線形 5 顆': [(14 + 37 * i, 16) for i in range(5)],
+    '方格 3×3': [(14 + 31 * (i % 3), 16 + 31 * (i // 3)) for i in range(9)],
+    '重六角小片 7 顆': [(14, 16), (45, 16), (76, 16), (45, 47), (14, 78), (45, 78), (76, 78)],
 }
 
 
 def svg(board):
     n, edges = ns['BOARDS'][board]
     pts = LAYOUT[board]
-    w = max(x for x, _ in pts) + 12
-    h = max(y for _, y in pts) + 12
+    w = max(x for x, _ in pts) + 14
+    h = max(y for _, y in pts) + 13
     lines = ''.join(f'<line x1="{pts[a][0]}" y1="{pts[a][1]}" x2="{pts[b][0]}" y2="{pts[b][1]}"/>' for a, b in edges)
-    dots = ''.join(f'<circle cx="{x}" cy="{y}" r="10"/><text x="{x + 7}" y="{y - 8}">{i}</text>' for i, (x, y) in enumerate(pts))
+    dots = ''.join(f'<circle cx="{x}" cy="{y}" r="10"/><text x="{x + 9}" y="{y - 10}">{i}</text>' for i, (x, y) in enumerate(pts))
     return f'<svg class="bd" width="{w}mm" height="{h}mm" viewBox="0 0 {w} {h}">{lines}{dots}</svg>'
 
 
@@ -258,7 +258,7 @@ def html():
     cards = ''.join(f'<div class="cut"><h3>題卡 {c}</h3><p>{CARD_TEXT[c]}</p>'
                     f'<p class="g">' + '　'.join(f'{i}. CNOT(q{a}, q{b})' for i, (a, b) in enumerate(g, 1)) + '</p>'
                     f'<p>需要代幣：' + '、'.join(f'q{q}' for q in range(k)) + '</p>'
-                    '<p>我的 SWAP：＿＿＿　爸爸的 SWAP：＿＿＿</p></div>' for c, (k, g) in CARDS.items())
+                    '<p>SWAP 數　我：＿＿　爸爸：＿＿</p></div>' for c, (k, g) in CARDS.items())
     rows = ''.join(f'<tr><td>{k}</td><td></td><td></td><td></td><td></td><td></td><td>□</td></tr>' for k in range(1, 10))
     pages = [
         '<h2>耦合圖紙板</h2><p class="lead">圓點＝實體位元（旁邊的小字是編號），藍線＝可以直接做兩位元閘的連線。代幣寫 q0～q4，一個圓點最多放一枚。</p>'
