@@ -95,5 +95,29 @@
     ],
     "handedOver": "2026-11-19 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
   },
-  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔"
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1ZOQEWjgkBnzg6-88LtQiSOgQeO2JG9Wx",
+    "uploadedAt": "2026-11-19",
+    "files": [
+      {
+        "name": "Q080 平台大比較與供電分析：平台大比較與供電分析（動畫展示版）.mp4",
+        "id": "1493ImTmI1vi_i16vFvUWKg-0iH_2KzmM",
+        "bytes": 90541609,
+        "url": "https://drive.google.com/file/d/1493ImTmI1vi_i16vFvUWKg-0iH_2KzmM/view"
+      },
+      {
+        "name": "Q080 平台大比較與供電分析（動畫展示版）簡報.pptx",
+        "id": "1njpnufrmJvFyaPll6Rl2IdSIzFXwaRrj",
+        "bytes": 3456885,
+        "url": "https://docs.google.com/presentation/d/1njpnufrmJvFyaPll6Rl2IdSIzFXwaRrj/edit"
+      },
+      {
+        "name": "Q080 平台大比較與供電分析 教材.zip",
+        "id": "1P79WPwuCineGD5HlDiVWN3sWdzaA5oHM",
+        "bytes": 342468,
+        "url": "https://drive.google.com/file/d/1P79WPwuCineGD5HlDiVWN3sWdzaA5oHM/view"
+      }
+    ]
+  }
 }
