@@ -85,5 +85,29 @@
     ],
     "handedOver": "2026-11-19 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
   },
-  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔"
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1ZOQEWjgkBnzg6-88LtQiSOgQeO2JG9Wx",
+    "uploadedAt": "2026-11-19",
+    "files": [
+      {
+        "name": "Q079 拓樸量子位元與NV色心：拓樸量子位元與 NV 色心（動畫展示版）.mp4",
+        "id": "1hEh3e0wFmbnGSPRT3w-jO234ClbLl2wF",
+        "bytes": 80547023,
+        "url": "https://drive.google.com/file/d/1hEh3e0wFmbnGSPRT3w-jO234ClbLl2wF/view"
+      },
+      {
+        "name": "Q079 拓樸量子位元與NV色心（動畫展示版）簡報.pptx",
+        "id": "1ajQqZyGJ2KCPWgGbhXMfBQeyskSjGMt4",
+        "bytes": 2905329,
+        "url": "https://docs.google.com/presentation/d/1ajQqZyGJ2KCPWgGbhXMfBQeyskSjGMt4/edit"
+      },
+      {
+        "name": "Q079 拓樸量子位元與NV色心 教材.zip",
+        "id": "1drf_Yp6nRe2sBgrZuK-3knY__9NqULOK",
+        "bytes": 414986,
+        "url": "https://drive.google.com/file/d/1drf_Yp6nRe2sBgrZuK-3knY__9NqULOK/view"
+      }
+    ]
+  }
 }
