@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q060",
+  "version": "Q060-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-18",
+  "episodePath": "academy/episodes/q060-dynamic-circuits-v2",
+  "basedOn": "academy/episodes/q060-dynamic-circuits（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 538.752,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "teleport",
+      "title": "動畫展示：隱形傳態的修正",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/basic-circuits.html#teleport"
+    },
+    {
+      "key": "zoned",
+      "title": "動畫展示：中途量測要搬家",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/atoms.html#zoned"
+    },
+    {
+      "key": "syndrome",
+      "title": "動畫展示：量症狀、再修正",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#qec"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.5,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q060-dynamic-circuits-v2-zh-TW.mp4": {
+      "bytes": 89173112,
+      "sha256": "79354ca600f697bd606a6dfd8c329919ea071eaa3fc8586c5c26a5ff1ce656cc"
+    },
+    "q060-dynamic-circuits-v2-master.mp4": {
+      "bytes": 90830797,
+      "sha256": "286e2a5d9c460200717bb002f9f8736815cc3afd816044b33bc0898abd5a4ebf"
+    },
+    "narration-only.mp3": {
+      "bytes": 12931348,
+      "sha256": "780850cb2303074ef2e331e13f3778f9032b9421699cc9f1711e510ec45edda4"
+    }
+  },
+  "package": {
+    "filename": "Q060-v2_量子電腦學程_動態線路_動畫展示版_2026-11-18.zip",
+    "bytes": 197045407,
+    "sha256": "67724206a616c5eb5dbaf8e056ce7ee1f696ca7fa55134500ecacb5ceedd1d26",
+    "parts": [
+      {
+        "name": "Q060-v2_量子電腦學程_動態線路_動畫展示版_2026-11-18.zip.part01",
+        "bytes": 29360128,
+        "sha256": "9625ee660bf81e38738e9504f9488bd7821613381c407ae2b4f1ed9eb3ec3927"
+      },
+      {
+        "name": "Q060-v2_量子電腦學程_動態線路_動畫展示版_2026-11-18.zip.part02",
+        "bytes": 29360128,
+        "sha256": "8e9aaa1d6fafb9d66bc3d4805986dfb676874f9483cccba823cde70b9572ca30"
+      },
+      {
+        "name": "Q060-v2_量子電腦學程_動態線路_動畫展示版_2026-11-18.zip.part03",
+        "bytes": 29360128,
+        "sha256": "40cb14948da618629aac809986709fb13501268c2302718f75bbcc035deb9cd0"
+      },
+      {
+        "name": "Q060-v2_量子電腦學程_動態線路_動畫展示版_2026-11-18.zip.part04",
+        "bytes": 29360128,
+        "sha256": "7da85b0f38ed74e17df34eb8c7bdbc2b15237ff5bbdc872297ad02bde0094a89"
+      },
+      {
+        "name": "Q060-v2_量子電腦學程_動態線路_動畫展示版_2026-11-18.zip.part05",
+        "bytes": 29360128,
+        "sha256": "b03b075c868eedda45cb5dcd3e5e678508bfb3ebeb23b53a93457c5c45395167"
+      },
+      {
+        "name": "Q060-v2_量子電腦學程_動態線路_動畫展示版_2026-11-18.zip.part06",
+        "bytes": 29360128,
+        "sha256": "7d825e7be10bee233632ac2620b549c698fe0fc65c9b779bd72fe5a048441a4d"
+      },
+      {
+        "name": "Q060-v2_量子電腦學程_動態線路_動畫展示版_2026-11-18.zip.part07",
+        "bytes": 20884639,
+        "sha256": "7d748f0b1d5a234b5bd4837fbbb0b1bbe30ae3ffdbe8e965ae6d8b42048fd5d5"
+      }
+    ],
+    "handedOver": "2026-11-18 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔"
+}
