@@ -518,7 +518,13 @@
     "Q084": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q084-surface-code-v2",
+        "evidence": "academy/episodes/q084-surface-code-v2/delivery.json"
+      }
     },
     "Q085": {
       "status": "planned",

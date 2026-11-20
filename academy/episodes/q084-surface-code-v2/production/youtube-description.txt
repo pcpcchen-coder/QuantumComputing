@@ -1,0 +1,32 @@
+父子科技學院 量子電腦學程 Q084｜表面碼（v2・含 3D 動畫展示）
+
+這是依課綱製作的課前教學版，不是實際上課錄音。
+
+父子科技學院量子電腦學程 Q084「表面碼」新版（v2）：在原本的教學投影片之間，插入本學程 3D 互動動畫的實際操作示範。
+
+這一版新增的動畫展示
+・一個翻轉錯誤留下的痕跡（https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#surface）
+・一輪錯誤、症狀、解碼、修正（https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#qec）
+・兩個錯誤騙過解碼器（https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#surface）
+
+動畫都可以在瀏覽器直接開啟，自己動手操作。
+
+章節
+00:00 陳犀牛系列片頭
+01:00 表面碼
+01:29 三步：認位元、看症狀、配對
+01:56 兩種位元：資料與量測
+02:23 一輪檢查的四步
+02:51 比一比：沒有錯和有錯
+03:15 動畫展示：一個翻轉錯誤留下的痕跡
+03:48 解碼器：把亮點配成對
+04:14 動畫展示：一輪錯誤、症狀、解碼、修正
+04:55 邊界與碼距
+05:22 騙過解碼器：邏輯錯誤
+05:52 動畫展示：兩個錯誤騙過解碼器
+06:24 遊戲：爸爸藏蟲、你來抓
+06:53 換你改造：找出會騙人的組合
+07:18 兩小時的抓蟲實驗室
+07:51 最後一關：教爸爸抓錯
+
+旁白：微軟 zh-TW-YunJheNeural 神經語音合成（Edge-TTS／Azure 語音服務，同一聲音同一格式）。字幕已燒入影片，開啟 CC 可能重疊。
