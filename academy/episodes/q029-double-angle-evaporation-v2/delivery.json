@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q029",
+  "version": "Q029-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-20",
+  "episodePath": "academy/episodes/q029-double-angle-evaporation-v2",
+  "basedOn": "academy/episodes/q029-double-angle-evaporation（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 524.693,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "resist",
+      "title": "動畫展示：雙層光阻和懸空的橋",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#fab"
+    },
+    {
+      "key": "evap",
+      "title": "動畫展示：正反兩個角度各鍍一次",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#fab"
+    },
+    {
+      "key": "liftoff",
+      "title": "動畫展示：剝掉光阻，找到接面",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#fab"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.5,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q029-double-angle-evaporation-v2-zh-TW.mp4": {
+      "bytes": 89940310,
+      "sha256": "201a31f96e9809488e7ff418ceda7a7f1a31c5e1700631e2a86fd71bb8abddc1"
+    },
+    "q029-double-angle-evaporation-v2-master.mp4": {
+      "bytes": 91732322,
+      "sha256": "6a0ec5dfb7a3ef60ad772b7bb59e80a3383264716fb3a04a188880065e484ade"
+    },
+    "narration-only.mp3": {
+      "bytes": 12594388,
+      "sha256": "44e692ee3dd1910991b24f8b81a1fc1203be6d37b66fa22caa52d29ac4d6d3a9"
+    }
+  },
+  "package": {
+    "filename": "Q029-v2_量子電腦學程_雙角度蒸鍍_動畫展示版_2026-11-20.zip",
+    "bytes": 198609882,
+    "sha256": "8f68d54dd68446e67fc6054c44dd4790bd7d3868f5c7536262a6b1d44003fc1b",
+    "parts": [
+      {
+        "name": "Q029-v2_量子電腦學程_雙角度蒸鍍_動畫展示版_2026-11-20.zip.part01",
+        "bytes": 29360128,
+        "sha256": "d4bedb083180c7e86227863b826172645375a5b813d0b2ae5dbb1f64d7a84354"
+      },
+      {
+        "name": "Q029-v2_量子電腦學程_雙角度蒸鍍_動畫展示版_2026-11-20.zip.part02",
+        "bytes": 29360128,
+        "sha256": "9f0e8fc28281ea7281a464d072d13ca1e524388b7facf480bae7e773280a6cbe"
+      },
+      {
+        "name": "Q029-v2_量子電腦學程_雙角度蒸鍍_動畫展示版_2026-11-20.zip.part03",
+        "bytes": 29360128,
+        "sha256": "3f1e937c235938e1581c02c6329bd91f8cdd3f5ef583f86dd4be13a8e029a7c5"
+      },
+      {
+        "name": "Q029-v2_量子電腦學程_雙角度蒸鍍_動畫展示版_2026-11-20.zip.part04",
+        "bytes": 29360128,
+        "sha256": "0ef6c96329e104d8f62cba4f06fa80beed7cf182340408f856a5019feaf55f85"
+      },
+      {
+        "name": "Q029-v2_量子電腦學程_雙角度蒸鍍_動畫展示版_2026-11-20.zip.part05",
+        "bytes": 29360128,
+        "sha256": "79e9cf69955d271023b4b4f3c60dd94fc4830dc790e48321a6b0f872953b6446"
+      },
+      {
+        "name": "Q029-v2_量子電腦學程_雙角度蒸鍍_動畫展示版_2026-11-20.zip.part06",
+        "bytes": 29360128,
+        "sha256": "fef9a8dff5397a0104ae0dc3962bee8140999c4ddec5a959ac3c82c759d3e450"
+      },
+      {
+        "name": "Q029-v2_量子電腦學程_雙角度蒸鍍_動畫展示版_2026-11-20.zip.part07",
+        "bytes": 22449114,
+        "sha256": "83ebf96a06ca8bb10c2370f2fb5fda9f459228ea2304e1733db20532199c0c16"
+      }
+    ],
+    "handedOver": "2026-11-20 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔"
+}

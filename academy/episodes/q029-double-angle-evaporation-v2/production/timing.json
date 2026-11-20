@@ -1,0 +1,394 @@
+{
+  "version": 2,
+  "opening": 60.277,
+  "scenes": [
+    {
+      "page": 1,
+      "kind": "slide",
+      "v1slide": 1,
+      "title": "晶片怎麼做：雙角度蒸鍍",
+      "duration": 33.36,
+      "sentences": [
+        {
+          "text": "歡迎回到父子科技學院的量子電腦學程，我是陳犀牛，今天是量子第二十九堂，晶片怎麼做：雙角度蒸鍍，這是依課綱製作的課前教學版，並非實際上課錄音。",
+          "start": 0.0,
+          "end": 12.952018
+        },
+        {
+          "text": "上一堂我們替四種超導量子位元做了圖鑑卡，它們的心臟都是約瑟夫森接面；今天要問：這麼小的接面，到底是怎麼做出來的？",
+          "start": 13.132018,
+          "end": 23.708027
+        },
+        {
+          "text": "答案是一個很聰明的影子把戲：讓金屬從兩個角度斜斜地鍍下去，兩層在一座小橋底下交會，就做出了接面。",
+          "start": 23.888027,
+          "end": 33.144036
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q029-double-angle-evaporation/audio/slide_01.mp3"
+    },
+    {
+      "page": 2,
+      "kind": "slide",
+      "v1slide": 2,
+      "title": "三個重點",
+      "duration": 30.984,
+      "sentences": [
+        {
+          "text": "今天有三個重點：第一，約瑟夫森接面是鋁、氧化鋁、鋁三層疊成的，中間的氧化鋁非常薄。",
+          "start": 0.0,
+          "end": 9.112018
+        },
+        {
+          "text": "第二，用兩層光阻做出一座懸空的小橋，再從正反兩個角度各鍍一次鋁，兩層就在橋的正下方重疊；第三，氧化的壓力和時間，會一路影響到量子位元的頻率。",
+          "start": 9.292018,
+          "end": 22.316032
+        },
+        {
+          "text": "今天的作品是一張影子蒸鍍照片加上說明：用手電筒和紙橋，在桌上做一次安全的影子模擬。",
+          "start": 22.496032,
+          "end": 30.768050000000002
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q029-double-angle-evaporation/audio/slide_02.mp3"
+    },
+    {
+      "page": 3,
+      "kind": "slide",
+      "v1slide": 3,
+      "title": "接面有多小",
+      "duration": 30.528,
+      "sentences": [
+        {
+          "text": "約瑟夫森接面像一個三明治：兩層超導的鋁，中間夾著一到兩奈米厚的氧化鋁絕緣層，只有幾個原子層那麼厚。",
+          "start": 0.0,
+          "end": 9.208005
+        },
+        {
+          "text": "接面面積大約一百奈米乘兩百奈米，也就是零點零二平方微米；整顆量子位元裡，占面積最大的是電容板，接面本身其實非常小。",
+          "start": 9.388005,
+          "end": 20.156010000000002
+        },
+        {
+          "text": "要做出這麼小又這麼薄的三明治，最經典的方法就是今天的主角：多蘭橋雙角度陰影蒸鍍，很多實驗室和公司都在用。",
+          "start": 20.33601,
+          "end": 30.312019
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q029-double-angle-evaporation/audio/slide_03.mp3"
+    },
+    {
+      "page": 4,
+      "kind": "slide",
+      "v1slide": 4,
+      "title": "雙層光阻與懸空橋",
+      "duration": 27.12,
+      "sentences": [
+        {
+          "text": "第一步，先在矽基板上塗兩層電子束光阻，再用電子束把圖形畫上去、拿去顯影，這叫電子束微影。",
+          "start": 0.0,
+          "end": 9.16
+        },
+        {
+          "text": "下層光阻顯影得比較快，會往旁邊多挖掉一圈，叫做底切；上層光阻則照著圖形，留下兩條開口。",
+          "start": 9.34,
+          "end": 18.452018000000002
+        },
+        {
+          "text": "兩條開口中間那一小段上層光阻，底下已經被挖空，變成一座懸空的光阻橋，也叫多蘭橋。",
+          "start": 18.632018000000002,
+          "end": 26.904036000000005
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q029-double-angle-evaporation/audio/slide_04.mp3"
+    },
+    {
+      "page": 5,
+      "kind": "demo",
+      "demo": "resist",
+      "title": "動畫展示：雙層光阻和懸空的橋",
+      "duration": 31.224,
+      "sentences": [
+        {
+          "text": "按下標著一的按鈕，畫面停在接面製程的第一步：上方寫著電子束微影加顯影，深灰色的基板上，鋪著兩層半透明的光阻。",
+          "start": 0.0,
+          "end": 10.48
+        },
+        {
+          "text": "上層紫色的光阻留著兩條細細的開口，中間隔著一小段比較亮的光阻，金色的標籤寫著懸空光阻橋。",
+          "start": 10.66,
+          "end": 19.604014
+        },
+        {
+          "text": "左下方另一個標籤寫著下層光阻和底切：下層顯影得比較快，開口挖得比上層寬，所以橋的底下是空的，之後鋁原子才能斜斜鑽到橋下。",
+          "start": 19.784014,
+          "end": 31.008028
+        }
+      ],
+      "audio": "audio/demo_resist.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#fab"
+    },
+    {
+      "page": 6,
+      "kind": "slide",
+      "v1slide": 5,
+      "title": "兩次斜角蒸鍍",
+      "duration": 28.656,
+      "sentences": [
+        {
+          "text": "第二步，把晶片放進真空腔，讓鋁原子從一個斜角飛下來，穿過開口落在基板上，這叫斜角蒸鍍。",
+          "start": 0.0,
+          "end": 8.992018
+        },
+        {
+          "text": "因為是斜的，鋁落下的位置會往旁邊平移，就像影子一樣；光阻越厚、角度越斜，平移得越多。",
+          "start": 9.172018,
+          "end": 18.116032
+        },
+        {
+          "text": "氧化之後，再從相反的角度鍍第二次，第二層往反方向平移，兩層剛好在橋的正下方重疊，這個重疊區就是接面。",
+          "start": 18.296032,
+          "end": 28.440046000000002
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q029-double-angle-evaporation/audio/slide_05.mp3"
+    },
+    {
+      "page": 7,
+      "kind": "demo",
+      "demo": "evap",
+      "title": "動畫展示：正反兩個角度各鍍一次",
+      "duration": 39.072,
+      "sentences": [
+        {
+          "text": "重新打開場景，按下標著二的按鈕：一顆顆白色的鋁原子斜斜地飛下來，畫面上方寫著第一次斜角蒸鍍。",
+          "start": 0.0,
+          "end": 9.136009
+        },
+        {
+          "text": "光阻表面也鍍上了一層鋁，這是之後要剝掉的多餘金屬；面板讀數第一行寫著，蒸鍍角大約三十一度。",
+          "start": 9.316009,
+          "end": 18.212018
+        },
+        {
+          "text": "接著按下標著四的按鈕：鋁原子換成從相反的方向斜著飛下來，這是第二次斜角蒸鍍；第三步的橘紅色氧化層，動畫也自動補上了。",
+          "start": 18.392018,
+          "end": 29.640023
+        },
+        {
+          "text": "因為方向相反，兩層鋁會各往一邊平移，在橋的正下方重疊；等一下剝掉光阻，再來找這塊重疊區。",
+          "start": 29.820023,
+          "end": 38.860023
+        }
+      ],
+      "audio": "audio/demo_evap.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#fab"
+    },
+    {
+      "page": 8,
+      "kind": "slide",
+      "v1slide": 6,
+      "title": "氧化與剝離",
+      "duration": 25.872,
+      "sentences": [
+        {
+          "text": "兩次蒸鍍中間，不打開真空腔，直接通入氧氣，讓第一層鋁的表面形成一到兩奈米的氧化鋁，這叫原位氧化。",
+          "start": 0.0,
+          "end": 9.424014
+        },
+        {
+          "text": "最後一步叫剝離：把光阻溶掉，光阻上面多餘的鋁，也跟著一起被帶走。",
+          "start": 9.604014,
+          "end": 16.412019
+        },
+        {
+          "text": "剩下的只有基板上的兩層鋁線，它們在橋底下重疊的那一小塊，就是鋁、氧化鋁、鋁的約瑟夫森接面。",
+          "start": 16.592019,
+          "end": 25.656033
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q029-double-angle-evaporation/audio/slide_06.mp3"
+    },
+    {
+      "page": 9,
+      "kind": "demo",
+      "demo": "liftoff",
+      "title": "動畫展示：剝掉光阻，找到接面",
+      "duration": 39.456,
+      "sentences": [
+        {
+          "text": "再重新打開場景，按下標著三的按鈕：橘紅色的氧氣分子幾乎垂直地落下來，這是原位氧化，讓第一層鋁的表面氧化。",
+          "start": 0.0,
+          "end": 10.120000000000001
+        },
+        {
+          "text": "最後按下標著五的按鈕：光阻很快往上飄走、不見了，這一步叫剝離；鏡頭也已經拉近到橋的位置。",
+          "start": 10.3,
+          "end": 18.956009
+        },
+        {
+          "text": "光阻和橋都不見了，橋原本的位置底下，有一小條在閃金光，上方的金色大字標的就是約瑟夫森接面：鋁、氧化鋁、鋁的重疊區。",
+          "start": 19.136009,
+          "end": 30.480023000000003
+        },
+        {
+          "text": "橋已經被拿掉，它的影子卻留下了接面；面板讀數第二行寫著，接面面積大約零點零二平方微米。",
+          "start": 30.660023000000002,
+          "end": 39.244037
+        }
+      ],
+      "audio": "audio/demo_liftoff.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#fab"
+    },
+    {
+      "page": 10,
+      "kind": "slide",
+      "v1slide": 7,
+      "title": "從氧化到頻率",
+      "duration": 29.496,
+      "sentences": [
+        {
+          "text": "製程的參數會一路影響到量子位元：氧化的壓力乘上時間，加上接面面積，決定了接面在室溫的電阻。",
+          "start": 0.0,
+          "end": 8.8
+        },
+        {
+          "text": "電阻越大，臨界電流越小，約瑟夫森能量也越小，頻率就跟著變低；電阻只要差百分之二，頻率就差大約百分之一，也就是五十兆赫左右。",
+          "start": 8.98,
+          "end": 20.228005000000003
+        },
+        {
+          "text": "所以工程師會在降溫之前，先用探針量室溫電阻來預測頻率，必要時再用雷射或加熱退火去微調。",
+          "start": 20.408005000000003,
+          "end": 29.280023000000003
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q029-double-angle-evaporation/audio/slide_07.mp3"
+    },
+    {
+      "page": 11,
+      "kind": "slide",
+      "v1slide": 8,
+      "title": "真實製程與家中模擬",
+      "duration": 29.208,
+      "sentences": [
+        {
+          "text": "要特別注意：真實的製程在無塵室裡進行，要用顯影的化學藥品和真空設備，家裡絕對不要模仿，我們只做影子模擬。",
+          "start": 0.0,
+          "end": 10.144014
+        },
+        {
+          "text": "另一個容易搞錯的地方：接面不是另外放上去的零件，而是兩層鋁在橋下自己重疊出來的，重疊面積和氧化層一起決定它的電阻。",
+          "start": 10.324014,
+          "end": 20.732019
+        },
+        {
+          "text": "暫停影片想一想：如果蒸鍍的角度太小，兩邊的平移加起來比橋還窄，橋底下還會有重疊嗎？",
+          "start": 20.912019,
+          "end": 28.992019
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q029-double-angle-evaporation/audio/slide_08.mp3"
+    },
+    {
+      "page": 12,
+      "kind": "slide",
+      "v1slide": 9,
+      "title": "實作：手電筒影子蒸鍍",
+      "duration": 29.016,
+      "sentences": [
+        {
+          "text": "實作的時候，在厚紙上剪出兩個方方的開口，中間留一條窄窄的紙條當橋，再用書把紙架高，離桌面幾公分。",
+          "start": 0.0,
+          "end": 9.472018
+        },
+        {
+          "text": "爸爸拿手電筒從左邊斜斜照下來，孩子用鉛筆描出桌上亮的區域；再從右邊用同樣的角度照一次，換一種顏色描。",
+          "start": 9.652018,
+          "end": 19.484036
+        },
+        {
+          "text": "紙橋正下方那一小段兩種顏色重疊的地方，就是我們的接面；拍一張照片，寫下照射角度和重疊的寬度。",
+          "start": 19.664036,
+          "end": 28.800044999999997
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q029-double-angle-evaporation/audio/slide_09.mp3"
+    },
+    {
+      "page": 13,
+      "kind": "slide",
+      "v1slide": 10,
+      "title": "換你改造：改變角度",
+      "duration": 30.624,
+      "sentences": [
+        {
+          "text": "下半場換你：改變手電筒的角度，先預測橋下重疊的寬度會變大還是變小，再照照看。",
+          "start": 0.0,
+          "end": 8.08
+        },
+        {
+          "text": "規律是：影子每一邊平移的距離，等於紙離桌面的高度乘上照射角度的正切，角度從垂直方向量起；重疊寬度大約是兩倍的平移，再減掉橋寬。",
+          "start": 8.26,
+          "end": 19.868005
+        },
+        {
+          "text": "舉例來說，紙架高五公分、橋寬兩公分，照二十度時重疊大約一點六公分；照十度時，兩邊的亮區碰不到，就沒有接面了。",
+          "start": 20.048005,
+          "end": 30.408005
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q029-double-angle-evaporation/audio/slide_10.mp3"
+    },
+    {
+      "page": 14,
+      "kind": "slide",
+      "v1slide": 11,
+      "title": "兩小時的影子蒸鍍工坊",
+      "duration": 28.2,
+      "sentences": [
+        {
+          "text": "兩小時的安排是：開場十分鐘，概念示範十五分鐘，接著四十分鐘一起用手電筒做影子蒸鍍、描出橋下的重疊區，然後休息十分鐘。",
+          "start": 0.0,
+          "end": 11.056009
+        },
+        {
+          "text": "下半場三十分鐘，你改變照射角度，先預測再量出重疊寬度；接著十分鐘交換角色，由你教爸爸操作和原理。",
+          "start": 11.236009,
+          "end": 21.140023
+        },
+        {
+          "text": "最後五分鐘錄音總結，替你的影子蒸鍍作品取個名字，再存一個版本。",
+          "start": 21.320023,
+          "end": 27.984037
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q029-double-angle-evaporation/audio/slide_11.mp3"
+    },
+    {
+      "page": 15,
+      "kind": "slide",
+      "v1slide": 12,
+      "title": "最後一關：教爸爸做接面",
+      "duration": 31.584,
+      "sentences": [
+        {
+          "text": "最後一關，請不看稿說出雙角度蒸鍍的五個步驟，再說明接面為什麼會在橋的正下方。",
+          "start": 0.0,
+          "end": 7.336009000000001
+        },
+        {
+          "text": "再指出一個要注意的地方：真實製程要在無塵室用化學藥品和真空設備，家裡只做影子模擬；角度太小，兩層碰不到就沒有接面。",
+          "start": 7.516009,
+          "end": 18.380023
+        },
+        {
+          "text": "今天的作品是影子蒸鍍照片加說明，下一堂要認識晶片的樣子，在晶片圖上找出量子位元、讀取腔和控制線；我是陳犀牛，保持好奇，我們下次見！",
+          "start": 18.560023,
+          "end": 31.368028000000002
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q029-double-angle-evaporation/audio/slide_12.mp3"
+    }
+  ]
+}
