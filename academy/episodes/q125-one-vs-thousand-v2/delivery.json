@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q125",
+  "version": "Q125-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-20",
+  "episodePath": "academy/episodes/q125-one-vs-thousand-v2",
+  "basedOn": "academy/episodes/q125-one-vs-thousand（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 516.992,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "once",
+      "title": "動畫展示：只按一次量測",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/basic-circuits.html#ghz"
+    },
+    {
+      "key": "pile",
+      "title": "動畫展示：次數一路累加",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/basic-circuits.html#teleport"
+    },
+    {
+      "key": "readout",
+      "title": "動畫展示：多量也去不掉的偏差",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#readout"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.5,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q125-one-vs-thousand-v2-zh-TW.mp4": {
+      "bytes": 86767100,
+      "sha256": "0b5c0726bb1f9622d1bf04ed568823bd82c912c49fc580f9ce2229d2d3cfd04d"
+    },
+    "q125-one-vs-thousand-v2-master.mp4": {
+      "bytes": 88648460,
+      "sha256": "a8a4f49bc6e7023e778a6fbdaef0c2a66f1644a427bf37669f9a11e16d9a0b29"
+    },
+    "narration-only.mp3": {
+      "bytes": 12409492,
+      "sha256": "6ed2b1fcd2f26e1731854f1e548ab0d63126ece7203a57bbe0a178318c17cc5e"
+    }
+  },
+  "package": {
+    "filename": "Q125-v2_量子電腦學程_一次與千次_動畫展示版_2026-11-20.zip",
+    "bytes": 191734718,
+    "sha256": "19833f933a329b6531d1dbc9aaaeb1e3875577e6723908b56581d59198c1e65e",
+    "parts": [
+      {
+        "name": "Q125-v2_量子電腦學程_一次與千次_動畫展示版_2026-11-20.zip.part01",
+        "bytes": 29360128,
+        "sha256": "bcf2b915cc05c0b5dbb66547453f95ba3eb87001596e7d70defe97574b4a3338"
+      },
+      {
+        "name": "Q125-v2_量子電腦學程_一次與千次_動畫展示版_2026-11-20.zip.part02",
+        "bytes": 29360128,
+        "sha256": "98aa65ea54e0e5add3ab19332f0301d8177650054f900e2963845d3242cb1ddd"
+      },
+      {
+        "name": "Q125-v2_量子電腦學程_一次與千次_動畫展示版_2026-11-20.zip.part03",
+        "bytes": 29360128,
+        "sha256": "b31d3f2ff23f7df829fb080f130a4ef2db13b618a87603c85eedbab66fb2615a"
+      },
+      {
+        "name": "Q125-v2_量子電腦學程_一次與千次_動畫展示版_2026-11-20.zip.part04",
+        "bytes": 29360128,
+        "sha256": "9a4b1d463ca2e9e32df119eec4ab7dad949f1e0ff48b9eb1331869f276a45530"
+      },
+      {
+        "name": "Q125-v2_量子電腦學程_一次與千次_動畫展示版_2026-11-20.zip.part05",
+        "bytes": 29360128,
+        "sha256": "8725704069631e765f6b55717178e8892c3118a12391853462b44e2a5f07e6d4"
+      },
+      {
+        "name": "Q125-v2_量子電腦學程_一次與千次_動畫展示版_2026-11-20.zip.part06",
+        "bytes": 29360128,
+        "sha256": "d0a4ce6b926038a31787fcb07cd680a65ad00e9b2f4c51e5c6fcbff6b9c7a286"
+      },
+      {
+        "name": "Q125-v2_量子電腦學程_一次與千次_動畫展示版_2026-11-20.zip.part07",
+        "bytes": 15573950,
+        "sha256": "68be892cd99bcefb9cae92b11a161f867ea1f735236df92deeb3950207313d55"
+      }
+    ],
+    "handedOver": "2026-11-20 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1bi-WOn7ipXPr978g1JqWu1DFCPwySyyb",
+    "uploaded": "2026-11-19",
+    "files": [],
+    "complete": false
+  }
+}
