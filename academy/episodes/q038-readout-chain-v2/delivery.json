@@ -100,5 +100,29 @@
     ],
     "handedOver": "2026-11-20 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
   },
-  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔"
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1epfQVOXunbD9Vht37u62oOD9Dr-HKMSE",
+    "folder": "量子電腦學程 Q011–Q040 動畫展示版（v2）",
+    "files": [
+      {
+        "name": "Q038 讀取鏈：讀取鏈：衰減、環行器、放大器（動畫展示版）.mp4",
+        "id": "11H76BVdawCvxNMZlZPZn7JUUPGzHnspN",
+        "link": "https://drive.google.com/file/d/11H76BVdawCvxNMZlZPZn7JUUPGzHnspN/view?usp=drivesdk",
+        "bytes": 95303389
+      },
+      {
+        "name": "Q038 讀取鏈（動畫展示版）簡報.pptx",
+        "id": "1XEMrOHqyqmMGOslX7V6UbT6xSqOXO_Pa",
+        "link": "https://docs.google.com/presentation/d/1XEMrOHqyqmMGOslX7V6UbT6xSqOXO_Pa/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true",
+        "bytes": 3471793
+      },
+      {
+        "name": "Q038 讀取鏈 教材.zip",
+        "id": "1lPa43LGAMI0RGAN5c8C5Lgkw0FneBazC",
+        "link": "https://drive.google.com/file/d/1lPa43LGAMI0RGAN5c8C5Lgkw0FneBazC/view?usp=drivesdk",
+        "bytes": 374145
+      }
+    ]
+  }
 }

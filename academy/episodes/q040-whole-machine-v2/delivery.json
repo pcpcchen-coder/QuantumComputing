@@ -100,5 +100,29 @@
     ],
     "handedOver": "2026-11-20 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
   },
-  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔"
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1epfQVOXunbD9Vht37u62oOD9Dr-HKMSE",
+    "folder": "量子電腦學程 Q011–Q040 動畫展示版（v2）",
+    "files": [
+      {
+        "name": "Q040 整台機器：量子電腦 ≠ 量子晶片（動畫展示版）.mp4",
+        "id": "1ofehlQbld6_nEvvvQLy6ySyj2Uy6EKRM",
+        "link": "https://drive.google.com/file/d/1ofehlQbld6_nEvvvQLy6ySyj2Uy6EKRM/view?usp=drivesdk",
+        "bytes": 102938373
+      },
+      {
+        "name": "Q040 整台機器（動畫展示版）簡報.pptx",
+        "id": "1Jqx0xeW7xa8uCkwPUN2w-EQUoiFdY8Ru",
+        "link": "https://docs.google.com/presentation/d/1Jqx0xeW7xa8uCkwPUN2w-EQUoiFdY8Ru/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true",
+        "bytes": 4104816
+      },
+      {
+        "name": "Q040 整台機器 教材.zip",
+        "id": "1HRpGVospc7HIaYHXim9Xc3zXl5UsEcpw",
+        "link": "https://drive.google.com/file/d/1HRpGVospc7HIaYHXim9Xc3zXl5UsEcpw/view?usp=drivesdk",
+        "bytes": 373460
+      }
+    ]
+  }
 }
