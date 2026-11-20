@@ -98,8 +98,24 @@
   "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
   "drive": {
     "folderId": "1bi-WOn7ipXPr978g1JqWu1DFCPwySyyb",
-    "uploaded": "2026-11-19",
-    "files": [],
-    "complete": false
+    "uploaded": "2026-11-20",
+    "files": [
+      {
+        "name": "Q124 八範例重現：用 Qiskit 重現八個範例（動畫展示版）.mp4",
+        "id": "1B4sUzyaHitNKhiiiR3mc7OIeLfqNLtDL",
+        "link": "https://drive.google.com/file/d/1B4sUzyaHitNKhiiiR3mc7OIeLfqNLtDL/view?usp=drivesdk"
+      },
+      {
+        "name": "Q124 八範例重現（動畫展示版）簡報.pptx",
+        "id": "1gTQv0tGLgvk3n-7WN9Pn6D_maNNnFGm4",
+        "link": "https://docs.google.com/presentation/d/1gTQv0tGLgvk3n-7WN9Pn6D_maNNnFGm4/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true"
+      },
+      {
+        "name": "Q124 八範例重現 教材.zip",
+        "id": "1E1fJFfZGlZw1hinmtPvCsG8HX7_9jUSr",
+        "link": "https://drive.google.com/file/d/1E1fJFfZGlZw1hinmtPvCsG8HX7_9jUSr/view?usp=drivesdk"
+      }
+    ],
+    "complete": true
   }
 }
