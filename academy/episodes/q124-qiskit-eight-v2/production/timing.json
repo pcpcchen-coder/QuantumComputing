@@ -1,0 +1,399 @@
+{
+  "version": 2,
+  "opening": 60.277,
+  "scenes": [
+    {
+      "page": 1,
+      "kind": "slide",
+      "v1slide": 1,
+      "title": "用 Qiskit 重現八個範例",
+      "duration": 31.248,
+      "sentences": [
+        {
+          "text": "歡迎回到父子科技學院的量子電腦學程，我是陳犀牛，今天是量子第一百二十四堂，用程式套件重現八個範例，這是依課綱製作的課前教學版，並非實際上課錄音。",
+          "start": 0.0,
+          "end": 13.072018
+        },
+        {
+          "text": "從第一百一十三堂開始，我們在瀏覽器裡把八個範例一個一個看完；今天要把它們全部搬進自己的電腦，用程式再跑一遍。",
+          "start": 13.252018,
+          "end": 22.892018
+        },
+        {
+          "text": "今天記住一句話：圖看起來對還不算數，算出來的數字和頁面對得上，才算真的重現。",
+          "start": 23.072018,
+          "end": 31.032018
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q124-qiskit-eight/audio/slide_01.mp3"
+    },
+    {
+      "page": 2,
+      "kind": "slide",
+      "v1slide": 2,
+      "title": "Release 任務：八格全勾才發布",
+      "duration": 26.352,
+      "sentences": [
+        {
+          "text": "今天的好玩機制是發布任務：就像軟體公司推出新版本以前，每一項都要過檢查，才能貼上版本一點零的標籤。",
+          "start": 0.0,
+          "end": 9.328005000000001
+        },
+        {
+          "text": "我們的檢查表有八格，每個範例都用兩種方式跑，結果和頁面一致才打勾，八格全部打勾才算發布成功。",
+          "start": 9.508005,
+          "end": 18.23601
+        },
+        {
+          "text": "作品叫八範例筆記本，每個範例一格程式、一格說明，最後存成第一個正式版本。",
+          "start": 18.41601,
+          "end": 26.13601
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q124-qiskit-eight/audio/slide_02.mp3"
+    },
+    {
+      "page": 3,
+      "kind": "slide",
+      "v1slide": 3,
+      "title": "從頁面到筆記本",
+      "duration": 27.096,
+      "sentences": [
+        {
+          "text": "程式從哪裡來？線路入門動畫的每個範例頁，最底下都有一個可以展開的程式碼區塊，旁邊還有複製按鈕。",
+          "start": 0.0,
+          "end": 9.712018
+        },
+        {
+          "text": "這段程式會跟著上面的選項一起改變，換了密碼或換了位元數，程式裡的閘也會跟著換。",
+          "start": 9.892018,
+          "end": 17.564036
+        },
+        {
+          "text": "筆記本是一種可以一格一格執行的檔案，把八段程式各貼進一格，按一格就跑一格，輸出直接留在那一格下面。",
+          "start": 17.744036,
+          "end": 26.880045000000003
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q124-qiskit-eight/audio/slide_03.mp3"
+    },
+    {
+      "page": 4,
+      "kind": "slide",
+      "v1slide": 4,
+      "title": "同一條線路，跑兩次",
+      "duration": 23.856,
+      "sentences": [
+        {
+          "text": "每個範例都跑兩次：第一次用狀態向量，不做量測，直接算出每種結果的理論機率。",
+          "start": 0.0,
+          "end": 7.7920180000000006
+        },
+        {
+          "text": "第二次真的量一千次，數每種結果出現幾次，就像在頁面上按量測一千次那個按鈕。",
+          "start": 7.972018,
+          "end": 15.212018
+        },
+        {
+          "text": "比對的標準不一樣：狀態向量要和頁面灰色底的理論機率一模一樣，量一千次的次數只要接近就好。",
+          "start": 15.392018,
+          "end": 23.640023
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q124-qiskit-eight/audio/slide_04.mp3"
+    },
+    {
+      "page": 5,
+      "kind": "slide",
+      "v1slide": 5,
+      "title": "範例 1–4：機率對得上嗎",
+      "duration": 25.44,
+      "sentences": [
+        {
+          "text": "先看前四個：量子硬幣是零和一各一半；干涉範例中間有相位翻轉閘，量到一的機率是百分之百。",
+          "start": 0.0,
+          "end": 8.56
+        },
+        {
+          "text": "貝爾態只有零零和一一各一半；範例四把三顆串在一起，只有全零和全一各一半。",
+          "start": 8.74,
+          "end": 15.86
+        },
+        {
+          "text": "量一千次的時候，一半一半的結果不會剛好各五百次，這很正常；要看的是狀態向量那一欄有沒有完全對上。",
+          "start": 16.04,
+          "end": 25.224013999999997
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q124-qiskit-eight/audio/slide_05.mp3"
+    },
+    {
+      "page": 6,
+      "kind": "slide",
+      "v1slide": 6,
+      "title": "範例 5–8：預設選項",
+      "duration": 24.888,
+      "sentences": [
+        {
+          "text": "隱形傳態只量編號二，量到零的機率是四分之三、量到一是四分之一，正好是要傳過去的那個狀態。",
+          "start": 0.0,
+          "end": 8.104014000000001
+        },
+        {
+          "text": "德意志範例預設的黑盒子是平衡的，所以一定量到一；密碼範例預設的密碼是一零一，理論機率也全部落在一零一。",
+          "start": 8.284014,
+          "end": 17.396032
+        },
+        {
+          "text": "格羅弗範例是兩顆位元、答案一一，只做一輪，就把答案的機率推到百分之百。",
+          "start": 17.576032,
+          "end": 24.672041
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q124-qiskit-eight/audio/slide_06.mp3"
+    },
+    {
+      "page": 7,
+      "kind": "demo",
+      "demo": "tpcode",
+      "title": "動畫展示：隱形傳態的程式碼",
+      "duration": 37.512,
+      "sentences": [
+        {
+          "text": "打開線路入門動畫的隱形傳態，展開最底下的程式碼區塊；建線路那一行寫著三顆量子位元，紀錄卻只有一格。",
+          "start": 0.0,
+          "end": 9.52
+        },
+        {
+          "text": "因為最後只量編號二；上面多匯入了圓周率，是因為要傳的狀態，是用旋轉閘轉三分之圓周率做出來的。",
+          "start": 9.7,
+          "end": 18.572018
+        },
+        {
+          "text": "鮑伯修正那一段有一行註解：真實硬體會先量編號零和編號一，再照結果修正；這裡改用受控閘代替，結果相同。",
+          "start": 18.752018,
+          "end": 28.728026999999997
+        },
+        {
+          "text": "把要傳的狀態換成正號疊加態，旋轉閘那一行馬上換成一個哈達瑪閘，匯入圓周率那一行也不見了。",
+          "start": 28.908026999999997,
+          "end": 37.300045
+        }
+      ],
+      "audio": "audio/demo_tpcode.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/basic-circuits.html#teleport"
+    },
+    {
+      "page": 8,
+      "kind": "slide",
+      "v1slide": 7,
+      "title": "我們真的跑了：8 個與 74 種",
+      "duration": 24.6,
+      "sentences": [
+        {
+          "text": "我們真的在電腦上跑了一次：八個預設範例的理論機率，八個全部和頁面一模一樣。",
+          "start": 0.0,
+          "end": 7.168005
+        },
+        {
+          "text": "再把頁面所有選項的組合都試一遍，一共七十四種，機率也是七十四種全部一致。",
+          "start": 7.348005,
+          "end": 14.612019
+        },
+        {
+          "text": "如果改成比振幅，有二十八種差了一個整體負號，全部是格羅弗跑奇數輪的情況；負號量不到，所以機率還是一樣。",
+          "start": 14.792019,
+          "end": 24.384037
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q124-qiskit-eight/audio/slide_07.mp3"
+    },
+    {
+      "page": 9,
+      "kind": "demo",
+      "demo": "grcode",
+      "title": "動畫展示：多出來的整體負號",
+      "duration": 39.528,
+      "sentences": [
+        {
+          "text": "到線路入門動畫的格羅弗範例，展開程式碼區塊；兩顆位元、答案一一的時候，標記那一段只有一行受控相位翻轉閘。",
+          "start": 0.0,
+          "end": 10.048005
+        },
+        {
+          "text": "擴散那一段是哈達瑪、翻轉、受控相位翻轉、翻轉、哈達瑪五行，註解寫著這樣接會多一個整體負號，不影響機率。",
+          "start": 10.228005,
+          "end": 20.732019
+        },
+        {
+          "text": "在上面把位元數換成三顆，程式立刻變多：答案換成一零一、做兩輪，標記用翻轉閘夾住一個多控制的相位翻轉。",
+          "start": 20.912019,
+          "end": 30.480024
+        },
+        {
+          "text": "捲到頁面最下面，小字寫著頁面的振幅由內建模擬器即時計算，和量子程式套件的狀態向量結果一致。",
+          "start": 30.660024,
+          "end": 39.316033
+        }
+      ],
+      "audio": "audio/demo_grcode.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/basic-circuits.html#grover"
+    },
+    {
+      "page": 10,
+      "kind": "slide",
+      "v1slide": 8,
+      "title": "容易錯的地方",
+      "duration": 29.976,
+      "sentences": [
+        {
+          "text": "第一個容易錯的地方：頁面的程式先建好紀錄格再量測；如果改成一次量全部的寫法，存結果的名字會換掉，取次數那一行也要跟著改。",
+          "start": 0.0,
+          "end": 10.936009
+        },
+        {
+          "text": "第二，固定亂數種子以後，三個一半一半的範例會印出一模一樣的次數，這不是巧合，是同一串亂數被重複使用。",
+          "start": 11.116009,
+          "end": 20.612018
+        },
+        {
+          "text": "第三，量一千次的次數每次都會跳動，只看直方圖的高低很容易被騙，一定要拿狀態向量算出的數字來比。",
+          "start": 20.792018,
+          "end": 29.760022999999997
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q124-qiskit-eight/audio/slide_08.mp3"
+    },
+    {
+      "page": 11,
+      "kind": "slide",
+      "v1slide": 9,
+      "title": "父子共同實作：八格檢查表",
+      "duration": 26.112,
+      "sentences": [
+        {
+          "text": "上半場四十分鐘，爸爸先在終端機裝好兩個套件，你負責從頁面複製程式碼，一個範例貼進一格。",
+          "start": 0.0,
+          "end": 8.752018
+        },
+        {
+          "text": "每一格都用狀態向量和量一千次各跑一次，再把理論機率抄進檢查表，和頁面灰色底一格一格對。",
+          "start": 8.932018,
+          "end": 17.372017999999997
+        },
+        {
+          "text": "八格都打勾以後，再換成本機的高效能模擬器重跑一次，看看次數雖然不同，分布是不是一樣。",
+          "start": 17.552017999999997,
+          "end": 25.896031999999998
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q124-qiskit-eight/audio/slide_09.mp3"
+    },
+    {
+      "page": 12,
+      "kind": "slide",
+      "v1slide": 10,
+      "title": "換你改造：換成自己的參數",
+      "duration": 29.256,
+      "sentences": [
+        {
+          "text": "下半場換你改造：挑一個範例換成自己的參數，例如把密碼改成零一一，或把隱形傳態的角度改成二分之圓周率。",
+          "start": 0.0,
+          "end": 9.328005000000001
+        },
+        {
+          "text": "改之前先寫下預測；密碼範例可以到頁面點成同一組密碼再比，角度頁面沒有，就拿公式算出的機率來對。",
+          "start": 9.508005,
+          "end": 18.668005
+        },
+        {
+          "text": "這就是今天的注意事項：頁面已經替七十四種組合對過答案，但你改過的版本沒人檢查過，自己也要比對，不能只看圖。",
+          "start": 18.848005,
+          "end": 29.040023
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q124-qiskit-eight/audio/slide_10.mp3"
+    },
+    {
+      "page": 13,
+      "kind": "demo",
+      "demo": "bvparam",
+      "title": "動畫展示：改一個參數，兩邊一起比",
+      "duration": 35.328,
+      "sentences": [
+        {
+          "text": "打開線路入門動畫的密碼範例，把上面的密碼按鈕點成一一零，線路裡黑盒子的受控反閘馬上換了位置。",
+          "start": 0.0,
+          "end": 8.512018
+        },
+        {
+          "text": "先按清除，再按量測一千次，綠色的柱子只剩一一零一根，旁邊寫著密碼就是一一零。",
+          "start": 8.692018,
+          "end": 16.652017999999998
+        },
+        {
+          "text": "往下捲到程式碼區塊，黑盒子那兩行變成編號一和編號二各接一個受控反閘，註解裡的密碼也改成一一零。",
+          "start": 16.832017999999998,
+          "end": 25.920023
+        },
+        {
+          "text": "改造時就照這樣做：頁面點成同一組參數，筆記本跑出的理論機率要和頁面一模一樣，才算比對完成。",
+          "start": 26.100023,
+          "end": 35.116032
+        }
+      ],
+      "audio": "audio/demo_bvparam.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/basic-circuits.html#bv"
+    },
+    {
+      "page": 14,
+      "kind": "slide",
+      "v1slide": 11,
+      "title": "兩小時的發布任務",
+      "duration": 29.04,
+      "sentences": [
+        {
+          "text": "兩小時的安排是：開場十分鐘，概念示範十五分鐘，接著四十分鐘父子一起把八個範例貼進筆記本、兩種跑法各跑一次，然後休息十分鐘。",
+          "start": 0.0,
+          "end": 11.344014
+        },
+        {
+          "text": "下半場三十分鐘換你改參數再比對；接著十分鐘角色互換，由你教爸爸怎麼操作、為什麼結果是這樣。",
+          "start": 11.524014,
+          "end": 20.468028
+        },
+        {
+          "text": "最後五分鐘錄音總結、替筆記本命名、存成第一版；今天的生活技能是用工具驗證結果。",
+          "start": 20.648028,
+          "end": 28.824037
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q124-qiskit-eight/audio/slide_11.mp3"
+    },
+    {
+      "page": 15,
+      "kind": "slide",
+      "v1slide": 12,
+      "title": "最後一關：發布前的答辯",
+      "duration": 30.552,
+      "sentences": [
+        {
+          "text": "最後一關請不看稿說出：狀態向量和量一千次差在哪裡？為什麼比對的時候要以狀態向量為準？",
+          "start": 0.0,
+          "end": 9.040000000000001
+        },
+        {
+          "text": "再指出一個注意事項：格羅弗的振幅可能整體差一個負號，這量不到，所以比對時要比機率，不要直接比振幅。",
+          "start": 9.22,
+          "end": 18.788005
+        },
+        {
+          "text": "今天的作品是八範例筆記本，下一堂要用頁面上的量測按鈕，比一比量一次和量一千次有什麼不同；我是陳犀牛，保持好奇，我們下次見！",
+          "start": 18.968004999999998,
+          "end": 30.336009999999998
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q124-qiskit-eight/audio/slide_12.mp3"
+    }
+  ]
+}
