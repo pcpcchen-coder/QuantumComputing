@@ -73,7 +73,7 @@
 | Q067 | 離子阱系統全景 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q067-ion-trap-system-v2` |
 | Q068 | ¹⁷¹Yb⁺ 量子位元與雷射冷卻 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q068-yb-qubit-cooling-v2` |
 | Q069 | 離子鏈的集體振動 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q069-ion-chain-modes-v2` |
-| Q070 | Mølmer–Sørensen 閘 | 規劃完成 | — |
+| Q070 | Mølmer–Sørensen 閘 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q070-molmer-sorensen-gate-v2` |
 | Q071 | 螢光讀取與 QCCD | 規劃完成 | — |
 | Q072 | 磁光阱與光鑷 | 規劃完成 | — |
 | Q073 | 裝載與重排 | 規劃完成 | — |
