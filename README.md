@@ -62,13 +62,13 @@
     - 單一 HTML 檔，離線可用（字型需連網）
 
 14. [QPU 與 CPU／GPU 協同運算需求調查](docs/QPU與CPU-GPU協同運算需求調查.md)（未來資料中心 CPU + GPU + QPU 並存時，哪些量子工作需要大量古典算力：控制層 RF／讀取／校準／中性原子重排／離子 shuttling、即時錯誤更正解碼、編譯與化學前處理、VQE／SQD／QC-AFQMC 混合迴圈、誤差緩解、Shor 前中後段拆解、驗證與硬體設計、資料中心互連與排程；依 ns 到月的時間尺度分層，附 Google Willow、Quantinuum Helios + NVQLink、IBM + 富岳 SQD、IonQ QC-AFQMC 等案例與出處）
-    - 簡報：[`slides/output/qpu-cpu-gpu-hybrid.pptx`](slides/output/qpu-cpu-gpu-hybrid.pptx)（30 頁，含講稿）；PDF：[`slides/pdf/QPU_CPU_GPU_Hybrid.pdf`](slides/pdf/QPU_CPU_GPU_Hybrid.pdf)；內容檔：[`slides/reports/qpu-cpu-gpu.js`](slides/reports/qpu-cpu-gpu.js)（`cd slides && node build_deck.js reports/qpu-cpu-gpu.js` 重新產生）
+    - 簡報：[`slides/output/qpu-cpu-gpu-hybrid.pptx`](slides/output/qpu-cpu-gpu-hybrid.pptx)（36 頁，含講稿；Shor 段附「分解 15」實例：量子算多久、幾次、多少資料給古典、古典算多久，並放大到容錯版 15 與 RSA-2048 比較比例與負載）；PDF：[`slides/pdf/QPU_CPU_GPU_Hybrid.pdf`](slides/pdf/QPU_CPU_GPU_Hybrid.pdf)；內容檔：[`slides/reports/qpu-cpu-gpu.js`](slides/reports/qpu-cpu-gpu.js)（`cd slides && node build_deck.js reports/qpu-cpu-gpu.js` 重新產生）
 
 15. [CPU + GPU + QPU 算力群：配置與電力挑戰](docs/CPU-GPU-QPU算力群配置與電力挑戰.md)（承接第 14 項的討論題：五種配置模式與案例（IBM 量子資料中心、RIKEN Heron + 富岳、Jülich JUNIQ、CESGA QMIO、ORNL Pathfinder、IQCC、ABCI-Q、NVAQC、OQC × Equinix、PsiQuantum、Magne）、古典：量子功率比、八大電力挑戰（電網、備援分級、AI 負載擺盪、電能品質、匯流排磁場、接地與 EMI、冷卻水、振動）、配置藍圖與規劃檢查表、對我們供電產品的機會）
     - 簡報：[`slides/output/qpu-cluster-power.pptx`](slides/output/qpu-cluster-power.pptx)（33 頁，含講稿）；PDF：[`slides/pdf/QPU_Cluster_Power.pdf`](slides/pdf/QPU_Cluster_Power.pdf)；內容檔：[`slides/reports/qpu-cluster-power.js`](slides/reports/qpu-cluster-power.js)（`cd slides && node build_deck.js reports/qpu-cluster-power.js` 重新產生）
 
 16. [量子 × 古典協同運算：整合報告與對話紀錄](docs/量子古典協同運算整合報告與對話紀錄.md)（把第 14、15 項整合成一份，並收錄三次提問與回答的對話紀錄、對話回覆中的白話重點）
-    - 整合簡報：[`slides/output/qpu-classical-integrated.pptx`](slides/output/qpu-classical-integrated.pptx)（71 頁，含講稿；開場 → 對話紀錄 → 第一部分「哪些 QPU 工作需要 CPU＋GPU」→ 第二部分「算力群配置與電力挑戰」→ 結尾）；PDF：[`slides/pdf/QPU_Classical_Integrated.pdf`](slides/pdf/QPU_Classical_Integrated.pdf)；內容檔：[`slides/reports/qpu-classical-integrated.js`](slides/reports/qpu-classical-integrated.js)（讀入兩份原始內容檔後重組，`cd slides && node build_deck.js reports/qpu-classical-integrated.js` 重新產生）
+    - 整合簡報：[`slides/output/qpu-classical-integrated.pptx`](slides/output/qpu-classical-integrated.pptx)（78 頁，含講稿；開場 → 對話紀錄 → 第一部分「哪些 QPU 工作需要 CPU＋GPU」→ 第二部分「算力群配置與電力挑戰」→ 結尾）；PDF：[`slides/pdf/QPU_Classical_Integrated.pdf`](slides/pdf/QPU_Classical_Integrated.pdf)；內容檔：[`slides/reports/qpu-classical-integrated.js`](slides/reports/qpu-classical-integrated.js)（讀入兩份原始內容檔後重組，`cd slides && node build_deck.js reports/qpu-classical-integrated.js` 重新產生）
 
 ---
 
