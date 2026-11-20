@@ -1,0 +1,399 @@
+{
+  "version": 2,
+  "opening": 60.277,
+  "scenes": [
+    {
+      "page": 1,
+      "kind": "slide",
+      "v1slide": 1,
+      "title": "模組發表：量子電路展",
+      "duration": 32.688,
+      "sentences": [
+        {
+          "text": "歡迎回到父子科技學院的量子電腦學程，我是陳犀牛，今天是量子第一百二十八堂，模組發表：量子電路展，這是依課綱製作的課前教學版，並非實際上課錄音。",
+          "start": 0.0,
+          "end": 13.096009
+        },
+        {
+          "text": "這個模組從讀圖的三個約定開始，走過八個範例，又數過量測次數、加過雜訊，上一堂還設計了自己的線路。",
+          "start": 13.276009,
+          "end": 22.892018
+        },
+        {
+          "text": "今天是模組發表：你當策展人，把學過的線路布置成一場展覽，向家人展示，再回答觀眾的三個問題。",
+          "start": 23.072018,
+          "end": 32.472018
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q128-circuit-expo/audio/slide_01.mp3"
+    },
+    {
+      "page": 2,
+      "kind": "slide",
+      "v1slide": 2,
+      "title": "首映會：三步完成一件展品",
+      "duration": 23.184,
+      "sentences": [
+        {
+          "text": "今天的好玩機制叫首映會：就像電影第一次上映，你的作品第一次正式面對觀眾。",
+          "start": 0.0,
+          "end": 7.408005
+        },
+        {
+          "text": "流程分三步：先挑一件展品，再用五分鐘發表，最後回答觀眾提出的三個問題。",
+          "start": 7.588005,
+          "end": 15.23601
+        },
+        {
+          "text": "今天的作品是量子電路展海報，一張海報配一件展品，發表時就站在海報旁邊講。",
+          "start": 15.41601,
+          "end": 22.968028
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q128-circuit-expo/audio/slide_02.mp3"
+    },
+    {
+      "page": 3,
+      "kind": "slide",
+      "v1slide": 3,
+      "title": "展品目錄：八個範例分三區",
+      "duration": 23.496,
+      "sentences": [
+        {
+          "text": "八個範例可以分成三個展區：第一區只有一顆位元，放量子硬幣和干涉。",
+          "start": 0.0,
+          "end": 6.616009
+        },
+        {
+          "text": "第二區是糾纏：貝爾態、三顆位元一起糾纏的範例四，還有把狀態送過去的隱形傳態。",
+          "start": 6.796009,
+          "end": 14.660023
+        },
+        {
+          "text": "第三區是演算法：德意志、猜密碼和格羅弗，都靠干涉，用比古典更少的查詢找到答案。",
+          "start": 14.840023,
+          "end": 23.280023
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q128-circuit-expo/audio/slide_03.mp3"
+    },
+    {
+      "page": 4,
+      "kind": "demo",
+      "demo": "tour",
+      "title": "動畫展示：一排分頁就是展品目錄",
+      "duration": 39.288,
+      "sentences": [
+        {
+          "text": "打開線路入門動畫，大標題寫著八個基礎量子電路，下面一排八個分頁，從範例一疊加排到範例八格羅弗，就是今天的展品目錄。",
+          "start": 0.0,
+          "end": 10.624014
+        },
+        {
+          "text": "點範例三，標題上方的小字寫著八個裡的第三個，題目換成貝爾態：兩顆位元糾纏，電路也換成兩條線。",
+          "start": 10.804014,
+          "end": 19.940023
+        },
+        {
+          "text": "再點範例五隱形傳態，電路變成三條線；最後點範例八格羅弗，往下捲到最底下的重點卡。",
+          "start": 20.120023,
+          "end": 28.392041
+        },
+        {
+          "text": "重點卡下面有兩行延伸連結，寫著另一個動畫的名稱和場景，還有超導晶片動畫的第七章；海報上的出處，就照這個格式寫。",
+          "start": 28.572041,
+          "end": 39.076055
+        }
+      ],
+      "audio": "audio/demo_tour.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/basic-circuits.html#superposition"
+    },
+    {
+      "page": 5,
+      "kind": "slide",
+      "v1slide": 4,
+      "title": "五分鐘發表：線路、振幅、量測",
+      "duration": 25.896,
+      "sentences": [
+        {
+          "text": "每人五分鐘，照課綱分三段：先介紹線路，再一步一步看振幅，最後公布量測結果。",
+          "start": 0.0,
+          "end": 8.248005000000001
+        },
+        {
+          "text": "介紹線路時說清楚幾顆位元、幾個步驟、量哪幾顆；播放振幅時，每按一步就說一句柱子怎麼變。",
+          "start": 8.428005,
+          "end": 17.420023
+        },
+        {
+          "text": "公布結果時，把理想機率和量一千次的比例放在一起，再說出展品來自哪個動畫、哪個範例。",
+          "start": 17.600023,
+          "end": 25.680023
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q128-circuit-expo/audio/slide_04.mp3"
+    },
+    {
+      "page": 6,
+      "kind": "slide",
+      "v1slide": 5,
+      "title": "示範：範例三貝爾態",
+      "duration": 27.168,
+      "sentences": [
+        {
+          "text": "我們用範例三貝爾態示範：兩條線、兩個步驟，先對編號零做哈達瑪閘，再做受控反閘。",
+          "start": 0.0,
+          "end": 8.44
+        },
+        {
+          "text": "振幅逐步：起點只有零零一根；哈達瑪閘之後，零零和零一各零點七零七；受控反閘之後，換成零零和一一。",
+          "start": 8.62,
+          "end": 18.284014
+        },
+        {
+          "text": "量測結果：理想機率是零零、一一各一半，量一千次也只出現這兩種，兩顆位元永遠一樣。",
+          "start": 18.464014,
+          "end": 26.952019
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q128-circuit-expo/audio/slide_05.mp3"
+    },
+    {
+      "page": 7,
+      "kind": "slide",
+      "v1slide": 6,
+      "title": "觀眾的三個問題",
+      "duration": 27.72,
+      "sentences": [
+        {
+          "text": "發表完，請家人至少問三個問題；常見的有三種：為什麼會這樣、改一個閘會怎樣、真的量子電腦也一樣嗎？",
+          "start": 0.0,
+          "end": 9.52
+        },
+        {
+          "text": "回答「改一個閘」最好當場改給觀眾看：例如把貝爾態換成第三種，結果就變成零一和一零，兩顆永遠相反。",
+          "start": 9.7,
+          "end": 18.812018000000002
+        },
+        {
+          "text": "回答「真的電腦」可以引用雜訊那一課：每個閘、每次讀取都可能出錯，所以會冒出少量別的結果。",
+          "start": 18.992018,
+          "end": 27.504036
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q128-circuit-expo/audio/slide_06.mp3"
+    },
+    {
+      "page": 8,
+      "kind": "demo",
+      "demo": "pipeline",
+      "title": "動畫展示：貝爾態送進真實機器",
+      "duration": 43.488,
+      "sentences": [
+        {
+          "text": "觀眾問：真的量子電腦也一樣嗎？打開操作量子電腦動畫的完整流程場景，先關掉自動播放，螢幕上的程式正是範例三的貝爾態。",
+          "start": 0.0,
+          "end": 11.92
+        },
+        {
+          "text": "按下一站，進入轉譯：五顆實體位元排成丁字形，其中兩顆亮起，標籤寫著編號零對到實體三號、編號一對到實體一號。",
+          "start": 12.1,
+          "end": 22.964014
+        },
+        {
+          "text": "再按三次，經過脈衝排程和控制電子，來到冷凍機裡的晶片，晶片一閃一閃，上方的計數一路跑到一千。",
+          "start": 23.144014,
+          "end": 32.472018999999996
+        },
+        {
+          "text": "最後一站判別與結果，零零和一一兩根金色柱子差不多高，零一和一零幾乎貼在地上；真實機器會有少量錯誤，所以要看比例。",
+          "start": 32.652018999999996,
+          "end": 43.276033
+        }
+      ],
+      "audio": "audio/demo_pipeline.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#workflow"
+    },
+    {
+      "page": 9,
+      "kind": "slide",
+      "v1slide": 7,
+      "title": "海報怎麼排",
+      "duration": 25.728,
+      "sentences": [
+        {
+          "text": "海報就是五分鐘發表的地圖：研討會的海報展，作者也是站在海報旁邊，回答走過的人提出的問題。",
+          "start": 0.0,
+          "end": 8.68
+        },
+        {
+          "text": "版面由上到下排：先是作品名和一句話，接著是線路圖和三格振幅，最後是量測結果的直方圖。",
+          "start": 8.86,
+          "end": 17.708005
+        },
+        {
+          "text": "每一格都要讓沒學過量子的家人看得懂：少寫算式，多畫圖，再配一句白話說明。",
+          "start": 17.888005,
+          "end": 25.512019
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q128-circuit-expo/audio/slide_07.mp3"
+    },
+    {
+      "page": 10,
+      "kind": "slide",
+      "v1slide": 8,
+      "title": "截圖與程式要註明出處",
+      "duration": 26.16,
+      "sentences": [
+        {
+          "text": "今天的注意事項：截圖與程式要註明出處，寫清楚是哪個動畫檔、哪個範例，程式是哪個檔案、哪個版本。",
+          "start": 0.0,
+          "end": 9.64
+        },
+        {
+          "text": "把別人的文字、想法或作品當成自己的原創，叫做抄襲；註明出處，觀眾也才找得到原始畫面。",
+          "start": 9.82,
+          "end": 18.98
+        },
+        {
+          "text": "還要說清楚結果的來歷：模擬器算出的是理想機率，不是真實機器的實測。",
+          "start": 19.16,
+          "end": 25.944014
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q128-circuit-expo/audio/slide_08.mp3"
+    },
+    {
+      "page": 11,
+      "kind": "slide",
+      "v1slide": 9,
+      "title": "父子共同實作：每人五分鐘",
+      "duration": 26.976,
+      "sentences": [
+        {
+          "text": "上半場四十分鐘，每人輪流發表五分鐘：打開線路入門動畫，選好範例，邊按下一步邊講。",
+          "start": 0.0,
+          "end": 8.296009
+        },
+        {
+          "text": "教材的展品小幫手會印出八張展品卡：位元數、步驟數、理想機率，八個範例都和頁面一樣。",
+          "start": 8.476009,
+          "end": 17.060023
+        },
+        {
+          "text": "把它改成你的展品，就會印出每一步的振幅；另一支程式用本機的量子程式套件重算，八個理想機率也完全對得上。",
+          "start": 17.240023,
+          "end": 26.760023
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q128-circuit-expo/audio/slide_09.mp3"
+    },
+    {
+      "page": 12,
+      "kind": "slide",
+      "v1slide": 10,
+      "title": "換你改造：根據觀眾問題",
+      "duration": 25.56,
+      "sentences": [
+        {
+          "text": "下半場三十分鐘換你獨立改造：把觀眾問倒你的問題記下來，修改海報上的說明。",
+          "start": 0.0,
+          "end": 7.456009
+        },
+        {
+          "text": "改說明有三步：先找出觀眾卡住的那一句，再換成更白話的說法或多畫一張圖，最後重講一次給同一位觀眾聽。",
+          "start": 7.636009,
+          "end": 17.204014
+        },
+        {
+          "text": "展品小幫手也會檢查海報：欄位齊不齊、出處有沒有寫、三個問題是不是都有回答。",
+          "start": 17.384014,
+          "end": 25.344014
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q128-circuit-expo/audio/slide_10.mp3"
+    },
+    {
+      "page": 13,
+      "kind": "demo",
+      "demo": "presets",
+      "title": "動畫展示：下一次展覽的新展品",
+      "duration": 39.144,
+      "sentences": [
+        {
+          "text": "想替下一次展覽找新展品？打開量子線路場景，左邊有八個預設線路按鈕，大多是我們展覽裡的老朋友。",
+          "start": 0.0,
+          "end": 9.616009
+        },
+        {
+          "text": "點猜密碼，線路變成四條線；點格羅弗，又變回兩條線，閘排得滿滿的。",
+          "start": 9.796009,
+          "end": 17.060023
+        },
+        {
+          "text": "最後一顆是展覽裡沒有的量子傅立葉轉換：連按七次單步，每做一個哈達瑪閘，柱子就從一根變成兩根、四根、八根。",
+          "start": 17.240023,
+          "end": 27.312041
+        },
+        {
+          "text": "再按兩次，走過交換閘和量測：八根柱子一樣矮、四種顏色輪流；面板寫著資訊都藏在相位裡，量一千次，八個結果幾乎一樣多。",
+          "start": 27.492041,
+          "end": 38.932041
+        }
+      ],
+      "audio": "audio/demo_presets.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#circuit"
+    },
+    {
+      "page": 14,
+      "kind": "slide",
+      "v1slide": 11,
+      "title": "兩小時的量子電路展",
+      "duration": 28.992,
+      "sentences": [
+        {
+          "text": "兩小時的安排是：開場十分鐘，概念示範十五分鐘，接著四十分鐘輪流發表、互相提問，然後休息十分鐘。",
+          "start": 0.0,
+          "end": 9.568005
+        },
+        {
+          "text": "下半場三十分鐘，你根據觀眾的問題修改說明；接著十分鐘角色互換，由你教爸爸操作和原理。",
+          "start": 9.748005,
+          "end": 18.404014
+        },
+        {
+          "text": "最後五分鐘錄音總結、替作品命名、存一個版本；今天的生活技能是發表與回饋：講給別人聽，再從問題裡改進。",
+          "start": 18.584014,
+          "end": 28.776032
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q128-circuit-expo/audio/slide_11.mp3"
+    },
+    {
+      "page": 15,
+      "kind": "slide",
+      "v1slide": 12,
+      "title": "最後一關：首映會",
+      "duration": 25.8,
+      "sentences": [
+        {
+          "text": "最後一關請不看稿說出：你的展品在解決什麼？核心原理用一句話怎麼講？",
+          "start": 0.0,
+          "end": 7.744014
+        },
+        {
+          "text": "再指出一個注意事項，例如截圖與程式要註明出處，模擬結果不能當成真實機器的實測。",
+          "start": 7.924014,
+          "end": 15.692019
+        },
+        {
+          "text": "今天的作品是量子電路展海報，下一堂是電從哪裡來、到哪裡去；我是陳犀牛，保持好奇，我們下次見！",
+          "start": 15.872019,
+          "end": 25.584037000000002
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q128-circuit-expo/audio/slide_12.mp3"
+    }
+  ]
+}

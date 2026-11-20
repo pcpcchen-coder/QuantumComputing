@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q126",
+  "version": "Q126-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-18",
+  "episodePath": "academy/episodes/q126-noisy-examples-v2",
+  "basedOn": "academy/episodes/q126-noisy-examples（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 526.233333,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "ghz",
+      "title": "動畫展示：三顆糾纏加上雜訊",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#circuit"
+    },
+    {
+      "key": "grover",
+      "title": "動畫展示：十二個閘的格羅弗",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#circuit"
+    },
+    {
+      "key": "readnoise",
+      "title": "動畫展示：讀錯留下的指紋",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#bv"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.5,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q126-noisy-examples-v2-zh-TW.mp4": {
+      "bytes": 87497981,
+      "sha256": "ed6e6546f0d7737032ca99ac95375845a6bb6f04f5c570cf6d7a82934f7a3f1e"
+    },
+    "q126-noisy-examples-v2-master.mp4": {
+      "bytes": 88968739,
+      "sha256": "4cfc2fed8c44572c55d3a2a39e02d6e04bf3eafd3b332cec76434c66f4fe0158"
+    },
+    "narration-only.mp3": {
+      "bytes": 12631252,
+      "sha256": "484893db324f0df2f91209f58edf16ecaa231fffd9b0f6710b772ff9e8745fb1"
+    }
+  },
+  "package": {
+    "filename": "Q126-v2_量子電腦學程_雜訊下的八範例_動畫展示版_2026-11-18.zip",
+    "bytes": 193036906,
+    "sha256": "390c3d65d707f52a9284225eb2bbfdcd493cb878aa5d65714016f9debd623cb0",
+    "parts": [
+      {
+        "name": "Q126-v2_量子電腦學程_雜訊下的八範例_動畫展示版_2026-11-18.zip.part01",
+        "bytes": 29360128,
+        "sha256": "667fc17b4a1b88fdb4022816d8817e91039cad31427fc6aeb9dbe44f4edf2329"
+      },
+      {
+        "name": "Q126-v2_量子電腦學程_雜訊下的八範例_動畫展示版_2026-11-18.zip.part02",
+        "bytes": 29360128,
+        "sha256": "49553d32a3e3e63ecf578c7776bb946ac21797a3570d05d6a6cad009b30c7058"
+      },
+      {
+        "name": "Q126-v2_量子電腦學程_雜訊下的八範例_動畫展示版_2026-11-18.zip.part03",
+        "bytes": 29360128,
+        "sha256": "1ba70d65f142f14fd0f195e43761ef731c9fecce7c3cf4553815d76a802a2f6c"
+      },
+      {
+        "name": "Q126-v2_量子電腦學程_雜訊下的八範例_動畫展示版_2026-11-18.zip.part04",
+        "bytes": 29360128,
+        "sha256": "b3d8651f9336f69e73ef80a0f001d082812af6de800b7c793eb3f8d9f246876f"
+      },
+      {
+        "name": "Q126-v2_量子電腦學程_雜訊下的八範例_動畫展示版_2026-11-18.zip.part05",
+        "bytes": 29360128,
+        "sha256": "2d4064221f6d8cd6798e879f41c9b2a4cd2983c42f664e50dae5ff9208adae1e"
+      },
+      {
+        "name": "Q126-v2_量子電腦學程_雜訊下的八範例_動畫展示版_2026-11-18.zip.part06",
+        "bytes": 29360128,
+        "sha256": "adfbfa65eb728cee3b9f7775699125bbb2c50efa43f2a6aa9555943751c702e7"
+      },
+      {
+        "name": "Q126-v2_量子電腦學程_雜訊下的八範例_動畫展示版_2026-11-18.zip.part07",
+        "bytes": 16876138,
+        "sha256": "f833d0fba399d7b796ad0315f4bf70e9065fd6f00363df23f7ef13e5893d16fc"
+      }
+    ],
+    "handedOver": "2026-11-18 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1bi-WOn7ipXPr978g1JqWu1DFCPwySyyb",
+    "folderName": "量子電腦學程 Q101–Q130 動畫展示版（v2）",
+    "uploadedAt": "2026-11-18",
+    "uploadedBy": "製作代理（Claude，Drive API，上傳後比對 md5）",
+    "files": [
+      {
+        "name": "Q126 雜訊下的八範例：加入雜訊：八個範例在真實世界會怎樣（動畫展示版）.mp4",
+        "id": "1E_ULtSNCR5JHMD27z9laAaGiYL-O7tQ0",
+        "size": 87497981,
+        "link": "https://drive.google.com/file/d/1E_ULtSNCR5JHMD27z9laAaGiYL-O7tQ0/view?usp=drivesdk"
+      },
+      {
+        "name": "Q126 雜訊下的八範例（動畫展示版）簡報.pptx",
+        "id": "1HX0fII_DtPmGNnJE7IWenFmanMytvcS6",
+        "size": 3211957,
+        "link": "https://docs.google.com/presentation/d/1HX0fII_DtPmGNnJE7IWenFmanMytvcS6/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true"
+      },
+      {
+        "name": "Q126 雜訊下的八範例 教材.zip",
+        "id": "1xONiFi7DE2OPGCIyYXX6tlwqWJ-3fmHC",
+        "size": 434287,
+        "link": "https://drive.google.com/file/d/1xONiFi7DE2OPGCIyYXX6tlwqWJ-3fmHC/view?usp=drivesdk"
+      }
+    ]
+  }
+}

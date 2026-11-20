@@ -1,0 +1,399 @@
+{
+  "version": 2,
+  "opening": 60.277,
+  "scenes": [
+    {
+      "page": 1,
+      "kind": "slide",
+      "v1slide": 1,
+      "title": "電從哪裡來、到哪裡去",
+      "duration": 32.688,
+      "sentences": [
+        {
+          "text": "歡迎回到父子科技學院的量子電腦學程，我是陳犀牛，今天是量子第一百二十九堂，電從哪裡來、到哪裡去，這是依課綱製作的課前教學版，並非實際上課錄音。",
+          "start": 0.0,
+          "end": 13.048005
+        },
+        {
+          "text": "這是供電與機房工程模組的第一課：我們不再只盯著晶片，而是把整台量子電腦當成一個要供電、要備援的工程系統。",
+          "start": 13.228005,
+          "end": 22.868005
+        },
+        {
+          "text": "今天的任務是跟著電走一圈：從市電進門，經過配電和不斷電系統，一路走到每台設備，最後變成熱被帶走。",
+          "start": 23.048005,
+          "end": 32.472018999999996
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q129-power-panorama/audio/slide_01.mp3"
+    },
+    {
+      "page": 2,
+      "kind": "slide",
+      "v1slide": 2,
+      "title": "尋寶：三步找出每一條電路",
+      "duration": 24.312,
+      "sentences": [
+        {
+          "text": "今天的好玩機制叫尋寶：機房全景動畫裡藏著好多條電路，看誰找到的最多。",
+          "start": 0.0,
+          "end": 7.072018
+        },
+        {
+          "text": "尋寶分三步：先找出用電的設備，再順著電線追它從哪裡來，最後把每一項的用電填進清單。",
+          "start": 7.252018,
+          "end": 15.524036
+        },
+        {
+          "text": "今天的作品是用電全景圖：一張圖畫出電從進門到出口的路線，每台設備旁邊標上用多少電。",
+          "start": 15.704036,
+          "end": 24.096054000000002
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q129-power-panorama/audio/slide_02.mp3"
+    },
+    {
+      "page": 3,
+      "kind": "slide",
+      "v1slide": 3,
+      "title": "用電三大類",
+      "duration": 25.704,
+      "sentences": [
+        {
+          "text": "找到的設備可以分成三大類：第一類是冷凍，包括脈衝管壓縮機和氣體處理系統，負責把晶片冷到接近絕對零度。",
+          "start": 0.0,
+          "end": 9.472018
+        },
+        {
+          "text": "第二類是控制電子：產生微波脈衝的電子機櫃、給偏壓用的精密直流電源，還有時脈和網路。",
+          "start": 9.652018,
+          "end": 17.852018
+        },
+        {
+          "text": "第三類是設施：帶走熱的冷卻水、維持室溫的空調，以及控制電腦和監控網路。",
+          "start": 18.032018,
+          "end": 25.488027000000002
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q129-power-panorama/audio/slide_03.mp3"
+    },
+    {
+      "page": 4,
+      "kind": "slide",
+      "v1slide": 4,
+      "title": "電的路線：進門到出口",
+      "duration": 29.328,
+      "sentences": [
+        {
+          "text": "先看電從哪裡來：一套系統的電來自三相市電，先進配電盤，壓縮機和冷卻水機這種大功率設備直接由配電盤供電。",
+          "start": 0.0,
+          "end": 9.976009
+        },
+        {
+          "text": "控制電子、電腦、氣體處理系統的控制器和閥門，則接在不斷電系統後面；市電一中斷，電池幾乎立刻接手。",
+          "start": 10.156009,
+          "end": 20.036009
+        },
+        {
+          "text": "再看電到哪裡去：用掉的電大多變成熱，壓縮機約一萬瓦的熱靠冷卻水帶走，電子設備的熱靠空調帶走。",
+          "start": 20.216009,
+          "end": 29.112018
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q129-power-panorama/audio/slide_04.mp3"
+    },
+    {
+      "page": 5,
+      "kind": "demo",
+      "demo": "circuits",
+      "title": "動畫展示：機房裡的電力線",
+      "duration": 40.488,
+      "sentences": [
+        {
+          "text": "打開周邊系統動畫的第一個場景，機房中央是稀釋冷凍機，四周擺著配電盤、不斷電系統、電子機櫃、壓縮機和冷卻水機。",
+          "start": 0.0,
+          "end": 10.816009000000001
+        },
+        {
+          "text": "先按只看訊號相關，再把微波和資料兩條關掉、把電力打開，畫面上只剩一條條黃色的電力線。",
+          "start": 10.996009,
+          "end": 19.364014
+        },
+        {
+          "text": "黃線從配電盤出發，接到不斷電系統、電子機櫃和控制電腦，也接到壓縮機、冷卻水機和氣體處理系統。",
+          "start": 19.544014,
+          "end": 29.064014
+        },
+        {
+          "text": "最後按只看冷卻相關，綠色氦氣、藍色冷卻水、紫色混合氣流個不停；右下角的用電分配圖裡，壓縮機和冷卻水就佔了大半。",
+          "start": 29.244014,
+          "end": 40.276032
+        }
+      ],
+      "audio": "audio/demo_circuits.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/peripherals.html#overview"
+    },
+    {
+      "page": 6,
+      "kind": "slide",
+      "v1slide": 5,
+      "title": "一套超導系統：約二十六千瓦",
+      "duration": 28.608,
+      "sentences": [
+        {
+          "text": "把動畫裡一套超導量子電腦的用電加起來：壓縮機約十點七千瓦、冷卻水約十千瓦、控制電子約三千瓦。",
+          "start": 0.0,
+          "end": 9.112018
+        },
+        {
+          "text": "再加上氣體處理系統約一點五千瓦、電腦和網路約一千瓦，合計約二十六千瓦；谷歌公開的最壞情況也是約二十六千瓦。",
+          "start": 9.292018,
+          "end": 19.292018
+        },
+        {
+          "text": "程式一算就看得出來：壓縮機、冷卻水和氣體處理加起來約佔八成五，大部分的電都花在保冷上。",
+          "start": 19.472018,
+          "end": 28.392018
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q129-power-panorama/audio/slide_05.mp3"
+    },
+    {
+      "page": 7,
+      "kind": "slide",
+      "v1slide": 6,
+      "title": "冷凍：壓縮機是電老虎",
+      "duration": 27.72,
+      "sentences": [
+        {
+          "text": "冷凍這一類裡，脈衝管壓縮機是最大的單一負載，每台約一萬到一萬五千瓦，要用三相電，啟動電流也大。",
+          "start": 0.0,
+          "end": 9.328005000000001
+        },
+        {
+          "text": "它把氦氣壓縮成高壓送進冷頭，冷頭一壓一放，在約比絕對零度高四度的那一層，只換來約一點五瓦的冷卻能力。",
+          "start": 9.508005,
+          "end": 19.052019
+        },
+        {
+          "text": "一萬瓦的電只換到一點五瓦的冷，其餘幾乎都變成熱交給冷卻水，所以冷卻水機也成了用電大戶。",
+          "start": 19.232019,
+          "end": 27.504037000000004
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q129-power-panorama/audio/slide_06.mp3"
+    },
+    {
+      "page": 8,
+      "kind": "demo",
+      "demo": "coldhead",
+      "title": "動畫展示：一萬瓦換一點五瓦",
+      "duration": 38.256,
+      "sentences": [
+        {
+          "text": "換到同一個動畫的脈衝管場景：左邊的氦壓縮機標著電力約一萬瓦、水冷，右邊高高的冷頭就是它要餵飽的對象。",
+          "start": 0.0,
+          "end": 9.52
+        },
+        {
+          "text": "紅色粒子是高壓氦氣、藍色是低壓氦氣，沿著兩條軟管在壓縮機和冷頭之間流動。",
+          "start": 9.7,
+          "end": 17.372018
+        },
+        {
+          "text": "看冷頭旁的兩塊金色標籤：一級冷端約絕對溫度四十五度、冷卻能力約四十瓦；二級冷端最低約三度，在四點二度時只有約一點五瓦。",
+          "start": 17.552018,
+          "end": 28.512018
+        },
+        {
+          "text": "壓縮機腳邊還有冷卻水一進一出：一萬瓦的電換來不到兩瓦的低溫冷卻，其餘幾乎都變成熱，由冷卻水帶走。",
+          "start": 28.692018,
+          "end": 38.044036
+        }
+      ],
+      "audio": "audio/demo_coldhead.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/peripherals.html#pulsetube"
+    },
+    {
+      "page": 9,
+      "kind": "slide",
+      "v1slide": 7,
+      "title": "控制電子：電不多，但要乾淨",
+      "duration": 25.032,
+      "sentences": [
+        {
+          "text": "控制電子這一類的用電比冷凍少得多：動畫裡一套系統的電子機櫃約三千瓦。",
+          "start": 0.0,
+          "end": 6.472018
+        },
+        {
+          "text": "精密直流電源每個模組約三十瓦，卻要極低的雜訊和漂移，給磁通偏壓的電壓要穩到百萬分之一伏特的等級。",
+          "start": 6.652018,
+          "end": 15.644036
+        },
+        {
+          "text": "換到一千位元的規模，控制電子可能要一萬到十萬瓦，精密直流要兩千五百到三千路，大約一百一十台儀器。",
+          "start": 15.824036,
+          "end": 24.816054
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q129-power-panorama/audio/slide_07.mp3"
+    },
+    {
+      "page": 10,
+      "kind": "slide",
+      "v1slide": 8,
+      "title": "耗電量不是最難的問題",
+      "duration": 29.736,
+      "sentences": [
+        {
+          "text": "今天的注意事項：耗電量本身不是最難的問題；一套超導量子電腦約二十到三十千瓦，還比不上一個超級電腦機櫃的約一百四十千瓦。",
+          "start": 0.0,
+          "end": 10.672018
+        },
+        {
+          "text": "真正難的是兩件事：不能斷電，以及低干擾；不能斷電的代價有多大，我們下一堂再仔細算。",
+          "start": 10.852018,
+          "end": 19.220022999999998
+        },
+        {
+          "text": "低干擾是說，上百台儀器每台都有一點合規的漏電流，加起來在地線上造成的電位，可能比偏壓要求的精度大好幾個數量級。",
+          "start": 19.400022999999997,
+          "end": 29.520023
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q129-power-panorama/audio/slide_08.mp3"
+    },
+    {
+      "page": 11,
+      "kind": "slide",
+      "v1slide": 9,
+      "title": "父子共同實作：電路尋寶",
+      "duration": 29.088,
+      "sentences": [
+        {
+          "text": "上半場四十分鐘一起尋寶：打開供電動畫的全景場景，從左邊的中壓進線出發，順著粒子找出每一條電路。",
+          "start": 0.0,
+          "end": 9.256009
+        },
+        {
+          "text": "粒子越密代表功率越大；八個負載方塊上都寫著用電區間，把它們一一抄進用電清單，再點紅色編號看痛點說明。",
+          "start": 9.436009,
+          "end": 18.884014
+        },
+        {
+          "text": "教材的用電清單程式會幫你加總：一千位元設施約八十到三百二十千瓦，中點約兩百千瓦，大約一點四個超級電腦機櫃。",
+          "start": 19.064014,
+          "end": 28.872019
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q129-power-panorama/audio/slide_09.mp3"
+    },
+    {
+      "page": 12,
+      "kind": "demo",
+      "demo": "facility",
+      "title": "動畫展示：千位元設施的用電全景",
+      "duration": 40.992,
+      "sentences": [
+        {
+          "text": "最後打開一千位元供電動畫的全景場景：左邊是中壓進線，接著是分層不斷電系統，再分成機電、乾淨、運算三條匯流排。",
+          "start": 0.0,
+          "end": 10.888005
+        },
+        {
+          "text": "粒子越密代表功率越大：橘色流向壓縮機和冰水機，青色流向控制電子和精密直流，紫色流向即時解碼和電子區空調。",
+          "start": 11.068005,
+          "end": 21.452019
+        },
+        {
+          "text": "點紅色二號，面板寫著壓縮機是最大的單一負載，每支脈衝管約一萬兩千五百瓦；再點四號，精密直流要兩千五百到三千路。",
+          "start": 21.632019,
+          "end": 32.232019
+        },
+        {
+          "text": "最後點七號，即時解碼要緊鄰機台；面板最上面也寫著，整座設施中點合計約兩百千瓦。",
+          "start": 32.412019,
+          "end": 40.780024000000004
+        }
+      ],
+      "audio": "audio/demo_facility.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/power1000.html#overview"
+    },
+    {
+      "page": 13,
+      "kind": "slide",
+      "v1slide": 10,
+      "title": "換你改造：三平台的用電大戶",
+      "duration": 28.248,
+      "sentences": [
+        {
+          "text": "下半場三十分鐘換你獨立改造：比較超導、離子阱、中性原子，各自的用電大戶是誰。",
+          "start": 0.0,
+          "end": 8.392018
+        },
+        {
+          "text": "超導的大戶是壓縮機和冷卻水；離子阱的大戶則是精密空調和雷射冷卻水，用來讓雷射和光路保持穩定。",
+          "start": 8.572018,
+          "end": 17.804036
+        },
+        {
+          "text": "中性原子不需要稀釋冷凍機，整套約三到十千瓦，大戶是空調、冷卻水和雷射；把三個平台畫在同一張圖上比一比。",
+          "start": 17.984036,
+          "end": 28.032041
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q129-power-panorama/audio/slide_10.mp3"
+    },
+    {
+      "page": 14,
+      "kind": "slide",
+      "v1slide": 11,
+      "title": "兩小時的電路尋寶",
+      "duration": 28.344,
+      "sentences": [
+        {
+          "text": "兩小時的安排是：開場十分鐘、概念示範十五分鐘，接著四十分鐘父子一起在全景動畫裡尋寶、填用電清單，然後休息十分鐘。",
+          "start": 0.0,
+          "end": 10.792018
+        },
+        {
+          "text": "下半場三十分鐘，你比較三個平台的用電大戶；接著十分鐘角色互換，由你教爸爸操作和原理。",
+          "start": 10.972018,
+          "end": 19.484036
+        },
+        {
+          "text": "最後五分鐘錄音總結、替用電全景圖命名、存一個版本；今天的生活技能是看見能源的流向。",
+          "start": 19.664036,
+          "end": 28.12805
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q129-power-panorama/audio/slide_11.mp3"
+    },
+    {
+      "page": 15,
+      "kind": "slide",
+      "v1slide": 12,
+      "title": "最後一關：尋寶王",
+      "duration": 26.184,
+      "sentences": [
+        {
+          "text": "最後一關請不看稿說出：電從哪裡來、到哪裡去？哪一類設備用電最多，為什麼？",
+          "start": 0.0,
+          "end": 8.536009
+        },
+        {
+          "text": "再指出一個注意事項，例如耗電量本身不是最難的問題，難的是不能斷電與低干擾。",
+          "start": 8.716009,
+          "end": 15.956009000000002
+        },
+        {
+          "text": "今天的作品是用電全景圖，下一堂是斷電的代價：兩分鐘換兩到五天；我是陳犀牛，保持好奇，我們下次見！",
+          "start": 16.136009,
+          "end": 25.968027
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q129-power-panorama/audio/slide_12.mp3"
+    }
+  ]
+}
