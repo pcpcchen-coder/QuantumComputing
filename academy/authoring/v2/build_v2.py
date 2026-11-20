@@ -124,7 +124,10 @@ class Lesson:
     # ── 2. 錄影 ────────────────────────────────────────────────
     def record(self):
         timing = json.loads((self.E / 'production/demo-timing.json').read_text(encoding='utf-8'))
+        only = [k for k in os.environ.get('QV2_ONLY', '').split(',') if k]  # 只重錄指定段（例如隨機事件需重錄）
         for d in self.demos:
+            if only and d['key'] not in only:
+                continue
             tm = timing[d['key']]
             st = [s['start'] for s in tm['sentences']]
             acts = []
