@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q127",
+  "version": "Q127-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-18",
+  "episodePath": "academy/episodes/q127-design-circuit-v2",
+  "basedOn": "academy/episodes/q127-design-circuit（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 513.408,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "tele",
+      "title": "動畫展示：一條設計好的線路",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#circuit"
+    },
+    {
+      "key": "tgate",
+      "title": "動畫展示：用按鈕組範例甲",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#register"
+    },
+    {
+      "key": "czbell",
+      "title": "動畫展示：用按鈕組範例乙",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#register"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.4,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q127-design-circuit-v2-zh-TW.mp4": {
+      "bytes": 86088596,
+      "sha256": "970af9ab6776ad2672c6e402bc9e86648e9f976f57dd715a7230e244b038208e"
+    },
+    "q127-design-circuit-v2-master.mp4": {
+      "bytes": 87992177,
+      "sha256": "b8c77d11c7ad7d25b90e164a61bc65249274c72a05193b7b0d188566855c85b1"
+    },
+    "narration-only.mp3": {
+      "bytes": 12323092,
+      "sha256": "46aa3557e687b6a338e5fde73ca26f3d70552a8910c3c3488909e1770b2b9c33"
+    }
+  },
+  "package": {
+    "filename": "Q127-v2_量子電腦學程_設計自己的線路_動畫展示版_2026-11-18.zip",
+    "bytes": 190348111,
+    "sha256": "51917f733f8f8cbda97dadf2b4060c65b81e239483b02bd300d38cbdd9e92b88",
+    "parts": [
+      {
+        "name": "Q127-v2_量子電腦學程_設計自己的線路_動畫展示版_2026-11-18.zip.part01",
+        "bytes": 29360128,
+        "sha256": "bfc2b105bfa7828c9c2f1c0c4081a1a8a2c770f3a8c90212caeb11724c17e2cc"
+      },
+      {
+        "name": "Q127-v2_量子電腦學程_設計自己的線路_動畫展示版_2026-11-18.zip.part02",
+        "bytes": 29360128,
+        "sha256": "7931efbd1541a80735c32bc2138d72d75656a63bffeb0b69facb3ae7322bad1e"
+      },
+      {
+        "name": "Q127-v2_量子電腦學程_設計自己的線路_動畫展示版_2026-11-18.zip.part03",
+        "bytes": 29360128,
+        "sha256": "6bfd3e4559ebf68de7721902dc9a85a11f316f3524eb963aea1bd26099b79679"
+      },
+      {
+        "name": "Q127-v2_量子電腦學程_設計自己的線路_動畫展示版_2026-11-18.zip.part04",
+        "bytes": 29360128,
+        "sha256": "b640e13ce0ce7cc32f0998294b5edb348f89294b41296afe1d5e4d3cee66bb6f"
+      },
+      {
+        "name": "Q127-v2_量子電腦學程_設計自己的線路_動畫展示版_2026-11-18.zip.part05",
+        "bytes": 29360128,
+        "sha256": "dc5c0a65e4ee1a104eb99fe0c956aa80a6442838fcbbdcb2eb509f759a9d2dad"
+      },
+      {
+        "name": "Q127-v2_量子電腦學程_設計自己的線路_動畫展示版_2026-11-18.zip.part06",
+        "bytes": 29360128,
+        "sha256": "b67b84fa67521d09e9fdcf9fd0d49c97f7ad137ec58536e07ba35950baca2a5d"
+      },
+      {
+        "name": "Q127-v2_量子電腦學程_設計自己的線路_動畫展示版_2026-11-18.zip.part07",
+        "bytes": 14187343,
+        "sha256": "0380ffdcef02c4d0c369e04035d35fb748c837b974a3088e3805312fd6721a42"
+      }
+    ],
+    "handedOver": "2026-11-18 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔"
+}
