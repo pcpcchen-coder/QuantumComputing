@@ -1,0 +1,8 @@
+{
+  "title": "父子科技學院 Q064｜模組專題：在模擬器跑我的線路（動畫展示版）",
+  "description": "父子科技學院 量子電腦學程 Q064｜模組專題：在模擬器跑我的線路（v2・含 3D 動畫展示）\n\n這是依課綱製作的課前教學版，不是實際上課錄音。\n\n父子科技學院量子電腦學程 Q064「模組專題：在模擬器跑我的線路」新版（v2）：在原本的教學投影片之間，插入本學程 3D 互動動畫的實際操作示範。\n\n這一版新增的動畫展示\n・兩顆格羅弗加上雜訊（https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#circuit）\n・換一個題目（https://pcpcchen-coder.github.io/QuantumComputing/animations/basic-circuits.html#deutsch）\n・三顆的理想值（https://pcpcchen-coder.github.io/QuantumComputing/animations/basic-circuits.html#grover）\n\n動畫都可以在瀏覽器直接開啟，自己動手操作。\n\n章節\n00:00 陳犀牛系列片頭\n01:00 模組專題：在模擬器跑我的線路\n01:32 三步：從問題到報告\n02:01 這個模組學了什麼\n02:28 操作檢查表：五關\n02:57 理想模擬器和雜訊模型\n03:24 範例題：格羅弗搜尋找一一\n03:51 動畫展示：兩顆格羅弗加上雜訊\n04:28 轉譯：等級零和等級三\n04:59 解讀：寫成實驗報告\n05:29 發布任務：重現測試\n05:59 動畫展示：換一個題目\n06:33 換你改造：三顆的格羅弗搜尋\n07:02 動畫展示：三顆的理想值\n07:41 兩小時的發布任務\n08:13 最後一關：教爸爸跑線路\n\n旁白：微軟 zh-TW-YunJheNeural 神經語音合成（Edge-TTS／Azure 語音服務，同一聲音同一格式）。字幕已燒入影片，開啟 CC 可能重疊。\n",
+  "privacyStatus": "private",
+  "madeForKids": null,
+  "reviewStatus": "needs-parent-review",
+  "publicationMode": "manual-user-upload"
+}

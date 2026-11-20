@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q068",
+  "version": "Q068-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-18",
+  "episodePath": "academy/episodes/q068-yb-qubit-cooling-v2",
+  "basedOn": "academy/episodes/q068-yb-qubit-cooling（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 517.248,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "cool",
+      "title": "動畫展示：第一關，都卜勒冷卻",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/atoms.html#ionqubit"
+    },
+    {
+      "key": "gates",
+      "title": "動畫展示：第二關，歸零與微波閘",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/atoms.html#ionqubit"
+    },
+    {
+      "key": "detect",
+      "title": "動畫展示：第三關，亮和暗的直方圖",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/atoms.html#ionqubit"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.5,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q068-yb-qubit-cooling-v2-zh-TW.mp4": {
+      "bytes": 88346650,
+      "sha256": "8a1d2f9508acc234b9270b5cbf1aedd11b65e5d05672d40025a02c35fd777fc9"
+    },
+    "q068-yb-qubit-cooling-v2-master.mp4": {
+      "bytes": 90356741,
+      "sha256": "1b50898abfae2746d00a1624ae39ee8c12b53ebcc33b456b7f0710a57940b02b"
+    },
+    "narration-only.mp3": {
+      "bytes": 12415252,
+      "sha256": "3872169ac10bfd5a7f557c18ad7e87c0b4a2a28e286f04fd849c535e3127abf4"
+    }
+  },
+  "package": {
+    "filename": "Q068-v2_量子電腦學程_鐿離子量子位元與雷射冷卻_動畫展示版_2026-11-18.zip",
+    "bytes": 195516301,
+    "sha256": "171f678bd9d844794b74391b8face749ec99d0aa4956698b6a61093ef71bb7ea",
+    "parts": [
+      {
+        "name": "Q068-v2_量子電腦學程_鐿離子量子位元與雷射冷卻_動畫展示版_2026-11-18.zip.part01",
+        "bytes": 29360128,
+        "sha256": "138acd30b4db1cc7575d8608e49441c8b653e679606a184071656eb12cf57054"
+      },
+      {
+        "name": "Q068-v2_量子電腦學程_鐿離子量子位元與雷射冷卻_動畫展示版_2026-11-18.zip.part02",
+        "bytes": 29360128,
+        "sha256": "b463eeb0f7d5a58507cf08a5955d2fd4f4110bb95d7250e50c6d20d679f9b194"
+      },
+      {
+        "name": "Q068-v2_量子電腦學程_鐿離子量子位元與雷射冷卻_動畫展示版_2026-11-18.zip.part03",
+        "bytes": 29360128,
+        "sha256": "1ae902c5b09a14cdbdb47f3be0ab0db679ac2357c08d097833245009ac1b2a9e"
+      },
+      {
+        "name": "Q068-v2_量子電腦學程_鐿離子量子位元與雷射冷卻_動畫展示版_2026-11-18.zip.part04",
+        "bytes": 29360128,
+        "sha256": "afa783f1ed4cafda7ff525a13345e383bf2ace4280f9366e4be13aca60f9186d"
+      },
+      {
+        "name": "Q068-v2_量子電腦學程_鐿離子量子位元與雷射冷卻_動畫展示版_2026-11-18.zip.part05",
+        "bytes": 29360128,
+        "sha256": "9f23392890dae32c7f8e68f1d346c7c6cbbc17657eb9cbff81a3b6ed02ff96e8"
+      },
+      {
+        "name": "Q068-v2_量子電腦學程_鐿離子量子位元與雷射冷卻_動畫展示版_2026-11-18.zip.part06",
+        "bytes": 29360128,
+        "sha256": "de02606d14bacecb2c90519a95e0a5c0a714fd4bdfe24bb7c0a788719c6dee2d"
+      },
+      {
+        "name": "Q068-v2_量子電腦學程_鐿離子量子位元與雷射冷卻_動畫展示版_2026-11-18.zip.part07",
+        "bytes": 19355533,
+        "sha256": "745b27a11be02cadd7b3ccac2904092ba469919c9c5a26cd98d27a34134f4dab"
+      }
+    ],
+    "handedOver": "2026-11-18 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "status": "pending",
+    "note": "Drive 權杖過期（HTTP 401），檔案已排入待上傳清單，權杖更新後補傳"
+  }
+}
