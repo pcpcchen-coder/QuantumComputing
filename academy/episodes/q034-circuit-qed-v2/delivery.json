@@ -100,5 +100,29 @@
     ],
     "handedOver": "2026-11-20 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
   },
-  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔"
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1epfQVOXunbD9Vht37u62oOD9Dr-HKMSE",
+    "folder": "量子電腦學程 Q011–Q040 動畫展示版（v2）",
+    "files": [
+      {
+        "name": "Q034 電路量子電動力學：電路 QED：量子位元＋諧振腔（動畫展示版）.mp4",
+        "id": "1hU05V1Mo-s8Ch3yLYvP2sdnrX5RxODvz",
+        "link": "https://drive.google.com/file/d/1hU05V1Mo-s8Ch3yLYvP2sdnrX5RxODvz/view?usp=drivesdk",
+        "bytes": 93694904
+      },
+      {
+        "name": "Q034 電路量子電動力學（動畫展示版）簡報.pptx",
+        "id": "1xF3fJ6t8BSZoiNGO8jyQcsebysMRRsF4",
+        "link": "https://docs.google.com/presentation/d/1xF3fJ6t8BSZoiNGO8jyQcsebysMRRsF4/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true",
+        "bytes": 3839580
+      },
+      {
+        "name": "Q034 電路量子電動力學 教材.zip",
+        "id": "1-bp7z5Xjg2aGg6erSlmKs5iWhKZm-61q",
+        "link": "https://drive.google.com/file/d/1-bp7z5Xjg2aGg6erSlmKs5iWhKZm-61q/view?usp=drivesdk",
+        "bytes": 370304
+      }
+    ]
+  }
 }
