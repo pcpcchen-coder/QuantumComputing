@@ -99,8 +99,8 @@
 | Q093 | 產業地圖與發展路線 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q093-industry-roadmap-v2` |
 | Q094 | 畢業專題提案 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q094-capstone-proposal-v2` |
 | Q095 | 畢業專題製作 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q095-capstone-build-v2` |
-| Q096 | 畢業 Teach-back：換孩子教爸爸 | 規劃完成 | — |
-| Q097 | 導覽：一顆 transmon 的十二章旅程 | 規劃完成 | — |
+| Q096 | 畢業 Teach-back：換孩子教爸爸 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q096-graduation-teach-back-v2` |
+| Q097 | 導覽：一顆 transmon 的十二章旅程 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q097-transmon-twelve-chapters-v2` |
 | Q098 | LC 與 JJ：線性和非線性的差別 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q098-lc-vs-jj-nonlinearity-v2` |
 | Q099 | 第 1 課：SQUID 干涉之後能做什麼 | 規劃完成 | — |
 | Q100 | 第 2 課：transmon 怎麼寫入狀態 | 規劃完成 | — |

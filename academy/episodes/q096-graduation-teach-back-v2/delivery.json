@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q096",
+  "version": "Q096-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-20",
+  "episodePath": "academy/episodes/q096-graduation-teach-back-v2",
+  "basedOn": "academy/episodes/q096-graduation-teach-back（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 404.522,
+  "pages": 13,
+  "demos": [
+    {
+      "key": "teachdemo",
+      "title": "動畫展示：先預測，再操作",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#interference"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.2,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q096-graduation-teach-back-v2-zh-TW.mp4": {
+      "bytes": 77635969,
+      "sha256": "3e24d53208260b5c505d610d6f9fe4356abfaf6d23e863e07e79cea48a81217f"
+    },
+    "q096-graduation-teach-back-v2-master.mp4": {
+      "bytes": 80494124,
+      "sha256": "97884cb426e281756ad974adb3131ce283a3234eec3f11ab918d41dcc7451f9d"
+    },
+    "narration-only.mp3": {
+      "bytes": 9710356,
+      "sha256": "665e7cba8007ceaaf802efbf92323eb7025edceeaa28fcfc410d58d05b064199"
+    }
+  },
+  "package": {
+    "filename": "Q096-v2_量子電腦學程_畢業回頭教_動畫展示版_2026-11-20.zip",
+    "bytes": 171487663,
+    "sha256": "e74c63802f848190662236d2a04fa9fadf157e5e942662d8daabd1f55c437137",
+    "parts": [
+      {
+        "name": "Q096-v2_量子電腦學程_畢業回頭教_動畫展示版_2026-11-20.zip.part01",
+        "bytes": 29360128,
+        "sha256": "c493ded24572c2e6e356959bc3f5568eeb05e5944227a39f56fd54a7abeb02f1"
+      },
+      {
+        "name": "Q096-v2_量子電腦學程_畢業回頭教_動畫展示版_2026-11-20.zip.part02",
+        "bytes": 29360128,
+        "sha256": "8f4a4400131a302655a789860077a274c88715dc9a9e14d92cc44142f3ab46fb"
+      },
+      {
+        "name": "Q096-v2_量子電腦學程_畢業回頭教_動畫展示版_2026-11-20.zip.part03",
+        "bytes": 29360128,
+        "sha256": "db5ef50296b085c49c39fe1f6ad356f09e50fd4f21db03a1abd2a9a4171b86f9"
+      },
+      {
+        "name": "Q096-v2_量子電腦學程_畢業回頭教_動畫展示版_2026-11-20.zip.part04",
+        "bytes": 29360128,
+        "sha256": "d26b0e095dac1fd5bfa62e2785a6e75cfc80473875dd0a1166b45b8ce31ed3ee"
+      },
+      {
+        "name": "Q096-v2_量子電腦學程_畢業回頭教_動畫展示版_2026-11-20.zip.part05",
+        "bytes": 29360128,
+        "sha256": "cd04248ce3b561d9c7974bf53bfa43607f79cc2f1c84798d004e1d98e1ee41ec"
+      },
+      {
+        "name": "Q096-v2_量子電腦學程_畢業回頭教_動畫展示版_2026-11-20.zip.part06",
+        "bytes": 24687023,
+        "sha256": "290b7993853f19252c5940faf417e156542a75f435ca6ed3a1e961ffea40b38b"
+      }
+    ],
+    "handedOver": "2026-11-20 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1ZOQEWjgkBnzg6-88LtQiSOgQeO2JG9Wx",
+    "uploadedAt": "2026-11-19",
+    "files": []
+  }
+}
