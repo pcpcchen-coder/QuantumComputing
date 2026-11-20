@@ -1,0 +1,8 @@
+{
+  "title": "父子科技學院 Q075｜分區架構與成像讀取（動畫展示版）",
+  "description": "父子科技學院 量子電腦學程 Q075｜分區架構與成像讀取（v2・含 3D 動畫展示）\n\n這是依課綱製作的課前教學版，不是實際上課錄音。\n\n父子科技學院量子電腦學程 Q075「分區架構與成像讀取」新版（v2）：在原本的教學投影片之間，插入本學程 3D 互動動畫的實際操作示範。\n\n這一版新增的動畫展示\n・一層線路的搬運與並行閘（https://pcpcchen-coder.github.io/QuantumComputing/animations/atoms.html#zoned）\n・推出、成像、判讀相機影像（https://pcpcchen-coder.github.io/QuantumComputing/animations/atoms.html#imaging）\n・中途量測走一趟讀取區（https://pcpcchen-coder.github.io/QuantumComputing/animations/atoms.html#zoned）\n\n動畫都可以在瀏覽器直接開啟，自己動手操作。\n\n章節\n00:00 陳犀牛系列片頭\n01:00 分區架構與成像讀取\n01:32 三步：分區、搬運、拍照\n01:57 三個區，各做各的事\n02:22 一層線路的四步\n02:47 動畫展示：一層線路的搬運與並行閘\n03:21 比一比：搬運和做閘\n03:45 讀取：推出、成像、判別\n04:11 成像讀取的特性\n04:33 動畫展示：推出、成像、判讀相機影像\n05:13 推出讀取的代價\n05:39 真實任務：排出分區時程\n06:07 換你改造：加入中途量測\n06:33 動畫展示：中途量測走一趟讀取區\n07:00 兩小時的分區實驗室\n07:33 最後一關：教爸爸分區與讀取\n\n旁白：微軟 zh-TW-YunJheNeural 神經語音合成（Edge-TTS／Azure 語音服務，同一聲音同一格式）。字幕已燒入影片，開啟 CC 可能重疊。\n",
+  "privacyStatus": "private",
+  "madeForKids": null,
+  "reviewStatus": "needs-parent-review",
+  "publicationMode": "manual-user-upload"
+}

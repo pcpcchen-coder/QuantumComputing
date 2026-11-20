@@ -1,0 +1,368 @@
+{
+  "version": 2,
+  "opening": 60.277,
+  "scenes": [
+    {
+      "page": 1,
+      "kind": "slide",
+      "v1slide": 1,
+      "title": "量子密碼：BB84",
+      "duration": 28.68,
+      "sentences": [
+        {
+          "text": "歡迎回到父子科技學院的量子電腦學程，我是陳犀牛，今天是量子第九十堂，量子密碼，這是依課綱製作的課前教學版，並非實際上課錄音。",
+          "start": 0.0,
+          "end": 11.56
+        },
+        {
+          "text": "上一堂我們練習分辨量子最佳化和量子機器學習的新聞，哪些是合理的說法，哪些是誇大的宣傳。",
+          "start": 11.74,
+          "end": 20.324014
+        },
+        {
+          "text": "今天要解決一個古老的問題：兩個人想共用一把秘密鑰匙，要怎麼確定傳遞的途中沒有人偷看？",
+          "start": 20.504013999999998,
+          "end": 28.464014
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q090-bb84-quantum-key-distribution/audio/slide_01.mp3"
+    },
+    {
+      "page": 2,
+      "kind": "slide",
+      "v1slide": 2,
+      "title": "三步：選基底、對基底、抓竊聽",
+      "duration": 25.752,
+      "sentences": [
+        {
+          "text": "今天分三步：先學光子的兩種基底，再看兩個人怎麼比對基底、留下金鑰，最後看偷聽的人為什麼一定會露出馬腳。",
+          "start": 0.0,
+          "end": 10.048005
+        },
+        {
+          "text": "今天的好玩機制是角色扮演：愛麗絲負責送出，鮑伯負責接收，伊芙躲在中間偷聽。",
+          "start": 10.228005,
+          "end": 17.732019
+        },
+        {
+          "text": "今天的作品，是一份金鑰遊戲紀錄，記下每一回合誰選了什麼、最後留下哪些位元。",
+          "start": 17.912019,
+          "end": 25.536033
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q090-bb84-quantum-key-distribution/audio/slide_02.mp3"
+    },
+    {
+      "page": 3,
+      "kind": "slide",
+      "v1slide": 3,
+      "title": "兩種基底、四種狀態",
+      "duration": 28.32,
+      "sentences": [
+        {
+          "text": "這個方法叫做量子金鑰分發，最早的協定由班尼特和布拉薩德在一九八四年提出，用兩人姓氏的字頭加上年份來命名。",
+          "start": 0.0,
+          "end": 9.472018
+        },
+        {
+          "text": "它用光子的偏振代表位元：直線基底裡，垂直代表零、水平代表一；斜線基底裡，四十五度代表零、一百三十五度代表一。",
+          "start": 9.652018,
+          "end": 20.156032
+        },
+        {
+          "text": "用對的基底去量，一定讀到送出的位元；用錯的基底去量，結果就是一半一半的隨機。",
+          "start": 20.336032,
+          "end": 28.104036999999998
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q090-bb84-quantum-key-distribution/audio/slide_03.mp3"
+    },
+    {
+      "page": 4,
+      "kind": "demo",
+      "demo": "basis",
+      "title": "動畫展示：對的基底和錯的基底",
+      "duration": 42.12,
+      "sentences": [
+        {
+          "text": "打開三維動畫的量子位元場景，按狀態零，箭頭指向北極，這就像愛麗絲用直線基底送出零。",
+          "start": 0.0,
+          "end": 8.416009
+        },
+        {
+          "text": "按一次跑一千次，用同一個基底去量，右邊藍色的柱子升到青色的理論線，紅色那根一點也沒有，一千次全部讀到零。",
+          "start": 8.596009,
+          "end": 18.500023
+        },
+        {
+          "text": "再按加號，箭頭躺到赤道上，這是斜線基底的零；同樣按一次跑一千次，兩根柱子變得差不多一樣高，零和一大約各占一半。",
+          "start": 18.680023,
+          "end": 29.112040999999998
+        },
+        {
+          "text": "最後按測量一次，原本躺在赤道上的箭頭隨著白光一閃，一下子跳到北極或南極，斜線的資訊就被量掉了；動畫會自動把箭頭放回去，真實的光子可不會。",
+          "start": 29.292040999999998,
+          "end": 41.908049999999996
+        }
+      ],
+      "audio": "audio/demo_basis.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#qubit"
+    },
+    {
+      "page": 5,
+      "kind": "slide",
+      "v1slide": 4,
+      "title": "協定的四步",
+      "duration": 29.016,
+      "sentences": [
+        {
+          "text": "協定分四步：第一步，愛麗絲每一次都隨機選一個位元、隨機選一個基底，送出一顆光子。",
+          "start": 0.0,
+          "end": 8.44
+        },
+        {
+          "text": "第二步，鮑伯不知道她用哪個基底，只好每次隨機選一個基底來量；第三步，兩人公開說出各自用的基底，但不說結果。",
+          "start": 8.62,
+          "end": 19.028005
+        },
+        {
+          "text": "基底不同的那幾次全部丟掉，平均會丟掉一半；第四步，再從剩下的位元裡公開抽查一部分，看看有沒有對不上。",
+          "start": 19.208005,
+          "end": 28.800023
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q090-bb84-quantum-key-distribution/audio/slide_04.mp3"
+    },
+    {
+      "page": 6,
+      "kind": "slide",
+      "v1slide": 5,
+      "title": "比一比：有人偷聽嗎",
+      "duration": 27.408,
+      "sentences": [
+        {
+          "text": "比一比：如果沒有人偷聽，兩人基底相同的那些位元，理想上應該完全一樣，只會因為設備雜訊偶爾錯一兩個。",
+          "start": 0.0,
+          "end": 9.472018
+        },
+        {
+          "text": "如果伊芙把每顆光子都攔下來量一次，再照她量到的結果重送一顆，抽查時大約四個位元就有一個對不上。",
+          "start": 9.652018,
+          "end": 18.236032
+        },
+        {
+          "text": "抽查過的位元已經公開，不能再當鑰匙，所以只用剩下的；錯誤太多，就整批放棄，重來一次。",
+          "start": 18.416032,
+          "end": 27.192041000000003
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q090-bb84-quantum-key-distribution/audio/slide_05.mp3"
+    },
+    {
+      "page": 7,
+      "kind": "slide",
+      "v1slide": 6,
+      "title": "量了就會留下痕跡",
+      "duration": 28.056,
+      "sentences": [
+        {
+          "text": "伊芙為什麼藏不住？因為她和鮑伯一樣，不知道愛麗絲用哪個基底，只能用猜的。",
+          "start": 0.0,
+          "end": 8.200000000000001
+        },
+        {
+          "text": "猜錯基底的時候，她量到的結果是隨機的，而且一量下去，光子原本的狀態就被改掉了，她重送的已經不是原來那一顆。",
+          "start": 8.38,
+          "end": 18.452018000000002
+        },
+        {
+          "text": "她也不能先把光子複製一份再慢慢研究，因為量子力學不允許完美複製一個未知的量子狀態，這叫做不可複製定理。",
+          "start": 18.632018000000002,
+          "end": 27.840023000000002
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q090-bb84-quantum-key-distribution/audio/slide_06.mp3"
+    },
+    {
+      "page": 8,
+      "kind": "demo",
+      "demo": "switch",
+      "title": "動畫展示：同一個狀態，換個基底量",
+      "duration": 48.048,
+      "sentences": [
+        {
+          "text": "換到讀取場景，先把兩團雲的間距拉開，再把準備狀態的角度拉到零度；下方平面上每一個點是一次讀取，新的點幾乎全落在粉紅線左邊，畫成藍色，代表讀到零。",
+          "start": 0.0,
+          "end": 13.528005
+        },
+        {
+          "text": "現在點選先做哈達瑪閘的量測，改用斜線基底來量，畫面清空後重新累積，藍紅差不多各半，右下小圖也變成兩座差不多高的小山。",
+          "start": 13.708005,
+          "end": 24.740023
+        },
+        {
+          "text": "接著把角度拉到九十度，準備斜線基底的狀態，再用斜線基底量，畫面清空後，新的點大多數又回到左邊，變成藍色。",
+          "start": 24.920023,
+          "end": 35.376032
+        },
+        {
+          "text": "最後換回直接量，也就是直線基底，點又變成藍紅各半；基底對上，結果幾乎確定，基底不對，就只剩隨機，這正是伊芙猜錯基底時的處境。",
+          "start": 35.556032,
+          "end": 47.836032
+        }
+      ],
+      "audio": "audio/demo_switch.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#readout"
+    },
+    {
+      "page": 9,
+      "kind": "slide",
+      "v1slide": 7,
+      "title": "抽查多少位才夠",
+      "duration": 26.568,
+      "sentences": [
+        {
+          "text": "每一個被攔截過的位元，只有四分之一的機會在抽查時露餡，所以只比一位，很可能抓不到伊芙。",
+          "start": 0.0,
+          "end": 8.656009000000001
+        },
+        {
+          "text": "比十位，抓到她的機會大約百分之九十四；根據維基百科的計算，比七十二位，伊芙能躲過的機會只剩大約十億分之一。",
+          "start": 8.836009,
+          "end": 18.836009
+        },
+        {
+          "text": "抽查越多越安心，可是比過的位元都要丟掉，所以要在安全和金鑰的數量之間取捨。",
+          "start": 19.016009,
+          "end": 26.352018
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q090-bb84-quantum-key-distribution/audio/slide_07.mp3"
+    },
+    {
+      "page": 10,
+      "kind": "slide",
+      "v1slide": 8,
+      "title": "注意：它保護的是什麼",
+      "duration": 27.912,
+      "sentences": [
+        {
+          "text": "要注意，量子金鑰分發只負責讓兩人拿到同一把秘密鑰匙，真正的訊息還是要用這把鑰匙另外加密再傳送。",
+          "start": 0.0,
+          "end": 8.992018
+        },
+        {
+          "text": "兩人公開比對基底的那條通道，必須能確認對方真的是本人，否則有人在中間冒充兩邊，一樣會被騙。",
+          "start": 9.172018,
+          "end": 17.828027
+        },
+        {
+          "text": "原理上安全，不代表機器沒有漏洞；而且雜訊也會造成錯誤，分不出來的時候，只能一律當成有人偷聽來處理。",
+          "start": 18.008027,
+          "end": 27.696032
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q090-bb84-quantum-key-distribution/audio/slide_08.mp3"
+    },
+    {
+      "page": 11,
+      "kind": "slide",
+      "v1slide": 9,
+      "title": "角色扮演：三人金鑰遊戲",
+      "duration": 31.488,
+      "sentences": [
+        {
+          "text": "實作的時候三人輪流扮演：愛麗絲擲硬幣決定位元，再抽一張方向卡，加號代表直線基底，叉號代表斜線基底，寫在卡片上交出去。",
+          "start": 0.0,
+          "end": 11.464014
+        },
+        {
+          "text": "鮑伯也抽一張方向卡，如果和卡片上的基底一樣，就照實讀出位元；如果不一樣，就擲一次硬幣，當作隨機的結果。",
+          "start": 11.644014,
+          "end": 21.764014000000003
+        },
+        {
+          "text": "先玩二十回合沒有伊芙的，再玩二十回合讓伊芙在中間用同樣的規則偷量、重寫卡片，比較兩次抽查的錯誤。",
+          "start": 21.944014000000003,
+          "end": 31.272019000000004
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q090-bb84-quantum-key-distribution/audio/slide_09.mp3"
+    },
+    {
+      "page": 12,
+      "kind": "slide",
+      "v1slide": 10,
+      "title": "換你改造：伊芙的錯誤率",
+      "duration": 26.544,
+      "sentences": [
+        {
+          "text": "下半場換你改造：先想一想，伊芙每一次猜錯基底的機率是多少？答案是一半。",
+          "start": 0.0,
+          "end": 8.272018000000001
+        },
+        {
+          "text": "她猜錯之後，重送的光子落在另一個基底，鮑伯就算用了和愛麗絲一樣的基底，也只有一半的機會讀對。",
+          "start": 8.452018,
+          "end": 17.036032
+        },
+        {
+          "text": "兩個一半相乘，就是四分之一，也就是百分之二十五；拿你的遊戲紀錄比一比，錯誤率有沒有接近這個數字。",
+          "start": 17.216032,
+          "end": 26.328049999999998
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q090-bb84-quantum-key-distribution/audio/slide_10.mp3"
+    },
+    {
+      "page": 13,
+      "kind": "slide",
+      "v1slide": 11,
+      "title": "兩小時的密碼實驗室",
+      "duration": 32.904,
+      "sentences": [
+        {
+          "text": "兩小時的安排是：開場十分鐘，認識基底和量測擾動十五分鐘，接著四十分鐘三人角色扮演，玩有伊芙和沒有伊芙的金鑰遊戲，然後休息十分鐘。",
+          "start": 0.0,
+          "end": 11.944014000000001
+        },
+        {
+          "text": "下半場三十分鐘計算伊芙造成的錯誤率，接著十分鐘交換角色，由你教爸爸這個協定怎麼運作、為什麼抓得到偷聽。",
+          "start": 12.124014,
+          "end": 21.932019
+        },
+        {
+          "text": "最後五分鐘錄音總結，替遊戲紀錄取名字，存一個版本；今天的生活技能是資訊安全意識，想想家裡哪些密碼最需要保護。",
+          "start": 22.112019,
+          "end": 32.688028
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q090-bb84-quantum-key-distribution/audio/slide_11.mp3"
+    },
+    {
+      "page": 14,
+      "kind": "slide",
+      "v1slide": 12,
+      "title": "最後一關：教爸爸抓竊聽",
+      "duration": 29.952,
+      "sentences": [
+        {
+          "text": "最後一關，請不看稿說出：為什麼量了就會改變狀態？愛麗絲和鮑伯怎麼靠抽查發現伊芙？",
+          "start": 0.0,
+          "end": 9.040000000000001
+        },
+        {
+          "text": "再指出一個限制：量子金鑰分發保護的是交換鑰匙這一步，實際的設備仍然可能有漏洞。",
+          "start": 9.22,
+          "end": 17.036009
+        },
+        {
+          "text": "今天的作品是金鑰遊戲紀錄，下一堂我們看秀爾演算法為什麼威脅現在的公開金鑰密碼，以及後量子密碼怎麼接手；我是陳犀牛，保持好奇，我們下次見！",
+          "start": 17.216009,
+          "end": 29.736009
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q090-bb84-quantum-key-distribution/audio/slide_12.mp3"
+    }
+  ]
+}

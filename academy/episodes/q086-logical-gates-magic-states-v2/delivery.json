@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q086",
+  "version": "Q086-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-20",
+  "episodePath": "academy/episodes/q086-logical-gates-magic-states-v2",
+  "basedOn": "academy/episodes/q086-logical-gates-magic-states（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 494.466667,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "pricelist",
+      "title": "動畫展示：邏輯閘的價目表",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#surgery"
+    },
+    {
+      "key": "surgery",
+      "title": "動畫展示：縫合與拆開兩塊補丁",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#surgery"
+    },
+    {
+      "key": "factory",
+      "title": "動畫展示：魔術態工廠",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#surgery"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.5,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q086-logical-gates-magic-states-v2-zh-TW.mp4": {
+      "bytes": 87052864,
+      "sha256": "7f462029c3cde1005a7f2a9e11c024d04612911adf4c4af82c3e62f87582dbd7"
+    },
+    "q086-logical-gates-magic-states-v2-master.mp4": {
+      "bytes": 88899277,
+      "sha256": "7443189ed67b55064084b5ffa87b6cc786a9dd4e15b5097b19132349eb6595bf"
+    },
+    "narration-only.mp3": {
+      "bytes": 11868628,
+      "sha256": "14f57c70a558f65267dd67410d263327f1f3c7b2a3fb5b8d4134c71401df7538"
+    }
+  },
+  "package": {
+    "filename": "Q086-v2_量子電腦學程_邏輯閘與魔術態_動畫展示版_2026-11-20.zip",
+    "bytes": 192205801,
+    "sha256": "a8a8cedc4902a98bde686ad7288fa2a1b9388db9b21383e45278a97bdc00d3de",
+    "parts": [
+      {
+        "name": "Q086-v2_量子電腦學程_邏輯閘與魔術態_動畫展示版_2026-11-20.zip.part01",
+        "bytes": 29360128,
+        "sha256": "ee730ccbf12ce99ed149020c2b2dc94ed709f60533fde8769939825a769d41ac"
+      },
+      {
+        "name": "Q086-v2_量子電腦學程_邏輯閘與魔術態_動畫展示版_2026-11-20.zip.part02",
+        "bytes": 29360128,
+        "sha256": "30efde44e556d2873c133fc552589dd8874b46f04a4391fcf6fb2ce927a750d7"
+      },
+      {
+        "name": "Q086-v2_量子電腦學程_邏輯閘與魔術態_動畫展示版_2026-11-20.zip.part03",
+        "bytes": 29360128,
+        "sha256": "d37836c2863f9ed44f7f31362ca2c18f0b057f392160873ddcbdecd8fd063cbf"
+      },
+      {
+        "name": "Q086-v2_量子電腦學程_邏輯閘與魔術態_動畫展示版_2026-11-20.zip.part04",
+        "bytes": 29360128,
+        "sha256": "641557d61ec512344610e69c68f00c593080eb2f672576b7e0e01efbbdb72538"
+      },
+      {
+        "name": "Q086-v2_量子電腦學程_邏輯閘與魔術態_動畫展示版_2026-11-20.zip.part05",
+        "bytes": 29360128,
+        "sha256": "2d7dce8604e18831a10e8218fee11c1e5569396d1540109e92e6dd42d010cad4"
+      },
+      {
+        "name": "Q086-v2_量子電腦學程_邏輯閘與魔術態_動畫展示版_2026-11-20.zip.part06",
+        "bytes": 29360128,
+        "sha256": "ce57bef9ab0d1e4a7e81533d7e4e80021104b8ebb988424906751ac7ad387d6a"
+      },
+      {
+        "name": "Q086-v2_量子電腦學程_邏輯閘與魔術態_動畫展示版_2026-11-20.zip.part07",
+        "bytes": 16045033,
+        "sha256": "21bf85e53bffd98db1dea50572d81bb35dc98c782026ce98360e955e623e19e6"
+      }
+    ],
+    "handedOver": "2026-11-20 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1ZOQEWjgkBnzg6-88LtQiSOgQeO2JG9Wx",
+    "uploadedAt": "2026-11-19",
+    "files": [
+      {
+        "name": "Q086 邏輯閘與魔術態：邏輯閘與魔術態（動畫展示版）.mp4",
+        "id": "1lqWus4hHKKsHYRK0YnI3nqJWfKuTdA7m",
+        "bytes": 87052864,
+        "url": "https://drive.google.com/file/d/1lqWus4hHKKsHYRK0YnI3nqJWfKuTdA7m/view"
+      },
+      {
+        "name": "Q086 邏輯閘與魔術態（動畫展示版）簡報.pptx",
+        "id": "17SlWK5u1OenLVZPFivSoCqL1wvT5epDr",
+        "bytes": 3594577,
+        "url": "https://docs.google.com/presentation/d/17SlWK5u1OenLVZPFivSoCqL1wvT5epDr/edit"
+      },
+      {
+        "name": "Q086 邏輯閘與魔術態 教材.zip",
+        "id": "12WBoB2Qdt8e6IcO54IOejm7XpuzXO3SG",
+        "bytes": 400784,
+        "url": "https://drive.google.com/file/d/12WBoB2Qdt8e6IcO54IOejm7XpuzXO3SG/view"
+      }
+    ]
+  }
+}

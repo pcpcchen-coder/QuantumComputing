@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q097",
+  "version": "Q097-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-20",
+  "episodePath": "academy/episodes/q097-transmon-twelve-chapters-v2",
+  "basedOn": "academy/episodes/q097-transmon-twelve-chapters（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 470.016,
+  "pages": 14,
+  "demos": [
+    {
+      "key": "chip",
+      "title": "動畫展示：一顆位元的俯視圖",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#chip"
+    },
+    {
+      "key": "arms",
+      "title": "動畫展示：十字板的四隻手臂",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#chip"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.4,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q097-transmon-twelve-chapters-v2-zh-TW.mp4": {
+      "bytes": 82606547,
+      "sha256": "11251cedf6fb6a9b396d5241bfb6a1cc7449c2f016ab35439b50218d7e9a34ca"
+    },
+    "q097-transmon-twelve-chapters-v2-master.mp4": {
+      "bytes": 84637958,
+      "sha256": "45e252a51be9a605bc37b354d0bfacb4076f4078ae5635dfa0d2375774b00b05"
+    },
+    "narration-only.mp3": {
+      "bytes": 11281684,
+      "sha256": "01d3fe346917b152432a9f1e40faf76ee0b55f6f4edf7fa8072a90a447238394"
+    }
+  },
+  "package": {
+    "filename": "Q097-v2_量子電腦學程_傳輸子十二章導覽_動畫展示版_2026-11-20.zip",
+    "bytes": 182481002,
+    "sha256": "066d3a66ddc9a72ebf26a9f5ada0b9592c34350d935aa4ad42f8d185d6618782",
+    "parts": [
+      {
+        "name": "Q097-v2_量子電腦學程_傳輸子十二章導覽_動畫展示版_2026-11-20.zip.part01",
+        "bytes": 29360128,
+        "sha256": "76ab823f06f4ab1f6aa9f5a43d9055861b4fc44e52b53d64c8e50aab40fde893"
+      },
+      {
+        "name": "Q097-v2_量子電腦學程_傳輸子十二章導覽_動畫展示版_2026-11-20.zip.part02",
+        "bytes": 29360128,
+        "sha256": "57b215b42d08173d614ce12e26b73a15b89804c05ba256015e63d2c2883d2b03"
+      },
+      {
+        "name": "Q097-v2_量子電腦學程_傳輸子十二章導覽_動畫展示版_2026-11-20.zip.part03",
+        "bytes": 29360128,
+        "sha256": "c1be505c7b8244be370d0a54bcfd85163d593068ab644da29cf16faf45409fe9"
+      },
+      {
+        "name": "Q097-v2_量子電腦學程_傳輸子十二章導覽_動畫展示版_2026-11-20.zip.part04",
+        "bytes": 29360128,
+        "sha256": "8f1d8699111cb15d1f67f2cdecece684c34d9cda337522c06856d4d8a0ea1c31"
+      },
+      {
+        "name": "Q097-v2_量子電腦學程_傳輸子十二章導覽_動畫展示版_2026-11-20.zip.part05",
+        "bytes": 29360128,
+        "sha256": "71c77baf81690b540a73a4a12b778deea37080dd5dd839377fcf5ef91899ef0a"
+      },
+      {
+        "name": "Q097-v2_量子電腦學程_傳輸子十二章導覽_動畫展示版_2026-11-20.zip.part06",
+        "bytes": 29360128,
+        "sha256": "71a8be50cf682e6148a24bda9b4536f729ce6133c6dbefe5281bf9edea1d84d3"
+      },
+      {
+        "name": "Q097-v2_量子電腦學程_傳輸子十二章導覽_動畫展示版_2026-11-20.zip.part07",
+        "bytes": 6320234,
+        "sha256": "2867e6d6e598ab24edf5e8ff69b550a6ab84100093d78f1326ab9b761dd43c5b"
+      }
+    ],
+    "handedOver": "2026-11-20 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1ZOQEWjgkBnzg6-88LtQiSOgQeO2JG9Wx",
+    "uploadedAt": "2026-11-19",
+    "files": [
+      {
+        "name": "Q097 導覽：一顆 transmon 的十二章旅程（動畫展示版）.mp4",
+        "id": "1NruRoioH70owlqlyeXVmGj6xiun48erZ",
+        "bytes": 82606547,
+        "url": "https://drive.google.com/file/d/1NruRoioH70owlqlyeXVmGj6xiun48erZ/view"
+      },
+      {
+        "name": "Q097 transmon 十二章導覽（動畫展示版）簡報.pptx",
+        "id": "1BPOXC9ua_7vv17ZxV5_vg4Z6Q4yE3uz5",
+        "bytes": 3173978,
+        "url": "https://docs.google.com/presentation/d/1BPOXC9ua_7vv17ZxV5_vg4Z6Q4yE3uz5/edit"
+      },
+      {
+        "name": "Q097 transmon 十二章導覽 教材.zip",
+        "id": "18B9GmRqiZYz2pZg_WiCyIUx0jM8mFzoX",
+        "bytes": 301956,
+        "url": "https://drive.google.com/file/d/18B9GmRqiZYz2pZg_WiCyIUx0jM8mFzoX/view"
+      }
+    ]
+  }
+}

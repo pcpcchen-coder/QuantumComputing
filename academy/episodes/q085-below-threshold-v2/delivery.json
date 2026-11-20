@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q085",
+  "version": "Q085-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-20",
+  "episodePath": "academy/episodes/q085-below-threshold-v2",
+  "basedOn": "academy/episodes/q085-below-threshold（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 509.933333,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "distance",
+      "title": "動畫展示：碼距越大，棋盤越大",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#qec"
+    },
+    {
+      "key": "crossing",
+      "title": "動畫展示：三條線在門檻交叉",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#qec"
+    },
+    {
+      "key": "willow",
+      "title": "動畫展示：閾值約百分之一",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#surface"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.5,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q085-below-threshold-v2-zh-TW.mp4": {
+      "bytes": 87467268,
+      "sha256": "a4bfef10afe5cd985abe2cc5d8d13ce5e7e7fb0124ff5ba8165ecccd8299958e"
+    },
+    "q085-below-threshold-v2-master.mp4": {
+      "bytes": 89106520,
+      "sha256": "4d2f939c84f665e2ab29595ca6fb36ff480bca820779b083b52260b807c2992a"
+    },
+    "narration-only.mp3": {
+      "bytes": 12240148,
+      "sha256": "3b1f2fb8caeb58a9e85d18b9e2efb35da6b74c43607026374b9af864374e113f"
+    }
+  },
+  "package": {
+    "filename": "Q085-v2_量子電腦學程_低於門檻_動畫展示版_2026-11-20.zip",
+    "bytes": 193133008,
+    "sha256": "f27356c6b634c4c9fba503266d25ccc48cb729135dbea2874aeeabbe19cf87cc",
+    "parts": [
+      {
+        "name": "Q085-v2_量子電腦學程_低於門檻_動畫展示版_2026-11-20.zip.part01",
+        "bytes": 29360128,
+        "sha256": "c441ddae1700abe26e5a253f48c892cf26818dd44be33b09bfdb8d9e22d94e01"
+      },
+      {
+        "name": "Q085-v2_量子電腦學程_低於門檻_動畫展示版_2026-11-20.zip.part02",
+        "bytes": 29360128,
+        "sha256": "8b51e1ad5e4eb05dab3332d2f8235075c6f08d876ef9b363432c706e66e1d71a"
+      },
+      {
+        "name": "Q085-v2_量子電腦學程_低於門檻_動畫展示版_2026-11-20.zip.part03",
+        "bytes": 29360128,
+        "sha256": "fbd15425141af8d7a58f0849ba0906b546b3acf3439f50c0c232f6a8bbf747af"
+      },
+      {
+        "name": "Q085-v2_量子電腦學程_低於門檻_動畫展示版_2026-11-20.zip.part04",
+        "bytes": 29360128,
+        "sha256": "d7f04743469ba034c7a1caaba344e438fa23c9ffd959b006605a3cbd4251be96"
+      },
+      {
+        "name": "Q085-v2_量子電腦學程_低於門檻_動畫展示版_2026-11-20.zip.part05",
+        "bytes": 29360128,
+        "sha256": "1b8cde05231531771e14cd3f93e0ab83a8341d92388ac06c0faee6aaa81c23b9"
+      },
+      {
+        "name": "Q085-v2_量子電腦學程_低於門檻_動畫展示版_2026-11-20.zip.part06",
+        "bytes": 29360128,
+        "sha256": "ed88ca4051fbe570c8a1861855255c20bb211cc8bcd4fe9a925cc7d5434c0816"
+      },
+      {
+        "name": "Q085-v2_量子電腦學程_低於門檻_動畫展示版_2026-11-20.zip.part07",
+        "bytes": 16972240,
+        "sha256": "d137addab21a6a54768d5b20225bc76122ee366e077130557c125ff32ab2134c"
+      }
+    ],
+    "handedOver": "2026-11-20 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1ZOQEWjgkBnzg6-88LtQiSOgQeO2JG9Wx",
+    "uploadedAt": "2026-11-19",
+    "files": [
+      {
+        "name": "Q085 低於門檻：低於門檻（動畫展示版）.mp4",
+        "id": "15LOvQqM06kwOFtznXi8p1vUMuJibVSP9",
+        "bytes": 87467268,
+        "url": "https://drive.google.com/file/d/15LOvQqM06kwOFtznXi8p1vUMuJibVSP9/view"
+      },
+      {
+        "name": "Q085 低於門檻（動畫展示版）簡報.pptx",
+        "id": "1I9rLndRXksqT1p_zhBLm-PPF2RnlnFuk",
+        "bytes": 3592358,
+        "url": "https://docs.google.com/presentation/d/1I9rLndRXksqT1p_zhBLm-PPF2RnlnFuk/edit"
+      },
+      {
+        "name": "Q085 低於門檻 教材.zip",
+        "id": "1JaVQHGpVSLY51LZuhWK8kpiUVN6xUBw7",
+        "bytes": 330160,
+        "url": "https://drive.google.com/file/d/1JaVQHGpVSLY51LZuhWK8kpiUVN6xUBw7/view"
+      }
+    ]
+  }
+}

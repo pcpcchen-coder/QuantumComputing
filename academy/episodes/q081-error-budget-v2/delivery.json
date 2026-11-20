@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q081",
+  "version": "Q081-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-19",
+  "episodePath": "academy/episodes/q081-error-budget-v2",
+  "basedOn": "academy/episodes/q081-error-budget（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 444.933333,
+  "pages": 14,
+  "demos": [
+    {
+      "key": "compound",
+      "title": "動畫展示：雜訊就是連乘",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#circuit"
+    },
+    {
+      "key": "deeper",
+      "title": "動畫展示：閘越多，越模糊",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#circuit"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.3,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q081-error-budget-v2-zh-TW.mp4": {
+      "bytes": 81046260,
+      "sha256": "7a2b83e8670644830878b539e76baa70e7f5378dfa1998d100bdb0ad19e38575"
+    },
+    "q081-error-budget-v2-master.mp4": {
+      "bytes": 83351481,
+      "sha256": "75ff4096a4be6f97d0c357f46fefbaceb127112c8a1f82e151bd48c50189c16c"
+    },
+    "narration-only.mp3": {
+      "bytes": 10679764,
+      "sha256": "f2af38caa0c66c0d7ef7904c17c7c1bb35d29a097573f597e7343faf72b6bc77"
+    }
+  },
+  "package": {
+    "filename": "Q081-v2_量子電腦學程_錯誤預算_動畫展示版_2026-11-19.zip",
+    "bytes": 178732404,
+    "sha256": "c4ae5c6d8401ddbfa27398ce3544d4776f04a98c87d19d2b732e66915d685a95",
+    "parts": [
+      {
+        "name": "Q081-v2_量子電腦學程_錯誤預算_動畫展示版_2026-11-19.zip.part01",
+        "bytes": 29360128,
+        "sha256": "4d767eb6f7a04cad58243f5c496f839bd296752d1ac5c2d9a591e7ae10583415"
+      },
+      {
+        "name": "Q081-v2_量子電腦學程_錯誤預算_動畫展示版_2026-11-19.zip.part02",
+        "bytes": 29360128,
+        "sha256": "ff47b1fd3fdf10dd421c6472535a9504a38a195eac3126bca15a4e5e93d7d351"
+      },
+      {
+        "name": "Q081-v2_量子電腦學程_錯誤預算_動畫展示版_2026-11-19.zip.part03",
+        "bytes": 29360128,
+        "sha256": "20db71d5a0142501490504a791f9c890655d4cd559cf90a2deac067dc657c584"
+      },
+      {
+        "name": "Q081-v2_量子電腦學程_錯誤預算_動畫展示版_2026-11-19.zip.part04",
+        "bytes": 29360128,
+        "sha256": "41dd8535e00f9fba1b49b65e98e6d2e7c489e17745691f0d2aa49465365a7b7f"
+      },
+      {
+        "name": "Q081-v2_量子電腦學程_錯誤預算_動畫展示版_2026-11-19.zip.part05",
+        "bytes": 29360128,
+        "sha256": "3458f0d60042d91ce01eec19f6151e747e0ae2a1f87b693a1767c54adbd620f5"
+      },
+      {
+        "name": "Q081-v2_量子電腦學程_錯誤預算_動畫展示版_2026-11-19.zip.part06",
+        "bytes": 29360128,
+        "sha256": "5831cc470036f39cb21de7dbd6cee936ff3f9ee7035e67f207efa54f7aa33459"
+      },
+      {
+        "name": "Q081-v2_量子電腦學程_錯誤預算_動畫展示版_2026-11-19.zip.part07",
+        "bytes": 2571636,
+        "sha256": "8de29a9e488d50339ff760754a00b8d7d05214540c50b409e05d2ddc81caf975"
+      }
+    ],
+    "handedOver": "2026-11-19 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1ZOQEWjgkBnzg6-88LtQiSOgQeO2JG9Wx",
+    "uploadedAt": "2026-11-19",
+    "files": [
+      {
+        "name": "Q081 錯誤預算：錯誤預算：線路能跑多深（動畫展示版）.mp4",
+        "id": "1QJFCkxo5BSKuO1xNaAEouQdq-bCraju6",
+        "bytes": 81046260,
+        "url": "https://drive.google.com/file/d/1QJFCkxo5BSKuO1xNaAEouQdq-bCraju6/view"
+      },
+      {
+        "name": "Q081 錯誤預算（動畫展示版）簡報.pptx",
+        "id": "1Zl2YrNimAR9v_WIR_ghleVj9I_YYr49O",
+        "bytes": 2962179,
+        "url": "https://docs.google.com/presentation/d/1Zl2YrNimAR9v_WIR_ghleVj9I_YYr49O/edit"
+      },
+      {
+        "name": "Q081 錯誤預算 教材.zip",
+        "id": "1T1UVuYL_CFKTM4SFc7oAdUWLQRpE5YmL",
+        "bytes": 338437,
+        "url": "https://drive.google.com/file/d/1T1UVuYL_CFKTM4SFc7oAdUWLQRpE5YmL/view"
+      }
+    ]
+  }
+}

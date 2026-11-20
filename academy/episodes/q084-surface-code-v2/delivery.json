@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q084",
+  "version": "Q084-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-20",
+  "episodePath": "academy/episodes/q084-surface-code-v2",
+  "basedOn": "academy/episodes/q084-surface-code（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 502.656,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "lattice",
+      "title": "動畫展示：一個翻轉錯誤留下的痕跡",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#surface"
+    },
+    {
+      "key": "cycle",
+      "title": "動畫展示：一輪錯誤、症狀、解碼、修正",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#qec"
+    },
+    {
+      "key": "fooled",
+      "title": "動畫展示：兩個錯誤騙過解碼器",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#surface"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.5,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q084-surface-code-v2-zh-TW.mp4": {
+      "bytes": 87617454,
+      "sha256": "763d14e4f5d0f353e9d7a5c67a2d687a7e21682244361f927249d841dd6fd82e"
+    },
+    "q084-surface-code-v2-master.mp4": {
+      "bytes": 89332248,
+      "sha256": "33723dd46ab3d820e5fcb4200fae4616d1f27baf6e53ed4c606521caa8173f3f"
+    },
+    "narration-only.mp3": {
+      "bytes": 12065044,
+      "sha256": "0149ba5efa719b6b013633aa2c3f012f0236f673abce8a3c009f443eaba1a2a3"
+    }
+  },
+  "package": {
+    "filename": "Q084-v2_量子電腦學程_表面碼_動畫展示版_2026-11-20.zip",
+    "bytes": 193425374,
+    "sha256": "a04adcf968a6807388e3e48178b104bc3548b5596714d3cfcd01814bb8e6bea3",
+    "parts": [
+      {
+        "name": "Q084-v2_量子電腦學程_表面碼_動畫展示版_2026-11-20.zip.part01",
+        "bytes": 29360128,
+        "sha256": "48820ec9d823da6fdde200549781b6e6ca8ea2a6432731fa75b57ba9dd9c036a"
+      },
+      {
+        "name": "Q084-v2_量子電腦學程_表面碼_動畫展示版_2026-11-20.zip.part02",
+        "bytes": 29360128,
+        "sha256": "57aff87d0c564472a5fdf0de7097013d8eb504981c78c306bc717b6993155ca7"
+      },
+      {
+        "name": "Q084-v2_量子電腦學程_表面碼_動畫展示版_2026-11-20.zip.part03",
+        "bytes": 29360128,
+        "sha256": "db15065a3c34468c4b68b0b456ad379e6a04b314abfde171441fc85a07b44dc5"
+      },
+      {
+        "name": "Q084-v2_量子電腦學程_表面碼_動畫展示版_2026-11-20.zip.part04",
+        "bytes": 29360128,
+        "sha256": "e5dc6a8c9e63cb600f6507254137c4ce97dedbe6d6c7e870e6ec02da01c67f35"
+      },
+      {
+        "name": "Q084-v2_量子電腦學程_表面碼_動畫展示版_2026-11-20.zip.part05",
+        "bytes": 29360128,
+        "sha256": "9e00333df0cb45de9601633f09defa9584ed5da5714a00f2e4fa956a03f32f09"
+      },
+      {
+        "name": "Q084-v2_量子電腦學程_表面碼_動畫展示版_2026-11-20.zip.part06",
+        "bytes": 29360128,
+        "sha256": "e5ffca3f748cd5bd37223b3d14d85b1ebe6bf92837e5f550c889333e35cd1701"
+      },
+      {
+        "name": "Q084-v2_量子電腦學程_表面碼_動畫展示版_2026-11-20.zip.part07",
+        "bytes": 17264606,
+        "sha256": "42987815a0e39f3d0ac10a4611316e45ec2b7c316c09d6dbfb1ba37f5ab0fd4b"
+      }
+    ],
+    "handedOver": "2026-11-20 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1ZOQEWjgkBnzg6-88LtQiSOgQeO2JG9Wx",
+    "uploadedAt": "2026-11-19",
+    "files": [
+      {
+        "name": "Q084 表面碼：表面碼（動畫展示版）.mp4",
+        "id": "1xRxjikiyyQwSewBkMEx-usHRWtM4y257",
+        "bytes": 87617454,
+        "url": "https://drive.google.com/file/d/1xRxjikiyyQwSewBkMEx-usHRWtM4y257/view"
+      },
+      {
+        "name": "Q084 表面碼（動畫展示版）簡報.pptx",
+        "id": "1WhP33n7EtSOshKsiCOpECo8rmAXx3HPV",
+        "bytes": 3658685,
+        "url": "https://docs.google.com/presentation/d/1WhP33n7EtSOshKsiCOpECo8rmAXx3HPV/edit"
+      },
+      {
+        "name": "Q084 表面碼 教材.zip",
+        "id": "1wBhHkbUp8Z7YEgILhXM7ma3DEEf-HXAP",
+        "bytes": 390040,
+        "url": "https://drive.google.com/file/d/1wBhHkbUp8Z7YEgILhXM7ma3DEEf-HXAP/view"
+      }
+    ]
+  }
+}

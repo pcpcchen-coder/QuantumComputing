@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q073",
+  "version": "Q073-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-19",
+  "episodePath": "academy/episodes/q073-loading-rearrangement-v2",
+  "basedOn": "academy/episodes/q073-loading-rearrangement（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 504.384,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "loading",
+      "title": "動畫展示：隨機裝載與成像",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/atoms.html#tweezer"
+    },
+    {
+      "key": "odds",
+      "title": "動畫展示：全部填滿的機率",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/atoms.html#tweezer"
+    },
+    {
+      "key": "rearrange",
+      "title": "動畫展示：移動光鑷補滿空位",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/atoms.html#tweezer"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.5,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q073-loading-rearrangement-v2-zh-TW.mp4": {
+      "bytes": 90945804,
+      "sha256": "0b420bb04a40478a4850f292943586d5d5a307dd0782fcf9907c58b5f0e228c5"
+    },
+    "q073-loading-rearrangement-v2-master.mp4": {
+      "bytes": 92999364,
+      "sha256": "e389f0589ea23bcf52b646982d30c5285b0ba33eea071d1362656721339dd30a"
+    },
+    "narration-only.mp3": {
+      "bytes": 12106516,
+      "sha256": "c7d669840cbdfc6fb4f0833632f7b4db5d693835acc8277814d4dd8fcda8f0f8"
+    }
+  },
+  "package": {
+    "filename": "Q073-v2_量子電腦學程_裝載與重排_動畫展示版_2026-11-19.zip",
+    "bytes": 200467077,
+    "sha256": "4965216e0e7100aafa762484a9df8226bd1c28d95f970a79d79efadefb744103",
+    "parts": [
+      {
+        "name": "Q073-v2_量子電腦學程_裝載與重排_動畫展示版_2026-11-19.zip.part01",
+        "bytes": 29360128,
+        "sha256": "47b1c46f15e53728bec2384b4843bf210cbaf957575731260b6ffbd887437b89"
+      },
+      {
+        "name": "Q073-v2_量子電腦學程_裝載與重排_動畫展示版_2026-11-19.zip.part02",
+        "bytes": 29360128,
+        "sha256": "c975f8489ce147f502b138f3420828ebd12f988f0465638d700344890c881665"
+      },
+      {
+        "name": "Q073-v2_量子電腦學程_裝載與重排_動畫展示版_2026-11-19.zip.part03",
+        "bytes": 29360128,
+        "sha256": "9a96968033dd24c358e4cd6a847deb43e3cd6734504173d4d886c4676c8503fa"
+      },
+      {
+        "name": "Q073-v2_量子電腦學程_裝載與重排_動畫展示版_2026-11-19.zip.part04",
+        "bytes": 29360128,
+        "sha256": "46794453ce25c35c4ec6034cf229666c24a78eb8741dc094e01cc49c5b15a0c2"
+      },
+      {
+        "name": "Q073-v2_量子電腦學程_裝載與重排_動畫展示版_2026-11-19.zip.part05",
+        "bytes": 29360128,
+        "sha256": "150e462b179fe8221f6be9d0feb61c6bb9d125af8870b28254d68633a099a26b"
+      },
+      {
+        "name": "Q073-v2_量子電腦學程_裝載與重排_動畫展示版_2026-11-19.zip.part06",
+        "bytes": 29360128,
+        "sha256": "8131349282a7b7fcb03d4ce336e8b6e19278d33e6e20c67665e079c9e72170df"
+      },
+      {
+        "name": "Q073-v2_量子電腦學程_裝載與重排_動畫展示版_2026-11-19.zip.part07",
+        "bytes": 24306309,
+        "sha256": "dca485a653215fb933a8ba911d40d32a4c0c08c6b2f11370b5f5e4102412b992"
+      }
+    ],
+    "handedOver": "2026-11-19 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1ZOQEWjgkBnzg6-88LtQiSOgQeO2JG9Wx",
+    "uploadedAt": "2026-11-19",
+    "files": [
+      {
+        "name": "Q073 裝載與重排：裝載與重排（動畫展示版）.mp4",
+        "id": "1djBZJNDWvgS-xhmeQudU6eq3Q75aXfG9",
+        "bytes": 90945804,
+        "url": "https://drive.google.com/file/d/1djBZJNDWvgS-xhmeQudU6eq3Q75aXfG9/view"
+      },
+      {
+        "name": "Q073 裝載與重排（動畫展示版）簡報.pptx",
+        "id": "1_jEzdAAbwBtDBzCuMscpkzm5Xb1SQVPn",
+        "bytes": 3741912,
+        "url": "https://docs.google.com/presentation/d/1_jEzdAAbwBtDBzCuMscpkzm5Xb1SQVPn/edit"
+      },
+      {
+        "name": "Q073 裝載與重排 教材.zip",
+        "id": "1AUhf1BjYh8bLAvBy3FSsl2Ge3hygLUQR",
+        "bytes": 395855,
+        "url": "https://drive.google.com/file/d/1AUhf1BjYh8bLAvBy3FSsl2Ge3hygLUQR/view"
+      }
+    ]
+  }
+}

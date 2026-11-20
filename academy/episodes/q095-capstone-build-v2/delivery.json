@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q095",
+  "version": "Q095-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-20",
+  "episodePath": "academy/episodes/q095-capstone-build-v2",
+  "basedOn": "academy/episodes/q095-capstone-build（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 419.712,
+  "pages": 13,
+  "demos": [
+    {
+      "key": "verify",
+      "title": "動畫展示：跑一千次來對答案",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#workflow"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.3,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q095-capstone-build-v2-zh-TW.mp4": {
+      "bytes": 78327542,
+      "sha256": "f340a765b8033c5a02334e2dd078d641ac21fa217248d4ec3a6d66a2618a1e06"
+    },
+    "q095-capstone-build-v2-master.mp4": {
+      "bytes": 81000943,
+      "sha256": "b45fb21a2ce154314cf09906d76fe0689240c8d77969c4af95c6da678d5ace13"
+    },
+    "narration-only.mp3": {
+      "bytes": 10074388,
+      "sha256": "b088490eed750f43de0577eef4f7ab6cfcbc5d2386b8a56a01ee56e97c0c3e89"
+    }
+  },
+  "package": {
+    "filename": "Q095-v2_量子電腦學程_畢業專題製作_動畫展示版_2026-11-20.zip",
+    "bytes": 173039636,
+    "sha256": "5f909950e638d66818ebaaaf57aa570614fb9d3c255eeb3d9438f6434482f14e",
+    "parts": [
+      {
+        "name": "Q095-v2_量子電腦學程_畢業專題製作_動畫展示版_2026-11-20.zip.part01",
+        "bytes": 29360128,
+        "sha256": "4834124c3e687239f1dddfab141b72735d0d959bd46a82b5904f9fbe5f9f131a"
+      },
+      {
+        "name": "Q095-v2_量子電腦學程_畢業專題製作_動畫展示版_2026-11-20.zip.part02",
+        "bytes": 29360128,
+        "sha256": "a8705d72a3bb32f246639fc0a2fe4f35b85743a995fb16307dac80d68d42fd87"
+      },
+      {
+        "name": "Q095-v2_量子電腦學程_畢業專題製作_動畫展示版_2026-11-20.zip.part03",
+        "bytes": 29360128,
+        "sha256": "c5b221aef65a7172782a22af83e02ee241a68b7e7618f448ada553b4d7a19741"
+      },
+      {
+        "name": "Q095-v2_量子電腦學程_畢業專題製作_動畫展示版_2026-11-20.zip.part04",
+        "bytes": 29360128,
+        "sha256": "6584c6d1f62c8c0722fe2a48392ba55005fbc330554d04c789d8e335cb059236"
+      },
+      {
+        "name": "Q095-v2_量子電腦學程_畢業專題製作_動畫展示版_2026-11-20.zip.part05",
+        "bytes": 29360128,
+        "sha256": "7cc82f4c5c75a840b20e7464864f7b9c3f1e3cfbd2a203b725ab01dbc1dff7c7"
+      },
+      {
+        "name": "Q095-v2_量子電腦學程_畢業專題製作_動畫展示版_2026-11-20.zip.part06",
+        "bytes": 26238996,
+        "sha256": "4cb1adac0e8bd8384bd36d9db88dc5f2bb927ac480b9c666858aaefbac35525b"
+      }
+    ],
+    "handedOver": "2026-11-20 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1ZOQEWjgkBnzg6-88LtQiSOgQeO2JG9Wx",
+    "uploadedAt": "2026-11-19",
+    "files": [
+      {
+        "name": "Q095 畢業專題製作：畢業專題製作（動畫展示版）.mp4",
+        "id": "1ZW2dQ9yoRBN4KwmePnBUwYtQc_iQNwYl",
+        "bytes": 78327542,
+        "url": "https://drive.google.com/file/d/1ZW2dQ9yoRBN4KwmePnBUwYtQc_iQNwYl/view"
+      },
+      {
+        "name": "Q095 畢業專題製作（動畫展示版）簡報.pptx",
+        "id": "1WCIQUAjB0R0Su4hAmyQlylq4ceu6LwO8",
+        "bytes": 2785321,
+        "url": "https://docs.google.com/presentation/d/1WCIQUAjB0R0Su4hAmyQlylq4ceu6LwO8/edit"
+      },
+      {
+        "name": "Q095 畢業專題製作 教材.zip",
+        "id": "16DVaZxj-hE3DCa1K12vBg0MWhn6ztqcH",
+        "bytes": 402576,
+        "url": "https://drive.google.com/file/d/16DVaZxj-hE3DCa1K12vBg0MWhn6ztqcH/view"
+      }
+    ]
+  }
+}

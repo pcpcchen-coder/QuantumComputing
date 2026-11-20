@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q079",
+  "version": "Q079-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-19",
+  "episodePath": "academy/episodes/q079-topological-nv-v2",
+  "basedOn": "academy/episodes/q079-topological-nv（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 448.832,
+  "pages": 13,
+  "demos": [
+    {
+      "key": "surface",
+      "title": "動畫展示：只怕貫穿整片的錯誤",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#qec"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.3,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q079-topological-nv-v2-zh-TW.mp4": {
+      "bytes": 80547023,
+      "sha256": "ceabc0dd095377c8736f93a388ad009541342fc28d8ab166b9bc78c468f04c7d"
+    },
+    "q079-topological-nv-v2-master.mp4": {
+      "bytes": 82993805,
+      "sha256": "ae69716dcaa0c0a8169ba88a8cf718ef6dd51336b412400a0ae03fd7dc5d6342"
+    },
+    "narration-only.mp3": {
+      "bytes": 10773652,
+      "sha256": "d3ac849659a2ccd7d51c79a3c9a39aa133a00069f945b8653430f60915868c03"
+    }
+  },
+  "package": {
+    "filename": "Q079-v2_量子電腦學程_拓樸量子位元與NV色心_動畫展示版_2026-11-19.zip",
+    "bytes": 177954131,
+    "sha256": "27938b59e5f15b819f019bfe80dc7a97eef421cce48ebc050d7378066681875d",
+    "parts": [
+      {
+        "name": "Q079-v2_量子電腦學程_拓樸量子位元與NV色心_動畫展示版_2026-11-19.zip.part01",
+        "bytes": 29360128,
+        "sha256": "84a76acbc90355d1c33a17f1045cf13688e8d013d061ac01d8b624622598eff8"
+      },
+      {
+        "name": "Q079-v2_量子電腦學程_拓樸量子位元與NV色心_動畫展示版_2026-11-19.zip.part02",
+        "bytes": 29360128,
+        "sha256": "6be5c22965d81a52ddd768f0514622e4450913d8abbb6fa1ead0b71192c49d13"
+      },
+      {
+        "name": "Q079-v2_量子電腦學程_拓樸量子位元與NV色心_動畫展示版_2026-11-19.zip.part03",
+        "bytes": 29360128,
+        "sha256": "0fd4a3df7029511d0a579491b7cbb0e847801f29d1d13cca0df81539634939e6"
+      },
+      {
+        "name": "Q079-v2_量子電腦學程_拓樸量子位元與NV色心_動畫展示版_2026-11-19.zip.part04",
+        "bytes": 29360128,
+        "sha256": "b527c579260ffeee0843c90bd7f2a06d45f26944b8ce02eabeacd01d929dd2c7"
+      },
+      {
+        "name": "Q079-v2_量子電腦學程_拓樸量子位元與NV色心_動畫展示版_2026-11-19.zip.part05",
+        "bytes": 29360128,
+        "sha256": "f54331c1b79c11680144aee563136c954675503eed6df3b30bd5d890e4686e0f"
+      },
+      {
+        "name": "Q079-v2_量子電腦學程_拓樸量子位元與NV色心_動畫展示版_2026-11-19.zip.part06",
+        "bytes": 29360128,
+        "sha256": "0e7f593b32015b572dd01aa0e18651a90509f0ec6636759cd5ee773c4979ed75"
+      },
+      {
+        "name": "Q079-v2_量子電腦學程_拓樸量子位元與NV色心_動畫展示版_2026-11-19.zip.part07",
+        "bytes": 1793363,
+        "sha256": "23dd1a97da324d6e9aa20b4cfbfa006b325d3e1749430166e98ed90cbd7b497e"
+      }
+    ],
+    "handedOver": "2026-11-19 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1ZOQEWjgkBnzg6-88LtQiSOgQeO2JG9Wx",
+    "uploadedAt": "2026-11-19",
+    "files": [
+      {
+        "name": "Q079 拓樸量子位元與NV色心：拓樸量子位元與 NV 色心（動畫展示版）.mp4",
+        "id": "1hEh3e0wFmbnGSPRT3w-jO234ClbLl2wF",
+        "bytes": 80547023,
+        "url": "https://drive.google.com/file/d/1hEh3e0wFmbnGSPRT3w-jO234ClbLl2wF/view"
+      },
+      {
+        "name": "Q079 拓樸量子位元與NV色心（動畫展示版）簡報.pptx",
+        "id": "1ajQqZyGJ2KCPWgGbhXMfBQeyskSjGMt4",
+        "bytes": 2905329,
+        "url": "https://docs.google.com/presentation/d/1ajQqZyGJ2KCPWgGbhXMfBQeyskSjGMt4/edit"
+      },
+      {
+        "name": "Q079 拓樸量子位元與NV色心 教材.zip",
+        "id": "1drf_Yp6nRe2sBgrZuK-3knY__9NqULOK",
+        "bytes": 414986,
+        "url": "https://drive.google.com/file/d/1drf_Yp6nRe2sBgrZuK-3knY__9NqULOK/view"
+      }
+    ]
+  }
+}

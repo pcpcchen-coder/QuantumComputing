@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q074",
+  "version": "Q074-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-19",
+  "episodePath": "academy/episodes/q074-rydberg-blockade-cz-v2",
+  "basedOn": "academy/episodes/q074-rydberg-blockade-cz（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 511.733333,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "levels",
+      "title": "動畫展示：芮德堡態在哪裡",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/atoms.html#atomqubit"
+    },
+    {
+      "key": "distance",
+      "title": "動畫展示：改距離看阻斷",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/atoms.html#rydberg"
+    },
+    {
+      "key": "cz",
+      "title": "動畫展示：兩脈衝協定",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/atoms.html#rydberg"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.4,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q074-rydberg-blockade-cz-v2-zh-TW.mp4": {
+      "bytes": 89105256,
+      "sha256": "84ca62ccf5d178f76f6904eb475116feb96960dc7fd8d26cac6a93a041f61401"
+    },
+    "q074-rydberg-blockade-cz-v2-master.mp4": {
+      "bytes": 91209088,
+      "sha256": "8dc569c41f49e6ff6a95cf94c877a49452f888c01b417cb9d114ad47cbf1b362"
+    },
+    "narration-only.mp3": {
+      "bytes": 12282772,
+      "sha256": "4867363261cc1828fd05fd6404c43637d4cf0d8978c93b6cfe1f6da0f3d89376"
+    }
+  },
+  "package": {
+    "filename": "Q074-v2_量子電腦學程_芮德堡阻斷與CZ_動畫展示版_2026-11-19.zip",
+    "bytes": 196754363,
+    "sha256": "b623593c32c76834c6c2f05de760984caf623f1a3d24a5a503299b63edec5893",
+    "parts": [
+      {
+        "name": "Q074-v2_量子電腦學程_芮德堡阻斷與CZ_動畫展示版_2026-11-19.zip.part01",
+        "bytes": 29360128,
+        "sha256": "f4385a4096124beec7331cf0bc13478800d138fb79e69eaf02ac499b37bba0a8"
+      },
+      {
+        "name": "Q074-v2_量子電腦學程_芮德堡阻斷與CZ_動畫展示版_2026-11-19.zip.part02",
+        "bytes": 29360128,
+        "sha256": "c7f54dbba9376da4f74a81168f8bb0d28050417efec75dea3bbe1a9e7f9a3986"
+      },
+      {
+        "name": "Q074-v2_量子電腦學程_芮德堡阻斷與CZ_動畫展示版_2026-11-19.zip.part03",
+        "bytes": 29360128,
+        "sha256": "17cd574e95f8ce85750074500bb9861e3eec4aca38b1bc1ace79863549e92e98"
+      },
+      {
+        "name": "Q074-v2_量子電腦學程_芮德堡阻斷與CZ_動畫展示版_2026-11-19.zip.part04",
+        "bytes": 29360128,
+        "sha256": "fe0486bcc9d462c299713b63c599e19dd6c00205603f8a32f783ecd09b67bba3"
+      },
+      {
+        "name": "Q074-v2_量子電腦學程_芮德堡阻斷與CZ_動畫展示版_2026-11-19.zip.part05",
+        "bytes": 29360128,
+        "sha256": "448922214dfb93d4595c4838ea3076c7fc176a68086f389ac5c8daf6fa3dd62a"
+      },
+      {
+        "name": "Q074-v2_量子電腦學程_芮德堡阻斷與CZ_動畫展示版_2026-11-19.zip.part06",
+        "bytes": 29360128,
+        "sha256": "3f2127f1f26bb8383e41c8c91da8651853f5a569c7c45c88cdbd7aa959a5d6f9"
+      },
+      {
+        "name": "Q074-v2_量子電腦學程_芮德堡阻斷與CZ_動畫展示版_2026-11-19.zip.part07",
+        "bytes": 20593595,
+        "sha256": "2631035925fb97cb477619e4bbe1448e305eb8311b4105e4425a73676e326a9e"
+      }
+    ],
+    "handedOver": "2026-11-19 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1ZOQEWjgkBnzg6-88LtQiSOgQeO2JG9Wx",
+    "uploadedAt": "2026-11-19",
+    "files": [
+      {
+        "name": "Q074 芮德堡阻斷與CZ：芮德堡阻斷與 CZ（動畫展示版）.mp4",
+        "id": "1FSUH06H2d88MpJRTXHYX1zQ6kMiBwGhr",
+        "bytes": 89105256,
+        "url": "https://drive.google.com/file/d/1FSUH06H2d88MpJRTXHYX1zQ6kMiBwGhr/view"
+      },
+      {
+        "name": "Q074 芮德堡阻斷與CZ（動畫展示版）簡報.pptx",
+        "id": "1FTHro_rxFIZ0qNu1LVp0Yg8u1JGx7Ifk",
+        "bytes": 3485345,
+        "url": "https://docs.google.com/presentation/d/1FTHro_rxFIZ0qNu1LVp0Yg8u1JGx7Ifk/edit"
+      },
+      {
+        "name": "Q074 芮德堡阻斷與CZ 教材.zip",
+        "id": "1NU9UcaRjT6rdiy1thGV0Ce4mTcA63udj",
+        "bytes": 379477,
+        "url": "https://drive.google.com/file/d/1NU9UcaRjT6rdiy1thGV0Ce4mTcA63udj/view"
+      }
+    ]
+  }
+}

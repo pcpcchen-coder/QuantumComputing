@@ -1,0 +1,394 @@
+{
+  "version": 2,
+  "opening": 60.277,
+  "scenes": [
+    {
+      "page": 1,
+      "kind": "slide",
+      "v1slide": 1,
+      "title": "磁光阱與光鑷",
+      "duration": 29.52,
+      "sentences": [
+        {
+          "text": "歡迎回到父子科技學院的量子電腦學程，我是陳犀牛，今天是量子第七十二堂，磁光阱與光鑷，這是依課綱製作的課前教學版，並非實際上課錄音。",
+          "start": 0.0,
+          "end": 12.016009
+        },
+        {
+          "text": "上一堂我們看離子怎麼用螢光讀出零或一，又怎麼在晶片上被搬來搬去；今天換到另一種平台：中性原子。",
+          "start": 12.196009,
+          "end": 21.188026999999998
+        },
+        {
+          "text": "室溫下的原子每秒飛好幾百公尺，今天要回答：怎麼先讓它慢下來，再用光一顆一顆抓住它？",
+          "start": 21.368026999999998,
+          "end": 29.304035999999996
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q072-mot-optical-tweezers/audio/slide_01.mp3"
+    },
+    {
+      "page": 2,
+      "kind": "slide",
+      "v1slide": 2,
+      "title": "三步：冷、抓、排",
+      "duration": 27.6,
+      "sentences": [
+        {
+          "text": "今天分三步：先用磁光阱把一大團原子冷下來，再用聚焦的雷射抓住單顆原子，最後看怎麼把很多支光鑷排成陣列。",
+          "start": 0.0,
+          "end": 9.784014
+        },
+        {
+          "text": "今天的好玩機制是科學實驗，我們要用吹風機和乒乓球，親手感受一下被力場抓住是什麼感覺。",
+          "start": 9.964014,
+          "end": 18.308028
+        },
+        {
+          "text": "今天的作品是一張光鑷原理圖，把雷射從哪裡出發、經過哪些元件、怎麼抓住原子，全部畫出來。",
+          "start": 18.488028,
+          "end": 27.384037
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q072-mot-optical-tweezers/audio/slide_02.mp3"
+    },
+    {
+      "page": 3,
+      "kind": "slide",
+      "v1slide": 3,
+      "title": "中性原子系統全景",
+      "duration": 27.864,
+      "sentences": [
+        {
+          "text": "中性原子量子電腦不需要稀釋冷凍機，它的心臟是一張光學桌，正中間有一個超高真空的玻璃腔，原子就關在裡面。",
+          "start": 0.0,
+          "end": 9.544014
+        },
+        {
+          "text": "原子來自一小塊銣原子源，先用六道七百八十奈米的雷射，加上一對線圈，組成磁光阱把原子冷下來。",
+          "start": 9.724014,
+          "end": 18.764014000000003
+        },
+        {
+          "text": "另一條光路是光鑷：高功率的紅外雷射經過空間光調變器和聲光偏轉器，再由物鏡聚焦到原子身上。",
+          "start": 18.944014000000003,
+          "end": 27.648028000000004
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q072-mot-optical-tweezers/audio/slide_03.mp3"
+    },
+    {
+      "page": 4,
+      "kind": "demo",
+      "demo": "system",
+      "title": "動畫展示：光學桌上的磁光阱與光鑷",
+      "duration": 36.552,
+      "sentences": [
+        {
+          "text": "打開中性原子動畫的系統全景，整張光學桌上擺滿雷射和鏡子，後面還站著一排機櫃，正中間透明的小盒子就是玻璃真空腔。",
+          "start": 0.0,
+          "end": 10.576009
+        },
+        {
+          "text": "按只看雷射，電線、水管和電力線全都藏起來，只剩彩色光束：粉紅色的光鑷光從左邊出發，穿過空間光調變器和聲光偏轉器，再轉進物鏡。",
+          "start": 10.756009,
+          "end": 23.516009
+        },
+        {
+          "text": "再按真空腔特寫，鏡頭飛近，三條淡紅色的冷卻光在腔中央交叉，代表六道對打的雷射，上下兩個銅色線圈夾著它，中間一小片青色原子正在閃爍。",
+          "start": 23.696009,
+          "end": 36.336009
+        }
+      ],
+      "audio": "audio/demo_system.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/atoms.html#atomsys"
+    },
+    {
+      "page": 5,
+      "kind": "slide",
+      "v1slide": 4,
+      "title": "從原子氣體到單顆原子",
+      "duration": 25.032,
+      "sentences": [
+        {
+          "text": "原子要經過四步：第一步，從室溫的銣蒸氣出發，原子到處亂飛，什麼都抓不住。",
+          "start": 0.0,
+          "end": 7.552018
+        },
+        {
+          "text": "第二步進磁光阱，冷到大約一百微克耳文；第三步用偏振梯度冷卻，再降到大約十微克耳文。",
+          "start": 7.732018,
+          "end": 16.052018
+        },
+        {
+          "text": "第四步，把冷原子裝進光鑷；這種冷卻只在每一輪開始時做一次，之後原子就留在光鑷裡計算。",
+          "start": 16.232018,
+          "end": 24.816032
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q072-mot-optical-tweezers/audio/slide_04.mp3"
+    },
+    {
+      "page": 6,
+      "kind": "slide",
+      "v1slide": 5,
+      "title": "比一比：室溫和磁光阱",
+      "duration": 24.216,
+      "sentences": [
+        {
+          "text": "比一比：室溫下的銣原子，每秒大約跑三百公尺，一眨眼就飛出真空腔。",
+          "start": 0.0,
+          "end": 7.072018
+        },
+        {
+          "text": "進了磁光阱，速度降到每秒大約零點一公尺，慢了大約三千倍，就像在光做的糖漿裡走路。",
+          "start": 7.252018,
+          "end": 15.236032
+        },
+        {
+          "text": "光鑷的坑大約一毫克耳文深，而原子只有十到一百微克耳文，比坑淺很多，所以掉進去就爬不出來。",
+          "start": 15.416032,
+          "end": 24.000045999999998
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q072-mot-optical-tweezers/audio/slide_05.mp3"
+    },
+    {
+      "page": 7,
+      "kind": "slide",
+      "v1slide": 6,
+      "title": "磁光阱怎麼運作",
+      "duration": 28.272,
+      "sentences": [
+        {
+          "text": "磁光阱有六道雷射從三個方向對打，頻率故意調得比原子吸收的低一點，迎面飛來的原子比較容易吸光，就被一下一下減速。",
+          "start": 0.0,
+          "end": 9.904014
+        },
+        {
+          "text": "再加一對電流方向相反的線圈，中心的磁場是零，往外越來越強，配合光的偏振，原子離中心越遠，被推回中心的力就越大。",
+          "start": 10.084014,
+          "end": 20.756031999999998
+        },
+        {
+          "text": "幾秒鐘之內，磁光阱就能收集一百萬到一億顆原子，變成一團冷冷的原子雲。",
+          "start": 20.936031999999997,
+          "end": 28.056032
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q072-mot-optical-tweezers/audio/slide_06.mp3"
+    },
+    {
+      "page": 8,
+      "kind": "slide",
+      "v1slide": 7,
+      "title": "光鑷：用光把原子吸過去",
+      "duration": 26.808,
+      "sentences": [
+        {
+          "text": "光鑷的雷射頻率比原子的共振低，這時原子會被拉向光最強的地方，這個力叫做光學偶極力。",
+          "start": 0.0,
+          "end": 7.7920180000000006
+        },
+        {
+          "text": "用高數值孔徑的物鏡把光聚焦成大約一微米的小光點，就變成一個三度空間的小坑，原子掉進去就待在光點中央。",
+          "start": 7.972018,
+          "end": 16.916032
+        },
+        {
+          "text": "光鑷的頻率離共振很遠，原子幾乎不散射光子，所以能安安靜靜待在裡面；它是被光吸過去，不是被夾子夾住。",
+          "start": 17.096032,
+          "end": 26.592041000000002
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q072-mot-optical-tweezers/audio/slide_07.mp3"
+    },
+    {
+      "page": 9,
+      "kind": "slide",
+      "v1slide": 8,
+      "title": "碰撞阻斷：一格零或一顆",
+      "duration": 23.28,
+      "sentences": [
+        {
+          "text": "把光鑷打進原子雲裡，原子會掉進光鑷，可是光鑷實在太小了。",
+          "start": 0.0,
+          "end": 5.944014
+        },
+        {
+          "text": "如果兩顆原子同時掉進同一支光鑷，它們會在光照下互相碰撞，一起被踢出去，這叫做碰撞阻斷。",
+          "start": 6.124014,
+          "end": 14.780023
+        },
+        {
+          "text": "所以每一格最後不是零顆就是一顆，大約一半的機率有原子，要拍一張照片才知道哪幾格是空的。",
+          "start": 14.960023,
+          "end": 23.064037
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q072-mot-optical-tweezers/audio/slide_08.mp3"
+    },
+    {
+      "page": 10,
+      "kind": "demo",
+      "demo": "loading",
+      "title": "動畫展示：裝載光鑷，約一半有原子",
+      "duration": 36.0,
+      "sentences": [
+        {
+          "text": "打開光鑷裝載場景，畫面上是十乘十個小圓圈，每個圓圈是一支光鑷，中間的金色方框是之後要填滿的目標區。",
+          "start": 0.0,
+          "end": 9.592018
+        },
+        {
+          "text": "按裝載，一片紅色的原子雲閃現後很快淡掉，留下一些暗暗的青色小球，有的圓圈裡有原子，有的空空的。",
+          "start": 9.772018,
+          "end": 19.148027
+        },
+        {
+          "text": "左下角面板的讀數寫著裝載率，大約在一半上下，因為擠進同一支光鑷的兩顆原子會一起被踢出去。",
+          "start": 19.328027,
+          "end": 27.696032
+        },
+        {
+          "text": "按成像，有原子的位置亮了起來，目標區裡的空位變成紅圈，這下才知道哪幾格是空的。",
+          "start": 27.876032,
+          "end": 35.78805
+        }
+      ],
+      "audio": "audio/demo_loading.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/atoms.html#tweezer"
+    },
+    {
+      "page": 11,
+      "kind": "slide",
+      "v1slide": 9,
+      "title": "實驗：吹風機抓乒乓球",
+      "duration": 27.264,
+      "sentences": [
+        {
+          "text": "實作時間：爸爸把吹風機開成冷風、朝上吹，再把乒乓球輕輕放進氣流裡，球會浮在半空中。",
+          "start": 0.0,
+          "end": 8.632018
+        },
+        {
+          "text": "你用吸管對著球的側邊輕輕吹一下，球偏出去一點，又會自己回到氣流中間，好像被一隻看不見的手抓住。",
+          "start": 8.812018,
+          "end": 17.876032000000002
+        },
+        {
+          "text": "這只是類比：把球拉回來的是空氣，把原子拉回來的是光；對照動畫的光路，說說看哪一道光扮演吹風機。",
+          "start": 18.056032000000002,
+          "end": 27.048050000000003
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q072-mot-optical-tweezers/audio/slide_09.mp3"
+    },
+    {
+      "page": 12,
+      "kind": "slide",
+      "v1slide": 10,
+      "title": "換你改造：SLM 與 AOD",
+      "duration": 29.472,
+      "sentences": [
+        {
+          "text": "下半場換你改造：空間光調變器在光的相位上畫出整個光鑷圖案，一次可以上千到上萬個點，但換一張圖大約要十毫秒。",
+          "start": 0.0,
+          "end": 9.808005
+        },
+        {
+          "text": "聲光偏轉器用射頻的頻率決定光要偏多少角度，好幾個頻率就排出一列光鑷，而且微秒就能反應，可以平滑地移動原子。",
+          "start": 9.988005,
+          "end": 20.156010000000002
+        },
+        {
+          "text": "請你在原理圖上標出：空間光調變器是停車格，聲光偏轉器是搬運車，再從雷射一路畫到物鏡和原子。",
+          "start": 20.33601,
+          "end": 29.256010000000003
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q072-mot-optical-tweezers/audio/slide_10.mp3"
+    },
+    {
+      "page": 13,
+      "kind": "demo",
+      "demo": "aod",
+      "title": "動畫展示：停車格和搬運車",
+      "duration": 39.864,
+      "sentences": [
+        {
+          "text": "再回到光鑷場景：後面一根根淡粉紅色的光錐，代表空間光調變器做出來、固定不動的光鑷，就像一格一格的停車格。",
+          "start": 0.0,
+          "end": 10.144014
+        },
+        {
+          "text": "先按裝載，等紅色的原子雲淡掉，留下大約半滿的光鑷陣列。",
+          "start": 10.324014,
+          "end": 16.388028
+        },
+        {
+          "text": "再按重排，動畫先自動拍照找出空位，接著出現一支洋紅色的移動光鑷，這就是聲光偏轉器做的搬運車，它從外圈抓起原子，沿著格子之間的走道送進空位。",
+          "start": 16.568027999999998,
+          "end": 29.304037
+        },
+        {
+          "text": "它一次搬一顆，一顆接著一顆把金框裡的空位補上；真正的機器還能同時開好幾支一起搬，下一堂我們再來比賽誰的搬運步數最少。",
+          "start": 29.484037,
+          "end": 39.652042
+        }
+      ],
+      "audio": "audio/demo_aod.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/atoms.html#tweezer"
+    },
+    {
+      "page": 14,
+      "kind": "slide",
+      "v1slide": 11,
+      "title": "兩小時的光鑷實驗室",
+      "duration": 31.488,
+      "sentences": [
+        {
+          "text": "兩小時的安排是：開場十分鐘，認識磁光阱和光鑷十五分鐘，接著四十分鐘做吹風機實驗、對照動畫的光路，然後休息十分鐘。",
+          "start": 0.0,
+          "end": 10.984014
+        },
+        {
+          "text": "下半場三十分鐘解釋空間光調變器和聲光偏轉器、畫原理圖，接著十分鐘交換角色，由你教爸爸光鑷怎麼抓原子。",
+          "start": 11.164014,
+          "end": 21.212018999999998
+        },
+        {
+          "text": "最後五分鐘錄音總結，替原理圖取名字，存一個版本；今天的生活技能，是用身邊的類比實驗去理解看不見的力場。",
+          "start": 21.392018999999998,
+          "end": 31.272019
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q072-mot-optical-tweezers/audio/slide_11.mp3"
+    },
+    {
+      "page": 15,
+      "kind": "slide",
+      "v1slide": 12,
+      "title": "最後一關：教爸爸抓原子",
+      "duration": 29.304,
+      "sentences": [
+        {
+          "text": "最後一關，請不看稿說出：磁光阱怎麼把原子冷下來？光鑷又怎麼抓住單顆原子？",
+          "start": 0.0,
+          "end": 8.416009
+        },
+        {
+          "text": "再指出一個常見的誤解：光鑷不是一把小夾子，它靠的是光學偶極力，把原子吸到光最強的地方。",
+          "start": 8.596009,
+          "end": 16.820023
+        },
+        {
+          "text": "今天的作品是光鑷原理圖，下一堂我們來看裝載與重排，用聲光偏轉器把半滿的陣列搬成沒有空位的陣列；我是陳犀牛，保持好奇，我們下次見！",
+          "start": 17.000023,
+          "end": 29.088028
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q072-mot-optical-tweezers/audio/slide_12.mp3"
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q089",
+  "version": "Q089-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-20",
+  "episodePath": "academy/episodes/q089-optimization-ml-hype-v2",
+  "basedOn": "academy/episodes/q089-optimization-ml-hype（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 457.633333,
+  "pages": 13,
+  "demos": [
+    {
+      "key": "sqrtlimit",
+      "title": "動畫展示：平方加速有多少",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#grover"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.3,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q089-optimization-ml-hype-v2-zh-TW.mp4": {
+      "bytes": 81026770,
+      "sha256": "816d3040a28d2d804c998c9525ab2ec75debd0f19bd3516e416bc1491440f567"
+    },
+    "q089-optimization-ml-hype-v2-master.mp4": {
+      "bytes": 83326750,
+      "sha256": "063a4075847846a005093abc7a77f3554f506961978d85453ba5466af37178d4"
+    },
+    "narration-only.mp3": {
+      "bytes": 10984468,
+      "sha256": "958448b70ef55ea596c369c5467b2f6825827f7bde40818ead88b4e60cd4d3ff"
+    }
+  },
+  "package": {
+    "filename": "Q089-v2_量子電腦學程_最佳化與機器學習_動畫展示版_2026-11-20.zip",
+    "bytes": 178862270,
+    "sha256": "52c2f30ed1b9feae7a67f1145e69b2979fabe2a75cd5f5a52f7a893ef1bd9f01",
+    "parts": [
+      {
+        "name": "Q089-v2_量子電腦學程_最佳化與機器學習_動畫展示版_2026-11-20.zip.part01",
+        "bytes": 29360128,
+        "sha256": "50bd4f5b1ac807410a5178a07e6b7a624e23c5d168200f737aee47b92deda99a"
+      },
+      {
+        "name": "Q089-v2_量子電腦學程_最佳化與機器學習_動畫展示版_2026-11-20.zip.part02",
+        "bytes": 29360128,
+        "sha256": "4fce5e780e69bc7835557e70cb3c92844558ee324e2f536432148c3871511dff"
+      },
+      {
+        "name": "Q089-v2_量子電腦學程_最佳化與機器學習_動畫展示版_2026-11-20.zip.part03",
+        "bytes": 29360128,
+        "sha256": "173876dd033dbe3fd9014da3fae2217509b6a4e87d3b910de5edbd3409e8bdfd"
+      },
+      {
+        "name": "Q089-v2_量子電腦學程_最佳化與機器學習_動畫展示版_2026-11-20.zip.part04",
+        "bytes": 29360128,
+        "sha256": "74cff476ffec89ef194e48d34ea0a776980f2e0280756a50d440e188d3099ce9"
+      },
+      {
+        "name": "Q089-v2_量子電腦學程_最佳化與機器學習_動畫展示版_2026-11-20.zip.part05",
+        "bytes": 29360128,
+        "sha256": "f63fdf955d3c1c83c74eb28f6a77b0448053a24038699e3e54934cec677d3cfb"
+      },
+      {
+        "name": "Q089-v2_量子電腦學程_最佳化與機器學習_動畫展示版_2026-11-20.zip.part06",
+        "bytes": 29360128,
+        "sha256": "ec90300d54c8813c81d954afafa21cd51dd005d9203e3be9853f25c4f668b62c"
+      },
+      {
+        "name": "Q089-v2_量子電腦學程_最佳化與機器學習_動畫展示版_2026-11-20.zip.part07",
+        "bytes": 2701502,
+        "sha256": "1516b84144f627844f35d6d51ffbf1e93ea635c43994c02b364846c430d182c2"
+      }
+    ],
+    "handedOver": "2026-11-20 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1ZOQEWjgkBnzg6-88LtQiSOgQeO2JG9Wx",
+    "uploadedAt": "2026-11-19",
+    "files": [
+      {
+        "name": "Q089 最佳化與機器學習：炒作與現實（動畫展示版）.mp4",
+        "id": "1mIXwBJ4YrgrKgLQL57Ea35VkKyuMg6UJ",
+        "bytes": 81026770,
+        "url": "https://drive.google.com/file/d/1mIXwBJ4YrgrKgLQL57Ea35VkKyuMg6UJ/view"
+      },
+      {
+        "name": "Q089 最佳化與機器學習（動畫展示版）簡報.pptx",
+        "id": "192-BUb0rg-RN_ZKHO1oPETnEVPS77tfk",
+        "bytes": 2752495,
+        "url": "https://docs.google.com/presentation/d/192-BUb0rg-RN_ZKHO1oPETnEVPS77tfk/edit"
+      },
+      {
+        "name": "Q089 最佳化與機器學習 教材.zip",
+        "id": "16Ig9uML2AASEyRzRZzIc9KNasMdlzCRY",
+        "bytes": 358013,
+        "url": "https://drive.google.com/file/d/16Ig9uML2AASEyRzRZzIc9KNasMdlzCRY/view"
+      }
+    ]
+  }
+}

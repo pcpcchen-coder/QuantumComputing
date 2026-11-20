@@ -23,6 +23,11 @@ CN = '零一二三四五六七八九'
 def ordinal(n):
     if n < 10:
         return CN[n]
+    if n >= 100:
+        h, r = divmod(n, 100)
+        if r == 0:
+            return CN[h] + '百'
+        return CN[h] + '百' + ('零' + CN[r] if r < 10 else ('一' + ordinal(r) if r < 20 else ordinal(r)))
     t, o = divmod(n, 10)
     return (CN[t] if t > 1 else '') + '十' + (CN[o] if o else '')
 

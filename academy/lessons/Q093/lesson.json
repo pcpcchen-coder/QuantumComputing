@@ -43,7 +43,9 @@
     "影片用途 3": "課後延伸"
   },
   "curriculumSha256": "eb081f5848bd31bd8d734680a2d88f6821b6b30fa5d9ff1d813d06872e8f71c3",
-  "episodePaths": [],
+  "episodePaths": [
+    "academy/episodes/q093-industry-roadmap-v2"
+  ],
   "minutes": 120,
   "status": "planned"
 }

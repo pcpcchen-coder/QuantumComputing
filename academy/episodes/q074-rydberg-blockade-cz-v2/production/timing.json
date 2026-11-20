@@ -1,0 +1,399 @@
+{
+  "version": 2,
+  "opening": 60.277,
+  "scenes": [
+    {
+      "page": 1,
+      "kind": "slide",
+      "v1slide": 1,
+      "title": "芮德堡阻斷與 CZ",
+      "duration": 28.872,
+      "sentences": [
+        {
+          "text": "歡迎回到父子科技學院的量子電腦學程，我是陳犀牛，今天是量子第七十四堂，芮德堡阻斷與受控相位閘，這是依課綱製作的課前教學版，並非實際上課錄音。",
+          "start": 0.0,
+          "end": 12.784014
+        },
+        {
+          "text": "上一堂我們用光鑷，把隨機裝進來的原子，搬成一個沒有空位的整齊陣列。",
+          "start": 12.964014,
+          "end": 19.724014
+        },
+        {
+          "text": "今天要回答一個問題：中性原子之間幾乎不互相理會，要怎麼讓兩顆原子互相影響，做出兩位元閘？",
+          "start": 19.904014,
+          "end": 28.656032
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q074-rydberg-blockade-cz/audio/slide_01.mp3"
+    },
+    {
+      "page": 2,
+      "kind": "slide",
+      "v1slide": 2,
+      "title": "三步：吹大、量距離、走協定",
+      "duration": 27.48,
+      "sentences": [
+        {
+          "text": "今天分三步：先把原子激發到芮德堡態、讓它變大，再看兩顆原子靠多近會互相阻斷，最後走一次受控相位閘的協定。",
+          "start": 0.0,
+          "end": 10.144014
+        },
+        {
+          "text": "今天的好玩機制是闖關：每一關換一個原子距離，你要先預測會不會阻斷，再用動畫驗證。",
+          "start": 10.324014,
+          "end": 18.308028
+        },
+        {
+          "text": "今天的作品，是一張阻斷距離表，記下每個距離有沒有阻斷，以及兩顆同時被激發的機率最高到多少。",
+          "start": 18.488028,
+          "end": 27.264037000000002
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q074-rydberg-blockade-cz/audio/slide_02.mp3"
+    },
+    {
+      "page": 3,
+      "kind": "slide",
+      "v1slide": 3,
+      "title": "芮德堡原子：把原子吹大",
+      "duration": 28.584,
+      "sentences": [
+        {
+          "text": "芮德堡態，是把原子最外層的電子打到非常高的軌道，主量子數大約七十時，原子半徑大約零點四微米，是平常的一千多倍。",
+          "start": 0.0,
+          "end": 10.504014
+        },
+        {
+          "text": "平常的中性原子又小又不帶電，彼此幾乎沒有交互作用；一旦變成芮德堡原子，交互作用會增加一兆倍以上。",
+          "start": 10.684014,
+          "end": 19.988028
+        },
+        {
+          "text": "所以芮德堡態平常不用來存資訊，只在做兩位元閘的那一瞬間借用，等於用雷射開關交互作用。",
+          "start": 20.168028,
+          "end": 28.368028000000002
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q074-rydberg-blockade-cz/audio/slide_03.mp3"
+    },
+    {
+      "page": 4,
+      "kind": "demo",
+      "demo": "levels",
+      "title": "動畫展示：芮德堡態在哪裡",
+      "duration": 37.944,
+      "sentences": [
+        {
+          "text": "打開中性原子的原子量子位元場景，左邊是銣原子的能階圖，量子位元的零和一，是最下面兩條很接近的線。",
+          "start": 0.0,
+          "end": 9.280000000000001
+        },
+        {
+          "text": "從一往上，有一道四百二十奈米和一道一千零一十三奈米的雷射箭頭，一路接到最上面粉紅色的芮德堡態。",
+          "start": 9.46,
+          "end": 18.332018
+        },
+        {
+          "text": "右邊是四乘四的原子陣列，按全域微波二分之一，所有原子的箭頭一起轉到赤道，顏色變成藍紅之間的紫色。",
+          "start": 18.512018,
+          "end": 27.840023000000002
+        },
+        {
+          "text": "接著聚焦光束只照洋紅色圈住的第二列，再來一次全域微波，第二列回到零變成藍色，其他原子都翻成一變成紅色。",
+          "start": 28.020023000000002,
+          "end": 37.732041
+        }
+      ],
+      "audio": "audio/demo_levels.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/atoms.html#atomqubit"
+    },
+    {
+      "page": 5,
+      "kind": "slide",
+      "v1slide": 4,
+      "title": "芮德堡阻斷",
+      "duration": 23.256,
+      "sentences": [
+        {
+          "text": "用同一道雷射同時照兩顆靠得很近的原子，第一顆一旦被激發，兩顆都在芮德堡態的那個能量就被推開，雷射再也對不上。",
+          "start": 0.0,
+          "end": 9.664014
+        },
+        {
+          "text": "結果兩顆原子不能同時被激發，只能是其中一顆被激發，這就叫做芮德堡阻斷。",
+          "start": 9.844014,
+          "end": 16.772019
+        },
+        {
+          "text": "這時兩顆原子像一個整體在振盪，速度變成單顆原子的根號二倍。",
+          "start": 16.952019,
+          "end": 23.040024
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q074-rydberg-blockade-cz/audio/slide_04.mp3"
+    },
+    {
+      "page": 6,
+      "kind": "slide",
+      "v1slide": 5,
+      "title": "阻斷半徑：多近才算近",
+      "duration": 25.272,
+      "sentences": [
+        {
+          "text": "兩顆芮德堡原子的交互作用，和距離的六次方成反比，距離拉開一倍，交互作用只剩六十四分之一。",
+          "start": 0.0,
+          "end": 8.512018
+        },
+        {
+          "text": "交互作用遠比雷射驅動強的範圍，叫做阻斷半徑，典型大約五到十微米；我們的動畫裡大約是八點七微米。",
+          "start": 8.692018,
+          "end": 17.996032
+        },
+        {
+          "text": "光鑷裡相鄰原子的間距只有三到五微米，所以鄰近的原子都在彼此的阻斷範圍內。",
+          "start": 18.176032,
+          "end": 25.056032
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q074-rydberg-blockade-cz/audio/slide_05.mp3"
+    },
+    {
+      "page": 7,
+      "kind": "demo",
+      "demo": "distance",
+      "title": "動畫展示：改距離看阻斷",
+      "duration": 39.12,
+      "sentences": [
+        {
+          "text": "切到芮德堡阻斷場景，兩顆原子相距五微米，綠色的球是左邊原子的阻斷範圍，右邊的原子就在裡面，下方寫著阻斷。",
+          "start": 0.0,
+          "end": 10.528005
+        },
+        {
+          "text": "按雷射脈衝，曲線圖裡藍色和紫色兩條曲線來回交換，粉紅色那條，也就是兩顆同時被激發的機率，一直貼在零。",
+          "start": 10.708005,
+          "end": 20.75601
+        },
+        {
+          "text": "把間距拉到十二微米，綠球變成灰色，標示改成不阻斷，粉紅色曲線爬到接近一，兩顆原子可以同時被激發。",
+          "start": 20.93601,
+          "end": 30.45601
+        },
+        {
+          "text": "再拉到九微米，剛好在阻斷半徑外面一點，粉紅色曲線只升到大約七成，阻斷是慢慢鬆開的。",
+          "start": 30.63601,
+          "end": 38.908028
+        }
+      ],
+      "audio": "audio/demo_distance.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/atoms.html#rydberg"
+    },
+    {
+      "page": 8,
+      "kind": "slide",
+      "v1slide": 6,
+      "title": "從阻斷到 CZ",
+      "duration": 26.448,
+      "sentences": [
+        {
+          "text": "關鍵是：雷射只和狀態一共振，處在零的原子完全不會被激發，所以零零這個狀態什麼事都沒發生。",
+          "start": 0.0,
+          "end": 8.488005000000001
+        },
+        {
+          "text": "零一和一零只有一顆原子會被激發，它完整繞一圈回到原處，帶回一個相位。",
+          "start": 8.668005,
+          "end": 15.548005
+        },
+        {
+          "text": "一一兩顆都想被激發卻被阻斷，只能一起振盪，帶回的相位不等於單顆的兩倍；只在一一才不同的相位，就是受控相位閘的來源。",
+          "start": 15.728005,
+          "end": 26.232019
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q074-rydberg-blockade-cz/audio/slide_06.mp3"
+    },
+    {
+      "page": 9,
+      "kind": "slide",
+      "v1slide": 7,
+      "title": "兩脈衝協定與並行",
+      "duration": 29.76,
+      "sentences": [
+        {
+          "text": "二零一九年提出的一種做法，用兩個雷射脈衝，中間把雷射的相位跳一下，讓每個狀態都剛好回到原處。",
+          "start": 0.0,
+          "end": 8.848005
+        },
+        {
+          "text": "這時一一的相位，比單顆相位的兩倍多出半圈，再對每顆原子補一個單位元的相位修正，就得到標準的受控相位閘。",
+          "start": 9.028005,
+          "end": 18.452019
+        },
+        {
+          "text": "雷射可以一次照整個陣列，全域一閃就能讓很多對原子同時做閘；二零二三年的實驗，在六十顆原子上並行做到百分之九十九點五。",
+          "start": 18.632019,
+          "end": 29.544037
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q074-rydberg-blockade-cz/audio/slide_07.mp3"
+    },
+    {
+      "page": 10,
+      "kind": "demo",
+      "demo": "cz",
+      "title": "動畫展示：兩脈衝協定",
+      "duration": 36.504,
+      "sentences": [
+        {
+          "text": "同一個場景，切到受控相位閘協定模式，曲線圖換成兩個脈衝的示意，第一個脈衝相位是零，第二個跳到三點九零二。",
+          "start": 0.0,
+          "end": 9.976009
+        },
+        {
+          "text": "圖上寫著：一一每個脈衝走完一整圈，零一則靠中間的相位跳躍回到原點。",
+          "start": 10.156009,
+          "end": 16.772018
+        },
+        {
+          "text": "這個協定的數值演化結果是：零零不和雷射耦合，相位是零；零一和一一回到原狀態的機率，都是一點零零零零。",
+          "start": 16.952018,
+          "end": 26.592018
+        },
+        {
+          "text": "再算一一的相位減去零一相位的兩倍，大約是三點一三九，接近圓周率，補上單位元修正，就是受控相位閘。",
+          "start": 26.772018,
+          "end": 36.292018
+        }
+      ],
+      "audio": "audio/demo_cz.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/atoms.html#rydberg"
+    },
+    {
+      "page": 11,
+      "kind": "slide",
+      "v1slide": 8,
+      "title": "限制：閘要夠快",
+      "duration": 24.144,
+      "sentences": [
+        {
+          "text": "芮德堡態不會一直待著，在主量子數七十附近，壽命大約一百到一百五十微秒，時間一到就會自己衰變。",
+          "start": 0.0,
+          "end": 9.016009
+        },
+        {
+          "text": "好在一次閘只要大約零點三微秒，遠比壽命短，衰變造成的錯誤大約千分之一。",
+          "start": 9.196009,
+          "end": 16.268027
+        },
+        {
+          "text": "除了衰變，雷射相位的雜訊和原子本身的溫度也會帶來誤差，所以閘一定要又快又穩。",
+          "start": 16.448027,
+          "end": 23.928027
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q074-rydberg-blockade-cz/audio/slide_08.mp3"
+    },
+    {
+      "page": 12,
+      "kind": "slide",
+      "v1slide": 9,
+      "title": "闖關：預測再驗證",
+      "duration": 30.12,
+      "sentences": [
+        {
+          "text": "實作的時候玩闖關：爸爸當關主，每一關在動畫的原子間距滑桿上指定一個距離，例如三、五、八、十、十二微米。",
+          "start": 0.0,
+          "end": 10.6
+        },
+        {
+          "text": "你先預測會不會阻斷，再按雷射脈衝，看畫面寫的是阻斷還是不阻斷，再看粉紅色曲線，也就是兩顆同時被激發的機率，最高升到多少。",
+          "start": 10.78,
+          "end": 22.412018
+        },
+        {
+          "text": "把每一關記進阻斷距離表，你會發現在阻斷半徑附近不是一刀切，而是慢慢變化。",
+          "start": 22.592018,
+          "end": 29.904035999999998
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q074-rydberg-blockade-cz/audio/slide_09.mp3"
+    },
+    {
+      "page": 13,
+      "kind": "slide",
+      "v1slide": 10,
+      "title": "換你改造：|00⟩ 的負號",
+      "duration": 29.832,
+      "sentences": [
+        {
+          "text": "下半場換你改造：用最早的三脈衝版本來想，先把第一顆送上芮德堡態，再讓第二顆完整繞一圈，最後把第一顆送回來。",
+          "start": 0.0,
+          "end": 10.144014
+        },
+        {
+          "text": "一顆原子上去又回來，會多一個負號；零一、一零和一一這三種，都會多一個負號，只有零零誰都沒被激發。",
+          "start": 10.324014,
+          "end": 19.652019000000003
+        },
+        {
+          "text": "把四個狀態一起乘上負一，量測結果完全不變，這時只剩零零帶著負號，和受控相位閘只差每顆原子的單位元修正。",
+          "start": 19.832019000000003,
+          "end": 29.616033
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q074-rydberg-blockade-cz/audio/slide_10.mp3"
+    },
+    {
+      "page": 14,
+      "kind": "slide",
+      "v1slide": 11,
+      "title": "兩小時的阻斷實驗室",
+      "duration": 32.736,
+      "sentences": [
+        {
+          "text": "兩小時的安排是：開場十分鐘，認識芮德堡原子和阻斷十五分鐘，接著四十分鐘在動畫裡改原子距離闖關、再走一次受控相位閘協定，然後休息十分鐘。",
+          "start": 0.0,
+          "end": 12.280000000000001
+        },
+        {
+          "text": "下半場三十分鐘解釋零零為什麼多一個負號，接著十分鐘交換角色，由你教爸爸阻斷是怎麼回事。",
+          "start": 12.46,
+          "end": 20.876009000000003
+        },
+        {
+          "text": "最後五分鐘錄音總結，替阻斷距離表取名字，存一個版本；就像一個人的狀態會影響身邊的人，一顆原子被激發，旁邊的原子就被擋住了。",
+          "start": 21.056009000000003,
+          "end": 32.520023
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q074-rydberg-blockade-cz/audio/slide_11.mp3"
+    },
+    {
+      "page": 15,
+      "kind": "slide",
+      "v1slide": 12,
+      "title": "最後一關：教爸爸阻斷",
+      "duration": 31.368,
+      "sentences": [
+        {
+          "text": "最後一關，請不看稿說出：什麼是芮德堡阻斷？為什麼它能做出受控相位閘？",
+          "start": 0.0,
+          "end": 7.912018
+        },
+        {
+          "text": "再指出一個限制：芮德堡態壽命有限，閘要夠快，而且兩顆原子要待在阻斷半徑以內。",
+          "start": 8.092018,
+          "end": 16.028027
+        },
+        {
+          "text": "今天的作品是阻斷距離表，下一堂我們認識分區架構與成像讀取，看原子怎麼在儲存、糾纏、讀取三個區之間搬動，再用相機讀出結果；我是陳犀牛，保持好奇，我們下次見！",
+          "start": 16.208027,
+          "end": 31.152041000000004
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q074-rydberg-blockade-cz/audio/slide_12.mp3"
+    }
+  ]
+}

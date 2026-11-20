@@ -1,0 +1,32 @@
+父子科技學院 量子電腦學程 Q071｜螢光讀取與 QCCD（v2・含 3D 動畫展示）
+
+這是依課綱製作的課前教學版，不是實際上課錄音。
+
+父子科技學院量子電腦學程 Q071「螢光讀取與 QCCD」新版（v2）：在原本的教學投影片之間，插入本學程 3D 互動動畫的實際操作示範。
+
+這一版新增的動畫展示
+・從冷卻到螢光偵測（https://pcpcchen-coder.github.io/QuantumComputing/animations/atoms.html#ionqubit）
+・偵測時間和閾值（https://pcpcchen-coder.github.io/QuantumComputing/animations/atoms.html#ionqubit）
+・把離子搬到閘區（https://pcpcchen-coder.github.io/QuantumComputing/animations/atoms.html#qccd）
+
+動畫都可以在瀏覽器直接開啟，自己動手操作。
+
+章節
+00:00 陳犀牛系列片頭
+01:00 螢光讀取與 QCCD
+01:30 三步：看光、設線、搬離子
+01:53 離子的零和一：暗和亮
+02:17 讀取之前的四步
+02:37 動畫展示：從冷卻到螢光偵測
+03:06 比一比：亮態和暗態
+03:27 設一條線：閾值
+03:53 動畫展示：偵測時間和閾值
+04:30 為什麼要搬離子
+04:56 離子怎麼被搬動
+05:22 動畫展示：把離子搬到閘區
+05:59 盲測：爸爸出題、你判讀
+06:22 換你改造：搬運占了多少時間
+06:49 兩小時的讀取實驗室
+07:21 最後一關：教爸爸讀離子
+
+旁白：微軟 zh-TW-YunJheNeural 神經語音合成（Edge-TTS／Azure 語音服務，同一聲音同一格式）。字幕已燒入影片，開啟 CC 可能重疊。

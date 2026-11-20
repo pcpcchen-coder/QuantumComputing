@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q093",
+  "version": "Q093-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-20",
+  "episodePath": "academy/episodes/q093-industry-roadmap-v2",
+  "basedOn": "academy/episodes/q093-industry-roadmap（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 508.778,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "wiring",
+      "title": "動畫展示：位元一多，線就塞爆",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/peripherals.html#wiring"
+    },
+    {
+      "key": "logical",
+      "title": "動畫展示：一個邏輯位元的代價",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#qec"
+    },
+    {
+      "key": "routes",
+      "title": "動畫展示：三條路線比規模",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/atoms.html#compare"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.5,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q093-industry-roadmap-v2-zh-TW.mp4": {
+      "bytes": 90846844,
+      "sha256": "4c850247c1a1842c4d6ac1ece7e98a7711ab34857ace7399a2eefb55a2f4193e"
+    },
+    "q093-industry-roadmap-v2-master.mp4": {
+      "bytes": 93294659,
+      "sha256": "3c640f2d372c93cc9c5c9aa5161da81d9371ac2644fccd58822d44e1e5978fec"
+    },
+    "narration-only.mp3": {
+      "bytes": 12212500,
+      "sha256": "d82f5395ebacd1e6d680b385a3462372cbb1e1b06ed69fe271ff754fbbef1fc6"
+    }
+  },
+  "package": {
+    "filename": "Q093-v2_量子電腦學程_產業地圖與發展路線_動畫展示版_2026-11-20.zip",
+    "bytes": 200821686,
+    "sha256": "a403f3501318b7294439d9f49db7a287467dd1d8266a648f606edaad844f8a89",
+    "parts": [
+      {
+        "name": "Q093-v2_量子電腦學程_產業地圖與發展路線_動畫展示版_2026-11-20.zip.part01",
+        "bytes": 29360128,
+        "sha256": "29d90d6f59647ad87df476148d281f9cd4d29d8b68bf03fb0b51657ae8f62618"
+      },
+      {
+        "name": "Q093-v2_量子電腦學程_產業地圖與發展路線_動畫展示版_2026-11-20.zip.part02",
+        "bytes": 29360128,
+        "sha256": "5092567250035f1b483a7578cc122c798bc67b7d1f136fe8076a23aa8e6c9272"
+      },
+      {
+        "name": "Q093-v2_量子電腦學程_產業地圖與發展路線_動畫展示版_2026-11-20.zip.part03",
+        "bytes": 29360128,
+        "sha256": "17c48cb2cb6d21fb57344f3c51f23f9c17dd755641152dac9e97eeaa18342881"
+      },
+      {
+        "name": "Q093-v2_量子電腦學程_產業地圖與發展路線_動畫展示版_2026-11-20.zip.part04",
+        "bytes": 29360128,
+        "sha256": "4587d6de0439487b7d04372344bc17740726aeadcdd9852054ed105e452070ad"
+      },
+      {
+        "name": "Q093-v2_量子電腦學程_產業地圖與發展路線_動畫展示版_2026-11-20.zip.part05",
+        "bytes": 29360128,
+        "sha256": "d33ae8659a1ca800c8f6c338a1806e84ce6c15eb5c6d7973f0b1e430d91083e6"
+      },
+      {
+        "name": "Q093-v2_量子電腦學程_產業地圖與發展路線_動畫展示版_2026-11-20.zip.part06",
+        "bytes": 29360128,
+        "sha256": "02b1dbde020def91d221c2bf83c06ce4a5144a0a1b434bf07640f5b384f04695"
+      },
+      {
+        "name": "Q093-v2_量子電腦學程_產業地圖與發展路線_動畫展示版_2026-11-20.zip.part07",
+        "bytes": 24660918,
+        "sha256": "dbb609dfac98401f3d46f4f4e46f5632c49e64c1aaaf166a780861a6c58e1036"
+      }
+    ],
+    "handedOver": "2026-11-20 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1ZOQEWjgkBnzg6-88LtQiSOgQeO2JG9Wx",
+    "uploadedAt": "2026-11-19",
+    "files": [
+      {
+        "name": "Q093 產業地圖與發展路線：產業地圖與發展路線（動畫展示版）.mp4",
+        "id": "1TtIPVlJz9R_-e6-YfpAtraX6_Ao7p-Zp",
+        "bytes": 90846844,
+        "url": "https://drive.google.com/file/d/1TtIPVlJz9R_-e6-YfpAtraX6_Ao7p-Zp/view"
+      },
+      {
+        "name": "Q093 產業地圖與發展路線（動畫展示版）簡報.pptx",
+        "id": "1sHxh82zSmmvSlzmGUbbyBAP5jDGVws9H",
+        "bytes": 3632559,
+        "url": "https://docs.google.com/presentation/d/1sHxh82zSmmvSlzmGUbbyBAP5jDGVws9H/edit"
+      },
+      {
+        "name": "Q093 產業地圖與發展路線 教材.zip",
+        "id": "1WYA2wASa9hSjVbGUIINZ0BMKm4akznEU",
+        "bytes": 385957,
+        "url": "https://drive.google.com/file/d/1WYA2wASa9hSjVbGUIINZ0BMKm4akznEU/view"
+      }
+    ]
+  }
+}
