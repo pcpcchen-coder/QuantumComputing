@@ -97,8 +97,29 @@
   },
   "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
   "drive": {
-    "status": "pending",
     "folderId": "1bi-WOn7ipXPr978g1JqWu1DFCPwySyyb",
-    "note": "Drive 權杖過期（HTTP 401），檔案已排入待上傳清單，權杖更新後補傳"
+    "folderName": "量子電腦學程 Q101–Q130 動畫展示版（v2）",
+    "uploadedAt": "2026-11-18",
+    "uploadedBy": "製作代理（Claude，Drive API，上傳後比對 md5）",
+    "files": [
+      {
+        "name": "Q130 斷電的代價：斷電的代價：2 分鐘換 2–5 天（動畫展示版）.mp4",
+        "id": "1nzAkQboKNaTV-iXDzkiVl5kisFJPFsKz",
+        "size": 87988969,
+        "link": "https://drive.google.com/file/d/1nzAkQboKNaTV-iXDzkiVl5kisFJPFsKz/view?usp=drivesdk"
+      },
+      {
+        "name": "Q130 斷電的代價（動畫展示版）簡報.pptx",
+        "id": "1XztjOHsJwpn_MY3AO9KtL_gMhdxtBM1t",
+        "size": 3284561,
+        "link": "https://docs.google.com/presentation/d/1XztjOHsJwpn_MY3AO9KtL_gMhdxtBM1t/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true"
+      },
+      {
+        "name": "Q130 斷電的代價 教材.zip",
+        "id": "1bDmmtEAq80JGqwspOaf7ymOcxkVn8KOf",
+        "size": 444634,
+        "link": "https://drive.google.com/file/d/1bDmmtEAq80JGqwspOaf7ymOcxkVn8KOf/view?usp=drivesdk"
+      }
+    ]
   }
 }
