@@ -34,7 +34,7 @@
 | Q028 | 量子位元家族圖鑑 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q028-qubit-family-cards-v2` |
 | Q029 | 晶片怎麼做：雙角度蒸鍍 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q029-double-angle-evaporation-v2` |
 | Q030 | 晶片長什麼樣子 | 規劃完成 | — |
-| Q031 | 退相干：敵人在哪裡 | 規劃完成 | — |
+| Q031 | 退相干：敵人在哪裡 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q031-decoherence-suspects-v2` |
 | Q032 | 模組發表：設計我的 transmon | 規劃完成 | — |
 | Q033 | 讀取要快、準、不破壞 | 規劃完成 | — |
 | Q034 | 電路 QED：量子位元＋諧振腔 | 規劃完成 | — |
