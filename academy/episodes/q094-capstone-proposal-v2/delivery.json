@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q094",
+  "version": "Q094-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-20",
+  "episodePath": "academy/episodes/q094-capstone-proposal-v2",
+  "basedOn": "academy/episodes/q094-capstone-proposal（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 424.733333,
+  "pages": 13,
+  "demos": [
+    {
+      "key": "example",
+      "title": "動畫展示：範例專題怎麼驗收",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#grover"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.3,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q094-capstone-proposal-v2-zh-TW.mp4": {
+      "bytes": 78207345,
+      "sha256": "6822ad508ffd361f0de266bde791670f14bd3c5512e710aaa313b986d285c0d8"
+    },
+    "q094-capstone-proposal-v2-master.mp4": {
+      "bytes": 80840464,
+      "sha256": "a94cf45aae74423cbed0a0bce2bdd566198df0f50962d4ada561be915ddce6bd"
+    },
+    "narration-only.mp3": {
+      "bytes": 10194772,
+      "sha256": "8cb2e87a7e8b9d6912a885d18e28d482aa0746095002fe12b133103a0add2866"
+    }
+  },
+  "package": {
+    "filename": "Q094-v2_量子電腦學程_畢業專題提案_動畫展示版_2026-11-20.zip",
+    "bytes": 172766793,
+    "sha256": "d00aa7cbf066caf7341d1c49cdac2a4dbfbb52595c35a3eead95aca1e432ab48",
+    "parts": [
+      {
+        "name": "Q094-v2_量子電腦學程_畢業專題提案_動畫展示版_2026-11-20.zip.part01",
+        "bytes": 29360128,
+        "sha256": "21a27c92b90deff63b66ffc6f99ae329ea4fa4248da7df14681ca80986a53e84"
+      },
+      {
+        "name": "Q094-v2_量子電腦學程_畢業專題提案_動畫展示版_2026-11-20.zip.part02",
+        "bytes": 29360128,
+        "sha256": "dc5055ae55255d4e1eeceef2b825c6cfd8772752ad0caa7d43540bdbb947d4a6"
+      },
+      {
+        "name": "Q094-v2_量子電腦學程_畢業專題提案_動畫展示版_2026-11-20.zip.part03",
+        "bytes": 29360128,
+        "sha256": "40266229e83388572482550411ce87213f917a495e78b61ae1adcbdfd7fdb6be"
+      },
+      {
+        "name": "Q094-v2_量子電腦學程_畢業專題提案_動畫展示版_2026-11-20.zip.part04",
+        "bytes": 29360128,
+        "sha256": "486e627e933504a1562c702150d9c88420351287a60ac1cd4eecaec7fd5a04ac"
+      },
+      {
+        "name": "Q094-v2_量子電腦學程_畢業專題提案_動畫展示版_2026-11-20.zip.part05",
+        "bytes": 29360128,
+        "sha256": "db7bd24ec569152e24214659be7156db9866690a1bcde2c79fcd12374c1af07c"
+      },
+      {
+        "name": "Q094-v2_量子電腦學程_畢業專題提案_動畫展示版_2026-11-20.zip.part06",
+        "bytes": 25966153,
+        "sha256": "265d5ccbe85f44ea029ff9c66d2e756e007a08fa9db033245d4e4430e6b76911"
+      }
+    ],
+    "handedOver": "2026-11-20 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1ZOQEWjgkBnzg6-88LtQiSOgQeO2JG9Wx",
+    "uploadedAt": "2026-11-19",
+    "files": [
+      {
+        "name": "Q094 畢業專題提案：畢業專題提案（動畫展示版）.mp4",
+        "id": "1yqRRzGU9DbhkRIIixNyIl6A_P3iR8tQu",
+        "bytes": 78207345,
+        "url": "https://drive.google.com/file/d/1yqRRzGU9DbhkRIIixNyIl6A_P3iR8tQu/view"
+      },
+      {
+        "name": "Q094 畢業專題提案（動畫展示版）簡報.pptx",
+        "id": "1pXJOuzpJnJJdWsbKwZrdaQUne5cz2GtR",
+        "bytes": 2732458,
+        "url": "https://docs.google.com/presentation/d/1pXJOuzpJnJJdWsbKwZrdaQUne5cz2GtR/edit"
+      },
+      {
+        "name": "Q094 畢業專題提案 教材.zip",
+        "id": "1TMoCT4PJi2D8R03m_P223M8kclNf3aaO",
+        "bytes": 352111,
+        "url": "https://drive.google.com/file/d/1TMoCT4PJi2D8R03m_P223M8kclNf3aaO/view"
+      }
+    ]
+  }
+}

@@ -97,7 +97,7 @@
 | Q091 | Shor 之後：後量子密碼 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q091-post-quantum-cryptography-v2` |
 | Q092 | 量子感測與原子鐘 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q092-quantum-sensing-atomic-clock-v2` |
 | Q093 | 產業地圖與發展路線 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q093-industry-roadmap-v2` |
-| Q094 | 畢業專題提案 | 規劃完成 | — |
+| Q094 | 畢業專題提案 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q094-capstone-proposal-v2` |
 | Q095 | 畢業專題製作 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q095-capstone-build-v2` |
 | Q096 | 畢業 Teach-back：換孩子教爸爸 | 規劃完成 | — |
 | Q097 | 導覽：一顆 transmon 的十二章旅程 | 規劃完成 | — |

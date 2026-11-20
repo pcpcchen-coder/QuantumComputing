@@ -628,7 +628,13 @@
     "Q094": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q094-capstone-proposal-v2",
+        "evidence": "academy/episodes/q094-capstone-proposal-v2/delivery.json"
+      }
     },
     "Q095": {
       "status": "planned",
