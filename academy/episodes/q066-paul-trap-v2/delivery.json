@@ -1,0 +1,130 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q066",
+  "version": "Q066-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-18",
+  "episodePath": "academy/episodes/q066-paul-trap-v2",
+  "basedOn": "academy/episodes/q066-paul-trap（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 501.7,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "saddle",
+      "title": "動畫展示：翻面的鞍形",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/atoms.html#paul"
+    },
+    {
+      "key": "qscan",
+      "title": "動畫展示：翻轉參數的界線",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/atoms.html#paul"
+    },
+    {
+      "key": "linear",
+      "title": "動畫展示：線性保羅阱",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/atoms.html#paul"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.4,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q066-paul-trap-v2-zh-TW.mp4": {
+      "bytes": 102433861,
+      "sha256": "8023edd8c65a340137e9ed5abb413ab4fadab3435d030d2a3643b54f0874d117"
+    },
+    "q066-paul-trap-v2-master.mp4": {
+      "bytes": 106413353,
+      "sha256": "439544e963fe2c3d3e9a1db0edb3d856af89c4f69e7d1b50c08c0c134de67413"
+    },
+    "narration-only.mp3": {
+      "bytes": 12042004,
+      "sha256": "4500a1023cb82eb6b86a2a0edb41ee897574f8f657694e2d562276d82608c25d"
+    }
+  },
+  "package": {
+    "filename": "Q066-v2_量子電腦學程_保羅阱旋轉鞍面_動畫展示版_2026-11-18.zip",
+    "bytes": 225468655,
+    "sha256": "c55d397636c7f4356057e21af93bf6cae73acc2f9a73bdfaf2aa0bf5212ae477",
+    "parts": [
+      {
+        "name": "Q066-v2_量子電腦學程_保羅阱旋轉鞍面_動畫展示版_2026-11-18.zip.part01",
+        "bytes": 29360128,
+        "sha256": "27cdbaa216db6b1d731553cc9ff25ba1d30777b9ce216da4399c60abb4603686"
+      },
+      {
+        "name": "Q066-v2_量子電腦學程_保羅阱旋轉鞍面_動畫展示版_2026-11-18.zip.part02",
+        "bytes": 29360128,
+        "sha256": "f991fed6a1d129485329e2e161db53e68c45b3a719b65eda5275999b2138ddbe"
+      },
+      {
+        "name": "Q066-v2_量子電腦學程_保羅阱旋轉鞍面_動畫展示版_2026-11-18.zip.part03",
+        "bytes": 29360128,
+        "sha256": "6edcb8f6bd385acbdd0059c550cd657c5968ab2c07303e6c2c6d0e814bdc2a02"
+      },
+      {
+        "name": "Q066-v2_量子電腦學程_保羅阱旋轉鞍面_動畫展示版_2026-11-18.zip.part04",
+        "bytes": 29360128,
+        "sha256": "de03d7e099d4e2106b52df5ad82fadb90531b0357c8ba045ce502d7d2abeb958"
+      },
+      {
+        "name": "Q066-v2_量子電腦學程_保羅阱旋轉鞍面_動畫展示版_2026-11-18.zip.part05",
+        "bytes": 29360128,
+        "sha256": "7775984bce5df625f864bfff2e8b2f01aef035d22e22eb14a8d22287a05ede52"
+      },
+      {
+        "name": "Q066-v2_量子電腦學程_保羅阱旋轉鞍面_動畫展示版_2026-11-18.zip.part06",
+        "bytes": 29360128,
+        "sha256": "98aabe5e86df1daa3003b98db6ff30444983144eafea9b21cedc57d8b9fd6967"
+      },
+      {
+        "name": "Q066-v2_量子電腦學程_保羅阱旋轉鞍面_動畫展示版_2026-11-18.zip.part07",
+        "bytes": 29360128,
+        "sha256": "7235b8e20a6418386a29d72325a70bec3d0b5e86075bba0e6f7cc41612bf3ae5"
+      },
+      {
+        "name": "Q066-v2_量子電腦學程_保羅阱旋轉鞍面_動畫展示版_2026-11-18.zip.part08",
+        "bytes": 19947759,
+        "sha256": "5b7c2970e4b5b90904ef75cf5356f256eee12c67eb19e2972e149a414c8706ef"
+      }
+    ],
+    "handedOver": "2026-11-18 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1eZLiQdOHdFov3xfVLuJtqORZ4fjXzXXV",
+    "folderName": "量子電腦學程 Q041–Q070 動畫展示版（v2）",
+    "uploadedAt": "2026-11-18",
+    "uploadedBy": "製作代理（Claude，Drive API，上傳後比對 md5）",
+    "files": [
+      {
+        "name": "Q066 保羅阱旋轉鞍面：Paul 阱：旋轉鞍形電場（動畫展示版）.mp4",
+        "id": "174sJ8xguxQX5vJhji2JxpUrbYO6ivzyf",
+        "size": 102433861,
+        "link": "https://drive.google.com/file/d/174sJ8xguxQX5vJhji2JxpUrbYO6ivzyf/view?usp=drivesdk"
+      },
+      {
+        "name": "Q066 保羅阱旋轉鞍面（動畫展示版）簡報.pptx",
+        "id": "1i6pYXsW_ZhIX40Qy22LDBP1bMoUrDJKs",
+        "size": 3652774,
+        "link": "https://docs.google.com/presentation/d/1i6pYXsW_ZhIX40Qy22LDBP1bMoUrDJKs/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true"
+      },
+      {
+        "name": "Q066 保羅阱旋轉鞍面 教材.zip",
+        "id": "1XuSFgbyjhZ13PtVzu6U4B3s_2OMTV3xJ",
+        "size": 483531,
+        "link": "https://drive.google.com/file/d/1XuSFgbyjhZ13PtVzu6U4B3s_2OMTV3xJ/view?usp=drivesdk"
+      }
+    ]
+  }
+}

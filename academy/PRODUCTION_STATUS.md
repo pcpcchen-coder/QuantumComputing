@@ -68,8 +68,8 @@
 | Q062 | Shor：用干涉找週期 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q062-shor-period-v2` |
 | Q063 | 快在哪？加速的等級 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q063-speedup-levels-v2` |
 | Q064 | 模組專題：在模擬器跑我的線路 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q064-simulator-project-v2` |
-| Q065 | 人造原子 vs 真的原子 | 規劃完成 | — |
-| Q066 | Paul 阱：旋轉鞍形電場 | 規劃完成 | — |
+| Q065 | 人造原子 vs 真的原子 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q065-artificial-vs-real-atoms-v2` |
+| Q066 | Paul 阱：旋轉鞍形電場 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q066-paul-trap-v2` |
 | Q067 | 離子阱系統全景 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q067-ion-trap-system-v2` |
 | Q068 | ¹⁷¹Yb⁺ 量子位元與雷射冷卻 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q068-yb-qubit-cooling-v2` |
 | Q069 | 離子鏈的集體振動 | 規劃完成 | — |
