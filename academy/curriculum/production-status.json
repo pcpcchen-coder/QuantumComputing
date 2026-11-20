@@ -240,7 +240,13 @@
     "Q026": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q026-tilted-washboard-v2",
+        "evidence": "academy/episodes/q026-tilted-washboard-v2/delivery.json"
+      }
     },
     "Q027": {
       "status": "planned",
@@ -256,7 +262,13 @@
     "Q028": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q028-qubit-family-cards-v2",
+        "evidence": "academy/episodes/q028-qubit-family-cards-v2/delivery.json"
+      }
     },
     "Q029": {
       "status": "planned",

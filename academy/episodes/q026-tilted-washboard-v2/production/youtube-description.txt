@@ -1,0 +1,32 @@
+父子科技學院 量子電腦學程 Q026｜傾斜洗衣板（v2・含 3D 動畫展示）
+
+這是依課綱製作的課前教學版，不是實際上課錄音。
+
+父子科技學院量子電腦學程 Q026「傾斜洗衣板」新版（v2）：在原本的教學投影片之間，插入本學程 3D 互動動畫的實際操作示範。
+
+這一版新增的動畫展示
+・洗衣板越斜，山谷越淺（https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#washboard）
+・同樣的電流，兩種狀態（https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#washboard）
+・掃描一趟，畫出遲滯（https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#washboard）
+
+動畫都可以在瀏覽器直接開啟，自己動手操作。
+
+章節
+00:00 陳犀牛系列片頭
+01:00 傾斜洗衣板
+01:30 三個重點
+02:03 電阻電容分路接面模型
+02:29 相位粒子困在山谷裡
+02:57 動畫展示：洗衣板越斜，山谷越淺
+03:31 電流超過臨界電流
+03:56 遲滯：回不到原處停
+04:29 動畫展示：同樣的電流，兩種狀態
+05:12 電流電壓曲線
+05:37 相位粒子不是真的球
+06:09 實作：加大偏壓電流
+06:38 動畫展示：掃描一趟，畫出遲滯
+07:09 換你改造：解釋遲滯
+07:37 兩小時的洗衣板實驗室
+08:07 最後一關：教爸爸傾斜洗衣板
+
+旁白：微軟 zh-TW-YunJheNeural 神經語音合成（Edge-TTS／Azure 語音服務，同一聲音同一格式）。字幕已燒入影片，開啟 CC 可能重疊。
