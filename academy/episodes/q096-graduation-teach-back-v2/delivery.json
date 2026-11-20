@@ -84,6 +84,25 @@
   "drive": {
     "folderId": "1ZOQEWjgkBnzg6-88LtQiSOgQeO2JG9Wx",
     "uploadedAt": "2026-11-19",
-    "files": []
+    "files": [
+      {
+        "name": "Q096 畢業 Teach-back：換孩子教爸爸（動畫展示版）.mp4",
+        "id": "1IE0OZd2uLUhAUnuKANUTDT7fvaO18Ag-",
+        "bytes": 77635969,
+        "url": "https://drive.google.com/file/d/1IE0OZd2uLUhAUnuKANUTDT7fvaO18Ag-/view"
+      },
+      {
+        "name": "Q096 畢業 Teach-back（動畫展示版）簡報.pptx",
+        "id": "1io-c2HPbR6-drVQF0_AfEDLgXD9vjDcD",
+        "bytes": 2783465,
+        "url": "https://docs.google.com/presentation/d/1io-c2HPbR6-drVQF0_AfEDLgXD9vjDcD/edit"
+      },
+      {
+        "name": "Q096 畢業 Teach-back 教材.zip",
+        "id": "1q9l587LU65pjjqYAQc9ABPTptJgCTnw8",
+        "bytes": 380207,
+        "url": "https://drive.google.com/file/d/1q9l587LU65pjjqYAQc9ABPTptJgCTnw8/view"
+      }
+    ]
   }
 }

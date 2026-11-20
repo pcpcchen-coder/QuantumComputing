@@ -99,6 +99,25 @@
   "drive": {
     "folderId": "1ZOQEWjgkBnzg6-88LtQiSOgQeO2JG9Wx",
     "uploadedAt": "2026-11-19",
-    "files": []
+    "files": [
+      {
+        "name": "Q098 LC 與 JJ：線性和非線性的差別（動畫展示版）.mp4",
+        "id": "1Ivk-mQHNeEqD5bSy5w2PT8fxxFa_MLt-",
+        "bytes": 85175239,
+        "url": "https://drive.google.com/file/d/1Ivk-mQHNeEqD5bSy5w2PT8fxxFa_MLt-/view"
+      },
+      {
+        "name": "Q098 LC 與 JJ（動畫展示版）簡報.pptx",
+        "id": "1X5unZt_m3LEA0uSMAfuPh4-6eyeMTszB",
+        "bytes": 3058056,
+        "url": "https://docs.google.com/presentation/d/1X5unZt_m3LEA0uSMAfuPh4-6eyeMTszB/edit"
+      },
+      {
+        "name": "Q098 LC 與 JJ 教材.zip",
+        "id": "1q2kP3G53hqJlaRMLs8U4oIn4FKKoAiK5",
+        "bytes": 341558,
+        "url": "https://drive.google.com/file/d/1q2kP3G53hqJlaRMLs8U4oIn4FKKoAiK5/view"
+      }
+    ]
   }
 }

@@ -94,6 +94,25 @@
   "drive": {
     "folderId": "1ZOQEWjgkBnzg6-88LtQiSOgQeO2JG9Wx",
     "uploadedAt": "2026-11-19",
-    "files": []
+    "files": [
+      {
+        "name": "Q097 導覽：一顆 transmon 的十二章旅程（動畫展示版）.mp4",
+        "id": "1NruRoioH70owlqlyeXVmGj6xiun48erZ",
+        "bytes": 82606547,
+        "url": "https://drive.google.com/file/d/1NruRoioH70owlqlyeXVmGj6xiun48erZ/view"
+      },
+      {
+        "name": "Q097 transmon 十二章導覽（動畫展示版）簡報.pptx",
+        "id": "1BPOXC9ua_7vv17ZxV5_vg4Z6Q4yE3uz5",
+        "bytes": 3173978,
+        "url": "https://docs.google.com/presentation/d/1BPOXC9ua_7vv17ZxV5_vg4Z6Q4yE3uz5/edit"
+      },
+      {
+        "name": "Q097 transmon 十二章導覽 教材.zip",
+        "id": "18B9GmRqiZYz2pZg_WiCyIUx0jM8mFzoX",
+        "bytes": 301956,
+        "url": "https://drive.google.com/file/d/18B9GmRqiZYz2pZg_WiCyIUx0jM8mFzoX/view"
+      }
+    ]
   }
 }
