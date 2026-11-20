@@ -1,0 +1,32 @@
+父子科技學院 量子電腦學程 Q093｜產業地圖與發展路線（v2・含 3D 動畫展示）
+
+這是依課綱製作的課前教學版，不是實際上課錄音。
+
+父子科技學院量子電腦學程 Q093「產業地圖與發展路線」新版（v2）：在原本的教學投影片之間，插入本學程 3D 互動動畫的實際操作示範。
+
+這一版新增的動畫展示
+・位元一多，線就塞爆（https://pcpcchen-coder.github.io/QuantumComputing/animations/peripherals.html#wiring）
+・一個邏輯位元的代價（https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#qec）
+・三條路線比規模（https://pcpcchen-coder.github.io/QuantumComputing/animations/atoms.html#compare）
+
+動畫都可以在瀏覽器直接開啟，自己動手操作。
+
+章節
+00:00 陳犀牛系列片頭
+01:00 產業地圖與發展路線
+01:30 三步：分階段、看路線、找證據
+01:55 三個階段：從現在到容錯
+02:24 每個階段能做什麼
+02:52 動畫展示：位元一多，線就塞爆
+03:27 比一比：實體和邏輯位元
+03:53 動畫展示：一個邏輯位元的代價
+04:32 三條平台路線
+04:59 把各家放上地圖
+05:25 動畫展示：三條路線比規模
+06:06 路線圖要怎麼讀
+06:34 家庭投票：哪一年會有用
+06:56 換你改造：更新路線圖
+07:23 兩小時的路線圖工作坊
+07:56 最後一關：教爸爸讀路線圖
+
+旁白：微軟 zh-TW-YunJheNeural 神經語音合成（Edge-TTS／Azure 語音服務，同一聲音同一格式）。字幕已燒入影片，開啟 CC 可能重疊。

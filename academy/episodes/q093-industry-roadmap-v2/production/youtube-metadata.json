@@ -1,0 +1,8 @@
+{
+  "title": "父子科技學院 Q093｜產業地圖與發展路線（動畫展示版）",
+  "description": "父子科技學院 量子電腦學程 Q093｜產業地圖與發展路線（v2・含 3D 動畫展示）\n\n這是依課綱製作的課前教學版，不是實際上課錄音。\n\n父子科技學院量子電腦學程 Q093「產業地圖與發展路線」新版（v2）：在原本的教學投影片之間，插入本學程 3D 互動動畫的實際操作示範。\n\n這一版新增的動畫展示\n・位元一多，線就塞爆（https://pcpcchen-coder.github.io/QuantumComputing/animations/peripherals.html#wiring）\n・一個邏輯位元的代價（https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#qec）\n・三條路線比規模（https://pcpcchen-coder.github.io/QuantumComputing/animations/atoms.html#compare）\n\n動畫都可以在瀏覽器直接開啟，自己動手操作。\n\n章節\n00:00 陳犀牛系列片頭\n01:00 產業地圖與發展路線\n01:30 三步：分階段、看路線、找證據\n01:55 三個階段：從現在到容錯\n02:24 每個階段能做什麼\n02:52 動畫展示：位元一多，線就塞爆\n03:27 比一比：實體和邏輯位元\n03:53 動畫展示：一個邏輯位元的代價\n04:32 三條平台路線\n04:59 把各家放上地圖\n05:25 動畫展示：三條路線比規模\n06:06 路線圖要怎麼讀\n06:34 家庭投票：哪一年會有用\n06:56 換你改造：更新路線圖\n07:23 兩小時的路線圖工作坊\n07:56 最後一關：教爸爸讀路線圖\n\n旁白：微軟 zh-TW-YunJheNeural 神經語音合成（Edge-TTS／Azure 語音服務，同一聲音同一格式）。字幕已燒入影片，開啟 CC 可能重疊。\n",
+  "privacyStatus": "private",
+  "madeForKids": null,
+  "reviewStatus": "needs-parent-review",
+  "publicationMode": "manual-user-upload"
+}
