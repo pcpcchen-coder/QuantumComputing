@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q022",
+  "version": "Q022-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-20",
+  "episodePath": "academy/episodes/q022-equal-ladder-v2",
+  "basedOn": "academy/episodes/q022-equal-ladder（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 490.837,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "ladder",
+      "title": "動畫展示：梯子每一階一樣高",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#potential"
+    },
+    {
+      "key": "climb",
+      "title": "動畫展示：微波一路往上推",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/lc-vs-jj.html#s4"
+    },
+    {
+      "key": "uneven",
+      "title": "動畫展示：不等距的梯子",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/lc-vs-jj.html#s3"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.4,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q022-equal-ladder-v2-zh-TW.mp4": {
+      "bytes": 84421296,
+      "sha256": "d65a44f4d684000d15d1379abb5e7585882e000664ffe96f0293fc52112d4840"
+    },
+    "q022-equal-ladder-v2-master.mp4": {
+      "bytes": 86988664,
+      "sha256": "5b5eaab5ebb701a02dcbb7defaaf94ced89c2ff52aca0e01f0a0f8cdb7728b1c"
+    },
+    "narration-only.mp3": {
+      "bytes": 11781652,
+      "sha256": "cf727aacd43e6ef1e475bd60417dcb00fb31013d70e99167cf94b20725b3e365"
+    }
+  },
+  "package": {
+    "filename": "Q022-v2_量子電腦學程_等距的梯子_動畫展示版_2026-11-20.zip",
+    "bytes": 187154011,
+    "sha256": "92c4107e8819f92448b9ca120581ddff1cfdb1784738e906494a2faa66e52541",
+    "parts": [
+      {
+        "name": "Q022-v2_量子電腦學程_等距的梯子_動畫展示版_2026-11-20.zip.part01",
+        "bytes": 29360128,
+        "sha256": "2b0263f32d0877a6d8ea1d1c6642793693f41e2a03ca70032cc7f42635e567ca"
+      },
+      {
+        "name": "Q022-v2_量子電腦學程_等距的梯子_動畫展示版_2026-11-20.zip.part02",
+        "bytes": 29360128,
+        "sha256": "bf73c71cb7b60375f040fc931710880eeb61179bd9d829256ecca19cd019e95d"
+      },
+      {
+        "name": "Q022-v2_量子電腦學程_等距的梯子_動畫展示版_2026-11-20.zip.part03",
+        "bytes": 29360128,
+        "sha256": "d82b56de2ef0cb44a146a8258b81f6e9e84a5c9c7219a64126ec26b35f5e3d7d"
+      },
+      {
+        "name": "Q022-v2_量子電腦學程_等距的梯子_動畫展示版_2026-11-20.zip.part04",
+        "bytes": 29360128,
+        "sha256": "1544715bd2f36d6b49c2281848d0c26e5084405c0178f10c7a34f8e93ef2e50a"
+      },
+      {
+        "name": "Q022-v2_量子電腦學程_等距的梯子_動畫展示版_2026-11-20.zip.part05",
+        "bytes": 29360128,
+        "sha256": "c3fbca4f1d61f01d5754dbd5e06cf3bae36a33717b6b56f08587a0d5667092ab"
+      },
+      {
+        "name": "Q022-v2_量子電腦學程_等距的梯子_動畫展示版_2026-11-20.zip.part06",
+        "bytes": 29360128,
+        "sha256": "1b677207e0b782caa34c3df05378899bfc0311627de6b8c4c18d3c5578ebf049"
+      },
+      {
+        "name": "Q022-v2_量子電腦學程_等距的梯子_動畫展示版_2026-11-20.zip.part07",
+        "bytes": 10993243,
+        "sha256": "cf3407a765a698a2de6b927b82c4edcbf5abea970bc4c6cc0d0cc2496ea65ed4"
+      }
+    ],
+    "handedOver": "2026-11-20 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1epfQVOXunbD9Vht37u62oOD9Dr-HKMSE",
+    "folder": "量子電腦學程 Q011–Q040 動畫展示版（v2）",
+    "files": [
+      {
+        "name": "Q022 等距的梯子：量子諧振子：等距的梯子（動畫展示版）.mp4",
+        "id": "1VHuDvEArRW3q7WL-1cI5g_1BQWybFm1P",
+        "link": "https://drive.google.com/file/d/1VHuDvEArRW3q7WL-1cI5g_1BQWybFm1P/view?usp=drivesdk",
+        "bytes": 84421296
+      },
+      {
+        "name": "Q022 等距的梯子（動畫展示版）簡報.pptx",
+        "id": "1XcocmsNx96uGT7MQGnPy12AHUA4Q_LeW",
+        "link": "https://docs.google.com/presentation/d/1XcocmsNx96uGT7MQGnPy12AHUA4Q_LeW/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true",
+        "bytes": 3106343
+      },
+      {
+        "name": "Q022 等距的梯子 教材.zip",
+        "id": "1yms38QFKv0doDyJv66VOL16OOAi0FObQ",
+        "link": "https://drive.google.com/file/d/1yms38QFKv0doDyJv66VOL16OOAi0FObQ/view?usp=drivesdk",
+        "bytes": 283205
+      }
+    ]
+  }
+}

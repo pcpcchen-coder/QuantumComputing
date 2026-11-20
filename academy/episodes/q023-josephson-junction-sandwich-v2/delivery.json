@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q023",
+  "version": "Q023-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-20",
+  "episodePath": "academy/episodes/q023-josephson-junction-sandwich-v2",
+  "basedOn": "academy/episodes/q023-josephson-junction-sandwich（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 510.233333,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "sandwich",
+      "title": "動畫展示：超導三明治的三層",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#jj"
+    },
+    {
+      "key": "dc",
+      "title": "動畫展示：零電壓也有電流",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#jj"
+    },
+    {
+      "key": "ac",
+      "title": "動畫展示：有了電壓，相位一直轉",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#jj"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.4,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q023-josephson-junction-sandwich-v2-zh-TW.mp4": {
+      "bytes": 89570540,
+      "sha256": "349a399b085558c61c1587b3a7b8f0f5271d678a6a9a7cda428b4d12ec0f77ce"
+    },
+    "q023-josephson-junction-sandwich-v2-master.mp4": {
+      "bytes": 91797375,
+      "sha256": "814518e50c482cf404c864943336c40bf8ddf7ac63eb4bbe8a692edeb8c8ec37"
+    },
+    "narration-only.mp3": {
+      "bytes": 12246484,
+      "sha256": "db870d6858302d82eb3ac60c73c0f8ae1fd602a3dcd2efce135c5e87738d4e9e"
+    }
+  },
+  "package": {
+    "filename": "Q023-v2_量子電腦學程_約瑟夫森接面_動畫展示版_2026-11-20.zip",
+    "bytes": 198017262,
+    "sha256": "e337420842c031b22277526cc10d2f56f4e398d70e2b5bce8886cadda3ef572d",
+    "parts": [
+      {
+        "name": "Q023-v2_量子電腦學程_約瑟夫森接面_動畫展示版_2026-11-20.zip.part01",
+        "bytes": 29360128,
+        "sha256": "f08c9d01b9c00e5d9a0d34c2fd1836d0a70c2ba4c30deb92d7f20ff6ef893766"
+      },
+      {
+        "name": "Q023-v2_量子電腦學程_約瑟夫森接面_動畫展示版_2026-11-20.zip.part02",
+        "bytes": 29360128,
+        "sha256": "9e628ea15211033210156a851ab2504480d1032b1284f72e99bb34742d32562b"
+      },
+      {
+        "name": "Q023-v2_量子電腦學程_約瑟夫森接面_動畫展示版_2026-11-20.zip.part03",
+        "bytes": 29360128,
+        "sha256": "d4b97ef428a94aa72e663e7c8bec6db5490ebe1e5015da80438adf0e09f9bd37"
+      },
+      {
+        "name": "Q023-v2_量子電腦學程_約瑟夫森接面_動畫展示版_2026-11-20.zip.part04",
+        "bytes": 29360128,
+        "sha256": "0768180d77df2890bfdfa84de9e03ff0f9b0e366eb675b945cd18c9b1fd9e32e"
+      },
+      {
+        "name": "Q023-v2_量子電腦學程_約瑟夫森接面_動畫展示版_2026-11-20.zip.part05",
+        "bytes": 29360128,
+        "sha256": "5316525d2de5185881804b408f6f62d8d629a65f574c29aee72de58ff2d2c3a4"
+      },
+      {
+        "name": "Q023-v2_量子電腦學程_約瑟夫森接面_動畫展示版_2026-11-20.zip.part06",
+        "bytes": 29360128,
+        "sha256": "59221966f3ad1e5d819d2023e48f88b5a2e6e9081d18ed69c0c66db5f216ea4d"
+      },
+      {
+        "name": "Q023-v2_量子電腦學程_約瑟夫森接面_動畫展示版_2026-11-20.zip.part07",
+        "bytes": 21856494,
+        "sha256": "49043984042c2e941517aa1379a670126d3343e8bd29d7239cfa952402fda865"
+      }
+    ],
+    "handedOver": "2026-11-20 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1epfQVOXunbD9Vht37u62oOD9Dr-HKMSE",
+    "folder": "量子電腦學程 Q011–Q040 動畫展示版（v2）",
+    "files": [
+      {
+        "name": "Q023 約瑟夫森接面：約瑟夫森接面：超導三明治（動畫展示版）.mp4",
+        "id": "1L9nGWPOXw-JqJUiQ0MIzL2S3eL7K42i5",
+        "link": "https://drive.google.com/file/d/1L9nGWPOXw-JqJUiQ0MIzL2S3eL7K42i5/view?usp=drivesdk",
+        "bytes": 89570540
+      },
+      {
+        "name": "Q023 約瑟夫森接面（動畫展示版）簡報.pptx",
+        "id": "1FPVcdCdYbpTqJbyBy_syuvMUpzIkiI5S",
+        "link": "https://docs.google.com/presentation/d/1FPVcdCdYbpTqJbyBy_syuvMUpzIkiI5S/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true",
+        "bytes": 3347919
+      },
+      {
+        "name": "Q023 約瑟夫森接面 教材.zip",
+        "id": "1SBOzm6GxKQD_NOIuV0soSmUAmUDb9EC8",
+        "link": "https://drive.google.com/file/d/1SBOzm6GxKQD_NOIuV0soSmUAmUDb9EC8/view?usp=drivesdk",
+        "bytes": 468116
+      }
+    ]
+  }
+}

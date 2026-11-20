@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q036",
+  "version": "Q036-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-20",
+  "episodePath": "academy/episodes/q036-iq-plane-v2",
+  "basedOn": "academy/episodes/q036-iq-plane（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 568.256,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "circle",
+      "title": "動畫展示：探測頻率一變，點就沿著一圈走",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#dispersive"
+    },
+    {
+      "key": "shots",
+      "title": "動畫展示：每讀一次，就落下一個點",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#iq"
+    },
+    {
+      "key": "snr",
+      "title": "動畫展示：距離要比團寬大",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#iq"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.6,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q036-iq-plane-v2-zh-TW.mp4": {
+      "bytes": 103503490,
+      "sha256": "64d7a8be74ea3489baf4924998df5a4041f2b4e85911ce9929ff807531bb720c"
+    },
+    "q036-iq-plane-v2-master.mp4": {
+      "bytes": 106363238,
+      "sha256": "eddee6ebe3c9e5e7e13ef52f6705905c24e6f38788d7d6ede52457733f4d6a7f"
+    },
+    "narration-only.mp3": {
+      "bytes": 13639828,
+      "sha256": "cf97bc917d5dee568a5e1192b876bfe4af1bffedd0c0bbb198eac7126fb93937"
+    }
+  },
+  "package": {
+    "filename": "Q036-v2_量子電腦學程_IQ平面_動畫展示版_2026-11-20.zip",
+    "bytes": 228139588,
+    "sha256": "90e41f63aeaebf3f83a04df85978c505dc08b7bc6e38dff05df5a5bf5f51a8b5",
+    "parts": [
+      {
+        "name": "Q036-v2_量子電腦學程_IQ平面_動畫展示版_2026-11-20.zip.part01",
+        "bytes": 29360128,
+        "sha256": "82fd310409fd42c8f62895fc42cd239fb03e5cc9ee7f1386ff2d89aebc287fe1"
+      },
+      {
+        "name": "Q036-v2_量子電腦學程_IQ平面_動畫展示版_2026-11-20.zip.part02",
+        "bytes": 29360128,
+        "sha256": "52cd9a0b70b89072455d1fa53e49ab6d70393395a94fab57c4c0aad597243153"
+      },
+      {
+        "name": "Q036-v2_量子電腦學程_IQ平面_動畫展示版_2026-11-20.zip.part03",
+        "bytes": 29360128,
+        "sha256": "82db450813135d18f3c50aebc963a084d34f46f1a3e62efbc564df9c4738d1aa"
+      },
+      {
+        "name": "Q036-v2_量子電腦學程_IQ平面_動畫展示版_2026-11-20.zip.part04",
+        "bytes": 29360128,
+        "sha256": "fa04bab91a59b401e6469706a7d54ff07913a4fd694644e0cbd8976765ea520b"
+      },
+      {
+        "name": "Q036-v2_量子電腦學程_IQ平面_動畫展示版_2026-11-20.zip.part05",
+        "bytes": 29360128,
+        "sha256": "986bd07d3840d56e344356aebae0fbb130609699132b87a2dd5858e3a5e6105c"
+      },
+      {
+        "name": "Q036-v2_量子電腦學程_IQ平面_動畫展示版_2026-11-20.zip.part06",
+        "bytes": 29360128,
+        "sha256": "21462e7f3499a139fa96ba699d6ca134e08f2568490cabb3c4e19dd55d066220"
+      },
+      {
+        "name": "Q036-v2_量子電腦學程_IQ平面_動畫展示版_2026-11-20.zip.part07",
+        "bytes": 29360128,
+        "sha256": "8fd76681242c5c1e999ee510278e5d894fb7d68607b84bac5ce6ec455f3cdd79"
+      },
+      {
+        "name": "Q036-v2_量子電腦學程_IQ平面_動畫展示版_2026-11-20.zip.part08",
+        "bytes": 22618692,
+        "sha256": "68247ad0c12379e7b9f4c9b627ee3a1efdeb4fe9b68a4c26e828c3b3b4dc3bc6"
+      }
+    ],
+    "handedOver": "2026-11-20 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1epfQVOXunbD9Vht37u62oOD9Dr-HKMSE",
+    "folder": "量子電腦學程 Q011–Q040 動畫展示版（v2）",
+    "files": [
+      {
+        "name": "Q036 IQ平面：IQ 平面：把微波變成一個點（動畫展示版）.mp4",
+        "id": "1E4y2JHIHlhxiVrXZaCNPkxbnkReFXrvd",
+        "link": "https://drive.google.com/file/d/1E4y2JHIHlhxiVrXZaCNPkxbnkReFXrvd/view?usp=drivesdk",
+        "bytes": 103503490
+      },
+      {
+        "name": "Q036 IQ平面（動畫展示版）簡報.pptx",
+        "id": "1nqthj8krc4EkrqnW7Q7HqG9zIJMinYGF",
+        "link": "https://docs.google.com/presentation/d/1nqthj8krc4EkrqnW7Q7HqG9zIJMinYGF/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true",
+        "bytes": 3487017
+      },
+      {
+        "name": "Q036 IQ平面 教材.zip",
+        "id": "1MagTYnsEJSfgY1zDo9l_8rUAbSCLGEPt",
+        "link": "https://drive.google.com/file/d/1MagTYnsEJSfgY1zDo9l_8rUAbSCLGEPt/view?usp=drivesdk",
+        "bytes": 393163
+      }
+    ]
+  }
+}

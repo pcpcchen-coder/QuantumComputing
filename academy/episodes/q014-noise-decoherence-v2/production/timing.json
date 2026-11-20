@@ -1,0 +1,399 @@
+{
+  "version": 2,
+  "opening": 60.277,
+  "scenes": [
+    {
+      "page": 1,
+      "kind": "slide",
+      "v1slide": 1,
+      "title": "量子態很怕吵：雜訊與退相干",
+      "duration": 31.728,
+      "sentences": [
+        {
+          "text": "歡迎回到父子科技學院的量子電腦學程，我是陳犀牛，今天是量子第十四堂，量子態很怕吵：雜訊與退相干，這是依課綱製作的課前教學版，並非實際上課錄音。",
+          "start": 0.0,
+          "end": 13.096009
+        },
+        {
+          "text": "上一堂我們用格羅弗搜尋，在十六個抽屜裡一輪一輪把寶藏的機率放大，那時候的動畫是完全沒有雜訊的理想世界。",
+          "start": 13.276009,
+          "end": 22.724014
+        },
+        {
+          "text": "今天要面對真實世界：量子位元很怕吵，周圍一點點干擾，就會讓疊加慢慢壞掉，這叫做退相干。",
+          "start": 22.904014,
+          "end": 31.512019000000002
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q014-noise-decoherence/audio/slide_01.mp3"
+    },
+    {
+      "page": 2,
+      "kind": "slide",
+      "v1slide": 2,
+      "title": "三個重點",
+      "duration": 25.272,
+      "sentences": [
+        {
+          "text": "今天有三個重點：第一是能量弛豫，一態會自己放出能量，掉回零態。",
+          "start": 0.0,
+          "end": 6.736009
+        },
+        {
+          "text": "第二是失相，赤道上的箭頭會被雜訊打散；第三，要知道量子電腦為什麼要冷到大約十毫克耳文，也就是只比絕對零度高百分之一度。",
+          "start": 6.916009,
+          "end": 17.900023
+        },
+        {
+          "text": "今天的作品是一副雜訊卡牌組，每張卡寫一種干擾，畫出它讓箭頭怎麼變。",
+          "start": 18.080023,
+          "end": 25.056032000000002
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q014-noise-decoherence/audio/slide_02.mp3"
+    },
+    {
+      "page": 3,
+      "kind": "slide",
+      "v1slide": 3,
+      "title": "量子態為什麼會壞",
+      "duration": 26.352,
+      "sentences": [
+        {
+          "text": "量子位元不是一座完全隔絕的孤島，它和周圍的電路、材料和熱，一直都有接觸。",
+          "start": 0.0,
+          "end": 7.264014
+        },
+        {
+          "text": "每一次接觸，量子位元的資訊就漏一點到環境裡，像是被環境偷看了一眼；漏得越多，疊加就越像普通的猜硬幣。",
+          "start": 7.444014,
+          "end": 17.060023
+        },
+        {
+          "text": "在超導量子電腦裡，常見的干擾有三種：多餘的熱、線路帶進來的電磁雜訊，還有材料裡的小缺陷。",
+          "start": 17.240023,
+          "end": 26.136032
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q014-noise-decoherence/audio/slide_03.mp3"
+    },
+    {
+      "page": 4,
+      "kind": "slide",
+      "v1slide": 4,
+      "title": "布洛赫球：用箭頭看壞掉",
+      "duration": 25.992,
+      "sentences": [
+        {
+          "text": "先回想布洛赫球：箭頭指向北極是零態，指向南極是一態，躺在赤道上就是一半一半的疊加。",
+          "start": 0.0,
+          "end": 8.392018
+        },
+        {
+          "text": "健康的量子態，箭頭的尖端一定碰到球面；雜訊讓箭頭往球心縮進去，箭頭變短，就代表失去了相干性。",
+          "start": 8.572018,
+          "end": 18.164036
+        },
+        {
+          "text": "箭頭縮到球心，量測結果就只剩一半一半，之前做過什麼，從結果都看不出來了。",
+          "start": 18.344036,
+          "end": 25.776054
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q014-noise-decoherence/audio/slide_04.mp3"
+    },
+    {
+      "page": 5,
+      "kind": "slide",
+      "v1slide": 5,
+      "title": "兩種壞法：掉下來和散開",
+      "duration": 25.608,
+      "sentences": [
+        {
+          "text": "量子態有兩種常見的壞法：第一種叫能量弛豫，一態把能量交給環境，掉回零態，箭頭從南極回到北極那一側。",
+          "start": 0.0,
+          "end": 9.808005
+        },
+        {
+          "text": "第二種叫失相，能量沒有變少，但相位被雜訊攪亂，赤道上的箭頭一邊轉一邊縮短。",
+          "start": 9.988005,
+          "end": 17.63601
+        },
+        {
+          "text": "衡量這兩種壞法，各有一個時間：能量弛豫時間和相位相干時間，兩個都是越久越好。",
+          "start": 17.81601,
+          "end": 25.392018999999998
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q014-noise-decoherence/audio/slide_05.mp3"
+    },
+    {
+      "page": 6,
+      "kind": "demo",
+      "demo": "t1",
+      "title": "動畫展示：一態掉回零態",
+      "duration": 37.824,
+      "sentences": [
+        {
+          "text": "打開三維動畫的布洛赫球場景，在左邊面板按下能量弛豫的按鈕，金色箭頭立刻變成筆直朝下，從球的最下面、也就是一態出發。",
+          "start": 0.0,
+          "end": 10.72
+        },
+        {
+          "text": "接著箭頭不是沿著球面轉，而是沿著直直的縱軸往上縮，穿過球心之後，再慢慢指向上面的零態。",
+          "start": 10.9,
+          "end": 19.316009
+        },
+        {
+          "text": "右下角的小圖記下得到一的機率：金色曲線從最上面的一開始往下滑，一開始掉得快，後來越滑越慢。",
+          "start": 19.496009,
+          "end": 28.416009000000003
+        },
+        {
+          "text": "動畫把時間放慢了很多；真實晶片裡，目前做得好的超導量子位元，能量弛豫時間大約是零點一到一毫秒。",
+          "start": 28.596009000000002,
+          "end": 37.612018
+        }
+      ],
+      "audio": "audio/demo_t1.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#bloch"
+    },
+    {
+      "page": 7,
+      "kind": "slide",
+      "v1slide": 6,
+      "title": "失相：箭頭在赤道上散開",
+      "duration": 26.016,
+      "sentences": [
+        {
+          "text": "把失相看仔細：先用九十度脈衝把箭頭放到赤道上，然後讓它自己繞著赤道轉。",
+          "start": 0.0,
+          "end": 7.216009000000001
+        },
+        {
+          "text": "雜訊讓每一次的轉速都有一點點不同，很多次平均起來，箭頭就散開成一把扇子，平均的箭頭越來越短。",
+          "start": 7.396009,
+          "end": 16.316009
+        },
+        {
+          "text": "奇怪的是，這段時間裡得到一的機率一直是一半；壞掉的是相位，要等之後做干涉，才會發現結果不對了。",
+          "start": 16.496009,
+          "end": 25.800023000000003
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q014-noise-decoherence/audio/slide_06.mp3"
+    },
+    {
+      "page": 8,
+      "kind": "demo",
+      "demo": "ramsey",
+      "title": "動畫展示：箭頭在赤道上縮短",
+      "duration": 35.064,
+      "sentences": [
+        {
+          "text": "換成拉姆齊進動的按鈕，箭頭躺到赤道上，一邊繞著赤道轉圈，一邊往球心縮，留下一圈一圈往內捲的軌跡。",
+          "start": 0.0,
+          "end": 9.184014
+        },
+        {
+          "text": "再看右下角的小圖：得到一的機率是一條平平的線，一直停在零點五，箭頭尖端的數字也一直是零點五。",
+          "start": 9.364014,
+          "end": 18.308028
+        },
+        {
+          "text": "左邊面板的讀數顯示箭頭的大小一路變小，數字後面還一直跟著括號：混態，失去相干性。",
+          "start": 18.488028,
+          "end": 26.640045999999998
+        },
+        {
+          "text": "把失諧的滑桿拉到零，再按一次，箭頭不再轉圈，卻還是照樣往球心縮，這就是失相。",
+          "start": 26.820045999999998,
+          "end": 34.852064
+        }
+      ],
+      "audio": "audio/demo_ramsey.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#bloch"
+    },
+    {
+      "page": 9,
+      "kind": "slide",
+      "v1slide": 7,
+      "title": "為什麼要冷到 10 mK",
+      "duration": 29.904,
+      "sentences": [
+        {
+          "text": "為什麼要冷到十毫克耳文？一顆頻率五吉赫的量子位元，從零態跳到一態需要的能量，大約只等於兩百四十毫克耳文的熱。",
+          "start": 0.0,
+          "end": 10.696009
+        },
+        {
+          "text": "環境太熱，熱雜訊就會把零態踢到一態；冷到十毫克耳文，熱只剩量子位元能量的二十四分之一，被熱踢上去的機會幾乎是零。",
+          "start": 10.876009,
+          "end": 21.548026999999998
+        },
+        {
+          "text": "溫度是一階一階降下來的：先用脈衝管冷到四克耳文左右，再用稀釋冷凍機降到十毫克耳文。",
+          "start": 21.728026999999997,
+          "end": 29.688026999999998
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q014-noise-decoherence/audio/slide_07.mp3"
+    },
+    {
+      "page": 10,
+      "kind": "slide",
+      "v1slide": 8,
+      "title": "冷不是為了跑得更快",
+      "duration": 28.032,
+      "sentences": [
+        {
+          "text": "要特別注意：冷，是為了讓熱雜訊遠小於量子位元的能量，不是為了讓電腦跑得更快。",
+          "start": 0.0,
+          "end": 7.432018
+        },
+        {
+          "text": "就算很冷，量子態還是只能撐一段時間，所以每一步都要快；經驗法則是相位相干時間除以一個閘的時間，例如一百微秒除以二十五奈秒，大約能做四千個閘。",
+          "start": 7.612018,
+          "end": 20.084036
+        },
+        {
+          "text": "暫停影片想一想：如果讀取量子位元花的時間，比能量弛豫時間還久，會發生什麼事？",
+          "start": 20.264036,
+          "end": 27.816054
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q014-noise-decoherence/audio/slide_08.mp3"
+    },
+    {
+      "page": 11,
+      "kind": "slide",
+      "v1slide": 9,
+      "title": "故障卡：雜訊卡牌組",
+      "duration": 27.264,
+      "sentences": [
+        {
+          "text": "實作的時候，父子一起做雜訊卡：每張卡寫一種干擾，例如多餘的熱、電磁雜訊、材料缺陷，再畫出箭頭會怎麼變。",
+          "start": 0.0,
+          "end": 10.648005
+        },
+        {
+          "text": "畫好之後玩故障卡：爸爸抽一張，孩子在三維動畫裡切到對應的模式，說出箭頭是往北極掉，還是在赤道上散開。",
+          "start": 10.828005,
+          "end": 20.564014
+        },
+        {
+          "text": "每張卡的背面記下它屬於哪一種壞法，以及動畫裡哪一個模式可以對照。",
+          "start": 20.744014,
+          "end": 27.048028000000002
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q014-noise-decoherence/audio/slide_09.mp3"
+    },
+    {
+      "page": 12,
+      "kind": "demo",
+      "demo": "cards",
+      "title": "動畫展示：用動畫對照雜訊卡",
+      "duration": 37.656,
+      "sentences": [
+        {
+          "text": "做雜訊卡的時候，先按寫著二分之派脈衝、也就是九十度脈衝的按鈕當作對照：箭頭停在赤道上，尖端碰著球面，讀數寫著純態，這是沒有雜訊的理想情況。",
+          "start": 0.0,
+          "end": 12.904014
+        },
+        {
+          "text": "抽到漏能量的卡，就按能量弛豫：箭頭從南極出發往上縮，卡片上就畫一支往北極回去的箭頭。",
+          "start": 13.084014,
+          "end": 21.500023
+        },
+        {
+          "text": "抽到相位雜訊的卡，就按拉姆齊進動：箭頭繞著赤道邊轉邊縮，卡片上就畫一圈往內捲的螺旋。",
+          "start": 21.680023,
+          "end": 30.024037
+        },
+        {
+          "text": "三種畫面都對照過，再把模式名稱寫在卡片背面，下次抽到就知道要按哪一顆。",
+          "start": 30.204037,
+          "end": 37.444037
+        }
+      ],
+      "audio": "audio/demo_cards.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#bloch"
+    },
+    {
+      "page": 13,
+      "kind": "slide",
+      "v1slide": 10,
+      "title": "換你改造：防雜訊方法卡",
+      "duration": 24.336,
+      "sentences": [
+        {
+          "text": "下半場換你改造：設計一張防雜訊方法卡，先選一種雜訊，再想一個擋住它的方法。",
+          "start": 0.0,
+          "end": 7.936009
+        },
+        {
+          "text": "真實的量子電腦用的方法有：冷卻擋熱，金屬屏蔽擋外面的電磁波，用更乾淨的材料減少缺陷。",
+          "start": 8.116009,
+          "end": 16.484014000000002
+        },
+        {
+          "text": "卡片上要寫清楚它擋住哪一種雜訊；例如屏蔽能擋外面的電磁波，卻不能讓環境變冷。",
+          "start": 16.664014,
+          "end": 24.120023000000003
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q014-noise-decoherence/audio/slide_10.mp3"
+    },
+    {
+      "page": 14,
+      "kind": "slide",
+      "v1slide": 11,
+      "title": "兩小時的雜訊卡工作坊",
+      "duration": 27.912,
+      "sentences": [
+        {
+          "text": "兩小時的安排是：開場十分鐘，認識能量弛豫、失相和為什麼要冷十五分鐘，接著四十分鐘一起做雜訊卡、對照三維動畫，然後休息十分鐘。",
+          "start": 0.0,
+          "end": 11.944014000000001
+        },
+        {
+          "text": "下半場三十分鐘設計防雜訊方法卡；接著十分鐘交換角色，由你教爸爸操作動畫，說明箭頭為什麼會壞。",
+          "start": 12.124014,
+          "end": 21.644014
+        },
+        {
+          "text": "最後五分鐘錄音總結，替卡牌組取名字，存一個版本。",
+          "start": 21.824014,
+          "end": 27.696032
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q014-noise-decoherence/audio/slide_11.mp3"
+    },
+    {
+      "page": 15,
+      "kind": "slide",
+      "v1slide": 12,
+      "title": "最後一關：教爸爸看雜訊",
+      "duration": 34.032,
+      "sentences": [
+        {
+          "text": "最後一關，請不看稿說出：能量弛豫和失相，箭頭各會怎麼變？量子電腦為什麼要冷到十毫克耳文？",
+          "start": 0.0,
+          "end": 9.808005
+        },
+        {
+          "text": "再指出一個限制：就算冷到十毫克耳文，量子態還是只能撐很短的時間，所以計算要在它壞掉之前做完。",
+          "start": 9.988005,
+          "end": 19.028005
+        },
+        {
+          "text": "今天的作品是雜訊卡牌組，下一堂是迷你專案，我們要把疊加、測量、干涉、糾纏和格羅弗搜尋，設計成五關的量子逃脫室；我是陳犀牛，保持好奇，我們下次見！",
+          "start": 19.208005,
+          "end": 33.81601
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q014-noise-decoherence/audio/slide_12.mp3"
+    }
+  ]
+}

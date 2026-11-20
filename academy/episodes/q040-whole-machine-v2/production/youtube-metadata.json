@@ -1,0 +1,8 @@
+{
+  "title": "父子科技學院 Q040｜量子電腦 ≠ 量子晶片（動畫展示版）",
+  "description": "父子科技學院 量子電腦學程 Q040｜量子電腦 ≠ 量子晶片（v2・含 3D 動畫展示）\n\n這是依課綱製作的課前教學版，不是實際上課錄音。\n\n父子科技學院量子電腦學程 Q040「量子電腦 ≠ 量子晶片」新版（v2）：在原本的教學投影片之間，插入本學程 3D 互動動畫的實際操作示範。\n\n這一版新增的動畫展示\n・走一圈機房全景（https://pcpcchen-coder.github.io/QuantumComputing/animations/peripherals.html#overview）\n・冷卻和訊號分開看（https://pcpcchen-coder.github.io/QuantumComputing/animations/peripherals.html#overview）\n・電力從哪裡來（https://pcpcchen-coder.github.io/QuantumComputing/animations/peripherals.html#overview）\n\n動畫都可以在瀏覽器直接開啟，自己動手操作。\n\n章節\n00:00 陳犀牛系列片頭\n01:00 量子電腦 ≠ 量子晶片\n01:33 三個重點\n02:06 機房全景：晶片在哪裡？\n02:41 動畫展示：走一圈機房全景\n03:21 冷卻側：四類連接\n03:54 訊號側與電力\n04:25 動畫展示：冷卻和訊號分開看\n05:11 用電：周邊才是大宗\n05:46 動畫展示：電力從哪裡來\n06:25 系統方塊圖：誰連到誰\n07:00 常見誤解：晶片就是電腦？\n07:29 實作：機房尋寶\n07:59 換你改造：如果斷掉了\n08:31 兩小時的機房尋寶\n09:00 最後一關：教爸爸看機房\n\n旁白：微軟 zh-TW-YunJheNeural 神經語音合成（Edge-TTS／Azure 語音服務，同一聲音同一格式）。字幕已燒入影片，開啟 CC 可能重疊。\n",
+  "privacyStatus": "private",
+  "madeForKids": null,
+  "reviewStatus": "needs-parent-review",
+  "publicationMode": "manual-user-upload"
+}

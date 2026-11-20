@@ -1,0 +1,399 @@
+{
+  "version": 2,
+  "opening": 60.277,
+  "scenes": [
+    {
+      "page": 1,
+      "kind": "slide",
+      "v1slide": 1,
+      "title": "為什麼要做「人造原子」",
+      "duration": 28.848,
+      "sentences": [
+        {
+          "text": "歡迎回到父子科技學院的量子電腦學程，我是陳犀牛，今天是量子第十七堂，為什麼要做「人造原子」，這是依課綱製作的課前教學版，並非實際上課錄音。",
+          "start": 0.0,
+          "end": 12.424014
+        },
+        {
+          "text": "上一堂我們用自己的話寫了一本量子小百科，第一階段的量子直覺到這裡告一段落。",
+          "start": 12.604014,
+          "end": 19.724014
+        },
+        {
+          "text": "從今天開始進入第二階段，硬體怎麼做；第一個問題是：真的要做一顆量子位元，該拿什麼東西來做？",
+          "start": 19.904014,
+          "end": 28.632019
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q017-artificial-atom/audio/slide_01.mp3"
+    },
+    {
+      "page": 2,
+      "kind": "slide",
+      "v1slide": 2,
+      "title": "三個重點",
+      "duration": 25.056,
+      "sentences": [
+        {
+          "text": "今天有三個重點：第一，量子位元需要一個可以控制的二態系統，光有兩個狀態還不夠。",
+          "start": 0.0,
+          "end": 7.528005
+        },
+        {
+          "text": "第二，認識迪文森佐五條件，它像一張檢查清單；第三，弄懂超導量子電腦為什麼要做「人造原子」。",
+          "start": 7.708005,
+          "end": 16.724014
+        },
+        {
+          "text": "今天的作品是一張五條件檢核卡，我們要拿它檢查硬幣、燈泡、原子和超導量子位元。",
+          "start": 16.904014,
+          "end": 24.840023000000002
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q017-artificial-atom/audio/slide_02.mp3"
+    },
+    {
+      "page": 3,
+      "kind": "slide",
+      "v1slide": 3,
+      "title": "量子位元要一個二態系統",
+      "duration": 24.336,
+      "sentences": [
+        {
+          "text": "要做量子位元，先找一個二態系統：它要有兩個清楚的基本狀態，分別當作零和一。",
+          "start": 0.0,
+          "end": 7.504014000000001
+        },
+        {
+          "text": "第二，這兩個狀態要能疊加，變成零和一的組合；第三，我們要能控制它，想轉多少就轉多少。",
+          "start": 7.684014,
+          "end": 16.388028000000002
+        },
+        {
+          "text": "薛丁格的貓是很好的比喻，但它只是思想實驗，沒有人能把貓關進箱子當量子位元。",
+          "start": 16.568028,
+          "end": 24.120046000000002
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q017-artificial-atom/audio/slide_03.mp3"
+    },
+    {
+      "page": 4,
+      "kind": "slide",
+      "v1slide": 4,
+      "title": "迪文森佐五條件",
+      "duration": 26.088,
+      "sentences": [
+        {
+          "text": "物理學家迪文森佐整理出做量子電腦的五個條件：第一，要有定義清楚、數量可以擴充的量子位元。",
+          "start": 0.0,
+          "end": 8.752018
+        },
+        {
+          "text": "第二，能把它初始化成零態；第三，它維持量子狀態的時間，要比做一個閘的時間久很多。",
+          "start": 8.932018,
+          "end": 16.964036
+        },
+        {
+          "text": "第四，要能做出各種量子閘；第五，要能單獨讀出每一顆的結果，五條都要有，才算合格。",
+          "start": 17.144036,
+          "end": 25.872041
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q017-artificial-atom/audio/slide_04.mp3"
+    },
+    {
+      "page": 5,
+      "kind": "slide",
+      "v1slide": 5,
+      "title": "第一關：硬幣和燈泡",
+      "duration": 25.824,
+      "sentences": [
+        {
+          "text": "先檢核一枚硬幣和一顆燈泡：硬幣有正反面，燈泡有亮和暗，都是兩個狀態，也都翻得動、看得到。",
+          "start": 0.0,
+          "end": 9.040000000000001
+        },
+        {
+          "text": "可是它們每一刻只能是其中一種，不能疊加；旋轉中的硬幣看起來一半一半，其實只是我們還不知道結果。",
+          "start": 9.22,
+          "end": 17.924014
+        },
+        {
+          "text": "所以它們是古典位元，卡在第一條：缺的不是兩個狀態，而是能疊加的量子狀態。",
+          "start": 18.104014,
+          "end": 25.608028
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q017-artificial-atom/audio/slide_05.mp3"
+    },
+    {
+      "page": 6,
+      "kind": "slide",
+      "v1slide": 6,
+      "title": "第二關：一個原子",
+      "duration": 27.744,
+      "sentences": [
+        {
+          "text": "再檢核一個原子：原子裡有很多能階，挑出兩個當作零和一，忽略其他的，就是大自然做好的二態系統。",
+          "start": 0.0,
+          "end": 8.944014000000001
+        },
+        {
+          "text": "用雷射可以把原子冷卻、推到零態，也能用螢光讀出它是零還是一；它的量子狀態可以維持一秒左右，甚至更久。",
+          "start": 9.124014,
+          "end": 18.836032000000003
+        },
+        {
+          "text": "缺點是原子太小，要用電場或雷射一顆一顆抓住，還要很多精密的雷射，整台機器像一張光學桌。",
+          "start": 19.016032000000003,
+          "end": 27.52805
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q017-artificial-atom/audio/slide_06.mp3"
+    },
+    {
+      "page": 7,
+      "kind": "demo",
+      "demo": "ion",
+      "title": "動畫展示：一顆原子怎麼當量子位元",
+      "duration": 40.632,
+      "sentences": [
+        {
+          "text": "打開離子阱動畫的離子量子位元場景，左邊的能階圖裡，最下面兩條線就是零和一；先按第一個冷卻按鈕，雷射照上去，原本一直抖動的離子慢慢安靜下來。",
+          "start": 0.0,
+          "end": 12.64
+        },
+        {
+          "text": "再按第二個按鈕光泵浦初始化，右邊布洛赫球上出現一支箭頭，指向最上面的零態，這就是第二條：初始化。",
+          "start": 12.82,
+          "end": 22.268005000000002
+        },
+        {
+          "text": "接著按第四個按鈕送一道微波，箭頭翻到最下面的一態，這就是第四條：做出量子閘。",
+          "start": 22.448005000000002,
+          "end": 30.072019
+        },
+        {
+          "text": "最後按第五個偵測按鈕，離子亮起螢光，面板上判讀為一，這是第五條：讀取；每一步都要靠雷射或微波精準瞄準。",
+          "start": 30.252019,
+          "end": 40.420024000000005
+        }
+      ],
+      "audio": "audio/demo_ion.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/atoms.html#ionqubit"
+    },
+    {
+      "page": 8,
+      "kind": "slide",
+      "v1slide": 7,
+      "title": "第三關：超導電路",
+      "duration": 25.968,
+      "sentences": [
+        {
+          "text": "超導電路比原子大得多，可以做在晶片上；最簡單的是電感加電容的振盪電路，它的能階像一道樓梯。",
+          "start": 0.0,
+          "end": 8.488005000000001
+        },
+        {
+          "text": "麻煩的是這道樓梯每一階都一樣高，送進去的微波會同時把零推到一、一推到二，沒辦法只用其中兩階。",
+          "start": 8.668005,
+          "end": 17.228005000000003
+        },
+        {
+          "text": "把電感換成約瑟夫森接面，越往上的台階越矮，就能只挑零和一來用，這就是「人造原子」。",
+          "start": 17.408005000000003,
+          "end": 25.752019000000004
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q017-artificial-atom/audio/slide_07.mp3"
+    },
+    {
+      "page": 9,
+      "kind": "demo",
+      "demo": "levels",
+      "title": "動畫展示：樓梯變得不等高",
+      "duration": 42.312,
+      "sentences": [
+        {
+          "text": "打開約瑟夫森接面動畫的能階場景，先按第一個按鈕，換成電感加電容的振盪電路：畫面上是一條拋物線形的山谷，裡面有一層一層的能階。",
+          "start": 0.0,
+          "end": 11.32
+        },
+        {
+          "text": "右邊金色的數字是相鄰兩階的間距，三個都是五點零零吉赫，面板上的非諧性是零，代表樓梯每一階一樣高。",
+          "start": 11.5,
+          "end": 20.684013999999998
+        },
+        {
+          "text": "再按第二個按鈕，把電感換成約瑟夫森接面：山谷變成餘弦的形狀，越往上越寬，間距從四點七四、四點四五縮到四點一三吉赫。",
+          "start": 20.864013999999997,
+          "end": 32.088028
+        },
+        {
+          "text": "面板上的非諧性變成負兩百八十七兆赫：零到一和一到二的頻率不一樣，微波就能只推零和一，這顆電路就成了人造原子。",
+          "start": 32.268028,
+          "end": 42.100046
+        }
+      ],
+      "audio": "audio/demo_levels.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#potential"
+    },
+    {
+      "page": 10,
+      "kind": "slide",
+      "v1slide": 8,
+      "title": "第四關：超導量子位元",
+      "duration": 26.448,
+      "sentences": [
+        {
+          "text": "現在檢核超導量子位元：它用晶片製程大量製作，用微波脈衝操控，也用微波讀取結果。",
+          "start": 0.0,
+          "end": 8.200000000000001
+        },
+        {
+          "text": "它放在只比絕對零度高百分之一度的冷凍機裡，平常安靜地待在零態，讀完以後也能很快重設回零。",
+          "start": 8.38,
+          "end": 16.772018000000003
+        },
+        {
+          "text": "它的弱點是量子狀態只維持大約零點一毫秒，好在一個閘只要幾十奈秒；暫停影片想一想：它和原子各贏在哪裡？",
+          "start": 16.952018000000002,
+          "end": 26.232018000000004
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q017-artificial-atom/audio/slide_08.mp3"
+    },
+    {
+      "page": 11,
+      "kind": "demo",
+      "demo": "coherence",
+      "title": "動畫展示：維持得夠不夠久",
+      "duration": 34.368,
+      "sentences": [
+        {
+          "text": "最後打開三平台比較場景：左邊是超導晶片，中間是一串離子，右邊是一整片中性原子。",
+          "start": 0.0,
+          "end": 8.296009
+        },
+        {
+          "text": "按下相干時間，後面的三根柱子比的是：量子狀態消失之前，大約能做幾個閘。",
+          "start": 8.476009,
+          "end": 15.812018
+        },
+        {
+          "text": "左邊藍色的超導柱子最矮，標著大約兩千個：它的閘很快，量子狀態卻維持得最短。",
+          "start": 15.992018,
+          "end": 23.736032
+        },
+        {
+          "text": "中間金色的離子阱標著一萬個以上，閘慢卻維持得久；右邊青色的柱子最高，不過算進搬運原子的時間，大約是一千到一萬個。",
+          "start": 23.916032,
+          "end": 34.156032
+        }
+      ],
+      "audio": "audio/demo_coherence.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/atoms.html#compare"
+    },
+    {
+      "page": 12,
+      "kind": "slide",
+      "v1slide": 9,
+      "title": "冒險任務：五條件檢核卡",
+      "duration": 28.152,
+      "sentences": [
+        {
+          "text": "實作的時候來一場冒險任務：你是檢核員，拿著五條件檢核卡，替硬幣、燈泡、原子和超導量子位元逐條打勾。",
+          "start": 0.0,
+          "end": 10.24
+        },
+        {
+          "text": "爸爸當考官，每打一個勾就追問一句「真的嗎？為什麼？」，說不出理由的勾要先擦掉。",
+          "start": 10.42,
+          "end": 19.700000000000003
+        },
+        {
+          "text": "四位候選人都檢核完，你會發現只有原子和超導量子位元五條全過，只是各有各的代價。",
+          "start": 19.880000000000003,
+          "end": 27.936009000000002
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q017-artificial-atom/audio/slide_09.mp3"
+    },
+    {
+      "page": 13,
+      "kind": "slide",
+      "v1slide": 10,
+      "title": "換你改造：生活裡的二態系統",
+      "duration": 23.928,
+      "sentences": [
+        {
+          "text": "下半場換你改造：在生活裡再找一個二態系統，例如電燈開關、紅綠燈的紅和綠，或是門的開和關。",
+          "start": 0.0,
+          "end": 8.8
+        },
+        {
+          "text": "把它拿來逐條檢核，五條都問一次，特別注意它能不能疊加、能不能維持夠久。",
+          "start": 8.98,
+          "end": 16.124014000000003
+        },
+        {
+          "text": "最後寫下它缺哪一條，再想一想：如果真要把它變成量子位元，還得補上什麼？",
+          "start": 16.304014000000002,
+          "end": 23.712019
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q017-artificial-atom/audio/slide_10.mp3"
+    },
+    {
+      "page": 14,
+      "kind": "slide",
+      "v1slide": 11,
+      "title": "兩小時的人造原子任務",
+      "duration": 24.792,
+      "sentences": [
+        {
+          "text": "兩小時的安排是：開場十分鐘，概念示範十五分鐘，接著四十分鐘父子一起檢核四位候選人，然後休息十分鐘。",
+          "start": 0.0,
+          "end": 9.592018
+        },
+        {
+          "text": "下半場三十分鐘，你自己找一個二態系統來檢核；接著十分鐘交換角色，由你教爸爸五個條件是什麼。",
+          "start": 9.772018,
+          "end": 18.548026999999998
+        },
+        {
+          "text": "最後五分鐘錄音總結，替檢核卡取名字，存一個版本。",
+          "start": 18.728026999999997,
+          "end": 24.576031999999998
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q017-artificial-atom/audio/slide_11.mp3"
+    },
+    {
+      "page": 15,
+      "kind": "slide",
+      "v1slide": 12,
+      "title": "最後一關：教爸爸五條件",
+      "duration": 29.088,
+      "sentences": [
+        {
+          "text": "最後一關，請不看稿說出：量子位元為什麼需要可以控制的二態系統？五個條件各是什麼？",
+          "start": 0.0,
+          "end": 8.584014
+        },
+        {
+          "text": "再指出一個要注意的地方：有兩個狀態還不夠，還要能初始化、能操控、能讀取，而且維持得夠久。",
+          "start": 8.764014,
+          "end": 17.732019
+        },
+        {
+          "text": "今天的作品是五條件檢核卡，下一堂要看超導的兩個神奇現象：電阻消失和磁鐵懸浮；我是陳犀牛，保持好奇，我們下次見！",
+          "start": 17.912019,
+          "end": 28.872019
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q017-artificial-atom/audio/slide_12.mp3"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "title": "父子科技學院 Q021｜彈簧、單擺與 LC 電路（動畫展示版）",
+  "description": "父子科技學院 量子電腦學程 Q021｜彈簧、單擺與 LC 電路（v2・含 3D 動畫展示）\n\n這是依課綱製作的課前教學版，不是實際上課錄音。\n\n父子科技學院量子電腦學程 Q021「彈簧、單擺與 LC 電路」新版（v2）：在原本的教學投影片之間，插入本學程 3D 互動動畫的實際操作示範。\n\n這一版新增的動畫展示\n・小角度時，正弦像直線（https://pcpcchen-coder.github.io/QuantumComputing/animations/lc-vs-jj.html#s1）\n・線性就是加倍得加倍（https://pcpcchen-coder.github.io/QuantumComputing/animations/lc-vs-jj.html#s2）\n・推太大力就走樣（https://pcpcchen-coder.github.io/QuantumComputing/animations/lc-vs-jj.html#s2）\n\n動畫都可以在瀏覽器直接開啟，自己動手操作。\n\n章節\n00:00 陳犀牛系列片頭\n01:00 彈簧、單擺與 LC 電路\n01:31 三個重點\n01:57 彈簧振盪：來回換能量\n02:23 單擺：小角度的簡諧運動\n02:51 動畫展示：小角度時，正弦像直線\n03:27 LC 電路：電荷來回流動\n03:52 類比對照表：一格一格對\n04:18 動畫展示：線性就是加倍得加倍\n04:54 週期對照：跟著根號走\n05:24 小振幅才成立\n05:48 動畫展示：推太大力就走樣\n06:23 實作：用碼錶量週期\n06:47 換你改造：先預測再驗證\n07:13 兩小時的振盪實驗室\n07:40 最後一關：教爸爸做類比\n\n旁白：微軟 zh-TW-YunJheNeural 神經語音合成（Edge-TTS／Azure 語音服務，同一聲音同一格式）。字幕已燒入影片，開啟 CC 可能重疊。\n",
+  "privacyStatus": "private",
+  "madeForKids": null,
+  "reviewStatus": "needs-parent-review",
+  "publicationMode": "manual-user-upload"
+}

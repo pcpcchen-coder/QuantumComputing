@@ -124,7 +124,10 @@ class Lesson:
     # ── 2. 錄影 ────────────────────────────────────────────────
     def record(self):
         timing = json.loads((self.E / 'production/demo-timing.json').read_text(encoding='utf-8'))
+        only = [k for k in os.environ.get('QV2_ONLY', '').split(',') if k]  # 只重錄指定段（例如隨機事件需重錄）
         for d in self.demos:
+            if only and d['key'] not in only:
+                continue
             tm = timing[d['key']]
             st = [s['start'] for s in tm['sentences']]
             acts = []
@@ -265,7 +268,8 @@ class Lesson:
                 meta = json.loads(Path(str(self.E / 'assets/visuals' / f'demo_{ref}.webm') + '.json').read_text())
                 hl = self.highlight_pngs(d)
                 n = len(d['sentences'])
-                pmap = [min(i, 2) for i in range(n)] if n == 3 else [0, 1, 1, 2]
+                # 每句旁白亮第幾張卡片；段落可用 'pmap' 自訂（例如動作在第三句才發生），預設同 Q001–Q012
+                pmap = d.get('pmap') or ([min(i, 2) for i in range(n)] if n == 3 else [0, 1, 1, 2])
                 st = [s['start'] for s in tm['sentences']] + [d_]
                 x, y, w, h = [v * 2 for v in PIC]
                 fc = [f'[1:v]fps={FPS},scale={w}:{h}:flags=lanczos,setpts=PTS-STARTPTS[rec]',

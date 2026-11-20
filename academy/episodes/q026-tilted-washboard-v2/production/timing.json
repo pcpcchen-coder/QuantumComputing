@@ -1,0 +1,394 @@
+{
+  "version": 2,
+  "opening": 60.277,
+  "scenes": [
+    {
+      "page": 1,
+      "kind": "slide",
+      "v1slide": 1,
+      "title": "傾斜洗衣板",
+      "duration": 30.384,
+      "sentences": [
+        {
+          "text": "歡迎回到父子科技學院的量子電腦學程，我是陳犀牛，今天是量子第二十六堂，傾斜洗衣板，這是依課綱製作的課前教學版，並非實際上課錄音。",
+          "start": 0.0,
+          "end": 11.8
+        },
+        {
+          "text": "上一堂認識了兩個能量：約瑟夫森能量決定位能山谷有多深，充電能量越小，在山谷裡晃動的粒子就越重。",
+          "start": 11.98,
+          "end": 21.092018000000003
+        },
+        {
+          "text": "今天把這座山谷排成一整片波浪，再讓它傾斜，看看真實的約瑟夫森接面通上電流時，會發生什麼事。",
+          "start": 21.272018000000003,
+          "end": 30.168027000000002
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q026-tilted-washboard/audio/slide_01.mp3"
+    },
+    {
+      "page": 2,
+      "kind": "slide",
+      "v1slide": 2,
+      "title": "三個重點",
+      "duration": 32.784,
+      "sentences": [
+        {
+          "text": "今天有三個重點：第一，真實的接面可以想成一顆小球在洗衣板上滾，電容像質量，電阻像摩擦，偏壓電流決定洗衣板有多斜。",
+          "start": 0.0,
+          "end": 10.84
+        },
+        {
+          "text": "第二，電流超過臨界電流，山谷消失，小球滑出去，接面兩端就出現電壓；第三，電流往回調時，小球不會在同一個地方停下，這叫遲滯。",
+          "start": 11.02,
+          "end": 23.54
+        },
+        {
+          "text": "今天的作品是一份洗衣板觀察紀錄：記下電流加大和調小的時候，小球在哪裡滑出、又在哪裡停下。",
+          "start": 23.72,
+          "end": 32.568005
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q026-tilted-washboard/audio/slide_02.mp3"
+    },
+    {
+      "page": 3,
+      "kind": "slide",
+      "v1slide": 3,
+      "title": "電阻電容分路接面模型",
+      "duration": 26.088,
+      "sentences": [
+        {
+          "text": "真實的約瑟夫森接面，除了理想的接面本身，還並聯著自己的電容和一個電阻，這叫做電阻電容分路接面模型。",
+          "start": 0.0,
+          "end": 9.280000000000001
+        },
+        {
+          "text": "把電路方程式寫出來，會發現它和一顆小球在傾斜洗衣板上滾動的方程式一模一樣。",
+          "start": 9.46,
+          "end": 16.868005
+        },
+        {
+          "text": "對照起來：電容扮演質量，電阻的倒數扮演摩擦，從外面送進來的偏壓電流，決定洗衣板傾斜多少。",
+          "start": 17.048005,
+          "end": 25.872019
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q026-tilted-washboard/audio/slide_03.mp3"
+    },
+    {
+      "page": 4,
+      "kind": "slide",
+      "v1slide": 4,
+      "title": "相位粒子困在山谷裡",
+      "duration": 28.416,
+      "sentences": [
+        {
+          "text": "洗衣板上那顆球叫做相位粒子，它的位置就是接面兩邊的相位差；電流比臨界電流小的時候，洗衣板上還有一個個山谷。",
+          "start": 0.0,
+          "end": 9.76
+        },
+        {
+          "text": "相位粒子會被困在某個山谷裡來回晃動，晃動的頻率叫做電漿頻率；相位沒有一直往前跑，接面兩端就沒有電壓，這叫零電壓態。",
+          "start": 9.94,
+          "end": 20.492018
+        },
+        {
+          "text": "電流加大，洗衣板越斜，下坡那一側擋住小球的位障就越矮，電漿頻率也跟著變低。",
+          "start": 20.672018,
+          "end": 28.200023
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q026-tilted-washboard/audio/slide_04.mp3"
+    },
+    {
+      "page": 5,
+      "kind": "demo",
+      "demo": "tilt",
+      "title": "動畫展示：洗衣板越斜，山谷越淺",
+      "duration": 33.648,
+      "sentences": [
+        {
+          "text": "打開約瑟夫森接面動畫的洗衣板場景：金色小球就是相位粒子，停在一個山谷的底部；左邊面板的偏壓電流是零點三零，讀數寫著零電壓態。",
+          "start": 0.0,
+          "end": 11.656009000000001
+        },
+        {
+          "text": "把偏壓電流一格一格加到零點九零：洗衣板越來越斜，小球所在的山谷越來越淺，右邊位障的數字從一點一五一路降到零點零六。",
+          "start": 11.836009,
+          "end": 22.412018000000003
+        },
+        {
+          "text": "坡已經這麼陡，小球還是困在山谷裡，讀數仍是零電壓態；讀數下面那行算出的電漿頻率，也已經從零點九八倍降到零點六六倍。",
+          "start": 22.592018000000003,
+          "end": 33.43201800000001
+        }
+      ],
+      "audio": "audio/demo_tilt.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#washboard"
+    },
+    {
+      "page": 6,
+      "kind": "slide",
+      "v1slide": 5,
+      "title": "電流超過臨界電流",
+      "duration": 25.368,
+      "sentences": [
+        {
+          "text": "電流一超過臨界電流，洗衣板斜到連最後一個山谷都消失了，相位粒子只能一路往下滑。",
+          "start": 0.0,
+          "end": 7.7680050000000005
+        },
+        {
+          "text": "相位一直往前跑，接面兩端就出現電壓，而且相位跑得越快，電壓越高，這叫電壓態。",
+          "start": 7.948005,
+          "end": 15.95601
+        },
+        {
+          "text": "所以臨界電流是一條分界線：比它小，電流可以不帶電壓地流過接面；比它大，接面就一定出現電壓。",
+          "start": 16.13601,
+          "end": 25.152019
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q026-tilted-washboard/audio/slide_05.mp3"
+    },
+    {
+      "page": 7,
+      "kind": "slide",
+      "v1slide": 6,
+      "title": "遲滯：回不到原處停",
+      "duration": 32.928,
+      "sentences": [
+        {
+          "text": "有趣的是往回調：電流降回臨界電流以下，山谷重新出現了，小球卻還帶著很快的速度，一路衝過山谷，停不下來。",
+          "start": 0.0,
+          "end": 10.24
+        },
+        {
+          "text": "摩擦越小，小球越停不下來，要把電流降到很低，它才會被某個山谷接住；這個電流叫做回捕電流，動畫的預設設定大約是臨界電流的零點一六倍。",
+          "start": 10.42,
+          "end": 22.628005
+        },
+        {
+          "text": "同樣的電流，可能是零電壓態，也可能是電壓態，要看小球之前在做什麼；上去和下來走不同的路，這就叫遲滯。",
+          "start": 22.808005,
+          "end": 32.712019000000005
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q026-tilted-washboard/audio/slide_06.mp3"
+    },
+    {
+      "page": 8,
+      "kind": "demo",
+      "demo": "hysteresis",
+      "title": "動畫展示：同樣的電流，兩種狀態",
+      "duration": 42.408,
+      "sentences": [
+        {
+          "text": "重新打開洗衣板場景，把偏壓電流一口氣推到一點一零：小球一下子就往右下方滑走了，鏡頭追不上它，讀數已經是紅色的電壓態。",
+          "start": 0.0,
+          "end": 10.888005
+        },
+        {
+          "text": "接著把電流降回零點五零，只有臨界電流的一半，讀數卻還是電壓態；右下角小圖的金色圓點，也停在右邊的斜虛線上。",
+          "start": 11.068005,
+          "end": 21.212018999999998
+        },
+        {
+          "text": "再降到零點一零，小球減速，幾秒後被一個山谷接住；讀數已經變回零電壓態，圓點也回到了縱軸上。",
+          "start": 21.392018999999998,
+          "end": 30.768027999999997
+        },
+        {
+          "text": "再把電流加回零點五零：同樣是零點五零，剛才是電壓態，現在小球卻留在山谷裡，圓點停在縱軸上；結果要看之前經歷過什麼。",
+          "start": 30.948027999999997,
+          "end": 42.196033
+        }
+      ],
+      "audio": "audio/demo_hysteresis.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#washboard"
+    },
+    {
+      "page": 9,
+      "kind": "slide",
+      "v1slide": 7,
+      "title": "電流電壓曲線",
+      "duration": 25.68,
+      "sentences": [
+        {
+          "text": "把電流和平均電壓畫成一張圖，就是接面的電流電壓曲線，它把遲滯畫得一清二楚。",
+          "start": 0.0,
+          "end": 7.432018
+        },
+        {
+          "text": "往上調時，曲線貼著縱軸往上爬，電壓一直是零；電流超過臨界電流，曲線就跳到右邊的斜線上。",
+          "start": 7.612018,
+          "end": 16.436032
+        },
+        {
+          "text": "往回調時，曲線沿著斜線往下降，要到很低的電流才回到縱軸；上下兩條路不重合，圍出一個圈。",
+          "start": 16.616032,
+          "end": 25.464037
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q026-tilted-washboard/audio/slide_07.mp3"
+    },
+    {
+      "page": 10,
+      "kind": "slide",
+      "v1slide": 8,
+      "title": "相位粒子不是真的球",
+      "duration": 31.608,
+      "sentences": [
+        {
+          "text": "最常見的誤解是：接面裡真的有一顆球在滾；其實相位粒子是數學上的類比，球的位置代表相位差，球的速度對應電壓。",
+          "start": 0.0,
+          "end": 9.88
+        },
+        {
+          "text": "這個類比也用在量子電腦上：早期的相位量子位元，把電流調到接近臨界電流，用山谷裡最低的兩個能階當零和一；現在業界主流的設計不加偏壓，洗衣板是平的。",
+          "start": 10.06,
+          "end": 22.94
+        },
+        {
+          "text": "暫停影片想一想：等一下要用彈珠和波浪紙板做實驗，彈珠和真正的接面，有哪些地方不一樣？",
+          "start": 23.12,
+          "end": 31.392018
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q026-tilted-washboard/audio/slide_08.mp3"
+    },
+    {
+      "page": 11,
+      "kind": "slide",
+      "v1slide": 9,
+      "title": "實作：加大偏壓電流",
+      "duration": 28.416,
+      "sentences": [
+        {
+          "text": "實作的時候，父子一起打開約瑟夫森接面三維動畫的洗衣板場景，爸爸把偏壓電流的滑桿一格一格往上推。",
+          "start": 0.0,
+          "end": 8.728005
+        },
+        {
+          "text": "孩子把每一格的電流和讀數上的狀態記下來，找出小球從山谷滑出去的那一格；也可以按掃描按鈕，看右下角的小圖畫出整條曲線。",
+          "start": 8.908005,
+          "end": 19.604014
+        },
+        {
+          "text": "接著用波浪紙板和彈珠做一次：把紙板一端慢慢墊高，記下彈珠在多斜的時候，滾出第一個凹槽。",
+          "start": 19.784014,
+          "end": 28.200023
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q026-tilted-washboard/audio/slide_09.mp3"
+    },
+    {
+      "page": 12,
+      "kind": "demo",
+      "demo": "sweep",
+      "title": "動畫展示：掃描一趟，畫出遲滯",
+      "duration": 31.992,
+      "sentences": [
+        {
+          "text": "按下掃描按鈕，電流從零慢慢加大，右下角小圖的青色曲線貼著縱軸往上爬。",
+          "start": 0.0,
+          "end": 7.336009000000001
+        },
+        {
+          "text": "電流超過一以後，曲線轉向右邊，表示小球已經滑出山谷。",
+          "start": 7.516009,
+          "end": 13.580023
+        },
+        {
+          "text": "電流往回降時，曲線沒有跳回縱軸，而是留在右邊一路往下。",
+          "start": 13.760023,
+          "end": 19.848028
+        },
+        {
+          "text": "電流降到零，曲線的底端還停在縱軸右邊；這個動畫掃描得很快，沒有畫成第七頁那樣完整的一圈，但上去和下來走的不是同一條路，這就是遲滯。",
+          "start": 20.028028,
+          "end": 31.780046
+        }
+      ],
+      "audio": "audio/demo_sweep.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#washboard"
+    },
+    {
+      "page": 13,
+      "kind": "slide",
+      "v1slide": 10,
+      "title": "換你改造：解釋遲滯",
+      "duration": 27.96,
+      "sentences": [
+        {
+          "text": "下半場換你：解釋為什麼電流往下調的時候，小球不會在滑出去的那一點停下來。",
+          "start": 0.0,
+          "end": 7.264014
+        },
+        {
+          "text": "先在動畫裡把電流推過一，再慢慢往回調，記下讀數變回零電壓態的那一格，和剛才滑出去的那一格比一比。",
+          "start": 7.444014,
+          "end": 16.508028
+        },
+        {
+          "text": "最後用一句話說明，提示是三個詞：速度、摩擦、山谷；也想一想，如果摩擦變大，停下來的電流會變高還是變低。",
+          "start": 16.688028,
+          "end": 27.744037
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q026-tilted-washboard/audio/slide_10.mp3"
+    },
+    {
+      "page": 14,
+      "kind": "slide",
+      "v1slide": 11,
+      "title": "兩小時的洗衣板實驗室",
+      "duration": 29.952,
+      "sentences": [
+        {
+          "text": "兩小時的安排是：開場十分鐘，概念示範十五分鐘，接著四十分鐘一起推電流、做彈珠實驗，然後休息十分鐘。",
+          "start": 0.0,
+          "end": 9.88
+        },
+        {
+          "text": "下半場三十分鐘，你負責解釋遲滯；接著十分鐘交換角色，由你教爸爸操作和原理。",
+          "start": 10.06,
+          "end": 18.092018000000003
+        },
+        {
+          "text": "最後五分鐘錄音總結，替你的觀察紀錄取個名字，再存一個版本；今天的生活技能是：同樣的條件，經歷不同，結果可能不一樣。",
+          "start": 18.272018000000003,
+          "end": 29.736032
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q026-tilted-washboard/audio/slide_11.mp3"
+    },
+    {
+      "page": 15,
+      "kind": "slide",
+      "v1slide": 12,
+      "title": "最後一關：教爸爸傾斜洗衣板",
+      "duration": 30.72,
+      "sentences": [
+        {
+          "text": "最後一關，請不看稿說出：電容、電阻和偏壓電流，在洗衣板上各對應什麼？電流超過臨界電流時，又會發生什麼事？",
+          "start": 0.0,
+          "end": 11.296009
+        },
+        {
+          "text": "再指出一個要注意的地方：相位粒子是數學上的類比，接面裡並沒有一顆真的球在跑。",
+          "start": 11.476009,
+          "end": 18.548026999999998
+        },
+        {
+          "text": "今天的作品是洗衣板觀察紀錄，下一堂要把兩個接面並聯成一個環，用磁場來調整量子位元的頻率；我是陳犀牛，保持好奇，我們下次見！",
+          "start": 18.728026999999997,
+          "end": 30.504036
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q026-tilted-washboard/audio/slide_12.mp3"
+    }
+  ]
+}

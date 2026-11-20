@@ -1,0 +1,32 @@
+父子科技學院 量子電腦學程 Q036｜IQ 平面：把微波變成一個點（v2・含 3D 動畫展示）
+
+這是依課綱製作的課前教學版，不是實際上課錄音。
+
+父子科技學院量子電腦學程 Q036「IQ 平面：把微波變成一個點」新版（v2）：在原本的教學投影片之間，插入本學程 3D 互動動畫的實際操作示範。
+
+這一版新增的動畫展示
+・探測頻率一變，點就沿著一圈走（https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#dispersive）
+・每讀一次，就落下一個點（https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#iq）
+・距離要比團寬大（https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#iq）
+
+動畫都可以在瀏覽器直接開啟，自己動手操作。
+
+章節
+00:00 陳犀牛系列片頭
+01:00 IQ 平面：把微波變成一個點
+01:33 三個重點
+02:03 讀取鏈：從微波到數字
+02:38 外差：先降到中頻
+03:12 手電筒：相位在轉
+03:42 解調：得到兩個數字
+04:15 一個點：距離與方向
+04:44 動畫展示：探測頻率一變，點就沿著一圈走
+05:28 常見誤解：不是兩條線
+06:00 動畫展示：每讀一次，就落下一個點
+06:43 實作：手繪 IQ 圖
+07:15 換你改造：距離比振幅有用
+07:48 動畫展示：距離要比團寬大
+08:31 兩小時的臨摹挑戰
+08:58 最後一關：教爸爸畫點
+
+旁白：微軟 zh-TW-YunJheNeural 神經語音合成（Edge-TTS／Azure 語音服務，同一聲音同一格式）。字幕已燒入影片，開啟 CC 可能重疊。

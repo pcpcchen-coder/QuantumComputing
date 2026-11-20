@@ -1,0 +1,8 @@
+{
+  "title": "父子科技學院 Q014｜量子態很怕吵：雜訊與退相干（動畫展示版）",
+  "description": "父子科技學院 量子電腦學程 Q014｜量子態很怕吵：雜訊與退相干（v2・含 3D 動畫展示）\n\n這是依課綱製作的課前教學版，不是實際上課錄音。\n\n父子科技學院量子電腦學程 Q014「量子態很怕吵：雜訊與退相干」新版（v2）：在原本的教學投影片之間，插入本學程 3D 互動動畫的實際操作示範。\n\n這一版新增的動畫展示\n・一態掉回零態（https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#bloch）\n・箭頭在赤道上縮短（https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#bloch）\n・用動畫對照雜訊卡（https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#bloch）\n\n動畫都可以在瀏覽器直接開啟，自己動手操作。\n\n章節\n00:00 陳犀牛系列片頭\n01:00 量子態很怕吵：雜訊與退相干\n01:32 三個重點\n01:57 量子態為什麼會壞\n02:23 布洛赫球：用箭頭看壞掉\n02:49 兩種壞法：掉下來和散開\n03:15 動畫展示：一態掉回零態\n03:53 失相：箭頭在赤道上散開\n04:19 動畫展示：箭頭在赤道上縮短\n04:54 為什麼要冷到 10 mK\n05:24 冷不是為了跑得更快\n05:52 故障卡：雜訊卡牌組\n06:19 動畫展示：用動畫對照雜訊卡\n06:56 換你改造：防雜訊方法卡\n07:21 兩小時的雜訊卡工作坊\n07:49 最後一關：教爸爸看雜訊\n\n旁白：微軟 zh-TW-YunJheNeural 神經語音合成（Edge-TTS／Azure 語音服務，同一聲音同一格式）。字幕已燒入影片，開啟 CC 可能重疊。\n",
+  "privacyStatus": "private",
+  "madeForKids": null,
+  "reviewStatus": "needs-parent-review",
+  "publicationMode": "manual-user-upload"
+}

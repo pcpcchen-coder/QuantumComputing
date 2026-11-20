@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q040",
+  "version": "Q040-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-20",
+  "episodePath": "academy/episodes/q040-whole-machine-v2",
+  "basedOn": "academy/episodes/q040-whole-machine（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 572.544,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "overview",
+      "title": "動畫展示：走一圈機房全景",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/peripherals.html#overview"
+    },
+    {
+      "key": "groups",
+      "title": "動畫展示：冷卻和訊號分開看",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/peripherals.html#overview"
+    },
+    {
+      "key": "power",
+      "title": "動畫展示：電力從哪裡來",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/peripherals.html#overview"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.6,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q040-whole-machine-v2-zh-TW.mp4": {
+      "bytes": 102938373,
+      "sha256": "f65e4595bbc9091aab40a3642c0299919bc2de9845dd42c7752cda961dcd9cc9"
+    },
+    "q040-whole-machine-v2-master.mp4": {
+      "bytes": 104757088,
+      "sha256": "5d446a9d0137b47ca46e683fd34e0f2cb4665a1e60db5ea85e4373982b8e7e28"
+    },
+    "narration-only.mp3": {
+      "bytes": 13742356,
+      "sha256": "a03eb38a23392a2e99ace58b82be047811673500eccc63a00cbe7165c4e3ff6e"
+    }
+  },
+  "package": {
+    "filename": "Q040-v2_量子電腦學程_整台機器_動畫展示版_2026-11-20.zip",
+    "bytes": 226703918,
+    "sha256": "b802a10361083deab02a226395ff857267ae5ae2533cf0233e15c306361347fa",
+    "parts": [
+      {
+        "name": "Q040-v2_量子電腦學程_整台機器_動畫展示版_2026-11-20.zip.part01",
+        "bytes": 29360128,
+        "sha256": "d7aeb74a01a7559a2acc2b11a5c154e4353369286b8b19466cd6908d82986022"
+      },
+      {
+        "name": "Q040-v2_量子電腦學程_整台機器_動畫展示版_2026-11-20.zip.part02",
+        "bytes": 29360128,
+        "sha256": "c8d44d7de2d3ad1e46df8f5aa74169aa49dd928cfc863db222179b74ea10ef7d"
+      },
+      {
+        "name": "Q040-v2_量子電腦學程_整台機器_動畫展示版_2026-11-20.zip.part03",
+        "bytes": 29360128,
+        "sha256": "792bfddae6810954c7079f976a5e1bb58c0ae48ba8776cf197186f97ed95cdf6"
+      },
+      {
+        "name": "Q040-v2_量子電腦學程_整台機器_動畫展示版_2026-11-20.zip.part04",
+        "bytes": 29360128,
+        "sha256": "fa0786c7b7dd735c4f64485a202fab7da550d123d412baabb0ccc303bb6a3a75"
+      },
+      {
+        "name": "Q040-v2_量子電腦學程_整台機器_動畫展示版_2026-11-20.zip.part05",
+        "bytes": 29360128,
+        "sha256": "73bb82c5e5cc1dcb6ad551ee6bf85fc74c437449662be9f3a284372fca0546a2"
+      },
+      {
+        "name": "Q040-v2_量子電腦學程_整台機器_動畫展示版_2026-11-20.zip.part06",
+        "bytes": 29360128,
+        "sha256": "9d7830a753cab97c5aa82998bfc65017e714d9c1d56ca316a619321bb6246130"
+      },
+      {
+        "name": "Q040-v2_量子電腦學程_整台機器_動畫展示版_2026-11-20.zip.part07",
+        "bytes": 29360128,
+        "sha256": "777c64a01417475750a88de5a1fbe03dbe5d802799f63a32707435576b3b0d9f"
+      },
+      {
+        "name": "Q040-v2_量子電腦學程_整台機器_動畫展示版_2026-11-20.zip.part08",
+        "bytes": 21183022,
+        "sha256": "201abe20de274a5f7a1c6f8c75e2c7c90c525a71a7ce6bae25fb134857497576"
+      }
+    ],
+    "handedOver": "2026-11-20 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1epfQVOXunbD9Vht37u62oOD9Dr-HKMSE",
+    "folder": "量子電腦學程 Q011–Q040 動畫展示版（v2）",
+    "files": [
+      {
+        "name": "Q040 整台機器：量子電腦 ≠ 量子晶片（動畫展示版）.mp4",
+        "id": "1ofehlQbld6_nEvvvQLy6ySyj2Uy6EKRM",
+        "link": "https://drive.google.com/file/d/1ofehlQbld6_nEvvvQLy6ySyj2Uy6EKRM/view?usp=drivesdk",
+        "bytes": 102938373
+      },
+      {
+        "name": "Q040 整台機器（動畫展示版）簡報.pptx",
+        "id": "1Jqx0xeW7xa8uCkwPUN2w-EQUoiFdY8Ru",
+        "link": "https://docs.google.com/presentation/d/1Jqx0xeW7xa8uCkwPUN2w-EQUoiFdY8Ru/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true",
+        "bytes": 4104816
+      },
+      {
+        "name": "Q040 整台機器 教材.zip",
+        "id": "1HRpGVospc7HIaYHXim9Xc3zXl5UsEcpw",
+        "link": "https://drive.google.com/file/d/1HRpGVospc7HIaYHXim9Xc3zXl5UsEcpw/view?usp=drivesdk",
+        "bytes": 373460
+      }
+    ]
+  }
+}

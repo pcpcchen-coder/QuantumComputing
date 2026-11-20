@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q037",
+  "version": "Q037-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-20",
+  "episodePath": "academy/episodes/q037-single-shot-fidelity-v2",
+  "basedOn": "academy/episodes/q037-single-shot-fidelity（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 556.032,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "threshold",
+      "title": "動畫展示：移動判別閾值",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#readout"
+    },
+    {
+      "key": "t1",
+      "title": "動畫展示：衰減與積分時間",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#readout"
+    },
+    {
+      "key": "iqamp",
+      "title": "動畫展示：放大器和衰減開關",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#iq"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.6,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q037-single-shot-fidelity-v2-zh-TW.mp4": {
+      "bytes": 97460616,
+      "sha256": "58b49ac04ae567e36cf3a30da35b870995fc5c6b75c069abd57542ed243f07e7"
+    },
+    "q037-single-shot-fidelity-v2-master.mp4": {
+      "bytes": 99870282,
+      "sha256": "b56bd8c984c7990c87cec260ad427bac262df2319110ea25d9f4a438aa605bc0"
+    },
+    "narration-only.mp3": {
+      "bytes": 13346068,
+      "sha256": "01086c45a87d2c97071137cc5c34c545f22245fe465abd66fa13e24cbb1180de"
+    }
+  },
+  "package": {
+    "filename": "Q037-v2_量子電腦學程_單發保真度_動畫展示版_2026-11-20.zip",
+    "bytes": 215170701,
+    "sha256": "00e77db1cc5e31e4cc6724f0f59fce3051e16fd6b75b9d67035ffc845cea9dce",
+    "parts": [
+      {
+        "name": "Q037-v2_量子電腦學程_單發保真度_動畫展示版_2026-11-20.zip.part01",
+        "bytes": 29360128,
+        "sha256": "b2d493579072b1f0b50f10f364329695d93a32206036c5d3bc0e4b139705f9c1"
+      },
+      {
+        "name": "Q037-v2_量子電腦學程_單發保真度_動畫展示版_2026-11-20.zip.part02",
+        "bytes": 29360128,
+        "sha256": "f21055a5e1b946456f47924d6f2d8d155012057739081e05f6629c59bf04f20c"
+      },
+      {
+        "name": "Q037-v2_量子電腦學程_單發保真度_動畫展示版_2026-11-20.zip.part03",
+        "bytes": 29360128,
+        "sha256": "9a985bdaa159ec8dd580e14998129e66de9d7ca05dfbeb459f4e89e09a03a46b"
+      },
+      {
+        "name": "Q037-v2_量子電腦學程_單發保真度_動畫展示版_2026-11-20.zip.part04",
+        "bytes": 29360128,
+        "sha256": "80aa8c3f78731a7842f0eee8b05bc44503577f375a93bb6920898b734b8b4367"
+      },
+      {
+        "name": "Q037-v2_量子電腦學程_單發保真度_動畫展示版_2026-11-20.zip.part05",
+        "bytes": 29360128,
+        "sha256": "d42cc294da72e8d4c99de298a05e59a4aac6a1718c38eb14f0a4b0bdc3aec825"
+      },
+      {
+        "name": "Q037-v2_量子電腦學程_單發保真度_動畫展示版_2026-11-20.zip.part06",
+        "bytes": 29360128,
+        "sha256": "918c5fbecae3d7cea47c1f815f322d10ba3d5e9608c924304c9bc01f71a3cc36"
+      },
+      {
+        "name": "Q037-v2_量子電腦學程_單發保真度_動畫展示版_2026-11-20.zip.part07",
+        "bytes": 29360128,
+        "sha256": "752f45e4aea7457e44708c488e561cf5a6e4de306ea523769d2f40c9165b3be5"
+      },
+      {
+        "name": "Q037-v2_量子電腦學程_單發保真度_動畫展示版_2026-11-20.zip.part08",
+        "bytes": 9649805,
+        "sha256": "67169ee7ded5246968f38e8c73a724cd0b2acdf5a81a91f493fdf8b62339ab1c"
+      }
+    ],
+    "handedOver": "2026-11-20 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1epfQVOXunbD9Vht37u62oOD9Dr-HKMSE",
+    "folder": "量子電腦學程 Q011–Q040 動畫展示版（v2）",
+    "files": [
+      {
+        "name": "Q037 單發保真度：單發判別與保真度（動畫展示版）.mp4",
+        "id": "1X5uGUQhhi-GdwDc7b4vudaL0v_HHphYD",
+        "link": "https://drive.google.com/file/d/1X5uGUQhhi-GdwDc7b4vudaL0v_HHphYD/view?usp=drivesdk",
+        "bytes": 97460616
+      },
+      {
+        "name": "Q037 單發保真度（動畫展示版）簡報.pptx",
+        "id": "1DNQ55bDedSZ6hJAeKKI0yvk1kX_f_Vqx",
+        "link": "https://docs.google.com/presentation/d/1DNQ55bDedSZ6hJAeKKI0yvk1kX_f_Vqx/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true",
+        "bytes": 3391182
+      },
+      {
+        "name": "Q037 單發保真度 教材.zip",
+        "id": "1ufK6rrZUpYrycIxD1plMew4KM7Lzxbte",
+        "link": "https://drive.google.com/file/d/1ufK6rrZUpYrycIxD1plMew4KM7Lzxbte/view?usp=drivesdk",
+        "bytes": 327433
+      }
+    ]
+  }
+}

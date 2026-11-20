@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q025",
+  "version": "Q025-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-20",
+  "episodePath": "academy/episodes/q025-ej-ec-two-energy-scales-v2",
+  "basedOn": "academy/episodes/q025-ej-ec-two-energy-scales（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 517.845,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "dispersion",
+      "title": "動畫展示：背景電荷一變，能階跟著動",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#potential"
+    },
+    {
+      "key": "bigC",
+      "title": "動畫展示：電容加大，非諧性變小",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#capacitor"
+    },
+    {
+      "key": "compromise",
+      "title": "動畫展示：找一個折衷點",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#capacitor"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.5,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q025-ej-ec-two-energy-scales-v2-zh-TW.mp4": {
+      "bytes": 88853537,
+      "sha256": "b86c63fc8e50ef4bf0088c292b1b2793340503fbb2c3d0c1d05d84765fe61fac"
+    },
+    "q025-ej-ec-two-energy-scales-v2-master.mp4": {
+      "bytes": 90680704,
+      "sha256": "81bf47328d73c4b0ec2975637c78b192265d428f83b992e116df91aff85e7a31"
+    },
+    "narration-only.mp3": {
+      "bytes": 12429652,
+      "sha256": "0eccbedc97aa271e462047415f03c258a6f73ceefdec5ab0817f8e47f5eee6ae"
+    }
+  },
+  "package": {
+    "filename": "Q025-v2_量子電腦學程_兩個能量尺度_動畫展示版_2026-11-20.zip",
+    "bytes": 196300921,
+    "sha256": "c86dc67c4238bae1fb2ac86e17691ca817c9df02c2695a42b31294c2cf5c26d0",
+    "parts": [
+      {
+        "name": "Q025-v2_量子電腦學程_兩個能量尺度_動畫展示版_2026-11-20.zip.part01",
+        "bytes": 29360128,
+        "sha256": "7f35cce0dd376a72857add706c9e1b567985871ff915cef7890b7383f802a0c3"
+      },
+      {
+        "name": "Q025-v2_量子電腦學程_兩個能量尺度_動畫展示版_2026-11-20.zip.part02",
+        "bytes": 29360128,
+        "sha256": "a48610d8987d6dd9c17426b1554c5a594a100ce10c5cbffbe228f17271563929"
+      },
+      {
+        "name": "Q025-v2_量子電腦學程_兩個能量尺度_動畫展示版_2026-11-20.zip.part03",
+        "bytes": 29360128,
+        "sha256": "95b49369fee194a0f90d8404d5d02a8ada9a2cf9974b513f765f514dcb52f49d"
+      },
+      {
+        "name": "Q025-v2_量子電腦學程_兩個能量尺度_動畫展示版_2026-11-20.zip.part04",
+        "bytes": 29360128,
+        "sha256": "d45c7c302deb290588758754af3c60bc6fc1f9c67916324ab20cf58fb2cc258d"
+      },
+      {
+        "name": "Q025-v2_量子電腦學程_兩個能量尺度_動畫展示版_2026-11-20.zip.part05",
+        "bytes": 29360128,
+        "sha256": "2da41e1e885f79d8b4a2680a22281574951ce0159c6e34ec187e2b8dfa7dc927"
+      },
+      {
+        "name": "Q025-v2_量子電腦學程_兩個能量尺度_動畫展示版_2026-11-20.zip.part06",
+        "bytes": 29360128,
+        "sha256": "684ac7fdf7937d9407e80ec0662ad0bc819c3e4d5ed9dc584a2ede919954874a"
+      },
+      {
+        "name": "Q025-v2_量子電腦學程_兩個能量尺度_動畫展示版_2026-11-20.zip.part07",
+        "bytes": 20140153,
+        "sha256": "43d5c39b1eee3ccea8a8e08e2507a49dae2a9329da3dc8858c34a0968f2abe18"
+      }
+    ],
+    "handedOver": "2026-11-20 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1epfQVOXunbD9Vht37u62oOD9Dr-HKMSE",
+    "folder": "量子電腦學程 Q011–Q040 動畫展示版（v2）",
+    "files": [
+      {
+        "name": "Q025 兩個能量尺度：E_J 與 E_C：兩個能量尺度（動畫展示版）.mp4",
+        "id": "1tDoUtcecCBQ7Tda1kiQxu5kaOqioQy5K",
+        "link": "https://drive.google.com/file/d/1tDoUtcecCBQ7Tda1kiQxu5kaOqioQy5K/view?usp=drivesdk",
+        "bytes": 88853537
+      },
+      {
+        "name": "Q025 兩個能量尺度（動畫展示版）簡報.pptx",
+        "id": "139QOiWciTbLl2IMJz2vAyIAXmeTlw_q3",
+        "link": "https://docs.google.com/presentation/d/139QOiWciTbLl2IMJz2vAyIAXmeTlw_q3/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true",
+        "bytes": 3506575
+      },
+      {
+        "name": "Q025 兩個能量尺度 教材.zip",
+        "id": "12EuqzyHKB5Zfl52ooVXZ3_CNdPjEM328",
+        "link": "https://drive.google.com/file/d/12EuqzyHKB5Zfl52ooVXZ3_CNdPjEM328/view?usp=drivesdk",
+        "bytes": 290592
+      }
+    ]
+  }
+}

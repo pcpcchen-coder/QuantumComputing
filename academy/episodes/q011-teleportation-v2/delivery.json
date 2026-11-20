@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q011",
+  "version": "Q011-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-18",
+  "episodePath": "academy/episodes/q011-teleportation-v2",
+  "basedOn": "academy/episodes/q011-teleportation（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 509.034,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "bloch",
+      "title": "動畫展示：狀態搬家的四步",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/basic-circuits.html#teleport"
+    },
+    {
+      "key": "call",
+      "title": "動畫展示：打電話前後",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/basic-circuits.html#teleport"
+    },
+    {
+      "key": "repeat",
+      "title": "動畫展示：重複一千次來確認",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#circuit"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.5,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q011-teleportation-v2-zh-TW.mp4": {
+      "bytes": 85635407,
+      "sha256": "0b31f19ca68d88b468b11f2d4919cc132af9a178b22b639aabe2502b730dd9bb"
+    },
+    "q011-teleportation-v2-master.mp4": {
+      "bytes": 87687955,
+      "sha256": "204e433357b65525c8dba7c56014d720f236ae82a52fd50aab5f9754600085d9"
+    },
+    "narration-only.mp3": {
+      "bytes": 12218260,
+      "sha256": "24f6e9970afeae76cd4ad9a5f656e87b392e7904630b71820a2466ab81040488"
+    }
+  },
+  "package": {
+    "filename": "Q011-v2_量子電腦學程_隱形傳態_動畫展示版_2026-11-18.zip",
+    "bytes": 189231993,
+    "sha256": "a918254bd345572353b58b46cf0c0d3387d17807873f90292e28224ef7490a82",
+    "parts": [
+      {
+        "name": "Q011-v2_量子電腦學程_隱形傳態_動畫展示版_2026-11-18.zip.part01",
+        "bytes": 29360128,
+        "sha256": "87cbe64cef13cfda3e73699b9d09defad9f7e6359374b966b5f65943ec641a6c"
+      },
+      {
+        "name": "Q011-v2_量子電腦學程_隱形傳態_動畫展示版_2026-11-18.zip.part02",
+        "bytes": 29360128,
+        "sha256": "7d65e4049b238b74231cd0414e8489ae7c24ed4bfb780e434740d3a4294f6f5f"
+      },
+      {
+        "name": "Q011-v2_量子電腦學程_隱形傳態_動畫展示版_2026-11-18.zip.part03",
+        "bytes": 29360128,
+        "sha256": "7d468a7717e6c278787be4c53cec25a60aa90f75dc1e19ed6208176a6f022219"
+      },
+      {
+        "name": "Q011-v2_量子電腦學程_隱形傳態_動畫展示版_2026-11-18.zip.part04",
+        "bytes": 29360128,
+        "sha256": "fd13bb1b3acf88d0cc5c584c6c95cdd005e0d70b3372a0d8cdd7436676131df5"
+      },
+      {
+        "name": "Q011-v2_量子電腦學程_隱形傳態_動畫展示版_2026-11-18.zip.part05",
+        "bytes": 29360128,
+        "sha256": "a897e80ef3c348597b465447689388398819784681d78268cd17774211164f21"
+      },
+      {
+        "name": "Q011-v2_量子電腦學程_隱形傳態_動畫展示版_2026-11-18.zip.part06",
+        "bytes": 29360128,
+        "sha256": "eae9a55825a7af71153da19dbaecf5e56562853541241f1e7b09cfb87d983df9"
+      },
+      {
+        "name": "Q011-v2_量子電腦學程_隱形傳態_動畫展示版_2026-11-18.zip.part07",
+        "bytes": 13071225,
+        "sha256": "7957eb86b65172172124d8657133f40639f008b59b7bc054494a8d7181003db5"
+      }
+    ],
+    "handedOver": "2026-11-18 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1epfQVOXunbD9Vht37u62oOD9Dr-HKMSE",
+    "folder": "量子電腦學程 Q011–Q040 動畫展示版（v2）",
+    "files": [
+      {
+        "name": "Q011 隱形傳態：隱形傳態：傳狀態不傳東西（動畫展示版）.mp4",
+        "id": "1dWtrcYLyQAvaiwYy83pluFS4Z1X_gag9",
+        "link": "https://drive.google.com/file/d/1dWtrcYLyQAvaiwYy83pluFS4Z1X_gag9/view?usp=drivesdk",
+        "bytes": 85635407
+      },
+      {
+        "name": "Q011 隱形傳態（動畫展示版）簡報.pptx",
+        "id": "1l2bT4FZtelq3-LiEaXGzAsYDIqTrcdjb",
+        "link": "https://docs.google.com/presentation/d/1l2bT4FZtelq3-LiEaXGzAsYDIqTrcdjb/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true",
+        "bytes": 3018836
+      },
+      {
+        "name": "Q011 隱形傳態 教材.zip",
+        "id": "123buqKhoucvYar9TviTYhAPR2TNnY0Tw",
+        "link": "https://drive.google.com/file/d/123buqKhoucvYar9TviTYhAPR2TNnY0Tw/view?usp=drivesdk",
+        "bytes": 379613
+      }
+    ]
+  }
+}

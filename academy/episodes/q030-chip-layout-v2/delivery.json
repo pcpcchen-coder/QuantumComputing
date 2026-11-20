@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q030",
+  "version": "Q030-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-20",
+  "episodePath": "academy/episodes/q030-chip-layout-v2",
+  "basedOn": "academy/episodes/q030-chip-layout（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 532.866667,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "map",
+      "title": "動畫展示：一顆量子位元的地圖",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#chip"
+    },
+    {
+      "key": "chip4",
+      "title": "動畫展示：四顆量子位元共用一條饋線",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#chip"
+    },
+    {
+      "key": "mux",
+      "title": "動畫展示：一條饋線讀四顆",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#chip"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.5,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q030-chip-layout-v2-zh-TW.mp4": {
+      "bytes": 91368715,
+      "sha256": "26d5e786c56138b011d30b22ae17404faebc06981be6b6833328714fd1ede4e5"
+    },
+    "q030-chip-layout-v2-master.mp4": {
+      "bytes": 93117990,
+      "sha256": "105c68af4bf4635b5f4a8bc092632e37e05d947f8e228f70b0e184d16f557d8d"
+    },
+    "narration-only.mp3": {
+      "bytes": 12790228,
+      "sha256": "aecdfcfabd0501a2fa437b159325d05c571524375db5d060a0bc7f1dc02cb44a"
+    }
+  },
+  "package": {
+    "filename": "Q030-v2_量子電腦學程_晶片佈局_動畫展示版_2026-11-20.zip",
+    "bytes": 202089964,
+    "sha256": "1e96be44d269f72b84295a397cc9f690aa52cb5a59ce6ececa450666e12d42aa",
+    "parts": [
+      {
+        "name": "Q030-v2_量子電腦學程_晶片佈局_動畫展示版_2026-11-20.zip.part01",
+        "bytes": 29360128,
+        "sha256": "84e411811bc33f7c6ebfdd57b0786d1b33965a9eb062c5ce8c0ebf1aae50b3e5"
+      },
+      {
+        "name": "Q030-v2_量子電腦學程_晶片佈局_動畫展示版_2026-11-20.zip.part02",
+        "bytes": 29360128,
+        "sha256": "30eb0e343035470693c926b8c1dbb1298dc1940dd73955cff907a7318b694283"
+      },
+      {
+        "name": "Q030-v2_量子電腦學程_晶片佈局_動畫展示版_2026-11-20.zip.part03",
+        "bytes": 29360128,
+        "sha256": "653eeffe147dc1be7ffb56b2629b9396057b4dd2501f7188706e6598ea195abf"
+      },
+      {
+        "name": "Q030-v2_量子電腦學程_晶片佈局_動畫展示版_2026-11-20.zip.part04",
+        "bytes": 29360128,
+        "sha256": "1a65149fdc63c290827a9907a18dc064ea9ac20e8ad1a5b93708ce28f37ac07e"
+      },
+      {
+        "name": "Q030-v2_量子電腦學程_晶片佈局_動畫展示版_2026-11-20.zip.part05",
+        "bytes": 29360128,
+        "sha256": "f2a87ba29f4bd946c12d60ff022b33682395e0017f462610ec79d6c991477305"
+      },
+      {
+        "name": "Q030-v2_量子電腦學程_晶片佈局_動畫展示版_2026-11-20.zip.part06",
+        "bytes": 29360128,
+        "sha256": "d799773551aad4d9e5c49fb87e454c0ec7271fe738c31ed06add62af5a5710e5"
+      },
+      {
+        "name": "Q030-v2_量子電腦學程_晶片佈局_動畫展示版_2026-11-20.zip.part07",
+        "bytes": 25929196,
+        "sha256": "d04a0b6b0e622ce84b1fbf13d5488ddeef2f32a1cbab0479272ee3622deafd15"
+      }
+    ],
+    "handedOver": "2026-11-20 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1epfQVOXunbD9Vht37u62oOD9Dr-HKMSE",
+    "folder": "量子電腦學程 Q011–Q040 動畫展示版（v2）",
+    "files": [
+      {
+        "name": "Q030 晶片佈局：晶片長什麼樣子（動畫展示版）.mp4",
+        "id": "1d2QNOctnnoP9xVT5V5Y_RgtBMdfwyNTG",
+        "link": "https://drive.google.com/file/d/1d2QNOctnnoP9xVT5V5Y_RgtBMdfwyNTG/view?usp=drivesdk",
+        "bytes": 91368715
+      },
+      {
+        "name": "Q030 晶片佈局（動畫展示版）簡報.pptx",
+        "id": "1-yvAGp2Ts89z8hRRuQxAUT7a3pjOYPgg",
+        "link": "https://docs.google.com/presentation/d/1-yvAGp2Ts89z8hRRuQxAUT7a3pjOYPgg/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true",
+        "bytes": 3772953
+      },
+      {
+        "name": "Q030 晶片佈局 教材.zip",
+        "id": "1UVWSPT3FSkTvRNN_IXpcRfxne-rAQf7g",
+        "link": "https://drive.google.com/file/d/1UVWSPT3FSkTvRNN_IXpcRfxne-rAQf7g/view?usp=drivesdk",
+        "bytes": 341306
+      }
+    ]
+  }
+}

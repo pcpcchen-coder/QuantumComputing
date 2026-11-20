@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q017",
+  "version": "Q017-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-19",
+  "episodePath": "academy/episodes/q017-artificial-atom-v2",
+  "basedOn": "academy/episodes/q017-artificial-atom（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 493.866667,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "ion",
+      "title": "動畫展示：一顆原子怎麼當量子位元",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/atoms.html#ionqubit"
+    },
+    {
+      "key": "levels",
+      "title": "動畫展示：樓梯變得不等高",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#potential"
+    },
+    {
+      "key": "coherence",
+      "title": "動畫展示：維持得夠不夠久",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/atoms.html#compare"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.4,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q017-artificial-atom-v2-zh-TW.mp4": {
+      "bytes": 87116309,
+      "sha256": "8e363573f7807881d608f0a887111d8768c20aaaf67c9f57f300904c52a64f6d"
+    },
+    "q017-artificial-atom-v2-master.mp4": {
+      "bytes": 90090226,
+      "sha256": "3809d1120d97f26e1b4550c0f512a1944b83d0e4fff03977bf3e8cd168b44356"
+    },
+    "narration-only.mp3": {
+      "bytes": 11854228,
+      "sha256": "5ff25c11d552828c843a11113c57836c157547536fb7ae613379e717010c40b4"
+    }
+  },
+  "package": {
+    "filename": "Q017-v2_量子電腦學程_人造原子_動畫展示版_2026-11-19.zip",
+    "bytes": 193256077,
+    "sha256": "a7f820118009da78450d2e981bc53fe112448af2ee05b5126801657bd4f17ec4",
+    "parts": [
+      {
+        "name": "Q017-v2_量子電腦學程_人造原子_動畫展示版_2026-11-19.zip.part01",
+        "bytes": 29360128,
+        "sha256": "b6fb314aa4bfa75e2e751e3361c4205a3ad9da6f60ec5f24f7f8f4e3ab7a5537"
+      },
+      {
+        "name": "Q017-v2_量子電腦學程_人造原子_動畫展示版_2026-11-19.zip.part02",
+        "bytes": 29360128,
+        "sha256": "0af32c335a43a455904e3284b740a6e311b37ef5fd3f70061a76a9756239443a"
+      },
+      {
+        "name": "Q017-v2_量子電腦學程_人造原子_動畫展示版_2026-11-19.zip.part03",
+        "bytes": 29360128,
+        "sha256": "98182ab5b7ad1e355fcfd6f38cd79e69785ce4b823b08c4208205251fa5f207f"
+      },
+      {
+        "name": "Q017-v2_量子電腦學程_人造原子_動畫展示版_2026-11-19.zip.part04",
+        "bytes": 29360128,
+        "sha256": "c47e1dfe2729f66b3d1d8dea396c595ec6dab8314834953d873b9d52570b3d46"
+      },
+      {
+        "name": "Q017-v2_量子電腦學程_人造原子_動畫展示版_2026-11-19.zip.part05",
+        "bytes": 29360128,
+        "sha256": "6efbdafe6d0389dbaece31b990e52a32fcbff7dcc2377f88f2a13f0b8838832b"
+      },
+      {
+        "name": "Q017-v2_量子電腦學程_人造原子_動畫展示版_2026-11-19.zip.part06",
+        "bytes": 29360128,
+        "sha256": "55433635c8fa7e797785d1a6d8ba351efaa6db2300bdeaadc9074d7e0d2f568c"
+      },
+      {
+        "name": "Q017-v2_量子電腦學程_人造原子_動畫展示版_2026-11-19.zip.part07",
+        "bytes": 17095309,
+        "sha256": "46460d6b3bf5bd574cfcace75e75b033fe7443ac4b812e1899e82e1b70cdf9ee"
+      }
+    ],
+    "handedOver": "2026-11-19 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1epfQVOXunbD9Vht37u62oOD9Dr-HKMSE",
+    "folder": "量子電腦學程 Q011–Q040 動畫展示版（v2）",
+    "files": [
+      {
+        "name": "Q017 人造原子：為什麼要做「人造原子」（動畫展示版）.mp4",
+        "id": "1ssjySJyHWDhlel7S-gTChA5cWMXg5F-_",
+        "link": "https://drive.google.com/file/d/1ssjySJyHWDhlel7S-gTChA5cWMXg5F-_/view?usp=drivesdk",
+        "bytes": 87116309
+      },
+      {
+        "name": "Q017 人造原子（動畫展示版）簡報.pptx",
+        "id": "1v4ZxH1MpnBvggwNO6gwYYcpzwjXQzPgO",
+        "link": "https://docs.google.com/presentation/d/1v4ZxH1MpnBvggwNO6gwYYcpzwjXQzPgO/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true",
+        "bytes": 3476639
+      },
+      {
+        "name": "Q017 人造原子 教材.zip",
+        "id": "1oxbPFgloeuw4ni2G1UguB0l4WdSY87_O",
+        "link": "https://drive.google.com/file/d/1oxbPFgloeuw4ni2G1UguB0l4WdSY87_O/view?usp=drivesdk",
+        "bytes": 328335
+      }
+    ]
+  }
+}

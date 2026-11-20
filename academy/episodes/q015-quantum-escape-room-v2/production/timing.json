@@ -1,0 +1,399 @@
+{
+  "version": 2,
+  "opening": 60.277,
+  "scenes": [
+    {
+      "page": 1,
+      "kind": "slide",
+      "v1slide": 1,
+      "title": "迷你專案：量子逃脫室",
+      "duration": 31.992,
+      "sentences": [
+        {
+          "text": "歡迎回到父子科技學院的量子電腦學程，我是陳犀牛，今天是量子第十五堂，迷你專案：量子逃脫室，這是依課綱製作的課前教學版，並非實際上課錄音。",
+          "start": 0.0,
+          "end": 12.808005
+        },
+        {
+          "text": "上一堂我們認識了雜訊和退相干，知道量子狀態很怕吵；到這裡，第一階段的量子直覺已經學得差不多了。",
+          "start": 12.988005,
+          "end": 21.764014
+        },
+        {
+          "text": "今天不學新東西，而是把學過的疊加、測量、干涉、糾纏和格羅弗搜尋串起來，蓋一間五關的量子逃脫室。",
+          "start": 21.944014,
+          "end": 31.776032
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q015-quantum-escape-room/audio/slide_01.mp3"
+    },
+    {
+      "page": 2,
+      "kind": "slide",
+      "v1slide": 2,
+      "title": "三個重點",
+      "duration": 23.688,
+      "sentences": [
+        {
+          "text": "今天有三個重點：第一，每一關都要用到一個學過的概念，並且在一個三維動畫場景裡驗證答案。",
+          "start": 0.0,
+          "end": 8.176009
+        },
+        {
+          "text": "第二，每一關都要有唯一的正確答案和一句提示；第三，不能靠運氣過關，要靠真的懂。",
+          "start": 8.356009,
+          "end": 16.340023000000002
+        },
+        {
+          "text": "今天的作品是一本五關逃脫室關卡書，最後一關是要用兩個概念才能破的魔王關。",
+          "start": 16.520023000000002,
+          "end": 23.472041000000004
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q015-quantum-escape-room/audio/slide_02.mp3"
+    },
+    {
+      "page": 3,
+      "kind": "slide",
+      "v1slide": 3,
+      "title": "關卡設計表：每關五格",
+      "duration": 26.4,
+      "sentences": [
+        {
+          "text": "設計之前先準備一張關卡設計表，每一關都要填五個格子：用到哪個概念、在哪個場景、題目是什麼。",
+          "start": 0.0,
+          "end": 8.944014000000001
+        },
+        {
+          "text": "另外兩格是唯一的正確答案，和一句卡關時可以看的提示；提示要幫忙想，不能直接說出答案。",
+          "start": 9.124014,
+          "end": 17.444014000000003
+        },
+        {
+          "text": "今天的示範關卡書一共五關：疊加和測量、干涉、糾纏、格羅弗搜尋，最後是魔王關。",
+          "start": 17.624014000000003,
+          "end": 26.184014000000005
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q015-quantum-escape-room/audio/slide_03.mp3"
+    },
+    {
+      "page": 4,
+      "kind": "slide",
+      "v1slide": 4,
+      "title": "第一關：斜斜的箭頭",
+      "duration": 26.904,
+      "sentences": [
+        {
+          "text": "第一關叫做斜斜的箭頭：在量子位元場景裡，把箭頭從北極往下傾斜六十度，這是零和一的疊加。",
+          "start": 0.0,
+          "end": 8.536009
+        },
+        {
+          "text": "題目是：測量一千次，大約有幾次得到零？答案是大約七百五十次，因為得到零的機率是四分之三。",
+          "start": 8.716009,
+          "end": 18.500023
+        },
+        {
+          "text": "注意題目不是問量一次會得到什麼，量一次的結果看運氣；問一千次裡的比例，答案才會唯一。",
+          "start": 18.680023,
+          "end": 26.688028
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q015-quantum-escape-room/audio/slide_04.mp3"
+    },
+    {
+      "page": 5,
+      "kind": "demo",
+      "demo": "level1",
+      "title": "動畫展示：第一關怎麼驗證",
+      "duration": 40.296,
+      "sentences": [
+        {
+          "text": "第一關可以在三維動畫的量子位元場景驗證：先按零態的按鈕讓箭頭回到北極，再按寫著六十度的按鈕，箭頭就往下斜了六十度。",
+          "start": 0.0,
+          "end": 10.576009
+        },
+        {
+          "text": "左邊面板的讀數寫著，得到零的理論機率是零點七五；右邊兩條青色細線標的就是理論機率，柱子還是平的，因為還沒開始測量。",
+          "start": 10.756009,
+          "end": 21.476009
+        },
+        {
+          "text": "接著按一次跑一千次的按鈕，藍色柱子代表得到零，頂上的數字大約是七百五十，紅色柱子大約兩百五十。",
+          "start": 21.656009,
+          "end": 30.768027000000004
+        },
+        {
+          "text": "先按清除統計再跑一次，兩次的數字不一定一樣，但比例總是落在四分之三附近，所以這一關的答案不靠運氣。",
+          "start": 30.948027000000003,
+          "end": 40.084036000000005
+        }
+      ],
+      "audio": "audio/demo_level1.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#qubit"
+    },
+    {
+      "page": 6,
+      "kind": "slide",
+      "v1slide": 5,
+      "title": "第二關：兩條路",
+      "duration": 29.76,
+      "sentences": [
+        {
+          "text": "第二關叫做兩條路：在干涉場景裡，哈達瑪閘把零態分成兩條路，中間加一個相位，再用哈達瑪閘合起來。",
+          "start": 0.0,
+          "end": 9.544014
+        },
+        {
+          "text": "題目是：相位要調到幾度，結果一定是一？答案是一百八十度，這時通往零的兩支箭頭方向相反，互相抵消。",
+          "start": 9.724014,
+          "end": 20.396031999999998
+        },
+        {
+          "text": "提示可以寫：相位是零度時，結果一定是零；也可以提醒玩家，中途偷看走哪條路，干涉就會消失。",
+          "start": 20.576031999999998,
+          "end": 29.544036999999996
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q015-quantum-escape-room/audio/slide_05.mp3"
+    },
+    {
+      "page": 7,
+      "kind": "slide",
+      "v1slide": 6,
+      "title": "第三關：雙胞胎",
+      "duration": 27.24,
+      "sentences": [
+        {
+          "text": "第三關叫做雙胞胎：在多量子位元場景裡按貝爾態，兩顆量子位元就糾纏在一起。",
+          "start": 0.0,
+          "end": 7.336009000000001
+        },
+        {
+          "text": "題目是：做出貝爾態再測量兩顆，會不會量到零一？答案是不會，結果只有零零和一一，而且各一半。",
+          "start": 7.516009,
+          "end": 17.636009
+        },
+        {
+          "text": "提示可以寫：單看一顆像丟硬幣，兩顆對照起來卻永遠一樣；想驗證就每次重新做貝爾態，多量幾次。",
+          "start": 17.816009,
+          "end": 27.024014
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q015-quantum-escape-room/audio/slide_06.mp3"
+    },
+    {
+      "page": 8,
+      "kind": "demo",
+      "demo": "level3",
+      "title": "動畫展示：第三關怎麼驗證",
+      "duration": 35.256,
+      "sentences": [
+        {
+          "text": "第三關到三維動畫的多量子位元場景驗證：上排是兩顆量子位元各自的箭頭，下排的柱子是四種結果的機率。",
+          "start": 0.0,
+          "end": 9.280000000000001
+        },
+        {
+          "text": "按下貝爾態，下排變成零零和一一兩根柱子，而且一樣高；上排的兩支箭頭都不見了，只剩球心一個小亮點。",
+          "start": 9.46,
+          "end": 18.908005000000003
+        },
+        {
+          "text": "左邊讀數寫著粉紅色的有糾纏三個字：單看任何一顆都完全隨機，資訊藏在兩顆之間的關聯裡。",
+          "start": 19.088005000000003,
+          "end": 27.192019000000002
+        },
+        {
+          "text": "按測量全部，結果不是零零就是一一；重新做一次貝爾態再量，還是只會看到這兩種。",
+          "start": 27.372019,
+          "end": 35.044037
+        }
+      ],
+      "audio": "audio/demo_level3.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#register"
+    },
+    {
+      "page": 9,
+      "kind": "slide",
+      "v1slide": 7,
+      "title": "第四關：十六個抽屜",
+      "duration": 25.992,
+      "sentences": [
+        {
+          "text": "第四關叫做十六個抽屜：在格羅弗搜尋場景裡，寶藏藏在十六個抽屜的其中一個。",
+          "start": 0.0,
+          "end": 7.192018
+        },
+        {
+          "text": "題目是：做幾輪再打開抽屜，找到寶藏的機會最大？答案是三輪，機率大約百分之九十六。",
+          "start": 7.372018,
+          "end": 16.892018
+        },
+        {
+          "text": "提示可以寫：開根號再乘零點七八五，去掉小數；也可以提醒玩家，做太多輪反而會轉過頭。",
+          "start": 17.072018,
+          "end": 25.776032
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q015-quantum-escape-room/audio/slide_07.mp3"
+    },
+    {
+      "page": 10,
+      "kind": "slide",
+      "v1slide": 8,
+      "title": "好關卡的三條規則",
+      "duration": 25.776,
+      "sentences": [
+        {
+          "text": "設計完四關，用三條規則檢查：每一關只能有一個正確答案，題目不能讓兩種答案都說得通。",
+          "start": 0.0,
+          "end": 7.888005
+        },
+        {
+          "text": "每一關都要有提示；而且不能靠運氣，像是量一次得到一就過關，這種關只是在丟硬幣，不算真的懂。",
+          "start": 8.068005,
+          "end": 17.228005
+        },
+        {
+          "text": "暫停影片想一想：如果第三關改成量一次得到零零就過關，哪裡不好？要怎麼改？",
+          "start": 17.408005,
+          "end": 25.560023
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q015-quantum-escape-room/audio/slide_08.mp3"
+    },
+    {
+      "page": 11,
+      "kind": "slide",
+      "v1slide": 9,
+      "title": "魔王戰：父子出題對戰",
+      "duration": 24.36,
+      "sentences": [
+        {
+          "text": "實作的時候來一場出題對戰：爸爸和你各設計兩關，填好關卡設計表，再交換給對方破關。",
+          "start": 0.0,
+          "end": 8.224014
+        },
+        {
+          "text": "破關的人可以開三維動畫驗證答案，卡住了才看提示；出題的人在旁邊當關主，確認答案只有一個。",
+          "start": 8.404014,
+          "end": 17.108028
+        },
+        {
+          "text": "四關合起來，再加上你等一下設計的魔王關，就是一本五關的逃脫室關卡書。",
+          "start": 17.288028,
+          "end": 24.144037
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q015-quantum-escape-room/audio/slide_09.mp3"
+    },
+    {
+      "page": 12,
+      "kind": "slide",
+      "v1slide": 10,
+      "title": "換你改造：魔王關",
+      "duration": 29.376,
+      "sentences": [
+        {
+          "text": "下半場換你改造：設計一關魔王關，規定要用兩個概念才能破，只懂一個概念的人會卡住。",
+          "start": 0.0,
+          "end": 7.888005
+        },
+        {
+          "text": "舉個例子：只能用哈達瑪閘和相位翻轉閘，最少用幾個閘，把零態變成一態？答案是哈達瑪、相位翻轉、再哈達瑪，一共三個閘。",
+          "start": 8.068005,
+          "end": 20.732019
+        },
+        {
+          "text": "這一關同時用到疊加和干涉；設計好之後，記得自己先在動畫裡破一次，確定答案真的成立。",
+          "start": 20.912019,
+          "end": 29.160024
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q015-quantum-escape-room/audio/slide_10.mp3"
+    },
+    {
+      "page": 13,
+      "kind": "demo",
+      "demo": "boss",
+      "title": "動畫展示：魔王關怎麼驗證",
+      "duration": 37.392,
+      "sentences": [
+        {
+          "text": "魔王關也能在三維動畫的單一量子位元閘場景驗證：先重設成零態，箭頭指著北極。",
+          "start": 0.0,
+          "end": 7.960000000000001
+        },
+        {
+          "text": "按哈達瑪閘，箭頭繞著斜斜的粉紅色軸轉半圈，倒到赤道上；再按相位翻轉閘，箭頭繞著直立的軸轉半圈，還是在赤道上。",
+          "start": 8.14,
+          "end": 18.572018
+        },
+        {
+          "text": "最後再按一次哈達瑪閘，箭頭一路轉到南極，讀數寫著得到一的機率是一；右下角的小圖也記下了三個閘的順序。",
+          "start": 18.752018,
+          "end": 28.056032000000002
+        },
+        {
+          "text": "如果拿掉中間的相位翻轉閘，只按兩次哈達瑪閘，箭頭會回到北極；差一個相位，答案就完全相反。",
+          "start": 28.236032,
+          "end": 37.180046000000004
+        }
+      ],
+      "audio": "audio/demo_boss.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#gates"
+    },
+    {
+      "page": 14,
+      "kind": "slide",
+      "v1slide": 11,
+      "title": "兩小時的逃脫室工作坊",
+      "duration": 27.96,
+      "sentences": [
+        {
+          "text": "兩小時的安排是：開場十分鐘，複習五個概念、看示範關卡書十五分鐘，接著四十分鐘父子各設計兩關、交換破關，然後休息十分鐘。",
+          "start": 0.0,
+          "end": 11.392018
+        },
+        {
+          "text": "下半場三十分鐘設計魔王關，必須用兩個概念才能破；接著十分鐘交換角色，由你教爸爸怎麼操作，每一關的原理是什麼。",
+          "start": 11.572018,
+          "end": 21.692018
+        },
+        {
+          "text": "最後五分鐘錄音總結，替關卡書取名字，存一個版本。",
+          "start": 21.872018,
+          "end": 27.744036
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q015-quantum-escape-room/audio/slide_11.mp3"
+    },
+    {
+      "page": 15,
+      "kind": "slide",
+      "v1slide": 12,
+      "title": "最後一關：教爸爸破關",
+      "duration": 29.904,
+      "sentences": [
+        {
+          "text": "最後一關，請不看稿說出：你的五關各用了哪個概念？哪一關最難，為什麼？",
+          "start": 0.0,
+          "end": 8.08
+        },
+        {
+          "text": "再指出一個要注意的地方：每一關都要有唯一正解和提示，而且不能靠運氣通關，量一次就過關的題目要改掉。",
+          "start": 8.26,
+          "end": 17.252018
+        },
+        {
+          "text": "今天的作品是五關逃脫室關卡書，下一堂是成果發表，我們要用自己的話，替十個量子名詞寫一本小百科；我是陳犀牛，保持好奇，我們下次見！",
+          "start": 17.432018,
+          "end": 29.688026999999998
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q015-quantum-escape-room/audio/slide_12.mp3"
+    }
+  ]
+}

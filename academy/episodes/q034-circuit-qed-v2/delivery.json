@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q034",
+  "version": "Q034-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-20",
+  "episodePath": "academy/episodes/q034-circuit-qed-v2",
+  "basedOn": "academy/episodes/q034-circuit-qed（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 560.133333,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "parts",
+      "title": "動畫展示：晶片上的量子位元、讀取腔和饋線",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#chip"
+    },
+    {
+      "key": "shift",
+      "title": "動畫展示：看讀取腔，間接知道量子位元",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#chip"
+    },
+    {
+      "key": "mux",
+      "title": "動畫展示：一條饋線讀四顆",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#chip"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.6,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q034-circuit-qed-v2-zh-TW.mp4": {
+      "bytes": 93694904,
+      "sha256": "bdbfbe0555be297e69d68cd7f2ee799c739939bdf7535d3429c1ca1b50fcb70d"
+    },
+    "q034-circuit-qed-v2-master.mp4": {
+      "bytes": 95615741,
+      "sha256": "0d069a8d310ad73cb70bdefc7e8761a26d44eeaeca3431af05bc385b4abe7d65"
+    },
+    "narration-only.mp3": {
+      "bytes": 13444564,
+      "sha256": "e35f4dd0b72efd7eb5d73577fa26fb64bab657079329eb3081dfbe3fb9c17837"
+    }
+  },
+  "package": {
+    "filename": "Q034-v2_量子電腦學程_電路量子電動力學_動畫展示版_2026-11-20.zip",
+    "bytes": 207723791,
+    "sha256": "c2ab7f8c9def32d4cfa726ee0f852a108f1089c3feba53c6f1d3f0171ceaa7b5",
+    "parts": [
+      {
+        "name": "Q034-v2_量子電腦學程_電路量子電動力學_動畫展示版_2026-11-20.zip.part01",
+        "bytes": 29360128,
+        "sha256": "7afea30d46f7aa3ede33ecae50bcfc0c405b0b90a35a6d0ca4326d7de16c0905"
+      },
+      {
+        "name": "Q034-v2_量子電腦學程_電路量子電動力學_動畫展示版_2026-11-20.zip.part02",
+        "bytes": 29360128,
+        "sha256": "c89bf6b9bcebb3e4baa47f5cbadd7b1819440be0c86b51c0f23729de6e5763aa"
+      },
+      {
+        "name": "Q034-v2_量子電腦學程_電路量子電動力學_動畫展示版_2026-11-20.zip.part03",
+        "bytes": 29360128,
+        "sha256": "f0c7198d1ac76cebc7dbce1da36a37dd8dd321e5551059b25996da1c9b922b1d"
+      },
+      {
+        "name": "Q034-v2_量子電腦學程_電路量子電動力學_動畫展示版_2026-11-20.zip.part04",
+        "bytes": 29360128,
+        "sha256": "c3fe21db710f6e04b391829988d8c92ffe6c6a5213272b41093f161a396f56cc"
+      },
+      {
+        "name": "Q034-v2_量子電腦學程_電路量子電動力學_動畫展示版_2026-11-20.zip.part05",
+        "bytes": 29360128,
+        "sha256": "f93476da1134ff56eee16ed3778c01ada0f4eb83c7d6dc0848f4f32def5dbc59"
+      },
+      {
+        "name": "Q034-v2_量子電腦學程_電路量子電動力學_動畫展示版_2026-11-20.zip.part06",
+        "bytes": 29360128,
+        "sha256": "1c4c37b0adb4f450b662891d6e22eb58b1bac22492589811c5adbbca1a751aa3"
+      },
+      {
+        "name": "Q034-v2_量子電腦學程_電路量子電動力學_動畫展示版_2026-11-20.zip.part07",
+        "bytes": 29360128,
+        "sha256": "71544625ec432612157891442707ad5ca8f87c78187b435183122e62ed2e2428"
+      },
+      {
+        "name": "Q034-v2_量子電腦學程_電路量子電動力學_動畫展示版_2026-11-20.zip.part08",
+        "bytes": 2202895,
+        "sha256": "241c7e79e5af52af4079ff88785bce6f3058ecbeba4c110188e87354dd23da73"
+      }
+    ],
+    "handedOver": "2026-11-20 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1epfQVOXunbD9Vht37u62oOD9Dr-HKMSE",
+    "folder": "量子電腦學程 Q011–Q040 動畫展示版（v2）",
+    "files": [
+      {
+        "name": "Q034 電路量子電動力學：電路 QED：量子位元＋諧振腔（動畫展示版）.mp4",
+        "id": "1hU05V1Mo-s8Ch3yLYvP2sdnrX5RxODvz",
+        "link": "https://drive.google.com/file/d/1hU05V1Mo-s8Ch3yLYvP2sdnrX5RxODvz/view?usp=drivesdk",
+        "bytes": 93694904
+      },
+      {
+        "name": "Q034 電路量子電動力學（動畫展示版）簡報.pptx",
+        "id": "1xF3fJ6t8BSZoiNGO8jyQcsebysMRRsF4",
+        "link": "https://docs.google.com/presentation/d/1xF3fJ6t8BSZoiNGO8jyQcsebysMRRsF4/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true",
+        "bytes": 3839580
+      },
+      {
+        "name": "Q034 電路量子電動力學 教材.zip",
+        "id": "1-bp7z5Xjg2aGg6erSlmKs5iWhKZm-61q",
+        "link": "https://drive.google.com/file/d/1-bp7z5Xjg2aGg6erSlmKs5iWhKZm-61q/view?usp=drivesdk",
+        "bytes": 370304
+      }
+    ]
+  }
+}

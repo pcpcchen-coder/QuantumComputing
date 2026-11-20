@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q026",
+  "version": "Q026-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-20",
+  "episodePath": "academy/episodes/q026-tilted-washboard-v2",
+  "basedOn": "academy/episodes/q026-tilted-washboard（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 518.634,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "tilt",
+      "title": "動畫展示：洗衣板越斜，山谷越淺",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#washboard"
+    },
+    {
+      "key": "hysteresis",
+      "title": "動畫展示：同樣的電流，兩種狀態",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#washboard"
+    },
+    {
+      "key": "sweep",
+      "title": "動畫展示：掃描一趟，畫出遲滯",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#washboard"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.5,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q026-tilted-washboard-v2-zh-TW.mp4": {
+      "bytes": 93332614,
+      "sha256": "476435f1f9650b4f2dd875887506eff60621a5c33fdb826e414980f4ec251fc6"
+    },
+    "q026-tilted-washboard-v2-master.mp4": {
+      "bytes": 95558660,
+      "sha256": "71a39c485f8b014db1052775d10e5b162246499fd70cf291c17045c890b59124"
+    },
+    "narration-only.mp3": {
+      "bytes": 12448660,
+      "sha256": "c3ba60d4683ff92c8238abff122495b7f4b330cd4f28f79a7f82febd8717ab9a"
+    }
+  },
+  "package": {
+    "filename": "Q026-v2_量子電腦學程_傾斜洗衣板_動畫展示版_2026-11-20.zip",
+    "bytes": 205712465,
+    "sha256": "98f0c95cb5983ad31a5ca43d1ef001ec3975974fe2e68485f6a3bfae73fd3345",
+    "parts": [
+      {
+        "name": "Q026-v2_量子電腦學程_傾斜洗衣板_動畫展示版_2026-11-20.zip.part01",
+        "bytes": 29360128,
+        "sha256": "5e6e68cddcbe6adfbec870a3920cb6c4fd8d9f18d7409c312ff2ff392f0d86e0"
+      },
+      {
+        "name": "Q026-v2_量子電腦學程_傾斜洗衣板_動畫展示版_2026-11-20.zip.part02",
+        "bytes": 29360128,
+        "sha256": "1471cef6a6413923d92f76326eac52852f570929aafc9d6ef91cc6e87a83df18"
+      },
+      {
+        "name": "Q026-v2_量子電腦學程_傾斜洗衣板_動畫展示版_2026-11-20.zip.part03",
+        "bytes": 29360128,
+        "sha256": "a5e3ff15d1695803fb3cdffd3b6173a3b6c484ac6f2b8c47ca79f319de91f20c"
+      },
+      {
+        "name": "Q026-v2_量子電腦學程_傾斜洗衣板_動畫展示版_2026-11-20.zip.part04",
+        "bytes": 29360128,
+        "sha256": "dc6bffecf4543c62c8ba5d02049f22755ec20338cb6718298243b4fe98ba5f3e"
+      },
+      {
+        "name": "Q026-v2_量子電腦學程_傾斜洗衣板_動畫展示版_2026-11-20.zip.part05",
+        "bytes": 29360128,
+        "sha256": "a9d86a0e0d71ee222fafde5d5b09eec463c2dcf33975622fe015f759ce1f8b7f"
+      },
+      {
+        "name": "Q026-v2_量子電腦學程_傾斜洗衣板_動畫展示版_2026-11-20.zip.part06",
+        "bytes": 29360128,
+        "sha256": "045c3775f3f48a9df30cb246e406b0b1b294feebd2e4d8f3a85a0499d190f414"
+      },
+      {
+        "name": "Q026-v2_量子電腦學程_傾斜洗衣板_動畫展示版_2026-11-20.zip.part07",
+        "bytes": 29360128,
+        "sha256": "aac72733a9ee175ef63293aa26484351b66cfd0395fadef686ba64c9698e1a70"
+      },
+      {
+        "name": "Q026-v2_量子電腦學程_傾斜洗衣板_動畫展示版_2026-11-20.zip.part08",
+        "bytes": 191569,
+        "sha256": "e23938baba3607c058bdcab7d3e8448803331413c7af7cbfbbc4b315e478d934"
+      }
+    ],
+    "handedOver": "2026-11-20 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1epfQVOXunbD9Vht37u62oOD9Dr-HKMSE",
+    "folder": "量子電腦學程 Q011–Q040 動畫展示版（v2）",
+    "files": [
+      {
+        "name": "Q026 傾斜洗衣板：傾斜洗衣板（動畫展示版）.mp4",
+        "id": "1ryt-4Y32wdMyYDoN_8hexHMERbXlvXtG",
+        "link": "https://drive.google.com/file/d/1ryt-4Y32wdMyYDoN_8hexHMERbXlvXtG/view?usp=drivesdk",
+        "bytes": 93332614
+      },
+      {
+        "name": "Q026 傾斜洗衣板（動畫展示版）簡報.pptx",
+        "id": "12lB1lpJbHcUgdAnTNAi63vReodP_KN29",
+        "link": "https://docs.google.com/presentation/d/12lB1lpJbHcUgdAnTNAi63vReodP_KN29/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true",
+        "bytes": 3294965
+      },
+      {
+        "name": "Q026 傾斜洗衣板 教材.zip",
+        "id": "1XmMEHM9VV0XweAGCTV7w_lH3H_KKRTYx",
+        "link": "https://drive.google.com/file/d/1XmMEHM9VV0XweAGCTV7w_lH3H_KKRTYx/view?usp=drivesdk",
+        "bytes": 466687
+      }
+    ]
+  }
+}

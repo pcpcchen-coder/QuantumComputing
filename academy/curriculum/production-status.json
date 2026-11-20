@@ -117,152 +117,332 @@
     "Q011": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q011-teleportation-v2",
+        "evidence": "academy/episodes/q011-teleportation-v2/delivery.json"
+      }
     },
     "Q012": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q012-deutsch-jozsa-v2",
+        "evidence": "academy/episodes/q012-deutsch-jozsa-v2/delivery.json"
+      }
     },
     "Q013": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q013-grover-treasure-v2",
+        "evidence": "academy/episodes/q013-grover-treasure-v2/delivery.json"
+      }
     },
     "Q014": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q014-noise-decoherence-v2",
+        "evidence": "academy/episodes/q014-noise-decoherence-v2/delivery.json"
+      }
     },
     "Q015": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q015-quantum-escape-room-v2",
+        "evidence": "academy/episodes/q015-quantum-escape-room-v2/delivery.json"
+      }
     },
     "Q016": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q016-quantum-glossary-v2",
+        "evidence": "academy/episodes/q016-quantum-glossary-v2/delivery.json"
+      }
     },
     "Q017": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q017-artificial-atom-v2",
+        "evidence": "academy/episodes/q017-artificial-atom-v2/delivery.json"
+      }
     },
     "Q018": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q018-superconductivity-v2",
+        "evidence": "academy/episodes/q018-superconductivity-v2/delivery.json"
+      }
     },
     "Q019": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q019-cooper-pair-gap-v2",
+        "evidence": "academy/episodes/q019-cooper-pair-gap-v2/delivery.json"
+      }
     },
     "Q020": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q020-flux-quantization-v2",
+        "evidence": "academy/episodes/q020-flux-quantization-v2/delivery.json"
+      }
     },
     "Q021": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q021-spring-pendulum-lc-v2",
+        "evidence": "academy/episodes/q021-spring-pendulum-lc-v2/delivery.json"
+      }
     },
     "Q022": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q022-equal-ladder-v2",
+        "evidence": "academy/episodes/q022-equal-ladder-v2/delivery.json"
+      }
     },
     "Q023": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q023-josephson-junction-sandwich-v2",
+        "evidence": "academy/episodes/q023-josephson-junction-sandwich-v2/delivery.json"
+      }
     },
     "Q024": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q024-jj-nonlinear-inductor-v2",
+        "evidence": "academy/episodes/q024-jj-nonlinear-inductor-v2/delivery.json"
+      }
     },
     "Q025": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q025-ej-ec-two-energy-scales-v2",
+        "evidence": "academy/episodes/q025-ej-ec-two-energy-scales-v2/delivery.json"
+      }
     },
     "Q026": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q026-tilted-washboard-v2",
+        "evidence": "academy/episodes/q026-tilted-washboard-v2/delivery.json"
+      }
     },
     "Q027": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q027-squid-flux-tuning-v2",
+        "evidence": "academy/episodes/q027-squid-flux-tuning-v2/delivery.json"
+      }
     },
     "Q028": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q028-qubit-family-cards-v2",
+        "evidence": "academy/episodes/q028-qubit-family-cards-v2/delivery.json"
+      }
     },
     "Q029": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q029-double-angle-evaporation-v2",
+        "evidence": "academy/episodes/q029-double-angle-evaporation-v2/delivery.json"
+      }
     },
     "Q030": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q030-chip-layout-v2",
+        "evidence": "academy/episodes/q030-chip-layout-v2/delivery.json"
+      }
     },
     "Q031": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q031-decoherence-suspects-v2",
+        "evidence": "academy/episodes/q031-decoherence-suspects-v2/delivery.json"
+      }
     },
     "Q032": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q032-design-my-transmon-v2",
+        "evidence": "academy/episodes/q032-design-my-transmon-v2/delivery.json"
+      }
     },
     "Q033": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q033-readout-requirements-v2",
+        "evidence": "academy/episodes/q033-readout-requirements-v2/delivery.json"
+      }
     },
     "Q034": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q034-circuit-qed-v2",
+        "evidence": "academy/episodes/q034-circuit-qed-v2/delivery.json"
+      }
     },
     "Q035": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q035-dispersive-shift-v2",
+        "evidence": "academy/episodes/q035-dispersive-shift-v2/delivery.json"
+      }
     },
     "Q036": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q036-iq-plane-v2",
+        "evidence": "academy/episodes/q036-iq-plane-v2/delivery.json"
+      }
     },
     "Q037": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q037-single-shot-fidelity-v2",
+        "evidence": "academy/episodes/q037-single-shot-fidelity-v2/delivery.json"
+      }
     },
     "Q038": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q038-readout-chain-v2",
+        "evidence": "academy/episodes/q038-readout-chain-v2/delivery.json"
+      }
     },
     "Q039": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q039-readout-tradeoffs-v2",
+        "evidence": "academy/episodes/q039-readout-tradeoffs-v2/delivery.json"
+      }
     },
     "Q040": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q040-whole-machine-v2",
+        "evidence": "academy/episodes/q040-whole-machine-v2/delivery.json"
+      }
     },
     "Q041": {
       "status": "planned",

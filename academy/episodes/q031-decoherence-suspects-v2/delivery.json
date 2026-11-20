@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q031",
+  "version": "Q031-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-20",
+  "episodePath": "academy/episodes/q031-decoherence-suspects-v2",
+  "basedOn": "academy/episodes/q031-decoherence-suspects（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 534.613,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "evidence1",
+      "title": "動畫展示：第一個證據——能量漏掉",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#bloch"
+    },
+    {
+      "key": "evidence2",
+      "title": "動畫展示：第二個證據——相位亂掉",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#bloch"
+    },
+    {
+      "key": "control",
+      "title": "動畫展示：先做對照組",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#bloch"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.5,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q031-decoherence-suspects-v2-zh-TW.mp4": {
+      "bytes": 92250192,
+      "sha256": "afcbca3a158c841b8f6ae9590b18d69df9de78e67c9239e19625d4cd347c7db7"
+    },
+    "q031-decoherence-suspects-v2-master.mp4": {
+      "bytes": 94431574,
+      "sha256": "27f10308b623fad2a069e89be42efe4f64ed5a7066bbedb50ab4a6df3085b5cf"
+    },
+    "narration-only.mp3": {
+      "bytes": 12832276,
+      "sha256": "47e164dc7d71d0f0b2937fb55e2fdf2503ea9c81fdca8f07370a687e18530939"
+    }
+  },
+  "package": {
+    "filename": "Q031-v2_量子電腦學程_退相干嫌犯_動畫展示版_2026-11-20.zip",
+    "bytes": 204389963,
+    "sha256": "c46281ee0adc25e51d7bb2c63cafc9d471bb6346a5c3de62c89a8fd40fbccd8e",
+    "parts": [
+      {
+        "name": "Q031-v2_量子電腦學程_退相干嫌犯_動畫展示版_2026-11-20.zip.part01",
+        "bytes": 29360128,
+        "sha256": "8d31dcd9b967c992262b8d67a6188455fa45fc7152c1bb06f5ce4488b79136bf"
+      },
+      {
+        "name": "Q031-v2_量子電腦學程_退相干嫌犯_動畫展示版_2026-11-20.zip.part02",
+        "bytes": 29360128,
+        "sha256": "825b8871a01a8fcf08c977456e5becd43f57c019763ce6902b15909f46a9548a"
+      },
+      {
+        "name": "Q031-v2_量子電腦學程_退相干嫌犯_動畫展示版_2026-11-20.zip.part03",
+        "bytes": 29360128,
+        "sha256": "148bd138c3f4470aed8226964f275751eecd7b64c1323b583d1b451e5975bab1"
+      },
+      {
+        "name": "Q031-v2_量子電腦學程_退相干嫌犯_動畫展示版_2026-11-20.zip.part04",
+        "bytes": 29360128,
+        "sha256": "18f8b4936fdb446042a84f8f2e4ad08c29de5fe11f342e83e49ea5d91a65451f"
+      },
+      {
+        "name": "Q031-v2_量子電腦學程_退相干嫌犯_動畫展示版_2026-11-20.zip.part05",
+        "bytes": 29360128,
+        "sha256": "228ad6291d8df812fffe77a3151ade70d706658a378f34fcb29c4021d1967d80"
+      },
+      {
+        "name": "Q031-v2_量子電腦學程_退相干嫌犯_動畫展示版_2026-11-20.zip.part06",
+        "bytes": 29360128,
+        "sha256": "bedee47eec468daadf4aa5e80cb93df7239349d8e83b9be1ef58b31ef3c92b6e"
+      },
+      {
+        "name": "Q031-v2_量子電腦學程_退相干嫌犯_動畫展示版_2026-11-20.zip.part07",
+        "bytes": 28229195,
+        "sha256": "5760ce3d901ce3e970afb10484908bfff2654253a29212a8bf0fcc0ce31e2a8c"
+      }
+    ],
+    "handedOver": "2026-11-20 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1epfQVOXunbD9Vht37u62oOD9Dr-HKMSE",
+    "folder": "量子電腦學程 Q011–Q040 動畫展示版（v2）",
+    "files": [
+      {
+        "name": "Q031 退相干嫌犯：退相干：敵人在哪裡（動畫展示版）.mp4",
+        "id": "1Q_NZQuHrEVCFGWIuRwTsAuZ1RPoTaNgt",
+        "link": "https://drive.google.com/file/d/1Q_NZQuHrEVCFGWIuRwTsAuZ1RPoTaNgt/view?usp=drivesdk",
+        "bytes": 92250192
+      },
+      {
+        "name": "Q031 退相干嫌犯（動畫展示版）簡報.pptx",
+        "id": "1hmW97uln7UMwsIVNyifumeyQLNMXwOEr",
+        "link": "https://docs.google.com/presentation/d/1hmW97uln7UMwsIVNyifumeyQLNMXwOEr/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true",
+        "bytes": 3839911
+      },
+      {
+        "name": "Q031 退相干嫌犯 教材.zip",
+        "id": "1kFNqRnK-o-eyV8m2ihbRwnMpjmLXiR8D",
+        "link": "https://drive.google.com/file/d/1kFNqRnK-o-eyV8m2ihbRwnMpjmLXiR8D/view?usp=drivesdk",
+        "bytes": 376442
+      }
+    ]
+  }
+}

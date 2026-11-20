@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q020",
+  "version": "Q020-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-20",
+  "episodePath": "academy/episodes/q020-flux-quantization-v2",
+  "basedOn": "academy/episodes/q020-flux-quantization（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 504.618,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "clock",
+      "title": "動畫展示：超導體的相位鐘",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#jj"
+    },
+    {
+      "key": "ring",
+      "title": "動畫展示：穿過超導環的磁通",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#squid"
+    },
+    {
+      "key": "period",
+      "title": "動畫展示：每一格都回到原樣",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#squid"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.5,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q020-flux-quantization-v2-zh-TW.mp4": {
+      "bytes": 86712520,
+      "sha256": "a0e80944fd1d90e9ccf77d72e70978854e2656f156bc889de5447f1e152ac26c"
+    },
+    "q020-flux-quantization-v2-master.mp4": {
+      "bytes": 88543565,
+      "sha256": "f3a978956234201914e1eaa0f982f1d8d99881fc7cf130c542cafb61177b5319"
+    },
+    "narration-only.mp3": {
+      "bytes": 12112276,
+      "sha256": "1ba40ae13b973c32534709c815def9e0ff73fc3c9eb023ca76723ada96ee097b"
+    }
+  },
+  "package": {
+    "filename": "Q020-v2_量子電腦學程_磁通量子化_動畫展示版_2026-11-20.zip",
+    "bytes": 191811959,
+    "sha256": "d9722453ac3efe1c6f9a3a56d5b0d3f2c1c51d06286df7f16d26831b59035cb6",
+    "parts": [
+      {
+        "name": "Q020-v2_量子電腦學程_磁通量子化_動畫展示版_2026-11-20.zip.part01",
+        "bytes": 29360128,
+        "sha256": "715ff272b8e2ab9e57caa984788860e5e4d67a2847591c1dab70b1e0555d354d"
+      },
+      {
+        "name": "Q020-v2_量子電腦學程_磁通量子化_動畫展示版_2026-11-20.zip.part02",
+        "bytes": 29360128,
+        "sha256": "adfc3b5975f1299e9ac2743ff6978d758030e353b5ce5d9c79d53153926f14e6"
+      },
+      {
+        "name": "Q020-v2_量子電腦學程_磁通量子化_動畫展示版_2026-11-20.zip.part03",
+        "bytes": 29360128,
+        "sha256": "c6ed644104edd0ed7849f5394a203eea56f2237d2361b02f9ae88f59b46f61f9"
+      },
+      {
+        "name": "Q020-v2_量子電腦學程_磁通量子化_動畫展示版_2026-11-20.zip.part04",
+        "bytes": 29360128,
+        "sha256": "54aef8b02f8bfadd49d89a38be9b97d0f206968029af60bbebf310df48c4c27c"
+      },
+      {
+        "name": "Q020-v2_量子電腦學程_磁通量子化_動畫展示版_2026-11-20.zip.part05",
+        "bytes": 29360128,
+        "sha256": "ed8badea468ad175f727fe486cde2b642d798b936619d3114cc2ed1d60eceb61"
+      },
+      {
+        "name": "Q020-v2_量子電腦學程_磁通量子化_動畫展示版_2026-11-20.zip.part06",
+        "bytes": 29360128,
+        "sha256": "b50f0f6d20777c272e35d133a3cfc2920ccdbecd41b94b22df96e8fbed0eba9c"
+      },
+      {
+        "name": "Q020-v2_量子電腦學程_磁通量子化_動畫展示版_2026-11-20.zip.part07",
+        "bytes": 15651191,
+        "sha256": "556b5fc6f4e6cab15e4aab45c95d8caa954e46ad06ffe999c8688f4c50ff9fd5"
+      }
+    ],
+    "handedOver": "2026-11-20 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1epfQVOXunbD9Vht37u62oOD9Dr-HKMSE",
+    "folder": "量子電腦學程 Q011–Q040 動畫展示版（v2）",
+    "files": [
+      {
+        "name": "Q020 磁通量子化：磁通量子化 Φ₀ = h/2e（動畫展示版）.mp4",
+        "id": "1TFvpZmaQY7sTzcz8O2K_MJrBq638ZHi5",
+        "link": "https://drive.google.com/file/d/1TFvpZmaQY7sTzcz8O2K_MJrBq638ZHi5/view?usp=drivesdk",
+        "bytes": 86712520
+      },
+      {
+        "name": "Q020 磁通量子化（動畫展示版）簡報.pptx",
+        "id": "1cLIOMQpggpf-tUrKRHQmWSpwcZBoyjzl",
+        "link": "https://docs.google.com/presentation/d/1cLIOMQpggpf-tUrKRHQmWSpwcZBoyjzl/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true",
+        "bytes": 3534610
+      },
+      {
+        "name": "Q020 磁通量子化 教材.zip",
+        "id": "1Aw0i8axFAnrunP9xeGjVwRdz1pQg2INf",
+        "link": "https://drive.google.com/file/d/1Aw0i8axFAnrunP9xeGjVwRdz1pQg2INf/view?usp=drivesdk",
+        "bytes": 422488
+      }
+    ]
+  }
+}
