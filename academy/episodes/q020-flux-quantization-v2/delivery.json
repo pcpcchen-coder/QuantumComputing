@@ -95,5 +95,29 @@
     ],
     "handedOver": "2026-11-20 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
   },
-  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔"
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1epfQVOXunbD9Vht37u62oOD9Dr-HKMSE",
+    "folder": "量子電腦學程 Q011–Q040 動畫展示版（v2）",
+    "files": [
+      {
+        "name": "Q020 磁通量子化：磁通量子化 Φ₀ = h/2e（動畫展示版）.mp4",
+        "id": "1TFvpZmaQY7sTzcz8O2K_MJrBq638ZHi5",
+        "link": "https://drive.google.com/file/d/1TFvpZmaQY7sTzcz8O2K_MJrBq638ZHi5/view?usp=drivesdk",
+        "bytes": 86712520
+      },
+      {
+        "name": "Q020 磁通量子化（動畫展示版）簡報.pptx",
+        "id": "1cLIOMQpggpf-tUrKRHQmWSpwcZBoyjzl",
+        "link": "https://docs.google.com/presentation/d/1cLIOMQpggpf-tUrKRHQmWSpwcZBoyjzl/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true",
+        "bytes": 3534610
+      },
+      {
+        "name": "Q020 磁通量子化 教材.zip",
+        "id": "1Aw0i8axFAnrunP9xeGjVwRdz1pQg2INf",
+        "link": "https://drive.google.com/file/d/1Aw0i8axFAnrunP9xeGjVwRdz1pQg2INf/view?usp=drivesdk",
+        "bytes": 422488
+      }
+    ]
+  }
 }
