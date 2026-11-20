@@ -27,8 +27,8 @@
 | Q021 | 彈簧、單擺與 LC 電路 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q021-spring-pendulum-lc-v2` |
 | Q022 | 量子諧振子：等距的梯子 | 規劃完成 | — |
 | Q023 | 約瑟夫森接面：超導三明治 | 規劃完成 | — |
-| Q024 | JJ 是非線性電感 | 規劃完成 | — |
-| Q025 | E_J 與 E_C：兩個能量尺度 | 規劃完成 | — |
+| Q024 | JJ 是非線性電感 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q024-jj-nonlinear-inductor-v2` |
+| Q025 | E_J 與 E_C：兩個能量尺度 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q025-ej-ec-two-energy-scales-v2` |
 | Q026 | 傾斜洗衣板 | 規劃完成 | — |
 | Q027 | SQUID：用磁場轉頻率 | 規劃完成 | — |
 | Q028 | 量子位元家族圖鑑 | 規劃完成 | — |

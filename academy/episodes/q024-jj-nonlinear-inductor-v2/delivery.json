@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q024",
+  "version": "Q024-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-20",
+  "episodePath": "academy/episodes/q024-jj-nonlinear-inductor-v2",
+  "basedOn": "academy/episodes/q024-jj-nonlinear-inductor（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 526.766667,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "junction",
+      "title": "動畫展示：電流越大，電感越大",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#junction"
+    },
+    {
+      "key": "taylor",
+      "title": "動畫展示：多出來的四次方項",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/lc-vs-jj.html#s5"
+    },
+    {
+      "key": "levels",
+      "title": "動畫展示：間距從哪裡開始變小",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#potential"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.5,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q024-jj-nonlinear-inductor-v2-zh-TW.mp4": {
+      "bytes": 91208164,
+      "sha256": "abc228989cc8952a5145caeab0b2eebc9fa5af9eece38f5486931c86c94834d6"
+    },
+    "q024-jj-nonlinear-inductor-v2-master.mp4": {
+      "bytes": 93521189,
+      "sha256": "0ebccf30b8cadbcc7a20d5119c493534de6eddc82f042fc64084f5c084a86302"
+    },
+    "narration-only.mp3": {
+      "bytes": 12643348,
+      "sha256": "5a594de015793f635f2ed2bc9a654f82cec7ba081c5f2d32f30b297d4a8fdef2"
+    }
+  },
+  "package": {
+    "filename": "Q024-v2_量子電腦學程_非線性電感_動畫展示版_2026-11-20.zip",
+    "bytes": 201472743,
+    "sha256": "53e63e72eb58b111fa1d803bf94ff4ba303b2e6a5cdff6bc2671accc6c181aeb",
+    "parts": [
+      {
+        "name": "Q024-v2_量子電腦學程_非線性電感_動畫展示版_2026-11-20.zip.part01",
+        "bytes": 29360128,
+        "sha256": "d602160849cba0c9b8e309ae98c984a36cbe222fcbcf7f0e8a831a807d870e0d"
+      },
+      {
+        "name": "Q024-v2_量子電腦學程_非線性電感_動畫展示版_2026-11-20.zip.part02",
+        "bytes": 29360128,
+        "sha256": "b416a43af60dddfb163a7bb019cb07f4bf1775d475352a695f527e535a034abe"
+      },
+      {
+        "name": "Q024-v2_量子電腦學程_非線性電感_動畫展示版_2026-11-20.zip.part03",
+        "bytes": 29360128,
+        "sha256": "04c92fda3f041890300b93ad013d74d46d90110afa4efe53b876524d85471e07"
+      },
+      {
+        "name": "Q024-v2_量子電腦學程_非線性電感_動畫展示版_2026-11-20.zip.part04",
+        "bytes": 29360128,
+        "sha256": "6437b0088bb3bf311a26af5c7d62c1d6d02c8aaf77b921371667df6aebd95365"
+      },
+      {
+        "name": "Q024-v2_量子電腦學程_非線性電感_動畫展示版_2026-11-20.zip.part05",
+        "bytes": 29360128,
+        "sha256": "e52c0cb81b94df0557c0e7153a0a74595df5869b907e29b758efb2fd19cffd24"
+      },
+      {
+        "name": "Q024-v2_量子電腦學程_非線性電感_動畫展示版_2026-11-20.zip.part06",
+        "bytes": 29360128,
+        "sha256": "d5dfe6b4e6bf7259e688702e59486112460fca0a786bdcae5c8422dcd31675e7"
+      },
+      {
+        "name": "Q024-v2_量子電腦學程_非線性電感_動畫展示版_2026-11-20.zip.part07",
+        "bytes": 25311975,
+        "sha256": "41b60a29bd26284a6ce737edb084a5fac24ae2fa8db1e9848440ece215c1ce01"
+      }
+    ],
+    "handedOver": "2026-11-20 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔"
+}
