@@ -99,6 +99,25 @@
   "drive": {
     "folderId": "1ZOQEWjgkBnzg6-88LtQiSOgQeO2JG9Wx",
     "uploadedAt": "2026-11-19",
-    "files": []
+    "files": [
+      {
+        "name": "Q099 第 1 課：SQUID 干涉之後能做什麼（動畫展示版）.mp4",
+        "id": "1mOt7khedJuKrNYmfHfincrYVaSLQLFmR",
+        "bytes": 89496956,
+        "url": "https://drive.google.com/file/d/1mOt7khedJuKrNYmfHfincrYVaSLQLFmR/view"
+      },
+      {
+        "name": "Q099 SQUID 干涉之後（動畫展示版）簡報.pptx",
+        "id": "1xvK3kWOnp8PTSobwtubFHsjKv5jxFzNQ",
+        "bytes": 3507117,
+        "url": "https://docs.google.com/presentation/d/1xvK3kWOnp8PTSobwtubFHsjKv5jxFzNQ/edit"
+      },
+      {
+        "name": "Q099 SQUID 干涉之後 教材.zip",
+        "id": "1PMgsoOoMEQgfj19Auy6OSm_xCsd4r5g8",
+        "bytes": 406198,
+        "url": "https://drive.google.com/file/d/1PMgsoOoMEQgfj19Auy6OSm_xCsd4r5g8/view"
+      }
+    ]
   }
 }

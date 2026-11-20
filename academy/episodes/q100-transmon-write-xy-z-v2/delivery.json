@@ -99,6 +99,25 @@
   "drive": {
     "folderId": "1ZOQEWjgkBnzg6-88LtQiSOgQeO2JG9Wx",
     "uploadedAt": "2026-11-19",
-    "files": []
+    "files": [
+      {
+        "name": "Q100 第 2 課：transmon 怎麼寫入狀態（動畫展示版）.mp4",
+        "id": "1YY5YXtIJ7G4yJudPHsybj1TO1jLSu0uN",
+        "bytes": 88272117,
+        "url": "https://drive.google.com/file/d/1YY5YXtIJ7G4yJudPHsybj1TO1jLSu0uN/view"
+      },
+      {
+        "name": "Q100 transmon 寫入狀態（動畫展示版）簡報.pptx",
+        "id": "1HsFS9Nix-SvOvmP6TljV3GCuTlxCXN0x",
+        "bytes": 3329874,
+        "url": "https://docs.google.com/presentation/d/1HsFS9Nix-SvOvmP6TljV3GCuTlxCXN0x/edit"
+      },
+      {
+        "name": "Q100 transmon 寫入狀態 教材.zip",
+        "id": "1uKj9ckjZWdPs0Pi7e5ssxvT93HLBbBDS",
+        "bytes": 360646,
+        "url": "https://drive.google.com/file/d/1uKj9ckjZWdPs0Pi7e5ssxvT93HLBbBDS/view"
+      }
+    ]
   }
 }
