@@ -23,7 +23,7 @@
 | Q017 | 為什麼要做「人造原子」 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q017-artificial-atom-v2` |
 | Q018 | 超導：電阻消失、磁鐵懸浮 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q018-superconductivity-v2` |
 | Q019 | Cooper pair 與能隙 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q019-cooper-pair-gap-v2` |
-| Q020 | 磁通量子化 Φ₀ = h/2e | 規劃完成 | — |
+| Q020 | 磁通量子化 Φ₀ = h/2e | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q020-flux-quantization-v2` |
 | Q021 | 彈簧、單擺與 LC 電路 | 規劃完成 | — |
 | Q022 | 量子諧振子：等距的梯子 | 規劃完成 | — |
 | Q023 | 約瑟夫森接面：超導三明治 | 規劃完成 | — |

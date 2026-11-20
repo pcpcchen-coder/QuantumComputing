@@ -1,0 +1,399 @@
+{
+  "version": 2,
+  "opening": 60.277,
+  "scenes": [
+    {
+      "page": 1,
+      "kind": "slide",
+      "v1slide": 1,
+      "title": "磁通量子化 Φ₀ = h/2e",
+      "duration": 31.464,
+      "sentences": [
+        {
+          "text": "歡迎回到父子科技學院的量子電腦學程，我是陳犀牛，今天是量子第二十堂，磁通量子化，這是依課綱製作的課前教學版，並非實際上課錄音。",
+          "start": 0.0,
+          "end": 11.656009000000001
+        },
+        {
+          "text": "上一堂說到，超導體裡的電子兩兩成對，所有的電子對一起進入同一個量子狀態，整塊超導體只要一個相位就能描述。",
+          "start": 11.836009,
+          "end": 21.716009
+        },
+        {
+          "text": "今天把超導體彎成一個環：穿過環的磁通竟然只能一格一格地變，而那一格的大小，正好藏著電子成對的證據。",
+          "start": 21.896009,
+          "end": 31.248027
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q020-flux-quantization/audio/slide_01.mp3"
+    },
+    {
+      "page": 2,
+      "kind": "slide",
+      "v1slide": 2,
+      "title": "三個重點",
+      "duration": 25.488,
+      "sentences": [
+        {
+          "text": "今天有三個重點：第一，沿著超導環繞一圈，相位必須剛好回到原點。",
+          "start": 0.0,
+          "end": 6.760000000000001
+        },
+        {
+          "text": "第二，因為這樣，環裡的磁通只能是磁通量子的整數倍；第三，磁通量子等於普朗克常數除以兩倍的電子電荷，那個兩倍就是電子成對的證據。",
+          "start": 6.94,
+          "end": 18.62
+        },
+        {
+          "text": "今天的作品是一張環形相位圖，每弄懂一個重點，就解鎖一個成就。",
+          "start": 18.8,
+          "end": 25.272018000000003
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q020-flux-quantization/audio/slide_02.mp3"
+    },
+    {
+      "page": 3,
+      "kind": "slide",
+      "v1slide": 3,
+      "title": "磁通：穿過圈圈的磁場",
+      "duration": 27.336,
+      "sentences": [
+        {
+          "text": "先認識今天的主角磁通：拿一個圈圈放進磁場裡，穿過圈圈的磁場總量，就叫做磁通。",
+          "start": 0.0,
+          "end": 7.84
+        },
+        {
+          "text": "磁場越強、圈圈的面積越大，磁通就越大；磁通的單位叫做韋伯，一特斯拉的磁場垂直穿過一平方公尺，就是一韋伯。",
+          "start": 8.02,
+          "end": 18.476008999999998
+        },
+        {
+          "text": "用普通的銅線繞一個圈，裡面的磁通可以是任何大小，想要多少就有多少，這是我們平常的經驗。",
+          "start": 18.656008999999997,
+          "end": 27.120022999999996
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q020-flux-quantization/audio/slide_03.mp3"
+    },
+    {
+      "page": 4,
+      "kind": "slide",
+      "v1slide": 4,
+      "title": "相位像一根時鐘指針",
+      "duration": 26.88,
+      "sentences": [
+        {
+          "text": "超導體不一樣，因為整塊超導體共用一個量子狀態，我們可以把它的相位想成一根時鐘指針。",
+          "start": 0.0,
+          "end": 7.744014
+        },
+        {
+          "text": "沿著超導環一路走，指針可以慢慢轉，但走完一圈回到出發點時，指針一定要對回原來的位置，因為同一個地方只能有一個相位。",
+          "start": 7.924014,
+          "end": 18.380023
+        },
+        {
+          "text": "所以繞一圈下來，指針只能轉零圈、一圈、兩圈這樣的整數圈，不可能剛好轉一圈半。",
+          "start": 18.560023,
+          "end": 26.664037
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q020-flux-quantization/audio/slide_04.mp3"
+    },
+    {
+      "page": 5,
+      "kind": "demo",
+      "demo": "clock",
+      "title": "動畫展示：超導體的相位鐘",
+      "duration": 35.304,
+      "sentences": [
+        {
+          "text": "打開約瑟夫森接面的動畫場景，這是後面幾堂的主角，今天先只看上方的兩個圓圈，動畫叫它們相位鐘。",
+          "start": 0.0,
+          "end": 8.92
+        },
+        {
+          "text": "左邊藍色的鐘代表左邊那塊鋁的相位，右邊紅色的鐘代表右邊那塊鋁的相位，兩根指針一直一起轉。",
+          "start": 9.1,
+          "end": 17.732018
+        },
+        {
+          "text": "中間上方金色的字寫著兩個相位差三十度；把偏壓電流滑桿拉到零，相位差很快變成零度，兩塊鋁裡的電子對也不再往右流。",
+          "start": 17.912018,
+          "end": 28.320023
+        },
+        {
+          "text": "課堂上的時鐘貼紙就是借用這種鐘：一張貼紙代表繩圈上一個位置的相位。",
+          "start": 28.500023,
+          "end": 35.092041
+        }
+      ],
+      "audio": "audio/demo_clock.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#jj"
+    },
+    {
+      "page": 6,
+      "kind": "slide",
+      "v1slide": 5,
+      "title": "磁通只能一格一格",
+      "duration": 27.432,
+      "sentences": [
+        {
+          "text": "穿過環的磁通，正好決定了指針繞一圈要轉幾圈：磁通每多一個固定的量，指針就多轉一整圈。",
+          "start": 0.0,
+          "end": 8.008005
+        },
+        {
+          "text": "指針只能轉整數圈，所以環裡的磁通只能是零格、一格、兩格，像樓梯一樣一階一階，不能停在兩階中間。",
+          "start": 8.188005,
+          "end": 17.468005
+        },
+        {
+          "text": "這一格的大小就叫做磁通量子；如果外面的磁場不剛好，超導環會自己流出一圈電流，把環裡的磁通補成整數格。",
+          "start": 17.648005,
+          "end": 27.21601
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q020-flux-quantization/audio/slide_05.mp3"
+    },
+    {
+      "page": 7,
+      "kind": "demo",
+      "demo": "ring",
+      "title": "動畫展示：穿過超導環的磁通",
+      "duration": 39.408,
+      "sentences": [
+        {
+          "text": "換到超導量子干涉元件的場景：中間銀色的大圓環是超導的鋁環，左右兩個橘色小方塊是接面，之後幾堂再介紹。",
+          "start": 0.0,
+          "end": 9.832018
+        },
+        {
+          "text": "先把外加磁通的滑桿拉到零，環中央的字變成零，穿過環的青色箭頭全部消失，接面旁邊閃過的小光點也不見了。",
+          "start": 10.012018,
+          "end": 19.388027
+        },
+        {
+          "text": "再拉到零點二五，青色箭頭出現在環的中間，接面旁邊又開始閃過小光點，代表環上流動的電流。",
+          "start": 19.568027,
+          "end": 28.296032
+        },
+        {
+          "text": "這個環夾了兩個接面，所以環裡的磁通不必補成整數格，可以停在任何數值；但環的反應每隔一個磁通量子就重複一次，下一段來看。",
+          "start": 28.476032,
+          "end": 39.196032
+        }
+      ],
+      "audio": "audio/demo_ring.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#squid"
+    },
+    {
+      "page": 8,
+      "kind": "slide",
+      "v1slide": 6,
+      "title": "磁通量子 Φ₀ = h/2e",
+      "duration": 24.936,
+      "sentences": [
+        {
+          "text": "磁通量子的大小是：普朗克常數，除以兩倍的電子電荷。",
+          "start": 0.0,
+          "end": 5.776009
+        },
+        {
+          "text": "算出來大約是二點零七乘以十的負十五次方韋伯，非常非常小，而且不管用哪一種超導體做環，這一格都一樣大。",
+          "start": 5.956009,
+          "end": 15.524014
+        },
+        {
+          "text": "所以磁通量子是超導電路的天然單位；之後會學到的超導量子干涉元件，調頻率的週期就是一個磁通量子。",
+          "start": 15.704013999999999,
+          "end": 24.720022999999998
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q020-flux-quantization/audio/slide_06.mp3"
+    },
+    {
+      "page": 9,
+      "kind": "demo",
+      "demo": "period",
+      "title": "動畫展示：每一格都回到原樣",
+      "duration": 37.344,
+      "sentences": [
+        {
+          "text": "接著先把磁通歸零，盯著右下角的小圖：橫軸是磁通，以磁通量子為一格，青色的點標出現在的位置；現在磁通是零，點在曲線最高的地方。",
+          "start": 0.0,
+          "end": 11.8
+        },
+        {
+          "text": "再一點一點往上加，拉到半格，點一路掉到最低。",
+          "start": 11.98,
+          "end": 16.988005
+        },
+        {
+          "text": "再拉到整整一格，點又回到最高，接面旁的小光點也消失了，和磁通是零的時候一樣；不過青色箭頭還在，而且伸得比剛才更長，因為磁通確實多了一格。",
+          "start": 17.168005,
+          "end": 29.688005
+        },
+        {
+          "text": "多加一整格磁通，環的反應就回到原樣，所以超導電路常用磁通量子當作刻度。",
+          "start": 29.868005,
+          "end": 37.132019
+        }
+      ],
+      "audio": "audio/demo_period.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#squid"
+    },
+    {
+      "page": 10,
+      "kind": "slide",
+      "v1slide": 7,
+      "title": "為什麼分母是 2e",
+      "duration": 29.28,
+      "sentences": [
+        {
+          "text": "關鍵在分母：如果在超導體裡繞圈的是一顆一顆的電子，一格的大小應該是普朗克常數除以一個電子電荷，大了一倍。",
+          "start": 0.0,
+          "end": 9.568005
+        },
+        {
+          "text": "一九六一年，兩組科學家分別用超導的小圓筒和圓環做實驗，量到的一格只有那個的一半，也就是除以兩倍的電子電荷。",
+          "start": 9.748005,
+          "end": 19.55601
+        },
+        {
+          "text": "格子小一半，代表在超導環裡繞圈的東西帶著兩倍的電荷，這正是上一堂說的庫柏對，兩顆電子一組的直接證據。",
+          "start": 19.73601,
+          "end": 29.064015
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q020-flux-quantization/audio/slide_07.mp3"
+    },
+    {
+      "page": 11,
+      "kind": "slide",
+      "v1slide": 8,
+      "title": "一格有多小？",
+      "duration": 27.72,
+      "sentences": [
+        {
+          "text": "一格到底有多小？地球的磁場大約五十微特斯拉，比冰箱上的強力磁鐵弱得多。",
+          "start": 0.0,
+          "end": 7.7920180000000006
+        },
+        {
+          "text": "讓地磁場垂直穿過一個圈，要剛好裝進一格磁通量子，圈的面積只要大約四十一平方微米，差不多是每一邊六點四微米的小正方形。",
+          "start": 7.972018,
+          "end": 18.452018000000002
+        },
+        {
+          "text": "暫停影片算一算：一毫米裡排得下幾個這樣的小正方形？提示：一毫米等於一千微米。",
+          "start": 18.632018000000002,
+          "end": 27.504036000000003
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q020-flux-quantization/audio/slide_08.mp3"
+    },
+    {
+      "page": 12,
+      "kind": "slide",
+      "v1slide": 9,
+      "title": "繩圈與相位時鐘貼紙",
+      "duration": 27.36,
+      "sentences": [
+        {
+          "text": "實作的時候，用繩子圍成一個圈當超導環，沿著繩子等距離貼上八張時鐘貼紙。",
+          "start": 0.0,
+          "end": 7.24
+        },
+        {
+          "text": "從起點開始，每張貼紙的指針比前一張多轉一點，例如每張多轉四十五度，繞完一圈回到起點，指針剛好轉了一整圈。",
+          "start": 7.42,
+          "end": 17.54
+        },
+        {
+          "text": "再試試每張只多轉二十二點五度：走回起點時指針只轉了半圈，和起點接不起來，這就是超導環不允許的情況。",
+          "start": 17.72,
+          "end": 27.144014
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q020-flux-quantization/audio/slide_09.mp3"
+    },
+    {
+      "page": 13,
+      "kind": "slide",
+      "v1slide": 10,
+      "title": "換你改造：算出 Φ₀",
+      "duration": 25.704,
+      "sentences": [
+        {
+          "text": "下半場換你改造：拿出計算機，用普朗克常數除以兩倍的電子電荷，自己算出磁通量子。",
+          "start": 0.0,
+          "end": 8.128005
+        },
+        {
+          "text": "接著換算尺度：把磁通量子除以地磁場，算出圈的面積，再換成平方微米，感受它到底有多小。",
+          "start": 8.308005,
+          "end": 16.964014
+        },
+        {
+          "text": "最後把今天的結果畫成環形相位圖：一圈貼紙、每張的指針角度，旁邊寫上磁通是幾格。",
+          "start": 17.144014,
+          "end": 25.488028
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q020-flux-quantization/audio/slide_10.mp3"
+    },
+    {
+      "page": 14,
+      "kind": "slide",
+      "v1slide": 11,
+      "title": "兩小時的相位時鐘任務",
+      "duration": 27.432,
+      "sentences": [
+        {
+          "text": "兩小時的安排是：開場十分鐘，概念示範十五分鐘，接著四十分鐘一起做繩圈和相位時鐘貼紙，然後休息十分鐘。",
+          "start": 0.0,
+          "end": 9.784014
+        },
+        {
+          "text": "下半場三十分鐘，你自己算磁通量子、換算地磁場的面積；接著十分鐘交換角色，由你教爸爸為什麼磁通只能一格一格。",
+          "start": 9.964014,
+          "end": 20.468028
+        },
+        {
+          "text": "最後五分鐘錄音總結，替你的環形相位圖取個名字，再存一個版本。",
+          "start": 20.648028,
+          "end": 27.216033
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q020-flux-quantization/audio/slide_11.mp3"
+    },
+    {
+      "page": 15,
+      "kind": "slide",
+      "v1slide": 12,
+      "title": "最後一關：教爸爸磁通量子化",
+      "duration": 31.248,
+      "sentences": [
+        {
+          "text": "最後一關，請不看稿說出：為什麼繞超導環一圈，相位必須回到原點？環裡的磁通又為什麼只能是整數格？",
+          "start": 0.0,
+          "end": 10.096009
+        },
+        {
+          "text": "再指出一個容易錯的地方：分母是兩倍的電子電荷，不是一個電子電荷，這正是電子成對的證據。",
+          "start": 10.276009,
+          "end": 18.428027
+        },
+        {
+          "text": "今天的作品是環形相位圖，下一堂要看彈簧、單擺和電感電容電路，把力學的振動和電路的振盪對應起來；我是陳犀牛，保持好奇，我們下次見！",
+          "start": 18.608027,
+          "end": 31.032041
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q020-flux-quantization/audio/slide_12.mp3"
+    }
+  ]
+}
