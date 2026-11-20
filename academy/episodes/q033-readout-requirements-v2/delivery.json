@@ -100,5 +100,29 @@
     ],
     "handedOver": "2026-11-20 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
   },
-  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔"
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1epfQVOXunbD9Vht37u62oOD9Dr-HKMSE",
+    "folder": "量子電腦學程 Q011–Q040 動畫展示版（v2）",
+    "files": [
+      {
+        "name": "Q033 讀取三要求：讀取要快、準、不破壞（動畫展示版）.mp4",
+        "id": "1d4dW973Pga7135PdFzFi6xB7CSz-k_7k",
+        "link": "https://drive.google.com/file/d/1d4dW973Pga7135PdFzFi6xB7CSz-k_7k/view?usp=drivesdk",
+        "bytes": 97773808
+      },
+      {
+        "name": "Q033 讀取三要求（動畫展示版）簡報.pptx",
+        "id": "1bdsKoRIXT5ElBMlVfcOJ6m1z5iQCZJpT",
+        "link": "https://docs.google.com/presentation/d/1bdsKoRIXT5ElBMlVfcOJ6m1z5iQCZJpT/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true",
+        "bytes": 3407558
+      },
+      {
+        "name": "Q033 讀取三要求 教材.zip",
+        "id": "1v3Vn87_G8O51hRJPncQwEXv4D442AUdn",
+        "link": "https://drive.google.com/file/d/1v3Vn87_G8O51hRJPncQwEXv4D442AUdn/view?usp=drivesdk",
+        "bytes": 285611
+      }
+    ]
+  }
 }
