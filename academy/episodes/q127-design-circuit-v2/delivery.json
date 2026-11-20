@@ -97,8 +97,29 @@
   },
   "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
   "drive": {
-    "status": "pending",
     "folderId": "1bi-WOn7ipXPr978g1JqWu1DFCPwySyyb",
-    "note": "Drive 權杖過期（HTTP 401），檔案已排入待上傳清單，權杖更新後補傳"
+    "folderName": "量子電腦學程 Q101–Q130 動畫展示版（v2）",
+    "uploadedAt": "2026-11-18",
+    "uploadedBy": "製作代理（Claude，Drive API，上傳後比對 md5）",
+    "files": [
+      {
+        "name": "Q127 設計自己的線路：專題：設計自己的線路（動畫展示版）.mp4",
+        "id": "1qdXcwa3VcwFBATEAsJbB-m82zVnegsej",
+        "size": 86088596,
+        "link": "https://drive.google.com/file/d/1qdXcwa3VcwFBATEAsJbB-m82zVnegsej/view?usp=drivesdk"
+      },
+      {
+        "name": "Q127 設計自己的線路（動畫展示版）簡報.pptx",
+        "id": "1QSFPgDLi9V5Ppr_Ih6Awe54Zgf7_1zQ6",
+        "size": 3227021,
+        "link": "https://docs.google.com/presentation/d/1QSFPgDLi9V5Ppr_Ih6Awe54Zgf7_1zQ6/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true"
+      },
+      {
+        "name": "Q127 設計自己的線路 教材.zip",
+        "id": "1oknfIFeDtvyJALUh4FfTAnmFDU4CHj42",
+        "size": 452829,
+        "link": "https://drive.google.com/file/d/1oknfIFeDtvyJALUh4FfTAnmFDU4CHj42/view?usp=drivesdk"
+      }
+    ]
   }
 }

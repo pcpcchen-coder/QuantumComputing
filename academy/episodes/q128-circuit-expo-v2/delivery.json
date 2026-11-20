@@ -97,8 +97,29 @@
   },
   "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
   "drive": {
-    "status": "pending",
     "folderId": "1bi-WOn7ipXPr978g1JqWu1DFCPwySyyb",
-    "note": "Drive 權杖過期（HTTP 401），檔案已排入待上傳清單，權杖更新後補傳"
+    "folderName": "量子電腦學程 Q101–Q130 動畫展示版（v2）",
+    "uploadedAt": "2026-11-18",
+    "uploadedBy": "製作代理（Claude，Drive API，上傳後比對 md5）",
+    "files": [
+      {
+        "name": "Q128 量子電路展：模組發表：量子電路展（動畫展示版）.mp4",
+        "id": "16Sy89nmyk8hK-kQnx3PG7HlvQ_w7iOQC",
+        "size": 86025539,
+        "link": "https://drive.google.com/file/d/16Sy89nmyk8hK-kQnx3PG7HlvQ_w7iOQC/view?usp=drivesdk"
+      },
+      {
+        "name": "Q128 量子電路展（動畫展示版）簡報.pptx",
+        "id": "1dgVic7zl1VVmN7Cyj4TLtqmNDSiM_0J8",
+        "size": 3189099,
+        "link": "https://docs.google.com/presentation/d/1dgVic7zl1VVmN7Cyj4TLtqmNDSiM_0J8/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true"
+      },
+      {
+        "name": "Q128 量子電路展 教材.zip",
+        "id": "1GhFBfQ8GY2K3VDeDD-sohaICKMZn28id",
+        "size": 380301,
+        "link": "https://drive.google.com/file/d/1GhFBfQ8GY2K3VDeDD-sohaICKMZn28id/view?usp=drivesdk"
+      }
+    ]
   }
 }
