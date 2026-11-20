@@ -606,7 +606,13 @@
     "Q092": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q092-quantum-sensing-atomic-clock-v2",
+        "evidence": "academy/episodes/q092-quantum-sensing-atomic-clock-v2/delivery.json"
+      }
     },
     "Q093": {
       "status": "planned",

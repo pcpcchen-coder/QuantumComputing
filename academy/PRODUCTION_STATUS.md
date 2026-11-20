@@ -95,7 +95,7 @@
 | Q089 | 最佳化與機器學習：炒作與現實 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q089-optimization-ml-hype-v2` |
 | Q090 | 量子密碼：BB84 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q090-bb84-quantum-key-distribution-v2` |
 | Q091 | Shor 之後：後量子密碼 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q091-post-quantum-cryptography-v2` |
-| Q092 | 量子感測與原子鐘 | 規劃完成 | — |
+| Q092 | 量子感測與原子鐘 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q092-quantum-sensing-atomic-clock-v2` |
 | Q093 | 產業地圖與發展路線 | 規劃完成 | — |
 | Q094 | 畢業專題提案 | 規劃完成 | — |
 | Q095 | 畢業專題製作 | 規劃完成 | — |

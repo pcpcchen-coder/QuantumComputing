@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q092",
+  "version": "Q092-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-20",
+  "episodePath": "academy/episodes/q092-quantum-sensing-atomic-clock-v2",
+  "basedOn": "academy/episodes/q092-quantum-sensing-atomic-clock（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 502.4,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "clock",
+      "title": "動畫展示：全場共用一個節拍",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/peripherals.html#electronics"
+    },
+    {
+      "key": "ramsey",
+      "title": "動畫展示：箭頭在赤道上繞圈",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#bloch"
+    },
+    {
+      "key": "bringup",
+      "title": "動畫展示：校準時的拉姆齊條紋",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/peripherals.html#bringup"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.5,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q092-quantum-sensing-atomic-clock-v2-zh-TW.mp4": {
+      "bytes": 88500827,
+      "sha256": "8447a895c7ada2fc107fa6ae344195db194f3f71404f8bfd0e0aedbdf59512a5"
+    },
+    "q092-quantum-sensing-atomic-clock-v2-master.mp4": {
+      "bytes": 90418520,
+      "sha256": "72d7a5fe277b5054caa40976cdfc741996d0c00cb1a2cd805be05664c29d24f0"
+    },
+    "narration-only.mp3": {
+      "bytes": 12059284,
+      "sha256": "45348e12c5a46757556a658372bc405fdc4a66067066e449d82555f91e4c191b"
+    }
+  },
+  "package": {
+    "filename": "Q092-v2_量子電腦學程_量子感測與原子鐘_動畫展示版_2026-11-20.zip",
+    "bytes": 195439451,
+    "sha256": "d3e79f95b6ebcd344b27f00aa8431b24c122a67c9dae0e215ebc91e6c9886945",
+    "parts": [
+      {
+        "name": "Q092-v2_量子電腦學程_量子感測與原子鐘_動畫展示版_2026-11-20.zip.part01",
+        "bytes": 29360128,
+        "sha256": "bc121c22296951e801984522609582e263eb52ced197c484cbaaba6a0ee82592"
+      },
+      {
+        "name": "Q092-v2_量子電腦學程_量子感測與原子鐘_動畫展示版_2026-11-20.zip.part02",
+        "bytes": 29360128,
+        "sha256": "69ce92f5269fbe1f091ee625752c8a24413f6525e161c9635778be770d3448df"
+      },
+      {
+        "name": "Q092-v2_量子電腦學程_量子感測與原子鐘_動畫展示版_2026-11-20.zip.part03",
+        "bytes": 29360128,
+        "sha256": "6a79cd7b777c3701c5e9f34ad6a2c2380d253a39a8102d4d9bde5bd56d066bae"
+      },
+      {
+        "name": "Q092-v2_量子電腦學程_量子感測與原子鐘_動畫展示版_2026-11-20.zip.part04",
+        "bytes": 29360128,
+        "sha256": "cbe3a713a3384ec978f638f3b76793e09595e3d554043debad15010032ab3798"
+      },
+      {
+        "name": "Q092-v2_量子電腦學程_量子感測與原子鐘_動畫展示版_2026-11-20.zip.part05",
+        "bytes": 29360128,
+        "sha256": "c32de790b45ebefd2c399060d3c0e7493bdb4901f980dab1b0364892b391d56a"
+      },
+      {
+        "name": "Q092-v2_量子電腦學程_量子感測與原子鐘_動畫展示版_2026-11-20.zip.part06",
+        "bytes": 29360128,
+        "sha256": "e8b79dd78d7e5a223c19723a821e7e3b89ea856aa2d30b882242b6e73cd6c031"
+      },
+      {
+        "name": "Q092-v2_量子電腦學程_量子感測與原子鐘_動畫展示版_2026-11-20.zip.part07",
+        "bytes": 19278683,
+        "sha256": "7215eacf415902bd28ac001ba0baa353c71a5049547ba69b66f7b4b66ee8c409"
+      }
+    ],
+    "handedOver": "2026-11-20 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1ZOQEWjgkBnzg6-88LtQiSOgQeO2JG9Wx",
+    "uploadedAt": "2026-11-19",
+    "files": [
+      {
+        "name": "Q092 量子感測與原子鐘：量子感測與原子鐘（動畫展示版）.mp4",
+        "id": "1sNLkbFGKGFP07Ovj24i-yE65_VGpnWc3",
+        "bytes": 88500827,
+        "url": "https://drive.google.com/file/d/1sNLkbFGKGFP07Ovj24i-yE65_VGpnWc3/view"
+      },
+      {
+        "name": "Q092 量子感測與原子鐘（動畫展示版）簡報.pptx",
+        "id": "1duT-OcFV2y88NMpYFGLw7ne1Uxi5rvmv",
+        "bytes": 3592499,
+        "url": "https://docs.google.com/presentation/d/1duT-OcFV2y88NMpYFGLw7ne1Uxi5rvmv/edit"
+      },
+      {
+        "name": "Q092 量子感測與原子鐘 教材.zip",
+        "id": "18Z5-RJ_BCweLN-7c-E_ox0dNV5wJN_rD",
+        "bytes": 432294,
+        "url": "https://drive.google.com/file/d/18Z5-RJ_BCweLN-7c-E_ox0dNV5wJN_rD/view"
+      }
+    ]
+  }
+}
