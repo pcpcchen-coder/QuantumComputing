@@ -36,7 +36,7 @@
 | Q030 | 晶片長什麼樣子 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q030-chip-layout-v2` |
 | Q031 | 退相干：敵人在哪裡 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q031-decoherence-suspects-v2` |
 | Q032 | 模組發表：設計我的 transmon | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q032-design-my-transmon-v2` |
-| Q033 | 讀取要快、準、不破壞 | 規劃完成 | — |
+| Q033 | 讀取要快、準、不破壞 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q033-readout-requirements-v2` |
 | Q034 | 電路 QED：量子位元＋諧振腔 | 規劃完成 | — |
 | Q035 | 色散位移 ±χ | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q035-dispersive-shift-v2` |
 | Q036 | IQ 平面：把微波變成一個點 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q036-iq-plane-v2` |
