@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q038",
+  "version": "Q038-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-20",
+  "episodePath": "academy/episodes/q038-readout-chain-v2",
+  "basedOn": "academy/episodes/q038-readout-chain（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 615.744,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "input",
+      "title": "動畫展示：輸入線一層一層衰減",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#fridge"
+    },
+    {
+      "key": "power",
+      "title": "動畫展示：訊號功率的山谷",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#fridge"
+    },
+    {
+      "key": "output",
+      "title": "動畫展示：輸出線先隔離再放大",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#fridge"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.7,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q038-readout-chain-v2-zh-TW.mp4": {
+      "bytes": 95303389,
+      "sha256": "a56dde14a6257220bca1adc7a3459affb613866c513dde04d492cf5b54d0ca9d"
+    },
+    "q038-readout-chain-v2-master.mp4": {
+      "bytes": 96507172,
+      "sha256": "5a5c2c227620e989d55e80593b28a9ef6e4e854b4611545a097d1e1ef239c32b"
+    },
+    "narration-only.mp3": {
+      "bytes": 14779156,
+      "sha256": "2575a76607e38e042a7de53379cd6d47cb0f77c4306d70d44169c677963de08c"
+    }
+  },
+  "package": {
+    "filename": "Q038-v2_量子電腦學程_讀取鏈_動畫展示版_2026-11-20.zip",
+    "bytes": 211228940,
+    "sha256": "e92afe2c0f1b8cfe505dfed1be94d5b04bd591a470eb8abd850a53350c030ff3",
+    "parts": [
+      {
+        "name": "Q038-v2_量子電腦學程_讀取鏈_動畫展示版_2026-11-20.zip.part01",
+        "bytes": 29360128,
+        "sha256": "1dba5b3c6730963fd72c997c6d971d81df4bea22add98a44382b08d7dc323edd"
+      },
+      {
+        "name": "Q038-v2_量子電腦學程_讀取鏈_動畫展示版_2026-11-20.zip.part02",
+        "bytes": 29360128,
+        "sha256": "7598236e3279de5cebc154090b9bda561c387e1912a13ee739d6c827b3d02360"
+      },
+      {
+        "name": "Q038-v2_量子電腦學程_讀取鏈_動畫展示版_2026-11-20.zip.part03",
+        "bytes": 29360128,
+        "sha256": "4333e83282299f32f7e350d6d5ae9dd3b51092ec3b76f39939bf61a966dfd247"
+      },
+      {
+        "name": "Q038-v2_量子電腦學程_讀取鏈_動畫展示版_2026-11-20.zip.part04",
+        "bytes": 29360128,
+        "sha256": "14debe509bbb534a00c92f567573323b6293791096a4a28cf6b72b6e672321cc"
+      },
+      {
+        "name": "Q038-v2_量子電腦學程_讀取鏈_動畫展示版_2026-11-20.zip.part05",
+        "bytes": 29360128,
+        "sha256": "dad7d92a734d8052ef0eca4a1edd3d853779a42f1fe2d99e4d7ca6fd5941076e"
+      },
+      {
+        "name": "Q038-v2_量子電腦學程_讀取鏈_動畫展示版_2026-11-20.zip.part06",
+        "bytes": 29360128,
+        "sha256": "957c407ebdbccb613373c13be44bcf4dbd10aa46acd46ab3b5d0782d087046e8"
+      },
+      {
+        "name": "Q038-v2_量子電腦學程_讀取鏈_動畫展示版_2026-11-20.zip.part07",
+        "bytes": 29360128,
+        "sha256": "c65f5f509352324e326b6be197303df48a4ee38808b468ab577574e4ddf19870"
+      },
+      {
+        "name": "Q038-v2_量子電腦學程_讀取鏈_動畫展示版_2026-11-20.zip.part08",
+        "bytes": 5708044,
+        "sha256": "2ad270dda54c792327b68f4ab83108d8c23489c267e27f8535577f1e156c2362"
+      }
+    ],
+    "handedOver": "2026-11-20 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔"
+}

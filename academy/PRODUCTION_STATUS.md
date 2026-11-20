@@ -41,7 +41,7 @@
 | Q035 | 色散位移 ±χ | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q035-dispersive-shift-v2` |
 | Q036 | IQ 平面：把微波變成一個點 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q036-iq-plane-v2` |
 | Q037 | 單發判別與保真度 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q037-single-shot-fidelity-v2` |
-| Q038 | 讀取鏈：衰減、環行器、放大器 | 規劃完成 | — |
+| Q038 | 讀取鏈：衰減、環行器、放大器 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q038-readout-chain-v2` |
 | Q039 | 讀取設計的取捨 | 規劃完成 | — |
 | Q040 | 量子電腦 ≠ 量子晶片 | 規劃完成 | — |
 | Q041 | 為什麼要 10 mK | 規劃完成 | — |
