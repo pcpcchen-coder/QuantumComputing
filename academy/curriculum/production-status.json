@@ -756,12 +756,24 @@
     "Q122": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q122-grover-overshoot-v2",
+        "evidence": "academy/episodes/q122-grover-overshoot-v2/delivery.json"
+      }
     },
     "Q123": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q123-query-count-v2",
+        "evidence": "academy/episodes/q123-query-count-v2/delivery.json"
+      }
     },
     "Q124": {
       "status": "planned",

@@ -125,8 +125,8 @@
 | Q119 | 範例 6：Deutsch——紅綠球搖獎機 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q119-deutsch-ball-machine-v2` |
 | Q120 | 範例 7：BV——查一次讀出整串密碼 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q120-bv-one-query-v2` |
 | Q121 | 範例 8：Grover——對平均值翻轉 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q121-grover-mean-flip-v2` |
-| Q122 | Grover 三位元：轉太多會轉過頭 | 規劃完成 | — |
-| Q123 | 古典 vs 量子：要查幾次？ | 規劃完成 | — |
+| Q122 | Grover 三位元：轉太多會轉過頭 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q122-grover-overshoot-v2` |
+| Q123 | 古典 vs 量子：要查幾次？ | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q123-query-count-v2` |
 | Q124 | 用 Qiskit 重現八個範例 | 規劃完成 | — |
 | Q125 | 量測 1 次與 1000 次 | 規劃完成 | — |
 | Q126 | 加入雜訊：八個範例在真實世界會怎樣 | 規劃完成 | — |
