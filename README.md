@@ -4,7 +4,7 @@
 
 ## 筆記目錄
 
-> 所有簡報都另附 PDF 版：[`slides/pdf/`](slides/pdf/)（`JJ_Microwave_Readout_Talk.pdf`、`QC_Peripheral_Systems_Talk.pdf`、`QC_Operation_Talk.pdf`、`Ion_NeutralAtom_Talk.pdf`、`transmon.pdf`、`QC_Power_Supply.pdf`、`QFISH008_Deutsch_Algorithm.pdf`、`Basic_Quantum_Circuits.pdf`、`QPU_CPU_GPU_Hybrid.pdf`、`QPU_Cluster_Power.pdf`）。
+> 所有簡報都另附 PDF 版：[`slides/pdf/`](slides/pdf/)（`JJ_Microwave_Readout_Talk.pdf`、`QC_Peripheral_Systems_Talk.pdf`、`QC_Operation_Talk.pdf`、`Ion_NeutralAtom_Talk.pdf`、`transmon.pdf`、`QC_Power_Supply.pdf`、`QFISH008_Deutsch_Algorithm.pdf`、`Basic_Quantum_Circuits.pdf`、`QPU_CPU_GPU_Hybrid.pdf`、`QPU_Cluster_Power.pdf`、`QPU_Classical_Integrated.pdf`）。
 
 1. [約瑟夫森結（JJ）：巨觀量子波、相位差與「穿隧」的真正意義](notes/josephson-junction-wave-and-tunneling.md)
 2. [Transmon：約瑟夫森電感、電路結構與量子位元機制](notes/transmon-josephson-inductance.md)
@@ -66,6 +66,9 @@
 
 15. [CPU + GPU + QPU 算力群：配置與電力挑戰](docs/CPU-GPU-QPU算力群配置與電力挑戰.md)（承接第 14 項的討論題：五種配置模式與案例（IBM 量子資料中心、RIKEN Heron + 富岳、Jülich JUNIQ、CESGA QMIO、ORNL Pathfinder、IQCC、ABCI-Q、NVAQC、OQC × Equinix、PsiQuantum、Magne）、古典：量子功率比、八大電力挑戰（電網、備援分級、AI 負載擺盪、電能品質、匯流排磁場、接地與 EMI、冷卻水、振動）、配置藍圖與規劃檢查表、對我們供電產品的機會）
     - 簡報：[`slides/output/qpu-cluster-power.pptx`](slides/output/qpu-cluster-power.pptx)（33 頁，含講稿）；PDF：[`slides/pdf/QPU_Cluster_Power.pdf`](slides/pdf/QPU_Cluster_Power.pdf)；內容檔：[`slides/reports/qpu-cluster-power.js`](slides/reports/qpu-cluster-power.js)（`cd slides && node build_deck.js reports/qpu-cluster-power.js` 重新產生）
+
+16. [量子 × 古典協同運算：整合報告與對話紀錄](docs/量子古典協同運算整合報告與對話紀錄.md)（把第 14、15 項整合成一份，並收錄三次提問與回答的對話紀錄、對話回覆中的白話重點）
+    - 整合簡報：[`slides/output/qpu-classical-integrated.pptx`](slides/output/qpu-classical-integrated.pptx)（71 頁，含講稿；開場 → 對話紀錄 → 第一部分「哪些 QPU 工作需要 CPU＋GPU」→ 第二部分「算力群配置與電力挑戰」→ 結尾）；PDF：[`slides/pdf/QPU_Classical_Integrated.pdf`](slides/pdf/QPU_Classical_Integrated.pdf)；內容檔：[`slides/reports/qpu-classical-integrated.js`](slides/reports/qpu-classical-integrated.js)（讀入兩份原始內容檔後重組，`cd slides && node build_deck.js reports/qpu-classical-integrated.js` 重新產生）
 
 ---
 

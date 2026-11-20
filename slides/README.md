@@ -18,6 +18,8 @@
 
 《CPU + GPU + QPU 算力群：配置與電力挑戰》：`reports/qpu-cluster-power.js` → `output/qpu-cluster-power.pptx`（33 張，含講稿；PDF：`pdf/QPU_Cluster_Power.pdf`）。內容來自 `docs/CPU-GPU-QPU算力群配置與電力挑戰.md`：五種配置模式與案例、功率比、八大電力挑戰、配置藍圖、產品機會。
 
+《量子 × 古典協同運算（整合版）》：`reports/qpu-classical-integrated.js` → `output/qpu-classical-integrated.pptx`（71 張，含講稿；PDF：`pdf/QPU_Classical_Integrated.pdf`）。這個內容檔不重寫內容，而是 `require` 上面兩份內容檔後重組，再加上對話紀錄、白話重點與要注意的地方；改了原始內容檔後重新執行即可同步。
+
 ## 每集的製作流程
 
 1. **取得逐字稿**：用電腦打開 YouTube 影片，展開說明欄，點「顯示轉錄稿」，全選複製（保留時間戳記）。
