@@ -1,0 +1,399 @@
+{
+  "version": 2,
+  "opening": 60.277,
+  "scenes": [
+    {
+      "page": 1,
+      "kind": "slide",
+      "v1slide": 1,
+      "title": "彈簧、單擺與 LC 電路",
+      "duration": 30.96,
+      "sentences": [
+        {
+          "text": "歡迎回到父子科技學院的量子電腦學程，我是陳犀牛，今天是量子第二十一堂，彈簧、單擺與電感電容電路，這是依課綱製作的課前教學版，並非實際上課錄音。",
+          "start": 0.0,
+          "end": 13.096009
+        },
+        {
+          "text": "上一堂看到超導環裡的磁通只能一格一格地變；今天先離開超導，回到每個人都看過的東西：彈簧和單擺。",
+          "start": 13.276009,
+          "end": 22.388027
+        },
+        {
+          "text": "我們要把力學的振盪和電路裡的振盪對起來，因為超導量子位元的出發點，就是一個會振盪的電路。",
+          "start": 22.568027,
+          "end": 30.744036
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q021-spring-pendulum-lc/audio/slide_01.mp3"
+    },
+    {
+      "page": 2,
+      "kind": "slide",
+      "v1slide": 2,
+      "title": "三個重點",
+      "duration": 26.64,
+      "sentences": [
+        {
+          "text": "今天有三個重點：第一，彈簧和單擺都在來回振盪，能量在兩種形式之間換來換去。",
+          "start": 0.0,
+          "end": 7.864014000000001
+        },
+        {
+          "text": "第二，電感電容電路也會振盪，只是來回跑的是電荷；第三，把兩邊一格一格對起來：質量對應電感，彈簧對應電容。",
+          "start": 8.044014,
+          "end": 18.524014
+        },
+        {
+          "text": "今天的作品是一張類比對照表，左邊寫力學，右邊寫電路，每一格都要說得出理由。",
+          "start": 18.704014,
+          "end": 26.424014
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q021-spring-pendulum-lc/audio/slide_02.mp3"
+    },
+    {
+      "page": 3,
+      "kind": "slide",
+      "v1slide": 3,
+      "title": "彈簧振盪：來回換能量",
+      "duration": 25.416,
+      "sentences": [
+        {
+          "text": "先看彈簧：一個重物掛在彈簧上，往下拉一點再放手，它就上下來回振盪。",
+          "start": 0.0,
+          "end": 7.12
+        },
+        {
+          "text": "拉得越開，彈簧拉回來的力越大，力和伸開的距離成正比；重物衝過中間時跑得最快，到兩端時停一下再折返。",
+          "start": 7.3,
+          "end": 16.676009
+        },
+        {
+          "text": "能量一直在換手：在兩端，彈簧的位能最多；在中間，動能最多；兩者加起來不變。",
+          "start": 16.856009,
+          "end": 25.200023
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q021-spring-pendulum-lc/audio/slide_03.mp3"
+    },
+    {
+      "page": 4,
+      "kind": "slide",
+      "v1slide": 4,
+      "title": "單擺：小角度的簡諧運動",
+      "duration": 28.104,
+      "sentences": [
+        {
+          "text": "再看單擺：一條細繩綁一個重物，拉開一個小角度放手，它就左右擺動。",
+          "start": 0.0,
+          "end": 6.8080050000000005
+        },
+        {
+          "text": "把它拉回中間的是重力，回復力和擺角的正弦成正比；擺角很小時，正弦幾乎等於角度本身，單擺就和彈簧一樣是簡諧運動。",
+          "start": 6.988005,
+          "end": 17.492019
+        },
+        {
+          "text": "有趣的是，單擺的週期只看擺繩有多少公尺，換一個更重的重物，週期幾乎不變；一公尺的擺，來回一次大約兩秒。",
+          "start": 17.672019,
+          "end": 27.888028
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q021-spring-pendulum-lc/audio/slide_04.mp3"
+    },
+    {
+      "page": 5,
+      "kind": "demo",
+      "demo": "smallangle",
+      "title": "動畫展示：小角度時，正弦像直線",
+      "duration": 36.36,
+      "sentences": [
+        {
+          "text": "打開電感電容與約瑟夫森接面圖解的第一步：藍色直線是普通電感，電流和磁通成正比；橘色曲線是正弦，就像單擺的回復力。",
+          "start": 0.0,
+          "end": 11.056009
+        },
+        {
+          "text": "把相位滑桿往回拉到零點二，兩個圓點幾乎疊在一起，讀數是零點二和零點一九九。",
+          "start": 11.236009,
+          "end": 18.764014
+        },
+        {
+          "text": "下面的說明也寫著：相位很小時，正弦幾乎等於直線，看起來是線性的。",
+          "start": 18.944014,
+          "end": 26.112019
+        },
+        {
+          "text": "再拉到一點零，兩個圓點分開了，直線是一點零，正弦只有零點八四；擺角一大，單擺也像這樣不再跟著直線走。",
+          "start": 26.292019,
+          "end": 36.148028000000004
+        }
+      ],
+      "audio": "audio/demo_smallangle.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/lc-vs-jj.html#s1"
+    },
+    {
+      "page": 6,
+      "kind": "slide",
+      "v1slide": 5,
+      "title": "LC 電路：電荷來回流動",
+      "duration": 24.768,
+      "sentences": [
+        {
+          "text": "電路也能振盪：把一個電容和一個電感接成一圈，先把電容充好電。",
+          "start": 0.0,
+          "end": 6.376009000000001
+        },
+        {
+          "text": "電容放電，電流流過電感；電感抗拒電流的改變，電流會繼續流，把電容反過來充電，然後再流回來。",
+          "start": 6.556009,
+          "end": 15.980023
+        },
+        {
+          "text": "能量就在電容的電場和電感的磁場之間換來換去，電荷在電路裡來回流動，就像重物來回擺動。",
+          "start": 16.160023,
+          "end": 24.552041
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q021-spring-pendulum-lc/audio/slide_05.mp3"
+    },
+    {
+      "page": 7,
+      "kind": "slide",
+      "v1slide": 6,
+      "title": "類比對照表：一格一格對",
+      "duration": 25.56,
+      "sentences": [
+        {
+          "text": "現在把兩邊對起來：重物的位置對應電容上的電荷，重物的速度對應電路裡的電流。",
+          "start": 0.0,
+          "end": 7.288005
+        },
+        {
+          "text": "質量讓重物不容易加速或減速，電感讓電流不容易變快或變慢，所以質量對應電感。",
+          "start": 7.468005,
+          "end": 14.852019
+        },
+        {
+          "text": "彈簧把位移變成拉回的力，電容把電荷變成電壓，所以彈簧對應電容；不過要小心，彈簧越硬，對應的電容反而越小。",
+          "start": 15.032019,
+          "end": 25.344037
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q021-spring-pendulum-lc/audio/slide_06.mp3"
+    },
+    {
+      "page": 8,
+      "kind": "demo",
+      "demo": "linear",
+      "title": "動畫展示：線性就是加倍得加倍",
+      "duration": 36.6,
+      "sentences": [
+        {
+          "text": "換到圖解的第二步：用同一個正弦波去推電感和約瑟夫森接面，上面畫兩個週期的電流，下面是各個頻率的柱子。",
+          "start": 0.0,
+          "end": 9.544014
+        },
+        {
+          "text": "把驅動振幅調小到零點三，藍色和橘色的波形幾乎疊在一起，下面的柱子幾乎只剩最左邊那一對，也就是原本的頻率，叫做基頻。",
+          "start": 9.724014,
+          "end": 20.828028000000003
+        },
+        {
+          "text": "讀數欄寫著：藍色電感的輸入加倍，輸出峰值就變成兩倍，輸入和輸出成正比，這就叫做線性。",
+          "start": 21.008028000000003,
+          "end": 29.952042000000006
+        },
+        {
+          "text": "而且藍色的頻譜永遠只有基頻一根，線性系統不會自己產生新的頻率。",
+          "start": 30.132042000000006,
+          "end": 36.388051000000004
+        }
+      ],
+      "audio": "audio/demo_linear.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/lc-vs-jj.html#s2"
+    },
+    {
+      "page": 9,
+      "kind": "slide",
+      "v1slide": 7,
+      "title": "週期對照：跟著根號走",
+      "duration": 29.76,
+      "sentences": [
+        {
+          "text": "對照表最有用的地方是週期：彈簧的週期跟著質量的根號變，質量變成四倍，週期變成兩倍。",
+          "start": 0.0,
+          "end": 8.608005
+        },
+        {
+          "text": "電路的週期跟著電感乘電容的根號變，所以把電感或電容換大，電路都振得比較慢；彈簧換硬，重物就振得比較快。",
+          "start": 8.788005,
+          "end": 18.740023
+        },
+        {
+          "text": "如果電感是一奈亨、電容是一皮法，算出來大約每秒振盪五十億次，也就是五吉赫，正好落在超導量子位元常用的微波頻率附近。",
+          "start": 18.920023,
+          "end": 29.544037000000003
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q021-spring-pendulum-lc/audio/slide_07.mp3"
+    },
+    {
+      "page": 10,
+      "kind": "slide",
+      "v1slide": 8,
+      "title": "小振幅才成立",
+      "duration": 24.528,
+      "sentences": [
+        {
+          "text": "要注意，這張對照表有一個前提：振幅要小。",
+          "start": 0.0,
+          "end": 5.1760090000000005
+        },
+        {
+          "text": "單擺拉到很大的角度，正弦和角度不再差不多，週期會比小角度時更久；一公尺的擺從九十度放手，週期大約多出百分之十八，已經不是簡諧運動了。",
+          "start": 5.356009,
+          "end": 17.324014
+        },
+        {
+          "text": "暫停影片想一想：如果彈簧被拉過頭、變形回不去了，對照表還成立嗎？",
+          "start": 17.504013999999998,
+          "end": 24.312019
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q021-spring-pendulum-lc/audio/slide_08.mp3"
+    },
+    {
+      "page": 11,
+      "kind": "demo",
+      "demo": "overdrive",
+      "title": "動畫展示：推太大力就走樣",
+      "duration": 34.056,
+      "sentences": [
+        {
+          "text": "回到第二步，這次把驅動振幅慢慢加大到二點五。",
+          "start": 0.0,
+          "end": 5.08
+        },
+        {
+          "text": "藍色電感的波形頂端標著二點五，橘色的電流卻最高只到上面那條虛線，那是接面能通過的最大電流，波峰中間還凹了下去。",
+          "start": 5.26,
+          "end": 15.524014
+        },
+        {
+          "text": "下面第二對柱子代表三倍的頻率，橘色那根已經長到大約基頻的四成多；推得越用力，新產生的頻率就越強。",
+          "start": 15.704013999999999,
+          "end": 24.888028
+        },
+        {
+          "text": "讀數也寫著：橘色的輸入加倍，輸出峰值只變成一點零零倍；振幅一大，線性的類比就不管用了。",
+          "start": 25.068027999999998,
+          "end": 33.844037
+        }
+      ],
+      "audio": "audio/demo_overdrive.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/lc-vs-jj.html#s2"
+    },
+    {
+      "page": 12,
+      "kind": "slide",
+      "v1slide": 9,
+      "title": "實作：用碼錶量週期",
+      "duration": 24.912,
+      "sentences": [
+        {
+          "text": "實作的時候，父子一起量週期：一個人拉開重物再放手，另一個人按碼錶，數十次來回再按停。",
+          "start": 0.0,
+          "end": 8.56
+        },
+        {
+          "text": "把總時間除以十，就是一次的週期；數十次比只量一次準，因為按碼錶的反應時間被分攤掉了。",
+          "start": 8.74,
+          "end": 17.036009
+        },
+        {
+          "text": "量完彈簧再量單擺，把結果填進對照表的力學那一欄，再在電路那一欄寫下對應的東西。",
+          "start": 17.216009,
+          "end": 24.696009
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q021-spring-pendulum-lc/audio/slide_09.mp3"
+    },
+    {
+      "page": 13,
+      "kind": "slide",
+      "v1slide": 10,
+      "title": "換你改造：先預測再驗證",
+      "duration": 25.248,
+      "sentences": [
+        {
+          "text": "下半場換你改造：一次只改一件事，先寫預測，再動手量。",
+          "start": 0.0,
+          "end": 6.328005
+        },
+        {
+          "text": "彈簧那邊把重物換成四倍重，預測週期變成幾倍；單擺那邊把擺繩剪成四分之一，預測週期變成多少。",
+          "start": 6.508005,
+          "end": 15.620023
+        },
+        {
+          "text": "量完和預測比一比；再替單擺換一個更重的重物，看看週期是不是幾乎不變，記得每次都只拉開一個小角度。",
+          "start": 15.800023,
+          "end": 25.032041
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q021-spring-pendulum-lc/audio/slide_10.mp3"
+    },
+    {
+      "page": 14,
+      "kind": "slide",
+      "v1slide": 11,
+      "title": "兩小時的振盪實驗室",
+      "duration": 27.504,
+      "sentences": [
+        {
+          "text": "兩小時的安排是：開場十分鐘，概念示範十五分鐘，接著四十分鐘量彈簧和單擺、填對照表，然後休息十分鐘。",
+          "start": 0.0,
+          "end": 9.808005
+        },
+        {
+          "text": "下半場三十分鐘，你自己改質量或擺繩，先預測再驗證；接著十分鐘交換角色，由你教爸爸怎麼量、為什麼這樣對應。",
+          "start": 9.988005,
+          "end": 20.492019
+        },
+        {
+          "text": "最後五分鐘錄音總結，替你的類比對照表取個名字，再存一個版本。",
+          "start": 20.672019,
+          "end": 27.288027999999997
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q021-spring-pendulum-lc/audio/slide_11.mp3"
+    },
+    {
+      "page": 15,
+      "kind": "slide",
+      "v1slide": 12,
+      "title": "最後一關：教爸爸做類比",
+      "duration": 31.224,
+      "sentences": [
+        {
+          "text": "最後一關，請不看稿說出：為什麼質量對應電感、彈簧對應電容？週期又會跟著什麼改變？",
+          "start": 0.0,
+          "end": 9.256009
+        },
+        {
+          "text": "再指出一個要注意的地方：類比只在小振幅時成立，拉到大角度的單擺就不再是簡諧運動。",
+          "start": 9.436009,
+          "end": 17.012018
+        },
+        {
+          "text": "今天的作品是類比對照表，下一堂要看量子諧振子：電感電容電路的能階像一把間距相等的梯子，這正是它不能直接當量子位元的原因；我是陳犀牛，保持好奇，我們下次見！",
+          "start": 17.192018,
+          "end": 31.008027000000002
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q021-spring-pendulum-lc/audio/slide_12.mp3"
+    }
+  ]
+}
