@@ -61,6 +61,8 @@
     - 互動小工具：×7／×4 的位元追蹤（任選輸入 y）、量測工作暫存器後的塌縮、逆 QFT 干涉的相位箭頭相加、量測 1／1,000 次與即時連分數計算；另附相位回踢觀點、實驗用精簡版電路、閘數與 CNOT 換算表、Qiskit 程式碼（已用 Qiskit + Aer 驗證）
     - 單一 HTML 檔，離線可用（字型需連網）
 
+14. [QPU 與 CPU／GPU 協同運算需求調查](docs/QPU與CPU-GPU協同運算需求調查.md)（未來資料中心 CPU + GPU + QPU 並存時，哪些量子工作需要大量古典算力：控制層 RF／讀取／校準／中性原子重排／離子 shuttling、即時錯誤更正解碼、編譯與化學前處理、VQE／SQD／QC-AFQMC 混合迴圈、誤差緩解、Shor 前中後段拆解、驗證與硬體設計、資料中心互連與排程；依 ns 到月的時間尺度分層，附 Google Willow、Quantinuum Helios + NVQLink、IBM + 富岳 SQD、IonQ QC-AFQMC 等案例與出處）
+
 ---
 
 ## 3D 動畫 ↔ PPT 簡報對照
