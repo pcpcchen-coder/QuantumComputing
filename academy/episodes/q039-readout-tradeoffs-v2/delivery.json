@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q039",
+  "version": "Q039-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-20",
+  "episodePath": "academy/episodes/q039-readout-tradeoffs-v2",
+  "basedOn": "academy/episodes/q039-readout-tradeoffs（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 602.005,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "ratio",
+      "title": "動畫展示：線寬加倍或減半",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#dispersive"
+    },
+    {
+      "key": "fast",
+      "title": "動畫展示：想讀快一點",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#readout"
+    },
+    {
+      "key": "purcell",
+      "title": "動畫展示：模擬珀塞爾漏能",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#iq"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.6,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q039-readout-tradeoffs-v2-zh-TW.mp4": {
+      "bytes": 98873564,
+      "sha256": "b44eaf59227f173c78db35a2122b9865f602711104e8d4baa01dad4eb6f97230"
+    },
+    "q039-readout-tradeoffs-v2-master.mp4": {
+      "bytes": 100194945,
+      "sha256": "ec9e102902d1740e3fca6935393866b715caaafad96f1639e477a718a22f1680"
+    },
+    "narration-only.mp3": {
+      "bytes": 14449684,
+      "sha256": "36e77d1221d41eccdd26380318a594fe3af209d6238843c37ba07fe0c22b9598"
+    }
+  },
+  "package": {
+    "filename": "Q039-v2_量子電腦學程_讀取取捨_動畫展示版_2026-11-20.zip",
+    "bytes": 218003835,
+    "sha256": "d02fe5cb687a728eafd32e1ac4a6948a2fcd913df0565cd2792087e670761aae",
+    "parts": [
+      {
+        "name": "Q039-v2_量子電腦學程_讀取取捨_動畫展示版_2026-11-20.zip.part01",
+        "bytes": 29360128,
+        "sha256": "e426d70e46de1d2650bff16de0796880f04413e21dc299f5481fa4782f212fe1"
+      },
+      {
+        "name": "Q039-v2_量子電腦學程_讀取取捨_動畫展示版_2026-11-20.zip.part02",
+        "bytes": 29360128,
+        "sha256": "b31bb90571961231629dfb1c49943b30ce12361bcd9c60ec8d506bab330b37b4"
+      },
+      {
+        "name": "Q039-v2_量子電腦學程_讀取取捨_動畫展示版_2026-11-20.zip.part03",
+        "bytes": 29360128,
+        "sha256": "a09cf7dfdaf724f2f0da9da9022bf863e7e3a40a113d9f9b70113b5d56d7dd86"
+      },
+      {
+        "name": "Q039-v2_量子電腦學程_讀取取捨_動畫展示版_2026-11-20.zip.part04",
+        "bytes": 29360128,
+        "sha256": "898c9d8f66b5099a9a16854ca7fdf011b309378a4625327ecf6667fdbce4bd7c"
+      },
+      {
+        "name": "Q039-v2_量子電腦學程_讀取取捨_動畫展示版_2026-11-20.zip.part05",
+        "bytes": 29360128,
+        "sha256": "16ed04a4a450731186c87b12786dacdaacd4db5d496249398698ab8ec24f8a40"
+      },
+      {
+        "name": "Q039-v2_量子電腦學程_讀取取捨_動畫展示版_2026-11-20.zip.part06",
+        "bytes": 29360128,
+        "sha256": "24f105c65cbb792bb3cde7c99a12c3ca70064edea5e1d2957f7177b110460f78"
+      },
+      {
+        "name": "Q039-v2_量子電腦學程_讀取取捨_動畫展示版_2026-11-20.zip.part07",
+        "bytes": 29360128,
+        "sha256": "0af0ad0b5af8d7496f2c1a1bf256decbd25bd1a17f5a44b4cbaf91e0ae742620"
+      },
+      {
+        "name": "Q039-v2_量子電腦學程_讀取取捨_動畫展示版_2026-11-20.zip.part08",
+        "bytes": 12482939,
+        "sha256": "75e130ff20751d6c52e47f92251450d5aeaa098c019e5b205da9a8f0cece56d1"
+      }
+    ],
+    "handedOver": "2026-11-20 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1epfQVOXunbD9Vht37u62oOD9Dr-HKMSE",
+    "folder": "量子電腦學程 Q011–Q040 動畫展示版（v2）",
+    "files": [
+      {
+        "name": "Q039 讀取取捨：讀取設計的取捨（動畫展示版）.mp4",
+        "id": "1UeTj88iBItKpCeyM3npALxmv-xXrG3Ha",
+        "link": "https://drive.google.com/file/d/1UeTj88iBItKpCeyM3npALxmv-xXrG3Ha/view?usp=drivesdk",
+        "bytes": 98873564
+      },
+      {
+        "name": "Q039 讀取取捨（動畫展示版）簡報.pptx",
+        "id": "1XeTI-8fkPTLx2kV2vo_XezX3lhB6gxk6",
+        "link": "https://docs.google.com/presentation/d/1XeTI-8fkPTLx2kV2vo_XezX3lhB6gxk6/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true",
+        "bytes": 3331647
+      },
+      {
+        "name": "Q039 讀取取捨 教材.zip",
+        "id": "1RDtl1XuZYcoQF3J-53INfscRuNrSzrv8",
+        "link": "https://drive.google.com/file/d/1RDtl1XuZYcoQF3J-53INfscRuNrSzrv8/view?usp=drivesdk",
+        "bytes": 342623
+      }
+    ]
+  }
+}
