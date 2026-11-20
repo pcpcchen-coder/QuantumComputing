@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q087",
+  "version": "Q087-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-20",
+  "episodePath": "academy/episodes/q087-vqe-qaoa-v2",
+  "basedOn": "academy/episodes/q087-vqe-qaoa（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 473.109,
+  "pages": 14,
+  "demos": [
+    {
+      "key": "knob",
+      "title": "動畫展示：線路上的旋鈕",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#gates"
+    },
+    {
+      "key": "loop",
+      "title": "動畫展示：手動跑一圈變分迴圈",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#qubit"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.5,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q087-vqe-qaoa-v2-zh-TW.mp4": {
+      "bytes": 82928292,
+      "sha256": "d7dd83ce9cd6bf72a5d0ccf37fdb677d8b7fcba67cb551698e76069d0f036fff"
+    },
+    "q087-vqe-qaoa-v2-master.mp4": {
+      "bytes": 84842198,
+      "sha256": "6c8a366c653893fd650d9349b4cd77bc485d743cbd84bd66ecf02574cd75bb95"
+    },
+    "narration-only.mp3": {
+      "bytes": 11355988,
+      "sha256": "95f413b58eb8daa2bab7ee15dc0f7234453bb1c5d0ad5d33d2de2a2d3f47fcf0"
+    }
+  },
+  "package": {
+    "filename": "Q087-v2_量子電腦學程_變分演算法_動畫展示版_2026-11-20.zip",
+    "bytes": 182887641,
+    "sha256": "15104c0742d7a8614953eca941e298ebd951bacd8392d330c9c6b6a84c48a967",
+    "parts": [
+      {
+        "name": "Q087-v2_量子電腦學程_變分演算法_動畫展示版_2026-11-20.zip.part01",
+        "bytes": 29360128,
+        "sha256": "15fc924a556f1b0b3c942bfe205ec4c11f6f145ee677116469d1b5f9bcb4cca0"
+      },
+      {
+        "name": "Q087-v2_量子電腦學程_變分演算法_動畫展示版_2026-11-20.zip.part02",
+        "bytes": 29360128,
+        "sha256": "b984bbea24d589f18905eabbf942868726036c8ad31503a74b1e6adf7d9f0e0e"
+      },
+      {
+        "name": "Q087-v2_量子電腦學程_變分演算法_動畫展示版_2026-11-20.zip.part03",
+        "bytes": 29360128,
+        "sha256": "a0a0210f04fa3a6646d9a5f182333d5541565981ee439b9b42b4489f319ca278"
+      },
+      {
+        "name": "Q087-v2_量子電腦學程_變分演算法_動畫展示版_2026-11-20.zip.part04",
+        "bytes": 29360128,
+        "sha256": "7b4767ec700b1a9b414691b32b7c952d229420f600227311f7b47a6b47bbdd68"
+      },
+      {
+        "name": "Q087-v2_量子電腦學程_變分演算法_動畫展示版_2026-11-20.zip.part05",
+        "bytes": 29360128,
+        "sha256": "8371fbd300a5cb45c29261cacf2f97ec9c70c7c76ede9c5d05e0c400d4a99f7f"
+      },
+      {
+        "name": "Q087-v2_量子電腦學程_變分演算法_動畫展示版_2026-11-20.zip.part06",
+        "bytes": 29360128,
+        "sha256": "b4c258c41882c7ab6fe464ea3686c050d55adfef4c95aab3a1fb6f690c6cdd32"
+      },
+      {
+        "name": "Q087-v2_量子電腦學程_變分演算法_動畫展示版_2026-11-20.zip.part07",
+        "bytes": 6726873,
+        "sha256": "e3688d736c3290764aeea091df3d97d511c9c906a87d2f1147be0c7e7a1b9823"
+      }
+    ],
+    "handedOver": "2026-11-20 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔"
+}

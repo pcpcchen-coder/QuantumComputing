@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q088",
+  "version": "Q088-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-20",
+  "episodePath": "academy/episodes/q088-quantum-chemistry-materials-v2",
+  "basedOn": "academy/episodes/q088-quantum-chemistry-materials（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 433.77,
+  "pages": 13,
+  "demos": [
+    {
+      "key": "wall",
+      "title": "動畫展示：一般電腦撞上的那道牆",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#register"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.3,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q088-quantum-chemistry-materials-v2-zh-TW.mp4": {
+      "bytes": 78969409,
+      "sha256": "bc302eaa62b7abad75760caa4737fea12898172f4a64873d7aff506f9c547896"
+    },
+    "q088-quantum-chemistry-materials-v2-master.mp4": {
+      "bytes": 81365456,
+      "sha256": "5265b667caaf3361cc9b295f46b47ffd78f29e2fd4acf80e0a6b77dcf6709c31"
+    },
+    "narration-only.mp3": {
+      "bytes": 10411924,
+      "sha256": "7917d75234782202e042d88e12186977b2e6c83b688bc94529b079ed6961bcad"
+    }
+  },
+  "package": {
+    "filename": "Q088-v2_量子電腦學程_量子化學與材料_動畫展示版_2026-11-20.zip",
+    "bytes": 174306636,
+    "sha256": "ee525ce9c3663aad43d86be07ab9e9aa9170d86d54ba4d50e72843ff61f2b15b",
+    "parts": [
+      {
+        "name": "Q088-v2_量子電腦學程_量子化學與材料_動畫展示版_2026-11-20.zip.part01",
+        "bytes": 29360128,
+        "sha256": "038b89f530100581e68a56b84f65b470844dabc749a420c0786f5b408dd44d25"
+      },
+      {
+        "name": "Q088-v2_量子電腦學程_量子化學與材料_動畫展示版_2026-11-20.zip.part02",
+        "bytes": 29360128,
+        "sha256": "2b48c6ec5c47a57573255d49e46e787799e02e2df9a76b87c6a8a5ecf294fb81"
+      },
+      {
+        "name": "Q088-v2_量子電腦學程_量子化學與材料_動畫展示版_2026-11-20.zip.part03",
+        "bytes": 29360128,
+        "sha256": "1a1f59386b4496b7ce6336861619c88f78cf72670bd5fded435e865cd5f49f7e"
+      },
+      {
+        "name": "Q088-v2_量子電腦學程_量子化學與材料_動畫展示版_2026-11-20.zip.part04",
+        "bytes": 29360128,
+        "sha256": "08d19f8cf6fa1d07102aa19400d117fe615bad8151e19bc62d441f09cfeb2bc3"
+      },
+      {
+        "name": "Q088-v2_量子電腦學程_量子化學與材料_動畫展示版_2026-11-20.zip.part05",
+        "bytes": 29360128,
+        "sha256": "99dcae7eb65c4a9a24814d7c35e8cee7b1e296154e204a604ff736a67e01b82e"
+      },
+      {
+        "name": "Q088-v2_量子電腦學程_量子化學與材料_動畫展示版_2026-11-20.zip.part06",
+        "bytes": 27505996,
+        "sha256": "be1d93bb3d9b970269268b18ed44bb807ce3ee705d51d37e52c8bb1400328e66"
+      }
+    ],
+    "handedOver": "2026-11-20 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔"
+}
