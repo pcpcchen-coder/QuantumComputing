@@ -20,6 +20,7 @@ SRC = {
     'workflow': f'{REPO} animations/operation.html#workflow（js/operation/12_workflow.js）',
     'bell': 'https://en.wikipedia.org/wiki/Bell_state',
     'cd': 'https://en.wikipedia.org/wiki/Continuous_delivery',
+    'pauli': 'https://en.wikipedia.org/wiki/Pauli_matrices',
 }
 SOURCE_RECORDS = [
     {'id': 'curriculum', 'title': '量子電腦學程 Q095 課綱', 'publisher': REPO, 'url': SRC['curriculum'],
@@ -35,6 +36,8 @@ SOURCE_RECORDS = [
      'usedFor': '哈達瑪閘加受控反閘產生貝爾態，量測得到 00 與 11 各一半'},
     {'id': 'cd', 'title': 'Continuous delivery', 'publisher': 'Wikipedia', 'url': SRC['cd'],
      'usedFor': '持續交付：以短週期產出隨時可發布的版本（生活技能支線的一般性背景）'},
+    {'id': 'pauli', 'title': 'Pauli matrices', 'publisher': 'Wikipedia', 'url': SRC['pauli'],
+     'usedFor': 'X² = I：連做兩次翻轉閘回到原狀態（動畫場景驗證的已知特例）'},
 ]
 
 SCENES = [
@@ -65,7 +68,7 @@ SCENES = [
  ('三種作品怎麼驗證', [
   '不同的作品有不同的驗證方法：程式可以拿一個手算得出答案的小例子，看看輸出對不對。',
   '動畫場景可以用已知的特例來檢查，例如連做兩次翻轉閘，箭頭一定要回到原來的位置。',
-  '簡報或短片，就檢查每一個事實都附上來源，再請一位沒看過的人看一次，說說哪裡看不懂。'], ['curriculum']),
+  '簡報或短片，就檢查每一個事實都附上來源，再請一位沒看過的人看一次，說說哪裡看不懂。'], ['curriculum', 'pauli']),
  ('版本存檔與來源', [
   '每天存一個版本，檔名寫上日期和版本號，再加一句說明今天改了什麼，萬一明天改壞了，就能退回今天。',
   '用到別人的圖片、音樂、程式或影片時，一定要註明來源，也要確認授權允許你這樣使用。',
@@ -156,6 +159,6 @@ if __name__ == '__main__':
         source_method='Curriculum rows for Q094–Q096 and animation source (js/operation/12_workflow.js) read by the producing agent; '
                       'Bell-circuit shot statistics computed as a binomial (n=1000, p=0.5); Wikipedia used for general background only.',
         not_verified=['「把兩週拆成十幾個小任務」「每天三分鐘展示」「一個問題、一個讚美、一個建議」是本集設計的課堂做法，不是課綱原文',
-                      '可接受範圍（約 470–530 次）以理想二項分布估算；真實機器與動畫都有錯誤，零一、一零不會是零',
+                      '可接受範圍（約 468–532 次，平均 ± 兩個標準差）以理想二項分布估算；真實機器與動畫都有錯誤，零一、一零不會是零',
                       '課綱的三組 YouTube 搜尋入口本次未挑選或觀看'],
         tts_date='2026-11-18')
