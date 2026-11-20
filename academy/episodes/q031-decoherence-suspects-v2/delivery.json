@@ -95,5 +95,29 @@
     ],
     "handedOver": "2026-11-20 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
   },
-  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔"
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1epfQVOXunbD9Vht37u62oOD9Dr-HKMSE",
+    "folder": "量子電腦學程 Q011–Q040 動畫展示版（v2）",
+    "files": [
+      {
+        "name": "Q031 退相干嫌犯：退相干：敵人在哪裡（動畫展示版）.mp4",
+        "id": "1Q_NZQuHrEVCFGWIuRwTsAuZ1RPoTaNgt",
+        "link": "https://drive.google.com/file/d/1Q_NZQuHrEVCFGWIuRwTsAuZ1RPoTaNgt/view?usp=drivesdk",
+        "bytes": 92250192
+      },
+      {
+        "name": "Q031 退相干嫌犯（動畫展示版）簡報.pptx",
+        "id": "1hmW97uln7UMwsIVNyifumeyQLNMXwOEr",
+        "link": "https://docs.google.com/presentation/d/1hmW97uln7UMwsIVNyifumeyQLNMXwOEr/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true",
+        "bytes": 3839911
+      },
+      {
+        "name": "Q031 退相干嫌犯 教材.zip",
+        "id": "1kFNqRnK-o-eyV8m2ihbRwnMpjmLXiR8D",
+        "link": "https://drive.google.com/file/d/1kFNqRnK-o-eyV8m2ihbRwnMpjmLXiR8D/view?usp=drivesdk",
+        "bytes": 376442
+      }
+    ]
+  }
 }
