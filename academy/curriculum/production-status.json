@@ -690,7 +690,13 @@
     "Q116": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q116-four-bell-states-v2",
+        "evidence": "academy/episodes/q116-four-bell-states-v2/delivery.json"
+      }
     },
     "Q117": {
       "status": "planned",
