@@ -84,6 +84,25 @@
   "drive": {
     "folderId": "1ZOQEWjgkBnzg6-88LtQiSOgQeO2JG9Wx",
     "uploadedAt": "2026-11-19",
-    "files": []
+    "files": [
+      {
+        "name": "Q095 畢業專題製作：畢業專題製作（動畫展示版）.mp4",
+        "id": "1ZW2dQ9yoRBN4KwmePnBUwYtQc_iQNwYl",
+        "bytes": 78327542,
+        "url": "https://drive.google.com/file/d/1ZW2dQ9yoRBN4KwmePnBUwYtQc_iQNwYl/view"
+      },
+      {
+        "name": "Q095 畢業專題製作（動畫展示版）簡報.pptx",
+        "id": "1WCIQUAjB0R0Su4hAmyQlylq4ceu6LwO8",
+        "bytes": 2785321,
+        "url": "https://docs.google.com/presentation/d/1WCIQUAjB0R0Su4hAmyQlylq4ceu6LwO8/edit"
+      },
+      {
+        "name": "Q095 畢業專題製作 教材.zip",
+        "id": "16DVaZxj-hE3DCa1K12vBg0MWhn6ztqcH",
+        "bytes": 402576,
+        "url": "https://drive.google.com/file/d/16DVaZxj-hE3DCa1K12vBg0MWhn6ztqcH/view"
+      }
+    ]
   }
 }
