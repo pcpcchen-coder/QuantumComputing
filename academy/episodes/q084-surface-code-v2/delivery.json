@@ -95,5 +95,29 @@
     ],
     "handedOver": "2026-11-20 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
   },
-  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔"
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1ZOQEWjgkBnzg6-88LtQiSOgQeO2JG9Wx",
+    "uploadedAt": "2026-11-19",
+    "files": [
+      {
+        "name": "Q084 表面碼：表面碼（動畫展示版）.mp4",
+        "id": "1xRxjikiyyQwSewBkMEx-usHRWtM4y257",
+        "bytes": 87617454,
+        "url": "https://drive.google.com/file/d/1xRxjikiyyQwSewBkMEx-usHRWtM4y257/view"
+      },
+      {
+        "name": "Q084 表面碼（動畫展示版）簡報.pptx",
+        "id": "1WhP33n7EtSOshKsiCOpECo8rmAXx3HPV",
+        "bytes": 3658685,
+        "url": "https://docs.google.com/presentation/d/1WhP33n7EtSOshKsiCOpECo8rmAXx3HPV/edit"
+      },
+      {
+        "name": "Q084 表面碼 教材.zip",
+        "id": "1wBhHkbUp8Z7YEgILhXM7ma3DEEf-HXAP",
+        "bytes": 390040,
+        "url": "https://drive.google.com/file/d/1wBhHkbUp8Z7YEgILhXM7ma3DEEf-HXAP/view"
+      }
+    ]
+  }
 }
