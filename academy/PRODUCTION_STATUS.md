@@ -102,8 +102,8 @@
 | Q096 | 畢業 Teach-back：換孩子教爸爸 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q096-graduation-teach-back-v2` |
 | Q097 | 導覽：一顆 transmon 的十二章旅程 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q097-transmon-twelve-chapters-v2` |
 | Q098 | LC 與 JJ：線性和非線性的差別 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q098-lc-vs-jj-nonlinearity-v2` |
-| Q099 | 第 1 課：SQUID 干涉之後能做什麼 | 規劃完成 | — |
-| Q100 | 第 2 課：transmon 怎麼寫入狀態 | 規劃完成 | — |
+| Q099 | 第 1 課：SQUID 干涉之後能做什麼 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q099-squid-flux-tuning-v2` |
+| Q100 | 第 2 課：transmon 怎麼寫入狀態 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q100-transmon-write-xy-z-v2` |
 | Q101 | 第 3 課：迷思修正——Z 線不是把位元調成一樣 | 規劃完成 | — |
 | Q102 | 第 4 課：頻率配置與頻率碰撞 | 規劃完成 | — |
 | Q103 | 第 5 課：能階、共振與拉比振盪 | 規劃完成 | — |

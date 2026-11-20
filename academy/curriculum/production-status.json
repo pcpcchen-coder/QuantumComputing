@@ -683,12 +683,24 @@
     "Q099": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q099-squid-flux-tuning-v2",
+        "evidence": "academy/episodes/q099-squid-flux-tuning-v2/delivery.json"
+      }
     },
     "Q100": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q100-transmon-write-xy-z-v2",
+        "evidence": "academy/episodes/q100-transmon-write-xy-z-v2/delivery.json"
+      }
     },
     "Q101": {
       "status": "planned",
