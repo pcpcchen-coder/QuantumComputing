@@ -97,7 +97,29 @@
   },
   "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
   "drive": {
-    "status": "pending",
-    "note": "Drive 權杖過期（HTTP 401），檔案已排入待上傳清單，權杖更新後補傳"
+    "folderId": "1eZLiQdOHdFov3xfVLuJtqORZ4fjXzXXV",
+    "folderName": "量子電腦學程 Q041–Q070 動畫展示版（v2）",
+    "uploadedAt": "2026-11-18",
+    "uploadedBy": "製作代理（Claude，Drive API，上傳後比對 md5）",
+    "files": [
+      {
+        "name": "Q070 莫索閘：Mølmer–Sørensen 閘（動畫展示版）.mp4",
+        "id": "1DBaDG6XNZegEPTW5LX-oRIN6rfAixAI8",
+        "size": 86965088,
+        "link": "https://drive.google.com/file/d/1DBaDG6XNZegEPTW5LX-oRIN6rfAixAI8/view?usp=drivesdk"
+      },
+      {
+        "name": "Q070 莫索閘（動畫展示版）簡報.pptx",
+        "id": "1kV_ScKakwMbQEw96ZO_fkJQZh-2xK3K4",
+        "size": 3439734,
+        "link": "https://docs.google.com/presentation/d/1kV_ScKakwMbQEw96ZO_fkJQZh-2xK3K4/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true"
+      },
+      {
+        "name": "Q070 莫索閘 教材.zip",
+        "id": "1C1YShtNr4r-UzQdBSjdNwsJShyBiW2hc",
+        "size": 395642,
+        "link": "https://drive.google.com/file/d/1C1YShtNr4r-UzQdBSjdNwsJShyBiW2hc/view?usp=drivesdk"
+      }
+    ]
   }
 }

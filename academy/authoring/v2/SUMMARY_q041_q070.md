@@ -36,8 +36,8 @@
 | Q066 | q066-paul-trap-v2 | 502 秒 | https://drive.google.com/file/d/174sJ8xguxQX5vJhji2JxpUrbYO6ivzyf/view |
 | Q067 | q067-ion-trap-system-v2 | 512 秒 | https://drive.google.com/file/d/1Ul2_h8qSaI22OHRf7rFNz-sz7eCKlAhd/view |
 | Q068 | q068-yb-qubit-cooling-v2 | 517 秒 | https://drive.google.com/file/d/1DRQasvCL9IDp37k7Sq3jTc3I69d5IxwG/view |
-| Q069 | q069-ion-chain-modes-v2 | 506 秒 | 待上傳 |
-| Q070 | q070-molmer-sorensen-gate-v2 | 493 秒 | 待上傳 |
+| Q069 | q069-ion-chain-modes-v2 | 506 秒 | https://drive.google.com/file/d/18LJ4JvyEt9HcsY2iTYIAavb2stKpKifD/view |
+| Q070 | q070-molmer-sorensen-gate-v2 | 493 秒 | https://drive.google.com/file/d/1DBaDG6XNZegEPTW5LX-oRIN6rfAixAI8/view |
 
 ## 依查核結果重做過的課
 
