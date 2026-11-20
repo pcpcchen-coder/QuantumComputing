@@ -22,7 +22,7 @@
 | Q016 | 成果發表：我的量子小百科 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q016-quantum-glossary-v2` |
 | Q017 | 為什麼要做「人造原子」 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q017-artificial-atom-v2` |
 | Q018 | 超導：電阻消失、磁鐵懸浮 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q018-superconductivity-v2` |
-| Q019 | Cooper pair 與能隙 | 規劃完成 | — |
+| Q019 | Cooper pair 與能隙 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q019-cooper-pair-gap-v2` |
 | Q020 | 磁通量子化 Φ₀ = h/2e | 規劃完成 | — |
 | Q021 | 彈簧、單擺與 LC 電路 | 規劃完成 | — |
 | Q022 | 量子諧振子：等距的梯子 | 規劃完成 | — |

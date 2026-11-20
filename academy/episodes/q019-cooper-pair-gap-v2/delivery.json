@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q019",
+  "version": "Q019-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-20",
+  "episodePath": "academy/episodes/q019-cooper-pair-gap-v2",
+  "basedOn": "academy/episodes/q019-cooper-pair-gap（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 478.89,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "pairs",
+      "title": "動畫展示：一對一對往前走",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#cooper"
+    },
+    {
+      "key": "nogap",
+      "title": "動畫展示：沒有能隙會怎樣",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#cooper"
+    },
+    {
+      "key": "cooling",
+      "title": "動畫展示：慢慢降溫，慢慢成對",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#cooper"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.4,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q019-cooper-pair-gap-v2-zh-TW.mp4": {
+      "bytes": 99280417,
+      "sha256": "1edfd35974e397f851bf9ac2123785c86198432a86cb8bf92f64af522c2e36e3"
+    },
+    "q019-cooper-pair-gap-v2-master.mp4": {
+      "bytes": 104054250,
+      "sha256": "d911eacc1e257b022f4debbf872ff90ef3a529ae5b9a370ad9342318c5192761"
+    },
+    "narration-only.mp3": {
+      "bytes": 11494804,
+      "sha256": "e64effa087bd661cf7910d74d845a53b064446043c2b78c3884adb83cb0a6d6a"
+    }
+  },
+  "package": {
+    "filename": "Q019-v2_量子電腦學程_庫柏對與能隙_動畫展示版_2026-11-20.zip",
+    "bytes": 219158689,
+    "sha256": "9f525d22e78fe198d5da808fa05972251f805ced68bea450ed17fb68f48d9913",
+    "parts": [
+      {
+        "name": "Q019-v2_量子電腦學程_庫柏對與能隙_動畫展示版_2026-11-20.zip.part01",
+        "bytes": 29360128,
+        "sha256": "e266654796820a16176418a0f40475487c5b3a83b3d8199fdb43cf7d0ceccb34"
+      },
+      {
+        "name": "Q019-v2_量子電腦學程_庫柏對與能隙_動畫展示版_2026-11-20.zip.part02",
+        "bytes": 29360128,
+        "sha256": "7839b5d8b1c1e9799ac0b389a2491266c4114dd8f705ad27a09ada6b20506469"
+      },
+      {
+        "name": "Q019-v2_量子電腦學程_庫柏對與能隙_動畫展示版_2026-11-20.zip.part03",
+        "bytes": 29360128,
+        "sha256": "836149fa8320398651171b13a625c81360a71718f6e6abc66f4b6eaa4b6fb1d6"
+      },
+      {
+        "name": "Q019-v2_量子電腦學程_庫柏對與能隙_動畫展示版_2026-11-20.zip.part04",
+        "bytes": 29360128,
+        "sha256": "c7a260f4144a47eb2b727a9cc62147a0c88d1ab26c45130ac28fae9872610f99"
+      },
+      {
+        "name": "Q019-v2_量子電腦學程_庫柏對與能隙_動畫展示版_2026-11-20.zip.part05",
+        "bytes": 29360128,
+        "sha256": "444ec21a61f22f8dfac6b5983ffb88a11bd74c47deb79f5d4e6d409a8a2d1d8b"
+      },
+      {
+        "name": "Q019-v2_量子電腦學程_庫柏對與能隙_動畫展示版_2026-11-20.zip.part06",
+        "bytes": 29360128,
+        "sha256": "6f2924d4d52152ec2651389bbff575b9d87cfa4fece2e685d9187dc6589695b0"
+      },
+      {
+        "name": "Q019-v2_量子電腦學程_庫柏對與能隙_動畫展示版_2026-11-20.zip.part07",
+        "bytes": 29360128,
+        "sha256": "e14eae5d64bb3380889c91696083e69dafac76e74c4d083124037b229939350e"
+      },
+      {
+        "name": "Q019-v2_量子電腦學程_庫柏對與能隙_動畫展示版_2026-11-20.zip.part08",
+        "bytes": 13637793,
+        "sha256": "98d3737ca1ace8c7724706d22a8bed3a98fb02a64f1918c8065aa3bc058057d7"
+      }
+    ],
+    "handedOver": "2026-11-20 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔"
+}
