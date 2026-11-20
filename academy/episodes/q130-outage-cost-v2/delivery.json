@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q130",
+  "version": "Q130-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-18",
+  "episodePath": "academy/episodes/q130-outage-cost-v2",
+  "basedOn": "academy/episodes/q130-outage-cost（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 507.633333,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "cooldown",
+      "title": "動畫展示：重新降溫為什麼要好幾天",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/peripherals.html#cooldown"
+    },
+    {
+      "key": "outage",
+      "title": "動畫展示：三種方案的斷電時間軸",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/power1000.html#outage"
+    },
+    {
+      "key": "monitor",
+      "title": "動畫展示：電還在，冷卻水斷了",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/peripherals.html#monitor"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.5,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q130-outage-cost-v2-zh-TW.mp4": {
+      "bytes": 87988969,
+      "sha256": "d54b61d5b402beca37601570aa0346b6c1f6ce949925246c5b1eae5002f2f2fa"
+    },
+    "q130-outage-cost-v2-master.mp4": {
+      "bytes": 89754308,
+      "sha256": "93b881a615b84c0a8f54f47add7d8a8c1e30ac4cd286d278e2d09c2960bdf6b2"
+    },
+    "narration-only.mp3": {
+      "bytes": 12184852,
+      "sha256": "293eaa802e47757cbca21f220f4f95b918fac7b261cff1fdc69633a037e60dc2"
+    }
+  },
+  "package": {
+    "filename": "Q130-v2_量子電腦學程_斷電的代價_動畫展示版_2026-11-18.zip",
+    "bytes": 193964556,
+    "sha256": "1fc76c86e0223ccef1e34106caf775b793918c07b9756d5c05bec538857b395c",
+    "parts": [
+      {
+        "name": "Q130-v2_量子電腦學程_斷電的代價_動畫展示版_2026-11-18.zip.part01",
+        "bytes": 29360128,
+        "sha256": "af4328924e846615baa345c403c04535599fb6426a31871dd95cf68a5e6d5937"
+      },
+      {
+        "name": "Q130-v2_量子電腦學程_斷電的代價_動畫展示版_2026-11-18.zip.part02",
+        "bytes": 29360128,
+        "sha256": "0736a22d60e5020165207f927377bba0e95cba81dabf84b3c2c70d3aabf039e4"
+      },
+      {
+        "name": "Q130-v2_量子電腦學程_斷電的代價_動畫展示版_2026-11-18.zip.part03",
+        "bytes": 29360128,
+        "sha256": "30e1124646bdbdfe9891b190b5c1dcae352742a85aa2f17d88aced776f1dea29"
+      },
+      {
+        "name": "Q130-v2_量子電腦學程_斷電的代價_動畫展示版_2026-11-18.zip.part04",
+        "bytes": 29360128,
+        "sha256": "02a439c2d0d18103cd7f886bbf48ce7efe35377cfdd947c04c183ed9e4cf7c7f"
+      },
+      {
+        "name": "Q130-v2_量子電腦學程_斷電的代價_動畫展示版_2026-11-18.zip.part05",
+        "bytes": 29360128,
+        "sha256": "1140d527ec0ee60a55392488c9e2e5746b340e8fbe3bcc74f5fa98909aca1c50"
+      },
+      {
+        "name": "Q130-v2_量子電腦學程_斷電的代價_動畫展示版_2026-11-18.zip.part06",
+        "bytes": 29360128,
+        "sha256": "821d59e2b636eed6479ea2a46f0313626fbe53569e91df3f9cff9dfd4fe89259"
+      },
+      {
+        "name": "Q130-v2_量子電腦學程_斷電的代價_動畫展示版_2026-11-18.zip.part07",
+        "bytes": 17803788,
+        "sha256": "910b56b02ed9a68c704c42d32653783752bc4d4d2cac589e3326c5036cd917c9"
+      }
+    ],
+    "handedOver": "2026-11-18 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "status": "pending",
+    "folderId": "1bi-WOn7ipXPr978g1JqWu1DFCPwySyyb",
+    "note": "Drive 權杖過期（HTTP 401），檔案已排入待上傳清單，權杖更新後補傳"
+  }
+}
