@@ -16,6 +16,8 @@
 
 《QPU 與 CPU／GPU 協同運算》：`reports/qpu-cpu-gpu.js` → `output/qpu-cpu-gpu-hybrid.pptx`（30 張，含講稿；PDF：`pdf/QPU_CPU_GPU_Hybrid.pdf`）。內容來自 `docs/QPU與CPU-GPU協同運算需求調查.md`：時間尺度分層、控制層、即時錯誤更正、編譯與混合迴圈、Shor 專題、資料中心啟示。
 
+《CPU + GPU + QPU 算力群：配置與電力挑戰》：`reports/qpu-cluster-power.js` → `output/qpu-cluster-power.pptx`（33 張，含講稿；PDF：`pdf/QPU_Cluster_Power.pdf`）。內容來自 `docs/CPU-GPU-QPU算力群配置與電力挑戰.md`：五種配置模式與案例、功率比、八大電力挑戰、配置藍圖、產品機會。
+
 ## 每集的製作流程
 
 1. **取得逐字稿**：用電腦打開 YouTube 影片，展開說明欄，點「顯示轉錄稿」，全選複製（保留時間戳記）。

@@ -4,7 +4,7 @@
 
 ## 筆記目錄
 
-> 所有簡報都另附 PDF 版：[`slides/pdf/`](slides/pdf/)（`JJ_Microwave_Readout_Talk.pdf`、`QC_Peripheral_Systems_Talk.pdf`、`QC_Operation_Talk.pdf`、`Ion_NeutralAtom_Talk.pdf`、`transmon.pdf`、`QC_Power_Supply.pdf`、`QFISH008_Deutsch_Algorithm.pdf`、`Basic_Quantum_Circuits.pdf`、`QPU_CPU_GPU_Hybrid.pdf`）。
+> 所有簡報都另附 PDF 版：[`slides/pdf/`](slides/pdf/)（`JJ_Microwave_Readout_Talk.pdf`、`QC_Peripheral_Systems_Talk.pdf`、`QC_Operation_Talk.pdf`、`Ion_NeutralAtom_Talk.pdf`、`transmon.pdf`、`QC_Power_Supply.pdf`、`QFISH008_Deutsch_Algorithm.pdf`、`Basic_Quantum_Circuits.pdf`、`QPU_CPU_GPU_Hybrid.pdf`、`QPU_Cluster_Power.pdf`）。
 
 1. [約瑟夫森結（JJ）：巨觀量子波、相位差與「穿隧」的真正意義](notes/josephson-junction-wave-and-tunneling.md)
 2. [Transmon：約瑟夫森電感、電路結構與量子位元機制](notes/transmon-josephson-inductance.md)
@@ -63,6 +63,9 @@
 
 14. [QPU 與 CPU／GPU 協同運算需求調查](docs/QPU與CPU-GPU協同運算需求調查.md)（未來資料中心 CPU + GPU + QPU 並存時，哪些量子工作需要大量古典算力：控制層 RF／讀取／校準／中性原子重排／離子 shuttling、即時錯誤更正解碼、編譯與化學前處理、VQE／SQD／QC-AFQMC 混合迴圈、誤差緩解、Shor 前中後段拆解、驗證與硬體設計、資料中心互連與排程；依 ns 到月的時間尺度分層，附 Google Willow、Quantinuum Helios + NVQLink、IBM + 富岳 SQD、IonQ QC-AFQMC 等案例與出處）
     - 簡報：[`slides/output/qpu-cpu-gpu-hybrid.pptx`](slides/output/qpu-cpu-gpu-hybrid.pptx)（30 頁，含講稿）；PDF：[`slides/pdf/QPU_CPU_GPU_Hybrid.pdf`](slides/pdf/QPU_CPU_GPU_Hybrid.pdf)；內容檔：[`slides/reports/qpu-cpu-gpu.js`](slides/reports/qpu-cpu-gpu.js)（`cd slides && node build_deck.js reports/qpu-cpu-gpu.js` 重新產生）
+
+15. [CPU + GPU + QPU 算力群：配置與電力挑戰](docs/CPU-GPU-QPU算力群配置與電力挑戰.md)（承接第 14 項的討論題：五種配置模式與案例（IBM 量子資料中心、RIKEN Heron + 富岳、Jülich JUNIQ、CESGA QMIO、ORNL Pathfinder、IQCC、ABCI-Q、NVAQC、OQC × Equinix、PsiQuantum、Magne）、古典：量子功率比、八大電力挑戰（電網、備援分級、AI 負載擺盪、電能品質、匯流排磁場、接地與 EMI、冷卻水、振動）、配置藍圖與規劃檢查表、對我們供電產品的機會）
+    - 簡報：[`slides/output/qpu-cluster-power.pptx`](slides/output/qpu-cluster-power.pptx)（33 頁，含講稿）；PDF：[`slides/pdf/QPU_Cluster_Power.pdf`](slides/pdf/QPU_Cluster_Power.pdf)；內容檔：[`slides/reports/qpu-cluster-power.js`](slides/reports/qpu-cluster-power.js)（`cd slides && node build_deck.js reports/qpu-cluster-power.js` 重新產生）
 
 ---
 
