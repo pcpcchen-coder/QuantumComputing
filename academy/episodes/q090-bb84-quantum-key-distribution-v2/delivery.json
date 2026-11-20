@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q090",
+  "version": "Q090-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-20",
+  "episodePath": "academy/episodes/q090-bb84-quantum-key-distribution-v2",
+  "basedOn": "academy/episodes/q090-bb84-quantum-key-distribution（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 493.056,
+  "pages": 14,
+  "demos": [
+    {
+      "key": "basis",
+      "title": "動畫展示：對的基底和錯的基底",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#qubit"
+    },
+    {
+      "key": "switch",
+      "title": "動畫展示：同一個狀態，換個基底量",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#readout"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.4,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q090-bb84-quantum-key-distribution-v2-zh-TW.mp4": {
+      "bytes": 84691333,
+      "sha256": "451b60184282a2f0f5136da1744d5810c13a7252e68972bbda17e544da89fb2f"
+    },
+    "q090-bb84-quantum-key-distribution-v2-master.mp4": {
+      "bytes": 86656843,
+      "sha256": "3ffe944dfe17b23b8c7cf90d8453ccf5f517163e5d1d1d5a2c2d1e585e39d2d7"
+    },
+    "narration-only.mp3": {
+      "bytes": 11834644,
+      "sha256": "d114e6c332425b09c36d5a4bc966748c504b519a26de04a79ea429af0a99122d"
+    }
+  },
+  "package": {
+    "filename": "Q090-v2_量子電腦學程_量子密碼BB84_動畫展示版_2026-11-20.zip",
+    "bytes": 186943247,
+    "sha256": "e15b127c0ac2842507a2f92d34fd290b140e3e8cae4fdf410dc123e98f72d10a",
+    "parts": [
+      {
+        "name": "Q090-v2_量子電腦學程_量子密碼BB84_動畫展示版_2026-11-20.zip.part01",
+        "bytes": 29360128,
+        "sha256": "8fda99e6e6c3dd2fb72aa019151a13d0876791a435dcba57e36f744147ea3bd8"
+      },
+      {
+        "name": "Q090-v2_量子電腦學程_量子密碼BB84_動畫展示版_2026-11-20.zip.part02",
+        "bytes": 29360128,
+        "sha256": "8bfa99df1a23f23337737bf07cb84919f4d5261d0cb1eb2a8fd737517e10b91c"
+      },
+      {
+        "name": "Q090-v2_量子電腦學程_量子密碼BB84_動畫展示版_2026-11-20.zip.part03",
+        "bytes": 29360128,
+        "sha256": "c710dfe2cece1b9dc66fc9b627b485633d637b389ef0c262098229eadca4b990"
+      },
+      {
+        "name": "Q090-v2_量子電腦學程_量子密碼BB84_動畫展示版_2026-11-20.zip.part04",
+        "bytes": 29360128,
+        "sha256": "73683658c63a4a16ee5e0a24b854048d528cf7046563ba094c9fc0820d2e2f60"
+      },
+      {
+        "name": "Q090-v2_量子電腦學程_量子密碼BB84_動畫展示版_2026-11-20.zip.part05",
+        "bytes": 29360128,
+        "sha256": "ceb0efe0c17380f1d8bfba82cca38752d4377aeb1acde9d5e6e731c27914a7dd"
+      },
+      {
+        "name": "Q090-v2_量子電腦學程_量子密碼BB84_動畫展示版_2026-11-20.zip.part06",
+        "bytes": 29360128,
+        "sha256": "889cc7b95d756a8c7abcaca11411ceb8a40bf10971d557a657e4ef78dafa427f"
+      },
+      {
+        "name": "Q090-v2_量子電腦學程_量子密碼BB84_動畫展示版_2026-11-20.zip.part07",
+        "bytes": 10782479,
+        "sha256": "13e80b7d9f6e8f9ba9df0b1fbde7d443c10951081835b2f4f5b3f6ca628b03f3"
+      }
+    ],
+    "handedOver": "2026-11-20 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1ZOQEWjgkBnzg6-88LtQiSOgQeO2JG9Wx",
+    "uploadedAt": "2026-11-19",
+    "files": [
+      {
+        "name": "Q090 量子密碼：BB84（動畫展示版）.mp4",
+        "id": "18ABeNC5sFnuR_avPHMGR3LrQRpmrMDG8",
+        "bytes": 84691333,
+        "url": "https://drive.google.com/file/d/18ABeNC5sFnuR_avPHMGR3LrQRpmrMDG8/view"
+      },
+      {
+        "name": "Q090 量子密碼BB84（動畫展示版）簡報.pptx",
+        "id": "1wcTFjwOeuMxQsREW-rQIF3ydYk1Vm9dH",
+        "bytes": 3025542,
+        "url": "https://docs.google.com/presentation/d/1wcTFjwOeuMxQsREW-rQIF3ydYk1Vm9dH/edit"
+      },
+      {
+        "name": "Q090 量子密碼BB84 教材.zip",
+        "id": "1eoveHFPFvI8HDDvTn889kuPlO4Q1jqX2",
+        "bytes": 329328,
+        "url": "https://drive.google.com/file/d/1eoveHFPFvI8HDDvTn889kuPlO4Q1jqX2/view"
+      }
+    ]
+  }
+}

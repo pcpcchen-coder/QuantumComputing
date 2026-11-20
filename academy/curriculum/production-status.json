@@ -584,7 +584,13 @@
     "Q090": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q090-bb84-quantum-key-distribution-v2",
+        "evidence": "academy/episodes/q090-bb84-quantum-key-distribution-v2/delivery.json"
+      }
     },
     "Q091": {
       "status": "planned",
