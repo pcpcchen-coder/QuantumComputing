@@ -265,7 +265,7 @@ class Lesson:
                 meta = json.loads(Path(str(self.E / 'assets/visuals' / f'demo_{ref}.webm') + '.json').read_text())
                 hl = self.highlight_pngs(d)
                 n = len(d['sentences'])
-                pmap = [min(i, 2) for i in range(n)] if n == 3 else [0, 1, 1, 2]
+                pmap = d.get('pmap') or ([min(i, 2) for i in range(n)] if n == 3 else [0, 1, 1, 2])
                 st = [s['start'] for s in tm['sentences']] + [d_]
                 x, y, w, h = [v * 2 for v in PIC]
                 fc = [f'[1:v]fps={FPS},scale={w}:{h}:flags=lanczos,setpts=PTS-STARTPTS[rec]',
