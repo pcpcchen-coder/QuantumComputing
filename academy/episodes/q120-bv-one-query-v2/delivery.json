@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q120",
+  "version": "Q120-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-20",
+  "episodePath": "academy/episodes/q120-bv-one-query-v2",
+  "basedOn": "academy/episodes/q120-bv-one-query（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 545.866667,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "zero",
+      "title": "動畫展示：哈達瑪閘做兩次",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#bv"
+    },
+    {
+      "key": "noise",
+      "title": "動畫展示：加上雜訊的密碼",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#circuit"
+    },
+    {
+      "key": "mykey",
+      "title": "動畫展示：自訂密碼零一一",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/basic-circuits.html#bv"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.6,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q120-bv-one-query-v2-zh-TW.mp4": {
+      "bytes": 88847361,
+      "sha256": "a10bf2ec7f7a7b04673b5e1937dcb99952ed3fe8baf8269178e5a1ac0e011734"
+    },
+    "q120-bv-one-query-v2-master.mp4": {
+      "bytes": 90323250,
+      "sha256": "640375c187ff52ca84d78e982796341af5a34e4fdf25744953e3bd47fb6774ca"
+    },
+    "narration-only.mp3": {
+      "bytes": 13101844,
+      "sha256": "f6d43bece0c541f4cdd0e579378db5b429b117537dd9ba506904a166909cf9ac"
+    }
+  },
+  "package": {
+    "filename": "Q120-v2_量子電腦學程_BV一次查詢_動畫展示版_2026-11-20.zip",
+    "bytes": 196134990,
+    "sha256": "d5e3dec6f007f7ddcd6b95aa2d4f578ba32613ddfda7b6fa441ad362260cc2cc",
+    "parts": [
+      {
+        "name": "Q120-v2_量子電腦學程_BV一次查詢_動畫展示版_2026-11-20.zip.part01",
+        "bytes": 29360128,
+        "sha256": "030235a24352b14c82f1cf2d8eae52f3581f04f766f7097316f1c73621a27e1a"
+      },
+      {
+        "name": "Q120-v2_量子電腦學程_BV一次查詢_動畫展示版_2026-11-20.zip.part02",
+        "bytes": 29360128,
+        "sha256": "0d273c4b57eabad53fb5d83c18930111f0bab496f2d5c613084e3cd3f4722d62"
+      },
+      {
+        "name": "Q120-v2_量子電腦學程_BV一次查詢_動畫展示版_2026-11-20.zip.part03",
+        "bytes": 29360128,
+        "sha256": "e3111afde591bd46d141ef6ad2a52e705b617c9a5c18cdfb1f7c8deb8403342c"
+      },
+      {
+        "name": "Q120-v2_量子電腦學程_BV一次查詢_動畫展示版_2026-11-20.zip.part04",
+        "bytes": 29360128,
+        "sha256": "a817a9ee366a17fdb0421cdec5e56573fe472d30ec6702ec2682c7f435b3626c"
+      },
+      {
+        "name": "Q120-v2_量子電腦學程_BV一次查詢_動畫展示版_2026-11-20.zip.part05",
+        "bytes": 29360128,
+        "sha256": "6b58f14db16b84a798b52c269993396f3fc1e2570f81638f0bbb99f1f6f3c770"
+      },
+      {
+        "name": "Q120-v2_量子電腦學程_BV一次查詢_動畫展示版_2026-11-20.zip.part06",
+        "bytes": 29360128,
+        "sha256": "4bc2826cad59a21494fd7748ee24b5b6e8bfd3e36a2e2e1314c6724b1d85b22a"
+      },
+      {
+        "name": "Q120-v2_量子電腦學程_BV一次查詢_動畫展示版_2026-11-20.zip.part07",
+        "bytes": 19974222,
+        "sha256": "3d78402ce818f7a5eec0977b94308417f9b0c514f5a013270ad79865e667a76a"
+      }
+    ],
+    "handedOver": "2026-11-20 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1bi-WOn7ipXPr978g1JqWu1DFCPwySyyb",
+    "uploaded": "2026-11-19",
+    "files": [
+      {
+        "name": "Q120 BV一次查詢：範例 7：BV——查一次讀出整串密碼（動畫展示版）.mp4",
+        "id": "1bE7bJA9WuBGrOeuFem--_2fohaYIfJ0F",
+        "link": "https://drive.google.com/file/d/1bE7bJA9WuBGrOeuFem--_2fohaYIfJ0F/view?usp=drivesdk"
+      },
+      {
+        "name": "Q120 BV一次查詢（動畫展示版）簡報.pptx",
+        "id": "1vAFk6nCFHk2GhvKPOkC3fcDRVcVBLEGa",
+        "link": "https://docs.google.com/presentation/d/1vAFk6nCFHk2GhvKPOkC3fcDRVcVBLEGa/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true"
+      },
+      {
+        "name": "Q120 BV一次查詢 教材.zip",
+        "id": "1WwaqHDZX-B60rKb7nJM6HXHoFOGxYEQQ",
+        "link": "https://drive.google.com/file/d/1WwaqHDZX-B60rKb7nJM6HXHoFOGxYEQQ/view?usp=drivesdk"
+      }
+    ],
+    "complete": true
+  }
+}
