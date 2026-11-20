@@ -14,6 +14,8 @@
 
 《十個基礎量子電路》：`reports/basic-circuits.js` → `output/basic-circuits.pptx`（49 張，含講稿；PDF：`pdf/Basic_Quantum_Circuits.pdf`）。開頭「理論基礎」6 堂課（右上角「▶ 互動」連到 `animations/quantum-basics.html` 各課），接著疊加、干涉、Bell、GHZ、隱形傳態、Deutsch、BV、Grover、QFT、Shor 各有電路圖、振幅逐步長條或表格，右上角「▶ 動畫」按鈕開到 `animations/basic-circuits.html` 的對應範例；振幅數值都和動畫頁的模擬器一致。截圖以 `node capture_basic_circuits.js` 重新擷取到 `figures/basic_circuits/`。
 
+《QPU 與 CPU／GPU 協同運算》：`reports/qpu-cpu-gpu.js` → `output/qpu-cpu-gpu-hybrid.pptx`（30 張，含講稿；PDF：`pdf/QPU_CPU_GPU_Hybrid.pdf`）。內容來自 `docs/QPU與CPU-GPU協同運算需求調查.md`：時間尺度分層、控制層、即時錯誤更正、編譯與混合迴圈、Shor 專題、資料中心啟示。
+
 ## 每集的製作流程
 
 1. **取得逐字稿**：用電腦打開 YouTube 影片，展開說明欄，點「顯示轉錄稿」，全選複製（保留時間戳記）。
