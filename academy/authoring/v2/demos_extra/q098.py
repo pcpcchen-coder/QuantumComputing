@@ -70,7 +70,7 @@ DEMOS = _Demos([
       actions=[(0, 0.1, SCROLL('s3')), (0, 0.3, SET('ratio', 50)),
                (2, 1.0, SWEEP('ratio', 50, 20, 4.5)),
                (3, 0.4, SWEEP('ratio', 20, 50, 3.5))],
-      points=[('拋物線', '能階等間距'), ('餘弦', '越往上越擠'), ('能量比值變小', '能階冒出井口')], shot=(2, 7.0)),
+      points=[('拋物線', '能階等間距'), ('餘弦', '越往上越擠'), ('能量比值變小', '能階冒出井口')], pmap=[0, 1, 2, 2], shot=(2, 7.0)),
  dict(key='drive', after=7, page='lc', hash='s4', scene=S_S4,
       title='動畫展示：微波只打到零和一', sub='二維圖解：躍遷頻率與四次項',
       sentences=[
