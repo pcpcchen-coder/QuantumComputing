@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q035",
+  "version": "Q035-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-20",
+  "episodePath": "academy/episodes/q035-dispersive-shift-v2",
+  "basedOn": "academy/episodes/q035-dispersive-shift（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 554.24,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "shift",
+      "title": "動畫展示：兩座山跟著狀態左右移",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#dispersive"
+    },
+    {
+      "key": "blind",
+      "title": "動畫展示：只看曲線猜狀態",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#dispersive"
+    },
+    {
+      "key": "ratio",
+      "title": "動畫展示：色散位移和線寬怎麼搭",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#dispersive"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.5,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q035-dispersive-shift-v2-zh-TW.mp4": {
+      "bytes": 91462791,
+      "sha256": "c659ec678b03a2ca20debc9e32e4fb634513a44f140fb80b2bd9448478c631b9"
+    },
+    "q035-dispersive-shift-v2-master.mp4": {
+      "bytes": 92745965,
+      "sha256": "6850f376830192334b517745b51ff9cec439862b7a4a810b7338cdec7a889601"
+    },
+    "narration-only.mp3": {
+      "bytes": 13303444,
+      "sha256": "da8d5b12cd1fba1350acc2f82747dcfdbf96c68702efddbc8f846b52e117c0d2"
+    }
+  },
+  "package": {
+    "filename": "Q035-v2_量子電腦學程_色散位移_動畫展示版_2026-11-20.zip",
+    "bytes": 201906374,
+    "sha256": "52b482c010eb598aaaa2a3c985a7c88cefeecc818a0984e7e749de72018cd55f",
+    "parts": [
+      {
+        "name": "Q035-v2_量子電腦學程_色散位移_動畫展示版_2026-11-20.zip.part01",
+        "bytes": 29360128,
+        "sha256": "9c1ffe7622338751c7976adfd543837699167cc4e039ab806ddd8cc66c1a0f4b"
+      },
+      {
+        "name": "Q035-v2_量子電腦學程_色散位移_動畫展示版_2026-11-20.zip.part02",
+        "bytes": 29360128,
+        "sha256": "2caaa5fec7877efbce875a401131afebe767ee7c1718e9db1ae64addd5d2c466"
+      },
+      {
+        "name": "Q035-v2_量子電腦學程_色散位移_動畫展示版_2026-11-20.zip.part03",
+        "bytes": 29360128,
+        "sha256": "c72c1a6e52365653318d1a4428e4a6dc723c7b5f130136ecfc82fd43c3182822"
+      },
+      {
+        "name": "Q035-v2_量子電腦學程_色散位移_動畫展示版_2026-11-20.zip.part04",
+        "bytes": 29360128,
+        "sha256": "b37c055c5349995bbd0758f980759980fd2424b9ceab5e0a324c7c3cdf5308f4"
+      },
+      {
+        "name": "Q035-v2_量子電腦學程_色散位移_動畫展示版_2026-11-20.zip.part05",
+        "bytes": 29360128,
+        "sha256": "a404f7f9d8e665442581919f7aa346db1014335fee918ee9accb7f58cdf164fe"
+      },
+      {
+        "name": "Q035-v2_量子電腦學程_色散位移_動畫展示版_2026-11-20.zip.part06",
+        "bytes": 29360128,
+        "sha256": "2fa6a95627f03bbef2b1ee7888536db1611b616cf6a44eef81c955841cd38b34"
+      },
+      {
+        "name": "Q035-v2_量子電腦學程_色散位移_動畫展示版_2026-11-20.zip.part07",
+        "bytes": 25745606,
+        "sha256": "a16d929cf2f0ed9dade59a2ebae7a45d24b34d6ae1f4693393f905c962f105f4"
+      }
+    ],
+    "handedOver": "2026-11-20 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔"
+}

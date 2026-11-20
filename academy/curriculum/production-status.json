@@ -327,12 +327,24 @@
     "Q035": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q035-dispersive-shift-v2",
+        "evidence": "academy/episodes/q035-dispersive-shift-v2/delivery.json"
+      }
     },
     "Q036": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q036-iq-plane-v2",
+        "evidence": "academy/episodes/q036-iq-plane-v2/delivery.json"
+      }
     },
     "Q037": {
       "status": "planned",
