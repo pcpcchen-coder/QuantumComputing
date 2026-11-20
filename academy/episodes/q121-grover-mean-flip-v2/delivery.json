@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q121",
+  "version": "Q121-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-20",
+  "episodePath": "academy/episodes/q121-grover-mean-flip-v2",
+  "basedOn": "academy/episodes/q121-grover-mean-flip（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 503.786,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "flat",
+      "title": "動畫展示：沒有標記，擴散不動",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#grover"
+    },
+    {
+      "key": "sixteen",
+      "title": "動畫展示：十六個選項的平均面",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#grover"
+    },
+    {
+      "key": "dashed",
+      "title": "動畫展示：綠色虛線一步一步看",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/basic-circuits.html#grover"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.5,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q121-grover-mean-flip-v2-zh-TW.mp4": {
+      "bytes": 86273219,
+      "sha256": "dccee9a73aea3cab534613b795e4e55542a4dd43ad8746a9dca5db913f9e0b11"
+    },
+    "q121-grover-mean-flip-v2-master.mp4": {
+      "bytes": 88277038,
+      "sha256": "681a69e6abae5e2f07b90e9047edd997ec8e4a17eb5c4ea1bd0d773071ef556e"
+    },
+    "narration-only.mp3": {
+      "bytes": 12092692,
+      "sha256": "228e92a890283995ad0c5d84fcffd6a3a574cd1ef24aacb167dc21829fc949d9"
+    }
+  },
+  "package": {
+    "filename": "Q121-v2_量子電腦學程_對平均值翻轉_動畫展示版_2026-11-20.zip",
+    "bytes": 190564061,
+    "sha256": "915dfaf753cb2e23ba5b10de9fb8706e990742d2f53dd69f8aec4113d55271a5",
+    "parts": [
+      {
+        "name": "Q121-v2_量子電腦學程_對平均值翻轉_動畫展示版_2026-11-20.zip.part01",
+        "bytes": 29360128,
+        "sha256": "cbebace41b479d36bcad6e67e144bdcefd18fadcf37f830675f01fe47496d11f"
+      },
+      {
+        "name": "Q121-v2_量子電腦學程_對平均值翻轉_動畫展示版_2026-11-20.zip.part02",
+        "bytes": 29360128,
+        "sha256": "64e4aae8b7ec8ed724a610928fab10ab4144059a6acc564cab1b9913b75069f8"
+      },
+      {
+        "name": "Q121-v2_量子電腦學程_對平均值翻轉_動畫展示版_2026-11-20.zip.part03",
+        "bytes": 29360128,
+        "sha256": "80ff15b4c0a0805d7c3c6433e78ba9f9084a38505f0cbc3a9356c169acbb6c75"
+      },
+      {
+        "name": "Q121-v2_量子電腦學程_對平均值翻轉_動畫展示版_2026-11-20.zip.part04",
+        "bytes": 29360128,
+        "sha256": "10c952155f2a5dc50b0638652ca85f8f1f11c8153272896fa2377d7af77c0e6a"
+      },
+      {
+        "name": "Q121-v2_量子電腦學程_對平均值翻轉_動畫展示版_2026-11-20.zip.part05",
+        "bytes": 29360128,
+        "sha256": "c9900eddf62fd3e471552ee27c2b986b655034d4e7c6aaf422260d3c0c35261a"
+      },
+      {
+        "name": "Q121-v2_量子電腦學程_對平均值翻轉_動畫展示版_2026-11-20.zip.part06",
+        "bytes": 29360128,
+        "sha256": "7d552722167c2fe4d19b169decc3538d7b289dbcdfeff1829006f1339d6179ea"
+      },
+      {
+        "name": "Q121-v2_量子電腦學程_對平均值翻轉_動畫展示版_2026-11-20.zip.part07",
+        "bytes": 14403293,
+        "sha256": "ed992ef77b8bc18e92de0cc63aca2487780516ee5b3a644145be68a87c177e51"
+      }
+    ],
+    "handedOver": "2026-11-20 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1bi-WOn7ipXPr978g1JqWu1DFCPwySyyb",
+    "uploaded": "2026-11-19",
+    "files": [
+      {
+        "name": "Q121 對平均值翻轉：範例 8：Grover——對平均值翻轉（動畫展示版）.mp4",
+        "id": "1W9aD0c2k5g4liStUhKIML3u-mSSOvhjj",
+        "link": "https://drive.google.com/file/d/1W9aD0c2k5g4liStUhKIML3u-mSSOvhjj/view?usp=drivesdk"
+      },
+      {
+        "name": "Q121 對平均值翻轉（動畫展示版）簡報.pptx",
+        "id": "1ByZ99mY5ThsnTQp1UMloUP1SEK7khNh2",
+        "link": "https://docs.google.com/presentation/d/1ByZ99mY5ThsnTQp1UMloUP1SEK7khNh2/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true"
+      },
+      {
+        "name": "Q121 對平均值翻轉 教材.zip",
+        "id": "1bFfYVCbUpwNwGun152TIhf7dCEqQruhW",
+        "link": "https://drive.google.com/file/d/1bFfYVCbUpwNwGun152TIhf7dCEqQruhW/view?usp=drivesdk"
+      }
+    ],
+    "complete": true
+  }
+}

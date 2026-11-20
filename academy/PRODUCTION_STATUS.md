@@ -124,7 +124,7 @@
 | Q118 | 範例 5：隱形傳態——四種 ψ | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q118-teleport-four-psi-v2` |
 | Q119 | 範例 6：Deutsch——紅綠球搖獎機 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q119-deutsch-ball-machine-v2` |
 | Q120 | 範例 7：BV——查一次讀出整串密碼 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q120-bv-one-query-v2` |
-| Q121 | 範例 8：Grover——對平均值翻轉 | 規劃完成 | — |
+| Q121 | 範例 8：Grover——對平均值翻轉 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q121-grover-mean-flip-v2` |
 | Q122 | Grover 三位元：轉太多會轉過頭 | 規劃完成 | — |
 | Q123 | 古典 vs 量子：要查幾次？ | 規劃完成 | — |
 | Q124 | 用 Qiskit 重現八個範例 | 規劃完成 | — |
