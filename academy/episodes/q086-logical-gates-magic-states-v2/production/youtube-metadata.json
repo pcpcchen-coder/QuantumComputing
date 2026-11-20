@@ -1,0 +1,8 @@
+{
+  "title": "父子科技學院 Q086｜邏輯閘與魔術態（動畫展示版）",
+  "description": "父子科技學院 量子電腦學程 Q086｜邏輯閘與魔術態（v2・含 3D 動畫展示）\n\n這是依課綱製作的課前教學版，不是實際上課錄音。\n\n父子科技學院量子電腦學程 Q086「邏輯閘與魔術態」新版（v2）：在原本的教學投影片之間，插入本學程 3D 互動動畫的實際操作示範。\n\n這一版新增的動畫展示\n・邏輯閘的價目表（https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#surgery）\n・縫合與拆開兩塊補丁（https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#surgery）\n・魔術態工廠（https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#surgery）\n\n動畫都可以在瀏覽器直接開啟，自己動手操作。\n\n章節\n00:00 陳犀牛系列片頭\n01:00 邏輯閘與魔術態\n01:29 三步：分閘、看工廠、算成本\n01:55 兩類閘：好做的和難做的\n02:21 邏輯閘的價目表\n02:46 動畫展示：邏輯閘的價目表\n03:27 比一比：兩類閘怎麼做\n03:49 晶格手術：縫合再拆開\n04:15 動畫展示：縫合與拆開兩塊補丁\n04:54 四十五度閘：消耗一顆魔術態\n05:19 魔術態蒸餾：十五換一\n05:45 動畫展示：魔術態工廠\n06:21 工程答辯：成本花在哪裡\n06:48 換你改造：比較兩種估算\n07:11 兩小時的魔術態工廠\n07:44 最後一關：教爸爸算成本\n\n旁白：微軟 zh-TW-YunJheNeural 神經語音合成（Edge-TTS／Azure 語音服務，同一聲音同一格式）。字幕已燒入影片，開啟 CC 可能重疊。\n",
+  "privacyStatus": "private",
+  "madeForKids": null,
+  "reviewStatus": "needs-parent-review",
+  "publicationMode": "manual-user-upload"
+}

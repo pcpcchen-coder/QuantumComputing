@@ -89,7 +89,7 @@
 | Q083 | 重複碼：最簡單的錯誤更正 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q083-repetition-code-v2` |
 | Q084 | 表面碼 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q084-surface-code-v2` |
 | Q085 | 低於門檻 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q085-below-threshold-v2` |
-| Q086 | 邏輯閘與魔術態 | 規劃完成 | — |
+| Q086 | 邏輯閘與魔術態 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q086-logical-gates-magic-states-v2` |
 | Q087 | 變分演算法：VQE 與 QAOA | 規劃完成 | — |
 | Q088 | 量子化學與材料 | 規劃完成 | — |
 | Q089 | 最佳化與機器學習：炒作與現實 | 規劃完成 | — |
