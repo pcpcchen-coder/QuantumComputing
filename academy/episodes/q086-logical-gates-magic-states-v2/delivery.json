@@ -95,5 +95,29 @@
     ],
     "handedOver": "2026-11-20 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
   },
-  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔"
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1ZOQEWjgkBnzg6-88LtQiSOgQeO2JG9Wx",
+    "uploadedAt": "2026-11-19",
+    "files": [
+      {
+        "name": "Q086 邏輯閘與魔術態：邏輯閘與魔術態（動畫展示版）.mp4",
+        "id": "1lqWus4hHKKsHYRK0YnI3nqJWfKuTdA7m",
+        "bytes": 87052864,
+        "url": "https://drive.google.com/file/d/1lqWus4hHKKsHYRK0YnI3nqJWfKuTdA7m/view"
+      },
+      {
+        "name": "Q086 邏輯閘與魔術態（動畫展示版）簡報.pptx",
+        "id": "17SlWK5u1OenLVZPFivSoCqL1wvT5epDr",
+        "bytes": 3594577,
+        "url": "https://docs.google.com/presentation/d/17SlWK5u1OenLVZPFivSoCqL1wvT5epDr/edit"
+      },
+      {
+        "name": "Q086 邏輯閘與魔術態 教材.zip",
+        "id": "12WBoB2Qdt8e6IcO54IOejm7XpuzXO3SG",
+        "bytes": 400784,
+        "url": "https://drive.google.com/file/d/12WBoB2Qdt8e6IcO54IOejm7XpuzXO3SG/view"
+      }
+    ]
+  }
 }
