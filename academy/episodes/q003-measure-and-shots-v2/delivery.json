@@ -90,5 +90,31 @@
     ],
     "handedOver": "2026-11-18 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
   },
-  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔"
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1o5DDOQHr7ytHWTPcHEvdVQN6mYQHsW0z",
+    "folderName": "量子電腦學程 Q001–Q003 動畫展示版（v2）",
+    "uploadedAt": "2026-11-18",
+    "uploadedBy": "製作代理（Claude，Drive API，上傳後比對 md5）",
+    "files": [
+      {
+        "name": "Q003 一看就變 教材.zip",
+        "id": "1l6Gl-mnSd0L5TQdM89RYj_BTU-uvXFiG",
+        "size": 325870,
+        "link": "https://drive.google.com/file/d/1l6Gl-mnSd0L5TQdM89RYj_BTU-uvXFiG/view?usp=drivesdk"
+      },
+      {
+        "name": "Q003 一看就變（動畫展示版）簡報.pptx",
+        "id": "157LieJvYjqgDSiKOF6lfq_5iNknGvRMA",
+        "size": 3107285,
+        "link": "https://docs.google.com/presentation/d/157LieJvYjqgDSiKOF6lfq_5iNknGvRMA/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true"
+      },
+      {
+        "name": "Q003 一看就變：測量與重複次數（動畫展示版）.mp4",
+        "id": "19qpQQbGftxcc52l6NyaQF1w6o7t95n0W",
+        "size": 77984715,
+        "link": "https://drive.google.com/file/d/19qpQQbGftxcc52l6NyaQF1w6o7t95n0W/view?usp=drivesdk"
+      }
+    ]
+  }
 }

@@ -90,5 +90,31 @@
     ],
     "handedOver": "2026-11-18 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
   },
-  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔"
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1_4cP28v11Id8NhERnDYtpkPxw8055Y3l",
+    "folderName": "量子電腦學程 Q004–Q010 動畫展示版（v2）",
+    "uploadedAt": "2026-11-20",
+    "uploadedBy": "製作代理（Claude，Drive API，上傳後比對 md5）",
+    "files": [
+      {
+        "name": "Q008 糾纏：一對神祕骰子 教材.zip",
+        "id": "1osMoTTsQQegsTeTQt-dlZL7uf8tMaWqd",
+        "size": 355143,
+        "link": "https://drive.google.com/file/d/1osMoTTsQQegsTeTQt-dlZL7uf8tMaWqd/view?usp=drivesdk"
+      },
+      {
+        "name": "Q008 糾纏：一對神祕骰子（動畫展示版）.mp4",
+        "id": "1lWuJ09MA_WwjsWNfMM1F4QZOb6paVJ60",
+        "size": 78925561,
+        "link": "https://drive.google.com/file/d/1lWuJ09MA_WwjsWNfMM1F4QZOb6paVJ60/view?usp=drivesdk"
+      },
+      {
+        "name": "Q008 糾纏：一對神祕骰子（動畫展示版）簡報.pptx",
+        "id": "11PDW9ZhKn63_1kd8B2pd9RB71rAWbIMC",
+        "size": 3008137,
+        "link": "https://docs.google.com/presentation/d/11PDW9ZhKn63_1kd8B2pd9RB71rAWbIMC/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true"
+      }
+    ]
+  }
 }

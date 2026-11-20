@@ -95,5 +95,31 @@
     ],
     "handedOver": "2026-11-18 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
   },
-  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔"
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1_4cP28v11Id8NhERnDYtpkPxw8055Y3l",
+    "folderName": "量子電腦學程 Q004–Q010 動畫展示版（v2）",
+    "uploadedAt": "2026-11-20",
+    "uploadedBy": "製作代理（Claude，Drive API，上傳後比對 md5）",
+    "files": [
+      {
+        "name": "Q010 第一個量子程式：貝爾態 教材.zip",
+        "id": "1P0Hg4WDhZ9208WyudJISPCMLDyHlKVsf",
+        "size": 421889,
+        "link": "https://drive.google.com/file/d/1P0Hg4WDhZ9208WyudJISPCMLDyHlKVsf/view?usp=drivesdk"
+      },
+      {
+        "name": "Q010 第一個量子程式：貝爾態（動畫展示版）.mp4",
+        "id": "1hQxs9YUos8w_NeM9r-W8qFKKwhrHfq3N",
+        "size": 81752885,
+        "link": "https://drive.google.com/file/d/1hQxs9YUos8w_NeM9r-W8qFKKwhrHfq3N/view?usp=drivesdk"
+      },
+      {
+        "name": "Q010 第一個量子程式：貝爾態（動畫展示版）簡報.pptx",
+        "id": "16mV3d-wfWX-K_lXlcx-PHWBVRknR8uOR",
+        "size": 2927414,
+        "link": "https://docs.google.com/presentation/d/16mV3d-wfWX-K_lXlcx-PHWBVRknR8uOR/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true"
+      }
+    ]
+  }
 }

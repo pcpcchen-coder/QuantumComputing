@@ -100,5 +100,31 @@
     ],
     "handedOver": "2026-11-18 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
   },
-  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔"
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1o5DDOQHr7ytHWTPcHEvdVQN6mYQHsW0z",
+    "folderName": "量子電腦學程 Q001–Q003 動畫展示版（v2）",
+    "uploadedAt": "2026-11-18",
+    "uploadedBy": "製作代理（Claude，Drive API，上傳後比對 md5）",
+    "files": [
+      {
+        "name": "Q002 硬幣與箭頭 教材.zip",
+        "id": "19OLMIoLLneY7GEU9BnfvwAmzwzpDKxPF",
+        "size": 401191,
+        "link": "https://drive.google.com/file/d/19OLMIoLLneY7GEU9BnfvwAmzwzpDKxPF/view?usp=drivesdk"
+      },
+      {
+        "name": "Q002 硬幣與箭頭（動畫展示版）簡報.pptx",
+        "id": "1I8A0cZXCBheeGLRgWWJ0gaW5t3DQTJdX",
+        "size": 3346361,
+        "link": "https://docs.google.com/presentation/d/1I8A0cZXCBheeGLRgWWJ0gaW5t3DQTJdX/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true"
+      },
+      {
+        "name": "Q002 硬幣與箭頭：位元和量子位元（動畫展示版）.mp4",
+        "id": "1Igua5k63WzrRV9iZNIUWyQexxkwjP9Ev",
+        "size": 80228008,
+        "link": "https://drive.google.com/file/d/1Igua5k63WzrRV9iZNIUWyQexxkwjP9Ev/view?usp=drivesdk"
+      }
+    ]
+  }
 }

@@ -95,5 +95,31 @@
     ],
     "handedOver": "2026-11-18 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
   },
-  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔"
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1_4cP28v11Id8NhERnDYtpkPxw8055Y3l",
+    "folderName": "量子電腦學程 Q004–Q010 動畫展示版（v2）",
+    "uploadedAt": "2026-11-20",
+    "uploadedBy": "製作代理（Claude，Drive API，上傳後比對 md5）",
+    "files": [
+      {
+        "name": "Q005 相位：看不見卻最重要 教材.zip",
+        "id": "1iYYDjxjK4m0A-HtlWLkCNAzQeAbxv0i3",
+        "size": 324409,
+        "link": "https://drive.google.com/file/d/1iYYDjxjK4m0A-HtlWLkCNAzQeAbxv0i3/view?usp=drivesdk"
+      },
+      {
+        "name": "Q005 相位：看不見卻最重要（動畫展示版）.mp4",
+        "id": "1b2WVQfoM6ZInHFJBhx_fqE7-zKBiqdGB",
+        "size": 80295664,
+        "link": "https://drive.google.com/file/d/1b2WVQfoM6ZInHFJBhx_fqE7-zKBiqdGB/view?usp=drivesdk"
+      },
+      {
+        "name": "Q005 相位：看不見卻最重要（動畫展示版）簡報.pptx",
+        "id": "1mTQ7xGqEEYpaBCe8-mbD0R7iqfIZk5qQ",
+        "size": 3117683,
+        "link": "https://docs.google.com/presentation/d/1mTQ7xGqEEYpaBCe8-mbD0R7iqfIZk5qQ/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true"
+      }
+    ]
+  }
 }

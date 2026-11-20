@@ -90,5 +90,31 @@
     ],
     "handedOver": "2026-11-18 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
   },
-  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔"
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1_4cP28v11Id8NhERnDYtpkPxw8055Y3l",
+    "folderName": "量子電腦學程 Q004–Q010 動畫展示版（v2）",
+    "uploadedAt": "2026-11-20",
+    "uploadedBy": "製作代理（Claude，Drive API，上傳後比對 md5）",
+    "files": [
+      {
+        "name": "Q009 量子線路像樂譜 教材.zip",
+        "id": "1YfDh_i0Vhk9-VmWPDafhlEilzYd8N48e",
+        "size": 319144,
+        "link": "https://drive.google.com/file/d/1YfDh_i0Vhk9-VmWPDafhlEilzYd8N48e/view?usp=drivesdk"
+      },
+      {
+        "name": "Q009 量子線路像樂譜（動畫展示版）.mp4",
+        "id": "1d0FTMhn7PE90M4_OZpXYyAQl1JCu_yIZ",
+        "size": 78851101,
+        "link": "https://drive.google.com/file/d/1d0FTMhn7PE90M4_OZpXYyAQl1JCu_yIZ/view?usp=drivesdk"
+      },
+      {
+        "name": "Q009 量子線路像樂譜（動畫展示版）簡報.pptx",
+        "id": "1xcxLqdIO451u3hz5mLb7swagkDmt9uYb",
+        "size": 3010406,
+        "link": "https://docs.google.com/presentation/d/1xcxLqdIO451u3hz5mLb7swagkDmt9uYb/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true"
+      }
+    ]
+  }
 }
