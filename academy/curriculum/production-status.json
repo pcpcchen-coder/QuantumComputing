@@ -388,7 +388,13 @@
     "Q040": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q040-whole-machine-v2",
+        "evidence": "academy/episodes/q040-whole-machine-v2/delivery.json"
+      }
     },
     "Q041": {
       "status": "planned",
