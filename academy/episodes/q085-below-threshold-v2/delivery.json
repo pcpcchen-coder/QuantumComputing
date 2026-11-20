@@ -95,5 +95,29 @@
     ],
     "handedOver": "2026-11-20 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
   },
-  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔"
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1ZOQEWjgkBnzg6-88LtQiSOgQeO2JG9Wx",
+    "uploadedAt": "2026-11-19",
+    "files": [
+      {
+        "name": "Q085 低於門檻：低於門檻（動畫展示版）.mp4",
+        "id": "15LOvQqM06kwOFtznXi8p1vUMuJibVSP9",
+        "bytes": 87467268,
+        "url": "https://drive.google.com/file/d/15LOvQqM06kwOFtznXi8p1vUMuJibVSP9/view"
+      },
+      {
+        "name": "Q085 低於門檻（動畫展示版）簡報.pptx",
+        "id": "1I9rLndRXksqT1p_zhBLm-PPF2RnlnFuk",
+        "bytes": 3592358,
+        "url": "https://docs.google.com/presentation/d/1I9rLndRXksqT1p_zhBLm-PPF2RnlnFuk/edit"
+      },
+      {
+        "name": "Q085 低於門檻 教材.zip",
+        "id": "1JaVQHGpVSLY51LZuhWK8kpiUVN6xUBw7",
+        "bytes": 330160,
+        "url": "https://drive.google.com/file/d/1JaVQHGpVSLY51LZuhWK8kpiUVN6xUBw7/view"
+      }
+    ]
+  }
 }
