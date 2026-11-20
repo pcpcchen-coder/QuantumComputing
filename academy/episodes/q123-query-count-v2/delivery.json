@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q123",
+  "version": "Q123-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-20",
+  "episodePath": "academy/episodes/q123-query-count-v2",
+  "basedOn": "academy/episodes/q123-query-count（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 519.616,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "five",
+      "title": "動畫展示：為什麼古典要問五次",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#interference"
+    },
+    {
+      "key": "bvask",
+      "title": "動畫展示：古典一位一位問",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#bv"
+    },
+    {
+      "key": "scale",
+      "title": "動畫展示：抽屜變多，次數差多少",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#grover"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.5,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q123-query-count-v2-zh-TW.mp4": {
+      "bytes": 88707490,
+      "sha256": "fdc3ff15dde3b9461560708324897394fe24cb3d6013dd9e3fdb354217a52f6d"
+    },
+    "q123-query-count-v2-master.mp4": {
+      "bytes": 90305684,
+      "sha256": "12834c15b8eb70d8daa51873b7525295e19c97a9c4263d4c790846e556a373ad"
+    },
+    "narration-only.mp3": {
+      "bytes": 12472276,
+      "sha256": "9007e91c3b7bffcf676949d1bf52bf700854583ba528f25bf83506a56bf82e9e"
+    }
+  },
+  "package": {
+    "filename": "Q123-v2_量子電腦學程_查詢次數比較表_動畫展示版_2026-11-20.zip",
+    "bytes": 195632905,
+    "sha256": "ecf60e5ea74ab22b0f3b628d9ab41f9f2cf1485b5082240acf473f29ec8317e0",
+    "parts": [
+      {
+        "name": "Q123-v2_量子電腦學程_查詢次數比較表_動畫展示版_2026-11-20.zip.part01",
+        "bytes": 29360128,
+        "sha256": "04ec96f2d1c3d10dca21026c652b3809108be51b4638729e2e4d0fb07c2fb908"
+      },
+      {
+        "name": "Q123-v2_量子電腦學程_查詢次數比較表_動畫展示版_2026-11-20.zip.part02",
+        "bytes": 29360128,
+        "sha256": "099b71e14bf2fd9055417d1e754473268c95fd6c3ef03c2370ac0a0fb2103745"
+      },
+      {
+        "name": "Q123-v2_量子電腦學程_查詢次數比較表_動畫展示版_2026-11-20.zip.part03",
+        "bytes": 29360128,
+        "sha256": "8a9b9c4d4e4c8779ee5cf66f02f40580a57fe7740a9d1005093e94d326d9d29c"
+      },
+      {
+        "name": "Q123-v2_量子電腦學程_查詢次數比較表_動畫展示版_2026-11-20.zip.part04",
+        "bytes": 29360128,
+        "sha256": "030f1dc9909b52193dbe1bccea69be127f6304fb8ce251e3ad37b0358bb690b9"
+      },
+      {
+        "name": "Q123-v2_量子電腦學程_查詢次數比較表_動畫展示版_2026-11-20.zip.part05",
+        "bytes": 29360128,
+        "sha256": "18036038abad7d420d66362a551793b667499ef1fb2cfa259f629a687e611c59"
+      },
+      {
+        "name": "Q123-v2_量子電腦學程_查詢次數比較表_動畫展示版_2026-11-20.zip.part06",
+        "bytes": 29360128,
+        "sha256": "f889b11c8e03b8d08c0a8746c8966d714248ce40874462cdb4544e4249d33a2f"
+      },
+      {
+        "name": "Q123-v2_量子電腦學程_查詢次數比較表_動畫展示版_2026-11-20.zip.part07",
+        "bytes": 19472137,
+        "sha256": "47d7a525ae26dde031174c4590d6b2297e5e49b68f5c1833c6d5241d6f781cc4"
+      }
+    ],
+    "handedOver": "2026-11-20 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1bi-WOn7ipXPr978g1JqWu1DFCPwySyyb",
+    "uploaded": "2026-11-19",
+    "files": [
+      {
+        "name": "Q123 查詢次數比較表：古典 vs 量子：要查幾次？（動畫展示版）.mp4",
+        "id": "1b4DcnpmnRyOnirvivX4vEYWK38ilZJss",
+        "link": "https://drive.google.com/file/d/1b4DcnpmnRyOnirvivX4vEYWK38ilZJss/view?usp=drivesdk"
+      },
+      {
+        "name": "Q123 查詢次數比較表（動畫展示版）簡報.pptx",
+        "id": "14ssMrlmW-nt8InnjVH2NVrdGfirPoz0R",
+        "link": "https://docs.google.com/presentation/d/14ssMrlmW-nt8InnjVH2NVrdGfirPoz0R/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true"
+      },
+      {
+        "name": "Q123 查詢次數比較表 教材.zip",
+        "id": "1PPjUwLRC4ZqmnqBfOz-vSmwAuBVYQ_VL",
+        "link": "https://drive.google.com/file/d/1PPjUwLRC4ZqmnqBfOz-vSmwAuBVYQ_VL/view?usp=drivesdk"
+      }
+    ],
+    "complete": true
+  }
+}

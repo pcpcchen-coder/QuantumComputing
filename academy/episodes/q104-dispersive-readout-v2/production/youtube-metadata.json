@@ -1,0 +1,8 @@
+{
+  "title": "父子科技學院 Q104｜色散讀取與重設（動畫展示版）",
+  "description": "父子科技學院 量子電腦學程 Q104｜色散讀取與重設（v2・含 3D 動畫展示）\n\n這是依課綱製作的課前教學版，不是實際上課錄音。\n\n父子科技學院量子電腦學程 Q104「色散讀取與重設」新版（v2）：在原本的教學投影片之間，插入本學程 3D 互動動畫的實際操作示範。\n\n這一版新增的動畫展示\n・位元改變共振腔的音高（https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#dispersive）\n・兩團雲和判別線（https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#iq）\n・讀完之後怎麼歸零（https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#readout）\n\n動畫都可以在瀏覽器直接開啟，自己動手操作。\n\n章節\n00:00 陳犀牛系列片頭\n01:00 色散讀取與重設\n01:35 八關闖關：讀取的八個步驟\n02:00 第一關：為什麼不直接量\n02:28 第二、三關：色散偏移與探測\n02:56 動畫展示：位元改變共振腔的音高\n03:40 第四關：一整條讀取鏈\n04:10 第五關：積分與判別\n04:41 動畫展示：兩團雲和判別線\n05:25 第六關：量完狀態就定了\n05:53 三個容易錯的地方\n06:21 闖關分工：挑戰者和關主\n06:48 第七關：讀完怎麼歸零\n07:25 動畫展示：讀完之後怎麼歸零\n08:07 兩小時的讀取闖關\n08:35 最後一關：教爸爸讀取\n\n旁白：微軟 zh-TW-YunJheNeural 神經語音合成（Edge-TTS／Azure 語音服務，同一聲音同一格式）。字幕已燒入影片，開啟 CC 可能重疊。\n",
+  "privacyStatus": "private",
+  "madeForKids": null,
+  "reviewStatus": "needs-parent-review",
+  "publicationMode": "manual-user-upload"
+}

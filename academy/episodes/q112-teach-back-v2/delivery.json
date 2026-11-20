@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q112",
+  "version": "Q112-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-19",
+  "episodePath": "academy/episodes/q112-teach-back-v2",
+  "basedOn": "academy/episodes/q112-teach-back（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 506.09,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "map",
+      "title": "動畫展示：先找到你的那一章",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#chip"
+    },
+    {
+      "key": "write",
+      "title": "動畫展示：寫入靠的是驅動線",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#chip"
+    },
+    {
+      "key": "whatif",
+      "title": "動畫展示：如果電容改掉會怎樣？",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#capacitor"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.5,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q112-teach-back-v2-zh-TW.mp4": {
+      "bytes": 90269806,
+      "sha256": "2ba0021d80cf2e3cdab5459026f2e15bbd88cb453b71964cbe3d426c4c895c4b"
+    },
+    "q112-teach-back-v2-master.mp4": {
+      "bytes": 92847861,
+      "sha256": "95c45c1613c64f44e17bca1e3091018436cd0636c6df482a5450b8ffb4b697ab"
+    },
+    "narration-only.mp3": {
+      "bytes": 12147988,
+      "sha256": "707604332fc3db2879dcdf8b12b3c2f62d2c6009e3a6c8daeed957d36bec7b07"
+    }
+  },
+  "package": {
+    "filename": "Q112-v2_量子電腦學程_換你當老師_動畫展示版_2026-11-19.zip",
+    "bytes": 199427063,
+    "sha256": "79e01f45fef339d5f51ccd439c34648bd4135a2de64d380c73138d92adfec68a",
+    "parts": [
+      {
+        "name": "Q112-v2_量子電腦學程_換你當老師_動畫展示版_2026-11-19.zip.part01",
+        "bytes": 29360128,
+        "sha256": "58cd90eb74a86d5638ef4e2a2da93fe958bcb83f4e9c27af9005f5f36a8d3618"
+      },
+      {
+        "name": "Q112-v2_量子電腦學程_換你當老師_動畫展示版_2026-11-19.zip.part02",
+        "bytes": 29360128,
+        "sha256": "2351b601326afe85690cdaeb1401d0e9d185e98f8dd1cd1c68e7769a3f433792"
+      },
+      {
+        "name": "Q112-v2_量子電腦學程_換你當老師_動畫展示版_2026-11-19.zip.part03",
+        "bytes": 29360128,
+        "sha256": "779f87838fe7d210569f9c3030a928ea59818b529a9eab651e1a588ab498d181"
+      },
+      {
+        "name": "Q112-v2_量子電腦學程_換你當老師_動畫展示版_2026-11-19.zip.part04",
+        "bytes": 29360128,
+        "sha256": "ebaaf747f66711b96960424c836a369d20b84d4acd57670f8a59fce838dd63d6"
+      },
+      {
+        "name": "Q112-v2_量子電腦學程_換你當老師_動畫展示版_2026-11-19.zip.part05",
+        "bytes": 29360128,
+        "sha256": "0cd359c982b6bc795e8769717d0a6e558fc3fb4f37472ae3f060466ca1335890"
+      },
+      {
+        "name": "Q112-v2_量子電腦學程_換你當老師_動畫展示版_2026-11-19.zip.part06",
+        "bytes": 29360128,
+        "sha256": "a4a3fbe4e9f1fcab8f6492f3d5f908844ba2282c71df57213dc9d7501681b2cf"
+      },
+      {
+        "name": "Q112-v2_量子電腦學程_換你當老師_動畫展示版_2026-11-19.zip.part07",
+        "bytes": 23266295,
+        "sha256": "fb2e24a69d6cc5677b5675832fa74194ffaefcbedece41f84e9d6d1c1e8d7fdf"
+      }
+    ],
+    "handedOver": "2026-11-19 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1bi-WOn7ipXPr978g1JqWu1DFCPwySyyb",
+    "uploaded": "2026-11-19",
+    "files": [
+      {
+        "name": "Q112 換你當老師：模組發表：換你當老師（動畫展示版）.mp4",
+        "id": "1Qqtr1Y18eAcEqSkR6nAAtqHCTKXvfnqo",
+        "link": "https://drive.google.com/file/d/1Qqtr1Y18eAcEqSkR6nAAtqHCTKXvfnqo/view?usp=drivesdk"
+      },
+      {
+        "name": "Q112 換你當老師（動畫展示版）簡報.pptx",
+        "id": "1ctnMOv8ivBuOkOVJr9pcbI7nufdAS3Py",
+        "link": "https://docs.google.com/presentation/d/1ctnMOv8ivBuOkOVJr9pcbI7nufdAS3Py/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true"
+      },
+      {
+        "name": "Q112 換你當老師 教材.zip",
+        "id": "1GQSJJXupct-JctOaVTXBh9X7cTP8YdbP",
+        "link": "https://drive.google.com/file/d/1GQSJJXupct-JctOaVTXBh9X7cTP8YdbP/view?usp=drivesdk"
+      }
+    ],
+    "complete": true
+  }
+}

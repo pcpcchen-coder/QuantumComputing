@@ -1,0 +1,126 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q108",
+  "version": "Q108-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-19",
+  "episodePath": "academy/episodes/q108-shor-period-v2",
+  "basedOn": "academy/episodes/q108-shor-period（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 661.973,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "pipeline",
+      "title": "動畫展示：從疊加到尖峰",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#shor"
+    },
+    {
+      "key": "op64",
+      "title": "動畫展示：換一個 a，尖峰跟著變",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#shor"
+    },
+    {
+      "key": "fail14",
+      "title": "動畫展示：一定失敗的 a = 14",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#shor"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.8,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q108-shor-period-v2-zh-TW.mp4": {
+      "bytes": 97302164,
+      "sha256": "b2d681450913a96fb1406e988940bbf2f2bd6b5768feed3b749d9db23d7b551f"
+    },
+    "q108-shor-period-v2-master.mp4": {
+      "bytes": 97280001,
+      "sha256": "1f34a37a2ea6d8aac6b98085b89ed8e737187615f9016e3ce167e7ca4cf0b019"
+    },
+    "narration-only.mp3": {
+      "bytes": 15889108,
+      "sha256": "322f86dfd5de7b94bc3cec1737701caa5ad37e4942653c5354eb2e9ce38d7b37"
+    }
+  },
+  "package": {
+    "filename": "Q108-v2_量子電腦學程_Shor找週期_動畫展示版_2026-11-19.zip",
+    "bytes": 214528839,
+    "sha256": "264d24ed5454b9f8535bf3ddc95a826c6337215dbb5ec46edda9bda03967394c",
+    "parts": [
+      {
+        "name": "Q108-v2_量子電腦學程_Shor找週期_動畫展示版_2026-11-19.zip.part01",
+        "bytes": 29360128,
+        "sha256": "5ccd49c4b214c4c4f1e862cfefaeafb251687cdfda032aed96d76854f17959e9"
+      },
+      {
+        "name": "Q108-v2_量子電腦學程_Shor找週期_動畫展示版_2026-11-19.zip.part02",
+        "bytes": 29360128,
+        "sha256": "5f8e0a7ff6622f8e9dd55b6c27aa86e53fbca55c9d25e9ca2f9768b1c5674fd6"
+      },
+      {
+        "name": "Q108-v2_量子電腦學程_Shor找週期_動畫展示版_2026-11-19.zip.part03",
+        "bytes": 29360128,
+        "sha256": "44df5e346c81c09c74be5f24d86c8aeeb7e8b6f24471d4a9e2fe2060b46ef06c"
+      },
+      {
+        "name": "Q108-v2_量子電腦學程_Shor找週期_動畫展示版_2026-11-19.zip.part04",
+        "bytes": 29360128,
+        "sha256": "25845df9f9968f328072d6269f705d3d9fc6c85fc2ef9e800f282175b214ef98"
+      },
+      {
+        "name": "Q108-v2_量子電腦學程_Shor找週期_動畫展示版_2026-11-19.zip.part05",
+        "bytes": 29360128,
+        "sha256": "65b1772dd94fcebd1524338959c5072765f303aad5135868b1e4dfc48d5720c3"
+      },
+      {
+        "name": "Q108-v2_量子電腦學程_Shor找週期_動畫展示版_2026-11-19.zip.part06",
+        "bytes": 29360128,
+        "sha256": "a0e4e5c5c1cdc87663209c710696b22f8eb8bb6e23c722241f14956601edde4c"
+      },
+      {
+        "name": "Q108-v2_量子電腦學程_Shor找週期_動畫展示版_2026-11-19.zip.part07",
+        "bytes": 29360128,
+        "sha256": "d47678551c9462e1fdcf64db0cb8e5fe982af898550dbfb3d5e0adfc78f1ce88"
+      },
+      {
+        "name": "Q108-v2_量子電腦學程_Shor找週期_動畫展示版_2026-11-19.zip.part08",
+        "bytes": 9007943,
+        "sha256": "dd780fcc333e8fef187dbe910e7a58716f5647cd148846b7172c3b46a5ab7579"
+      }
+    ],
+    "handedOver": "2026-11-19 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1bi-WOn7ipXPr978g1JqWu1DFCPwySyyb",
+    "uploaded": "2026-11-19",
+    "files": [
+      {
+        "name": "Q108 Shor找週期：Shor 演算法：自選 N、a 找週期（動畫展示版）.mp4",
+        "id": "1ISm0L1aqUNQiS6nc8tuOR0Zooizlnf_W",
+        "link": "https://drive.google.com/file/d/1ISm0L1aqUNQiS6nc8tuOR0Zooizlnf_W/view?usp=drivesdk"
+      },
+      {
+        "name": "Q108 Shor找週期（動畫展示版）簡報.pptx",
+        "id": "1gSSca9cDqtajjvuOdCnPIwHIuVek7fad",
+        "link": "https://docs.google.com/presentation/d/1gSSca9cDqtajjvuOdCnPIwHIuVek7fad/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true"
+      },
+      {
+        "name": "Q108 Shor找週期 教材.zip",
+        "id": "1btyso1QEevV3zHM9CouW4-rXYjtVvydg",
+        "link": "https://drive.google.com/file/d/1btyso1QEevV3zHM9CouW4-rXYjtVvydg/view?usp=drivesdk"
+      }
+    ],
+    "complete": true
+  }
+}

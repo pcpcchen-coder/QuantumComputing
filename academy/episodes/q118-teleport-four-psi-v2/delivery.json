@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q118",
+  "version": "Q118-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-20",
+  "episodePath": "academy/episodes/q118-teleport-four-psi-v2",
+  "basedOn": "academy/episodes/q118-teleport-four-psi（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 510.4,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "move",
+      "title": "動畫展示：看狀態怎麼搬家",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/basic-circuits.html#teleport"
+    },
+    {
+      "key": "four",
+      "title": "動畫展示：四種狀態傳完的樣子",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/basic-circuits.html#teleport"
+    },
+    {
+      "key": "nofix",
+      "title": "動畫展示：少了修正會怎樣",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/basic-circuits.html#teleport"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.5,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q118-teleport-four-psi-v2-zh-TW.mp4": {
+      "bytes": 85504784,
+      "sha256": "985c3ec610b92ceb9585bc104b29d13b41e29f69bc478285ee7429e9f7c86890"
+    },
+    "q118-teleport-four-psi-v2-master.mp4": {
+      "bytes": 87192643,
+      "sha256": "6f17eae4024d616d27ab8d9b9440537d672d325a8b6815a5d18a67b6a33cad23"
+    },
+    "narration-only.mp3": {
+      "bytes": 12251092,
+      "sha256": "633f5d802c2182556b59510dfb55f2d9ed62c8b29fbe39073a40a1c3df3fb2ec"
+    }
+  },
+  "package": {
+    "filename": "Q118-v2_量子電腦學程_隱形傳態_動畫展示版_2026-11-20.zip",
+    "bytes": 188645108,
+    "sha256": "d2aa45876f3ef0c4670c3967141f166fcd75717b992a15f0ad8b6349b0f4c424",
+    "parts": [
+      {
+        "name": "Q118-v2_量子電腦學程_隱形傳態_動畫展示版_2026-11-20.zip.part01",
+        "bytes": 29360128,
+        "sha256": "87757b12c9c546be5e9db71abf074825518e95db17476452f937724db07cdbe8"
+      },
+      {
+        "name": "Q118-v2_量子電腦學程_隱形傳態_動畫展示版_2026-11-20.zip.part02",
+        "bytes": 29360128,
+        "sha256": "07f464032cffb5a3420d6d3b76d336039cb6c01a0492d220bc6fcbd602308eff"
+      },
+      {
+        "name": "Q118-v2_量子電腦學程_隱形傳態_動畫展示版_2026-11-20.zip.part03",
+        "bytes": 29360128,
+        "sha256": "24ad31d3005521a28b102069baba71c066587a678d2f74f73e85fc1d978e6cc2"
+      },
+      {
+        "name": "Q118-v2_量子電腦學程_隱形傳態_動畫展示版_2026-11-20.zip.part04",
+        "bytes": 29360128,
+        "sha256": "b00adb88465f97b7439b946512eb988201672f2821ddd61bc8b90363217d1aa6"
+      },
+      {
+        "name": "Q118-v2_量子電腦學程_隱形傳態_動畫展示版_2026-11-20.zip.part05",
+        "bytes": 29360128,
+        "sha256": "90342c89c8863de6fb4398aa3ed525146c1d75c7c88f50673bdf6424adf20e7a"
+      },
+      {
+        "name": "Q118-v2_量子電腦學程_隱形傳態_動畫展示版_2026-11-20.zip.part06",
+        "bytes": 29360128,
+        "sha256": "3ca6c85959db459b0c545287445af99333acf744128169d138e182959cf3a803"
+      },
+      {
+        "name": "Q118-v2_量子電腦學程_隱形傳態_動畫展示版_2026-11-20.zip.part07",
+        "bytes": 12484340,
+        "sha256": "54c23809c6963c7d23c43b8f4de72a0d1fafee63d9246539d236bb4d3802cafa"
+      }
+    ],
+    "handedOver": "2026-11-20 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1bi-WOn7ipXPr978g1JqWu1DFCPwySyyb",
+    "uploaded": "2026-11-19",
+    "files": [
+      {
+        "name": "Q118 隱形傳態：範例 5：隱形傳態——四種 ψ（動畫展示版）.mp4",
+        "id": "1q8HRl55bkYcfNG_Bjzaq1sTloYq-dakE",
+        "link": "https://drive.google.com/file/d/1q8HRl55bkYcfNG_Bjzaq1sTloYq-dakE/view?usp=drivesdk"
+      },
+      {
+        "name": "Q118 隱形傳態（動畫展示版）簡報.pptx",
+        "id": "13dvISGGMiXFTHYugln3tZYM_NFEtreA-",
+        "link": "https://docs.google.com/presentation/d/13dvISGGMiXFTHYugln3tZYM_NFEtreA-/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true"
+      },
+      {
+        "name": "Q118 隱形傳態 教材.zip",
+        "id": "1VJcnnJugtqNGdbIDwECD6XH-9J8ubKA3",
+        "link": "https://drive.google.com/file/d/1VJcnnJugtqNGdbIDwECD6XH-9J8ubKA3/view?usp=drivesdk"
+      }
+    ],
+    "complete": true
+  }
+}

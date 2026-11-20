@@ -1,0 +1,399 @@
+{
+  "version": 2,
+  "opening": 60.277,
+  "scenes": [
+    {
+      "page": 1,
+      "kind": "slide",
+      "v1slide": 1,
+      "title": "頻率配置與頻率碰撞",
+      "duration": 29.904,
+      "sentences": [
+        {
+          "text": "歡迎回到父子科技學院的量子電腦學程，我是陳犀牛，今天是量子第一百零二堂，頻率配置與頻率碰撞，這是依課綱製作的課前教學版，並非實際上課錄音。",
+          "start": 0.0,
+          "end": 12.544014
+        },
+        {
+          "text": "上一堂我們修正了一個迷思：磁通線不是把每顆位元調成一樣，而是把它們放到各自不同的頻率。",
+          "start": 12.724014,
+          "end": 20.684014
+        },
+        {
+          "text": "今天接著問：到底要錯開多少，又有哪些頻率絕對不能去？我們要打一場排頻率的頭目戰。",
+          "start": 20.864014,
+          "end": 29.688028000000003
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q102-frequency-collisions/audio/slide_01.mp3"
+    },
+    {
+      "page": 2,
+      "kind": "slide",
+      "v1slide": 2,
+      "title": "今天的頭目戰：三關",
+      "duration": 22.488,
+      "sentences": [
+        {
+          "text": "今天的頭目戰分三關：第一關認識碰撞，第二關替三顆位元排頻率，第三關在紙上挑戰五顆。",
+          "start": 0.0,
+          "end": 8.08
+        },
+        {
+          "text": "頭目就是頻率尺上的紅色警報，只要紅色帶還亮著，這一關就還沒過。",
+          "start": 8.26,
+          "end": 14.756008999999999
+        },
+        {
+          "text": "今天的作品是一張頻率配置表，寫上每顆位元的頻率，以及它為什麼不會撞到鄰居。",
+          "start": 14.936008999999999,
+          "end": 22.272018
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q102-frequency-collisions/audio/slide_02.mp3"
+    },
+    {
+      "page": 3,
+      "kind": "slide",
+      "v1slide": 3,
+      "title": "為什麼頻率要錯開",
+      "duration": 28.92,
+      "sentences": [
+        {
+          "text": "頻率不能亂放，有三個物理原因；第一，寫入要打得準：二十奈秒的派脈衝，也就是把零翻成一的微波，頻寬大約五十百萬赫茲，鄰居落在裡面就會被誤打。",
+          "start": 0.0,
+          "end": 12.52
+        },
+        {
+          "text": "第二，相鄰位元靠電容耦合在一起，頻率太接近時，激發會在兩顆之間交換來交換去。",
+          "start": 12.7,
+          "end": 20.66
+        },
+        {
+          "text": "第三最容易忘：每顆位元除了零到一，還藏著一到二、零到二這些頻率，它們也會撞車。",
+          "start": 20.84,
+          "end": 28.704014
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q102-frequency-collisions/audio/slide_03.mp3"
+    },
+    {
+      "page": 4,
+      "kind": "slide",
+      "v1slide": 4,
+      "title": "鄰居的五個禁區",
+      "duration": 32.064,
+      "sentences": [
+        {
+          "text": "拿一顆零到一是五點二一十億赫茲的位元當例子：它的一到二只剩四點九三，兩個光子一起從零推到二的頻率，落在中間的五點零七。",
+          "start": 0.0,
+          "end": 10.312018
+        },
+        {
+          "text": "鄰居不能和它同頻，也不能讓任何一方的零到一碰上另一方的一到二，所以四點九三和五點四九都是禁區，五點零七和五點三五則是雙光子的禁區。",
+          "start": 10.492018,
+          "end": 22.124036
+        },
+        {
+          "text": "還有第五種叫旁觀者碰撞：同一顆位元的兩個鄰居，彼此也不能撞在一起；每個禁區大約只有正負十到三十百萬赫茲寬。",
+          "start": 22.304036,
+          "end": 31.84805
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q102-frequency-collisions/audio/slide_04.mp3"
+    },
+    {
+      "page": 5,
+      "kind": "demo",
+      "demo": "hidden",
+      "title": "動畫展示：撞上隱藏的頻率",
+      "duration": 40.872,
+      "sentences": [
+        {
+          "text": "打開超導晶片動畫的案例章，進入第六步自由實驗，三顆位元先停在配置好的位置，面板顯示無碰撞。",
+          "start": 0.0,
+          "end": 8.896009000000001
+        },
+        {
+          "text": "看二號的金色記號：高的實線是零到一，往左最遠那條淡淡的細線是一到二，兩者中間的金色菱形是雙光子。",
+          "start": 9.076009,
+          "end": 18.188027
+        },
+        {
+          "text": "把一號的磁通調小，青色實線往右移到四點九六，正好碰上二號的菱形，一號和二號外圍亮起紅圈，面板寫著一號驅動撞上二號的雙光子。",
+          "start": 18.368027,
+          "end": 29.952041
+        },
+        {
+          "text": "再把磁通加大，青色線離開菱形一路往左，停在四點八二，碰上二號那條淡淡的細線，紅圈又亮起來，這是零到一撞一到二。",
+          "start": 30.132041,
+          "end": 40.660046
+        }
+      ],
+      "audio": "audio/demo_hidden.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#case"
+    },
+    {
+      "page": 6,
+      "kind": "slide",
+      "v1slide": 5,
+      "title": "比一比：棋盤格和地址",
+      "duration": 27.408,
+      "sentences": [
+        {
+          "text": "最直覺的排法是棋盤格：高、低、高、低輪流，相鄰的兩顆一定錯開。",
+          "start": 0.0,
+          "end": 7.288005
+        },
+        {
+          "text": "可是在動畫裡，一號和三號都放在四點九，都避開了二號的禁區，卻因為兩顆都是二號的鄰居，發生旁觀者碰撞。",
+          "start": 7.468005,
+          "end": 17.156010000000002
+        },
+        {
+          "text": "所以要給每顆位元一個自己的地址：一號四點九、二號五點一、三號五點三，相鄰的都差零點二，三顆各住一間。",
+          "start": 17.33601,
+          "end": 27.192019000000002
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q102-frequency-collisions/audio/slide_05.mp3"
+    },
+    {
+      "page": 7,
+      "kind": "demo",
+      "demo": "address",
+      "title": "動畫展示：禁區和旁觀者",
+      "duration": 38.52,
+      "sentences": [
+        {
+          "text": "再開一次自由實驗，這時三顆已經在配置好的位置；勾選顯示二號鄰居的禁區，頻率尺上多出五條淡紅色的帶子。",
+          "start": 0.0,
+          "end": 9.712018
+        },
+        {
+          "text": "由左到右依序是一到二、雙光子、同頻、雙光子、一到二，一號和三號的實線都落在禁區外面。",
+          "start": 9.892018,
+          "end": 19.052018
+        },
+        {
+          "text": "現在用滑桿把三號的磁通拉大，讓它也降到四點九，和一號一樣，排成棋盤格；兩顆都沒踩進禁區，紅字卻寫著旁觀者碰撞。",
+          "start": 19.232018,
+          "end": 30.096032
+        },
+        {
+          "text": "按回到配置，三號回到五點三，紅字變成青色的無碰撞，三顆位元又各有自己的地址。",
+          "start": 30.276032,
+          "end": 38.30805
+        }
+      ],
+      "audio": "audio/demo_address.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#case"
+    },
+    {
+      "page": 8,
+      "kind": "slide",
+      "v1slide": 6,
+      "title": "排頻率三步",
+      "duration": 30.24,
+      "sentences": [
+        {
+          "text": "排頻率可以照三步走：第一步，先把中間的二號留在甜蜜點，也就是磁通為零、頻率最高、最不怕磁通雜訊的位置。",
+          "start": 0.0,
+          "end": 9.976009
+        },
+        {
+          "text": "第二步，以二號的五點一零為中心，在頻率尺上畫出五條禁區：四點八二、四點九六、五點一零、五點二四、五點三八。",
+          "start": 10.156009,
+          "end": 20.876009
+        },
+        {
+          "text": "第三步，把一號和三號放進禁區之間的空隙，記得磁通只能把頻率往下調，不能超過自己的最高頻率。",
+          "start": 21.056009,
+          "end": 30.024014
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q102-frequency-collisions/audio/slide_06.mp3"
+    },
+    {
+      "page": 9,
+      "kind": "slide",
+      "v1slide": 7,
+      "title": "我們真的檢查了一次",
+      "duration": 26.808,
+      "sentences": [
+        {
+          "text": "我們把同樣的規則寫成一支小程式，只用電腦本來就有的工具，實際跑了一次。",
+          "start": 0.0,
+          "end": 7.072018
+        },
+        {
+          "text": "剛做好時的頻率五點一二、五點一零、五點三九，程式列出三處碰撞；棋盤格剩下一處旁觀者碰撞。",
+          "start": 7.252018,
+          "end": 16.172018
+        },
+        {
+          "text": "換成四點九、五點一、五點三，程式印出無碰撞；不過判定窗的寬度是動畫用的示意值，真機要用實際量到的數字。",
+          "start": 16.352018,
+          "end": 26.592018000000003
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q102-frequency-collisions/audio/slide_07.mp3"
+    },
+    {
+      "page": 10,
+      "kind": "demo",
+      "demo": "hunt",
+      "title": "動畫展示：找第二個空位",
+      "duration": 36.048,
+      "sentences": [
+        {
+          "text": "最後來找第二個空位：一樣進入自由實驗，準備用滑桿把三號的頻率慢慢往下拉。",
+          "start": 0.0,
+          "end": 7.24
+        },
+        {
+          "text": "三號從五點三往下走，紅圈和面板的紅字一個接一個冒出又消失：先是三號的雙光子撞上二號，再來三號的一到二撞上一號，接著和二號同頻。",
+          "start": 7.42,
+          "end": 18.956009
+        },
+        {
+          "text": "停在五點零的時候，紅圈全部熄滅，面板又出現無碰撞，這是三號的第二個空位，和小程式算出來的一樣。",
+          "start": 19.136009,
+          "end": 28.608027
+        },
+        {
+          "text": "按送給二號的派脈衝驗收：只有中間的二號亮起來，兩邊的激發機率都還是零。",
+          "start": 28.788027,
+          "end": 35.836031999999996
+        }
+      ],
+      "audio": "audio/demo_hunt.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#case"
+    },
+    {
+      "page": 11,
+      "kind": "slide",
+      "v1slide": 8,
+      "title": "哪裡容易錯",
+      "duration": 32.904,
+      "sentences": [
+        {
+          "text": "哪裡容易錯？第一，磁通只能往下調，最高點就是甜蜜點，所以設計時要把頻率刻意做高一點。",
+          "start": 0.0,
+          "end": 9.568005
+        },
+        {
+          "text": "第二，製程誤差讓設計值和實測值不同，約瑟夫森接面的氧化層差幾個原子，頻率就會偏掉；第三，材料裡的缺陷會隨時間飄移，昨天的好配置今天可能出事。",
+          "start": 9.748005,
+          "end": 23.348005
+        },
+        {
+          "text": "還有一個例外：做雙位元的受控相位翻轉閘時，反而要刻意把一顆位元推到碰撞點，只停留幾十奈秒就離開。",
+          "start": 23.528005,
+          "end": 32.688005
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q102-frequency-collisions/audio/slide_08.mp3"
+    },
+    {
+      "page": 12,
+      "kind": "slide",
+      "v1slide": 9,
+      "title": "頭目戰：排頻師和頭目",
+      "duration": 24.168,
+      "sentences": [
+        {
+          "text": "實作時分工：你是排頻師，負責在頻率尺上放位元、填配置表。",
+          "start": 0.0,
+          "end": 6.592018
+        },
+        {
+          "text": "爸爸扮演頭目，手上拿著禁區表，只要看到撞車，就大喊碰撞，並說出是哪一種。",
+          "start": 6.772018,
+          "end": 14.564036000000002
+        },
+        {
+          "text": "每排好一組，就到動畫的自由實驗拖動滑桿驗證，紅色帶全部熄滅、出現無碰撞，才算打倒頭目。",
+          "start": 14.744036000000001,
+          "end": 23.952041
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q102-frequency-collisions/audio/slide_09.mp3"
+    },
+    {
+      "page": 13,
+      "kind": "slide",
+      "v1slide": 10,
+      "title": "換你改造：五顆位元",
+      "duration": 23.016,
+      "sentences": [
+        {
+          "text": "下半場換你在紙上挑戰五顆位元，排成一列，從一號到五號。",
+          "start": 0.0,
+          "end": 6.208005
+        },
+        {
+          "text": "每顆位元有自己的最高頻率，排的時候不能超過；排完先用禁區表自己檢查，再用小程式跑一次。",
+          "start": 6.388005,
+          "end": 15.332019
+        },
+        {
+          "text": "第一次就撞車很正常，我們第一次也在第四顆撞上了第三顆的一到二，改一個數字就過關。",
+          "start": 15.512019,
+          "end": 22.800024
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q102-frequency-collisions/audio/slide_10.mp3"
+    },
+    {
+      "page": 14,
+      "kind": "slide",
+      "v1slide": 11,
+      "title": "兩小時的排頻率實驗室",
+      "duration": 26.112,
+      "sentences": [
+        {
+          "text": "兩小時的安排是：開場十分鐘，認識碰撞種類十五分鐘，接著四十分鐘一起替三顆位元排頻率，並在動畫裡檢查，然後休息十分鐘。",
+          "start": 0.0,
+          "end": 11.032018
+        },
+        {
+          "text": "下半場三十分鐘在紙上挑戰五顆位元；接著十分鐘交換角色，由你教爸爸怎麼排、為什麼會撞。",
+          "start": 11.212018,
+          "end": 19.892018
+        },
+        {
+          "text": "最後五分鐘錄音總結，替配置表取名字，存一個版本。",
+          "start": 20.072018,
+          "end": 25.896031999999998
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q102-frequency-collisions/audio/slide_11.mp3"
+    },
+    {
+      "page": 15,
+      "kind": "slide",
+      "v1slide": 12,
+      "title": "最後一關：教爸爸排頻率",
+      "duration": 29.616,
+      "sentences": [
+        {
+          "text": "最後一關，請不看稿說出：為什麼頻率要錯開？碰撞有哪幾種？",
+          "start": 0.0,
+          "end": 7.168005
+        },
+        {
+          "text": "再指出一個限制：頻率配置會受製程誤差影響，設計值和實測值不一樣，所以排好之後還要量、還要調。",
+          "start": 7.348005,
+          "end": 16.652019
+        },
+        {
+          "text": "今天的作品是頻率配置表，下一堂我們要看能階、共振與拉比振盪，弄懂微波為什麼只在對得上的時候才被吸收；我是陳犀牛，保持好奇，我們下次見！",
+          "start": 16.832019,
+          "end": 29.400024
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q102-frequency-collisions/audio/slide_12.mp3"
+    }
+  ]
+}

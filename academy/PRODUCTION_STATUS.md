@@ -74,61 +74,61 @@
 | Q068 | ¹⁷¹Yb⁺ 量子位元與雷射冷卻 | 規劃完成 | — |
 | Q069 | 離子鏈的集體振動 | 規劃完成 | — |
 | Q070 | Mølmer–Sørensen 閘 | 規劃完成 | — |
-| Q071 | 螢光讀取與 QCCD | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q071-fluorescence-qccd-v2` |
-| Q072 | 磁光阱與光鑷 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q072-mot-optical-tweezers-v2` |
-| Q073 | 裝載與重排 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q073-loading-rearrangement-v2` |
-| Q074 | 芮德堡阻斷與 CZ | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q074-rydberg-blockade-cz-v2` |
-| Q075 | 分區架構與成像讀取 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q075-zoned-imaging-v2` |
-| Q076 | 類比量子模擬 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q076-analog-quantum-simulation-v2` |
-| Q077 | 光子量子電腦 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q077-photonic-quantum-computer-v2` |
-| Q078 | 半導體自旋量子位元 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q078-semiconductor-spin-qubits-v2` |
-| Q079 | 拓樸量子位元與 NV 色心 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q079-topological-nv-v2` |
-| Q080 | 平台大比較與供電分析 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q080-platform-comparison-power-v2` |
-| Q081 | 錯誤預算：線路能跑多深 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q081-error-budget-v2` |
-| Q082 | 錯誤緩解 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q082-error-mitigation-v2` |
-| Q083 | 重複碼：最簡單的錯誤更正 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q083-repetition-code-v2` |
-| Q084 | 表面碼 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q084-surface-code-v2` |
-| Q085 | 低於門檻 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q085-below-threshold-v2` |
-| Q086 | 邏輯閘與魔術態 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q086-logical-gates-magic-states-v2` |
-| Q087 | 變分演算法：VQE 與 QAOA | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q087-vqe-qaoa-v2` |
-| Q088 | 量子化學與材料 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q088-quantum-chemistry-materials-v2` |
-| Q089 | 最佳化與機器學習：炒作與現實 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q089-optimization-ml-hype-v2` |
-| Q090 | 量子密碼：BB84 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q090-bb84-quantum-key-distribution-v2` |
-| Q091 | Shor 之後：後量子密碼 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q091-post-quantum-cryptography-v2` |
-| Q092 | 量子感測與原子鐘 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q092-quantum-sensing-atomic-clock-v2` |
-| Q093 | 產業地圖與發展路線 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q093-industry-roadmap-v2` |
-| Q094 | 畢業專題提案 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q094-capstone-proposal-v2` |
-| Q095 | 畢業專題製作 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q095-capstone-build-v2` |
-| Q096 | 畢業 Teach-back：換孩子教爸爸 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q096-graduation-teach-back-v2` |
-| Q097 | 導覽：一顆 transmon 的十二章旅程 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q097-transmon-twelve-chapters-v2` |
-| Q098 | LC 與 JJ：線性和非線性的差別 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q098-lc-vs-jj-nonlinearity-v2` |
-| Q099 | 第 1 課：SQUID 干涉之後能做什麼 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q099-squid-flux-tuning-v2` |
-| Q100 | 第 2 課：transmon 怎麼寫入狀態 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q100-transmon-write-xy-z-v2` |
-| Q101 | 第 3 課：迷思修正——Z 線不是把位元調成一樣 | 規劃完成 | — |
-| Q102 | 第 4 課：頻率配置與頻率碰撞 | 規劃完成 | — |
-| Q103 | 第 5 課：能階、共振與拉比振盪 | 規劃完成 | — |
-| Q104 | 第 6 課：色散讀取與重設 | 規劃完成 | — |
-| Q105 | 第 7 課：BV 密碼——一次猜中三位元 | 規劃完成 | — |
-| Q106 | 第 8 課：糾纏與兩位元 Grover | 規劃完成 | — |
-| Q107 | 第 9 課：Deutsch 演算法與相位回踢 | 規劃完成 | — |
-| Q108 | 第 10 課：Shor 演算法——自選 N、a 找週期 | 規劃完成 | — |
-| Q109 | 第 11 課：表面碼——穩定子與匹配解碼 | 規劃完成 | — |
-| Q110 | 第 12 課：lattice surgery 與魔術態蒸餾 | 規劃完成 | — |
-| Q111 | 第 13 課：編譯與控制軟體堆疊 | 規劃完成 | — |
-| Q112 | 模組發表：換你當老師 | 規劃完成 | — |
-| Q113 | 讀圖之前：三個約定與今天用到的閘 | 規劃完成 | — |
-| Q114 | 範例 1：疊加——量子硬幣與 |+⟩、|−⟩ | 規劃完成 | — |
-| Q115 | 範例 2：干涉——H‑Z‑H = X | 規劃完成 | — |
-| Q116 | 範例 3：Bell 態——四種糾纏 | 規劃完成 | — |
-| Q117 | 範例 4：GHZ——CNOT 一路串下去 | 規劃完成 | — |
-| Q118 | 範例 5：隱形傳態——四種 ψ | 規劃完成 | — |
-| Q119 | 範例 6：Deutsch——紅綠球搖獎機 | 規劃完成 | — |
-| Q120 | 範例 7：BV——查一次讀出整串密碼 | 規劃完成 | — |
-| Q121 | 範例 8：Grover——對平均值翻轉 | 規劃完成 | — |
-| Q122 | Grover 三位元：轉太多會轉過頭 | 規劃完成 | — |
-| Q123 | 古典 vs 量子：要查幾次？ | 規劃完成 | — |
-| Q124 | 用 Qiskit 重現八個範例 | 規劃完成 | — |
-| Q125 | 量測 1 次與 1000 次 | 規劃完成 | — |
+| Q071 | 螢光讀取與 QCCD | 規劃完成 | — |
+| Q072 | 磁光阱與光鑷 | 規劃完成 | — |
+| Q073 | 裝載與重排 | 規劃完成 | — |
+| Q074 | 芮德堡阻斷與 CZ | 規劃完成 | — |
+| Q075 | 分區架構與成像讀取 | 規劃完成 | — |
+| Q076 | 類比量子模擬 | 規劃完成 | — |
+| Q077 | 光子量子電腦 | 規劃完成 | — |
+| Q078 | 半導體自旋量子位元 | 規劃完成 | — |
+| Q079 | 拓樸量子位元與 NV 色心 | 規劃完成 | — |
+| Q080 | 平台大比較與供電分析 | 規劃完成 | — |
+| Q081 | 錯誤預算：線路能跑多深 | 規劃完成 | — |
+| Q082 | 錯誤緩解 | 規劃完成 | — |
+| Q083 | 重複碼：最簡單的錯誤更正 | 規劃完成 | — |
+| Q084 | 表面碼 | 規劃完成 | — |
+| Q085 | 低於門檻 | 規劃完成 | — |
+| Q086 | 邏輯閘與魔術態 | 規劃完成 | — |
+| Q087 | 變分演算法：VQE 與 QAOA | 規劃完成 | — |
+| Q088 | 量子化學與材料 | 規劃完成 | — |
+| Q089 | 最佳化與機器學習：炒作與現實 | 規劃完成 | — |
+| Q090 | 量子密碼：BB84 | 規劃完成 | — |
+| Q091 | Shor 之後：後量子密碼 | 規劃完成 | — |
+| Q092 | 量子感測與原子鐘 | 規劃完成 | — |
+| Q093 | 產業地圖與發展路線 | 規劃完成 | — |
+| Q094 | 畢業專題提案 | 規劃完成 | — |
+| Q095 | 畢業專題製作 | 規劃完成 | — |
+| Q096 | 畢業 Teach-back：換孩子教爸爸 | 規劃完成 | — |
+| Q097 | 導覽：一顆 transmon 的十二章旅程 | 規劃完成 | — |
+| Q098 | LC 與 JJ：線性和非線性的差別 | 規劃完成 | — |
+| Q099 | 第 1 課：SQUID 干涉之後能做什麼 | 規劃完成 | — |
+| Q100 | 第 2 課：transmon 怎麼寫入狀態 | 規劃完成 | — |
+| Q101 | 第 3 課：迷思修正——Z 線不是把位元調成一樣 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q101-z-line-myth-v2` |
+| Q102 | 第 4 課：頻率配置與頻率碰撞 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q102-frequency-collisions-v2` |
+| Q103 | 第 5 課：能階、共振與拉比振盪 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q103-rabi-oscillation-v2` |
+| Q104 | 第 6 課：色散讀取與重設 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q104-dispersive-readout-v2` |
+| Q105 | 第 7 課：BV 密碼——一次猜中三位元 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q105-bv-secret-v2` |
+| Q106 | 第 8 課：糾纏與兩位元 Grover | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q106-entanglement-grover-v2` |
+| Q107 | 第 9 課：Deutsch 演算法與相位回踢 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q107-deutsch-kickback-v2` |
+| Q108 | 第 10 課：Shor 演算法——自選 N、a 找週期 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q108-shor-period-v2` |
+| Q109 | 第 11 課：表面碼——穩定子與匹配解碼 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q109-surface-code-v2` |
+| Q110 | 第 12 課：lattice surgery 與魔術態蒸餾 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q110-lattice-surgery-v2` |
+| Q111 | 第 13 課：編譯與控制軟體堆疊 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q111-software-stack-v2` |
+| Q112 | 模組發表：換你當老師 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q112-teach-back-v2` |
+| Q113 | 讀圖之前：三個約定與今天用到的閘 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q113-reading-conventions-v2` |
+| Q114 | 範例 1：疊加——量子硬幣與 |+⟩、|−⟩ | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q114-plus-minus-coin-v2` |
+| Q115 | 範例 2：干涉——H‑Z‑H = X | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q115-hzh-interference-v2` |
+| Q116 | 範例 3：Bell 態——四種糾纏 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q116-four-bell-states-v2` |
+| Q117 | 範例 4：GHZ——CNOT 一路串下去 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q117-ghz-chain-v2` |
+| Q118 | 範例 5：隱形傳態——四種 ψ | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q118-teleport-four-psi-v2` |
+| Q119 | 範例 6：Deutsch——紅綠球搖獎機 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q119-deutsch-ball-machine-v2` |
+| Q120 | 範例 7：BV——查一次讀出整串密碼 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q120-bv-one-query-v2` |
+| Q121 | 範例 8：Grover——對平均值翻轉 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q121-grover-mean-flip-v2` |
+| Q122 | Grover 三位元：轉太多會轉過頭 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q122-grover-overshoot-v2` |
+| Q123 | 古典 vs 量子：要查幾次？ | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q123-query-count-v2` |
+| Q124 | 用 Qiskit 重現八個範例 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q124-qiskit-eight-v2` |
+| Q125 | 量測 1 次與 1000 次 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q125-one-vs-thousand-v2` |
 | Q126 | 加入雜訊：八個範例在真實世界會怎樣 | 規劃完成 | — |
 | Q127 | 專題：設計自己的線路 | 規劃完成 | — |
 | Q128 | 模組發表：量子電路展 | 規劃完成 | — |

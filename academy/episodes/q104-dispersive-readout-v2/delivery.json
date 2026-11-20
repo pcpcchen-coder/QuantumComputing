@@ -1,0 +1,126 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q104",
+  "version": "Q104-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-19",
+  "episodePath": "academy/episodes/q104-dispersive-readout-v2",
+  "basedOn": "academy/episodes/q104-dispersive-readout（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 546.966667,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "shift",
+      "title": "動畫展示：位元改變共振腔的音高",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#dispersive"
+    },
+    {
+      "key": "iq",
+      "title": "動畫展示：兩團雲和判別線",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#iq"
+    },
+    {
+      "key": "reset",
+      "title": "動畫展示：讀完之後怎麼歸零",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#readout"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.6,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q104-dispersive-readout-v2-zh-TW.mp4": {
+      "bytes": 95727931,
+      "sha256": "79d44f246589418e02ca29bd2745b293c5f5b5bec184d1ed48bcca67365829ea"
+    },
+    "q104-dispersive-readout-v2-master.mp4": {
+      "bytes": 97781287,
+      "sha256": "c9302b93d61227807b57cfa7b1c82908bbc0276c40abfe326eb21b050cbf76a1"
+    },
+    "narration-only.mp3": {
+      "bytes": 13128916,
+      "sha256": "bba1f4894644225887cc2a2d080c90bd52de7886d17980c085824e7436ab5a5b"
+    }
+  },
+  "package": {
+    "filename": "Q104-v2_量子電腦學程_讀取與重設_動畫展示版_2026-11-19.zip",
+    "bytes": 210796595,
+    "sha256": "68f5623a8d8a036cf4224fb29f130cb89db588e179afc12858064693033ccdd3",
+    "parts": [
+      {
+        "name": "Q104-v2_量子電腦學程_讀取與重設_動畫展示版_2026-11-19.zip.part01",
+        "bytes": 29360128,
+        "sha256": "519c64cafe2a78354b51594f387fe1d8d3306b7c57d3a7180c91ed6db14d8e19"
+      },
+      {
+        "name": "Q104-v2_量子電腦學程_讀取與重設_動畫展示版_2026-11-19.zip.part02",
+        "bytes": 29360128,
+        "sha256": "cee0e3a27f13ea7c74ebdb140bb737e129456231cdfd954d99992f2f4d955a87"
+      },
+      {
+        "name": "Q104-v2_量子電腦學程_讀取與重設_動畫展示版_2026-11-19.zip.part03",
+        "bytes": 29360128,
+        "sha256": "ec7b94263246824b67851f6154c4e5773ff5ea1d908b466e7f323de4f5847379"
+      },
+      {
+        "name": "Q104-v2_量子電腦學程_讀取與重設_動畫展示版_2026-11-19.zip.part04",
+        "bytes": 29360128,
+        "sha256": "c6a6397fd3c44c44259997d623ed8bc295d7785679195a7a37b25d4b3f61a2cc"
+      },
+      {
+        "name": "Q104-v2_量子電腦學程_讀取與重設_動畫展示版_2026-11-19.zip.part05",
+        "bytes": 29360128,
+        "sha256": "3a8d126660bd6eb4fce117d7d2265c78915c8545e7517070cb100d422aea062e"
+      },
+      {
+        "name": "Q104-v2_量子電腦學程_讀取與重設_動畫展示版_2026-11-19.zip.part06",
+        "bytes": 29360128,
+        "sha256": "efd7c3aa2c8fe569552ab7c3d87e7653f53a038ed1acd959092bd16f760d0fa6"
+      },
+      {
+        "name": "Q104-v2_量子電腦學程_讀取與重設_動畫展示版_2026-11-19.zip.part07",
+        "bytes": 29360128,
+        "sha256": "a460b35b3e66a10d5cc8e2f357840978785b960324b8430773c1afdf00bb5487"
+      },
+      {
+        "name": "Q104-v2_量子電腦學程_讀取與重設_動畫展示版_2026-11-19.zip.part08",
+        "bytes": 5275699,
+        "sha256": "cde2135f8032f8bd50a86679d8447700e84b61e98462f2034aaeb5bce087dac9"
+      }
+    ],
+    "handedOver": "2026-11-19 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1bi-WOn7ipXPr978g1JqWu1DFCPwySyyb",
+    "uploaded": "2026-11-19",
+    "files": [
+      {
+        "name": "Q104 讀取與重設：色散讀取與重設（動畫展示版）.mp4",
+        "id": "1CUTkt8c0Sv1HEynKXbrQbXsIp6ql3YGh",
+        "link": "https://drive.google.com/file/d/1CUTkt8c0Sv1HEynKXbrQbXsIp6ql3YGh/view?usp=drivesdk"
+      },
+      {
+        "name": "Q104 讀取與重設（動畫展示版）簡報.pptx",
+        "id": "1Nz_alyy9id6Xc1ujGbsfd6zuMqHEktLI",
+        "link": "https://docs.google.com/presentation/d/1Nz_alyy9id6Xc1ujGbsfd6zuMqHEktLI/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true"
+      },
+      {
+        "name": "Q104 讀取與重設 教材.zip",
+        "id": "1Z0vkhJkamcLa0F9SZM48sBWu7e9luikG",
+        "link": "https://drive.google.com/file/d/1Z0vkhJkamcLa0F9SZM48sBWu7e9luikG/view?usp=drivesdk"
+      }
+    ],
+    "complete": true
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q117",
+  "version": "Q117-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-20",
+  "episodePath": "academy/episodes/q117-ghz-chain-v2",
+  "basedOn": "academy/episodes/q117-ghz-chain（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 501.29,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "chain3",
+      "title": "動畫展示：三顆位元一步一步綁",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/basic-circuits.html#ghz"
+    },
+    {
+      "key": "four",
+      "title": "動畫展示：換成四顆位元",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/basic-circuits.html#ghz"
+    },
+    {
+      "key": "bind",
+      "title": "動畫展示：鏈子一節一節接上",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#register"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.5,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q117-ghz-chain-v2-zh-TW.mp4": {
+      "bytes": 84863899,
+      "sha256": "eb199b3e74c6f0491a1328f7069ee407d9cf0a17c89775a2bd5750ff316c45c2"
+    },
+    "q117-ghz-chain-v2-master.mp4": {
+      "bytes": 87239074,
+      "sha256": "8f2517e9d606bef646da331a11dedc56ab6bac0cd3f2aeb93b0713806b23592e"
+    },
+    "narration-only.mp3": {
+      "bytes": 12032788,
+      "sha256": "b6fa810d64c16b39289af510a0f8dd40bb2e33ac0757c0046ee9e5448339690f"
+    }
+  },
+  "package": {
+    "filename": "Q117-v2_量子電腦學程_GHZ串糾纏_動畫展示版_2026-11-20.zip",
+    "bytes": 187973015,
+    "sha256": "f3475af33eaec7d0776fbbe3f615823f98a65d218ea93cce23a4c654599f34f6",
+    "parts": [
+      {
+        "name": "Q117-v2_量子電腦學程_GHZ串糾纏_動畫展示版_2026-11-20.zip.part01",
+        "bytes": 29360128,
+        "sha256": "75be1531d7b0684dbbd9da00697061ea1257edec975153b0c7a33dc72495de16"
+      },
+      {
+        "name": "Q117-v2_量子電腦學程_GHZ串糾纏_動畫展示版_2026-11-20.zip.part02",
+        "bytes": 29360128,
+        "sha256": "92b1efc891f69f6dfca9bbbb2924efaf84af8c9d3a8673010d10320f8a97533e"
+      },
+      {
+        "name": "Q117-v2_量子電腦學程_GHZ串糾纏_動畫展示版_2026-11-20.zip.part03",
+        "bytes": 29360128,
+        "sha256": "66bbdbec8f28103001fac9fcfaf2310c70be865a72e49c999ab4f509ed2b57e1"
+      },
+      {
+        "name": "Q117-v2_量子電腦學程_GHZ串糾纏_動畫展示版_2026-11-20.zip.part04",
+        "bytes": 29360128,
+        "sha256": "806aa88b675d66fb4039462098d83111142fa389c0de78f385cfc810ed83ba82"
+      },
+      {
+        "name": "Q117-v2_量子電腦學程_GHZ串糾纏_動畫展示版_2026-11-20.zip.part05",
+        "bytes": 29360128,
+        "sha256": "2b008fe99965a98f871e57e3c3c554889a4be4ed8eee15910f170180c236f811"
+      },
+      {
+        "name": "Q117-v2_量子電腦學程_GHZ串糾纏_動畫展示版_2026-11-20.zip.part06",
+        "bytes": 29360128,
+        "sha256": "a17e3222dfd0bb0ca482c9ea2eaaca6ee9db1471a97f9bcc68bdc3b1d852abcf"
+      },
+      {
+        "name": "Q117-v2_量子電腦學程_GHZ串糾纏_動畫展示版_2026-11-20.zip.part07",
+        "bytes": 11812247,
+        "sha256": "ec5655df24dc72160a8cbd9375b27594b611634df1b7b6edcf2376945c66fcb1"
+      }
+    ],
+    "handedOver": "2026-11-20 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1bi-WOn7ipXPr978g1JqWu1DFCPwySyyb",
+    "uploaded": "2026-11-19",
+    "files": [
+      {
+        "name": "Q117 GHZ串糾纏：範例 4：GHZ——CNOT 一路串下去（動畫展示版）.mp4",
+        "id": "1u6CMgjGqH7wCC9N50RaU9TiZHRW1Rmnv",
+        "link": "https://drive.google.com/file/d/1u6CMgjGqH7wCC9N50RaU9TiZHRW1Rmnv/view?usp=drivesdk"
+      },
+      {
+        "name": "Q117 GHZ串糾纏（動畫展示版）簡報.pptx",
+        "id": "1-klHMCgwGhVyFCtBybSiE5nx0DOggNAZ",
+        "link": "https://docs.google.com/presentation/d/1-klHMCgwGhVyFCtBybSiE5nx0DOggNAZ/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true"
+      },
+      {
+        "name": "Q117 GHZ串糾纏 教材.zip",
+        "id": "1IiqryDJB8jMQyTVSoZ0eR_k30MRzQzMP",
+        "link": "https://drive.google.com/file/d/1IiqryDJB8jMQyTVSoZ0eR_k30MRzQzMP/view?usp=drivesdk"
+      }
+    ],
+    "complete": true
+  }
+}

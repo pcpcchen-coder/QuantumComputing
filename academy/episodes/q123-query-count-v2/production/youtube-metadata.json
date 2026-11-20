@@ -1,0 +1,8 @@
+{
+  "title": "父子科技學院 Q123｜古典 vs 量子：要查幾次？（動畫展示版）",
+  "description": "父子科技學院 量子電腦學程 Q123｜古典 vs 量子：要查幾次？（v2・含 3D 動畫展示）\n\n這是依課綱製作的課前教學版，不是實際上課錄音。\n\n父子科技學院量子電腦學程 Q123「古典 vs 量子：要查幾次？」新版（v2）：在原本的教學投影片之間，插入本學程 3D 互動動畫的實際操作示範。\n\n這一版新增的動畫展示\n・為什麼古典要問五次（https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#interference）\n・古典一位一位問（https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#bv）\n・抽屜變多，次數差多少（https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#grover）\n\n動畫都可以在瀏覽器直接開啟，自己動手操作。\n\n章節\n00:00 陳犀牛系列片頭\n01:00 古典 vs 量子：要查幾次？\n01:32 工程答辯：查詢次數比較表\n02:01 什麼叫「查一次」\n02:28 Deutsch：2 次 vs 1 次\n02:54 動畫展示：為什麼古典要問五次\n03:34 BV 密碼：n 次 vs 1 次\n04:02 動畫展示：古典一位一位問\n04:43 Grover：約 N/2 vs 約 √N\n05:09 動畫展示：抽屜變多，次數差多少\n05:50 Shor 與加速等級\n06:18 容易錯的地方\n06:46 父子共同實作：比較表＋驗證三格\n07:12 換你改造：量子沒有優勢的問題\n07:41 兩小時的工程答辯\n08:11 最後一關：答辯查詢次數\n\n旁白：微軟 zh-TW-YunJheNeural 神經語音合成（Edge-TTS／Azure 語音服務，同一聲音同一格式）。字幕已燒入影片，開啟 CC 可能重疊。\n",
+  "privacyStatus": "private",
+  "madeForKids": null,
+  "reviewStatus": "needs-parent-review",
+  "publicationMode": "manual-user-upload"
+}
