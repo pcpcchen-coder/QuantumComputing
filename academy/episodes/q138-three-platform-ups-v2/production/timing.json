@@ -1,0 +1,399 @@
+{
+  "version": 2,
+  "opening": 60.277,
+  "scenes": [
+    {
+      "page": 1,
+      "kind": "slide",
+      "v1slide": 1,
+      "title": "三平台比較：三種 UPS 設計邏輯",
+      "duration": 33.48,
+      "sentences": [
+        {
+          "text": "歡迎回到父子科技學院的量子電腦學程，我是陳犀牛，今天是量子第一百三十八堂，三平台比較：三種不斷電系統設計邏輯，這是依課綱製作的課前教學版，並非實際上課錄音。",
+          "start": 0.0,
+          "end": 14.224014
+        },
+        {
+          "text": "前面幾堂，我們分別拆過超導的冷卻鏈、離子阱的射頻，還有中性原子的熱穩態，三個平台的資料都到齊了。",
+          "start": 14.404014,
+          "end": 23.732019
+        },
+        {
+          "text": "今天的好玩機制是產品評審：把三個平台排上同一張表，評一評同一台不斷電系統，能不能通吃三種量子電腦。",
+          "start": 23.912019,
+          "end": 33.264037
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q138-three-platform-ups/audio/slide_01.mp3"
+    },
+    {
+      "page": 2,
+      "kind": "slide",
+      "v1slide": 2,
+      "title": "任務三步：比功率、比特性、推設計",
+      "duration": 27.408,
+      "sentences": [
+        {
+          "text": "任務分三步：先比一套機器用多少電，再比它們最怕什麼、能停多久，最後推論各自需要哪一種不斷電系統。",
+          "start": 0.0,
+          "end": 9.328005000000001
+        },
+        {
+          "text": "產品評審的規矩是先看證據：每一格都寫出處，公開數字不夠的地方，就老實標成推論。",
+          "start": 9.508005,
+          "end": 17.51601
+        },
+        {
+          "text": "今天的作品是一張三平台供電比較表，橫的是三個平台，直的是用電大宗、敏感電源、容忍中斷和恢復時間。",
+          "start": 17.69601,
+          "end": 27.192019000000002
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q138-three-platform-ups/audio/slide_02.mp3"
+    },
+    {
+      "page": 3,
+      "kind": "slide",
+      "v1slide": 3,
+      "title": "三平台的單套功率",
+      "duration": 27.504,
+      "sentences": [
+        {
+          "text": "先看一套機器有多大：德國超級電腦中心的超導機，降溫時峰值大約三十千瓦，文件整理成二十到三十千瓦。",
+          "start": 0.0,
+          "end": 9.136009
+        },
+        {
+          "text": "離子阱的旗艦機，官方資料寫不到四十千瓦，和雲端公司合作的報導卻寫大約六十千瓦，而且不含外部空調。",
+          "start": 9.316009,
+          "end": 18.620023
+        },
+        {
+          "text": "中性原子最小，大約三到十千瓦；三個平台都落在幾千瓦到幾十千瓦，都比一個人工智慧機櫃還小。",
+          "start": 18.800023,
+          "end": 27.288028
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q138-three-platform-ups/audio/slide_03.mp3"
+    },
+    {
+      "page": 4,
+      "kind": "demo",
+      "demo": "compare",
+      "title": "動畫展示：三個平台站一排",
+      "duration": 39.432,
+      "sentences": [
+        {
+          "text": "打開離子阱與中性原子動畫的第十三個場景，三平台比較：左邊是超導，中間是離子阱，右邊是中性原子。",
+          "start": 0.0,
+          "end": 9.592018
+        },
+        {
+          "text": "左邊面板寫著，超導需要十毫克耳文的稀釋冷凍機和大量佈線；離子阱和中性原子都不用它，用電大宗就從這裡分岔。",
+          "start": 9.772018,
+          "end": 19.700023
+        },
+        {
+          "text": "離子阱是一串懸在四根銅色桿子之間的金色離子；中性原子是一片青色陣列，幾支洋紅色的光鑷正搬著原子來回走。",
+          "start": 19.880023,
+          "end": 29.400023
+        },
+        {
+          "text": "按下規模，柱子換成已展示的位元數：超導標著一千一百二十一，離子阱九十八，中性原子的陣列有六千一百顆。",
+          "start": 29.580023,
+          "end": 39.220023000000005
+        }
+      ],
+      "audio": "audio/demo_compare.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/atoms.html#compare"
+    },
+    {
+      "page": 5,
+      "kind": "slide",
+      "v1slide": 4,
+      "title": "比較表的四列",
+      "duration": 28.176,
+      "sentences": [
+        {
+          "text": "比較表第一列是用電大宗：超導是壓縮機加冷卻水，離子阱和中性原子則是精密空調、雷射和控制電子。",
+          "start": 0.0,
+          "end": 9.184014
+        },
+        {
+          "text": "第二列是最敏感的電源：超導怕磁通偏壓的微伏雜訊，離子阱怕射頻和電極，中性原子怕光鑷強度和芮德堡相位。",
+          "start": 9.364014,
+          "end": 19.292019
+        },
+        {
+          "text": "第三列問斷電能撐多久，第四列問斷了多久恢復；這兩格決定不斷電系統要做多大、切換要多快。",
+          "start": 19.472019,
+          "end": 27.960024
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q138-three-platform-ups/audio/slide_04.mp3"
+    },
+    {
+      "page": 6,
+      "kind": "slide",
+      "v1slide": 5,
+      "title": "比一比：分鐘 vs 毫秒",
+      "duration": 27.696,
+      "sentences": [
+        {
+          "text": "把超導和離子阱放在一起：超導冷卻中斷大約兩分鐘，晶片還在一克耳文以下，有時間等發電機。",
+          "start": 0.0,
+          "end": 8.536009
+        },
+        {
+          "text": "離子阱的射頻和電極電壓卻是零毫秒，斷一下離子就逃走；這格是文件依物理機制做的推論，沒有公開量測。",
+          "start": 8.716009,
+          "end": 18.116009
+        },
+        {
+          "text": "同樣叫停電，一邊有兩分鐘的緩衝，另一邊連切換的空檔都不能有，所以兩種不斷電系統不能共用一個規格。",
+          "start": 18.296008999999998,
+          "end": 27.480022999999996
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q138-three-platform-ups/audio/slide_05.mp3"
+    },
+    {
+      "page": 7,
+      "kind": "slide",
+      "v1slide": 6,
+      "title": "三種 UPS 設計邏輯",
+      "duration": 29.904,
+      "sentences": [
+        {
+          "text": "文件推論出三種設計：超導保冷卻鏈，壓縮機、氣體處理和冰水機要接上，容量大、吃得下啟動電流。",
+          "start": 0.0,
+          "end": 9.976009
+        },
+        {
+          "text": "離子阱保離子，對象是射頻、電極、時序和銣鐘，容量小，但要零切換時間，設備端再加直流保持。",
+          "start": 10.156009,
+          "end": 19.916009
+        },
+        {
+          "text": "中性原子保熱穩態，對象是光纖放大器、鎖頻和空調，容量中等；磁光阱線圈斷了能重來，可以不接。",
+          "start": 20.096009,
+          "end": 29.688026999999998
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q138-three-platform-ups/audio/slide_06.mp3"
+    },
+    {
+      "page": 8,
+      "kind": "demo",
+      "demo": "outage",
+      "title": "動畫展示：電池加大，只是延後",
+      "duration": 37.632,
+      "sentences": [
+        {
+          "text": "回到供電互動動畫的斷電時間軸，先看面板：冷卻鏈負載寫著五十五到一百一十千瓦，這是一千位元設施的估算。",
+          "start": 0.0,
+          "end": 9.256009
+        },
+        {
+          "text": "改選方案丙，冷卻鏈有不斷電系統，可是發電機沒起來；預設撐十五分鐘，白點走到十五分鐘左右，就沿著曲線往上爬。",
+          "start": 9.436009,
+          "end": 20.012018
+        },
+        {
+          "text": "把撐住的時間拉到六十分鐘，轉折點只往右挪到一小時，曲線一樣衝過一克耳文的紅色虛線。",
+          "start": 20.192018,
+          "end": 28.320023
+        },
+        {
+          "text": "面板的停機時間仍寫著約三到五天；所以超導的不斷電系統是撐到發電機接手，不是靠電池撐完整場停電。",
+          "start": 28.500023,
+          "end": 37.420023
+        }
+      ],
+      "audio": "audio/demo_outage.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/power1000.html#outage"
+    },
+    {
+      "page": 9,
+      "kind": "slide",
+      "v1slide": 7,
+      "title": "恢復時間：值得保多少",
+      "duration": 28.2,
+      "sentences": [
+        {
+          "text": "再看第四列，斷電之後多久回得來：超導要重新降溫兩到五天，再做完整校準，最壞大約十天。",
+          "start": 0.0,
+          "end": 8.632018
+        },
+        {
+          "text": "離子阱和中性原子都是數十分鐘到數小時，花在雷射重新鎖頻、重新裝載和熱平衡；真空有吸氣劑撐著。",
+          "start": 8.812018,
+          "end": 18.380023
+        },
+        {
+          "text": "恢復越慢，停一次的代價越高，備援就越值得做足；這是把恢復時間換成設計深度的推論，不是廠商規範。",
+          "start": 18.560023,
+          "end": 27.984037
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q138-three-platform-ups/audio/slide_07.mp3"
+    },
+    {
+      "page": 10,
+      "kind": "slide",
+      "v1slide": 8,
+      "title": "哪些是推論？",
+      "duration": 27.312,
+      "sentences": [
+        {
+          "text": "產品評審最容易犯的錯，是把推論當成事實；像離子阱的四十和六十千瓦差在哪裡，文件找不到官方說明。",
+          "start": 0.0,
+          "end": 9.448005
+        },
+        {
+          "text": "單套功率的定義也不同，有的是降溫峰值、有的是最壞情況、有的是官方上限，還有的不含外部空調。",
+          "start": 9.628005,
+          "end": 18.644014
+        },
+        {
+          "text": "三種設計邏輯本身也是推論；暫停影片，先把比較表的四列填好，推論的格子畫一個星號。",
+          "start": 18.824014,
+          "end": 27.096032
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q138-three-platform-ups/audio/slide_08.mp3"
+    },
+    {
+      "page": 11,
+      "kind": "slide",
+      "v1slide": 9,
+      "title": "產品評審：評審與業務",
+      "duration": 28.416,
+      "sentences": [
+        {
+          "text": "實作的時候分工：你是產品評審，手上拿著比較表；爸爸是業務，要推銷一台號稱三平台通吃的不斷電系統。",
+          "start": 0.0,
+          "end": 9.544014
+        },
+        {
+          "text": "爸爸每說一個賣點，你就對照表格追問：切換時間夠不夠離子阱用？吃不吃得下壓縮機的啟動電流？",
+          "start": 9.724014,
+          "end": 19.364014
+        },
+        {
+          "text": "評審結論要寫理由，例如這台適合中性原子，可是離子阱零中斷那一層，還缺設備端的直流保持。",
+          "start": 19.544014,
+          "end": 28.200023
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q138-three-platform-ups/audio/slide_09.mp3"
+    },
+    {
+      "page": 12,
+      "kind": "demo",
+      "demo": "roadmap",
+      "title": "動畫展示：一個想法，三種零件",
+      "duration": 37.224,
+      "sentences": [
+        {
+          "text": "換到供電互動動畫的路線圖，卡片分成三欄：零到一年建立案例與規格，一到三年進入供應鏈，三到七年做下一代架構。",
+          "start": 0.0,
+          "end": 10.264014
+        },
+        {
+          "text": "第一欄最上面那張，寫著分層不斷電系統加精密空調的參考設計，文件認為三個平台都需要它。",
+          "start": 10.444014,
+          "end": 18.380023
+        },
+        {
+          "text": "第二欄裡，超導用得上的是壓縮機變頻驅動，原子平台用得上的是精密線圈電流源，同一個分層想法，落到不同平台變成不同零件。",
+          "start": 18.560023,
+          "end": 29.376032000000002
+        },
+        {
+          "text": "點一下分層不斷電系統那張卡，畫面直接跳到斷電時間軸，也就是這張卡要回答的痛點。",
+          "start": 29.556032000000002,
+          "end": 37.012041
+        }
+      ],
+      "audio": "audio/demo_roadmap.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/power1000.html#roadmap"
+    },
+    {
+      "page": 13,
+      "kind": "slide",
+      "v1slide": 10,
+      "title": "換你改造：寫一段設計說明",
+      "duration": 27.408,
+      "sentences": [
+        {
+          "text": "下半場換你改造：挑一個平台，替它寫一段不斷電系統的設計說明，像給工程師看的規格摘要。",
+          "start": 0.0,
+          "end": 8.44
+        },
+        {
+          "text": "說明要回答三件事：要保護什麼、時間尺度是毫秒、秒還是分鐘，以及哪些負載可以不接、省下容量。",
+          "start": 8.62,
+          "end": 17.972018
+        },
+        {
+          "text": "最後加一句限制，例如超導的兩分鐘只是一個公開數據點，離子阱要多快的直流保持，也沒有公開規格。",
+          "start": 18.152017999999998,
+          "end": 27.192017999999997
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q138-three-platform-ups/audio/slide_10.mp3"
+    },
+    {
+      "page": 14,
+      "kind": "slide",
+      "v1slide": 11,
+      "title": "兩小時的產品評審",
+      "duration": 30.144,
+      "sentences": [
+        {
+          "text": "兩小時的安排是：開場十分鐘，認識三平台的功率與特性十五分鐘，接著四十分鐘填比較表、當評審，然後休息十分鐘。",
+          "start": 0.0,
+          "end": 10.456009
+        },
+        {
+          "text": "下半場三十分鐘寫一段設計說明；接著十分鐘交換角色，由你教爸爸為什麼不斷電系統不能只有一種規格。",
+          "start": 10.636009,
+          "end": 19.604014
+        },
+        {
+          "text": "最後五分鐘錄音總結，替比較表取名字、存一個版本；今天的生活技能是依需求選方案，像買鞋先想好要跑步還是爬山。",
+          "start": 19.784014,
+          "end": 29.928027999999998
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q138-three-platform-ups/audio/slide_11.mp3"
+    },
+    {
+      "page": 15,
+      "kind": "slide",
+      "v1slide": 12,
+      "title": "最後一關：教爸爸三種設計",
+      "duration": 30.048,
+      "sentences": [
+        {
+          "text": "最後一關，請不看稿說出：三個平台各自要保護什麼？時間尺度分別是分鐘、毫秒，還是秒到分鐘？",
+          "start": 0.0,
+          "end": 9.88
+        },
+        {
+          "text": "再指出一個限制：商用離子阱和中性原子沒有公開的分項用電數據，表裡不少格子是推論，要標清楚。",
+          "start": 10.06,
+          "end": 18.956009
+        },
+        {
+          "text": "今天的作品是三平台供電比較表，下一堂打開規模計算器，看位元數一變什麼先爆；我是陳犀牛，保持好奇，我們下次見！",
+          "start": 19.136009,
+          "end": 29.832018
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q138-three-platform-ups/audio/slide_12.mp3"
+    }
+  ]
+}

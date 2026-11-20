@@ -1,0 +1,126 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q137",
+  "version": "Q137-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-19",
+  "episodePath": "academy/episodes/q137-neutral-atom-power-v2",
+  "basedOn": "academy/episodes/q137-neutral-atom-power（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 621.248,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "facility",
+      "title": "動畫展示：電都用到哪裡去",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/atoms.html#atomsys"
+    },
+    {
+      "key": "tiers",
+      "title": "動畫展示：哪台設備屬於哪一層",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/atoms.html#atomsys"
+    },
+    {
+      "key": "reload",
+      "title": "動畫展示：原子掉了，一輪就補回來",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/atoms.html#tweezer"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.6,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q137-neutral-atom-power-v2-zh-TW.mp4": {
+      "bytes": 106320147,
+      "sha256": "8c64f969f995406970922598c0974acd2a428011137365578dc7b712f045ce65"
+    },
+    "q137-neutral-atom-power-v2-master.mp4": {
+      "bytes": 107655044,
+      "sha256": "833a28b02cc25c344cab4e462a352ba0c7ccd3ac7f515cfbf76ea3a811fdff99"
+    },
+    "narration-only.mp3": {
+      "bytes": 627412,
+      "sha256": "0e30343ab39268211a100af2e8c19c70c37da032dc81bec6eeb73cec608ace7b"
+    }
+  },
+  "package": {
+    "filename": "Q137-v2_量子電腦學程_中性原子供電_動畫展示版_2026-11-19.zip",
+    "bytes": 219621905,
+    "sha256": "fde47b33702d1ea077615447541d5d138595323398034967b061ec1be045b17b",
+    "parts": [
+      {
+        "name": "Q137-v2_量子電腦學程_中性原子供電_動畫展示版_2026-11-19.zip.part01",
+        "bytes": 29360128,
+        "sha256": "b5d815f31f1d904dc247343eeeaef1628084138ed9a2d05ac5c729bcc6771f51"
+      },
+      {
+        "name": "Q137-v2_量子電腦學程_中性原子供電_動畫展示版_2026-11-19.zip.part02",
+        "bytes": 29360128,
+        "sha256": "eb12a6bb447e2a6fcb94be1405d1f9daabeb1f8ab8258c13ec7da6ad979b1e97"
+      },
+      {
+        "name": "Q137-v2_量子電腦學程_中性原子供電_動畫展示版_2026-11-19.zip.part03",
+        "bytes": 29360128,
+        "sha256": "074f632f7ad185335c6f84523e1df4d1ae0e35ad9faf99d334c0b00cda6297e4"
+      },
+      {
+        "name": "Q137-v2_量子電腦學程_中性原子供電_動畫展示版_2026-11-19.zip.part04",
+        "bytes": 29360128,
+        "sha256": "c5f36db9a5ca877fd82603714aa0477a3c0e445ec63e6b8be4c45d82a923a0a5"
+      },
+      {
+        "name": "Q137-v2_量子電腦學程_中性原子供電_動畫展示版_2026-11-19.zip.part05",
+        "bytes": 29360128,
+        "sha256": "2d42179d5cce4fdacca8eb8ea5f6035f475e68a86bb88688dc88f9f87b6ca509"
+      },
+      {
+        "name": "Q137-v2_量子電腦學程_中性原子供電_動畫展示版_2026-11-19.zip.part06",
+        "bytes": 29360128,
+        "sha256": "b9aadb2d3187a4e7c4884d41067d4dc56dbc4e782a1498c5db6dde8983850998"
+      },
+      {
+        "name": "Q137-v2_量子電腦學程_中性原子供電_動畫展示版_2026-11-19.zip.part07",
+        "bytes": 29360128,
+        "sha256": "345f256539eb9a23aafab46d847c822dea25bc8e2f2b3c256ae6b1685a03e35f"
+      },
+      {
+        "name": "Q137-v2_量子電腦學程_中性原子供電_動畫展示版_2026-11-19.zip.part08",
+        "bytes": 14101009,
+        "sha256": "b6cf0902f16076d601f260e6236c2ee785dc61d7264a0ab419b90c6b6f4e3e6a"
+      }
+    ],
+    "handedOver": "2026-11-19 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "19TfKYX25oeVvzZEsGfFYyF8D3W3tknd7",
+    "uploaded": "2026-11-18",
+    "md5Verified": true,
+    "files": [
+      {
+        "name": "Q137 中性原子供電：中性原子的供電：保護熱穩態（動畫展示版）.mp4",
+        "id": "1Favisj2kEOcDGsfbK_BOeYStce0IwLoW",
+        "link": "https://drive.google.com/file/d/1Favisj2kEOcDGsfbK_BOeYStce0IwLoW/view?usp=drivesdk"
+      },
+      {
+        "name": "Q137 中性原子供電（動畫展示版）簡報.pptx",
+        "id": "1BT76VhFrVGtSMKcS3bKzuQ1E04RLfHnm",
+        "link": "https://docs.google.com/presentation/d/1BT76VhFrVGtSMKcS3bKzuQ1E04RLfHnm/edit?usp=drivesdk"
+      },
+      {
+        "name": "Q137 中性原子供電 教材.zip",
+        "id": "1-E-dbmJxz9rfdTazfpvsCY6RIdc3M7Ug",
+        "link": "https://drive.google.com/file/d/1-E-dbmJxz9rfdTazfpvsCY6RIdc3M7Ug/view?usp=drivesdk"
+      }
+    ]
+  }
+}

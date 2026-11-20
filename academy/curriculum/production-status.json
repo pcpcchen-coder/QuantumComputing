@@ -1437,72 +1437,156 @@
     "Q131": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q131-cooling-chain-ups-v2",
+        "evidence": "academy/episodes/q131-cooling-chain-ups-v2/delivery.json"
+      }
     },
     "Q132": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q132-dc-noise-budget-v2",
+        "evidence": "academy/episodes/q132-dc-noise-budget-v2/delivery.json"
+      }
     },
     "Q133": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q133-site-vibration-grounding-v2",
+        "evidence": "academy/episodes/q133-site-vibration-grounding-v2/delivery.json"
+      }
     },
     "Q134": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q134-grounding-common-mode-v2",
+        "evidence": "academy/episodes/q134-grounding-common-mode-v2/delivery.json"
+      }
     },
     "Q135": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q135-busbar-field-layout-v2",
+        "evidence": "academy/episodes/q135-busbar-field-layout-v2/delivery.json"
+      }
     },
     "Q136": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q136-ion-trap-power-v2",
+        "evidence": "academy/episodes/q136-ion-trap-power-v2/delivery.json"
+      }
     },
     "Q137": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q137-neutral-atom-power-v2",
+        "evidence": "academy/episodes/q137-neutral-atom-power-v2/delivery.json"
+      }
     },
     "Q138": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q138-three-platform-ups-v2",
+        "evidence": "academy/episodes/q138-three-platform-ups-v2/delivery.json"
+      }
     },
     "Q139": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q139-scale-calculator-v2",
+        "evidence": "academy/episodes/q139-scale-calculator-v2/delivery.json"
+      }
     },
     "Q140": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q140-cryo-heat-budget-v2",
+        "evidence": "academy/episodes/q140-cryo-heat-budget-v2/delivery.json"
+      }
     },
     "Q141": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q141-mw-cryo-conversion-v2",
+        "evidence": "academy/episodes/q141-mw-cryo-conversion-v2/delivery.json"
+      }
     },
     "Q142": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q142-product-platform-matrix-v2",
+        "evidence": "academy/episodes/q142-product-platform-matrix-v2/delivery.json"
+      }
     },
     "Q143": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q143-roadmap-11-projects-v2",
+        "evidence": "academy/episodes/q143-roadmap-11-projects-v2/delivery.json"
+      }
     },
     "Q144": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q144-power-spec-capstone-v2",
+        "evidence": "academy/episodes/q144-power-spec-capstone-v2/delivery.json"
+      }
     }
   }
 }

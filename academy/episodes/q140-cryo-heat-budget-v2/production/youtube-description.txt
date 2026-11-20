@@ -1,0 +1,32 @@
+父子科技學院 量子電腦學程 Q140｜低溫熱預算：熱帳怎麼變成電（v2・含 3D 動畫展示）
+
+這是依課綱製作的課前教學版，不是實際上課錄音。
+
+父子科技學院量子電腦學程 Q140「低溫熱預算：熱帳怎麼變成電」新版（v2）：在原本的教學投影片之間，插入本學程 3D 互動動畫的實際操作示範。
+
+這一版新增的動畫展示
+・線一多，冷板先喊緊（https://pcpcchen-coder.github.io/QuantumComputing/animations/peripherals.html#wiring）
+・用冷卻硬撐（https://pcpcchen-coder.github.io/QuantumComputing/animations/power1000.html#heat）
+・換線，比加冷卻省（https://pcpcchen-coder.github.io/QuantumComputing/animations/power1000.html#heat）
+
+動畫都可以在瀏覽器直接開啟，自己動手操作。
+
+章節
+00:00 陳犀牛系列片頭
+01:00 低溫熱預算：熱帳怎麼變成電
+01:33 任務三步：列熱、對照、換電
+02:02 冷凍機的五層冷盤
+02:32 逐層估算的方法
+03:02 動畫展示：線一多，冷板先喊緊
+03:45 比一比：最上層 vs 最下層
+04:15 熱帳變成電
+04:43 動畫展示：用冷卻硬撐
+05:22 越低溫，每瓦越貴
+05:49 論文給的三個條件
+06:21 基準測試：測試員與記錄員
+06:49 換你改造：線材與多工
+07:17 動畫展示：換線，比加冷卻省
+07:53 兩小時的基準測試
+08:25 最後一關：教爸爸熱預算
+
+旁白：微軟 zh-TW-YunJheNeural 神經語音合成（Edge-TTS／Azure 語音服務，同一聲音同一格式）。字幕已燒入影片，開啟 CC 可能重疊。

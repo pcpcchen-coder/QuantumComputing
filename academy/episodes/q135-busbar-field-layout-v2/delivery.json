@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q135",
+  "version": "Q135-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-19",
+  "episodePath": "academy/episodes/q135-busbar-field-layout-v2",
+  "basedOn": "academy/episodes/q135-busbar-field-layout（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 576.533,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "wiring",
+      "title": "動畫展示：三種配線，三種衰減",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/power1000.html#field"
+    },
+    {
+      "key": "current",
+      "title": "動畫展示：電流加大，配線並緊",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/power1000.html#field"
+    },
+    {
+      "key": "distance",
+      "title": "動畫展示：移動母線，記錄磁場",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/power1000.html#field"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.6,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q135-busbar-field-layout-v2-zh-TW.mp4": {
+      "bytes": 92044163,
+      "sha256": "7f1cc1aa3e71eb8e1219ff6f63d0369f099751122c8615e71e7c8a4e20169354"
+    },
+    "q135-busbar-field-layout-v2-master.mp4": {
+      "bytes": 92906086,
+      "sha256": "a3c13639723c2e05a17ca631d8e078889e64755fb6baf15edaee98e3b16aac7a"
+    },
+    "narration-only.mp3": {
+      "bytes": 13838548,
+      "sha256": "af4cf5c7c3fc5c1d926778ef27c434fb7d94173efc88e5dd96f18b3cd79821be"
+    }
+  },
+  "package": {
+    "filename": "Q135-v2_量子電腦學程_磁場與配電_動畫展示版_2026-11-19.zip",
+    "bytes": 202639897,
+    "sha256": "f55f3cfe48e32492cf932f68a081355c71bfed76adb8664e7cfd894937959cfa",
+    "parts": [
+      {
+        "name": "Q135-v2_量子電腦學程_磁場與配電_動畫展示版_2026-11-19.zip.part01",
+        "bytes": 29360128,
+        "sha256": "5d84c70c8b0048dc04ff175242d6d0c0cef61b3653ee46df2444f5d10aa65a0c"
+      },
+      {
+        "name": "Q135-v2_量子電腦學程_磁場與配電_動畫展示版_2026-11-19.zip.part02",
+        "bytes": 29360128,
+        "sha256": "facb306c01b7a7efba6913ac21a10e656484512083d42744dc78a56c8ca3218f"
+      },
+      {
+        "name": "Q135-v2_量子電腦學程_磁場與配電_動畫展示版_2026-11-19.zip.part03",
+        "bytes": 29360128,
+        "sha256": "58daa6df477b38f81297af7debf8047acc19b0e7bf5423fc5751ca541584303b"
+      },
+      {
+        "name": "Q135-v2_量子電腦學程_磁場與配電_動畫展示版_2026-11-19.zip.part04",
+        "bytes": 29360128,
+        "sha256": "27c95ea981e018cd1c7afe6ccb659fcf773f6fe2eca71d6c14a503456988acd6"
+      },
+      {
+        "name": "Q135-v2_量子電腦學程_磁場與配電_動畫展示版_2026-11-19.zip.part05",
+        "bytes": 29360128,
+        "sha256": "8d1e849ed39699dd67e0dc8926c8e43db66c66a5d2834b2880cb1a64e24cd13c"
+      },
+      {
+        "name": "Q135-v2_量子電腦學程_磁場與配電_動畫展示版_2026-11-19.zip.part06",
+        "bytes": 29360128,
+        "sha256": "85c40b86e662897562b9d2ce93254436d8b6293d9d1de3728157896fe5b02823"
+      },
+      {
+        "name": "Q135-v2_量子電腦學程_磁場與配電_動畫展示版_2026-11-19.zip.part07",
+        "bytes": 26479129,
+        "sha256": "3b87c6f3bc4fff5bc90bce2175d06dfb4e941803d2cd2210cee77a0eb147d415"
+      }
+    ],
+    "handedOver": "2026-11-19 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "19TfKYX25oeVvzZEsGfFYyF8D3W3tknd7",
+    "uploaded": "2026-11-18",
+    "md5Verified": true,
+    "files": [
+      {
+        "name": "Q135 磁場與配電：磁場與配電佈局：母線離冷凍機多遠（動畫展示版）.mp4",
+        "id": "1vonZqfTrCQw1g_RB6kDf64xllVxwFK8S",
+        "link": "https://drive.google.com/file/d/1vonZqfTrCQw1g_RB6kDf64xllVxwFK8S/view?usp=drivesdk"
+      },
+      {
+        "name": "Q135 磁場與配電（動畫展示版）簡報.pptx",
+        "id": "12bTUIHZ0WoGxOTnMc9X9y0cCCZGz-b6n",
+        "link": "https://docs.google.com/presentation/d/12bTUIHZ0WoGxOTnMc9X9y0cCCZGz-b6n/edit?usp=drivesdk"
+      },
+      {
+        "name": "Q135 磁場與配電 教材.zip",
+        "id": "1SgWwHTeR0WNgt62RDK6IQvqwRKLm3w2i",
+        "link": "https://drive.google.com/file/d/1SgWwHTeR0WNgt62RDK6IQvqwRKLm3w2i/view?usp=drivesdk"
+      }
+    ]
+  }
+}

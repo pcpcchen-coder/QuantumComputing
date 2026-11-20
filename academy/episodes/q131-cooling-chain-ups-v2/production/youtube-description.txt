@@ -1,0 +1,32 @@
+父子科技學院 量子電腦學程 Q131｜冷卻鏈不斷電與壓縮機驅動（v2・含 3D 動畫展示）
+
+這是依課綱製作的課前教學版，不是實際上課錄音。
+
+父子科技學院量子電腦學程 Q131「冷卻鏈不斷電與壓縮機驅動」新版（v2）：在原本的教學投影片之間，插入本學程 3D 互動動畫的實際操作示範。
+
+這一版新增的動畫展示
+・冷卻鏈的第一棒（https://pcpcchen-coder.github.io/QuantumComputing/animations/peripherals.html#pulsetube）
+・三種備援方案（https://pcpcchen-coder.github.io/QuantumComputing/animations/power1000.html#outage）
+・分層保護的全景（https://pcpcchen-coder.github.io/QuantumComputing/animations/power1000.html#overview）
+
+動畫都可以在瀏覽器直接開啟，自己動手操作。
+
+章節
+00:00 陳犀牛系列片頭
+01:00 冷卻鏈不斷電與壓縮機驅動
+01:32 任務三步：找出、分層、升級
+01:59 為什麼先保護冷卻鏈
+02:30 冷卻鏈：四個環節
+02:59 動畫展示：冷卻鏈的第一棒
+03:26 比一比：只保電子 vs 保整條鏈
+03:55 動畫展示：三種備援方案
+04:31 架構圖的三層
+05:05 停電的時間線
+05:34 動畫展示：分層保護的全景
+06:12 壓縮機的三個難題
+06:48 真實任務：設計師與業主
+07:13 換你改造：直接接市電 vs 變頻
+07:45 兩小時的真實任務
+08:17 最後一關：教爸爸冷卻鏈
+
+旁白：微軟 zh-TW-YunJheNeural 神經語音合成（Edge-TTS／Azure 語音服務，同一聲音同一格式）。字幕已燒入影片，開啟 CC 可能重疊。

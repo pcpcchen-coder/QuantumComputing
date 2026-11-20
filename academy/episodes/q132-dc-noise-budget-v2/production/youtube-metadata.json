@@ -1,0 +1,8 @@
+{
+  "title": "父子科技學院 Q132｜精密 DC 源與雜訊預算（動畫展示版）",
+  "description": "父子科技學院 量子電腦學程 Q132｜精密 DC 源與雜訊預算（v2・含 3D 動畫展示）\n\n這是依課綱製作的課前教學版，不是實際上課錄音。\n\n父子科技學院量子電腦學程 Q132「精密 DC 源與雜訊預算」新版（v2）：在原本的教學投影片之間，插入本學程 3D 互動動畫的實際操作示範。\n\n這一版新增的動畫展示\n・精密直流在哪裡（https://pcpcchen-coder.github.io/QuantumComputing/animations/peripherals.html#electronics）\n・一百一十台精密直流（https://pcpcchen-coder.github.io/QuantumComputing/animations/power1000.html#overview）\n・繞過濾波器的電流（https://pcpcchen-coder.github.io/QuantumComputing/animations/power1000.html#ground）\n\n動畫都可以在瀏覽器直接開啟，自己動手操作。\n\n章節\n00:00 陳犀牛系列片頭\n01:00 精密 DC 源與雜訊預算\n01:32 任務三步：認識、填表、找出\n02:02 儀器級精密直流源的要求\n02:33 動畫展示：精密直流在哪裡\n03:12 供電鏈：四個關卡\n03:42 比一比：單台合格 vs 接起來\n04:11 動畫展示：一百一十台精密直流\n04:52 差模漣波怎麼逐級衰減\n05:17 推論例子：算一次預算\n05:47 預算表怎麼填\n06:15 基準測試：計算員與裁判\n06:41 換你改造：濾波器擋不住的雜訊\n07:12 動畫展示：繞過濾波器的電流\n07:55 兩小時的基準測試\n08:25 最後一關：教爸爸雜訊預算\n\n旁白：微軟 zh-TW-YunJheNeural 神經語音合成（Edge-TTS／Azure 語音服務，同一聲音同一格式）。字幕已燒入影片，開啟 CC 可能重疊。\n",
+  "privacyStatus": "private",
+  "madeForKids": null,
+  "reviewStatus": "needs-parent-review",
+  "publicationMode": "manual-user-upload"
+}

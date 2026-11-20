@@ -1,0 +1,126 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q134",
+  "version": "Q134-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-19",
+  "episodePath": "academy/episodes/q134-grounding-common-mode-v2",
+  "basedOn": "academy/episodes/q134-grounding-common-mode（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 570.624,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "ground_cap",
+      "title": "動畫展示：屏蔽層上的共模尖峰",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/power1000.html#ground"
+    },
+    {
+      "key": "scale",
+      "title": "動畫展示：位元數一變，入口跟著變",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/power1000.html#scale"
+    },
+    {
+      "key": "ground_count",
+      "title": "動畫展示：一台一台加上去",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/power1000.html#ground"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.6,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q134-grounding-common-mode-v2-zh-TW.mp4": {
+      "bytes": 95302354,
+      "sha256": "f9d13289fe896888a0494405503c85eb0216de513a78cfbc82498c1bfe72be23"
+    },
+    "q134-grounding-common-mode-v2-master.mp4": {
+      "bytes": 96772891,
+      "sha256": "708dffed8d0703b921a36350050c87e991320b37812d04f846341cae96e58535"
+    },
+    "narration-only.mp3": {
+      "bytes": 13696276,
+      "sha256": "52189ed47135b3ea6ed9b970c8aaa2377924479f814414de32289e585c22944b"
+    }
+  },
+  "package": {
+    "filename": "Q134-v2_量子電腦學程_接地與共模_動畫展示版_2026-11-19.zip",
+    "bytes": 209890395,
+    "sha256": "7fdecdcc6bd767855ab0c4e418a833ba9a4c210ee1041fd22ef24a84c9016ff5",
+    "parts": [
+      {
+        "name": "Q134-v2_量子電腦學程_接地與共模_動畫展示版_2026-11-19.zip.part01",
+        "bytes": 29360128,
+        "sha256": "e010125f1dd0f58ff5659c6063b5c88f6b1507296b560187190595cc8b99663b"
+      },
+      {
+        "name": "Q134-v2_量子電腦學程_接地與共模_動畫展示版_2026-11-19.zip.part02",
+        "bytes": 29360128,
+        "sha256": "0a2349dc7b821c4fc2555c5264b75a66f4298c478115d2b2fd1b23a97a19f27c"
+      },
+      {
+        "name": "Q134-v2_量子電腦學程_接地與共模_動畫展示版_2026-11-19.zip.part03",
+        "bytes": 29360128,
+        "sha256": "404b6c26c530003dc4fa746eb64e1d5c296e49732bc953cc59db3d51a7a93c5a"
+      },
+      {
+        "name": "Q134-v2_量子電腦學程_接地與共模_動畫展示版_2026-11-19.zip.part04",
+        "bytes": 29360128,
+        "sha256": "47a10b106fddaa6a4daee7f257a9d9a4727a9fbe08e5232f97778e6aa8a3c74c"
+      },
+      {
+        "name": "Q134-v2_量子電腦學程_接地與共模_動畫展示版_2026-11-19.zip.part05",
+        "bytes": 29360128,
+        "sha256": "ea4513cfdb9cf5573671ae6f88a08383e703179359947974bcd9866e4195fc0a"
+      },
+      {
+        "name": "Q134-v2_量子電腦學程_接地與共模_動畫展示版_2026-11-19.zip.part06",
+        "bytes": 29360128,
+        "sha256": "c00b8057569b1535a801c27529a5339ea5907608767e141e5c80e610efcd7705"
+      },
+      {
+        "name": "Q134-v2_量子電腦學程_接地與共模_動畫展示版_2026-11-19.zip.part07",
+        "bytes": 29360128,
+        "sha256": "61f41412a7f36323375d83277d51873360484e54ea5b11c6ac872b6e29377fe1"
+      },
+      {
+        "name": "Q134-v2_量子電腦學程_接地與共模_動畫展示版_2026-11-19.zip.part08",
+        "bytes": 4369499,
+        "sha256": "e31e3b1bb6c0afd2caf5f3e3b44ecb0a7cc67d59e67d7dba013a3260625c69a0"
+      }
+    ],
+    "handedOver": "2026-11-19 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "19TfKYX25oeVvzZEsGfFYyF8D3W3tknd7",
+    "uploaded": "2026-11-18",
+    "md5Verified": true,
+    "files": [
+      {
+        "name": "Q134 接地與共模：接地與共模：上百台儀器一起漏電（動畫展示版）.mp4",
+        "id": "14OV8YZhyEzaIFT7__IBLOyOfkEOq5Iz5",
+        "link": "https://drive.google.com/file/d/14OV8YZhyEzaIFT7__IBLOyOfkEOq5Iz5/view?usp=drivesdk"
+      },
+      {
+        "name": "Q134 接地與共模（動畫展示版）簡報.pptx",
+        "id": "1SyQQ8AgB_k9W3uY4OBLldDvQtP8-869J",
+        "link": "https://docs.google.com/presentation/d/1SyQQ8AgB_k9W3uY4OBLldDvQtP8-869J/edit?usp=drivesdk"
+      },
+      {
+        "name": "Q134 接地與共模 教材.zip",
+        "id": "13GuDKVOrWvtqW9M7i5dHpPgVD_lUJFMy",
+        "link": "https://drive.google.com/file/d/13GuDKVOrWvtqW9M7i5dHpPgVD_lUJFMy/view?usp=drivesdk"
+      }
+    ]
+  }
+}
