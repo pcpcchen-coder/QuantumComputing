@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q032",
+  "version": "Q032-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-20",
+  "episodePath": "academy/episodes/q032-design-my-transmon-v2",
+  "basedOn": "academy/episodes/q032-design-my-transmon（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 528.833333,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "tune",
+      "title": "動畫展示：拉比值，看頻率怎麼走",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#potential"
+    },
+    {
+      "key": "ladder",
+      "title": "動畫展示：等間距和不等距",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#potential"
+    },
+    {
+      "key": "designer",
+      "title": "動畫展示：用參數設計器對準五吉赫",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#capacitor"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.5,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q032-design-my-transmon-v2-zh-TW.mp4": {
+      "bytes": 88526197,
+      "sha256": "65fb7438502e05504c38ce53d5bc24e97088739362296d6a4d89b525c32c0c40"
+    },
+    "q032-design-my-transmon-v2-master.mp4": {
+      "bytes": 90192383,
+      "sha256": "99c4bdee30c77e3f4f7831ffac9aeda36801ef226ea7a8775f16ea1e14663e45"
+    },
+    "narration-only.mp3": {
+      "bytes": 12693460,
+      "sha256": "c85ebf9a0fc971cfbe6a645690a2a45b3298db87243662200825ec1b89921db3"
+    }
+  },
+  "package": {
+    "filename": "Q032-v2_量子電腦學程_設計量子位元_動畫展示版_2026-11-20.zip",
+    "bytes": 195873377,
+    "sha256": "e7886a373f4a3d422761e491a0b12d853fb6f1b7885cb271855e9563dcbad8ad",
+    "parts": [
+      {
+        "name": "Q032-v2_量子電腦學程_設計量子位元_動畫展示版_2026-11-20.zip.part01",
+        "bytes": 29360128,
+        "sha256": "5045566dcda952c32fc70de6a226f050079f145b3e58f615d9f8b6b22076d012"
+      },
+      {
+        "name": "Q032-v2_量子電腦學程_設計量子位元_動畫展示版_2026-11-20.zip.part02",
+        "bytes": 29360128,
+        "sha256": "e6ce671f51a4dcc9d6578b1ae769484ab24732ba43260659f6a18fe99cc98b85"
+      },
+      {
+        "name": "Q032-v2_量子電腦學程_設計量子位元_動畫展示版_2026-11-20.zip.part03",
+        "bytes": 29360128,
+        "sha256": "9a3044ac1540c32c55a17635f46d9ec68b4d21aa8919eb9412745212dc5a400e"
+      },
+      {
+        "name": "Q032-v2_量子電腦學程_設計量子位元_動畫展示版_2026-11-20.zip.part04",
+        "bytes": 29360128,
+        "sha256": "e797836ea2eee6a92dabaa59486bbd58df4f4204c4b4b63202e6439f2adff24e"
+      },
+      {
+        "name": "Q032-v2_量子電腦學程_設計量子位元_動畫展示版_2026-11-20.zip.part05",
+        "bytes": 29360128,
+        "sha256": "c5c3ee666230da445990c0a3414b4d8deeaaf9d3de44e3d56a05fa25043ce133"
+      },
+      {
+        "name": "Q032-v2_量子電腦學程_設計量子位元_動畫展示版_2026-11-20.zip.part06",
+        "bytes": 29360128,
+        "sha256": "be38b3c2377b4da8899feedb9b2bc7ca8254d53579c3358c0dbdc17dc45951b4"
+      },
+      {
+        "name": "Q032-v2_量子電腦學程_設計量子位元_動畫展示版_2026-11-20.zip.part07",
+        "bytes": 19712609,
+        "sha256": "4b66b6c74dc1cc389ffb3b719b01ce137450ad6f343f51523a47e879ff235ada"
+      }
+    ],
+    "handedOver": "2026-11-20 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1epfQVOXunbD9Vht37u62oOD9Dr-HKMSE",
+    "folder": "量子電腦學程 Q011–Q040 動畫展示版（v2）",
+    "files": [
+      {
+        "name": "Q032 設計量子位元：模組發表：設計我的 transmon（動畫展示版）.mp4",
+        "id": "1i_HPawNHieZHkC3U1MZEB7OoFM0fT9Ab",
+        "link": "https://drive.google.com/file/d/1i_HPawNHieZHkC3U1MZEB7OoFM0fT9Ab/view?usp=drivesdk",
+        "bytes": 88526197
+      },
+      {
+        "name": "Q032 設計量子位元（動畫展示版）簡報.pptx",
+        "id": "1Km_dT0mbGdsA8OJHvQLwt7GKM48J5iSh",
+        "link": "https://docs.google.com/presentation/d/1Km_dT0mbGdsA8OJHvQLwt7GKM48J5iSh/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true",
+        "bytes": 3428463
+      },
+      {
+        "name": "Q032 設計量子位元 教材.zip",
+        "id": "1OkdOGksG3y0_4thQ_wfrN9ORW-5WD-3V",
+        "link": "https://drive.google.com/file/d/1OkdOGksG3y0_4thQ_wfrN9ORW-5WD-3V/view?usp=drivesdk",
+        "bytes": 325268
+      }
+    ]
+  }
+}

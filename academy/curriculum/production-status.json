@@ -284,7 +284,13 @@
     "Q030": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q030-chip-layout-v2",
+        "evidence": "academy/episodes/q030-chip-layout-v2/delivery.json"
+      }
     },
     "Q031": {
       "status": "planned",
@@ -300,7 +306,13 @@
     "Q032": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q032-design-my-transmon-v2",
+        "evidence": "academy/episodes/q032-design-my-transmon-v2/delivery.json"
+      }
     },
     "Q033": {
       "status": "planned",
