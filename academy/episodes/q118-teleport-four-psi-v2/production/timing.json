@@ -1,0 +1,394 @@
+{
+  "version": 2,
+  "opening": 60.277,
+  "scenes": [
+    {
+      "page": 1,
+      "kind": "slide",
+      "v1slide": 1,
+      "title": "範例 5：隱形傳態，四種狀態",
+      "duration": 33.048,
+      "sentences": [
+        {
+          "text": "歡迎回到父子科技學院的量子電腦學程，我是陳犀牛，今天是量子第一百一十八堂，範例五，隱形傳態，這是依課綱製作的課前教學版，並非實際上課錄音。",
+          "start": 0.0,
+          "end": 12.784014
+        },
+        {
+          "text": "上一堂把受控反閘串成一條鏈，讓三顆位元一起糾纏；今天換個用途，拿一對糾纏的位元當通道，把一顆位元的狀態送到遠方。",
+          "start": 12.964014,
+          "end": 23.708028
+        },
+        {
+          "text": "今天要記住一句話：隱形傳態搬的是狀態，不是粒子，而且一定要再打一通普通的電話，所以快不過光。",
+          "start": 23.888028,
+          "end": 32.832042
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q118-teleport-four-psi/audio/slide_01.mp3"
+    },
+    {
+      "page": 2,
+      "kind": "slide",
+      "v1slide": 2,
+      "title": "角色扮演：三人傳送",
+      "duration": 27.408,
+      "sentences": [
+        {
+          "text": "今天的玩法是三人傳送：一個人當愛麗絲，一個人當鮑伯，第三個人當信差，負責把兩個位元的消息送到鮑伯手上。",
+          "start": 0.0,
+          "end": 9.856009
+        },
+        {
+          "text": "家裡只有兩個人也沒關係，信差可以由一張小紙條來扮演，重點是紙條送到之前，鮑伯什麼都不能做。",
+          "start": 10.036009,
+          "end": 18.596009000000002
+        },
+        {
+          "text": "今天的作品是一張傳送流程表，四種狀態各傳一次，記下每一步誰做了什麼、鮑伯最後收到什麼。",
+          "start": 18.776009000000002,
+          "end": 27.192018000000004
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q118-teleport-four-psi/audio/slide_02.mp3"
+    },
+    {
+      "page": 3,
+      "kind": "slide",
+      "v1slide": 3,
+      "title": "範例 5：四個步驟",
+      "duration": 28.152,
+      "sentences": [
+        {
+          "text": "先看簡報第十五頁的範例五：三條線都從零態出發，編號零和編號一在愛麗絲那邊，編號二在遠方的鮑伯手上。",
+          "start": 0.0,
+          "end": 9.352018000000001
+        },
+        {
+          "text": "第一步在編號零準備要傳的狀態；第二步用哈達瑪閘加受控反閘，讓編號一和編號二變成一對貝爾態。",
+          "start": 9.532018,
+          "end": 18.092018000000003
+        },
+        {
+          "text": "第三步愛麗絲做受控反閘和哈達瑪閘，量出兩個位元；第四步鮑伯照這兩個位元修正，編號二就變成要傳的狀態。",
+          "start": 18.272018000000003,
+          "end": 27.936032000000004
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q118-teleport-four-psi/audio/slide_03.mp3"
+    },
+    {
+      "page": 4,
+      "kind": "demo",
+      "demo": "move",
+      "title": "動畫展示：看狀態怎麼搬家",
+      "duration": 38.016,
+      "sentences": [
+        {
+          "text": "打開線路入門動畫的範例五，柱子下面有兩顆布洛赫球：左邊單看編號零，右邊單看編號二，兩支箭頭都指向北極。",
+          "start": 0.0,
+          "end": 10.024014000000001
+        },
+        {
+          "text": "第一步用旋轉閘準備要傳的狀態，左邊的箭頭往旁邊傾斜；第二步做出糾纏對，右邊那支箭頭立刻縮進球心。",
+          "start": 10.204014,
+          "end": 19.580023
+        },
+        {
+          "text": "第三步愛麗絲做受控反閘和哈達瑪閘，左邊的箭頭也變短，倒到赤道上，右邊還是縮在球心。",
+          "start": 19.760023,
+          "end": 27.984037
+        },
+        {
+          "text": "第四步鮑伯修正，右邊的箭頭伸出來，指向左邊一開始傾斜的方向；按量測一千次，綠色的條大多落在零。",
+          "start": 28.164037,
+          "end": 37.804037
+        }
+      ],
+      "audio": "audio/demo_move.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/basic-circuits.html#teleport"
+    },
+    {
+      "page": 5,
+      "kind": "slide",
+      "v1slide": 4,
+      "title": "愛麗絲量到什麼、鮑伯怎麼修",
+      "duration": 28.344,
+      "sentences": [
+        {
+          "text": "簡報第十六頁把愛麗絲的結果列成一張表：編號一和編號零兩個位元，零零、零一、一零、一一，各占四分之一。",
+          "start": 0.0,
+          "end": 10.216009
+        },
+        {
+          "text": "量到零零，鮑伯手上已經是要傳的狀態；零一要補一個相位翻轉閘，一零要補翻轉閘，一一兩個都要補。",
+          "start": 10.396009,
+          "end": 19.436009
+        },
+        {
+          "text": "口訣是：編號一是一就做翻轉閘，編號零是一就做相位翻轉閘；不管是哪一種，修完都一樣。",
+          "start": 19.616009,
+          "end": 28.128026999999996
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q118-teleport-four-psi/audio/slide_04.mp3"
+    },
+    {
+      "page": 6,
+      "kind": "slide",
+      "v1slide": 5,
+      "title": "紙條送到之前：完全隨機",
+      "duration": 26.472,
+      "sentences": [
+        {
+          "text": "表格最下面那句最重要：紙條送到之前，鮑伯不知道是四種的哪一種，四種混在一起，他手上的位元完全隨機。",
+          "start": 0.0,
+          "end": 9.616009
+        },
+        {
+          "text": "這時候鮑伯自己去量，不管愛麗絲要傳的是哪一種狀態，都是一半零、一半一，看不出任何消息。",
+          "start": 9.796009,
+          "end": 18.476008999999998
+        },
+        {
+          "text": "所以隱形傳態不能超光速：消息一定要靠信差跑一趟，而信差再快，也快不過光。",
+          "start": 18.656008999999997,
+          "end": 26.256009
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q118-teleport-four-psi/audio/slide_05.mp3"
+    },
+    {
+      "page": 7,
+      "kind": "slide",
+      "v1slide": 6,
+      "title": "延遲量測版：動畫怎麼做",
+      "duration": 27.6,
+      "sentences": [
+        {
+          "text": "動畫用的是延遲量測版：不在中間真的量測，而是把鮑伯的兩個修正，改成由編號一和編號零控制的受控閘。",
+          "start": 0.0,
+          "end": 9.4
+        },
+        {
+          "text": "修翻轉的是受控反閘，修相位的是受控相位翻轉閘；鮑伯手上的結果，和先量再修完全一樣。",
+          "start": 9.58,
+          "end": 17.972018
+        },
+        {
+          "text": "好處是可以一步一步看振幅；但受控閘要三顆位元靠在一起，真的要傳到遠方，還是得先量，再打電話。",
+          "start": 18.152017999999998,
+          "end": 27.384036
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q118-teleport-four-psi/audio/slide_06.mp3"
+    },
+    {
+      "page": 8,
+      "kind": "slide",
+      "v1slide": 7,
+      "title": "四種狀態：鮑伯收到什麼",
+      "duration": 27.12,
+      "sentences": [
+        {
+          "text": "動畫可以換四種要傳的狀態：零態占四分之三的那一種、一態、正號疊加態，還有負號疊加態。",
+          "start": 0.0,
+          "end": 8.632018
+        },
+        {
+          "text": "第一種傳完，鮑伯量到零的機率是四分之三；一態傳完，鮑伯的箭頭指向南極，每次都量到一。",
+          "start": 8.812018,
+          "end": 17.348027000000002
+        },
+        {
+          "text": "正號和負號疊加態量起來都是一半一半，分不出來；要看布洛赫球，鮑伯的箭頭停在赤道上兩個相反的方向。",
+          "start": 17.528027,
+          "end": 26.904036
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q118-teleport-four-psi/audio/slide_07.mp3"
+    },
+    {
+      "page": 9,
+      "kind": "demo",
+      "demo": "four",
+      "title": "動畫展示：四種狀態傳完的樣子",
+      "duration": 39.456,
+      "sentences": [
+        {
+          "text": "回到範例五，直接比較四種狀態傳完的樣子；先選一態，頁面跳到最後一步，右邊鮑伯的箭頭指向南極。",
+          "start": 0.0,
+          "end": 9.256009
+        },
+        {
+          "text": "看振幅柱子：左邊四根都是零，右邊四根一樣高，它們最左邊那一位都是一，也就是鮑伯那一顆一定是一。",
+          "start": 9.436009,
+          "end": 18.236009000000003
+        },
+        {
+          "text": "換成正號疊加態，八根柱子一樣高，鮑伯的箭頭倒到赤道上；再換負號疊加態，右邊四根翻到下面變成橘色，箭頭轉到赤道另一頭。",
+          "start": 18.416009000000003,
+          "end": 29.880023
+        },
+        {
+          "text": "四種換來換去，左邊編號零的箭頭一直停在同一個位置：原本的狀態已經搬到鮑伯那邊，沒有留下一份。",
+          "start": 30.060023,
+          "end": 39.244037
+        }
+      ],
+      "audio": "audio/demo_four.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/basic-circuits.html#teleport"
+    },
+    {
+      "page": 10,
+      "kind": "slide",
+      "v1slide": 8,
+      "title": "常見誤解：複製、瞬移、超光速",
+      "duration": 28.968,
+      "sentences": [
+        {
+          "text": "第一個誤解是以為狀態被複製了一份；其實傳完以後，編號零的箭頭不管傳哪一種，都停在同一個方向，原來的資訊已經不在它身上。",
+          "start": 0.0,
+          "end": 11.032018
+        },
+        {
+          "text": "第二個誤解是以為有東西瞬間飛過去；其實沒有粒子移動，鮑伯的位元本來就在他手上，改變的只是它的狀態。",
+          "start": 11.212018,
+          "end": 20.324036
+        },
+        {
+          "text": "第三個是以為比光快；沒有那兩個位元，鮑伯什麼都做不了，這也是今天驗收要你說出來的限制。",
+          "start": 20.504036,
+          "end": 28.752041
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q118-teleport-four-psi/audio/slide_08.mp3"
+    },
+    {
+      "page": 11,
+      "kind": "slide",
+      "v1slide": 9,
+      "title": "父子共同實作：四種狀態各傳一次",
+      "duration": 26.808,
+      "sentences": [
+        {
+          "text": "上半場一起實作：打開線路入門動畫的範例五，上方選要傳的狀態，回到起點，四步一步一步按。",
+          "start": 0.0,
+          "end": 8.776009
+        },
+        {
+          "text": "每一步都看柱子下面的兩顆布洛赫球：左邊是愛麗絲的編號零，右邊是鮑伯的編號二，把箭頭的位置畫進流程表。",
+          "start": 8.956009,
+          "end": 18.212018
+        },
+        {
+          "text": "四種都走到最後，按量測一千次，對照鮑伯量到的比例，和一開始要傳的狀態是不是一樣。",
+          "start": 18.392018,
+          "end": 26.592018000000003
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q118-teleport-four-psi/audio/slide_09.mp3"
+    },
+    {
+      "page": 12,
+      "kind": "slide",
+      "v1slide": 10,
+      "title": "換你改造：拿掉修正",
+      "duration": 28.824,
+      "sentences": [
+        {
+          "text": "下半場換你出手：在教材的小程式裡，把鮑伯的修正拿掉，先猜他的位元會變成什麼，再執行。",
+          "start": 0.0,
+          "end": 8.8
+        },
+        {
+          "text": "我們真的跑過：拿掉修正以後，四種狀態送過去，鮑伯的箭頭全部縮在球心，量起來都是一半一半。",
+          "start": 8.98,
+          "end": 18.14
+        },
+        {
+          "text": "再試只修一半，只補翻轉閘：一態照樣傳對；正號疊加態量起來也還是一半一半，但箭頭縮進球心，其實傳錯了。",
+          "start": 18.32,
+          "end": 28.608005
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q118-teleport-four-psi/audio/slide_10.mp3"
+    },
+    {
+      "page": 13,
+      "kind": "demo",
+      "demo": "nofix",
+      "title": "動畫展示：少了修正會怎樣",
+      "duration": 29.4,
+      "sentences": [
+        {
+          "text": "在動畫裡也能看拿掉修正的樣子：選一態，再點電路下方右邊的第四個小圓點，停在第三步，修正還沒做。",
+          "start": 0.0,
+          "end": 9.256009
+        },
+        {
+          "text": "這時右邊鮑伯的箭頭縮在球心；按量測一千次，零和一的綠色條差不多一樣多，傳一態也只得到一半一半。",
+          "start": 9.436009,
+          "end": 18.452018000000002
+        },
+        {
+          "text": "按下一步做修正，箭頭伸到南極；再量一千次，量測卡只剩一這一列，上面還出現一行綠字，說和要傳的狀態相同。",
+          "start": 18.632018000000002,
+          "end": 29.184036000000003
+        }
+      ],
+      "audio": "audio/demo_nofix.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/basic-circuits.html#teleport"
+    },
+    {
+      "page": 14,
+      "kind": "slide",
+      "v1slide": 11,
+      "title": "兩小時的傳送流程表",
+      "duration": 31.296,
+      "sentences": [
+        {
+          "text": "兩小時的安排是：開場十分鐘，概念示範十五分鐘，接著四十分鐘，四種狀態各傳一次，用布洛赫球確認，然後休息十分鐘。",
+          "start": 0.0,
+          "end": 10.936009
+        },
+        {
+          "text": "下半場三十分鐘，拿掉修正步驟，看鮑伯的位元變成什麼；接著十分鐘角色互換，由你教爸爸操作和原理。",
+          "start": 11.116009,
+          "end": 20.636009
+        },
+        {
+          "text": "最後五分鐘錄音總結、替流程表命名、存一個版本；今天的生活技能是通訊不可少，少了那通電話，什麼都傳不過去。",
+          "start": 20.816009,
+          "end": 31.080023
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q118-teleport-four-psi/audio/slide_11.mp3"
+    },
+    {
+      "page": 15,
+      "kind": "slide",
+      "v1slide": 12,
+      "title": "最後一關：教爸爸傳送",
+      "duration": 29.208,
+      "sentences": [
+        {
+          "text": "最後一關請不看稿說出：愛麗絲要做哪些步驟，鮑伯又怎麼依照兩個位元修正？",
+          "start": 0.0,
+          "end": 6.928005000000001
+        },
+        {
+          "text": "再指出一個限制：沒有普通的通訊就完成不了，所以隱形傳態不能超光速；而且傳完以後，原本那顆不再保有那個狀態。",
+          "start": 7.108005,
+          "end": 17.348005
+        },
+        {
+          "text": "今天的作品是傳送流程表，下一堂是範例六，德意志演算法，用紅綠球搖獎機來猜黑盒子；我是陳犀牛，保持好奇，我們下次見！",
+          "start": 17.528005,
+          "end": 28.992019
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q118-teleport-four-psi/audio/slide_12.mp3"
+    }
+  ]
+}

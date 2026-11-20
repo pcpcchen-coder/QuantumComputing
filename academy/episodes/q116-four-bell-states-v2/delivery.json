@@ -55,12 +55,12 @@
   "package": {
     "filename": "Q116-v2_量子電腦學程_四種貝爾態_動畫展示版_2026-11-20.zip",
     "bytes": 189174084,
-    "sha256": "0a0281f74c7085a7e3da95d9e06f93cdf1ab38180e8ce9a573483b6df1e3f2ab",
+    "sha256": "0b8e439fb49bce024d2236dfae7dd38b06e564cf63cb18ba2c39f6c0dd1e7d8a",
     "parts": [
       {
         "name": "Q116-v2_量子電腦學程_四種貝爾態_動畫展示版_2026-11-20.zip.part01",
         "bytes": 29360128,
-        "sha256": "f6001b6811f2f23bcf0ec8f6aec90fdb9cb0fa7f2ca7b2925aff60082101ec60"
+        "sha256": "169f730618a8569509ebb2ff4552f6517c67fa7e51b7c2b819fce8b641815e09"
       },
       {
         "name": "Q116-v2_量子電腦學程_四種貝爾態_動畫展示版_2026-11-20.zip.part02",
@@ -75,7 +75,7 @@
       {
         "name": "Q116-v2_量子電腦學程_四種貝爾態_動畫展示版_2026-11-20.zip.part04",
         "bytes": 29360128,
-        "sha256": "a34b0ccd96008a0a2845625221134155dca80553dc284879e2f18aef27fc199a"
+        "sha256": "323a4ee7fe53672460b5704bdfef72afeaa227d4d1df1ab7bbb3b7ff41257e28"
       },
       {
         "name": "Q116-v2_量子電腦學程_四種貝爾態_動畫展示版_2026-11-20.zip.part05",
@@ -90,10 +90,32 @@
       {
         "name": "Q116-v2_量子電腦學程_四種貝爾態_動畫展示版_2026-11-20.zip.part07",
         "bytes": 13013316,
-        "sha256": "47d3a5c7c0c05f6f0804b52d5d0d677ce25936535a0eb2be53b649d610e6405f"
+        "sha256": "a0eee0eb64ff8b4e4f798e223c694e49fee4cf789defbaad6b0b7a25f3a85d4d"
       }
     ],
     "handedOver": "2026-11-20 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
   },
-  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔"
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1bi-WOn7ipXPr978g1JqWu1DFCPwySyyb",
+    "uploaded": "2026-11-19",
+    "files": [
+      {
+        "name": "Q116 四種貝爾態：範例 3：Bell 態——四種糾纏（動畫展示版）.mp4",
+        "id": "1jvR3LKdIB0IO7qurOUP8jq6NJPwFGt8W",
+        "link": "https://drive.google.com/file/d/1jvR3LKdIB0IO7qurOUP8jq6NJPwFGt8W/view?usp=drivesdk"
+      },
+      {
+        "name": "Q116 四種貝爾態（動畫展示版）簡報.pptx",
+        "id": "1AJcyPxINJ0hqqZCq-0XuIpFt8-D97kSr",
+        "link": "https://docs.google.com/presentation/d/1AJcyPxINJ0hqqZCq-0XuIpFt8-D97kSr/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true"
+      },
+      {
+        "name": "Q116 四種貝爾態 教材.zip",
+        "id": "10hsSu6WyqzMdAe19QzShJBrggpaX-y-V",
+        "link": "https://drive.google.com/file/d/10hsSu6WyqzMdAe19QzShJBrggpaX-y-V/view?usp=drivesdk"
+      }
+    ],
+    "complete": true
+  }
 }

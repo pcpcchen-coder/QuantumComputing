@@ -1,0 +1,399 @@
+{
+  "version": 2,
+  "opening": 60.277,
+  "scenes": [
+    {
+      "page": 1,
+      "kind": "slide",
+      "v1slide": 1,
+      "title": "範例 6：德意志，紅綠球搖獎機",
+      "duration": 32.664,
+      "sentences": [
+        {
+          "text": "歡迎回到父子科技學院的量子電腦學程，我是陳犀牛，今天是量子第一百一十九堂，範例六，紅綠球搖獎機，這是依課綱製作的課前教學版，並非實際上課錄音。",
+          "start": 0.0,
+          "end": 12.976009
+        },
+        {
+          "text": "上一堂用一對糾纏位元把狀態搬到遠方；今天換成偵探遊戲：一台搖獎機藏著祕密，我們要用最少的提問把它問出來。",
+          "start": 13.156009,
+          "end": 23.084014
+        },
+        {
+          "text": "今天要記住一句話：問對問題，一次就夠；德意志的線路不去問每一顆球的顏色，只問兩顆球一樣不一樣。",
+          "start": 23.264014,
+          "end": 32.448028
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q119-deutsch-ball-machine/audio/slide_01.mp3"
+    },
+    {
+      "page": 2,
+      "kind": "slide",
+      "v1slide": 2,
+      "title": "偵探辦案：四台嫌疑搖獎機",
+      "duration": 27.504,
+      "sentences": [
+        {
+          "text": "今天的玩法是偵探辦案：有四台只裝兩顆球的搖獎機當嫌疑犯，偵探要查出每一台是常數，還是平衡。",
+          "start": 0.0,
+          "end": 8.872018
+        },
+        {
+          "text": "規則很嚴格：古典偵探每次只能搖出一顆球看顏色；量子偵探可以把整台機器接進線路，但只准問一次。",
+          "start": 9.052018,
+          "end": 18.212018
+        },
+        {
+          "text": "今天的作品是四種黑盒判讀表：每台機器記下兩顆球的顏色、它的類型，還有量子線路最後量到什麼。",
+          "start": 18.392018,
+          "end": 27.288027
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q119-deutsch-ball-machine/audio/slide_02.mp3"
+    },
+    {
+      "page": 3,
+      "kind": "slide",
+      "v1slide": 3,
+      "title": "紅綠球：變成數學",
+      "duration": 27.84,
+      "sentences": [
+        {
+          "text": "量子金魚的題目原本是五十顆球：準備的時候要嘛全部同一色，要嘛二十五紅、二十五綠，每次搖出一顆，而且不放回去。",
+          "start": 0.0,
+          "end": 10.72
+        },
+        {
+          "text": "把它寫成數學：第幾次搖是輸入，搖出的顏色是輸出，紅色記零，綠色記一。",
+          "start": 10.9,
+          "end": 18.452018000000002
+        },
+        {
+          "text": "只有兩顆球時剛好四種機器：兩顆都紅、兩顆都綠是常數；先紅後綠、先綠後紅是平衡。",
+          "start": 18.632018000000002,
+          "end": 27.624036000000004
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q119-deutsch-ball-machine/audio/slide_03.mp3"
+    },
+    {
+      "page": 4,
+      "kind": "slide",
+      "v1slide": 4,
+      "title": "古典偵探：要搖幾次？",
+      "duration": 28.224,
+      "sentences": [
+        {
+          "text": "先當古典偵探：兩顆球的機器，只搖一次只看到一種顏色，什麼都說不準，一定要搖第二次來比較。",
+          "start": 0.0,
+          "end": 8.728005
+        },
+        {
+          "text": "五十顆球時，運氣好第二顆就換色，馬上知道是一半一半；運氣差，明明是混色的機器，卻連搖二十五顆都是紅的。",
+          "start": 8.908005,
+          "end": 19.172019
+        },
+        {
+          "text": "搖到第二十六顆，答案一定揭曉，所以最壞要搖球數的一半再加一；一百萬顆球，就是五十萬零一次。",
+          "start": 19.352019,
+          "end": 28.008028
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q119-deutsch-ball-machine/audio/slide_04.mp3"
+    },
+    {
+      "page": 5,
+      "kind": "slide",
+      "v1slide": 5,
+      "title": "量子偵探：只問一次",
+      "duration": 27.576,
+      "sentences": [
+        {
+          "text": "量子偵探換一個問法：不問第一顆是什麼顏色，也不問第二顆，而是直接問兩顆一樣不一樣。",
+          "start": 0.0,
+          "end": 7.7680050000000005
+        },
+        {
+          "text": "簡報第十八頁的線路有兩顆位元，編號零是輸入，編號一是輔助；輔助先用翻轉閘翻成一，兩顆再各做一次哈達瑪閘。",
+          "start": 7.948005,
+          "end": 18.116010000000003
+        },
+        {
+          "text": "接著把搖獎機當成黑盒子問一次，最後編號零再做一次哈達瑪閘；量到零就是常數，量到一就是平衡。",
+          "start": 18.296010000000003,
+          "end": 27.360024000000003
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q119-deutsch-ball-machine/audio/slide_05.mp3"
+    },
+    {
+      "page": 6,
+      "kind": "demo",
+      "demo": "skip",
+      "title": "動畫展示：少了最後一步會怎樣",
+      "duration": 34.272,
+      "sentences": [
+        {
+          "text": "打開線路入門動畫的範例六，選最左邊兩顆都紅的函數，再點右邊第四個小圓點，停在問完黑盒子的那一步。",
+          "start": 0.0,
+          "end": 9.088005
+        },
+        {
+          "text": "這時按量測一千次，零和一的綠色條差不多一樣多，看不出這是常數機器。",
+          "start": 9.268005,
+          "end": 15.860023000000002
+        },
+        {
+          "text": "換成先紅後綠的平衡函數，同樣停在這一步量一千次，還是一半一半，兩台機器看起來一模一樣。",
+          "start": 16.040023,
+          "end": 24.768028
+        },
+        {
+          "text": "按下一步，對編號零做最後的哈達瑪閘，再量一千次，一千次全部是一，下面出現綠字寫著平衡函數。",
+          "start": 24.948028,
+          "end": 34.060046
+        }
+      ],
+      "audio": "audio/demo_skip.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/basic-circuits.html#deutsch"
+    },
+    {
+      "page": 7,
+      "kind": "slide",
+      "v1slide": 6,
+      "title": "四種黑盒判讀表",
+      "duration": 26.76,
+      "sentences": [
+        {
+          "text": "簡報第二十頁把四台機器排成一張判讀表：兩顆都紅的黑盒子裡空空的，兩顆都綠的只在輔助位元放一個翻轉閘。",
+          "start": 0.0,
+          "end": 9.4
+        },
+        {
+          "text": "先紅後綠的黑盒子是一個受控反閘；先綠後紅的，是受控反閘後面再補一個翻轉閘。",
+          "start": 9.58,
+          "end": 17.396009
+        },
+        {
+          "text": "跑完線路，兩台常數機器量到零，兩台平衡機器量到一，四台都是百分之百，沒有一台需要問第二次。",
+          "start": 17.576009,
+          "end": 26.544013999999997
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q119-deutsch-ball-machine/audio/slide_06.mp3"
+    },
+    {
+      "page": 8,
+      "kind": "demo",
+      "demo": "four",
+      "title": "動畫展示：四台機器的判讀表",
+      "duration": 39.672,
+      "sentences": [
+        {
+          "text": "回到範例六，直接比較四台機器跑完的樣子；選兩顆都紅，頁面跳到最後一步，零零那根朝上，一零那根朝下。",
+          "start": 0.0,
+          "end": 9.856009
+        },
+        {
+          "text": "按量測一千次，全部是零，綠字寫著常數函數；換成兩顆都綠，還是同樣兩根柱子，只是上下顛倒。",
+          "start": 10.036009,
+          "end": 19.196009
+        },
+        {
+          "text": "再量一千次，仍然全部是零；換成先紅後綠，柱子搬到零一和一一，量一千次全部是一，綠字改成平衡函數。",
+          "start": 19.376009,
+          "end": 29.160023000000002
+        },
+        {
+          "text": "最後選先綠後紅，柱子位置不變、上下又顛倒，量起來還是全部是一：判讀只看柱子站在哪兩格，不看朝上朝下。",
+          "start": 29.340023000000002,
+          "end": 39.460023
+        }
+      ],
+      "audio": "audio/demo_four.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/basic-circuits.html#deutsch"
+    },
+    {
+      "page": 9,
+      "kind": "slide",
+      "v1slide": 7,
+      "title": "八顆球：互相加強與互相抵消",
+      "duration": 27.264,
+      "sentences": [
+        {
+          "text": "孩子的改造題是八顆球：用三顆輸入位元，八種輸入同時送進去，等於八條路一起走過黑盒子。",
+          "start": 0.0,
+          "end": 8.56
+        },
+        {
+          "text": "黑盒子在每條路上蓋一個章，紅球蓋正號、綠球蓋負號；最後八條路都匯到全部是零的那個出口。",
+          "start": 8.74,
+          "end": 17.3
+        },
+        {
+          "text": "全部同色時，八個章都一樣，互相加強，一定量到全零；四正四負時剛好互相抵消，全零永遠不出現。",
+          "start": 17.48,
+          "end": 27.048005
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q119-deutsch-ball-machine/audio/slide_07.mp3"
+    },
+    {
+      "page": 10,
+      "kind": "demo",
+      "demo": "eight",
+      "title": "動畫展示：八顆球的落點",
+      "duration": 37.68,
+      "sentences": [
+        {
+          "text": "換到三維動畫的干涉場景，切到三個位元、八條路的模式；左邊面板最下面寫著，古典最壞要查五次。",
+          "start": 0.0,
+          "end": 9.280000000000001
+        },
+        {
+          "text": "選常數函數等於一，也就是八顆都綠：八個圓圈裡的箭頭全部朝左，右下角的小圖只剩全零那一根柱子，頂到最高。",
+          "start": 9.46,
+          "end": 19.124014000000003
+        },
+        {
+          "text": "換成第一種平衡函數，箭頭一右一左交錯，上方全零的機率變成零，右下角的柱子跳到零零一。",
+          "start": 19.304014000000002,
+          "end": 27.816032
+        },
+        {
+          "text": "再換成按奇偶分的平衡函數，箭頭換了一種排法，柱子跳到一一一；平衡機器的落點會變，但永遠不在全零。",
+          "start": 27.996032,
+          "end": 37.46805
+        }
+      ],
+      "audio": "audio/demo_eight.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#interference"
+    },
+    {
+      "page": 11,
+      "kind": "slide",
+      "v1slide": 8,
+      "title": "三個誠實的限制",
+      "duration": 28.56,
+      "sentences": [
+        {
+          "text": "簡報第二十七頁提醒三個誠實的限制，第一個是承諾：機器只能是全同色或剛好一半，三紅五綠這種機器不適用。",
+          "start": 0.0,
+          "end": 9.592018
+        },
+        {
+          "text": "第二個是古典也不差：如果允許一點點出錯，隨便搖十顆都同色就猜常數，猜錯的機會不到千分之二。",
+          "start": 9.772018,
+          "end": 18.548026999999998
+        },
+        {
+          "text": "第三個是真實的量子電腦有雜訊，要重複跑很多次；德意志最早的版本也只有一半機會成功，後來才改成百分之百。",
+          "start": 18.728026999999997,
+          "end": 28.344035999999996
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q119-deutsch-ball-machine/audio/slide_08.mp3"
+    },
+    {
+      "page": 12,
+      "kind": "slide",
+      "v1slide": 9,
+      "title": "父子共同實作：先搖球，再跑線路",
+      "duration": 26.784,
+      "sentences": [
+        {
+          "text": "上半場先玩古典版：兩張卡片背面塗紅或綠，爸爸偷偷排好一台機器，你一次翻一張，記下翻幾張才破案。",
+          "start": 0.0,
+          "end": 9.76
+        },
+        {
+          "text": "接著打開線路入門動畫的範例六，上方四個函數輪流選，每一台都按量測一千次，把結果填進判讀表。",
+          "start": 9.94,
+          "end": 18.619999999999997
+        },
+        {
+          "text": "判讀表最右邊一欄寫你的推理：為什麼量子偵探只問一次，就敢說它是常數還是平衡。",
+          "start": 18.799999999999997,
+          "end": 26.568005
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q119-deutsch-ball-machine/audio/slide_09.mp3"
+    },
+    {
+      "page": 13,
+      "kind": "slide",
+      "v1slide": 10,
+      "title": "換你改造：八顆球的搖獎機",
+      "duration": 28.968,
+      "sentences": [
+        {
+          "text": "下半場換你設計八顆球的搖獎機：在教材小程式的改造區寫下八顆球的顏色，先猜全零出現的機率，再執行。",
+          "start": 0.0,
+          "end": 9.4
+        },
+        {
+          "text": "我們真的跑過：全紅、全綠都是百分之百量到全零；兩種一半一半的排法，全零一次都沒出現，結果停在別的位置。",
+          "start": 9.58,
+          "end": 19.700000000000003
+        },
+        {
+          "text": "再試一台沒守承諾的，五綠三紅：全零出現的機率只剩十六分之一，偵探就判不準了，這正是第一個限制。",
+          "start": 19.880000000000003,
+          "end": 28.752018000000003
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q119-deutsch-ball-machine/audio/slide_10.mp3"
+    },
+    {
+      "page": 14,
+      "kind": "slide",
+      "v1slide": 11,
+      "title": "兩小時的偵探行程",
+      "duration": 29.76,
+      "sentences": [
+        {
+          "text": "兩小時的安排是：開場十分鐘，概念示範十五分鐘，接著四十分鐘先用卡片搖球，再用線路跑完四種黑盒子，然後休息十分鐘。",
+          "start": 0.0,
+          "end": 10.816009000000001
+        },
+        {
+          "text": "下半場三十分鐘設計八顆球的版本，說明哪裡互相加強、哪裡互相抵消；接著十分鐘角色互換，由你教爸爸。",
+          "start": 10.996009,
+          "end": 20.732018000000004
+        },
+        {
+          "text": "最後五分鐘錄音總結、替判讀表命名、存一個版本；今天的生活技能是用對的問題一次問清楚。",
+          "start": 20.912018000000003,
+          "end": 29.544036000000006
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q119-deutsch-ball-machine/audio/slide_11.mp3"
+    },
+    {
+      "page": 15,
+      "kind": "slide",
+      "v1slide": 12,
+      "title": "最後一關：教爸爸破案",
+      "duration": 28.392,
+      "sentences": [
+        {
+          "text": "最後一關請不看稿說出：量子偵探問的是什麼問題，為什麼量到零就是常數、量到一就是平衡？",
+          "start": 0.0,
+          "end": 8.368005
+        },
+        {
+          "text": "再指出一個限制：德意志解的是有承諾的玩具問題，古典如果允許出錯也很快，真實的機器還得重複跑很多次。",
+          "start": 8.548005,
+          "end": 17.828005
+        },
+        {
+          "text": "今天的作品是四種黑盒判讀表，下一堂是範例七，查一次就讀出整串密碼；我是陳犀牛，保持好奇，我們下次見！",
+          "start": 18.008005,
+          "end": 28.17601
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q119-deutsch-ball-machine/audio/slide_12.mp3"
+    }
+  ]
+}

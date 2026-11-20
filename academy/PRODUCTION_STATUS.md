@@ -119,10 +119,10 @@
 | Q113 | 讀圖之前：三個約定與今天用到的閘 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q113-reading-conventions-v2` |
 | Q114 | 範例 1：疊加——量子硬幣與 |+⟩、|−⟩ | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q114-plus-minus-coin-v2` |
 | Q115 | 範例 2：干涉——H‑Z‑H = X | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q115-hzh-interference-v2` |
-| Q116 | 範例 3：Bell 態——四種糾纏 | 規劃完成 | — |
-| Q117 | 範例 4：GHZ——CNOT 一路串下去 | 規劃完成 | — |
-| Q118 | 範例 5：隱形傳態——四種 ψ | 規劃完成 | — |
-| Q119 | 範例 6：Deutsch——紅綠球搖獎機 | 規劃完成 | — |
+| Q116 | 範例 3：Bell 態——四種糾纏 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q116-four-bell-states-v2` |
+| Q117 | 範例 4：GHZ——CNOT 一路串下去 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q117-ghz-chain-v2` |
+| Q118 | 範例 5：隱形傳態——四種 ψ | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q118-teleport-four-psi-v2` |
+| Q119 | 範例 6：Deutsch——紅綠球搖獎機 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q119-deutsch-ball-machine-v2` |
 | Q120 | 範例 7：BV——查一次讀出整串密碼 | 規劃完成 | — |
 | Q121 | 範例 8：Grover——對平均值翻轉 | 規劃完成 | — |
 | Q122 | Grover 三位元：轉太多會轉過頭 | 規劃完成 | — |

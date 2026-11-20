@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q119",
+  "version": "Q119-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-20",
+  "episodePath": "academy/episodes/q119-deutsch-ball-machine-v2",
+  "basedOn": "academy/episodes/q119-deutsch-ball-machine（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 512.213,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "skip",
+      "title": "動畫展示：少了最後一步會怎樣",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/basic-circuits.html#deutsch"
+    },
+    {
+      "key": "four",
+      "title": "動畫展示：四台機器的判讀表",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/basic-circuits.html#deutsch"
+    },
+    {
+      "key": "eight",
+      "title": "動畫展示：八顆球的落點",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#interference"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.5,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q119-deutsch-ball-machine-v2-zh-TW.mp4": {
+      "bytes": 86274261,
+      "sha256": "c260f469c488c07ad29daa3881d77a942af22d2efbd267ead3901e5e116b7298"
+    },
+    "q119-deutsch-ball-machine-v2-master.mp4": {
+      "bytes": 88077082,
+      "sha256": "479f3978c26292cf6bb4f2b53a69bc0bb416914890bc7572c9f24ff2e17b54e0"
+    },
+    "narration-only.mp3": {
+      "bytes": 12294868,
+      "sha256": "d021f08024d6c9e53779fd95b2193ce05b7671024b0630c42438881c9c737cee"
+    }
+  },
+  "package": {
+    "filename": "Q119-v2_量子電腦學程_紅綠球搖獎機_動畫展示版_2026-11-20.zip",
+    "bytes": 190570903,
+    "sha256": "39caa1e1222666183f0f23b2170088c37b204dca29a8c99ebcfe378e70d06163",
+    "parts": [
+      {
+        "name": "Q119-v2_量子電腦學程_紅綠球搖獎機_動畫展示版_2026-11-20.zip.part01",
+        "bytes": 29360128,
+        "sha256": "c1c21bf1cd4a12d94de7a6a708048c1c8540f3b31117c7451c7a2a2633ffa1ce"
+      },
+      {
+        "name": "Q119-v2_量子電腦學程_紅綠球搖獎機_動畫展示版_2026-11-20.zip.part02",
+        "bytes": 29360128,
+        "sha256": "16acba3588be46ac7a4a80d4d7b8def23ce22f425130594742b4217bc49f8cde"
+      },
+      {
+        "name": "Q119-v2_量子電腦學程_紅綠球搖獎機_動畫展示版_2026-11-20.zip.part03",
+        "bytes": 29360128,
+        "sha256": "dc8518be985823250e3dd2287d7418b1ef21675e55f559798fd8a4c4695294a5"
+      },
+      {
+        "name": "Q119-v2_量子電腦學程_紅綠球搖獎機_動畫展示版_2026-11-20.zip.part04",
+        "bytes": 29360128,
+        "sha256": "fb5edbde92c6563b70a2ef71069b0cc5d94ba4e864c7bfd65db9f3296f07ab04"
+      },
+      {
+        "name": "Q119-v2_量子電腦學程_紅綠球搖獎機_動畫展示版_2026-11-20.zip.part05",
+        "bytes": 29360128,
+        "sha256": "541aaaa0f539881dbf9d5a25021a33086095a73d8cbc9e3484e32a7c142922ba"
+      },
+      {
+        "name": "Q119-v2_量子電腦學程_紅綠球搖獎機_動畫展示版_2026-11-20.zip.part06",
+        "bytes": 29360128,
+        "sha256": "e2e7915136859154db37d6e9a206648b9d22b9f59c342d932bfd3308e0035263"
+      },
+      {
+        "name": "Q119-v2_量子電腦學程_紅綠球搖獎機_動畫展示版_2026-11-20.zip.part07",
+        "bytes": 14410135,
+        "sha256": "6367e302b89490eb7753c1e6a3031f1441389fca29154c65d6d2099d79312680"
+      }
+    ],
+    "handedOver": "2026-11-20 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1bi-WOn7ipXPr978g1JqWu1DFCPwySyyb",
+    "uploaded": "2026-11-19",
+    "files": [
+      {
+        "name": "Q119 紅綠球搖獎機：範例 6：Deutsch——紅綠球搖獎機（動畫展示版）.mp4",
+        "id": "1zXAjCnFGnVja9VYLlFQcikfihQY9JW7c",
+        "link": "https://drive.google.com/file/d/1zXAjCnFGnVja9VYLlFQcikfihQY9JW7c/view?usp=drivesdk"
+      },
+      {
+        "name": "Q119 紅綠球搖獎機（動畫展示版）簡報.pptx",
+        "id": "1MuPLMoAmlijmLwlj3_6WotXX1_tdiKqG",
+        "link": "https://docs.google.com/presentation/d/1MuPLMoAmlijmLwlj3_6WotXX1_tdiKqG/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true"
+      },
+      {
+        "name": "Q119 紅綠球搖獎機 教材.zip",
+        "id": "10dl4KW7jbcMHE-vL9rU7SnZszEWfwOJ6",
+        "link": "https://drive.google.com/file/d/10dl4KW7jbcMHE-vL9rU7SnZszEWfwOJ6/view?usp=drivesdk"
+      }
+    ],
+    "complete": true
+  }
+}
