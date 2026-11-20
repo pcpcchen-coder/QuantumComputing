@@ -1,0 +1,32 @@
+父子科技學院 量子電腦學程 Q049｜一次量子計算的生命週期（v2・含 3D 動畫展示）
+
+這是依課綱製作的課前教學版，不是實際上課錄音。
+
+父子科技學院量子電腦學程 Q049「一次量子計算的生命週期」新版（v2）：在原本的教學投影片之間，插入本學程 3D 互動動畫的實際操作示範。
+
+這一版新增的動畫展示
+・一站一站走（https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#workflow）
+・一個 shot 的時間帳（https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#workflow）
+・四十奈秒和零秒（https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#pulse）
+
+動畫都可以在瀏覽器直接開啟，自己動手操作。
+
+章節
+00:00 陳犀牛系列片頭
+01:00 一次量子計算的生命週期
+01:30 三步：跟、量、改
+01:55 前三站：程式、轉譯、脈衝
+02:28 後三站：電子、晶片、判別
+03:00 動畫展示：一站一站走
+03:53 比一比：被動重置和主動重置
+04:26 動畫展示：一個 shot 的時間帳
+05:11 時間機器：放慢一百萬倍
+05:37 動畫展示：四十奈秒和零秒
+06:25 看不見的等待
+06:53 時間預算表怎麼填
+07:19 時間機器：駕駛員和計時員
+07:45 換你改造：縮短最慢的一站
+08:11 兩小時的時間機器
+08:44 最後一關：教爸爸走一遍
+
+旁白：微軟 zh-TW-YunJheNeural 神經語音合成（Edge-TTS／Azure 語音服務，同一聲音同一格式）。字幕已燒入影片，開啟 CC 可能重疊。

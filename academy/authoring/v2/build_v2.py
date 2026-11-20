@@ -268,7 +268,7 @@ class Lesson:
                 meta = json.loads(Path(str(self.E / 'assets/visuals' / f'demo_{ref}.webm') + '.json').read_text())
                 hl = self.highlight_pngs(d)
                 n = len(d['sentences'])
-                # 每句旁白亮第幾張卡片；段落可用 'pmap' 自訂（例如動作在第三句才發生），預設同 Q001–Q012
+                # 每句旁白亮第幾張卡片；段落可用 'pmap' 自訂（例如動作在第三句才發生），None＝這句不亮卡；預設同 Q001–Q012
                 pmap = d.get('pmap') or ([min(i, 2) for i in range(n)] if n == 3 else [0, 1, 1, 2])
                 st = [s['start'] for s in tm['sentences']] + [d_]
                 x, y, w, h = [v * 2 for v in PIC]
@@ -276,6 +276,8 @@ class Lesson:
                       f'[0:v][rec]overlay={x}:{y}:shortest=0[b0]']
                 last = 'b0'
                 for i in range(n):
+                    if pmap[i] is None:
+                        continue
                     a, b = st[i], st[i + 1]
                     fc.append(f'[{last}][{2 + pmap[i]}:v]overlay=0:0:enable=\'between(t,{a:.3f},{b:.3f})\'[b{i + 1}]'); last = f'b{i + 1}'
                 fc.append(f'[{last}]format=yuv420p,setsar=1,eq=contrast=1.015:brightness=0.003:saturation=1.03,vignette=angle=PI/4.8:dither=0[v]')

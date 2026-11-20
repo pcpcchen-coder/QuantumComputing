@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q064",
+  "version": "Q064-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-18",
+  "episodePath": "academy/episodes/q064-simulator-project-v2",
+  "basedOn": "academy/episodes/q064-simulator-project（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 523.754,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "grover",
+      "title": "動畫展示：兩顆格羅弗加上雜訊",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#circuit"
+    },
+    {
+      "key": "deutsch",
+      "title": "動畫展示：換一個題目",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/basic-circuits.html#deutsch"
+    },
+    {
+      "key": "grover3",
+      "title": "動畫展示：三顆的理想值",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/basic-circuits.html#grover"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.5,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q064-simulator-project-v2-zh-TW.mp4": {
+      "bytes": 86420954,
+      "sha256": "3ed46134e88cb4bdd05ee84e6d9358c614fe44fc05602aa86b31829334df0b02"
+    },
+    "q064-simulator-project-v2-master.mp4": {
+      "bytes": 88196504,
+      "sha256": "7ccc88468ccfaf1cc1c4d731405f865e699a21a39142c1b27d8a1c7bdab29bf0"
+    },
+    "narration-only.mp3": {
+      "bytes": 12571924,
+      "sha256": "8f109f18ece809a8df1445e0fb137ce3e2e49f894df2654b98f3672220424ce5"
+    }
+  },
+  "package": {
+    "filename": "Q064-v2_量子電腦學程_模擬器跑我的線路_動畫展示版_2026-11-18.zip",
+    "bytes": 191065879,
+    "sha256": "8e5062144c903556689adad03d473d493b108c000100c3405ab0470e686d44dd",
+    "parts": [
+      {
+        "name": "Q064-v2_量子電腦學程_模擬器跑我的線路_動畫展示版_2026-11-18.zip.part01",
+        "bytes": 29360128,
+        "sha256": "a9a48623c257180138f7858d49ff21bdb6fdb44f715fa7a103ac834553d199f1"
+      },
+      {
+        "name": "Q064-v2_量子電腦學程_模擬器跑我的線路_動畫展示版_2026-11-18.zip.part02",
+        "bytes": 29360128,
+        "sha256": "019276405f61edc5d4094cbabb6ae9225fc0c63e1f7d9588354a5b91c5c2eb9e"
+      },
+      {
+        "name": "Q064-v2_量子電腦學程_模擬器跑我的線路_動畫展示版_2026-11-18.zip.part03",
+        "bytes": 29360128,
+        "sha256": "761f3cccd4494447d2bb7960630d7517ef9d38b53dc0f165c8179a01ea645f70"
+      },
+      {
+        "name": "Q064-v2_量子電腦學程_模擬器跑我的線路_動畫展示版_2026-11-18.zip.part04",
+        "bytes": 29360128,
+        "sha256": "aa7995b62ad0b9fafaabbf6577e01306c0d76f212e08d6183d6b5ad4284d021a"
+      },
+      {
+        "name": "Q064-v2_量子電腦學程_模擬器跑我的線路_動畫展示版_2026-11-18.zip.part05",
+        "bytes": 29360128,
+        "sha256": "c94801d701473a7a4c38aec8f8cae842428a2db99038b8892e20f4f7f826a098"
+      },
+      {
+        "name": "Q064-v2_量子電腦學程_模擬器跑我的線路_動畫展示版_2026-11-18.zip.part06",
+        "bytes": 29360128,
+        "sha256": "75d0ab4aefd1a135d69775bf36823666d9ba479d1f6a454f5fcb5650803bb221"
+      },
+      {
+        "name": "Q064-v2_量子電腦學程_模擬器跑我的線路_動畫展示版_2026-11-18.zip.part07",
+        "bytes": 14905111,
+        "sha256": "bbed20007796b7e4cb51f5e455d83728a2e55c09cfa8b4e43b348155c97fb274"
+      }
+    ],
+    "handedOver": "2026-11-18 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1eZLiQdOHdFov3xfVLuJtqORZ4fjXzXXV",
+    "folderName": "量子電腦學程 Q041–Q070 動畫展示版（v2）",
+    "uploadedAt": "2026-11-18",
+    "uploadedBy": "製作代理（Claude，Drive API，上傳後比對 md5）",
+    "files": [
+      {
+        "name": "Q064 模擬器跑我的線路：模組專題：在模擬器跑我的線路（動畫展示版）.mp4",
+        "id": "1PXPcqRAxv4Lo68c3dTWxXJDgAK2A8syp",
+        "size": 86420954,
+        "link": "https://drive.google.com/file/d/1PXPcqRAxv4Lo68c3dTWxXJDgAK2A8syp/view?usp=drivesdk"
+      },
+      {
+        "name": "Q064 模擬器跑我的線路（動畫展示版）簡報.pptx",
+        "id": "1U3UODP2O1dOZUt3_8pHuK1VrZFkUHEY9",
+        "size": 3036420,
+        "link": "https://docs.google.com/presentation/d/1U3UODP2O1dOZUt3_8pHuK1VrZFkUHEY9/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true"
+      },
+      {
+        "name": "Q064 模擬器跑我的線路 教材.zip",
+        "id": "1hRZW9RPpY4koAcKfjr_a9PtMLmwYGYDu",
+        "size": 400480,
+        "link": "https://drive.google.com/file/d/1hRZW9RPpY4koAcKfjr_a9PtMLmwYGYDu/view?usp=drivesdk"
+      }
+    ]
+  }
+}

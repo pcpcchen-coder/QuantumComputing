@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q052",
+  "version": "Q052-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-18",
+  "episodePath": "academy/episodes/q052-pulse-area-phase-v2",
+  "basedOn": "academy/episodes/q052-pulse-area-phase（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 567.402,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "area",
+      "title": "動畫展示：面積一格一格加",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#pulse"
+    },
+    {
+      "key": "axis",
+      "title": "動畫展示：粉紅色的旋轉軸",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#pulse"
+    },
+    {
+      "key": "xy",
+      "title": "動畫展示：兩顆四分之一圈按鈕",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#control"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.6,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q052-pulse-area-phase-v2-zh-TW.mp4": {
+      "bytes": 89770698,
+      "sha256": "a0f7fec2b75940e7ee071ec6694891631c04e2b821d4e1819d74cc6acf65ac2d"
+    },
+    "q052-pulse-area-phase-v2-master.mp4": {
+      "bytes": 91376015,
+      "sha256": "e23f259c430f35d8f3e236779ad630c7808515feaddaec05d8d6eceef15a37fe"
+    },
+    "narration-only.mp3": {
+      "bytes": 13619092,
+      "sha256": "5bd7d2562f6cb6c78a56471e7c83c4948145934b15a81a12e104012f29acee05"
+    }
+  },
+  "package": {
+    "filename": "Q052-v2_量子電腦學程_面積轉角相位定軸_動畫展示版_2026-11-18.zip",
+    "bytes": 198808442,
+    "sha256": "afa92854d4ec02ab1df38599fd24b3d953ed35fe22afbb928cc469808da4b81d",
+    "parts": [
+      {
+        "name": "Q052-v2_量子電腦學程_面積轉角相位定軸_動畫展示版_2026-11-18.zip.part01",
+        "bytes": 29360128,
+        "sha256": "4424ede0647820e19dcdf4bfb79a94a166ae235e10a1c4cbccc09795edc90d10"
+      },
+      {
+        "name": "Q052-v2_量子電腦學程_面積轉角相位定軸_動畫展示版_2026-11-18.zip.part02",
+        "bytes": 29360128,
+        "sha256": "93cf949d4ec716fc0a3d7e43d1ec9e59a1c2cf5ac1f9f83e19905559ebbf7de7"
+      },
+      {
+        "name": "Q052-v2_量子電腦學程_面積轉角相位定軸_動畫展示版_2026-11-18.zip.part03",
+        "bytes": 29360128,
+        "sha256": "fa52ff77e1c23f89e7cff82df0c9a5307304533b06563a7f55d5db861dec640e"
+      },
+      {
+        "name": "Q052-v2_量子電腦學程_面積轉角相位定軸_動畫展示版_2026-11-18.zip.part04",
+        "bytes": 29360128,
+        "sha256": "a92d1a31aa0fe2e0d620a101d51486cb28f91d870947380d34b9843b8db91aa8"
+      },
+      {
+        "name": "Q052-v2_量子電腦學程_面積轉角相位定軸_動畫展示版_2026-11-18.zip.part05",
+        "bytes": 29360128,
+        "sha256": "1f2b1f5f96c5b55631fa345fcb4eb1cdd51009b13a0d6ae4c6c1bd3bb3bda374"
+      },
+      {
+        "name": "Q052-v2_量子電腦學程_面積轉角相位定軸_動畫展示版_2026-11-18.zip.part06",
+        "bytes": 29360128,
+        "sha256": "22c9a058f635edab6483c1ae2b47795fb27d77112b8e49e517eb3d2fabf71ece"
+      },
+      {
+        "name": "Q052-v2_量子電腦學程_面積轉角相位定軸_動畫展示版_2026-11-18.zip.part07",
+        "bytes": 22647674,
+        "sha256": "b849c0a12267e94d0bbdb3c6da82e32c48266f407efe7728cb8f0ec719e78836"
+      }
+    ],
+    "handedOver": "2026-11-18 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1eZLiQdOHdFov3xfVLuJtqORZ4fjXzXXV",
+    "folderName": "量子電腦學程 Q041–Q070 動畫展示版（v2）",
+    "uploadedAt": "2026-11-18",
+    "uploadedBy": "製作代理（Claude，Drive API，上傳後比對 md5）",
+    "files": [
+      {
+        "name": "Q052 面積轉角相位定軸：微波脈衝：面積與相位（動畫展示版）.mp4",
+        "id": "1vf53gKdDkx7w1XLZ2BeWed68er7gbtfO",
+        "size": 89770698,
+        "link": "https://drive.google.com/file/d/1vf53gKdDkx7w1XLZ2BeWed68er7gbtfO/view?usp=drivesdk"
+      },
+      {
+        "name": "Q052 面積轉角相位定軸（動畫展示版）簡報.pptx",
+        "id": "1tO7PVDkUxsMeRzNBIJz4Q4sI78Q-lK9A",
+        "size": 3341964,
+        "link": "https://docs.google.com/presentation/d/1tO7PVDkUxsMeRzNBIJz4Q4sI78Q-lK9A/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true"
+      },
+      {
+        "name": "Q052 面積轉角相位定軸 教材.zip",
+        "id": "10nWTn3GjHKg-vszTHc-hW3fyzNlGJdyb",
+        "size": 343426,
+        "link": "https://drive.google.com/file/d/10nWTn3GjHKg-vszTHc-hW3fyzNlGJdyb/view?usp=drivesdk"
+      }
+    ]
+  }
+}

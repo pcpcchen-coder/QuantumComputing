@@ -14,66 +14,66 @@
 | Q008 | 糾纏：一對神祕骰子 | 規劃完成 | — |
 | Q009 | 量子線路像樂譜 | 規劃完成 | — |
 | Q010 | 第一個量子程式：Bell 態 | 規劃完成 | — |
-| Q011 | 隱形傳態：傳狀態不傳東西 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q011-teleportation-v2` |
-| Q012 | Deutsch–Jozsa：一次看穿 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q012-deutsch-jozsa-v2` |
-| Q013 | Grover：16 個抽屜找寶藏 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q013-grover-treasure-v2` |
-| Q014 | 量子態很怕吵：雜訊與退相干 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q014-noise-decoherence-v2` |
-| Q015 | 迷你專案：量子逃脫室 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q015-quantum-escape-room-v2` |
-| Q016 | 成果發表：我的量子小百科 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q016-quantum-glossary-v2` |
-| Q017 | 為什麼要做「人造原子」 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q017-artificial-atom-v2` |
-| Q018 | 超導：電阻消失、磁鐵懸浮 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q018-superconductivity-v2` |
-| Q019 | Cooper pair 與能隙 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q019-cooper-pair-gap-v2` |
-| Q020 | 磁通量子化 Φ₀ = h/2e | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q020-flux-quantization-v2` |
-| Q021 | 彈簧、單擺與 LC 電路 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q021-spring-pendulum-lc-v2` |
-| Q022 | 量子諧振子：等距的梯子 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q022-equal-ladder-v2` |
-| Q023 | 約瑟夫森接面：超導三明治 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q023-josephson-junction-sandwich-v2` |
-| Q024 | JJ 是非線性電感 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q024-jj-nonlinear-inductor-v2` |
-| Q025 | E_J 與 E_C：兩個能量尺度 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q025-ej-ec-two-energy-scales-v2` |
-| Q026 | 傾斜洗衣板 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q026-tilted-washboard-v2` |
-| Q027 | SQUID：用磁場轉頻率 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q027-squid-flux-tuning-v2` |
-| Q028 | 量子位元家族圖鑑 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q028-qubit-family-cards-v2` |
-| Q029 | 晶片怎麼做：雙角度蒸鍍 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q029-double-angle-evaporation-v2` |
-| Q030 | 晶片長什麼樣子 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q030-chip-layout-v2` |
-| Q031 | 退相干：敵人在哪裡 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q031-decoherence-suspects-v2` |
-| Q032 | 模組發表：設計我的 transmon | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q032-design-my-transmon-v2` |
-| Q033 | 讀取要快、準、不破壞 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q033-readout-requirements-v2` |
-| Q034 | 電路 QED：量子位元＋諧振腔 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q034-circuit-qed-v2` |
-| Q035 | 色散位移 ±χ | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q035-dispersive-shift-v2` |
-| Q036 | IQ 平面：把微波變成一個點 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q036-iq-plane-v2` |
-| Q037 | 單發判別與保真度 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q037-single-shot-fidelity-v2` |
-| Q038 | 讀取鏈：衰減、環行器、放大器 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q038-readout-chain-v2` |
-| Q039 | 讀取設計的取捨 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q039-readout-tradeoffs-v2` |
-| Q040 | 量子電腦 ≠ 量子晶片 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q040-whole-machine-v2` |
-| Q041 | 為什麼要 10 mK | 規劃完成 | — |
-| Q042 | 脈衝管與壓縮機 | 規劃完成 | — |
-| Q043 | 稀釋冷凍原理 | 規劃完成 | — |
-| Q044 | 降溫一次要幾天 | 規劃完成 | — |
-| Q045 | 低溫佈線與熱負載 | 規劃完成 | — |
-| Q046 | 控制電子與時脈 | 規劃完成 | — |
-| Q047 | 軟體、監控與聯鎖 | 規劃完成 | — |
-| Q048 | 從零到上線 | 規劃完成 | — |
-| Q049 | 一次量子計算的生命週期 | 規劃完成 | — |
-| Q050 | 初始化與校準 | 規劃完成 | — |
-| Q051 | 看懂後端校準資料 | 規劃完成 | — |
-| Q052 | 微波脈衝：面積與相位 | 規劃完成 | — |
-| Q053 | DRAG 與虛擬 Z | 規劃完成 | — |
-| Q054 | 任意旋轉 = 三個旋轉 | 規劃完成 | — |
-| Q055 | 兩位元閘：CZ 與交叉共振 | 規劃完成 | — |
-| Q056 | 轉譯：邏輯線路到硬體 | 規劃完成 | — |
-| Q057 | Qiskit 實作：Bell 與 GHZ | 規劃完成 | — |
-| Q058 | 量測基底與期望值 | 規劃完成 | — |
-| Q059 | shots、統計誤差與讀取誤差緩解 | 規劃完成 | — |
-| Q060 | 動態線路 | 規劃完成 | — |
-| Q061 | QFT 與相位估計 | 規劃完成 | — |
-| Q062 | Shor：用干涉找週期 | 規劃完成 | — |
-| Q063 | 快在哪？加速的等級 | 規劃完成 | — |
-| Q064 | 模組專題：在模擬器跑我的線路 | 規劃完成 | — |
-| Q065 | 人造原子 vs 真的原子 | 規劃完成 | — |
-| Q066 | Paul 阱：旋轉鞍形電場 | 規劃完成 | — |
-| Q067 | 離子阱系統全景 | 規劃完成 | — |
-| Q068 | ¹⁷¹Yb⁺ 量子位元與雷射冷卻 | 規劃完成 | — |
-| Q069 | 離子鏈的集體振動 | 規劃完成 | — |
-| Q070 | Mølmer–Sørensen 閘 | 規劃完成 | — |
+| Q011 | 隱形傳態：傳狀態不傳東西 | 規劃完成 | — |
+| Q012 | Deutsch–Jozsa：一次看穿 | 規劃完成 | — |
+| Q013 | Grover：16 個抽屜找寶藏 | 規劃完成 | — |
+| Q014 | 量子態很怕吵：雜訊與退相干 | 規劃完成 | — |
+| Q015 | 迷你專案：量子逃脫室 | 規劃完成 | — |
+| Q016 | 成果發表：我的量子小百科 | 規劃完成 | — |
+| Q017 | 為什麼要做「人造原子」 | 規劃完成 | — |
+| Q018 | 超導：電阻消失、磁鐵懸浮 | 規劃完成 | — |
+| Q019 | Cooper pair 與能隙 | 規劃完成 | — |
+| Q020 | 磁通量子化 Φ₀ = h/2e | 規劃完成 | — |
+| Q021 | 彈簧、單擺與 LC 電路 | 規劃完成 | — |
+| Q022 | 量子諧振子：等距的梯子 | 規劃完成 | — |
+| Q023 | 約瑟夫森接面：超導三明治 | 規劃完成 | — |
+| Q024 | JJ 是非線性電感 | 規劃完成 | — |
+| Q025 | E_J 與 E_C：兩個能量尺度 | 規劃完成 | — |
+| Q026 | 傾斜洗衣板 | 規劃完成 | — |
+| Q027 | SQUID：用磁場轉頻率 | 規劃完成 | — |
+| Q028 | 量子位元家族圖鑑 | 規劃完成 | — |
+| Q029 | 晶片怎麼做：雙角度蒸鍍 | 規劃完成 | — |
+| Q030 | 晶片長什麼樣子 | 規劃完成 | — |
+| Q031 | 退相干：敵人在哪裡 | 規劃完成 | — |
+| Q032 | 模組發表：設計我的 transmon | 規劃完成 | — |
+| Q033 | 讀取要快、準、不破壞 | 規劃完成 | — |
+| Q034 | 電路 QED：量子位元＋諧振腔 | 規劃完成 | — |
+| Q035 | 色散位移 ±χ | 規劃完成 | — |
+| Q036 | IQ 平面：把微波變成一個點 | 規劃完成 | — |
+| Q037 | 單發判別與保真度 | 規劃完成 | — |
+| Q038 | 讀取鏈：衰減、環行器、放大器 | 規劃完成 | — |
+| Q039 | 讀取設計的取捨 | 規劃完成 | — |
+| Q040 | 量子電腦 ≠ 量子晶片 | 規劃完成 | — |
+| Q041 | 為什麼要 10 mK | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q041-why-10mk-v2` |
+| Q042 | 脈衝管與壓縮機 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q042-pulse-tube-v2` |
+| Q043 | 稀釋冷凍原理 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q043-dilution-refrigerator-v2` |
+| Q044 | 降溫一次要幾天 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q044-cooldown-days-v2` |
+| Q045 | 低溫佈線與熱負載 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q045-cryo-wiring-v2` |
+| Q046 | 控制電子與時脈 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q046-control-clock-v2` |
+| Q047 | 軟體、監控與聯鎖 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q047-software-monitor-v2` |
+| Q048 | 從零到上線 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q048-zero-to-online-v2` |
+| Q049 | 一次量子計算的生命週期 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q049-job-lifecycle-v2` |
+| Q050 | 初始化與校準 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q050-init-calibration-v2` |
+| Q051 | 看懂後端校準資料 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q051-backend-calibration-v2` |
+| Q052 | 微波脈衝：面積與相位 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q052-pulse-area-phase-v2` |
+| Q053 | DRAG 與虛擬 Z | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q053-drag-virtual-z-v2` |
+| Q054 | 任意旋轉 = 三個旋轉 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q054-zyz-decomposition-v2` |
+| Q055 | 兩位元閘：CZ 與交叉共振 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q055-cz-cross-resonance-v2` |
+| Q056 | 轉譯：邏輯線路到硬體 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q056-transpile-routing-v2` |
+| Q057 | Qiskit 實作：Bell 與 GHZ | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q057-qiskit-bell-ghz-v2` |
+| Q058 | 量測基底與期望值 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q058-basis-expectation-v2` |
+| Q059 | shots、統計誤差與讀取誤差緩解 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q059-shots-readout-mitigation-v2` |
+| Q060 | 動態線路 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q060-dynamic-circuits-v2` |
+| Q061 | QFT 與相位估計 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q061-qft-phase-estimation-v2` |
+| Q062 | Shor：用干涉找週期 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q062-shor-period-v2` |
+| Q063 | 快在哪？加速的等級 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q063-speedup-levels-v2` |
+| Q064 | 模組專題：在模擬器跑我的線路 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q064-simulator-project-v2` |
+| Q065 | 人造原子 vs 真的原子 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q065-artificial-vs-real-atoms-v2` |
+| Q066 | Paul 阱：旋轉鞍形電場 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q066-paul-trap-v2` |
+| Q067 | 離子阱系統全景 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q067-ion-trap-system-v2` |
+| Q068 | ¹⁷¹Yb⁺ 量子位元與雷射冷卻 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q068-yb-qubit-cooling-v2` |
+| Q069 | 離子鏈的集體振動 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q069-ion-chain-modes-v2` |
+| Q070 | Mølmer–Sørensen 閘 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q070-molmer-sorensen-gate-v2` |
 | Q071 | 螢光讀取與 QCCD | 規劃完成 | — |
 | Q072 | 磁光阱與光鑷 | 規劃完成 | — |
 | Q073 | 裝載與重排 | 規劃完成 | — |

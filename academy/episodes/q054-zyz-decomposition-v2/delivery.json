@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q054",
+  "version": "Q054-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-18",
+  "episodePath": "academy/episodes/q054-zyz-decomposition-v2",
+  "basedOn": "academy/episodes/q054-zyz-decomposition（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 591.0,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "hsplit",
+      "title": "動畫展示：兩步追上哈達瑪閘",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#gates"
+    },
+    {
+      "key": "tphase",
+      "title": "動畫展示：相位閘就是繞垂直軸",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#gates"
+    },
+    {
+      "key": "duel",
+      "title": "動畫展示：一場程式對決",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#gates"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.7,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q054-zyz-decomposition-v2-zh-TW.mp4": {
+      "bytes": 91859582,
+      "sha256": "9e0f57b2ccc38e8d3690b9dfa51f1ec93f389da16a04bb843aca96e84162ca1c"
+    },
+    "q054-zyz-decomposition-v2-master.mp4": {
+      "bytes": 92720085,
+      "sha256": "cea26536033ba29f7315387fe56428d6de8dbac78fc33d541eb13ced185ecc53"
+    },
+    "narration-only.mp3": {
+      "bytes": 14185300,
+      "sha256": "ec75bae8f524036e087a5d5fcf15178391e512062ad8586e2c66801e20bddd18"
+    }
+  },
+  "package": {
+    "filename": "Q054-v2_量子電腦學程_任意旋轉拆三步_動畫展示版_2026-11-18.zip",
+    "bytes": 202835646,
+    "sha256": "47cb2dbe4ca99a76ba0bd540d81deaf8c1171eee2fd76f37419b69c6fa8e94d1",
+    "parts": [
+      {
+        "name": "Q054-v2_量子電腦學程_任意旋轉拆三步_動畫展示版_2026-11-18.zip.part01",
+        "bytes": 29360128,
+        "sha256": "b1c5dd8ecbbbb811331378d41760f46b9fe728047fbe501e75086bdc01b4afea"
+      },
+      {
+        "name": "Q054-v2_量子電腦學程_任意旋轉拆三步_動畫展示版_2026-11-18.zip.part02",
+        "bytes": 29360128,
+        "sha256": "35849d6b301022c8dc860052be23ea5cbf3f2e89dd199b7ad6c427bc7585aa42"
+      },
+      {
+        "name": "Q054-v2_量子電腦學程_任意旋轉拆三步_動畫展示版_2026-11-18.zip.part03",
+        "bytes": 29360128,
+        "sha256": "c3e9f095c12f77ef80c660cd8b6fc8c67089a58a47c58a34da1b164e3459788b"
+      },
+      {
+        "name": "Q054-v2_量子電腦學程_任意旋轉拆三步_動畫展示版_2026-11-18.zip.part04",
+        "bytes": 29360128,
+        "sha256": "71dc6c9009a7b5bc667e8c7b5f7d7f38104832dfa34cd2aee8d17c5de7fc2a79"
+      },
+      {
+        "name": "Q054-v2_量子電腦學程_任意旋轉拆三步_動畫展示版_2026-11-18.zip.part05",
+        "bytes": 29360128,
+        "sha256": "dbd5336e2f5137bdadabffe00d06bc77088d754061c83da6b36ff66de43039a8"
+      },
+      {
+        "name": "Q054-v2_量子電腦學程_任意旋轉拆三步_動畫展示版_2026-11-18.zip.part06",
+        "bytes": 29360128,
+        "sha256": "0ea5c156f4bb7d6fbaa4ca9227882ac13c6d05f14ec781e49cf573861515edcf"
+      },
+      {
+        "name": "Q054-v2_量子電腦學程_任意旋轉拆三步_動畫展示版_2026-11-18.zip.part07",
+        "bytes": 26674878,
+        "sha256": "aeb5fec561582cd939746acb6a88579884e05f56f8965efa4b355aab105d1aa6"
+      }
+    ],
+    "handedOver": "2026-11-18 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1eZLiQdOHdFov3xfVLuJtqORZ4fjXzXXV",
+    "folderName": "量子電腦學程 Q041–Q070 動畫展示版（v2）",
+    "uploadedAt": "2026-11-18",
+    "uploadedBy": "製作代理（Claude，Drive API，上傳後比對 md5）",
+    "files": [
+      {
+        "name": "Q054 任意旋轉拆三步：任意旋轉 = 三個旋轉（動畫展示版）.mp4",
+        "id": "1KLN_pCcdefHxw50XOm32I3Iglh_o6Dlv",
+        "size": 91859582,
+        "link": "https://drive.google.com/file/d/1KLN_pCcdefHxw50XOm32I3Iglh_o6Dlv/view?usp=drivesdk"
+      },
+      {
+        "name": "Q054 任意旋轉拆三步（動畫展示版）簡報.pptx",
+        "id": "1lBXffHE7I_dwbsuC8kjHznT_WYqhVlJ8",
+        "size": 3311047,
+        "link": "https://docs.google.com/presentation/d/1lBXffHE7I_dwbsuC8kjHznT_WYqhVlJ8/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true"
+      },
+      {
+        "name": "Q054 任意旋轉拆三步 教材.zip",
+        "id": "1mrn1jwZvEVg_30fW3xBHXDl6V_1mMMNm",
+        "size": 394599,
+        "link": "https://drive.google.com/file/d/1mrn1jwZvEVg_30fW3xBHXDl6V_1mMMNm/view?usp=drivesdk"
+      }
+    ]
+  }
+}

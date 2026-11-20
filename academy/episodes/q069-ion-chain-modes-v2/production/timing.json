@@ -1,0 +1,399 @@
+{
+  "version": 2,
+  "opening": 60.277,
+  "scenes": [
+    {
+      "page": 1,
+      "kind": "slide",
+      "v1slide": 1,
+      "title": "離子鏈的集體振動",
+      "duration": 33.624,
+      "sentences": [
+        {
+          "text": "歡迎回到父子科技學院的量子電腦學程，我是陳犀牛，今天是量子第六十九堂，離子鏈的集體振動，這是依課綱製作的課前教學版，並非實際上課錄音。",
+          "start": 0.0,
+          "end": 12.328005000000001
+        },
+        {
+          "text": "上一堂把一顆鐿一七一離子變成量子位元，學會冷卻、歸零、轉動和讀取；可是只有一顆離子，還做不了兩位元閘。",
+          "start": 12.508005,
+          "end": 22.964014
+        },
+        {
+          "text": "今天的問題是：阱裡的離子彼此不會碰在一起，它們要怎麼傳話？答案就藏在整條離子鏈一起振動的方式裡。",
+          "start": 23.144014,
+          "end": 33.408027999999995
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q069-ion-chain-modes/audio/slide_01.mp3"
+    },
+    {
+      "page": 2,
+      "kind": "slide",
+      "v1slide": 2,
+      "title": "三步：排隊、振動、傳話",
+      "duration": 28.2,
+      "sentences": [
+        {
+          "text": "今天的好玩機制是角色扮演：全家排成一列手拉手，變成一條人肉離子鏈，用身體演出離子怎麼一起振動。",
+          "start": 0.0,
+          "end": 9.232018
+        },
+        {
+          "text": "我們分三步走：先看離子怎麼排成一列，再認識整條鏈一起振動的正規模，最後看振動怎麼變成量子匯流排。",
+          "start": 9.412018,
+          "end": 18.908027
+        },
+        {
+          "text": "今天的作品是一張正規模觀察表，記下每一種振動的樣子和頻率，還有離子變多時，頻率怎麼擠在一起。",
+          "start": 19.088027,
+          "end": 27.984036000000003
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q069-ion-chain-modes/audio/slide_02.mp3"
+    },
+    {
+      "page": 3,
+      "kind": "slide",
+      "v1slide": 3,
+      "title": "離子為什麼排成一列",
+      "duration": 28.608,
+      "sentences": [
+        {
+          "text": "先看離子怎麼排隊：線性阱沿著鏈的方向像一個碗，把每顆離子往中間推；可是離子都帶正電，又會彼此排斥。",
+          "start": 0.0,
+          "end": 9.568005
+        },
+        {
+          "text": "往中間的推力和互相的排斥力平衡時，離子就排成一直線；算出來的位置中間比較密、兩端比較疏，並不是等距離。",
+          "start": 9.748005,
+          "end": 19.700023
+        },
+        {
+          "text": "離子之間的庫侖力就像彈簧，把一串珠子連在一起；推動其中一顆，旁邊的離子也會跟著動起來。",
+          "start": 19.880023,
+          "end": 28.392041
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q069-ion-chain-modes/audio/slide_03.mp3"
+    },
+    {
+      "page": 4,
+      "kind": "slide",
+      "v1slide": 4,
+      "title": "正規模：整條鏈的固定舞步",
+      "duration": 26.208,
+      "sentences": [
+        {
+          "text": "這種一起動的方式，物理上叫做正規模：所有離子用同一個頻率來回擺動，彼此的步調關係固定不變。",
+          "start": 0.0,
+          "end": 8.848005
+        },
+        {
+          "text": "有幾顆離子，沿著鏈的方向就有幾個正規模；五顆離子就有五個，每個模都有自己的頻率和舞步。",
+          "start": 9.028005,
+          "end": 17.348005
+        },
+        {
+          "text": "頻率最低的是質心模，頻率就等於阱的軸向頻率；第二低的叫呼吸模，頻率是軸向頻率的根號三倍。",
+          "start": 17.528005,
+          "end": 25.992019
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q069-ion-chain-modes/audio/slide_04.mp3"
+    },
+    {
+      "page": 5,
+      "kind": "slide",
+      "v1slide": 5,
+      "title": "比一比：質心模和呼吸模",
+      "duration": 26.304,
+      "sentences": [
+        {
+          "text": "來比一比這兩個最重要的模：質心模像整排人一起左右走，每個人的步伐一樣大，方向也一樣。",
+          "start": 0.0,
+          "end": 7.984014
+        },
+        {
+          "text": "呼吸模像整排人一起吸氣吐氣：左半邊往左時，右半邊就往右；人數是單數時，正中間那位站著不動。",
+          "start": 8.164014,
+          "end": 17.276032
+        },
+        {
+          "text": "不管鏈上有幾顆離子，呼吸模的頻率都是軸向頻率的根號三倍，大約一點七三倍，和離子數無關。",
+          "start": 17.456032,
+          "end": 26.088050000000003
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q069-ion-chain-modes/audio/slide_05.mp3"
+    },
+    {
+      "page": 6,
+      "kind": "demo",
+      "demo": "combreath",
+      "title": "動畫展示：質心模和呼吸模",
+      "duration": 36.72,
+      "sentences": [
+        {
+          "text": "打開離子阱動畫的離子鏈集體振動場景：五顆離子排成一列，每顆上方都有一支青色箭頭，五支大小相同、指向同一邊。",
+          "start": 0.0,
+          "end": 10.336009
+        },
+        {
+          "text": "上方的金色標籤寫著質心模，頻率是一點零零零倍軸向頻率；五顆離子正跟著箭頭，一起左右來回擺。",
+          "start": 10.516009,
+          "end": 19.412018000000003
+        },
+        {
+          "text": "換成第二個模：中間那顆的箭頭不見了，左右兩邊的箭頭方向相反，而且越外面的箭頭越大。",
+          "start": 19.592018000000003,
+          "end": 27.696032000000002
+        },
+        {
+          "text": "標籤換成呼吸模，頻率一點七三二，大約根號三倍；右下頻率譜裡的白線，也從一移到了根號三。",
+          "start": 27.876032000000002,
+          "end": 36.508050000000004
+        }
+      ],
+      "audio": "audio/demo_combreath.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/atoms.html#modes"
+    },
+    {
+      "page": 7,
+      "kind": "slide",
+      "v1slide": 6,
+      "title": "量子匯流排：振動幫離子傳話",
+      "duration": 27.096,
+      "sentences": [
+        {
+          "text": "振動為什麼重要？離子彼此隔著一段距離，不會直接碰在一起，卻共用同一組振動模。",
+          "start": 0.0,
+          "end": 8.68
+        },
+        {
+          "text": "一九九五年，西拉克和佐勒提出：先用雷射把一顆離子的狀態寫進整條鏈的振動，振動再去影響另一顆離子。",
+          "start": 8.86,
+          "end": 18.02
+        },
+        {
+          "text": "所以振動就像大家共用的量子匯流排，同一條鏈上任意兩顆離子都能直接做兩位元閘，這叫做全連接。",
+          "start": 18.2,
+          "end": 26.88
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q069-ion-chain-modes/audio/slide_06.mp3"
+    },
+    {
+      "page": 8,
+      "kind": "slide",
+      "v1slide": 7,
+      "title": "軸向模與徑向模：雷射要對準頻率",
+      "duration": 25.872,
+      "sentences": [
+        {
+          "text": "離子不只沿著鏈的方向擺，也能垂直於鏈上下擺，這叫徑向模；徑向的阱比較緊，頻率比軸向高很多。",
+          "start": 0.0,
+          "end": 8.824014
+        },
+        {
+          "text": "徑向模的排法剛好倒過來：質心模的頻率最高，等於徑向頻率，其他的模一個一個排在它的下面。",
+          "start": 9.004014,
+          "end": 17.372019
+        },
+        {
+          "text": "雷射要推動某一個模，頻率就得對準那個模；所以每個模的頻率必須分得夠開，雷射才不會推錯。",
+          "start": 17.552019,
+          "end": 25.656033
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q069-ion-chain-modes/audio/slide_07.mp3"
+    },
+    {
+      "page": 9,
+      "kind": "demo",
+      "demo": "radial",
+      "title": "動畫展示：上下擺的徑向模",
+      "duration": 37.68,
+      "sentences": [
+        {
+          "text": "回到離子鏈場景，按徑向模態：箭頭全部轉成上下方向，標籤寫著徑向質心模，五顆離子一起上下擺。",
+          "start": 0.0,
+          "end": 9.544014
+        },
+        {
+          "text": "徑向質心模的頻率是五點零零零，等於讀數寫的徑向頻率；頻率譜上，這條白線就是最右邊的紅線。",
+          "start": 9.724014,
+          "end": 18.620023000000003
+        },
+        {
+          "text": "再換成第二個徑向模，叫傾斜模：中間不動，左邊箭頭朝下、右邊朝上，像翹翹板，頻率四點八九九。",
+          "start": 18.800023000000003,
+          "end": 28.824037000000004
+        },
+        {
+          "text": "頻率譜的紅線一條比一條低，旁邊的字寫著徑向模擠在徑向頻率下方；雷射得從這一排裡挑出一條。",
+          "start": 29.004037000000004,
+          "end": 37.468051
+        }
+      ],
+      "audio": "audio/demo_radial.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/atoms.html#modes"
+    },
+    {
+      "page": 10,
+      "kind": "slide",
+      "v1slide": 8,
+      "title": "擴展的代價：模越來越擠",
+      "duration": 26.064,
+      "sentences": [
+        {
+          "text": "可是離子越多，模也越多；這些模的頻率擠得越來越近，雷射越來越難只推其中一個。",
+          "start": 0.0,
+          "end": 7.504014000000001
+        },
+        {
+          "text": "整條鏈越重，閘也越慢，加熱和串擾都更嚴重；徑向束縛不夠緊時，鏈甚至會折成鋸齒形。",
+          "start": 7.684014,
+          "end": 16.364014
+        },
+        {
+          "text": "所以實務上一條鏈大約二、三十顆以內最好用；要更多量子位元，就把鏈拆開，靠搬運或光子互連接起來。",
+          "start": 16.544014,
+          "end": 25.848028
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q069-ion-chain-modes/audio/slide_08.mp3"
+    },
+    {
+      "page": 11,
+      "kind": "slide",
+      "v1slide": 9,
+      "title": "人肉離子鏈：指揮和離子",
+      "duration": 27.576,
+      "sentences": [
+        {
+          "text": "父子共同實作是人肉離子鏈：全家排成一列手拉手，手臂就是彈簧，每個人都是一顆離子。",
+          "start": 0.0,
+          "end": 8.224014
+        },
+        {
+          "text": "指揮喊質心，大家一起往左、往右踏步；喊呼吸，左右兩半同時往外、再同時往內，正中間的人站穩不動。",
+          "start": 8.404014,
+          "end": 18.452019
+        },
+        {
+          "text": "每演完一個模，就在觀察表畫下每個人的箭頭；再輕輕推一下最旁邊的人，看看動作怎麼傳到整排。",
+          "start": 18.632019,
+          "end": 27.360024
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q069-ion-chain-modes/audio/slide_09.mp3"
+    },
+    {
+      "page": 12,
+      "kind": "slide",
+      "v1slide": 10,
+      "title": "換你改造：模越來越擠",
+      "duration": 25.632,
+      "sentences": [
+        {
+          "text": "下半場換你改造：在動畫裡把離子數從兩顆一路加到十二顆，看右下角的頻率譜怎麼變。",
+          "start": 0.0,
+          "end": 7.696009
+        },
+        {
+          "text": "藍色的軸向線越來越多、往右散開，可是質心那條永遠在一，呼吸那條永遠在根號三。",
+          "start": 7.876009,
+          "end": 15.548027000000001
+        },
+        {
+          "text": "把每次的離子數、最高的軸向頻率和最低的徑向頻率記進觀察表，再想一想：模越擠，雷射為什麼越難對準？",
+          "start": 15.728027,
+          "end": 25.416032
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q069-ion-chain-modes/audio/slide_10.mp3"
+    },
+    {
+      "page": 13,
+      "kind": "demo",
+      "demo": "crowd",
+      "title": "動畫展示：離子越多，模越擠",
+      "duration": 35.976,
+      "sentences": [
+        {
+          "text": "最後來增加離子數：左下讀數先寫著五顆離子，相鄰徑向模的最小間距是零點一零一倍軸向頻率。",
+          "start": 0.0,
+          "end": 8.44
+        },
+        {
+          "text": "把離子數加到十二顆：鏈上擠滿了離子，下方跳出警告，寫著頻率比太小，鏈會折成鋸齒形。",
+          "start": 8.62,
+          "end": 17.228005
+        },
+        {
+          "text": "把徑向和軸向的頻率比從五拉到十，警告消失了，十二條紅線全擠到頻率譜右邊的一小段。",
+          "start": 17.408005,
+          "end": 25.656010000000002
+        },
+        {
+          "text": "讀數的最小間距是零點零五零，比五顆離子時的零點一零一少了一半：離子越多，模越擠，雷射越難只推其中一個。",
+          "start": 25.83601,
+          "end": 35.764015
+        }
+      ],
+      "audio": "audio/demo_crowd.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/atoms.html#modes"
+    },
+    {
+      "page": 14,
+      "kind": "slide",
+      "v1slide": 11,
+      "title": "兩小時的人肉離子鏈",
+      "duration": 29.16,
+      "sentences": [
+        {
+          "text": "兩小時的安排是：開場十分鐘，概念示範十五分鐘，接著四十分鐘全家演人肉離子鏈、填觀察表，然後休息十分鐘。",
+          "start": 0.0,
+          "end": 10.144014
+        },
+        {
+          "text": "下半場三十分鐘，自己在動畫裡增加離子數，觀察頻率怎麼擠在一起；接著十分鐘交換角色，由你教爸爸。",
+          "start": 10.324014,
+          "end": 19.700023
+        },
+        {
+          "text": "最後五分鐘錄音總結，替觀察表取名字，存一個版本；今天的生活技能是分辨群體運動和個別運動。",
+          "start": 19.880023,
+          "end": 28.944037
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q069-ion-chain-modes/audio/slide_11.mp3"
+    },
+    {
+      "page": 15,
+      "kind": "slide",
+      "v1slide": 12,
+      "title": "最後一關：教爸爸離子鏈的振動",
+      "duration": 31.032,
+      "sentences": [
+        {
+          "text": "最後一關，請不看稿說出：離子為什麼會一起振動？質心模和呼吸模怎麼動？振動又怎麼讓兩顆離子傳話？",
+          "start": 0.0,
+          "end": 10.96
+        },
+        {
+          "text": "再指出一個限制：離子越多，模式越擠，閘越難做得又快又準；所以一條鏈不能無限制地加離子。",
+          "start": 11.14,
+          "end": 19.82
+        },
+        {
+          "text": "今天的作品是正規模觀察表；下一堂是莫爾默索倫森閘，用振動讓兩顆離子糾纏；我是陳犀牛，保持好奇，我們下次見！",
+          "start": 20.0,
+          "end": 30.816009
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q069-ion-chain-modes/audio/slide_12.mp3"
+    }
+  ]
+}

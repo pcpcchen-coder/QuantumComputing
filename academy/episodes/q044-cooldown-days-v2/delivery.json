@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q044",
+  "version": "Q044-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-18",
+  "episodePath": "academy/episodes/q044-cooldown-days-v2",
+  "basedOn": "academy/episodes/q044-cooldown-days（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 480.341,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "precool",
+      "title": "動畫展示：抽真空和預冷",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/peripherals.html#cooldown"
+    },
+    {
+      "key": "condense",
+      "title": "動畫展示：凝結和稀釋循環",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/peripherals.html#cooldown"
+    },
+    {
+      "key": "outage",
+      "title": "動畫展示：停電兩分鐘換好幾天",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/power1000.html#outage"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.4,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q044-cooldown-days-v2-zh-TW.mp4": {
+      "bytes": 84180388,
+      "sha256": "f6288b29ec95f19927a401a31fc7e57608c89cf6ccb07faa17832e9b06e363d1"
+    },
+    "q044-cooldown-days-v2-master.mp4": {
+      "bytes": 86328147,
+      "sha256": "ce130ab936ac54b524f503f1f92a75e678dfddb23a92c252b390fe88d6f24686"
+    },
+    "narration-only.mp3": {
+      "bytes": 11529940,
+      "sha256": "c91434cb8a8ba7b2698d938f4eb784699081c9b643db22c3f589481b9c6f8d5a"
+    }
+  },
+  "package": {
+    "filename": "Q044-v2_量子電腦學程_降溫要幾天_動畫展示版_2026-11-18.zip",
+    "bytes": 186043867,
+    "sha256": "f59aa9bb0d1b274fe9b54ed76498bcb9d0056b8aee90368d1e898f9ada1d9e24",
+    "parts": [
+      {
+        "name": "Q044-v2_量子電腦學程_降溫要幾天_動畫展示版_2026-11-18.zip.part01",
+        "bytes": 29360128,
+        "sha256": "364992bcbd11fd470fe31c521f0635c51b6a7050d6c8029cf56eaa509cc80973"
+      },
+      {
+        "name": "Q044-v2_量子電腦學程_降溫要幾天_動畫展示版_2026-11-18.zip.part02",
+        "bytes": 29360128,
+        "sha256": "8f53010d26e0c10bc110ffdd79db605e0df127353eb44223a1fc7380e20fdda7"
+      },
+      {
+        "name": "Q044-v2_量子電腦學程_降溫要幾天_動畫展示版_2026-11-18.zip.part03",
+        "bytes": 29360128,
+        "sha256": "0bd9a72a70d1ba8bab10095a63d07fcd4d836c2f02409ba1e5779e3af1044c94"
+      },
+      {
+        "name": "Q044-v2_量子電腦學程_降溫要幾天_動畫展示版_2026-11-18.zip.part04",
+        "bytes": 29360128,
+        "sha256": "64a6f208a10f8f89dd695108d48cdaf0303acbb5dc1a9c649c7e8ea490f9fd08"
+      },
+      {
+        "name": "Q044-v2_量子電腦學程_降溫要幾天_動畫展示版_2026-11-18.zip.part05",
+        "bytes": 29360128,
+        "sha256": "e86ab887ed326392d5518bd6203f922a84ffb25633828a5603b1652c5157ddc6"
+      },
+      {
+        "name": "Q044-v2_量子電腦學程_降溫要幾天_動畫展示版_2026-11-18.zip.part06",
+        "bytes": 29360128,
+        "sha256": "3cf34794a2b4f4ebec89d1e774dd2e072e2318b37ad38a0ddf819ebdc23ab37c"
+      },
+      {
+        "name": "Q044-v2_量子電腦學程_降溫要幾天_動畫展示版_2026-11-18.zip.part07",
+        "bytes": 9883099,
+        "sha256": "0c6e51ff05c6d5e42c6f4c0f6c9d8deeb1d2bd1b547a231a39c07df4692212b0"
+      }
+    ],
+    "handedOver": "2026-11-18 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1eZLiQdOHdFov3xfVLuJtqORZ4fjXzXXV",
+    "folderName": "量子電腦學程 Q041–Q070 動畫展示版（v2）",
+    "uploadedAt": "2026-11-18",
+    "uploadedBy": "製作代理（Claude，Drive API，上傳後比對 md5）",
+    "files": [
+      {
+        "name": "Q044 降溫要幾天：降溫一次要幾天（動畫展示版）.mp4",
+        "id": "17fG9aWZzgJbVE08ai4xHL6Hxd2GDbEYf",
+        "size": 84180388,
+        "link": "https://drive.google.com/file/d/17fG9aWZzgJbVE08ai4xHL6Hxd2GDbEYf/view?usp=drivesdk"
+      },
+      {
+        "name": "Q044 降溫要幾天（動畫展示版）簡報.pptx",
+        "id": "1GolVquVtiIJm_xBpKTmFg2cFNar_Y3Or",
+        "size": 3278662,
+        "link": "https://docs.google.com/presentation/d/1GolVquVtiIJm_xBpKTmFg2cFNar_Y3Or/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true"
+      },
+      {
+        "name": "Q044 降溫要幾天 教材.zip",
+        "id": "1NkgQCUoH3RZrVrxlfkvNbo34Q25ueX6u",
+        "size": 458025,
+        "link": "https://drive.google.com/file/d/1NkgQCUoH3RZrVrxlfkvNbo34Q25ueX6u/view?usp=drivesdk"
+      }
+    ]
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q062",
+  "version": "Q062-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-18",
+  "episodePath": "academy/episodes/q062-shor-period-v2",
+  "basedOn": "academy/episodes/q062-shor-period（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 507.904,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "boss15",
+      "title": "動畫展示：第一關實戰",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#shor"
+    },
+    {
+      "key": "boss21",
+      "title": "動畫展示：第二關魔王二十一",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#shor"
+    },
+    {
+      "key": "counter",
+      "title": "動畫展示：魔王反擊與再戰",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#shor"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.5,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q062-shor-period-v2-zh-TW.mp4": {
+      "bytes": 86382658,
+      "sha256": "581842c127674607c7160592976ac82cc5c512f68262cc90c9231359ef700f92"
+    },
+    "q062-shor-period-v2-master.mp4": {
+      "bytes": 88849521,
+      "sha256": "156c1459ca1313b88e4ad191349c1f68f60186dc76f142c290109e8a6a6f0e4a"
+    },
+    "narration-only.mp3": {
+      "bytes": 12191188,
+      "sha256": "f80091672dd23f63b4688b87f2efc420a8237dcfa79525f63d40322d904e2c88"
+    }
+  },
+  "package": {
+    "filename": "Q062-v2_量子電腦學程_Shor 魔王戰_動畫展示版_2026-11-18.zip",
+    "bytes": 191445867,
+    "sha256": "768d4834925fefea0241baeda04cf56527d6340187cf9000e6d91877fb676cff",
+    "parts": [
+      {
+        "name": "Q062-v2_量子電腦學程_Shor 魔王戰_動畫展示版_2026-11-18.zip.part01",
+        "bytes": 29360128,
+        "sha256": "57b53de33c347dfdbcbeb88f483e9c719de614b206ca9f2e89a04d141ca97426"
+      },
+      {
+        "name": "Q062-v2_量子電腦學程_Shor 魔王戰_動畫展示版_2026-11-18.zip.part02",
+        "bytes": 29360128,
+        "sha256": "399eb9ddbbd2752a719cd18225a2c04b78c78161a48154374024fdd0db0febb3"
+      },
+      {
+        "name": "Q062-v2_量子電腦學程_Shor 魔王戰_動畫展示版_2026-11-18.zip.part03",
+        "bytes": 29360128,
+        "sha256": "9cbfa8191569df035a96d9bcb3eeb5d3cfc47083adeb41ce41ba15e16b2640f0"
+      },
+      {
+        "name": "Q062-v2_量子電腦學程_Shor 魔王戰_動畫展示版_2026-11-18.zip.part04",
+        "bytes": 29360128,
+        "sha256": "f973e01452ccf1f1ca50fc03491c42ce8c8f51778c4da0dbe3c8c767aaea5d00"
+      },
+      {
+        "name": "Q062-v2_量子電腦學程_Shor 魔王戰_動畫展示版_2026-11-18.zip.part05",
+        "bytes": 29360128,
+        "sha256": "81caf4e53ce41ab46085796cb888ac369eebb9816caeabd46d0824a45ef5810e"
+      },
+      {
+        "name": "Q062-v2_量子電腦學程_Shor 魔王戰_動畫展示版_2026-11-18.zip.part06",
+        "bytes": 29360128,
+        "sha256": "d324651c61ade24fd50ca010671629d2b28f62da32f6b9596267dc315d6095ff"
+      },
+      {
+        "name": "Q062-v2_量子電腦學程_Shor 魔王戰_動畫展示版_2026-11-18.zip.part07",
+        "bytes": 15285099,
+        "sha256": "bb50b2396b98e749b24da18c5954039179043345f8518b02f3d1da41f6f7d646"
+      }
+    ],
+    "handedOver": "2026-11-18 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1eZLiQdOHdFov3xfVLuJtqORZ4fjXzXXV",
+    "folderName": "量子電腦學程 Q041–Q070 動畫展示版（v2）",
+    "uploadedAt": "2026-11-18",
+    "uploadedBy": "製作代理（Claude，Drive API，上傳後比對 md5）",
+    "files": [
+      {
+        "name": "Q062 Shor 魔王戰：Shor：用干涉找週期（動畫展示版）.mp4",
+        "id": "1UkPMo_ewu-QOR1K34ibyUHTlFfaSWQV0",
+        "size": 86382658,
+        "link": "https://drive.google.com/file/d/1UkPMo_ewu-QOR1K34ibyUHTlFfaSWQV0/view?usp=drivesdk"
+      },
+      {
+        "name": "Q062 Shor 魔王戰（動畫展示版）簡報.pptx",
+        "id": "1Gznqe0Dmae6LdElbDnJZTAn8hH8hpwQ6",
+        "size": 3205052,
+        "link": "https://docs.google.com/presentation/d/1Gznqe0Dmae6LdElbDnJZTAn8hH8hpwQ6/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true"
+      },
+      {
+        "name": "Q062 Shor 魔王戰 教材.zip",
+        "id": "1JdRh6FMTILaLulGuG9-LHUkgaE6Vwu4b",
+        "size": 421948,
+        "link": "https://drive.google.com/file/d/1JdRh6FMTILaLulGuG9-LHUkgaE6Vwu4b/view?usp=drivesdk"
+      }
+    ]
+  }
+}

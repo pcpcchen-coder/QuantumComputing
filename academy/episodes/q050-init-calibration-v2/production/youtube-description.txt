@@ -1,0 +1,32 @@
+父子科技學院 量子電腦學程 Q050｜初始化與校準（v2・含 3D 動畫展示）
+
+這是依課綱製作的課前教學版，不是實際上課錄音。
+
+父子科技學院量子電腦學程 Q050「初始化與校準」新版（v2）：在原本的教學投影片之間，插入本學程 3D 互動動畫的實際操作示範。
+
+這一版新增的動畫展示
+・量完之後怎麼歸零（https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#readout）
+・脈衝面積與頻率（https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#pulse）
+・每一步在量什麼（https://pcpcchen-coder.github.io/QuantumComputing/animations/peripherals.html#bringup）
+
+動畫都可以在瀏覽器直接開啟，自己動手操作。
+
+章節
+00:00 陳犀牛系列片頭
+01:00 初始化與校準
+01:30 三步：歸零、校準、闖關
+01:53 初始化：每一輪都要回到零
+02:21 九步校準：分成四關
+02:53 比一比：被動重置和主動重置
+03:21 動畫展示：量完之後怎麼歸零
+04:12 第一、二關：找頻率、調脈衝
+04:44 動畫展示：脈衝面積與頻率
+05:28 第三關：量壽命、修閘
+06:02 第四關：讀取、雙位元、驗收
+06:37 動畫展示：每一步在量什麼
+07:24 闖關：校準工程師和關主
+07:50 換你改造：少做一步會怎樣
+08:17 兩小時的校準闖關
+08:49 最後一關：教爸爸校準
+
+旁白：微軟 zh-TW-YunJheNeural 神經語音合成（Edge-TTS／Azure 語音服務，同一聲音同一格式）。字幕已燒入影片，開啟 CC 可能重疊。

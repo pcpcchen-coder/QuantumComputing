@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q055",
+  "version": "Q055-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-18",
+  "episodePath": "academy/episodes/q055-cz-cross-resonance-v2",
+  "basedOn": "academy/episodes/q055-cz-cross-resonance（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 582.166667,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "cz",
+      "title": "動畫展示：只有一一的轉盤會轉",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#twoqubit"
+    },
+    {
+      "key": "cr",
+      "title": "動畫展示：轉向看控制位元",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#twoqubit"
+    },
+    {
+      "key": "case",
+      "title": "動畫展示：短暫拜訪碰撞點",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#case"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.6,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q055-cz-cross-resonance-v2-zh-TW.mp4": {
+      "bytes": 92285156,
+      "sha256": "874858a07db84dfa5341f973bea182c3bc5d6e1a05158b728d847208fce4ca85"
+    },
+    "q055-cz-cross-resonance-v2-master.mp4": {
+      "bytes": 93304743,
+      "sha256": "33d2acc382383685d9e1c5bee47c6c8843fabce4b401150403386f46a5f01727"
+    },
+    "narration-only.mp3": {
+      "bytes": 13973332,
+      "sha256": "7cf32896bda6983e5151a5adaca2eceb47cfe6278d29794ed9ce1472a198128b"
+    }
+  },
+  "package": {
+    "filename": "Q055-v2_量子電腦學程_兩位元閘兩條路_動畫展示版_2026-11-18.zip",
+    "bytes": 203654984,
+    "sha256": "35b49bdf98374dc665675723657a460b1c24cdb6a3a1e431874e40f0f1c7063f",
+    "parts": [
+      {
+        "name": "Q055-v2_量子電腦學程_兩位元閘兩條路_動畫展示版_2026-11-18.zip.part01",
+        "bytes": 29360128,
+        "sha256": "bba675327bcbeff54679e390506efe1c4b49d20604692cb54eff3489a2114eac"
+      },
+      {
+        "name": "Q055-v2_量子電腦學程_兩位元閘兩條路_動畫展示版_2026-11-18.zip.part02",
+        "bytes": 29360128,
+        "sha256": "9a200cd4140a7c6e61f20c11745c8dbdc9174b8778c363f1d44d934ba73c7814"
+      },
+      {
+        "name": "Q055-v2_量子電腦學程_兩位元閘兩條路_動畫展示版_2026-11-18.zip.part03",
+        "bytes": 29360128,
+        "sha256": "bc91a8b53c254bcbed575137c3c66f2bc3016d0fca5feb1c635851eb7e34c5ae"
+      },
+      {
+        "name": "Q055-v2_量子電腦學程_兩位元閘兩條路_動畫展示版_2026-11-18.zip.part04",
+        "bytes": 29360128,
+        "sha256": "245bd06e3b42050a84f1c637a635c78c578781bba80d1a98089874e22484f97f"
+      },
+      {
+        "name": "Q055-v2_量子電腦學程_兩位元閘兩條路_動畫展示版_2026-11-18.zip.part05",
+        "bytes": 29360128,
+        "sha256": "720e35d69e78d197da0c47bfab1ed9770e0d73bc3105b11143e51042c5a45f54"
+      },
+      {
+        "name": "Q055-v2_量子電腦學程_兩位元閘兩條路_動畫展示版_2026-11-18.zip.part06",
+        "bytes": 29360128,
+        "sha256": "f461fac5237a1c56cda8a9104f98f2f1453af9b30a1df10361be54e6e3189f78"
+      },
+      {
+        "name": "Q055-v2_量子電腦學程_兩位元閘兩條路_動畫展示版_2026-11-18.zip.part07",
+        "bytes": 27494216,
+        "sha256": "45d3923ec1de59f2f2f7f6589702dc3dffa996cae4293861e1e4d32d743b8e98"
+      }
+    ],
+    "handedOver": "2026-11-18 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1eZLiQdOHdFov3xfVLuJtqORZ4fjXzXXV",
+    "folderName": "量子電腦學程 Q041–Q070 動畫展示版（v2）",
+    "uploadedAt": "2026-11-18",
+    "uploadedBy": "製作代理（Claude，Drive API，上傳後比對 md5）",
+    "files": [
+      {
+        "name": "Q055 兩位元閘兩條路：兩位元閘：CZ 與交叉共振（動畫展示版）.mp4",
+        "id": "1gDSCRw3zmkMXbYgjMyu3WQZuCpfRTBLA",
+        "size": 92285156,
+        "link": "https://drive.google.com/file/d/1gDSCRw3zmkMXbYgjMyu3WQZuCpfRTBLA/view?usp=drivesdk"
+      },
+      {
+        "name": "Q055 兩位元閘兩條路（動畫展示版）簡報.pptx",
+        "id": "1BKFGTljkjW36JUDp-5CszJE0GhokwOM6",
+        "size": 3278553,
+        "link": "https://docs.google.com/presentation/d/1BKFGTljkjW36JUDp-5CszJE0GhokwOM6/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true"
+      },
+      {
+        "name": "Q055 兩位元閘兩條路 教材.zip",
+        "id": "1l3jBAX0PwmeoFomHRG6X2QqrNZiGxjq3",
+        "size": 432958,
+        "link": "https://drive.google.com/file/d/1l3jBAX0PwmeoFomHRG6X2QqrNZiGxjq3/view?usp=drivesdk"
+      }
+    ]
+  }
+}

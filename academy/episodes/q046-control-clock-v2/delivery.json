@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q046",
+  "version": "Q046-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-18",
+  "episodePath": "academy/episodes/q046-control-clock-v2",
+  "basedOn": "academy/episodes/q046-control-clock（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 550.666667,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "rack",
+      "title": "動畫展示：機櫃與驅動波形",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/peripherals.html#electronics"
+    },
+    {
+      "key": "chain",
+      "title": "動畫展示：走一次控制鏈",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/peripherals.html#electronics"
+    },
+    {
+      "key": "phase",
+      "title": "動畫展示：相位差九十度",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#pulse"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.6,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q046-control-clock-v2-zh-TW.mp4": {
+      "bytes": 91128269,
+      "sha256": "563676c17ea35d63ebfba36eca0e2e88ef036ea1dc8ea7f3bcfec57787256464"
+    },
+    "q046-control-clock-v2-master.mp4": {
+      "bytes": 92295205,
+      "sha256": "443e3497fae98e62738a5579f42425ec6b4e3ac9ce03cffdc04349f849de5f18"
+    },
+    "narration-only.mp3": {
+      "bytes": 13217044,
+      "sha256": "9ec287286a937a7b69d7f085a586891daf75edead9d47678062cdfec981ed8b8"
+    }
+  },
+  "package": {
+    "filename": "Q046-v2_量子電腦學程_控制鏈與時脈_動畫展示版_2026-11-18.zip",
+    "bytes": 200930371,
+    "sha256": "a297917744dcadf26753c7930838450633410da5e3d2ceebec4e915d06704539",
+    "parts": [
+      {
+        "name": "Q046-v2_量子電腦學程_控制鏈與時脈_動畫展示版_2026-11-18.zip.part01",
+        "bytes": 29360128,
+        "sha256": "0e6ba39a2a7c2c95fc1be335a1af73ed54b2c559a2f62b6050f7015dd677f1d0"
+      },
+      {
+        "name": "Q046-v2_量子電腦學程_控制鏈與時脈_動畫展示版_2026-11-18.zip.part02",
+        "bytes": 29360128,
+        "sha256": "9f4f0cb14de472c41114793cd7f71bbbe77918375f8fac7aa616d8d031fff53c"
+      },
+      {
+        "name": "Q046-v2_量子電腦學程_控制鏈與時脈_動畫展示版_2026-11-18.zip.part03",
+        "bytes": 29360128,
+        "sha256": "2eb926d3bb18934626185d1ba64ce8939021313b3937b29b3b8b2362027403f3"
+      },
+      {
+        "name": "Q046-v2_量子電腦學程_控制鏈與時脈_動畫展示版_2026-11-18.zip.part04",
+        "bytes": 29360128,
+        "sha256": "4703d33b9f89d0b36d746268222659268c7cacd751337a4598cb9aa4065b148f"
+      },
+      {
+        "name": "Q046-v2_量子電腦學程_控制鏈與時脈_動畫展示版_2026-11-18.zip.part05",
+        "bytes": 29360128,
+        "sha256": "8ff0c2ef74bc732bfbf3b50f4c6d5a556f4a0d33270c0b7f6ecd701d8c45a3f0"
+      },
+      {
+        "name": "Q046-v2_量子電腦學程_控制鏈與時脈_動畫展示版_2026-11-18.zip.part06",
+        "bytes": 29360128,
+        "sha256": "8ea78734947f73e3a61d7d88bec3d55ba2e51cf881ac07ecc70940256010959a"
+      },
+      {
+        "name": "Q046-v2_量子電腦學程_控制鏈與時脈_動畫展示版_2026-11-18.zip.part07",
+        "bytes": 24769603,
+        "sha256": "8e434e410c7c1dd8f328278890e15e6c3ff0a20acf3b44b328cb5af95c0c14ab"
+      }
+    ],
+    "handedOver": "2026-11-18 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1eZLiQdOHdFov3xfVLuJtqORZ4fjXzXXV",
+    "folderName": "量子電腦學程 Q041–Q070 動畫展示版（v2）",
+    "uploadedAt": "2026-11-18",
+    "uploadedBy": "製作代理（Claude，Drive API，上傳後比對 md5）",
+    "files": [
+      {
+        "name": "Q046 控制鏈與時脈：控制電子與時脈（動畫展示版）.mp4",
+        "id": "1FNz_GVBWXL3gBpdNn4URsVQ_j2zn0BK3",
+        "size": 91128269,
+        "link": "https://drive.google.com/file/d/1FNz_GVBWXL3gBpdNn4URsVQ_j2zn0BK3/view?usp=drivesdk"
+      },
+      {
+        "name": "Q046 控制鏈與時脈（動畫展示版）簡報.pptx",
+        "id": "1SDNrBvbPZ_DXrnOZdrCEtocrF2lzn_L_",
+        "size": 3577579,
+        "link": "https://docs.google.com/presentation/d/1SDNrBvbPZ_DXrnOZdrCEtocrF2lzn_L_/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true"
+      },
+      {
+        "name": "Q046 控制鏈與時脈 教材.zip",
+        "id": "1R8QdcHIt9Fr48gHsKk2u2gTM1eAbhqWO",
+        "size": 436774,
+        "link": "https://drive.google.com/file/d/1R8QdcHIt9Fr48gHsKk2u2gTM1eAbhqWO/view?usp=drivesdk"
+      }
+    ]
+  }
+}

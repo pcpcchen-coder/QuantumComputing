@@ -447,152 +447,332 @@
     "Q041": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q041-why-10mk-v2",
+        "evidence": "academy/episodes/q041-why-10mk-v2/delivery.json"
+      }
     },
     "Q042": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q042-pulse-tube-v2",
+        "evidence": "academy/episodes/q042-pulse-tube-v2/delivery.json"
+      }
     },
     "Q043": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q043-dilution-refrigerator-v2",
+        "evidence": "academy/episodes/q043-dilution-refrigerator-v2/delivery.json"
+      }
     },
     "Q044": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q044-cooldown-days-v2",
+        "evidence": "academy/episodes/q044-cooldown-days-v2/delivery.json"
+      }
     },
     "Q045": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q045-cryo-wiring-v2",
+        "evidence": "academy/episodes/q045-cryo-wiring-v2/delivery.json"
+      }
     },
     "Q046": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q046-control-clock-v2",
+        "evidence": "academy/episodes/q046-control-clock-v2/delivery.json"
+      }
     },
     "Q047": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q047-software-monitor-v2",
+        "evidence": "academy/episodes/q047-software-monitor-v2/delivery.json"
+      }
     },
     "Q048": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q048-zero-to-online-v2",
+        "evidence": "academy/episodes/q048-zero-to-online-v2/delivery.json"
+      }
     },
     "Q049": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q049-job-lifecycle-v2",
+        "evidence": "academy/episodes/q049-job-lifecycle-v2/delivery.json"
+      }
     },
     "Q050": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q050-init-calibration-v2",
+        "evidence": "academy/episodes/q050-init-calibration-v2/delivery.json"
+      }
     },
     "Q051": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q051-backend-calibration-v2",
+        "evidence": "academy/episodes/q051-backend-calibration-v2/delivery.json"
+      }
     },
     "Q052": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q052-pulse-area-phase-v2",
+        "evidence": "academy/episodes/q052-pulse-area-phase-v2/delivery.json"
+      }
     },
     "Q053": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q053-drag-virtual-z-v2",
+        "evidence": "academy/episodes/q053-drag-virtual-z-v2/delivery.json"
+      }
     },
     "Q054": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q054-zyz-decomposition-v2",
+        "evidence": "academy/episodes/q054-zyz-decomposition-v2/delivery.json"
+      }
     },
     "Q055": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q055-cz-cross-resonance-v2",
+        "evidence": "academy/episodes/q055-cz-cross-resonance-v2/delivery.json"
+      }
     },
     "Q056": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q056-transpile-routing-v2",
+        "evidence": "academy/episodes/q056-transpile-routing-v2/delivery.json"
+      }
     },
     "Q057": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q057-qiskit-bell-ghz-v2",
+        "evidence": "academy/episodes/q057-qiskit-bell-ghz-v2/delivery.json"
+      }
     },
     "Q058": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q058-basis-expectation-v2",
+        "evidence": "academy/episodes/q058-basis-expectation-v2/delivery.json"
+      }
     },
     "Q059": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q059-shots-readout-mitigation-v2",
+        "evidence": "academy/episodes/q059-shots-readout-mitigation-v2/delivery.json"
+      }
     },
     "Q060": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q060-dynamic-circuits-v2",
+        "evidence": "academy/episodes/q060-dynamic-circuits-v2/delivery.json"
+      }
     },
     "Q061": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q061-qft-phase-estimation-v2",
+        "evidence": "academy/episodes/q061-qft-phase-estimation-v2/delivery.json"
+      }
     },
     "Q062": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q062-shor-period-v2",
+        "evidence": "academy/episodes/q062-shor-period-v2/delivery.json"
+      }
     },
     "Q063": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q063-speedup-levels-v2",
+        "evidence": "academy/episodes/q063-speedup-levels-v2/delivery.json"
+      }
     },
     "Q064": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q064-simulator-project-v2",
+        "evidence": "academy/episodes/q064-simulator-project-v2/delivery.json"
+      }
     },
     "Q065": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q065-artificial-vs-real-atoms-v2",
+        "evidence": "academy/episodes/q065-artificial-vs-real-atoms-v2/delivery.json"
+      }
     },
     "Q066": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q066-paul-trap-v2",
+        "evidence": "academy/episodes/q066-paul-trap-v2/delivery.json"
+      }
     },
     "Q067": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q067-ion-trap-system-v2",
+        "evidence": "academy/episodes/q067-ion-trap-system-v2/delivery.json"
+      }
     },
     "Q068": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q068-yb-qubit-cooling-v2",
+        "evidence": "academy/episodes/q068-yb-qubit-cooling-v2/delivery.json"
+      }
     },
     "Q069": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q069-ion-chain-modes-v2",
+        "evidence": "academy/episodes/q069-ion-chain-modes-v2/delivery.json"
+      }
     },
     "Q070": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q070-molmer-sorensen-gate-v2",
+        "evidence": "academy/episodes/q070-molmer-sorensen-gate-v2/delivery.json"
+      }
     },
     "Q071": {
       "status": "planned",
