@@ -196,12 +196,24 @@
     "Q022": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q022-equal-ladder-v2",
+        "evidence": "academy/episodes/q022-equal-ladder-v2/delivery.json"
+      }
     },
     "Q023": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q023-josephson-junction-sandwich-v2",
+        "evidence": "academy/episodes/q023-josephson-junction-sandwich-v2/delivery.json"
+      }
     },
     "Q024": {
       "status": "planned",
@@ -233,7 +245,13 @@
     "Q027": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q027-squid-flux-tuning-v2",
+        "evidence": "academy/episodes/q027-squid-flux-tuning-v2/delivery.json"
+      }
     },
     "Q028": {
       "status": "planned",

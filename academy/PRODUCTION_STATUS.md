@@ -25,12 +25,12 @@
 | Q019 | Cooper pair 與能隙 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q019-cooper-pair-gap-v2` |
 | Q020 | 磁通量子化 Φ₀ = h/2e | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q020-flux-quantization-v2` |
 | Q021 | 彈簧、單擺與 LC 電路 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q021-spring-pendulum-lc-v2` |
-| Q022 | 量子諧振子：等距的梯子 | 規劃完成 | — |
-| Q023 | 約瑟夫森接面：超導三明治 | 規劃完成 | — |
+| Q022 | 量子諧振子：等距的梯子 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q022-equal-ladder-v2` |
+| Q023 | 約瑟夫森接面：超導三明治 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q023-josephson-junction-sandwich-v2` |
 | Q024 | JJ 是非線性電感 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q024-jj-nonlinear-inductor-v2` |
 | Q025 | E_J 與 E_C：兩個能量尺度 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q025-ej-ec-two-energy-scales-v2` |
 | Q026 | 傾斜洗衣板 | 規劃完成 | — |
-| Q027 | SQUID：用磁場轉頻率 | 規劃完成 | — |
+| Q027 | SQUID：用磁場轉頻率 | 規劃完成；v2 動畫展示版已製作並驗收 | —<br>v2 動畫展示版：`academy/episodes/q027-squid-flux-tuning-v2` |
 | Q028 | 量子位元家族圖鑑 | 規劃完成 | — |
 | Q029 | 晶片怎麼做：雙角度蒸鍍 | 規劃完成 | — |
 | Q030 | 晶片長什麼樣子 | 規劃完成 | — |
