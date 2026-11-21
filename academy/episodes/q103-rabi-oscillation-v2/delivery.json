@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q103",
+  "version": "Q103-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-19",
+  "episodePath": "academy/episodes/q103-rabi-oscillation-v2",
+  "basedOn": "academy/episodes/q103-rabi-oscillation（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 497.9,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "pi",
+      "title": "動畫展示：同一個派脈衝",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#potential"
+    },
+    {
+      "key": "drive40",
+      "title": "動畫展示：持續驅動四十奈秒",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#potential"
+    },
+    {
+      "key": "rabi",
+      "title": "動畫展示：拉比振盪",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#control"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.5,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q103-rabi-oscillation-v2-zh-TW.mp4": {
+      "bytes": 89049351,
+      "sha256": "200cc9f7b29c8dfa6fc59eac5b05a1d70be560808fd0abb4c4181dc5c2ab7d96"
+    },
+    "q103-rabi-oscillation-v2-master.mp4": {
+      "bytes": 91452430,
+      "sha256": "a5fba99abfa1ee82049dbbf64ecd653727e71c80b9de7161175ebfa4aedcf734"
+    },
+    "narration-only.mp3": {
+      "bytes": 11950996,
+      "sha256": "b58d7ea5b59ae2e228eb4ce4248ecca16af63a4f581250101699899c457cfac4"
+    }
+  },
+  "package": {
+    "filename": "Q103-v2_量子電腦學程_拉比振盪_動畫展示版_2026-11-19.zip",
+    "bytes": 196446953,
+    "sha256": "5e976f66e27efb8cd50b372e20da1c515bdfc6f8001396bcee0f49ca36440ed8",
+    "parts": [
+      {
+        "name": "Q103-v2_量子電腦學程_拉比振盪_動畫展示版_2026-11-19.zip.part01",
+        "bytes": 29360128,
+        "sha256": "413e8543d840767ed1f56e64e184d00f612aea32ce08f9c55cc2b0322d73d247"
+      },
+      {
+        "name": "Q103-v2_量子電腦學程_拉比振盪_動畫展示版_2026-11-19.zip.part02",
+        "bytes": 29360128,
+        "sha256": "5282fb63cdf531442bf0fa6dfd5fe93c552ae316d0ac7913a71ec284c29fb26c"
+      },
+      {
+        "name": "Q103-v2_量子電腦學程_拉比振盪_動畫展示版_2026-11-19.zip.part03",
+        "bytes": 29360128,
+        "sha256": "f320c267c3975eb085b15fb77d1ee35d12c0e1846d704d3c864bede0c47d683b"
+      },
+      {
+        "name": "Q103-v2_量子電腦學程_拉比振盪_動畫展示版_2026-11-19.zip.part04",
+        "bytes": 29360128,
+        "sha256": "f92fffc667e771c59685e2e53fca0629cf01dbbf9691e360e5c610f3160f684e"
+      },
+      {
+        "name": "Q103-v2_量子電腦學程_拉比振盪_動畫展示版_2026-11-19.zip.part05",
+        "bytes": 29360128,
+        "sha256": "a3a1e5d708f1b335fa726e3dfb2d0e463e361ba8520469e2daaf0236239e6ab8"
+      },
+      {
+        "name": "Q103-v2_量子電腦學程_拉比振盪_動畫展示版_2026-11-19.zip.part06",
+        "bytes": 29360128,
+        "sha256": "b7240d1ef9d99c1a93c76d8e4c3638cfc9e82a0212775878f43ce96509f4038b"
+      },
+      {
+        "name": "Q103-v2_量子電腦學程_拉比振盪_動畫展示版_2026-11-19.zip.part07",
+        "bytes": 20286185,
+        "sha256": "88f0d57a635d4ce4d3e23a1292b3f6a8ce887927ff2724aa78ec9a585afd37f5"
+      }
+    ],
+    "handedOver": "2026-11-19 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1bi-WOn7ipXPr978g1JqWu1DFCPwySyyb",
+    "uploaded": "2026-11-19",
+    "files": [
+      {
+        "name": "Q103 拉比振盪：能階、共振與拉比振盪（動畫展示版）.mp4",
+        "id": "1jTIXwHp_-CrzXc2NO2mER1P_ZD17b3q7",
+        "link": "https://drive.google.com/file/d/1jTIXwHp_-CrzXc2NO2mER1P_ZD17b3q7/view?usp=drivesdk"
+      },
+      {
+        "name": "Q103 拉比振盪（動畫展示版）簡報.pptx",
+        "id": "1619POl9CaaSg9pxQm0NdyZdbfZfgFaQL",
+        "link": "https://docs.google.com/presentation/d/1619POl9CaaSg9pxQm0NdyZdbfZfgFaQL/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true"
+      },
+      {
+        "name": "Q103 拉比振盪 教材.zip",
+        "id": "1zrwxc1_hxeXovLUfb-szAd6xhyYJ2Rmr",
+        "link": "https://drive.google.com/file/d/1zrwxc1_hxeXovLUfb-szAd6xhyYJ2Rmr/view?usp=drivesdk"
+      }
+    ],
+    "complete": true
+  }
+}

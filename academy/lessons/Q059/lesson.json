@@ -29,6 +29,7 @@
       "o:readout"
     ],
     "需新增素材": [],
+    "沿用文件": [],
     "YouTube 關鍵字 1": "shots、統計誤差與讀取誤差緩解 quantum computing explained beginner",
     "YouTube 連結 1": "https://www.youtube.com/results?search_query=shots%E3%80%81%E7%B5%B1%E8%A8%88%E8%AA%A4%E5%B7%AE%E8%88%87%E8%AE%80%E5%8F%96%E8%AA%A4%E5%B7%AE%E7%B7%A9%E8%A7%A3+quantum+computing+explained+beginner",
     "影片用途 1": "課前暖身",
@@ -39,8 +40,10 @@
     "YouTube 連結 3": "https://www.youtube.com/results?search_query=shots%E3%80%81%E7%B5%B1%E8%A8%88%E8%AA%A4%E5%B7%AE%E8%88%87%E8%AE%80%E5%8F%96%E8%AA%A4%E5%B7%AE%E7%B7%A9%E8%A7%A3+quantum+computing+lecture+visualization",
     "影片用途 3": "課後延伸"
   },
-  "curriculumSha256": "493446a21451c8a5c08a1723cfd04436e51cbfa4806049b55a765d22ecf2ba53",
-  "episodePaths": [],
+  "curriculumSha256": "eb081f5848bd31bd8d734680a2d88f6821b6b30fa5d9ff1d813d06872e8f71c3",
+  "episodePaths": [
+    "academy/episodes/q059-shots-readout-mitigation-v2"
+  ],
   "minutes": 120,
   "status": "planned"
 }

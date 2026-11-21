@@ -1,0 +1,399 @@
+{
+  "version": 2,
+  "opening": 60.277,
+  "scenes": [
+    {
+      "page": 1,
+      "kind": "slide",
+      "v1slide": 1,
+      "title": "Cooper pair 與能隙",
+      "duration": 29.976,
+      "sentences": [
+        {
+          "text": "歡迎回到父子科技學院的量子電腦學程，我是陳犀牛，今天是量子第十九堂，庫柏對與能隙，這是依課綱製作的課前教學版，並非實際上課錄音。",
+          "start": 0.0,
+          "end": 11.92
+        },
+        {
+          "text": "上一堂看到超導的兩個招牌現象：電阻消失，還會把磁場排出去，讓磁鐵懸浮起來。",
+          "start": 12.1,
+          "end": 20.036009
+        },
+        {
+          "text": "今天要往裡面看一層：電子明明互相排斥，為什麼在超導體裡會兩兩成對？成對以後又保護了什麼？",
+          "start": 20.216009,
+          "end": 29.760023
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q019-cooper-pair-gap/audio/slide_01.mp3"
+    },
+    {
+      "page": 2,
+      "kind": "slide",
+      "v1slide": 2,
+      "title": "三個重點",
+      "duration": 25.968,
+      "sentences": [
+        {
+          "text": "今天有三個重點：第一，用晶格扭曲的直覺，說明電子為什麼會成對。",
+          "start": 0.0,
+          "end": 6.832018000000001
+        },
+        {
+          "text": "第二，成對的電子會一起行動，整塊超導體像一個大的量子狀態；第三，拆散一對要付出能量，這道門檻叫做能隙。",
+          "start": 7.012018,
+          "end": 17.348027000000002
+        },
+        {
+          "text": "今天的作品是一張能隙示意圖，比一比有能隙和沒有能隙時，一點點小擾動會造成什麼差別。",
+          "start": 17.528027,
+          "end": 25.752041000000002
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q019-cooper-pair-gap/audio/slide_02.mp3"
+    },
+    {
+      "page": 3,
+      "kind": "slide",
+      "v1slide": 3,
+      "title": "金屬裡的晶格和電子",
+      "duration": 25.608,
+      "sentences": [
+        {
+          "text": "先認識舞台：像鋁這樣的金屬，裡面是排得整整齊齊的正離子，叫做晶格，電子就在晶格之間跑來跑去。",
+          "start": 0.0,
+          "end": 9.448005
+        },
+        {
+          "text": "電子都帶負電，兩顆電子靠近會互相排斥，照理說應該離得越遠越好。",
+          "start": 9.628005,
+          "end": 16.172019
+        },
+        {
+          "text": "在平常的溫度下，電子一邊跑一邊被晶格的振動撞來撞去，這些碰撞就是電阻的來源，也會讓導線發熱。",
+          "start": 16.352019,
+          "end": 25.392018999999998
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q019-cooper-pair-gap/audio/slide_03.mp3"
+    },
+    {
+      "page": 4,
+      "kind": "slide",
+      "v1slide": 4,
+      "title": "晶格扭曲：吸引的尾巴",
+      "duration": 24.552,
+      "sentences": [
+        {
+          "text": "關鍵是晶格扭曲：一顆電子跑過去，會把附近帶正電的離子稍微拉近一點。",
+          "start": 0.0,
+          "end": 6.784014
+        },
+        {
+          "text": "這一小塊地方的正電因此變多了，像電子跑過後留下的一條短暫尾巴；晶格的這種振動，物理學家叫做聲子。",
+          "start": 6.964014,
+          "end": 15.980023
+        },
+        {
+          "text": "這條正電的尾巴又把第二顆電子吸過來；在夠遠的距離上，這股吸引贏過了兩顆電子之間的排斥。",
+          "start": 16.160023,
+          "end": 24.336032
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q019-cooper-pair-gap/audio/slide_04.mp3"
+    },
+    {
+      "page": 5,
+      "kind": "slide",
+      "v1slide": 5,
+      "title": "Cooper pair：兩顆一組",
+      "duration": 24.744,
+      "sentences": [
+        {
+          "text": "這樣成對的兩顆電子叫做庫柏對，一顆自旋向上、一顆自旋向下，跑的方向也相反。",
+          "start": 0.0,
+          "end": 7.912018
+        },
+        {
+          "text": "它們不一定靠在一起，兩顆之間可能隔了好幾百奈米，中間還穿插著許多別的電子對。",
+          "start": 8.092018,
+          "end": 15.476032
+        },
+        {
+          "text": "一對電子帶兩倍的電荷，而且所有的電子對會一起進入同一個量子狀態，整塊超導體只需要一個相位來描述。",
+          "start": 15.656032,
+          "end": 24.52805
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q019-cooper-pair-gap/audio/slide_05.mp3"
+    },
+    {
+      "page": 6,
+      "kind": "demo",
+      "demo": "pairs",
+      "title": "動畫展示：一對一對往前走",
+      "duration": 33.384,
+      "sentences": [
+        {
+          "text": "打開約瑟夫森接面與微波讀取動畫的庫柏對場景，金色的小球是鋁的正離子，排成一個整齊的晶格。",
+          "start": 0.0,
+          "end": 8.752018
+        },
+        {
+          "text": "溫度一開始就設在零點三度，比臨界溫度低；藍色和紫色的小球是電子，每兩顆用一條青色的線連成一對。",
+          "start": 8.932018,
+          "end": 17.780023
+        },
+        {
+          "text": "每一對一邊繞著轉，一邊和其他電子對一起往右邊前進，晶格下面的大字寫著：同步流動，沒有散射。",
+          "start": 17.960023,
+          "end": 27.048028000000002
+        },
+        {
+          "text": "左邊面板上的配對比例是百分之百，代表每一顆電子都找到了伴。",
+          "start": 27.228028000000002,
+          "end": 33.172042000000005
+        }
+      ],
+      "audio": "audio/demo_pairs.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#cooper"
+    },
+    {
+      "page": 7,
+      "kind": "slide",
+      "v1slide": 6,
+      "title": "能隙：拆散一對的門檻",
+      "duration": 24.0,
+      "sentences": [
+        {
+          "text": "要把一對電子拆開，必須一次付出一整筆能量，這道門檻就叫做能隙。",
+          "start": 0.0,
+          "end": 6.424014000000001
+        },
+        {
+          "text": "晶格的輕微振動、一點點雜質，能量都不夠跨過門檻，只好放過整群電子對，它們不會被撞散，電阻也就消失了。",
+          "start": 6.604014,
+          "end": 16.700023
+        },
+        {
+          "text": "如果沒有能隙，再小的擾動都能把電子撞偏，一點一點把電流的能量變成熱。",
+          "start": 16.880023,
+          "end": 23.784037
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q019-cooper-pair-gap/audio/slide_06.mp3"
+    },
+    {
+      "page": 8,
+      "kind": "demo",
+      "demo": "nogap",
+      "title": "動畫展示：沒有能隙會怎樣",
+      "duration": 34.32,
+      "sentences": [
+        {
+          "text": "現在按正常態二點五度，溫度升到臨界溫度以上，電子之間的青色連線已經全部消失。",
+          "start": 0.0,
+          "end": 7.576009
+        },
+        {
+          "text": "電子變成一顆一顆亂跑，常常突然轉向，那就是被晶格振動撞到；晶格下面的字也已經換成粉紅色的正常態，有電阻。",
+          "start": 7.756009,
+          "end": 17.852018
+        },
+        {
+          "text": "左邊面板寫著：沒有能隙，電子和聲子，也就是晶格的振動碰撞，產生熱。",
+          "start": 18.032018,
+          "end": 25.752018
+        },
+        {
+          "text": "再按回超導態，電子馬上重新成對，面板換成：能隙打開，小擾動散射不了電子對。",
+          "start": 25.932018,
+          "end": 34.108027
+        }
+      ],
+      "audio": "audio/demo_nogap.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#cooper"
+    },
+    {
+      "page": 9,
+      "kind": "slide",
+      "v1slide": 7,
+      "title": "能量尺度：鋁的能隙",
+      "duration": 24.312,
+      "sentences": [
+        {
+          "text": "我們用頻率來比較能量：拆散鋁裡的一對電子，大約要八十八吉赫的能量。",
+          "start": 0.0,
+          "end": 6.664014
+        },
+        {
+          "text": "量子位元的能量大約只有五吉赫，比能隙小十幾倍；而冷凍機在百分之一度時的熱能，只有零點二吉赫左右。",
+          "start": 6.844014,
+          "end": 15.980023
+        },
+        {
+          "text": "所以操控量子位元的微波拆不散電子對，熱擾動也拆不散，超導電路才能幾乎不耗損能量。",
+          "start": 16.160023,
+          "end": 24.096032
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q019-cooper-pair-gap/audio/slide_07.mp3"
+    },
+    {
+      "page": 10,
+      "kind": "slide",
+      "v1slide": 8,
+      "title": "溫度與臨界溫度",
+      "duration": 29.664,
+      "sentences": [
+        {
+          "text": "電子對很脆弱，溫度一高就被熱能拆散；鋁要冷到絕對溫度大約一點二度以下，也就是它的臨界溫度，電子才會成對、電阻才會消失。",
+          "start": 0.0,
+          "end": 11.416009
+        },
+        {
+          "text": "超導量子晶片放在只比絕對零度高百分之一度的冷凍機裡，比鋁的臨界溫度還低了一百多倍。",
+          "start": 11.596009,
+          "end": 19.220023
+        },
+        {
+          "text": "暫停影片想一想：已經比臨界溫度低了，為什麼還要冷這麼多？提示：回頭比一比熱能和量子位元的能量。",
+          "start": 19.400023,
+          "end": 29.448028
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q019-cooper-pair-gap/audio/slide_08.mp3"
+    },
+    {
+      "page": 11,
+      "kind": "demo",
+      "demo": "cooling",
+      "title": "動畫展示：慢慢降溫，慢慢成對",
+      "duration": 32.808,
+      "sentences": [
+        {
+          "text": "最後拖動溫度滑桿，從二點五度慢慢往下降，眼睛盯著右下角電阻對溫度的小圖。",
+          "start": 0.0,
+          "end": 7.456009
+        },
+        {
+          "text": "高於一點二度時，青色的點停在上面那段線上，電阻不是零；一跨過臨界溫度，點就掉到零。",
+          "start": 7.636009,
+          "end": 16.196009
+        },
+        {
+          "text": "同時面板的配對比例也開始往上爬，到一點零度大約一半，越冷越多。",
+          "start": 16.376009,
+          "end": 22.896009
+        },
+        {
+          "text": "降到零點三度，配對比例回到百分之百；動畫裡的比例曲線是示意，量子晶片則在比這裡再冷三十倍的地方工作。",
+          "start": 23.076009,
+          "end": 32.596009
+        }
+      ],
+      "audio": "audio/demo_cooling.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#cooper"
+    },
+    {
+      "page": 12,
+      "kind": "slide",
+      "v1slide": 9,
+      "title": "角色扮演：人肉晶格",
+      "duration": 28.56,
+      "sentences": [
+        {
+          "text": "實作的時候來演人肉晶格：全家站成整齊的格子當正離子，一個人當電子，慢慢從中間走過去。",
+          "start": 0.0,
+          "end": 8.704014
+        },
+        {
+          "text": "電子走過時，旁邊的晶格原子靠近一步，等電子走遠再慢慢退回；第二個人當另一顆電子，順著那條靠近的通道被吸過去。",
+          "start": 8.884014,
+          "end": 19.076032
+        },
+        {
+          "text": "演完要說清楚：這是簡化的圖像，真的電子對可能隔得很遠，詳細的理論要到大學物理才會完整推導。",
+          "start": 19.256032,
+          "end": 28.344037
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q019-cooper-pair-gap/audio/slide_09.mp3"
+    },
+    {
+      "page": 13,
+      "kind": "slide",
+      "v1slide": 10,
+      "title": "換你改造：能隙示意圖",
+      "duration": 24.936,
+      "sentences": [
+        {
+          "text": "下半場換你改造：畫一張能隙示意圖，左邊畫有能隙，右邊畫沒有能隙。",
+          "start": 0.0,
+          "end": 7.024014
+        },
+        {
+          "text": "有能隙的那邊，畫一道高高的門檻，小擾動的箭頭撞上去就彈回來；沒能隙的那邊，同樣的小箭頭直接把電子撞偏。",
+          "start": 7.204014,
+          "end": 17.036032
+        },
+        {
+          "text": "最後在圖上標出三個能量：熱能、量子位元的微波和能隙，看看誰跨得過門檻。",
+          "start": 17.216032,
+          "end": 24.720046
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q019-cooper-pair-gap/audio/slide_10.mp3"
+    },
+    {
+      "page": 14,
+      "kind": "slide",
+      "v1slide": 11,
+      "title": "兩小時的人肉晶格任務",
+      "duration": 24.648,
+      "sentences": [
+        {
+          "text": "兩小時的安排是：開場十分鐘，概念示範十五分鐘，接著四十分鐘全家演人肉晶格，然後休息十分鐘。",
+          "start": 0.0,
+          "end": 8.968005
+        },
+        {
+          "text": "下半場三十分鐘，你自己畫能隙示意圖；接著十分鐘交換角色，由你教爸爸電子為什麼會成對。",
+          "start": 9.148005,
+          "end": 17.804014000000002
+        },
+        {
+          "text": "最後五分鐘錄音總結，替你的能隙示意圖取個名字，再存一個版本。",
+          "start": 17.984014000000002,
+          "end": 24.432019000000004
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q019-cooper-pair-gap/audio/slide_11.mp3"
+    },
+    {
+      "page": 15,
+      "kind": "slide",
+      "v1slide": 12,
+      "title": "最後一關：教爸爸電子成對",
+      "duration": 31.128,
+      "sentences": [
+        {
+          "text": "最後一關，請不看稿說出：電子明明互相排斥，為什麼會透過晶格成對？能隙又保護了什麼？",
+          "start": 0.0,
+          "end": 9.064014
+        },
+        {
+          "text": "再指出一個要注意的地方：今天的晶格扭曲是簡化的圖像，完整的理論要到大學物理才會推導。",
+          "start": 9.244014,
+          "end": 17.372019
+        },
+        {
+          "text": "今天的作品是能隙示意圖，下一堂要看磁通量子化：超導環裡的磁通只能一格一格地變，而那一格的大小正好和電子成對有關；我是陳犀牛，保持好奇，我們下次見！",
+          "start": 17.552019,
+          "end": 30.912019
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q019-cooper-pair-gap/audio/slide_12.mp3"
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q013",
+  "version": "Q013-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-19",
+  "episodePath": "academy/episodes/q013-grover-treasure-v2",
+  "basedOn": "academy/episodes/q013-grover-treasure（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 496.366667,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "round",
+      "title": "動畫展示：一輪兩步",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#grover"
+    },
+    {
+      "key": "overshoot",
+      "title": "動畫展示：轉過頭了",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#grover"
+    },
+    {
+      "key": "sixtyfour",
+      "title": "動畫展示：六十四個抽屜",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#grover"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.5,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q013-grover-treasure-v2-zh-TW.mp4": {
+      "bytes": 85782644,
+      "sha256": "eb8896dcd047b240dc87efb535f5d02ca9a23d19f61870e87ab657dc594198a1"
+    },
+    "q013-grover-treasure-v2-master.mp4": {
+      "bytes": 87823715,
+      "sha256": "6fa4daac65c222128abeb0fb8757b4fa59771c619b8607d517910d8f83d9fbfd"
+    },
+    "narration-only.mp3": {
+      "bytes": 11914132,
+      "sha256": "88f6fcb9d85470e519622537097ac09a65d239a4b75898a3f115b8a1b57eb4ce"
+    }
+  },
+  "package": {
+    "filename": "Q013-v2_量子電腦學程_格羅弗搜尋_動畫展示版_2026-11-19.zip",
+    "bytes": 189478478,
+    "sha256": "f26e522be4a05c1149f9649e3c8e322e65e72f53c57edb7e34a46426a0efeb47",
+    "parts": [
+      {
+        "name": "Q013-v2_量子電腦學程_格羅弗搜尋_動畫展示版_2026-11-19.zip.part01",
+        "bytes": 29360128,
+        "sha256": "da531188c82d59b3d2f032cd7ac96da74f73a860f8fdda2136b309ca2e62a57b"
+      },
+      {
+        "name": "Q013-v2_量子電腦學程_格羅弗搜尋_動畫展示版_2026-11-19.zip.part02",
+        "bytes": 29360128,
+        "sha256": "54e5a9cb58c4fc605ce06fa7540700a734e8f3308fa621828003422fe89d5882"
+      },
+      {
+        "name": "Q013-v2_量子電腦學程_格羅弗搜尋_動畫展示版_2026-11-19.zip.part03",
+        "bytes": 29360128,
+        "sha256": "9591f239e9a4b8e7665089f6459ec4fa0a6864f7c4978b933c958da381f39ac2"
+      },
+      {
+        "name": "Q013-v2_量子電腦學程_格羅弗搜尋_動畫展示版_2026-11-19.zip.part04",
+        "bytes": 29360128,
+        "sha256": "a2ac8d8f5406ce71917da9a4299f1e218cdce2f15d4b9de81e97e12f3b019cd3"
+      },
+      {
+        "name": "Q013-v2_量子電腦學程_格羅弗搜尋_動畫展示版_2026-11-19.zip.part05",
+        "bytes": 29360128,
+        "sha256": "f95a44bc15af8da9fe9f5d2a760e5feda27fdd136e22a423b51c5196de069a04"
+      },
+      {
+        "name": "Q013-v2_量子電腦學程_格羅弗搜尋_動畫展示版_2026-11-19.zip.part06",
+        "bytes": 29360128,
+        "sha256": "15350a6e26c90ab5e04ff281757cdc4e26ab681db87207d36d1da7ffbbc2a2b8"
+      },
+      {
+        "name": "Q013-v2_量子電腦學程_格羅弗搜尋_動畫展示版_2026-11-19.zip.part07",
+        "bytes": 13317710,
+        "sha256": "a2808ec2d4b628bbbf8ff8b888159c8a2234ca34529d8e719409e5a8f9ccccd1"
+      }
+    ],
+    "handedOver": "2026-11-19 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1epfQVOXunbD9Vht37u62oOD9Dr-HKMSE",
+    "folder": "量子電腦學程 Q011–Q040 動畫展示版（v2）",
+    "files": [
+      {
+        "name": "Q013 格羅弗搜尋：格羅弗搜尋：16 個抽屜找寶藏（動畫展示版）.mp4",
+        "id": "1V9chjDT340DMnToikXDL_6swVOaHVj9f",
+        "link": "https://drive.google.com/file/d/1V9chjDT340DMnToikXDL_6swVOaHVj9f/view?usp=drivesdk",
+        "bytes": 85782644
+      },
+      {
+        "name": "Q013 格羅弗搜尋（動畫展示版）簡報.pptx",
+        "id": "1sD60Iwf0uLP73R7m5hrtmncgVuwJpx5s",
+        "link": "https://docs.google.com/presentation/d/1sD60Iwf0uLP73R7m5hrtmncgVuwJpx5s/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true",
+        "bytes": 3219227
+      },
+      {
+        "name": "Q013 格羅弗搜尋 教材.zip",
+        "id": "1GgaJESYaRCZrW_jOaDbh_QkbYI3nDLur",
+        "link": "https://drive.google.com/file/d/1GgaJESYaRCZrW_jOaDbh_QkbYI3nDLur/view?usp=drivesdk",
+        "bytes": 354755
+      }
+    ]
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q129",
+  "version": "Q129-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-18",
+  "episodePath": "academy/episodes/q129-power-panorama-v2",
+  "basedOn": "academy/episodes/q129-power-panorama（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 515.008,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "circuits",
+      "title": "動畫展示：機房裡的電力線",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/peripherals.html#overview"
+    },
+    {
+      "key": "coldhead",
+      "title": "動畫展示：一萬瓦換一點五瓦",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/peripherals.html#pulsetube"
+    },
+    {
+      "key": "facility",
+      "title": "動畫展示：千位元設施的用電全景",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/power1000.html#overview"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.4,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q129-power-panorama-v2-zh-TW.mp4": {
+      "bytes": 92261152,
+      "sha256": "9e8ec4ead451d5dc1d03fd666c35dd6e227f5bc8252cf2d373948f76ed45e365"
+    },
+    "q129-power-panorama-v2-master.mp4": {
+      "bytes": 94838850,
+      "sha256": "13fa79a88db479130b6de0519dc862f25b70761508222c38bee6d17907c329b7"
+    },
+    "narration-only.mp3": {
+      "bytes": 12361684,
+      "sha256": "91fe961e50156c0bbe53c4112337683891959b533f7d227ccb224c85e32f9efb"
+    }
+  },
+  "package": {
+    "filename": "Q129-v2_量子電腦學程_電從哪裡來_動畫展示版_2026-11-18.zip",
+    "bytes": 203616085,
+    "sha256": "849303da91fc492a6d9841b3773dcdd4a5be59a030e11d695149f9c192f50bf8",
+    "parts": [
+      {
+        "name": "Q129-v2_量子電腦學程_電從哪裡來_動畫展示版_2026-11-18.zip.part01",
+        "bytes": 29360128,
+        "sha256": "41e73a0129470d14de2e454da0b023235d99cf4e51f6e9c267f3390c8989248a"
+      },
+      {
+        "name": "Q129-v2_量子電腦學程_電從哪裡來_動畫展示版_2026-11-18.zip.part02",
+        "bytes": 29360128,
+        "sha256": "f19b3b4f7b2963bb102c6b8d4a93974e06628e22a5c589f492946e53c5b9b1a7"
+      },
+      {
+        "name": "Q129-v2_量子電腦學程_電從哪裡來_動畫展示版_2026-11-18.zip.part03",
+        "bytes": 29360128,
+        "sha256": "5c1f8ae563b3b923da9ac652a95f45631dbce009991b3a3b77f8ae99a7a134cd"
+      },
+      {
+        "name": "Q129-v2_量子電腦學程_電從哪裡來_動畫展示版_2026-11-18.zip.part04",
+        "bytes": 29360128,
+        "sha256": "4e232301e1da669be27231e39a9839a4c67f2fc5a2fff6f2bf4d59a23b7c48af"
+      },
+      {
+        "name": "Q129-v2_量子電腦學程_電從哪裡來_動畫展示版_2026-11-18.zip.part05",
+        "bytes": 29360128,
+        "sha256": "3fc80e30e772e9c8026b7fa4a5d060fc6a996e2f768b96d8fc7321ccc8494e55"
+      },
+      {
+        "name": "Q129-v2_量子電腦學程_電從哪裡來_動畫展示版_2026-11-18.zip.part06",
+        "bytes": 29360128,
+        "sha256": "8c4e28640cf56d88a8308af0ec61fb4e9de46af32cb9a07b4713d201007a01c9"
+      },
+      {
+        "name": "Q129-v2_量子電腦學程_電從哪裡來_動畫展示版_2026-11-18.zip.part07",
+        "bytes": 27455317,
+        "sha256": "8a289f3398fbec67b27b0c7f5b3fd862762109a50395568cbc4d7c95e93dce19"
+      }
+    ],
+    "handedOver": "2026-11-18 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1bi-WOn7ipXPr978g1JqWu1DFCPwySyyb",
+    "folderName": "量子電腦學程 Q101–Q130 動畫展示版（v2）",
+    "uploadedAt": "2026-11-18",
+    "uploadedBy": "製作代理（Claude，Drive API，上傳後比對 md5）",
+    "files": [
+      {
+        "name": "Q129 電從哪裡來：電從哪裡來、到哪裡去（動畫展示版）.mp4",
+        "id": "1ZrwCc6vmGj6hDnJjvYJTc2pH0XGTyrJw",
+        "size": 92261152,
+        "link": "https://drive.google.com/file/d/1ZrwCc6vmGj6hDnJjvYJTc2pH0XGTyrJw/view?usp=drivesdk"
+      },
+      {
+        "name": "Q129 電從哪裡來（動畫展示版）簡報.pptx",
+        "id": "10UIs1JNsqE0gwkvU5PolWvW7R0kaa5O8",
+        "size": 3494712,
+        "link": "https://docs.google.com/presentation/d/10UIs1JNsqE0gwkvU5PolWvW7R0kaa5O8/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true"
+      },
+      {
+        "name": "Q129 電從哪裡來 教材.zip",
+        "id": "1dX0CUTmUFySWFg9uLUfJA_aiwVrzyvyi",
+        "size": 362728,
+        "link": "https://drive.google.com/file/d/1dX0CUTmUFySWFg9uLUfJA_aiwVrzyvyi/view?usp=drivesdk"
+      }
+    ]
+  }
+}

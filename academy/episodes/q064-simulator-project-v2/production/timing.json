@@ -1,0 +1,399 @@
+{
+  "version": 2,
+  "opening": 60.277,
+  "scenes": [
+    {
+      "page": 1,
+      "kind": "slide",
+      "v1slide": 1,
+      "title": "模組專題：在模擬器跑我的線路",
+      "duration": 32.16,
+      "sentences": [
+        {
+          "text": "歡迎回到父子科技學院的量子電腦學程，我是陳犀牛，今天是量子第六十四堂，在模擬器跑我的線路，這是依課綱製作的課前教學版，並非實際上課錄音。",
+          "start": 0.0,
+          "end": 12.376009
+        },
+        {
+          "text": "上一堂我們比較了量子加速的等級；這個模組從一次計算的生命週期，一路學到秀爾演算法，今天要把它們串起來。",
+          "start": 12.556009,
+          "end": 22.196009
+        },
+        {
+          "text": "今天是模組專題：你自己挑一條學過的線路，在模擬器上從頭跑到尾，再寫成一份別人也能重現的實驗報告。",
+          "start": 22.376009,
+          "end": 31.944014000000003
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q064-simulator-project/audio/slide_01.mp3"
+    },
+    {
+      "page": 2,
+      "kind": "slide",
+      "v1slide": 2,
+      "title": "三步：從問題到報告",
+      "duration": 29.112,
+      "sentences": [
+        {
+          "text": "今天分三步：先定義問題、寫出線路；再轉譯到一顆假想的晶片，加上雜訊執行；最後解讀結果，寫成報告。",
+          "start": 0.0,
+          "end": 10.48
+        },
+        {
+          "text": "今天的好玩機制是發布任務：報告要通過重現測試，別人照著報告重跑，得到一模一樣的數字，才算正式發布。",
+          "start": 10.66,
+          "end": 20.3
+        },
+        {
+          "text": "今天的作品是一份模擬器實驗報告，裡面寫清楚問題、參數、結果，還有你自己的解讀。",
+          "start": 20.48,
+          "end": 28.896009
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q064-simulator-project/audio/slide_02.mp3"
+    },
+    {
+      "page": 3,
+      "kind": "slide",
+      "v1slide": 3,
+      "title": "這個模組學了什麼",
+      "duration": 27.144,
+      "sentences": [
+        {
+          "text": "先回顧這個模組：一次計算要經過初始化和校準，每一個量子閘，最後都變成一段調好的微波脈衝。",
+          "start": 0.0,
+          "end": 8.752018
+        },
+        {
+          "text": "寫好的線路要先轉譯成晶片懂的原生閘；我們用開源量子程式套件寫程式，量測要重複很多次，看的是統計。",
+          "start": 8.932018,
+          "end": 18.236032
+        },
+        {
+          "text": "後半段學了動態線路、量子傅立葉轉換和秀爾演算法；上一堂還比較了不同演算法的加速有多大。",
+          "start": 18.416032,
+          "end": 26.92805
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q064-simulator-project/audio/slide_03.mp3"
+    },
+    {
+      "page": 4,
+      "kind": "slide",
+      "v1slide": 4,
+      "title": "操作檢查表：五關",
+      "duration": 28.968,
+      "sentences": [
+        {
+          "text": "我們把操作量子電腦的檢查表濃縮成五關：定義問題、寫線路、轉譯、執行、解讀，一關一關往下走。",
+          "start": 0.0,
+          "end": 10.0
+        },
+        {
+          "text": "第一關寫下要問什麼、預期答案是什麼；第二關畫出線路；第三關轉譯到晶片上，檢查深度和閘的數目。",
+          "start": 10.18,
+          "end": 19.22
+        },
+        {
+          "text": "第四關設定重複次數、亂數種子和雜訊模型，再按下執行；第五關拿結果和預期比較，寫進報告。",
+          "start": 19.4,
+          "end": 28.752018
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q064-simulator-project/audio/slide_04.mp3"
+    },
+    {
+      "page": 5,
+      "kind": "slide",
+      "v1slide": 5,
+      "title": "理想模擬器和雜訊模型",
+      "duration": 26.664,
+      "sentences": [
+        {
+          "text": "模擬器有兩種跑法：理想的模擬器從來不出錯，適合先驗證線路的邏輯對不對。",
+          "start": 0.0,
+          "end": 7.072018
+        },
+        {
+          "text": "加上雜訊模型，才比較像真的機器：我們假設單位元閘和受控反閘各有百分之一的錯誤率，讀取有百分之三會讀反。",
+          "start": 7.252018,
+          "end": 17.036032
+        },
+        {
+          "text": "要記住，這些數字是我們自己設的假設，不代表任何一台真的量子電腦，所以報告一定要寫清楚用了哪些參數。",
+          "start": 17.216032,
+          "end": 26.44805
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q064-simulator-project/audio/slide_05.mp3"
+    },
+    {
+      "page": 6,
+      "kind": "slide",
+      "v1slide": 6,
+      "title": "範例題：格羅弗搜尋找一一",
+      "duration": 27.096,
+      "sentences": [
+        {
+          "text": "我們用第十三堂學過的格羅弗搜尋當範例：四個抽屜裡藏著一個寶藏，答案是一一。",
+          "start": 0.0,
+          "end": 7.12
+        },
+        {
+          "text": "線路分三步：兩顆都做哈達瑪閘，讓四個抽屜一樣大；接著標記答案，翻轉它的正負號；再做擴散，對平均值翻轉。",
+          "start": 7.3,
+          "end": 17.876009
+        },
+        {
+          "text": "兩顆位元只要一輪，答案的機率就是百分之百，所以理想模擬器跑一千零二十四次，應該每一次都是一一。",
+          "start": 18.056009,
+          "end": 26.880023
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q064-simulator-project/audio/slide_06.mp3"
+    },
+    {
+      "page": 7,
+      "kind": "demo",
+      "demo": "grover",
+      "title": "動畫展示：兩顆格羅弗加上雜訊",
+      "duration": 37.296,
+      "sentences": [
+        {
+          "text": "換到三維動畫的量子線路場景，按格羅弗搜尋的範例，上方換成兩條線、八欄的線路，這是兩顆位元找一一的版本。",
+          "start": 0.0,
+          "end": 10.096009
+        },
+        {
+          "text": "連按八次單步，走到最右邊的量測欄；中間的柱子只剩一一那一根，其他三個位置都是平的。",
+          "start": 10.276009,
+          "end": 18.476009
+        },
+        {
+          "text": "右下的小圖跑了一千次，只有一一一根橘色柱子，頂到青色的理想線，一次就找到答案。",
+          "start": 18.656009,
+          "end": 26.424014
+        },
+        {
+          "text": "打開加入雜訊的開關，一一的柱子掉到青線下方，零零、零一、一零都冒出矮矮的小柱子，和程式裡的雜訊是同一個道理。",
+          "start": 26.604014,
+          "end": 37.084014
+        }
+      ],
+      "audio": "audio/demo_grover.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#circuit"
+    },
+    {
+      "page": 8,
+      "kind": "slide",
+      "v1slide": 7,
+      "title": "轉譯：等級零和等級三",
+      "duration": 30.792,
+      "sentences": [
+        {
+          "text": "第三關轉譯：假想晶片是直線排列的五顆位元，只懂繞垂直軸旋轉、半個翻轉閘、翻轉閘和受控反閘。",
+          "start": 0.0,
+          "end": 9.664014
+        },
+        {
+          "text": "最佳化等級零完全不最佳化，深度二十六，會出錯的單位元閘有十四個；等級三把閘合併，深度剩十二，只剩六個。",
+          "start": 9.844014,
+          "end": 20.180023
+        },
+        {
+          "text": "兩種都有兩個受控反閘；加上雜訊、種子二零二六，答案一一在等級零出現八百六十六次，等級三是九百一十五次。",
+          "start": 20.360022999999998,
+          "end": 30.576031999999998
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q064-simulator-project/audio/slide_07.mp3"
+    },
+    {
+      "page": 9,
+      "kind": "slide",
+      "v1slide": 8,
+      "title": "解讀：寫成實驗報告",
+      "duration": 30.0,
+      "sentences": [
+        {
+          "text": "第五關解讀：理想的一千零二十四次全是一一，代表線路的邏輯沒錯；有雜訊時少掉的次數，就是雜訊的代價。",
+          "start": 0.0,
+          "end": 9.496009
+        },
+        {
+          "text": "等級三比較好，是因為閘少了，出錯的機會也少；我們換了五個種子，等級三每一次都多出三十九到四十七次。",
+          "start": 9.676009,
+          "end": 18.860022999999998
+        },
+        {
+          "text": "報告要寫下六樣東西：問題和預期、套件版本、晶片假設、雜訊參數、重複次數和種子，最後才是結果和解讀。",
+          "start": 19.040022999999998,
+          "end": 29.784036999999998
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q064-simulator-project/audio/slide_08.mp3"
+    },
+    {
+      "page": 10,
+      "kind": "slide",
+      "v1slide": 9,
+      "title": "發布任務：重現測試",
+      "duration": 29.568,
+      "sentences": [
+        {
+          "text": "發布任務的玩法：你是發布工程師，挑題目、跑程式、寫報告；爸爸是重現審查員，手上只有你的報告。",
+          "start": 0.0,
+          "end": 9.856009
+        },
+        {
+          "text": "爸爸照著報告上的版本、參數和種子，在自己的電腦重跑一次；數字一模一樣，才蓋上一點零版的發布章。",
+          "start": 10.036009,
+          "end": 19.316009
+        },
+        {
+          "text": "小知識：我們重跑貝爾態，理想結果還是零零五百一十六次、一一五百零八次，和第十堂、第五十七堂一樣。",
+          "start": 19.496009,
+          "end": 29.352018
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q064-simulator-project/audio/slide_09.mp3"
+    },
+    {
+      "page": 11,
+      "kind": "demo",
+      "demo": "deutsch",
+      "title": "動畫展示：換一個題目",
+      "duration": 34.824,
+      "sentences": [
+        {
+          "text": "題目不一定要用格羅弗搜尋，也可以挑第十二堂的多伊奇問題；打開線路入門動畫的這個範例，黑盒裡預設是平衡函數。",
+          "start": 0.0,
+          "end": 9.976009
+        },
+        {
+          "text": "連按四次下一步：輔助位元先翻成一，兩顆都做哈達瑪閘，接著查一次黑盒，最後零號再做一次哈達瑪閘。",
+          "start": 10.156009,
+          "end": 19.700023
+        },
+        {
+          "text": "按量測一千次，零號位元一千次都是一，右邊寫著平衡函數。",
+          "start": 19.880023,
+          "end": 25.776032
+        },
+        {
+          "text": "把上方的黑盒換成永遠輸出一的常數函數，再量一千次，結果全部變成零，右邊改寫常數函數。",
+          "start": 25.956032,
+          "end": 34.612041
+        }
+      ],
+      "audio": "audio/demo_deutsch.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/basic-circuits.html#deutsch"
+    },
+    {
+      "page": 12,
+      "kind": "slide",
+      "v1slide": 10,
+      "title": "換你改造：三顆的格羅弗搜尋",
+      "duration": 28.44,
+      "sentences": [
+        {
+          "text": "下半場換你改造：把題目換成三顆的格羅弗搜尋，八個抽屜找一零一，要跑兩輪，再比較等級零和等級三。",
+          "start": 0.0,
+          "end": 9.328005000000001
+        },
+        {
+          "text": "三顆的線路要用多控制的閘，轉譯後受控反閘變得很多：等級零有五十一個，等級三減少到三十九個。",
+          "start": 9.508005,
+          "end": 18.428005
+        },
+        {
+          "text": "有雜訊時，一零一在等級零只出現四百五十八次，等級三有五百五十次；線路越深，最佳化省下的閘就越重要。",
+          "start": 18.608005,
+          "end": 28.224013999999997
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q064-simulator-project/audio/slide_10.mp3"
+    },
+    {
+      "page": 13,
+      "kind": "demo",
+      "demo": "grover3",
+      "title": "動畫展示：三顆的理想值",
+      "duration": 39.096,
+      "sentences": [
+        {
+          "text": "回到線路入門動畫的格羅弗搜尋，把位元數改成三顆：八個抽屜，答案預設是一零一，畫面直接停在第二輪擴散。",
+          "start": 0.0,
+          "end": 9.76
+        },
+        {
+          "text": "電路上是兩組標記和擴散；說明寫著答案的機率升到百分之九十四點五，左邊的振幅柱子只有一零一高高站著。",
+          "start": 9.94,
+          "end": 19.172018
+        },
+        {
+          "text": "按量測一千次，右邊列出八種結果，一零一的綠色條幾乎填滿整格，其他七種只有零星幾次。",
+          "start": 19.352018,
+          "end": 27.744036
+        },
+        {
+          "text": "所以三顆就算沒有雜訊，也不是百分之百；程式裡理想模擬跑一千零二十四次，一零一大約九百七十次，報告要先寫下這個理想值。",
+          "start": 27.924036,
+          "end": 38.884036
+        }
+      ],
+      "audio": "audio/demo_grover3.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/basic-circuits.html#grover"
+    },
+    {
+      "page": 14,
+      "kind": "slide",
+      "v1slide": 11,
+      "title": "兩小時的發布任務",
+      "duration": 31.584,
+      "sentences": [
+        {
+          "text": "兩小時的安排是：開場十分鐘，接著十五分鐘照檢查表走一次範例，然後四十分鐘挑題目、加雜訊、寫報告，再休息十分鐘。",
+          "start": 0.0,
+          "end": 11.128005
+        },
+        {
+          "text": "下半場三十分鐘比較兩種最佳化等級，說明結果的差異；接著十分鐘交換角色，由你教爸爸操作和原理。",
+          "start": 11.308005,
+          "end": 20.852019
+        },
+        {
+          "text": "最後五分鐘錄音總結，替報告取名字、存一個版本；生活中做實驗也一樣，要寫到別人照著做，就能得到同樣的結果。",
+          "start": 21.032019,
+          "end": 31.368028
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q064-simulator-project/audio/slide_11.mp3"
+    },
+    {
+      "page": 15,
+      "kind": "slide",
+      "v1slide": 12,
+      "title": "最後一關：教爸爸跑線路",
+      "duration": 30.72,
+      "sentences": [
+        {
+          "text": "最後一關，請不看稿說出：操作檢查表的五關是什麼？為什麼最佳化等級三的結果比較好？",
+          "start": 0.0,
+          "end": 8.704014
+        },
+        {
+          "text": "再指出一個限制：模擬器的雜訊模型是我們自己設的假設，換一組參數結果就會變，所以報告要寫清楚用了哪些參數。",
+          "start": 8.884014,
+          "end": 18.908028
+        },
+        {
+          "text": "今天的作品是模擬器實驗報告，下一堂要比較人造原子和真的原子，認識不同的量子電腦平台；我是陳犀牛，保持好奇，我們下次見！",
+          "start": 19.088028,
+          "end": 30.504037000000004
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q064-simulator-project/audio/slide_12.mp3"
+    }
+  ]
+}

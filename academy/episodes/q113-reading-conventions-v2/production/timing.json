@@ -1,0 +1,394 @@
+{
+  "version": 2,
+  "opening": 60.277,
+  "scenes": [
+    {
+      "page": 1,
+      "kind": "slide",
+      "v1slide": 1,
+      "title": "讀圖之前：三個約定與今天用到的閘",
+      "duration": 32.232,
+      "sentences": [
+        {
+          "text": "歡迎回到父子科技學院的量子電腦學程，我是陳犀牛，今天是量子第一百一十三堂，讀圖之前，三個約定與今天用到的閘，這是依課綱製作的課前教學版，並非實際上課錄音。",
+          "start": 0.0,
+          "end": 14.008005
+        },
+        {
+          "text": "今天開始一個新的模組：用八個量子電路範例，從一顆位元的疊加，一路走到格羅弗搜尋，最後畫出自己的線路。",
+          "start": 14.188005,
+          "end": 23.828005
+        },
+        {
+          "text": "讀範例之前，要先講好三個約定，再認識今天會用到的四種閘，這樣後面每一張圖都看得懂。",
+          "start": 24.008005,
+          "end": 32.01601
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q113-reading-conventions/audio/slide_01.mp3"
+    },
+    {
+      "page": 2,
+      "kind": "slide",
+      "v1slide": 2,
+      "title": "臨摹挑戰：看懂、照畫、標出來",
+      "duration": 25.656,
+      "sentences": [
+        {
+          "text": "今天的玩法叫臨摹挑戰：爸爸給一張線路圖，你照著畫一遍，再把讀圖的約定標上去。",
+          "start": 0.0,
+          "end": 7.816009
+        },
+        {
+          "text": "分三步：先看懂閘的符號，再照著順序畫，最後標出每條線是哪一顆位元，量到的結果要怎麼寫。",
+          "start": 7.996009,
+          "end": 16.916009
+        },
+        {
+          "text": "今天的作品是一張讀圖約定卡，把三個約定和四種閘整理在同一張卡上，之後八個範例都用得到。",
+          "start": 17.096009,
+          "end": 25.440022999999997
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q113-reading-conventions/audio/slide_02.mp3"
+    },
+    {
+      "page": 3,
+      "kind": "slide",
+      "v1slide": 3,
+      "title": "八個範例：由淺到深",
+      "duration": 25.584,
+      "sentences": [
+        {
+          "text": "先看地圖：八個範例由淺到深，前兩個只用一顆位元，講疊加和干涉。",
+          "start": 0.0,
+          "end": 6.88
+        },
+        {
+          "text": "第三、第四個講糾纏，第五個用糾纏做隱形傳態，接著兩個，是查詢一次就得到答案的演算法。",
+          "start": 7.06,
+          "end": 15.908005
+        },
+        {
+          "text": "最後是格羅弗搜尋，會把前面學到的疊加、干涉和正負號全部用上；接下來八堂課，一堂講一個範例。",
+          "start": 16.088005,
+          "end": 25.368005
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q113-reading-conventions/audio/slide_03.mp3"
+    },
+    {
+      "page": 4,
+      "kind": "slide",
+      "v1slide": 4,
+      "title": "約定一：由左往右讀",
+      "duration": 25.704,
+      "sentences": [
+        {
+          "text": "約定一：線路圖由左往右讀，橫軸是時間，每一條橫線代表一顆量子位元，它不是真的電線。",
+          "start": 0.0,
+          "end": 8.416009
+        },
+        {
+          "text": "每條線最左邊寫著起點，今天的範例一開始都是零態；線上的方塊是量子閘，最右邊像儀表的符號是量測。",
+          "start": 8.596009,
+          "end": 18.188026999999998
+        },
+        {
+          "text": "排在同一欄的閘，同一拍一起做；就像第九堂說的樂譜，一格一格往右演奏。",
+          "start": 18.368026999999998,
+          "end": 25.488027
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q113-reading-conventions/audio/slide_04.mp3"
+    },
+    {
+      "page": 5,
+      "kind": "demo",
+      "demo": "read",
+      "title": "動畫展示：照約定一讀線路",
+      "duration": 27.408,
+      "sentences": [
+        {
+          "text": "打開線路入門動畫的疊加範例，照約定一來讀：左邊寫著編號零的位元，從零態出發，線上有一個藍色的哈達瑪閘，最右邊是量測。",
+          "start": 0.0,
+          "end": 10.984014
+        },
+        {
+          "text": "一開始橘色虛線停在閘的左邊；按下一步，虛線走到閘的右邊，下面的柱子從一根變成一樣高的兩根。",
+          "start": 11.164014,
+          "end": 19.940023
+        },
+        {
+          "text": "最後走到量測，按量測一千次，綠色的次數條，零和一大約各占一半。",
+          "start": 20.120023,
+          "end": 27.192041
+        }
+      ],
+      "audio": "audio/demo_read.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/basic-circuits.html#superposition"
+    },
+    {
+      "page": 6,
+      "kind": "slide",
+      "v1slide": 5,
+      "title": "約定二：編號零在哪裡？",
+      "duration": 27.384,
+      "sentences": [
+        {
+          "text": "約定二是位元的順序：每顆位元都有編號，從零開始；編號零的那一顆，在線路圖上畫在最上面。",
+          "start": 0.0,
+          "end": 8.968005
+        },
+        {
+          "text": "可是寫成一串零和一的時候，編號零要寫在最右邊；例如零一，代表編號一是零，編號零是一。",
+          "start": 9.148005,
+          "end": 17.540022999999998
+        },
+        {
+          "text": "今天的範例和常用的開源量子程式套件都這樣寫；換一套工具，順序可能相反，所以讀結果之前要先確認。",
+          "start": 17.720022999999998,
+          "end": 27.168028
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q113-reading-conventions/audio/slide_05.mp3"
+    },
+    {
+      "page": 7,
+      "kind": "demo",
+      "demo": "order",
+      "title": "動畫展示：編號零寫在最右邊",
+      "duration": 32.928,
+      "sentences": [
+        {
+          "text": "換到有兩條橫線的範例：上面是編號零，下面是編號一；先選上方第二個選項，翻轉閘出現在編號零那條線上。",
+          "start": 0.0,
+          "end": 9.544014
+        },
+        {
+          "text": "按下一步，只做這個翻轉閘：升起來的柱子是零一，量測一千次也全部是零一，編號零的一寫在最右邊。",
+          "start": 9.724014,
+          "end": 18.860022999999998
+        },
+        {
+          "text": "換成第三個選項，翻轉閘移到編號一的線上，一樣只走一步，升起來的變成一零。",
+          "start": 19.040022999999998,
+          "end": 26.592041
+        },
+        {
+          "text": "後面淡淡的那些閘，是範例三才要用到的步驟，今天先不按。",
+          "start": 26.772040999999998,
+          "end": 32.716055
+        }
+      ],
+      "audio": "audio/demo_order.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/basic-circuits.html#bell"
+    },
+    {
+      "page": 8,
+      "kind": "slide",
+      "v1slide": 6,
+      "title": "約定三：振幅有正有負",
+      "duration": 28.224,
+      "sentences": [
+        {
+          "text": "約定三是振幅：每一種結果都有一個振幅，畫成一根柱子，往上是正的，往下是負的。",
+          "start": 0.0,
+          "end": 8.056009
+        },
+        {
+          "text": "量到某個結果的機率，是振幅自己乘自己；零點七零七乘自己大約是零點五，負號乘完就不見了，所以負號本身量不到。",
+          "start": 8.236009,
+          "end": 18.476008999999998
+        },
+        {
+          "text": "動畫裡藍色代表正、橘色代表負，八個範例的簡報卻是金色正、紅色負，所以換一份圖，先看圖例。",
+          "start": 18.656008999999997,
+          "end": 28.008027
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q113-reading-conventions/audio/slide_06.mp3"
+    },
+    {
+      "page": 9,
+      "kind": "slide",
+      "v1slide": 7,
+      "title": "今天用到的閘：三種單位元閘",
+      "duration": 27.0,
+      "sentences": [
+        {
+          "text": "今天只用四種閘，先看三種單位元閘：哈達瑪閘把確定的零態，變成零和一各一半的疊加。",
+          "start": 0.0,
+          "end": 8.176009
+        },
+        {
+          "text": "翻轉閘是量子版的「反」，把零和一對調；相位翻轉閘讓零態不變，只給一態加上一個負號。",
+          "start": 8.356009,
+          "end": 16.388027
+        },
+        {
+          "text": "這三種都可以想成在布洛赫球上轉半圈，只是轉軸不同；在今天的動畫裡，它們分別是藍色、酒紅色和紫色的方塊。",
+          "start": 16.568027,
+          "end": 26.784036
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q113-reading-conventions/audio/slide_07.mp3"
+    },
+    {
+      "page": 10,
+      "kind": "slide",
+      "v1slide": 8,
+      "title": "第四種：受控反閘",
+      "duration": 28.296,
+      "sentences": [
+        {
+          "text": "第四種是受控反閘，它同時用到兩顆位元：畫成實心點的是控制位元，畫成圓圈裡一個加號的是目標位元。",
+          "start": 0.0,
+          "end": 9.376009
+        },
+        {
+          "text": "控制位元是零的時候，目標位元不動；控制位元是一的時候，目標位元就被翻轉，零變一、一變零。",
+          "start": 9.556009,
+          "end": 18.788027
+        },
+        {
+          "text": "簡報的閘表還列了兩種後面才出現的閘：受控相位翻轉閘，和可以轉任意角度的旋轉閘，用到時再介紹。",
+          "start": 18.968027,
+          "end": 28.080045
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q113-reading-conventions/audio/slide_08.mp3"
+    },
+    {
+      "page": 11,
+      "kind": "demo",
+      "demo": "zgate",
+      "title": "動畫展示：相位翻轉閘與負振幅",
+      "duration": 32.064,
+      "sentences": [
+        {
+          "text": "再看干涉範例的前兩步，這裡有藍色的哈達瑪閘和紫色的相位翻轉閘，第三個閘留到範例二再講。",
+          "start": 0.0,
+          "end": 8.272018000000001
+        },
+        {
+          "text": "按下一步，做完哈達瑪閘，零和一兩根藍色柱子一樣高，機率各一半。",
+          "start": 8.452018,
+          "end": 15.332018000000001
+        },
+        {
+          "text": "再按一次，做完相位翻轉閘，一那根柱子翻到下面，變成橘色的負振幅，零還是藍色的正振幅。",
+          "start": 15.512018000000001,
+          "end": 24.480023000000003
+        },
+        {
+          "text": "看柱子下面的數字，兩個機率仍然都是百分之五十，負號在機率裡看不出來。",
+          "start": 24.660023000000002,
+          "end": 31.852041
+        }
+      ],
+      "audio": "audio/demo_zgate.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/basic-circuits.html#interference"
+    },
+    {
+      "page": 12,
+      "kind": "slide",
+      "v1slide": 9,
+      "title": "臨摹挑戰：出題官和臨摹員",
+      "duration": 26.352,
+      "sentences": [
+        {
+          "text": "實作的時候分工：爸爸當出題官，打開動畫或簡報挑一張線路圖，只給你看圖。",
+          "start": 0.0,
+          "end": 7.3840140000000005
+        },
+        {
+          "text": "你當臨摹員，在格子紙上照畫一遍：橫線、起點、方塊、符號和量測都要畫，再寫上每條線的編號。",
+          "start": 7.564014,
+          "end": 17.444014000000003
+        },
+        {
+          "text": "畫完一起按動畫的下一步，一格一格對答案；哪一格畫錯、哪裡順序寫反了，記在約定卡的背面。",
+          "start": 17.624014000000003,
+          "end": 26.136032
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q113-reading-conventions/audio/slide_09.mp3"
+    },
+    {
+      "page": 13,
+      "kind": "slide",
+      "v1slide": 10,
+      "title": "換你改造：自己畫兩閘線路",
+      "duration": 27.72,
+      "sentences": [
+        {
+          "text": "下半場換你出題：自己畫一條只有兩個閘的線路，在每條線左邊標上編號，最上面是零號。",
+          "start": 0.0,
+          "end": 8.416009
+        },
+        {
+          "text": "先預測量測結果，寫成一串零和一，零號寫在最右邊；再用教材的小程式或本機模擬器跑一次對答案。",
+          "start": 8.596009,
+          "end": 17.372018
+        },
+        {
+          "text": "教材的程式我們真的跑過：只在零號位元做翻轉閘，印出來是零一；只翻一號位元，印出來是一零，和動畫一樣。",
+          "start": 17.552018,
+          "end": 27.504036
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q113-reading-conventions/audio/slide_10.mp3"
+    },
+    {
+      "page": 14,
+      "kind": "slide",
+      "v1slide": 11,
+      "title": "兩小時的讀圖練習",
+      "duration": 31.512,
+      "sentences": [
+        {
+          "text": "兩小時的安排是：開場十分鐘，概念示範十五分鐘，接著四十分鐘，對照簡報的約定頁，在線路動畫逐步播放疊加範例，然後休息十分鐘。",
+          "start": 0.0,
+          "end": 11.68
+        },
+        {
+          "text": "下半場三十分鐘自己畫兩閘線路、標出位元順序；接著十分鐘角色互換，由你教爸爸怎麼操作、背後是什麼原理。",
+          "start": 11.86,
+          "end": 22.004013999999998
+        },
+        {
+          "text": "最後五分鐘錄音總結、替作品命名、存一個版本；今天的生活技能是：先統一規則，再開始溝通。",
+          "start": 22.184013999999998,
+          "end": 31.296031999999997
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q113-reading-conventions/audio/slide_11.mp3"
+    },
+    {
+      "page": 15,
+      "kind": "slide",
+      "v1slide": 12,
+      "title": "最後一關：教爸爸讀圖",
+      "duration": 28.896,
+      "sentences": [
+        {
+          "text": "最後一關請不看稿說出：讀線路圖的三個約定是什麼？四種閘的符號怎麼畫、各做什麼事？",
+          "start": 0.0,
+          "end": 8.752018
+        },
+        {
+          "text": "再指出一個容易錯的地方：不同工具的位元順序可能相反，讀結果之前，先確認編號零寫在哪一邊。",
+          "start": 8.932018,
+          "end": 17.516032
+        },
+        {
+          "text": "今天的作品是讀圖約定卡，下一堂從範例一開始：疊加，量子硬幣與兩種疊加態；我是陳犀牛，保持好奇，我們下次見！",
+          "start": 17.696032,
+          "end": 28.680045999999997
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q113-reading-conventions/audio/slide_12.mp3"
+    }
+  ]
+}

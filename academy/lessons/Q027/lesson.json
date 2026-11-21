@@ -23,12 +23,22 @@
     "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q027｜SQUID：用磁場轉頻率",
     "難度 1–5": 4,
     "沿用簡報頁": [
-      "超導量子電腦的核心：JJ 與微波讀取（slides/JJ_Microwave_Readout_Talk.pptx）p17"
+      "超導量子電腦的核心：JJ 與微波讀取（slides/JJ_Microwave_Readout_Talk.pptx）p17",
+      "Transmon 筆記簡報（27 頁，含 3D 十二章導覽）（slides/transmon.pptx）p21"
     ],
     "沿用 3D 場景": [
-      "i:squid"
+      "i:squid",
+      "tr:case"
     ],
     "需新增素材": [],
+    "沿用文件": [
+      "超導量子電腦師生對話教學紀錄（docs/超導量子電腦師生對話教學紀錄.md）第 1–3 課"
+    ],
+    "2026-11-18 補充素材": [
+      "簡報 T p21",
+      "場景 tr:case",
+      "文件 DLG 第 1–3 課"
+    ],
     "YouTube 關鍵字 1": "SQUID：用磁場轉頻率 quantum computing explained beginner",
     "YouTube 連結 1": "https://www.youtube.com/results?search_query=SQUID%EF%BC%9A%E7%94%A8%E7%A3%81%E5%A0%B4%E8%BD%89%E9%A0%BB%E7%8E%87+quantum+computing+explained+beginner",
     "影片用途 1": "課前暖身",
@@ -39,8 +49,10 @@
     "YouTube 連結 3": "https://www.youtube.com/results?search_query=SQUID%EF%BC%9A%E7%94%A8%E7%A3%81%E5%A0%B4%E8%BD%89%E9%A0%BB%E7%8E%87+quantum+computing+lecture+visualization",
     "影片用途 3": "課後延伸"
   },
-  "curriculumSha256": "493446a21451c8a5c08a1723cfd04436e51cbfa4806049b55a765d22ecf2ba53",
-  "episodePaths": [],
+  "curriculumSha256": "eb081f5848bd31bd8d734680a2d88f6821b6b30fa5d9ff1d813d06872e8f71c3",
+  "episodePaths": [
+    "academy/episodes/q027-squid-flux-tuning-v2"
+  ],
   "minutes": 120,
   "status": "planned"
 }

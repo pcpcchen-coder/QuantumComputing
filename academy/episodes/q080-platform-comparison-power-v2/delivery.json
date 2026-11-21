@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q080",
+  "version": "Q080-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-19",
+  "episodePath": "academy/episodes/q080-platform-comparison-power-v2",
+  "basedOn": "academy/episodes/q080-platform-comparison-power（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 537.152,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "speed",
+      "title": "動畫展示：比速度，也比比值",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/atoms.html#compare"
+    },
+    {
+      "key": "connect",
+      "title": "動畫展示：誰連得到誰",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/atoms.html#compare"
+    },
+    {
+      "key": "outage",
+      "title": "動畫展示：超導斷電的代價",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/power1000.html#outage"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.6,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q080-platform-comparison-power-v2-zh-TW.mp4": {
+      "bytes": 90541609,
+      "sha256": "655fe120286c1bacea0085fcdd1a8d9c2a83bd341cffcaf4a8581eb6a86c9bfd"
+    },
+    "q080-platform-comparison-power-v2-master.mp4": {
+      "bytes": 92263948,
+      "sha256": "ddbe63395634c958eeff528c11dddaa2b2cc00834dbfa11f23589351c9d02258"
+    },
+    "narration-only.mp3": {
+      "bytes": 12893332,
+      "sha256": "e9fb410f182f5042106e3da925836a5605cdc5979c45e3e355bf1e1c70b54c27"
+    }
+  },
+  "package": {
+    "filename": "Q080-v2_量子電腦學程_平台大比較與供電分析_動畫展示版_2026-11-19.zip",
+    "bytes": 199836997,
+    "sha256": "e6bf74d1b4545e6dcd4a092ae0e4d2bd40881f15a8f28edbb901dab065f63dbe",
+    "parts": [
+      {
+        "name": "Q080-v2_量子電腦學程_平台大比較與供電分析_動畫展示版_2026-11-19.zip.part01",
+        "bytes": 29360128,
+        "sha256": "f26780ca7e81fcda9343c872549864a1a2d82658765c6885c146522458a07083"
+      },
+      {
+        "name": "Q080-v2_量子電腦學程_平台大比較與供電分析_動畫展示版_2026-11-19.zip.part02",
+        "bytes": 29360128,
+        "sha256": "70e512c8dfcc579f2b46842578446157569a12f4f7499b960d80500bf8cd86f2"
+      },
+      {
+        "name": "Q080-v2_量子電腦學程_平台大比較與供電分析_動畫展示版_2026-11-19.zip.part03",
+        "bytes": 29360128,
+        "sha256": "4a1c1528aa50006e45b4ed6e5f8426be1e45cc1e2909607268835343562568bf"
+      },
+      {
+        "name": "Q080-v2_量子電腦學程_平台大比較與供電分析_動畫展示版_2026-11-19.zip.part04",
+        "bytes": 29360128,
+        "sha256": "993504c8aa704026e7f711f7bb0bb764125477645caa0090ce3b2f5bc4593d46"
+      },
+      {
+        "name": "Q080-v2_量子電腦學程_平台大比較與供電分析_動畫展示版_2026-11-19.zip.part05",
+        "bytes": 29360128,
+        "sha256": "387c06ba6004930936a747877885bebe50eeefdef858f342da5451d3a1f409b5"
+      },
+      {
+        "name": "Q080-v2_量子電腦學程_平台大比較與供電分析_動畫展示版_2026-11-19.zip.part06",
+        "bytes": 29360128,
+        "sha256": "8788aaadd6ad8ddb995771da7b073df3bc0d7079337682ef0553fefda4f65f51"
+      },
+      {
+        "name": "Q080-v2_量子電腦學程_平台大比較與供電分析_動畫展示版_2026-11-19.zip.part07",
+        "bytes": 23676229,
+        "sha256": "c976be9eb4bd53de6910ec2f9ad9788bd1aa95187f1a3aa7afd0464f7c8c3026"
+      }
+    ],
+    "handedOver": "2026-11-19 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1ZOQEWjgkBnzg6-88LtQiSOgQeO2JG9Wx",
+    "uploadedAt": "2026-11-19",
+    "files": [
+      {
+        "name": "Q080 平台大比較與供電分析：平台大比較與供電分析（動畫展示版）.mp4",
+        "id": "1493ImTmI1vi_i16vFvUWKg-0iH_2KzmM",
+        "bytes": 90541609,
+        "url": "https://drive.google.com/file/d/1493ImTmI1vi_i16vFvUWKg-0iH_2KzmM/view"
+      },
+      {
+        "name": "Q080 平台大比較與供電分析（動畫展示版）簡報.pptx",
+        "id": "1njpnufrmJvFyaPll6Rl2IdSIzFXwaRrj",
+        "bytes": 3456885,
+        "url": "https://docs.google.com/presentation/d/1njpnufrmJvFyaPll6Rl2IdSIzFXwaRrj/edit"
+      },
+      {
+        "name": "Q080 平台大比較與供電分析 教材.zip",
+        "id": "1P79WPwuCineGD5HlDiVWN3sWdzaA5oHM",
+        "bytes": 342468,
+        "url": "https://drive.google.com/file/d/1P79WPwuCineGD5HlDiVWN3sWdzaA5oHM/view"
+      }
+    ]
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q132",
+  "version": "Q132-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-18",
+  "episodePath": "academy/episodes/q132-dc-noise-budget-v2",
+  "basedOn": "academy/episodes/q132-dc-noise-budget（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 539.84,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "electronics",
+      "title": "動畫展示：精密直流在哪裡",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/peripherals.html#electronics"
+    },
+    {
+      "key": "overview",
+      "title": "動畫展示：一百一十台精密直流",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/power1000.html#overview"
+    },
+    {
+      "key": "ground",
+      "title": "動畫展示：繞過濾波器的電流",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/power1000.html#ground"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.6,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q132-dc-noise-budget-v2-zh-TW.mp4": {
+      "bytes": 93470594,
+      "sha256": "6e25ea711226d33cbd21df86f9f2925348e1e35b9fe050460e9124956cf3c003"
+    },
+    "q132-dc-noise-budget-v2-master.mp4": {
+      "bytes": 95288859,
+      "sha256": "0eb4aa12390ca23faa63d02976ca42ce8f1d1435c7c935af5967032057d70054"
+    },
+    "narration-only.mp3": {
+      "bytes": 12957844,
+      "sha256": "fff50698e7aa326f28868a29f9dad519ae6fa24d4a6177c33c5c03840b2dbed2"
+    }
+  },
+  "package": {
+    "filename": "Q132-v2_量子電腦學程_雜訊預算_動畫展示版_2026-11-18.zip",
+    "bytes": 205905372,
+    "sha256": "51d1b2139ff96ea0372d5063f58bb0252358e2348e74c92f227b8f82aafee0ff",
+    "parts": [
+      {
+        "name": "Q132-v2_量子電腦學程_雜訊預算_動畫展示版_2026-11-18.zip.part01",
+        "bytes": 29360128,
+        "sha256": "1b118558b7c14e687e1e59b5debe66ad6a902bffb5b1b3d1d3bd9a0239daf01e"
+      },
+      {
+        "name": "Q132-v2_量子電腦學程_雜訊預算_動畫展示版_2026-11-18.zip.part02",
+        "bytes": 29360128,
+        "sha256": "f0de05444414712acf0061bd443e2890d7495b45da47b4829eb4aa0db9d3c00a"
+      },
+      {
+        "name": "Q132-v2_量子電腦學程_雜訊預算_動畫展示版_2026-11-18.zip.part03",
+        "bytes": 29360128,
+        "sha256": "f61a7f46e2452bc659b4ba4191f98891b9eed0757988144d91b32a1163ba658f"
+      },
+      {
+        "name": "Q132-v2_量子電腦學程_雜訊預算_動畫展示版_2026-11-18.zip.part04",
+        "bytes": 29360128,
+        "sha256": "2dab2d99f1c6b74784495aef6040ca2ae9a6197ea6da3fdc1b21b42dcbe7cef5"
+      },
+      {
+        "name": "Q132-v2_量子電腦學程_雜訊預算_動畫展示版_2026-11-18.zip.part05",
+        "bytes": 29360128,
+        "sha256": "20be131297cc6068ec37969dbcee4983b700ceb7475f6bc3f1eb1f467cdaf281"
+      },
+      {
+        "name": "Q132-v2_量子電腦學程_雜訊預算_動畫展示版_2026-11-18.zip.part06",
+        "bytes": 29360128,
+        "sha256": "96f1848d1dda64e163e9507823e87036f0f6d0fda8230c6f7c8c7ea4221ef300"
+      },
+      {
+        "name": "Q132-v2_量子電腦學程_雜訊預算_動畫展示版_2026-11-18.zip.part07",
+        "bytes": 29360128,
+        "sha256": "2f95713a15b564202e760b44a9cc0995863f4a95bd3fd8a7b0ba4371036a4e02"
+      },
+      {
+        "name": "Q132-v2_量子電腦學程_雜訊預算_動畫展示版_2026-11-18.zip.part08",
+        "bytes": 384476,
+        "sha256": "3cf52850db45ebb3d78fe81b263fb359239768b4b87f03926940cfd26bf28881"
+      }
+    ],
+    "handedOver": "2026-11-18 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "19TfKYX25oeVvzZEsGfFYyF8D3W3tknd7",
+    "uploaded": "2026-11-18",
+    "md5Verified": true,
+    "files": [
+      {
+        "name": "Q132 雜訊預算：精密 DC 源與雜訊預算（動畫展示版）.mp4",
+        "id": "1h_dmc6n9aW2O14JN2Ih1OgEvSZM0ltjs",
+        "link": "https://drive.google.com/file/d/1h_dmc6n9aW2O14JN2Ih1OgEvSZM0ltjs/view?usp=drivesdk"
+      },
+      {
+        "name": "Q132 雜訊預算（動畫展示版）簡報.pptx",
+        "id": "1550SGE-UVVaWwJyl1PxcssF04BVVE4PS",
+        "link": "https://docs.google.com/presentation/d/1550SGE-UVVaWwJyl1PxcssF04BVVE4PS/edit?usp=drivesdk"
+      },
+      {
+        "name": "Q132 雜訊預算 教材.zip",
+        "id": "11Lnc-hAdKAfFb87XV7Za1ECIqxTGwDq1",
+        "link": "https://drive.google.com/file/d/11Lnc-hAdKAfFb87XV7Za1ECIqxTGwDq1/view?usp=drivesdk"
+      }
+    ],
+    "videoReplaced": "2026-11-19：重新組裝（觀察重點卡高亮時機修正）後，以同一檔案 id 更新影片內容，md5 已比對"
+  }
+}

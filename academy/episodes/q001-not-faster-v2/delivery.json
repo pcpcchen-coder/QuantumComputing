@@ -1,0 +1,130 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q001",
+  "version": "Q001-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-18",
+  "episodePath": "academy/episodes/q001-not-faster-v2",
+  "basedOn": "academy/episodes/q001-not-faster（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 445.845,
+  "pages": 16,
+  "demos": [
+    {
+      "key": "measure",
+      "title": "動畫展示：一次只得到一個結果",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#qubit"
+    },
+    {
+      "key": "interference",
+      "title": "動畫展示：振幅會互相抵消",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#interference"
+    },
+    {
+      "key": "grover",
+      "title": "動畫展示：格羅弗搜尋",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#grover"
+    },
+    {
+      "key": "workflow",
+      "title": "動畫展示：一次量子計算的旅程",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#workflow"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.3,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q001-not-faster-v2-zh-TW.mp4": {
+      "bytes": 83278722,
+      "sha256": "128866864cc30d4fc7b4635046cacbed021db105ee6e319e4c5b31a98d5a3bc6"
+    },
+    "q001-not-faster-v2-master.mp4": {
+      "bytes": 86211632,
+      "sha256": "f04c1192725e73379087afabffcc5627a6717f7b1cb068269fc49ee90cc3d340"
+    },
+    "narration-only.mp3": {
+      "bytes": 10701652,
+      "sha256": "4074414722afce43b45b455588ac5b7baa5d8652162d776728098ff4cd7d59f0"
+    }
+  },
+  "package": {
+    "filename": "Q001-v2_量子電腦學程_開學任務_動畫展示版_2026-11-18.zip",
+    "bytes": 184312981,
+    "sha256": "b9eb67e18fdf08af654cd5779182b353b1cbc27f5183a4612adf82120fa08800",
+    "parts": [
+      {
+        "name": "Q001-v2_量子電腦學程_開學任務_動畫展示版_2026-11-18.zip.part01",
+        "bytes": 29360128,
+        "sha256": "7d75042a2e763275c925a3ae44b92c12ad42c8a444889f0b575274ade20efaa4"
+      },
+      {
+        "name": "Q001-v2_量子電腦學程_開學任務_動畫展示版_2026-11-18.zip.part02",
+        "bytes": 29360128,
+        "sha256": "252df90b42d5726edb138bff0ad897a2b899763df026e9d8734a4490a12f37e5"
+      },
+      {
+        "name": "Q001-v2_量子電腦學程_開學任務_動畫展示版_2026-11-18.zip.part03",
+        "bytes": 29360128,
+        "sha256": "2cc1f53e22255db71eab5f2cfd5b3475b9a411347531327f2279cede939e4865"
+      },
+      {
+        "name": "Q001-v2_量子電腦學程_開學任務_動畫展示版_2026-11-18.zip.part04",
+        "bytes": 29360128,
+        "sha256": "fa1938803582e68233ea56109bc42ca7c592ffb74879056074651f40af35771a"
+      },
+      {
+        "name": "Q001-v2_量子電腦學程_開學任務_動畫展示版_2026-11-18.zip.part05",
+        "bytes": 29360128,
+        "sha256": "3db36678ecd5daa8a98fbbe580c85c0d275f0beb3e6103e1d496a4012e4f379f"
+      },
+      {
+        "name": "Q001-v2_量子電腦學程_開學任務_動畫展示版_2026-11-18.zip.part06",
+        "bytes": 29360128,
+        "sha256": "e0b77c0339c1ebbaaa3e2f6c620038d392506b02d3346c7c9ce2437237d7dc11"
+      },
+      {
+        "name": "Q001-v2_量子電腦學程_開學任務_動畫展示版_2026-11-18.zip.part07",
+        "bytes": 8152213,
+        "sha256": "94e9491de61d73c06569e548681dd01a4164388ea23f3c3a0794209679d32ebc"
+      }
+    ],
+    "handedOver": "2026-11-18 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1o5DDOQHr7ytHWTPcHEvdVQN6mYQHsW0z",
+    "folderName": "量子電腦學程 Q001–Q003 動畫展示版（v2）",
+    "uploadedAt": "2026-11-18",
+    "uploadedBy": "製作代理（Claude，Drive API，上傳後比對 md5）",
+    "files": [
+      {
+        "name": "Q001 開學任務 教材.zip",
+        "id": "1pyfoUZH0_E74X_CIT7CBIinr28-Aw7KW",
+        "size": 508073,
+        "link": "https://drive.google.com/file/d/1pyfoUZH0_E74X_CIT7CBIinr28-Aw7KW/view?usp=drivesdk"
+      },
+      {
+        "name": "Q001 開學任務（動畫展示版）簡報.pptx",
+        "id": "11kPICTqbSaVWVu-NLTK9sjeWo2_a1cLs",
+        "size": 3673575,
+        "link": "https://docs.google.com/presentation/d/11kPICTqbSaVWVu-NLTK9sjeWo2_a1cLs/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true"
+      },
+      {
+        "name": "Q001 開學任務：量子電腦不是更快的電腦（動畫展示版）.mp4",
+        "id": "1k--Dmfw03bQPdttKfOiV96Liw7zPD5eg",
+        "size": 83278722,
+        "link": "https://drive.google.com/file/d/1k--Dmfw03bQPdttKfOiV96Liw7zPD5eg/view?usp=drivesdk"
+      }
+    ]
+  }
+}

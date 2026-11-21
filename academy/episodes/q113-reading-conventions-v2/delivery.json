@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q113",
+  "version": "Q113-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-19",
+  "episodePath": "academy/episodes/q113-reading-conventions-v2",
+  "basedOn": "academy/episodes/q113-reading-conventions（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 487.253,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "read",
+      "title": "動畫展示：照約定一讀線路",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/basic-circuits.html#superposition"
+    },
+    {
+      "key": "order",
+      "title": "動畫展示：編號零寫在最右邊",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/basic-circuits.html#bell"
+    },
+    {
+      "key": "zgate",
+      "title": "動畫展示：相位翻轉閘與負振幅",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/basic-circuits.html#interference"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.4,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q113-reading-conventions-v2-zh-TW.mp4": {
+      "bytes": 82785057,
+      "sha256": "23a02882288160db93222e08bceda39b2d4ad27b73577f8769a76562febb0203"
+    },
+    "q113-reading-conventions-v2-master.mp4": {
+      "bytes": 85080541,
+      "sha256": "2ff9f696c8da2d459901080b5e78a1bd4230782fb8e1a53736f8d822f1d59953"
+    },
+    "narration-only.mp3": {
+      "bytes": 11695828,
+      "sha256": "9ad6d9dcae207867101a3546a8d227602c2a44a84e9282c94fbe319783ca65dd"
+    }
+  },
+  "package": {
+    "filename": "Q113-v2_量子電腦學程_讀圖三約定_動畫展示版_2026-11-19.zip",
+    "bytes": 183263422,
+    "sha256": "f92c4376532ce4b81c51b2c2be55d898becc9ea903d3271cf25de4c875a0266a",
+    "parts": [
+      {
+        "name": "Q113-v2_量子電腦學程_讀圖三約定_動畫展示版_2026-11-19.zip.part01",
+        "bytes": 29360128,
+        "sha256": "a1aa4beaed87f848a09e0b1c17cf28471b1bd83bfbf747a87bdb8d86ec968e50"
+      },
+      {
+        "name": "Q113-v2_量子電腦學程_讀圖三約定_動畫展示版_2026-11-19.zip.part02",
+        "bytes": 29360128,
+        "sha256": "262144f1f57c0b8441571c03deef74434c686460f842487aff42a57b374566ae"
+      },
+      {
+        "name": "Q113-v2_量子電腦學程_讀圖三約定_動畫展示版_2026-11-19.zip.part03",
+        "bytes": 29360128,
+        "sha256": "afd390d7771da7d13bf1cc3db43822573727e2c0ff54e479cd6abd3015c9edc8"
+      },
+      {
+        "name": "Q113-v2_量子電腦學程_讀圖三約定_動畫展示版_2026-11-19.zip.part04",
+        "bytes": 29360128,
+        "sha256": "6c443e2b74025e5dfa7c7422a385fa84b11841cf76011a1a5bc105c3b9e42b4b"
+      },
+      {
+        "name": "Q113-v2_量子電腦學程_讀圖三約定_動畫展示版_2026-11-19.zip.part05",
+        "bytes": 29360128,
+        "sha256": "c551bc3dd108aeeab5c3fe21cce7bdfe57af2d1b6a673d284956b930b9d90f75"
+      },
+      {
+        "name": "Q113-v2_量子電腦學程_讀圖三約定_動畫展示版_2026-11-19.zip.part06",
+        "bytes": 29360128,
+        "sha256": "4f3037f1688f9783df6cf94c3bcc39604d0762e6f48a5cd2faf063e4428babc9"
+      },
+      {
+        "name": "Q113-v2_量子電腦學程_讀圖三約定_動畫展示版_2026-11-19.zip.part07",
+        "bytes": 7102654,
+        "sha256": "3e37ce6003c643e2d958ba1914d718ec8004b8636ff00108f5739b5037d9def6"
+      }
+    ],
+    "handedOver": "2026-11-19 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1bi-WOn7ipXPr978g1JqWu1DFCPwySyyb",
+    "uploaded": "2026-11-19",
+    "files": [
+      {
+        "name": "Q113 讀圖三約定：讀圖之前：三個約定與今天用到的閘（動畫展示版）.mp4",
+        "id": "1mHt9tu-gsK0dBncii_Vr-ORIXs8okzWo",
+        "link": "https://drive.google.com/file/d/1mHt9tu-gsK0dBncii_Vr-ORIXs8okzWo/view?usp=drivesdk"
+      },
+      {
+        "name": "Q113 讀圖三約定（動畫展示版）簡報.pptx",
+        "id": "1td_k2BiCKEaewIQtS-WSZ3aS5jRgLV-q",
+        "link": "https://docs.google.com/presentation/d/1td_k2BiCKEaewIQtS-WSZ3aS5jRgLV-q/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true"
+      },
+      {
+        "name": "Q113 讀圖三約定 教材.zip",
+        "id": "1m0Jls07RlgQHy60sARXhF6EAxZUQUGKP",
+        "link": "https://drive.google.com/file/d/1m0Jls07RlgQHy60sARXhF6EAxZUQUGKP/view?usp=drivesdk"
+      }
+    ],
+    "complete": true
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "lessonId": "Q136",
+  "sourceRow": {
+    "總課次": 136,
+    "學程": "量子電腦學程",
+    "階段": "第四階段 深化與產業",
+    "模組": "QM09 量子電腦的供電與機房工程",
+    "模組內課次": 8,
+    "課程主題": "離子阱的供電：ppm 與 nV",
+    "對象與上課方式": "工程同仁、電力電子背景；把量子電腦當成一個要供電、要備援的工程系統",
+    "學習目標": "認識阱 RF 振幅 ppm 穩定、DC 電極 nV/√Hz、雷射 nA 等級的精密需求",
+    "2 小時課程流程": "00–10 任務開場：離子阱的供電：ppm 與 nV\n10–25 概念示範：認識阱 RF 振幅 ppm 穩定、DC 電極 nV/√Hz、雷射 nA 等級的精密需求\n25–65 父子共同實作：整理離子阱各子系統的供電要求表\n65–75 休息／走動／聊天\n75–105 孩子獨立改造：說明為什麼離子阱要的是毫秒級備援\n105–115 角色互換：孩子教爸爸操作與原理\n115–120 錄音總結、作品命名、版本存檔",
+    "動手任務": "整理離子阱各子系統的供電要求表",
+    "孩子獨立改造": "說明為什麼離子阱要的是毫秒級備援",
+    "好玩機制": "資料偵探",
+    "作品／交付": "離子阱供電需求表",
+    "生活技能支線": "不同系統不同重點",
+    "家長課前準備": "供電簡報 p30–37；atoms.html#ionsys",
+    "課後延伸": "15–30 分鐘自由改造；寫三句學習日誌：我做了什麼、哪裡卡住、下次想加什麼。",
+    "驗收標準": "完成「離子阱供電需求表」；能不用看稿說出核心原理；能指出至少一個錯誤、限制或注意事項（例如：市電諧波是離子阱的頭號敵人）。",
+    "常見誤解與安全提醒": "市電諧波是離子阱的頭號敵人",
+    "錄音重點": "請孩子回答：1. 離子阱的供電：ppm 與 nV在解決什麼？2. 我怎麼做？3. 哪裡容易錯？4. 生活中或真實的量子電腦哪裡會用到？",
+    "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q136｜離子阱的供電：ppm 與 nV",
+    "難度 1–5": 4,
+    "沿用簡報頁": [
+      "技術分享：量子電腦的供電設計（slides/output/qc-power-supply.pptx）p30–37",
+      "離子阱與中性原子量子電腦（slides/Ion_NeutralAtom_Talk.pptx）p11"
+    ],
+    "沿用 3D 場景": [
+      "a:ionsys"
+    ],
+    "需新增素材": [],
+    "沿用文件": [
+      "量子電腦供電設計：文獻回顧與我們的切入點（docs/量子電腦供電設計文獻回顧與我們切入點.md）§7–11"
+    ],
+    "YouTube 關鍵字 1": "離子阱的供電：ppm 與 nV quantum computing explained beginner",
+    "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E9%9B%A2%E5%AD%90%E9%98%B1%E7%9A%84%E4%BE%9B%E9%9B%BB%EF%BC%9Appm+%E8%88%87+nV+quantum+computing+explained+beginner",
+    "影片用途 1": "課前暖身",
+    "YouTube 關鍵字 2": "離子阱的供電：ppm 與 nV 認識阱 RF 振幅 ppm 穩定、DC  hands on demo",
+    "YouTube 連結 2": "https://www.youtube.com/results?search_query=%E9%9B%A2%E5%AD%90%E9%98%B1%E7%9A%84%E4%BE%9B%E9%9B%BB%EF%BC%9Appm+%E8%88%87+nV+%E8%AA%8D%E8%AD%98%E9%98%B1+RF+%E6%8C%AF%E5%B9%85+ppm+%E7%A9%A9%E5%AE%9A%E3%80%81DC++hands+on+demo",
+    "影片用途 2": "課中實作參考",
+    "YouTube 關鍵字 3": "離子阱的供電：ppm 與 nV quantum computing lecture visualization",
+    "YouTube 連結 3": "https://www.youtube.com/results?search_query=%E9%9B%A2%E5%AD%90%E9%98%B1%E7%9A%84%E4%BE%9B%E9%9B%BB%EF%BC%9Appm+%E8%88%87+nV+quantum+computing+lecture+visualization",
+    "影片用途 3": "課後延伸"
+  },
+  "curriculumSha256": "eb081f5848bd31bd8d734680a2d88f6821b6b30fa5d9ff1d813d06872e8f71c3",
+  "episodePaths": [
+    "academy/episodes/q136-ion-trap-power-v2"
+  ],
+  "minutes": 120,
+  "status": "planned"
+}

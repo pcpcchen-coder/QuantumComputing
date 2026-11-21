@@ -1,0 +1,32 @@
+父子科技學院 量子電腦學程 Q074｜芮德堡阻斷與 CZ（v2・含 3D 動畫展示）
+
+這是依課綱製作的課前教學版，不是實際上課錄音。
+
+父子科技學院量子電腦學程 Q074「芮德堡阻斷與 CZ」新版（v2）：在原本的教學投影片之間，插入本學程 3D 互動動畫的實際操作示範。
+
+這一版新增的動畫展示
+・芮德堡態在哪裡（https://pcpcchen-coder.github.io/QuantumComputing/animations/atoms.html#atomqubit）
+・改距離看阻斷（https://pcpcchen-coder.github.io/QuantumComputing/animations/atoms.html#rydberg）
+・兩脈衝協定（https://pcpcchen-coder.github.io/QuantumComputing/animations/atoms.html#rydberg）
+
+動畫都可以在瀏覽器直接開啟，自己動手操作。
+
+章節
+00:00 陳犀牛系列片頭
+01:00 芮德堡阻斷與 CZ
+01:29 三步：吹大、量距離、走協定
+01:56 芮德堡原子：把原子吹大
+02:25 動畫展示：芮德堡態在哪裡
+03:03 芮德堡阻斷
+03:26 阻斷半徑：多近才算近
+03:51 動畫展示：改距離看阻斷
+04:30 從阻斷到 CZ
+04:57 兩脈衝協定與並行
+05:27 動畫展示：兩脈衝協定
+06:03 限制：閘要夠快
+06:27 闖關：預測再驗證
+06:57 換你改造：|00⟩ 的負號
+07:27 兩小時的阻斷實驗室
+08:00 最後一關：教爸爸阻斷
+
+旁白：微軟 zh-TW-YunJheNeural 神經語音合成（Edge-TTS／Azure 語音服務，同一聲音同一格式）。字幕已燒入影片，開啟 CC 可能重疊。

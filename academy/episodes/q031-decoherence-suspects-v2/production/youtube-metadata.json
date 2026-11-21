@@ -1,0 +1,8 @@
+{
+  "title": "父子科技學院 Q031｜退相干：敵人在哪裡（動畫展示版）",
+  "description": "父子科技學院 量子電腦學程 Q031｜退相干：敵人在哪裡（v2・含 3D 動畫展示）\n\n這是依課綱製作的課前教學版，不是實際上課錄音。\n\n父子科技學院量子電腦學程 Q031「退相干：敵人在哪裡」新版（v2）：在原本的教學投影片之間，插入本學程 3D 互動動畫的實際操作示範。\n\n這一版新增的動畫展示\n・第一個證據——能量漏掉（https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#bloch）\n・第二個證據——相位亂掉（https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#bloch）\n・先做對照組（https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#bloch）\n\n動畫都可以在瀏覽器直接開啟，自己動手操作。\n\n章節\n00:00 陳犀牛系列片頭\n01:00 退相干：敵人在哪裡\n01:33 三個重點\n02:02 兩個證據\n02:34 動畫展示：第一個證據——能量漏掉\n03:11 嫌犯一：二能階缺陷\n03:41 嫌犯二：準粒子與輻射\n04:12 嫌犯三：磁通雜訊\n04:38 動畫展示：第二個證據——相位亂掉\n05:17 嫌犯四與線索配對\n05:51 常見誤解：先懷疑量測\n06:17 實作：四張嫌犯卡\n06:43 換你改造：設計量測實驗\n07:15 動畫展示：先做對照組\n07:58 兩小時的偵探事務所\n08:24 最後一關：教爸爸辦案\n\n旁白：微軟 zh-TW-YunJheNeural 神經語音合成（Edge-TTS／Azure 語音服務，同一聲音同一格式）。字幕已燒入影片，開啟 CC 可能重疊。\n",
+  "privacyStatus": "private",
+  "madeForKids": null,
+  "reviewStatus": "needs-parent-review",
+  "publicationMode": "manual-user-upload"
+}

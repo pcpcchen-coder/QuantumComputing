@@ -1,0 +1,130 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q065",
+  "version": "Q065-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-18",
+  "episodePath": "academy/episodes/q065-artificial-vs-real-atoms-v2",
+  "basedOn": "academy/episodes/q065-artificial-vs-real-atoms（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 535.573,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "levels",
+      "title": "動畫展示：人造原子的能階",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#potential"
+    },
+    {
+      "key": "atomsys",
+      "title": "動畫展示：抓住真的原子",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/atoms.html#atomsys"
+    },
+    {
+      "key": "compare",
+      "title": "動畫展示：三平台比一比",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/atoms.html#compare"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.5,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q065-artificial-vs-real-atoms-v2-zh-TW.mp4": {
+      "bytes": 94115862,
+      "sha256": "6110a177895d93d621ff36c50af92ca4006c1847145f274931e036340d31f4a3"
+    },
+    "q065-artificial-vs-real-atoms-v2-master.mp4": {
+      "bytes": 96426441,
+      "sha256": "9340bc43d46f31604763a0f42f5b70e3b77e99de19fa4d2a18456aa06242367d"
+    },
+    "narration-only.mp3": {
+      "bytes": 12855316,
+      "sha256": "be07fa7ec2613858369ab8f4a1812082289e1b29c963e37bfb64c05df5ef8c8f"
+    }
+  },
+  "package": {
+    "filename": "Q065-v2_量子電腦學程_人造原子vs真原子_動畫展示版_2026-11-18.zip",
+    "bytes": 208268606,
+    "sha256": "9c3490f79c22bea6937f73677cd06dedde7b745a14630df605f9bf926e684d71",
+    "parts": [
+      {
+        "name": "Q065-v2_量子電腦學程_人造原子vs真原子_動畫展示版_2026-11-18.zip.part01",
+        "bytes": 29360128,
+        "sha256": "2eaa34d2bd8bec925fe893f15725dac01aaeba043b944875e1d619558435fc46"
+      },
+      {
+        "name": "Q065-v2_量子電腦學程_人造原子vs真原子_動畫展示版_2026-11-18.zip.part02",
+        "bytes": 29360128,
+        "sha256": "7ccd66861c2774a415adec010543febe8915c4186befe50c6458db16adfea375"
+      },
+      {
+        "name": "Q065-v2_量子電腦學程_人造原子vs真原子_動畫展示版_2026-11-18.zip.part03",
+        "bytes": 29360128,
+        "sha256": "fef6ac3c4dbaf669169c82ac24ced03108a6080d9136d3ccc7cc4b08f0dfe663"
+      },
+      {
+        "name": "Q065-v2_量子電腦學程_人造原子vs真原子_動畫展示版_2026-11-18.zip.part04",
+        "bytes": 29360128,
+        "sha256": "b7e3d6b5537c72f63f01d44a398dcc7bd30d9c0f4de0b85459c0c1cf74267767"
+      },
+      {
+        "name": "Q065-v2_量子電腦學程_人造原子vs真原子_動畫展示版_2026-11-18.zip.part05",
+        "bytes": 29360128,
+        "sha256": "5472a7c938b8109ad43cbc74f535b6c7cc3792b8efc0347be49a9f696cc33972"
+      },
+      {
+        "name": "Q065-v2_量子電腦學程_人造原子vs真原子_動畫展示版_2026-11-18.zip.part06",
+        "bytes": 29360128,
+        "sha256": "d879f14150190e1130bc46451445ee075f0028ed0e5e563e0c3f7c0f8749c304"
+      },
+      {
+        "name": "Q065-v2_量子電腦學程_人造原子vs真原子_動畫展示版_2026-11-18.zip.part07",
+        "bytes": 29360128,
+        "sha256": "d86c7d7680f756c3e6a30944dc16f49cee976037a7ff43040553955dc38077ca"
+      },
+      {
+        "name": "Q065-v2_量子電腦學程_人造原子vs真原子_動畫展示版_2026-11-18.zip.part08",
+        "bytes": 2747710,
+        "sha256": "7fb10511a57f7f43cbfa0772d33a66d47a715029e6b45634d6beb19171613ca9"
+      }
+    ],
+    "handedOver": "2026-11-18 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1eZLiQdOHdFov3xfVLuJtqORZ4fjXzXXV",
+    "folderName": "量子電腦學程 Q041–Q070 動畫展示版（v2）",
+    "uploadedAt": "2026-11-18",
+    "uploadedBy": "製作代理（Claude，Drive API，上傳後比對 md5）",
+    "files": [
+      {
+        "name": "Q065 人造原子vs真原子：人造原子 vs 真的原子（動畫展示版）.mp4",
+        "id": "1qJoFu9e9vpmt6s6TNLjeR3psc4Q6j0f6",
+        "size": 94115862,
+        "link": "https://drive.google.com/file/d/1qJoFu9e9vpmt6s6TNLjeR3psc4Q6j0f6/view?usp=drivesdk"
+      },
+      {
+        "name": "Q065 人造原子vs真原子（動畫展示版）簡報.pptx",
+        "id": "1KqnJpVdb7AGvuRdqPE2MmaniJKEE5cE8",
+        "size": 3939423,
+        "link": "https://docs.google.com/presentation/d/1KqnJpVdb7AGvuRdqPE2MmaniJKEE5cE8/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true"
+      },
+      {
+        "name": "Q065 人造原子vs真原子 教材.zip",
+        "id": "1EfS7VTp0pQYa7-xo2EC7-OYeB9URE-0q",
+        "size": 497021,
+        "link": "https://drive.google.com/file/d/1EfS7VTp0pQYa7-xo2EC7-OYeB9URE-0q/view?usp=drivesdk"
+      }
+    ]
+  }
+}

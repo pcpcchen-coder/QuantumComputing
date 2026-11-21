@@ -1,0 +1,146 @@
+"""量子電腦學程 v2：插在 v1 投影片之間的「動畫展示」段。
+
+每段：插在 v1 第 after 頁之後；旁白 3–4 句（新寫，與 v1 不重複）；錄影時依「第幾句開始後幾秒」自動操作 3D 場景；
+簡報上的三個觀察重點；截圖時間點（給簡報用）。
+
+動作格式：(句子序號 0 起, 句子開始後秒數, 動作)
+  ('click', '按鈕文字開頭')            operation.html 的 #controls 按鈕
+  ('slider', '滑桿標籤', 值)
+  ('sweep', '滑桿標籤', 起, 迄, 秒)    逐步拖動滑桿
+  ('toggle', '開關標籤', True/False)
+  ('id', 'DOM id')                    transmon-3d.html 用 id 點按鈕
+  ('sel', 'CSS 選擇器')                其他頁面（例如 basic-circuits.html）用選擇器點元素
+  ('js', '程式碼')                     在頁面執行一段程式（最後手段）
+"""
+
+PAGES = {
+    'op': ('animations/operation.html', 'https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html'),
+    'tr': ('animations/transmon-3d.html', 'https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html'),
+    'bc': ('animations/basic-circuits.html', 'https://pcpcchen-coder.github.io/QuantumComputing/animations/basic-circuits.html'),
+    # 以下頁面 Q011 起可用（jj = JJ 與微波讀取、lc = LC 與約瑟夫森接面、pe = 周邊系統、at = 離子阱與中性原子、pw = 1000 位元供電）
+    'jj': ('animations/index.html', 'https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html'),
+    'lc': ('animations/lc-vs-jj.html', 'https://pcpcchen-coder.github.io/QuantumComputing/animations/lc-vs-jj.html'),
+    'pe': ('animations/peripherals.html', 'https://pcpcchen-coder.github.io/QuantumComputing/animations/peripherals.html'),
+    'at': ('animations/atoms.html', 'https://pcpcchen-coder.github.io/QuantumComputing/animations/atoms.html'),
+    'pw': ('animations/power1000.html', 'https://pcpcchen-coder.github.io/QuantumComputing/animations/power1000.html'),
+}
+
+DEMOS = {
+'Q001': [
+ dict(key='measure', after=3, page='op', hash='qubit', scene='3D 場景 1：量子位元的狀態與測量',
+      title='動畫展示：一次只得到一個結果', sub='三維動畫：量子位元的狀態與測量',
+      sentences=[
+       '我們打開三維動畫的量子位元場景，先把箭頭放到赤道上。',
+       '按一次測量，箭頭立刻跳到北極或南極，下面的燈只亮一顆，代表這一次只得到一個結果。',
+       '動畫每次都會重新準備同一個狀態，再按幾次，結果一下是零、一下是一，完全看運氣。'],
+      actions=[(0, 0.6, ('click', '|+⟩')), (1, 0.8, ('click', '測量一次')), (1, 3.4, ('click', '測量一次')),
+               (2, 0.4, ('click', '測量一次')), (2, 2.2, ('click', '測量一次')), (2, 4.0, ('click', '測量一次')),
+               (2, 5.8, ('click', '測量一次'))],
+      points=[('箭頭在赤道', '一半一半的疊加'), ('按一次測量', '只亮一顆燈'), ('再按幾次', '結果看運氣')], shot=(1, 1.4)),
+ dict(key='interference', after=4, page='op', hash='interference', scene='3D 場景 8：干涉',
+      title='動畫展示：振幅會互相抵消', sub='三維動畫：加速的關鍵——振幅會互相抵消',
+      sentences=[
+       '接著看干涉場景：一個量子位元被分成上下兩條路，最後再合在一起。',
+       '相位是零的時候，通往結果一的兩支箭頭方向相反、互相抵消，所以結果一定是零。',
+       '把相位慢慢轉到一百八十度，抵消的地方換了位置，結果變成一定是一；這就是干涉。',
+       '如果中途偷看走哪一條路，干涉就消失，結果又變回一半一半。'],
+      actions=[(0, 0.2, ('slider', 'A：相位 φ', 0)), (2, 0.5, ('sweep', 'A：相位 φ', 0, 180, 4.5)),
+               (3, 0.4, ('toggle', 'A：中途偵測路徑', True))],
+      points=[('兩條路', '振幅頭尾相接'), ('相位零度', '結果一定是零'), ('偷看路徑', '干涉消失')], shot=(1, 2.0)),
+ dict(key='grover', after=6, page='op', hash='grover', scene='3D 場景 9：Grover 搜尋',
+      title='動畫展示：格羅弗搜尋', sub='三維動畫：振幅放大',
+      sentences=[
+       '再看格羅弗搜尋：十六根柱子代表十六個抽屜，一開始每個抽屜的振幅都一樣高。',
+       '每做一輪，標記的答案就被拉高一點，其他的柱子則慢慢變矮。',
+       '大約三輪之後，答案的機率超過九成；再多做一輪，反而會轉過頭變低。'],
+      actions=[(0, 0.2, ('click', '重設')), (1, 0.3, ('click', '完整一輪')), (1, 2.4, ('click', '完整一輪')),
+               (2, 0.3, ('click', '完整一輪')), (2, 4.2, ('click', '完整一輪'))],
+      points=[('十六個抽屜', '振幅一開始一樣'), ('每做一輪', '答案被拉高'), ('三輪左右', '機率超過九成')], shot=(2, 3.5)),
+ dict(key='workflow', after=10, page='op', hash='workflow', scene='3D 場景 12：完整流程',
+      title='動畫展示：一次量子計算的旅程', sub='三維動畫：一次量子計算的完整流程',
+      sentences=[
+       '最後打開完整流程場景，跟著發光的工作封包走一遍。',
+       '程式先被轉譯成硬體懂的閘，再變成微波脈衝，由控制電子送進冷凍機裡的晶片。',
+       '晶片重複執行很多次，每次的結果被判別成零或一，最後累積成直方圖，回到你的電腦。'],
+      actions=[],
+      points=[('寫程式', '指定重複次數'), ('轉譯與脈衝', '變成微波'), ('重複執行', '累積成直方圖')], shot=(2, 3.0)),
+],
+'Q002': [
+ dict(key='positions', after=4, page='op', hash='qubit', scene='3D 場景 1：量子位元的狀態與測量',
+      title='動畫展示：箭頭的四個位置', sub='三維動畫：量子位元的狀態與測量',
+      sentences=[
+       '打開三維動畫的量子位元場景，左下有幾個按鈕，可以直接把箭頭送到不同位置。',
+       '按狀態零，箭頭指向北極；按狀態一，箭頭指向南極。',
+       '再按加號那一顆，箭頭躺到赤道上，右邊青色的理論線變成一半一半。'],
+      actions=[(1, 0.2, ('click', '|0⟩')), (1, 2.6, ('click', '|1⟩')), (2, 1.0, ('click', '|+⟩'))],
+      points=[('狀態零', '箭頭指向北極'), ('狀態一', '箭頭指向南極'), ('赤道', '一半一半')], shot=(2, 3.0)),
+ dict(key='chip', after=5, page='tr', hash='control', scene='transmon 3D 第 4 章：用微波轉動布洛赫球',
+      title='動畫展示：晶片裡的零和一', sub='三維動畫：用微波轉動布洛赫球（transmon）',
+      sentences=[
+       '換到另一個動畫：在超導晶片裡，零和一其實是電路最低的兩個能階。',
+       '送一道微波持續照著，布洛赫球上的箭頭就連續轉動，下面的曲線在零和一之間來回。',
+       '這叫做拉比振盪，中間每一刻都是疊加態，並不是在零和一之間跳來跳去。'],
+      actions=[(0, 0.3, ('id', 'c4r')), (1, 0.3, ('id', 'c4rabi'))],
+      points=[('最低兩個能階', '就是零和一'), ('持續照微波', '箭頭連續轉動'), ('中間每一刻', '都是疊加態')], shot=(2, 2.0)),
+ dict(key='angle', after=6, page='op', hash='qubit', scene='3D 場景 1：量子位元的狀態與測量',
+      title='動畫展示：角度決定機率', sub='三維動畫：量子位元的狀態與測量',
+      sentences=[
+       '現在拖動角度滑桿，讓箭頭從北極慢慢往南極倒下。',
+       '箭頭越往下，右邊得到一的理論機率就越高，到了南極就變成一定得到一。',
+       '把角度停在六十度，一次跑一千次，大約七百五十次是零，和理論的四分之三很接近。'],
+      actions=[(0, 0.1, ('click', '|0⟩')), (0, 0.8, ('sweep', 'θ（極角）', 0, 180, 6.5)),
+               (2, 0.3, ('slider', 'θ（極角）', 60)), (2, 2.6, ('click', '一次跑 1000 shots'))],
+      points=[('零度', '一定得到零'), ('慢慢倒下', '得到一的機會變大'), ('六十度', '約七百五十次是零')], shot=(2, 4.0)),
+ dict(key='phase', after=7, page='op', hash='qubit', scene='3D 場景 1：量子位元的狀態與測量',
+      title='動畫展示：相位轉了也看不出來', sub='三維動畫：量子位元的狀態與測量',
+      sentences=[
+       '把箭頭放回赤道，這次改拖相位滑桿，箭頭會繞著赤道轉圈。',
+       '注意左邊面板的理論機率，零和一一直都是零點五，完全沒有變。',
+       '相位在測量時看不出來，要等之後經過干涉，它的作用才會顯現。'],
+      actions=[(0, 0.2, ('click', '|+⟩')), (0, 1.5, ('sweep', 'φ（相位）', 0, 360, 9.0))],
+      points=[('繞著赤道轉', '相位在變'), ('理論機率', '一直一半一半'), ('之後的課', '干涉讓相位現身')], shot=(1, 2.0)),
+],
+'Q003': [
+ dict(key='collapse', after=4, page='op', hash='qubit', scene='3D 場景 1：量子位元的狀態與測量',
+      title='動畫展示：塌縮', sub='三維動畫：量子位元的狀態與測量',
+      sentences=[
+       '用三維動畫看塌縮：先把箭頭放到赤道，再按一次測量。',
+       '箭頭一下子跳到北極或南極，原本指向赤道的方向不見了。',
+       '動畫為了讓你多試幾次，會自動重新準備赤道上的箭頭；真實的量子位元如果不重新準備，馬上再量，結果會和上一次一樣。'],
+      actions=[(0, 0.4, ('click', '|+⟩')), (1, 0.1, ('click', '測量一次')), (2, 0.6, ('click', '測量一次')),
+               (2, 3.2, ('click', '測量一次'))],
+      points=[('箭頭在赤道', '測量前'), ('按一次測量', '跳到北極或南極'), ('重新準備', '才會又是隨機')], shot=(1, 0.5)),
+ dict(key='converge', after=6, page='op', hash='qubit', scene='3D 場景 1：量子位元的狀態與測量',
+      title='動畫展示：次數越多越準', sub='三維動畫：量子位元的狀態與測量',
+      sentences=[
+       '接著按連續測量，動畫會一次又一次地準備、測量，右邊的柱子慢慢變高。',
+       '看右下角的小圖：橫軸是次數，灰色帶是誤差範圍，次數越多，灰色帶越窄。',
+       '最後按一次跑一千次，比例就穩穩停在一半附近。'],
+      actions=[(0, 0.2, ('click', '|+⟩')), (0, 0.6, ('slider', '連續模式速度', 8)), (0, 1.2, ('click', '連續 shots')),
+               (1, 0.5, ('sweep', '連續模式速度', 8, 300, 4.0)), (2, 0.3, ('click', '連續 shots')),
+               (2, 1.0, ('click', '一次跑 1000 shots'))],
+      points=[('連續測量', '柱子慢慢變高'), ('灰色帶', '誤差範圍'), ('次數越多', '越接近理論')], shot=(1, 4.5)),
+ dict(key='experiment', after=8, page='op', hash='qubit', scene='3D 場景 1：量子位元的狀態與測量',
+      title='動畫展示：實驗二怎麼做', sub='三維動畫：量子位元的狀態與測量',
+      sentences=[
+       '實驗二這樣做：先按加號，把角度設成九十度，再按一次跑一千次。',
+       '記下零和一各幾次，大約各五百次，但每跑一次都會差一點點。',
+       '接著按六十度的按鈕，再跑一千次，零大約變成七百五十次。'],
+      actions=[(0, 1.0, ('click', '|+⟩')), (0, 3.6, ('click', '一次跑 1000 shots')), (1, 2.2, ('click', '清除統計')),
+               (1, 2.6, ('click', '一次跑 1000 shots')), (2, 0.8, ('click', 'θ=60°')), (2, 2.4, ('click', '一次跑 1000 shots'))],
+      points=[('九十度', '零和一各約五百次'), ('再跑一次', '數字會差一點'), ('六十度', '零約七百五十次')], shot=(2, 3.5)),
+],
+}
+
+# Q004 起每課的動畫展示段放在 demos_extra/qxxx.py（定義 LESSON 與 DEMOS 清單）
+import importlib.util as _ilu
+from pathlib import Path as _P
+for _f in sorted((_P(__file__).resolve().parent / 'demos_extra').glob('q*.py')):
+    _sp = _ilu.spec_from_file_location(_f.stem, _f); _m = _ilu.module_from_spec(_sp); _sp.loader.exec_module(_m)
+    DEMOS[_m.LESSON] = list(_m.DEMOS[_m.LESSON]) if isinstance(_m.DEMOS, dict) else list(_m.DEMOS)  # 清單或 {'Qxxx': [...]} 皆可
+
+for lesson, ds in DEMOS.items():
+    for d in ds:
+        assert 3 <= len(d['sentences']) <= 4 and len(d['points']) == 3, (lesson, d['key'])
+        for s, t, a in d['actions']:
+            assert 0 <= s < len(d['sentences']), (lesson, d['key'], a)

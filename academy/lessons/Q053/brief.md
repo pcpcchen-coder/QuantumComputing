@@ -36,6 +36,7 @@ operation.html#pulse
 
 - 簡報：如何操作量子電腦（slides/QC_Operation_Talk.pptx）p21
 - 3D 場景：[`o:pulse`](../../../animations/operation.html#pulse)
+- 3D 場景：[`lj:s6drag`](../../../animations/lc-vs-jj.html#s6drag)
 
 生活技能支線：用軟體技巧取代硬體動作。課後延伸：15–30 分鐘自由改造；寫三句學習日誌：我做了什麼、哪裡卡住、下次想加什麼。
 

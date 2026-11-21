@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q114",
+  "version": "Q114-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-19",
+  "episodePath": "academy/episodes/q114-plus-minus-coin-v2",
+  "basedOn": "academy/episodes/q114-plus-minus-coin（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 496.966667,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "plusminus",
+      "title": "動畫展示：正號和負號兩種疊加態",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/basic-circuits.html#superposition"
+    },
+    {
+      "key": "equator",
+      "title": "動畫展示：赤道上的兩個對面",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#qubit"
+    },
+    {
+      "key": "blind",
+      "title": "動畫展示：只看次數的盲測",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/basic-circuits.html#superposition"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.5,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q114-plus-minus-coin-v2-zh-TW.mp4": {
+      "bytes": 84517214,
+      "sha256": "45541855795be3f22cbd447dbba44bb976db5e8fd13edfff60083f45052e3bef"
+    },
+    "q114-plus-minus-coin-v2-master.mp4": {
+      "bytes": 86796545,
+      "sha256": "3c100d09b77433ff47b297ddfa2ca73265b3c18aab7ff2ff4dfe6ed53091d714"
+    },
+    "narration-only.mp3": {
+      "bytes": 11928532,
+      "sha256": "948ceb1c599931d30c330932f3c55c93604868ab42e1b16b50d533ae3bc7539b"
+    }
+  },
+  "package": {
+    "filename": "Q114-v2_量子電腦學程_疊加量子硬幣_動畫展示版_2026-11-19.zip",
+    "bytes": 187058476,
+    "sha256": "6c238749cde61bdd8858726ba4577ccb62780372ea5d5a89f3105a3051de95fc",
+    "parts": [
+      {
+        "name": "Q114-v2_量子電腦學程_疊加量子硬幣_動畫展示版_2026-11-19.zip.part01",
+        "bytes": 29360128,
+        "sha256": "43f4a0456dcaccd9c6944b6aacae6479a2b87be7c3b00fc09775b771a6a34829"
+      },
+      {
+        "name": "Q114-v2_量子電腦學程_疊加量子硬幣_動畫展示版_2026-11-19.zip.part02",
+        "bytes": 29360128,
+        "sha256": "279a9680594903cf2df0394820463fbee61ef77c8ae06dcb0cb95e4fc2079c39"
+      },
+      {
+        "name": "Q114-v2_量子電腦學程_疊加量子硬幣_動畫展示版_2026-11-19.zip.part03",
+        "bytes": 29360128,
+        "sha256": "6f007ce2ea81e311516d19a382a5eadb485a29f183941ae8522d36262bf9e4c5"
+      },
+      {
+        "name": "Q114-v2_量子電腦學程_疊加量子硬幣_動畫展示版_2026-11-19.zip.part04",
+        "bytes": 29360128,
+        "sha256": "2ac91f183cc38e5c8f88f8a19c3c807d58630fc9af3e9e808835a5ea06e070a1"
+      },
+      {
+        "name": "Q114-v2_量子電腦學程_疊加量子硬幣_動畫展示版_2026-11-19.zip.part05",
+        "bytes": 29360128,
+        "sha256": "e9a6f06635c5dfd03a6e8154c78bc7f6ac157b198f08217975dd2f3207b1da51"
+      },
+      {
+        "name": "Q114-v2_量子電腦學程_疊加量子硬幣_動畫展示版_2026-11-19.zip.part06",
+        "bytes": 29360128,
+        "sha256": "2a5cf6cb29bd818bcf15996827f89d7a7d6fc3b089743e0b414aa93c69ec3352"
+      },
+      {
+        "name": "Q114-v2_量子電腦學程_疊加量子硬幣_動畫展示版_2026-11-19.zip.part07",
+        "bytes": 10897708,
+        "sha256": "fd455bc4218339db9cd05a9d6b03d33eace41a7a3cb51263ea9005edfd1c2749"
+      }
+    ],
+    "handedOver": "2026-11-19 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1bi-WOn7ipXPr978g1JqWu1DFCPwySyyb",
+    "uploaded": "2026-11-19",
+    "files": [
+      {
+        "name": "Q114 疊加量子硬幣：範例 1：疊加——量子硬幣與 |+⟩、|−⟩（動畫展示版）.mp4",
+        "id": "1pxxKGydS_DNNgxGrUZ_jauELh3_ZZkzE",
+        "link": "https://drive.google.com/file/d/1pxxKGydS_DNNgxGrUZ_jauELh3_ZZkzE/view?usp=drivesdk"
+      },
+      {
+        "name": "Q114 疊加量子硬幣（動畫展示版）簡報.pptx",
+        "id": "1DFM1p3dy5vIIyEtbedPfRMdgRrLdXhaG",
+        "link": "https://docs.google.com/presentation/d/1DFM1p3dy5vIIyEtbedPfRMdgRrLdXhaG/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true"
+      },
+      {
+        "name": "Q114 疊加量子硬幣 教材.zip",
+        "id": "1j1JH_Y9YcD8jcvy6lR04p6adAEHhqRV7",
+        "link": "https://drive.google.com/file/d/1j1JH_Y9YcD8jcvy6lR04p6adAEHhqRV7/view?usp=drivesdk"
+      }
+    ],
+    "complete": true
+  }
+}

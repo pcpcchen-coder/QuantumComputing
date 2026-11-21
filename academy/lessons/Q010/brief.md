@@ -35,7 +35,9 @@ Bell 態截圖＋說明卡
 ## 素材
 
 - 簡報：如何操作量子電腦（slides/QC_Operation_Talk.pptx）p27
+- 簡報：量子電路入門：八個範例（slides/output/basic-circuits.pptx）p28
 - 3D 場景：[`o:circuit`](../../../animations/operation.html#circuit)
+- 3D 場景：[`bc:bell`](../../../animations/basic-circuits.html#bell)
 - 需新增：★ 免安裝線路編輯器（工具）
 
 生活技能支線：寫程式前先預測結果。課後延伸：15–30 分鐘自由改造；寫三句學習日誌：我做了什麼、哪裡卡住、下次想加什麼。

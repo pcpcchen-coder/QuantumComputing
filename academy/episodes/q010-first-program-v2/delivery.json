@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q010",
+  "version": "Q010-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-18",
+  "episodePath": "academy/episodes/q010-first-program-v2",
+  "basedOn": "academy/episodes/q010-first-program（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 458.56,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "code",
+      "title": "動畫展示：線路變成程式",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/basic-circuits.html#bell"
+    },
+    {
+      "key": "noise",
+      "title": "動畫展示：理想結果和雜訊",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#circuit"
+    },
+    {
+      "key": "variants",
+      "title": "動畫展示：另外兩種貝爾態",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/basic-circuits.html#bell"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.4,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q010-first-program-v2-zh-TW.mp4": {
+      "bytes": 81752885,
+      "sha256": "cac6f249d8661b83f70bb2a9c11ff78ea8b5c7a3270bd3f0de3ea9d28eeea446"
+    },
+    "q010-first-program-v2-master.mp4": {
+      "bytes": 83982858,
+      "sha256": "4b86f5e976f0fd4b29059136d309cc504bc44485f3230778e88e1e2127f857f8"
+    },
+    "narration-only.mp3": {
+      "bytes": 11006932,
+      "sha256": "5fa01fe06c7da9f3df37d14c14c0bb798a3bb3a76379fa53c6c22f4c40b8955b"
+    }
+  },
+  "package": {
+    "filename": "Q010-v2_量子電腦學程_第一個量子程式_動畫展示版_2026-11-18.zip",
+    "bytes": 180361160,
+    "sha256": "8fc8d2d76a05f421b711dc75534399bded69d47303766c6ada6d03ad0045367d",
+    "parts": [
+      {
+        "name": "Q010-v2_量子電腦學程_第一個量子程式_動畫展示版_2026-11-18.zip.part01",
+        "bytes": 29360128,
+        "sha256": "909d75bfa139701c06da5a8abe56b710b78f58ae6180a43ebc59f437eea39cd6"
+      },
+      {
+        "name": "Q010-v2_量子電腦學程_第一個量子程式_動畫展示版_2026-11-18.zip.part02",
+        "bytes": 29360128,
+        "sha256": "ba785ad2be65c6fa4d4eac4d4fab3bdd1e1b5efb5647f6951696260f2df8b363"
+      },
+      {
+        "name": "Q010-v2_量子電腦學程_第一個量子程式_動畫展示版_2026-11-18.zip.part03",
+        "bytes": 29360128,
+        "sha256": "7f1714f566ceda6d3dd8b643324db2b6baccc8663b6ed39ecdd4e71b868a5135"
+      },
+      {
+        "name": "Q010-v2_量子電腦學程_第一個量子程式_動畫展示版_2026-11-18.zip.part04",
+        "bytes": 29360128,
+        "sha256": "6ef10de12c67cdcdb977d3b87e86f8b655a759f6949f031562b8cd0483d87380"
+      },
+      {
+        "name": "Q010-v2_量子電腦學程_第一個量子程式_動畫展示版_2026-11-18.zip.part05",
+        "bytes": 29360128,
+        "sha256": "84e54575c9a35dd7e8ee61fac5727e7046fa75f552011a6dd17f373e07262b4b"
+      },
+      {
+        "name": "Q010-v2_量子電腦學程_第一個量子程式_動畫展示版_2026-11-18.zip.part06",
+        "bytes": 29360128,
+        "sha256": "80ee4d3985141be991bcab4554c0ae60ba4de798b42bf5649fbd04dbc2f745a8"
+      },
+      {
+        "name": "Q010-v2_量子電腦學程_第一個量子程式_動畫展示版_2026-11-18.zip.part07",
+        "bytes": 4200392,
+        "sha256": "8405c78c31b10499e13b3c9ba30712567b22b968f080064c95c294149d8b3176"
+      }
+    ],
+    "handedOver": "2026-11-18 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1_4cP28v11Id8NhERnDYtpkPxw8055Y3l",
+    "folderName": "量子電腦學程 Q004–Q010 動畫展示版（v2）",
+    "uploadedAt": "2026-11-20",
+    "uploadedBy": "製作代理（Claude，Drive API，上傳後比對 md5）",
+    "files": [
+      {
+        "name": "Q010 第一個量子程式：貝爾態 教材.zip",
+        "id": "1P0Hg4WDhZ9208WyudJISPCMLDyHlKVsf",
+        "size": 421889,
+        "link": "https://drive.google.com/file/d/1P0Hg4WDhZ9208WyudJISPCMLDyHlKVsf/view?usp=drivesdk"
+      },
+      {
+        "name": "Q010 第一個量子程式：貝爾態（動畫展示版）.mp4",
+        "id": "1hQxs9YUos8w_NeM9r-W8qFKKwhrHfq3N",
+        "size": 81752885,
+        "link": "https://drive.google.com/file/d/1hQxs9YUos8w_NeM9r-W8qFKKwhrHfq3N/view?usp=drivesdk"
+      },
+      {
+        "name": "Q010 第一個量子程式：貝爾態（動畫展示版）簡報.pptx",
+        "id": "16mV3d-wfWX-K_lXlcx-PHWBVRknR8uOR",
+        "size": 2927414,
+        "link": "https://docs.google.com/presentation/d/16mV3d-wfWX-K_lXlcx-PHWBVRknR8uOR/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true"
+      }
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+父子科技學院 量子電腦學程 Q114｜範例 1：疊加——量子硬幣與 |+⟩、|−⟩（v2・含 3D 動畫展示）
+
+這是依課綱製作的課前教學版，不是實際上課錄音。
+
+父子科技學院量子電腦學程 Q114「範例 1：疊加——量子硬幣與 |+⟩、|−⟩」新版（v2）：在原本的教學投影片之間，插入本學程 3D 互動動畫的實際操作示範。
+
+這一版新增的動畫展示
+・正號和負號兩種疊加態（https://pcpcchen-coder.github.io/QuantumComputing/animations/basic-circuits.html#superposition）
+・赤道上的兩個對面（https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#qubit）
+・只看次數的盲測（https://pcpcchen-coder.github.io/QuantumComputing/animations/basic-circuits.html#superposition）
+
+動畫都可以在瀏覽器直接開啟，自己動手操作。
+
+章節
+00:00 陳犀牛系列片頭
+01:00 範例 1：疊加——量子硬幣與兩種疊加態
+01:33 盲測：只看結果，猜是哪一種
+01:59 範例 1：一條線、一個閘
+02:26 量子硬幣不只是「不知道」
+02:51 從一態出發：另一種疊加態
+03:16 動畫展示：正號和負號兩種疊加態
+03:52 機率一樣，差在正負號
+04:16 動畫展示：赤道上的兩個對面
+04:48 作品：兩種疊加態對照表
+05:18 盲測規則：只給看次數
+05:44 動畫展示：只看次數的盲測
+06:18 父子共同實作：零和一各做一次
+06:45 換你改造：再加一個哈達瑪閘
+07:12 兩小時的盲測實驗
+07:43 最後一關：教爸爸兩種疊加態
+
+旁白：微軟 zh-TW-YunJheNeural 神經語音合成（Edge-TTS／Azure 語音服務，同一聲音同一格式）。字幕已燒入影片，開啟 CC 可能重疊。

@@ -1,0 +1,130 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q048",
+  "version": "Q048-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-18",
+  "episodePath": "academy/episodes/q048-zero-to-online-v2",
+  "basedOn": "academy/episodes/q048-zero-to-online（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 548.033333,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "room",
+      "title": "動畫展示：走一圈機房",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/peripherals.html#infra"
+    },
+    {
+      "key": "outage",
+      "title": "動畫展示：模擬停電",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/peripherals.html#infra"
+    },
+    {
+      "key": "bringup",
+      "title": "動畫展示：從基溫到上線",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/peripherals.html#bringup"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.6,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q048-zero-to-online-v2-zh-TW.mp4": {
+      "bytes": 94157280,
+      "sha256": "f1dda2e08a877420fd563693e6d3a7872b705c5da79eceb95cfaf1f652df9de5"
+    },
+    "q048-zero-to-online-v2-master.mp4": {
+      "bytes": 96349576,
+      "sha256": "3eb3e6043b99e8f4fb42d11d39342e440d5ace392fc8ebe21062c55f0cbbab3c"
+    },
+    "narration-only.mp3": {
+      "bytes": 13154260,
+      "sha256": "b7edb7010a022f015924a1063d040441532599b26bf353997197cc5830e5e837"
+    }
+  },
+  "package": {
+    "filename": "Q048-v2_量子電腦學程_從零到上線_動畫展示版_2026-11-18.zip",
+    "bytes": 208011475,
+    "sha256": "81fb7f0fd2b7a79219aacaf891d37310294d204ba576d20328eafb36e9b10675",
+    "parts": [
+      {
+        "name": "Q048-v2_量子電腦學程_從零到上線_動畫展示版_2026-11-18.zip.part01",
+        "bytes": 29360128,
+        "sha256": "1a1c0de274b3b6d7095b75fac7421dd9e866f411d19a6f957e7ab6447cbba6c7"
+      },
+      {
+        "name": "Q048-v2_量子電腦學程_從零到上線_動畫展示版_2026-11-18.zip.part02",
+        "bytes": 29360128,
+        "sha256": "05de48d8aced8314067ffaa230e8cd6ed48590310cc9e8784a97e6e45c0c389f"
+      },
+      {
+        "name": "Q048-v2_量子電腦學程_從零到上線_動畫展示版_2026-11-18.zip.part03",
+        "bytes": 29360128,
+        "sha256": "dec938e85112e8e85203d7e66337b472a88ea711e3c25e94c25ccea13e3c9dd6"
+      },
+      {
+        "name": "Q048-v2_量子電腦學程_從零到上線_動畫展示版_2026-11-18.zip.part04",
+        "bytes": 29360128,
+        "sha256": "2675bd1339482131bd6cb9e35319cd28c7df59103633cf33015ccb7b38cddc49"
+      },
+      {
+        "name": "Q048-v2_量子電腦學程_從零到上線_動畫展示版_2026-11-18.zip.part05",
+        "bytes": 29360128,
+        "sha256": "9f8d7a728c64482fab47994a3c0fc9939392ee0791c46573e0456d8eddf08650"
+      },
+      {
+        "name": "Q048-v2_量子電腦學程_從零到上線_動畫展示版_2026-11-18.zip.part06",
+        "bytes": 29360128,
+        "sha256": "9bd3f64c85c8fd6c4b0464572b358eb05f2b5335244d83ecae973ab0b587e8bb"
+      },
+      {
+        "name": "Q048-v2_量子電腦學程_從零到上線_動畫展示版_2026-11-18.zip.part07",
+        "bytes": 29360128,
+        "sha256": "f22ceb60cc36e25527f63777d0ff0faa9790306d5501cbb4bb3079b45634f6ae"
+      },
+      {
+        "name": "Q048-v2_量子電腦學程_從零到上線_動畫展示版_2026-11-18.zip.part08",
+        "bytes": 2490579,
+        "sha256": "b79ef9515993a7a7014b6ec42c745f43e5350414efb3292831d78916f56816c4"
+      }
+    ],
+    "handedOver": "2026-11-18 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1eZLiQdOHdFov3xfVLuJtqORZ4fjXzXXV",
+    "folderName": "量子電腦學程 Q041–Q070 動畫展示版（v2）",
+    "uploadedAt": "2026-11-18",
+    "uploadedBy": "製作代理（Claude，Drive API，上傳後比對 md5）",
+    "files": [
+      {
+        "name": "Q048 從零到上線：從零到上線（動畫展示版）.mp4",
+        "id": "1fZf53bD0t3OVMDwkv9ndoE6Eq6JLxXuf",
+        "size": 94157280,
+        "link": "https://drive.google.com/file/d/1fZf53bD0t3OVMDwkv9ndoE6Eq6JLxXuf/view?usp=drivesdk"
+      },
+      {
+        "name": "Q048 從零到上線（動畫展示版）簡報.pptx",
+        "id": "13mv4Qp6E8YVsNd6Pt5NA_1QkQGVMBRvD",
+        "size": 3519170,
+        "link": "https://docs.google.com/presentation/d/13mv4Qp6E8YVsNd6Pt5NA_1QkQGVMBRvD/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true"
+      },
+      {
+        "name": "Q048 從零到上線 教材.zip",
+        "id": "1Gz-xuwdSUQIDro9zEvfxnIxje4mbfqjf",
+        "size": 512374,
+        "link": "https://drive.google.com/file/d/1Gz-xuwdSUQIDro9zEvfxnIxje4mbfqjf/view?usp=drivesdk"
+      }
+    ]
+  }
+}

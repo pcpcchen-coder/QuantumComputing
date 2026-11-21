@@ -1,0 +1,126 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q136",
+  "version": "Q136-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-19",
+  "episodePath": "academy/episodes/q136-ion-trap-power-v2",
+  "basedOn": "academy/episodes/q136-ion-trap-power（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 595.989,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "ionsys",
+      "title": "動畫展示：電都花到哪裡去",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/atoms.html#ionsys"
+    },
+    {
+      "key": "qccd",
+      "title": "動畫展示：用電壓把離子搬走",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/atoms.html#qccd"
+    },
+    {
+      "key": "paul",
+      "title": "動畫展示：射頻一斷，離子就跑",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/atoms.html#paul"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.6,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q136-ion-trap-power-v2-zh-TW.mp4": {
+      "bytes": 102877159,
+      "sha256": "adb3439eb941b4f9019b4d8b79a900edd5e8b8efdd486b6aecd94cc7476cabf7"
+    },
+    "q136-ion-trap-power-v2-master.mp4": {
+      "bytes": 104322871,
+      "sha256": "e48db81f2f3a761edf62799a4e2c1c7184d234c60541f9d0673c43f16ceb2994"
+    },
+    "narration-only.mp3": {
+      "bytes": 14305108,
+      "sha256": "1a8eabee4b3bcd831ed81613b714458fb1be497829d7cec8e68786b71a2785a2"
+    }
+  },
+  "package": {
+    "filename": "Q136-v2_量子電腦學程_離子阱供電_動畫展示版_2026-11-19.zip",
+    "bytes": 226108844,
+    "sha256": "7ce27c9474719f99c4fd6e31567e01075f6ffc63c4af584a36b5f34dca4a7358",
+    "parts": [
+      {
+        "name": "Q136-v2_量子電腦學程_離子阱供電_動畫展示版_2026-11-19.zip.part01",
+        "bytes": 29360128,
+        "sha256": "baf62ac577139d9adec368e23516d59cf76624add71f5ceec561eb105bc4650b"
+      },
+      {
+        "name": "Q136-v2_量子電腦學程_離子阱供電_動畫展示版_2026-11-19.zip.part02",
+        "bytes": 29360128,
+        "sha256": "b431459b82bfa6888cb1bfdcf14e1053af45dfb41644890ee421943ef95ea7d0"
+      },
+      {
+        "name": "Q136-v2_量子電腦學程_離子阱供電_動畫展示版_2026-11-19.zip.part03",
+        "bytes": 29360128,
+        "sha256": "e8930b9ec0adbca238e938e1ceae4e8d2b0b0152c04223a0d0bc9bf5a6bb1119"
+      },
+      {
+        "name": "Q136-v2_量子電腦學程_離子阱供電_動畫展示版_2026-11-19.zip.part04",
+        "bytes": 29360128,
+        "sha256": "4a98ed5cdb1d7cb525df36220a0a1a65d10df82ca21d5bcff2321f6fb8b6eaa8"
+      },
+      {
+        "name": "Q136-v2_量子電腦學程_離子阱供電_動畫展示版_2026-11-19.zip.part05",
+        "bytes": 29360128,
+        "sha256": "3799247533b455aa5811dd4562c34cf852b9de2d3a88a0482714b39cbae0ebef"
+      },
+      {
+        "name": "Q136-v2_量子電腦學程_離子阱供電_動畫展示版_2026-11-19.zip.part06",
+        "bytes": 29360128,
+        "sha256": "ced199ae545997ac7f2082be5d785cf064e411c2d90a6dea22fbda554f2def05"
+      },
+      {
+        "name": "Q136-v2_量子電腦學程_離子阱供電_動畫展示版_2026-11-19.zip.part07",
+        "bytes": 29360128,
+        "sha256": "5ba6c72d0aa967a1b9328634ac63e18fd3324bcf41b001a61ad83d3db0e26abd"
+      },
+      {
+        "name": "Q136-v2_量子電腦學程_離子阱供電_動畫展示版_2026-11-19.zip.part08",
+        "bytes": 20587948,
+        "sha256": "91a9d899f78e2387686f82fa5e41820e401f8c50cada2f58e0a0af0e6e6d8a62"
+      }
+    ],
+    "handedOver": "2026-11-19 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "19TfKYX25oeVvzZEsGfFYyF8D3W3tknd7",
+    "uploaded": "2026-11-18",
+    "md5Verified": true,
+    "files": [
+      {
+        "name": "Q136 離子阱供電：離子阱的供電：ppm 與 nV（動畫展示版）.mp4",
+        "id": "1SBvjL5RD4mUV8gGc23pp2NvVUQYcC57D",
+        "link": "https://drive.google.com/file/d/1SBvjL5RD4mUV8gGc23pp2NvVUQYcC57D/view?usp=drivesdk"
+      },
+      {
+        "name": "Q136 離子阱供電（動畫展示版）簡報.pptx",
+        "id": "1wk-6GFp1C9riz4rZe4Rxd4TmmWGD_m5z",
+        "link": "https://docs.google.com/presentation/d/1wk-6GFp1C9riz4rZe4Rxd4TmmWGD_m5z/edit?usp=drivesdk"
+      },
+      {
+        "name": "Q136 離子阱供電 教材.zip",
+        "id": "1uwETsFop2WeBtlB1yG_PaUg0_ccADyER",
+        "link": "https://drive.google.com/file/d/1uwETsFop2WeBtlB1yG_PaUg0_ccADyER/view?usp=drivesdk"
+      }
+    ]
+  }
+}

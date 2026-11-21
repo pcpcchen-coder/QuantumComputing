@@ -35,7 +35,9 @@ QM02 超導量子位元：從超導到 transmon｜第二階段 硬體怎麼做�
 ## 素材
 
 - 簡報：《量子超級英雄》#049 報告簡報（slides/output/ep049-superconducting-qubit.pptx）p6–8
-- 簡報：Transmon 筆記簡報（slides/transmon.pptx）p8
+- 簡報：Transmon 筆記簡報（27 頁，含 3D 十二章導覽）（slides/transmon.pptx）p8
+- 3D 場景：[`lj:s1`](../../../animations/lc-vs-jj.html#s1)
+- 3D 場景：[`lj:s2`](../../../animations/lc-vs-jj.html#s2)
 - 需新增：★ 彈簧 ↔ LC 類比場景
 
 生活技能支線：用類比把新知識接到舊知識。課後延伸：15–30 分鐘自由改造；寫三句學習日誌：我做了什麼、哪裡卡住、下次想加什麼。

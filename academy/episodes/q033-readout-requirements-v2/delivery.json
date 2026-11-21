@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q033",
+  "version": "Q033-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-20",
+  "episodePath": "academy/episodes/q033-readout-requirements-v2",
+  "basedOn": "academy/episodes/q033-readout-requirements（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 551.04,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "fastacc",
+      "title": "動畫展示：讀得快，還要讀得準",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#iq"
+    },
+    {
+      "key": "qnd",
+      "title": "動畫展示：只看諧振腔，不翻動量子位元",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#dispersive"
+    },
+    {
+      "key": "fluor",
+      "title": "動畫展示：螢光讀取很準，卻把原子推走",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/atoms.html#imaging"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.6,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q033-readout-requirements-v2-zh-TW.mp4": {
+      "bytes": 97773808,
+      "sha256": "7ef6560cd35036c267ef5a4612c7994df636daf8963aa74866759633d71a0086"
+    },
+    "q033-readout-requirements-v2-master.mp4": {
+      "bytes": 100572415,
+      "sha256": "6f8e1adfe1ac900ab5c267f67209826a6bdfd090267c089312a3c052bfba6338"
+    },
+    "narration-only.mp3": {
+      "bytes": 13226260,
+      "sha256": "f8ea3a901d1278f414e50c9853e6a06c2ff48a5e0e9e4db3624e18348bb2f7b3"
+    }
+  },
+  "package": {
+    "filename": "Q033-v2_量子電腦學程_讀取三要求_動畫展示版_2026-11-20.zip",
+    "bytes": 216014396,
+    "sha256": "444b6d8e97ced15ea170a75d8b5de84664dfdc2dc331783a043a09e1fa5273a9",
+    "parts": [
+      {
+        "name": "Q033-v2_量子電腦學程_讀取三要求_動畫展示版_2026-11-20.zip.part01",
+        "bytes": 29360128,
+        "sha256": "7948fe451810e5913471abd05707e0e7d3833a611f9eb55bdd4abf3cac6953f9"
+      },
+      {
+        "name": "Q033-v2_量子電腦學程_讀取三要求_動畫展示版_2026-11-20.zip.part02",
+        "bytes": 29360128,
+        "sha256": "426a314e1ef8ef2a14e071d8a3405344884db77a3f10425d7906fa0ada7921c1"
+      },
+      {
+        "name": "Q033-v2_量子電腦學程_讀取三要求_動畫展示版_2026-11-20.zip.part03",
+        "bytes": 29360128,
+        "sha256": "45f7de53a4c8fc49746aedd33fbb39f2a91ec89dee353a1da0bb6c610791b6f0"
+      },
+      {
+        "name": "Q033-v2_量子電腦學程_讀取三要求_動畫展示版_2026-11-20.zip.part04",
+        "bytes": 29360128,
+        "sha256": "289848146fc81b45f0381d5fb2e6465251e8e0ff2f129f53f45f45782d037c06"
+      },
+      {
+        "name": "Q033-v2_量子電腦學程_讀取三要求_動畫展示版_2026-11-20.zip.part05",
+        "bytes": 29360128,
+        "sha256": "c06d9bf0da2a5c5e52f523912363efa49eca31ba86d0d63b9973a2e4956f5d0d"
+      },
+      {
+        "name": "Q033-v2_量子電腦學程_讀取三要求_動畫展示版_2026-11-20.zip.part06",
+        "bytes": 29360128,
+        "sha256": "bc01bafcc2b404f3de2e9a1ab5fcb47f7fd19435be6e31dfc23daef98968e68a"
+      },
+      {
+        "name": "Q033-v2_量子電腦學程_讀取三要求_動畫展示版_2026-11-20.zip.part07",
+        "bytes": 29360128,
+        "sha256": "eef58bd6936cbde8ee12e005e97e0eaa97ca7b846e1bac2edb6288d3531d0afb"
+      },
+      {
+        "name": "Q033-v2_量子電腦學程_讀取三要求_動畫展示版_2026-11-20.zip.part08",
+        "bytes": 10493500,
+        "sha256": "fd00fb22a070f5ccc5a4b9ebd0c0f4b1b8035c5660c78c282378378022267a9b"
+      }
+    ],
+    "handedOver": "2026-11-20 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1epfQVOXunbD9Vht37u62oOD9Dr-HKMSE",
+    "folder": "量子電腦學程 Q011–Q040 動畫展示版（v2）",
+    "files": [
+      {
+        "name": "Q033 讀取三要求：讀取要快、準、不破壞（動畫展示版）.mp4",
+        "id": "1d4dW973Pga7135PdFzFi6xB7CSz-k_7k",
+        "link": "https://drive.google.com/file/d/1d4dW973Pga7135PdFzFi6xB7CSz-k_7k/view?usp=drivesdk",
+        "bytes": 97773808
+      },
+      {
+        "name": "Q033 讀取三要求（動畫展示版）簡報.pptx",
+        "id": "1bdsKoRIXT5ElBMlVfcOJ6m1z5iQCZJpT",
+        "link": "https://docs.google.com/presentation/d/1bdsKoRIXT5ElBMlVfcOJ6m1z5iQCZJpT/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true",
+        "bytes": 3407558
+      },
+      {
+        "name": "Q033 讀取三要求 教材.zip",
+        "id": "1v3Vn87_G8O51hRJPncQwEXv4D442AUdn",
+        "link": "https://drive.google.com/file/d/1v3Vn87_G8O51hRJPncQwEXv4D442AUdn/view?usp=drivesdk",
+        "bytes": 285611
+      }
+    ]
+  }
+}

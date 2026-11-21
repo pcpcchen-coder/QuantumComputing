@@ -1,0 +1,60 @@
+"""Q004 量子閘就是轉箭頭 — v2 動畫展示段（格式見 ../demos.py 的說明）。
+
+場景：animations/operation.html#gates（js/operation/02_gates.js）。按鈕文字：X、H、Z、重設 |0⟩、清除軌跡。
+每個半圈旋轉在動畫速度 1× 時約 1.3 秒，閘會排隊依序執行；幀率補償見 FPS_FIX。
+"""
+LESSON = 'Q004'
+
+
+class _Demos(list):
+    """demos.py 的載入器用 DEMOS[LESSON] = DEMOS（清單）；也接受 {'Q004': [...]} 形式的存取。"""
+    def keys(self):
+        return [LESSON]
+
+    def items(self):
+        return [(LESSON, list(self))]
+
+    def __getitem__(self, k):
+        return list(self) if k == LESSON else super().__getitem__(k)
+
+
+# 錄影機負載高時幀率會掉到個位數；core.js 把每幀 dt 限在 0.05 秒，動畫就會落後旁白。
+# 這段程式每秒量一次幀率，把 App.speed 設成 20／幀率（至少 1），讓旋轉在牆鐘時間內照常完成。
+FPS_FIX = ('js', "(()=>{if(window.__q4fps)return;window.__q4fps=1;let n=0,t0=performance.now();"
+                 "const f=(now)=>{n++;if(now-t0>=1000){App.speed=Math.min(8,Math.max(1,20*(now-t0)/1000/n));n=0;t0=now;}"
+                 "requestAnimationFrame(f);};requestAnimationFrame(f);})()")
+
+SCENE = '3D 場景 2：單位元量子閘'
+SUB = '三維動畫：單位元閘是布洛赫球上的旋轉'
+
+DEMOS = _Demos([
+ dict(key='xflip', after=4, page='op', hash='gates', scene=SCENE,
+      title='動畫展示：翻轉閘轉半圈', sub=SUB,
+      sentences=[
+       '打開三維動畫的單位元閘場景，先按重設，讓箭頭回到北極的零態。',
+       '按下翻轉閘，粉紅色的旋轉軸出現在正前方，箭頭繞著它翻了半圈，停在南極。',
+       '再按一次翻轉閘，箭頭繞著同一根軸再轉半圈，回到北極，插圖裡的線路紀錄多了兩個方塊。'],
+      actions=[(0, 0.1, FPS_FIX), (0, 3.4, ('click', '重設 |0⟩')), (1, 0.6, ('click', 'X')), (2, 0.6, ('click', 'X'))],
+      points=[('重設', '箭頭在北極'), ('按翻轉閘', '繞前後軸轉半圈'), ('再按一次', '轉回北極')], shot=(1, 1.4)),
+ dict(key='hz', after=5, page='op', hash='gates', scene=SCENE,
+      title='動畫展示：哈達瑪閘和相位翻轉閘', sub=SUB,
+      sentences=[
+       '回到北極，這次按哈達瑪閘，旋轉軸變成斜斜的一條，箭頭轉到赤道正前方。',
+       '下面的讀數顯示，得到零和得到一的機率都變成零點五。',
+       '接著按相位翻轉閘，軸變成直立的，箭頭沿著赤道轉到正後方，可是兩個機率仍然都是零點五。',
+       '再按一次相位翻轉閘，箭頭又轉回正前方，同一顆閘做兩次就回到原狀。'],
+      actions=[(0, 0.1, FPS_FIX), (0, 0.2, ('click', '重設 |0⟩')), (0, 1.8, ('click', 'H')), (2, 0.4, ('click', 'Z')), (3, 0.4, ('click', 'Z'))],
+      points=[('哈達瑪閘', '北極轉到赤道前方'), ('相位翻轉閘', '赤道前方轉到後方'), ('機率', '一直是一半一半')], shot=(2, 1.2)),
+ dict(key='undo', after=8, page='op', hash='gates', scene=SCENE,
+      title='動畫展示：倒著做就回到起點', sub=SUB,
+      sentences=[
+       '再試試倒回去：從北極出發，我們要依序按哈達瑪、翻轉和相位翻轉三顆閘。',
+       '箭頭先躺到赤道正前方，翻轉閘的軸剛好穿過它，所以它不動，最後被轉到赤道正後方。',
+       '現在倒著做：先按相位翻轉，再按翻轉，最後按哈達瑪，箭頭一步一步回到北極。',
+       '每一關驗證完，先按清除軌跡，再按重設，箭頭回到北極，才開始下一關。'],
+      actions=[(0, 0.1, FPS_FIX), (0, 0.8, ('click', '重設 |0⟩')),
+               (1, 0.2, ('click', 'H')), (1, 2.6, ('click', 'X')), (1, 6.0, ('click', 'Z')),
+               (2, 1.4, ('click', 'Z')), (2, 3.0, ('click', 'X')), (2, 4.2, ('click', 'H')),
+               (3, 1.8, ('click', '清除軌跡')), (3, 3.2, ('click', '重設 |0⟩'))],
+      points=[('依序三顆閘', '到赤道正後方'), ('倒著做', '一步一步回到北極'), ('每關之前', '清除軌跡、重設')], shot=(1, 3.4)),
+])

@@ -1,0 +1,126 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q133",
+  "version": "Q133-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-18",
+  "episodePath": "academy/episodes/q133-site-vibration-grounding-v2",
+  "basedOn": "academy/episodes/q133-site-vibration-grounding（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 559.232,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "field",
+      "title": "動畫展示：規格上的兩個磁場數字",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/power1000.html#field"
+    },
+    {
+      "key": "infra",
+      "title": "動畫展示：機房裡的防振與接地",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/peripherals.html#infra"
+    },
+    {
+      "key": "ground",
+      "title": "動畫展示：合規的漏電流加起來",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/power1000.html#ground"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.6,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q133-site-vibration-grounding-v2-zh-TW.mp4": {
+      "bytes": 94145876,
+      "sha256": "3852433ea89cce1a18a54b51e07815d1fa05129fa3f0b81b7233444eb915c67d"
+    },
+    "q133-site-vibration-grounding-v2-master.mp4": {
+      "bytes": 95450383,
+      "sha256": "4b7a4d3baab15e1b40ec7374e6a8063d0a86f4bca313248f0bba8755a53eaf83"
+    },
+    "narration-only.mp3": {
+      "bytes": 13423252,
+      "sha256": "d8dc4f9ce6bcb8d1974cfadfb16e7a985b96bad0a6bff53e401f2c986768dd68"
+    }
+  },
+  "package": {
+    "filename": "Q133-v2_量子電腦學程_機房要求_動畫展示版_2026-11-18.zip",
+    "bytes": 207086191,
+    "sha256": "70f8bce97be7baa622893ba7420ed01b4efe3b7e51646caac96edd0ca5fa2b35",
+    "parts": [
+      {
+        "name": "Q133-v2_量子電腦學程_機房要求_動畫展示版_2026-11-18.zip.part01",
+        "bytes": 29360128,
+        "sha256": "76b1d4e2236c132ce6979d1a6b839ce723dd3b3d94949b4763a7229f64f25586"
+      },
+      {
+        "name": "Q133-v2_量子電腦學程_機房要求_動畫展示版_2026-11-18.zip.part02",
+        "bytes": 29360128,
+        "sha256": "ab4e8227a2331fc7349f9b5c29dc8c87b2146ccfee137367c0321eb5044ad1d1"
+      },
+      {
+        "name": "Q133-v2_量子電腦學程_機房要求_動畫展示版_2026-11-18.zip.part03",
+        "bytes": 29360128,
+        "sha256": "907869193ddd9c34bc33e7c63ad8e4b04d4f8c87713c6db598b91aaea627fc16"
+      },
+      {
+        "name": "Q133-v2_量子電腦學程_機房要求_動畫展示版_2026-11-18.zip.part04",
+        "bytes": 29360128,
+        "sha256": "214e06bc3fbe63c79de392257aef9b7ca6d8f3b4a51a12556a4adfe6a8472a76"
+      },
+      {
+        "name": "Q133-v2_量子電腦學程_機房要求_動畫展示版_2026-11-18.zip.part05",
+        "bytes": 29360128,
+        "sha256": "6a863cdca21b2e984ed864471ba02214e5d4206e39602fc027daf00de0127889"
+      },
+      {
+        "name": "Q133-v2_量子電腦學程_機房要求_動畫展示版_2026-11-18.zip.part06",
+        "bytes": 29360128,
+        "sha256": "2b73b30acdcdd076d804a1718ac92c299b6506e353f13716d4fa1dff87171cd7"
+      },
+      {
+        "name": "Q133-v2_量子電腦學程_機房要求_動畫展示版_2026-11-18.zip.part07",
+        "bytes": 29360128,
+        "sha256": "a4caf245f8b740591c4b3c799c3f75e138203c0a59a2991ed6375c544e649749"
+      },
+      {
+        "name": "Q133-v2_量子電腦學程_機房要求_動畫展示版_2026-11-18.zip.part08",
+        "bytes": 1565295,
+        "sha256": "64a2cc0778ce8dfe7b7d1b679c46afe571ea8e3622b82dd5065af4800ec8978b"
+      }
+    ],
+    "handedOver": "2026-11-18 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "19TfKYX25oeVvzZEsGfFYyF8D3W3tknd7",
+    "uploaded": "2026-11-18",
+    "md5Verified": true,
+    "files": [
+      {
+        "name": "Q133 機房要求：機房要求：防振、接地與電磁干擾（動畫展示版）.mp4",
+        "id": "1FVQx0En4_AC75md6FBgx1ibU65SxeBK0",
+        "link": "https://drive.google.com/file/d/1FVQx0En4_AC75md6FBgx1ibU65SxeBK0/view?usp=drivesdk"
+      },
+      {
+        "name": "Q133 機房要求（動畫展示版）簡報.pptx",
+        "id": "1-nLruZbwr05LQfVL_V4-Jmg6fRen2EZC",
+        "link": "https://docs.google.com/presentation/d/1-nLruZbwr05LQfVL_V4-Jmg6fRen2EZC/edit?usp=drivesdk"
+      },
+      {
+        "name": "Q133 機房要求 教材.zip",
+        "id": "1UiX-ukJxScyJK_TeL-JkGzVWEdb0CtQL",
+        "link": "https://drive.google.com/file/d/1UiX-ukJxScyJK_TeL-JkGzVWEdb0CtQL/view?usp=drivesdk"
+      }
+    ]
+  }
+}

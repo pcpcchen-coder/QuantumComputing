@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q131",
+  "version": "Q131-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-18",
+  "episodePath": "academy/episodes/q131-cooling-chain-ups-v2",
+  "basedOn": "academy/episodes/q131-cooling-chain-ups（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 528.81,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "pulsetube",
+      "title": "動畫展示：冷卻鏈的第一棒",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/peripherals.html#pulsetube"
+    },
+    {
+      "key": "outage",
+      "title": "動畫展示：三種備援方案",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/power1000.html#outage"
+    },
+    {
+      "key": "overview",
+      "title": "動畫展示：分層保護的全景",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/power1000.html#overview"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.5,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q131-cooling-chain-ups-v2-zh-TW.mp4": {
+      "bytes": 90189946,
+      "sha256": "021ba77e970e68dd70dc1a6e93f7764687972d92eaa7da7448d95bd149a794dc"
+    },
+    "q131-cooling-chain-ups-v2-master.mp4": {
+      "bytes": 91746102,
+      "sha256": "6d6a8ece0bb321f08fb4ba69ffb341c5ca7fc3e06c241c79bda480810c56e02d"
+    },
+    "narration-only.mp3": {
+      "bytes": 12692884,
+      "sha256": "00388fe41ef6a03572ea230ee80fb743bcf64d698d17f280eae75d14e68ff59b"
+    }
+  },
+  "package": {
+    "filename": "Q131-v2_量子電腦學程_冷卻鏈不斷電_動畫展示版_2026-11-18.zip",
+    "bytes": 198707256,
+    "sha256": "196d4b18d5f875300e1409e520a149e5d1ad4d64978425acbd6899e98e38e41f",
+    "parts": [
+      {
+        "name": "Q131-v2_量子電腦學程_冷卻鏈不斷電_動畫展示版_2026-11-18.zip.part01",
+        "bytes": 29360128,
+        "sha256": "96c053be7a94dce7643a9bd14ec2196dde2185ddcf660b1fc21174d8c278b469"
+      },
+      {
+        "name": "Q131-v2_量子電腦學程_冷卻鏈不斷電_動畫展示版_2026-11-18.zip.part02",
+        "bytes": 29360128,
+        "sha256": "18a97db9b74028876ecde4837956baa9fc3c7c867cbcd514226d9eb232e632ca"
+      },
+      {
+        "name": "Q131-v2_量子電腦學程_冷卻鏈不斷電_動畫展示版_2026-11-18.zip.part03",
+        "bytes": 29360128,
+        "sha256": "25ae915720282b7d5ceedd4282634d3ffe79238f727e5928e1582821ffe5a419"
+      },
+      {
+        "name": "Q131-v2_量子電腦學程_冷卻鏈不斷電_動畫展示版_2026-11-18.zip.part04",
+        "bytes": 29360128,
+        "sha256": "5f2998a7483cb99ce59c7c8ce32ca01d5baa1307e18fb501981f45649256df73"
+      },
+      {
+        "name": "Q131-v2_量子電腦學程_冷卻鏈不斷電_動畫展示版_2026-11-18.zip.part05",
+        "bytes": 29360128,
+        "sha256": "f46073d912d2d5a15ab8fe98b55b4fe8e587f018e3233b7026396df01bfc1f0e"
+      },
+      {
+        "name": "Q131-v2_量子電腦學程_冷卻鏈不斷電_動畫展示版_2026-11-18.zip.part06",
+        "bytes": 29360128,
+        "sha256": "bbfb16cbe172ac1dfcc56f65fc5f0b83e1bfe605b2db1783d61fe204a20d86cb"
+      },
+      {
+        "name": "Q131-v2_量子電腦學程_冷卻鏈不斷電_動畫展示版_2026-11-18.zip.part07",
+        "bytes": 22546488,
+        "sha256": "82abde2e6d5b1e6781c6ca40e0d512f8d03eeabb60f9bccc4f0729f551f8b7a7"
+      }
+    ],
+    "handedOver": "2026-11-18 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "19TfKYX25oeVvzZEsGfFYyF8D3W3tknd7",
+    "uploaded": "2026-11-18",
+    "md5Verified": true,
+    "files": [
+      {
+        "name": "Q131 冷卻鏈不斷電：冷卻鏈不斷電與壓縮機驅動（動畫展示版）.mp4",
+        "id": "12VmV-mImJ7QIPhoqFwArtAH-cJKHXej6",
+        "link": "https://drive.google.com/file/d/12VmV-mImJ7QIPhoqFwArtAH-cJKHXej6/view?usp=drivesdk"
+      },
+      {
+        "name": "Q131 冷卻鏈不斷電 教材.zip",
+        "id": "1au3dYfqw874NS3V4sQldh8Hv2RjzsiL4",
+        "link": "https://drive.google.com/file/d/1au3dYfqw874NS3V4sQldh8Hv2RjzsiL4/view?usp=drivesdk"
+      },
+      {
+        "name": "Q131 冷卻鏈不斷電（動畫展示版）簡報.pptx",
+        "id": "1gkMukX3Nu2Bp1Q3uW4JE0Vt9JW54JNHD",
+        "link": "https://docs.google.com/presentation/d/1gkMukX3Nu2Bp1Q3uW4JE0Vt9JW54JNHD/edit?usp=drivesdk"
+      }
+    ],
+    "videoReplaced": "2026-11-19：重新組裝（觀察重點卡高亮時機修正）後，以同一檔案 id 更新影片內容，md5 已比對"
+  }
+}

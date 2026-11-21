@@ -1,0 +1,8 @@
+{
+  "title": "父子科技學院 Q129｜電從哪裡來、到哪裡去（動畫展示版）",
+  "description": "父子科技學院 量子電腦學程 Q129｜電從哪裡來、到哪裡去（v2・含 3D 動畫展示）\n\n這是依課綱製作的課前教學版，不是實際上課錄音。\n\n父子科技學院量子電腦學程 Q129「電從哪裡來、到哪裡去」新版（v2）：在原本的教學投影片之間，插入本學程 3D 互動動畫的實際操作示範。\n\n這一版新增的動畫展示\n・機房裡的電力線（https://pcpcchen-coder.github.io/QuantumComputing/animations/peripherals.html#overview）\n・一萬瓦換一點五瓦（https://pcpcchen-coder.github.io/QuantumComputing/animations/peripherals.html#pulsetube）\n・千位元設施的用電全景（https://pcpcchen-coder.github.io/QuantumComputing/animations/power1000.html#overview）\n\n動畫都可以在瀏覽器直接開啟，自己動手操作。\n\n章節\n00:00 陳犀牛系列片頭\n01:00 電從哪裡來、到哪裡去\n01:32 尋寶：三步找出每一條電路\n01:57 用電三大類\n02:22 電的路線：進門到出口\n02:52 動畫展示：機房裡的電力線\n03:32 一套超導系統：約二十六千瓦\n04:01 冷凍：壓縮機是電老虎\n04:29 動畫展示：一萬瓦換一點五瓦\n05:07 控制電子：電不多，但要乾淨\n05:32 耗電量不是最難的問題\n06:02 父子共同實作：電路尋寶\n06:31 動畫展示：千位元設施的用電全景\n07:12 換你改造：三平台的用電大戶\n07:40 兩小時的電路尋寶\n08:08 最後一關：尋寶王\n\n旁白：微軟 zh-TW-YunJheNeural 神經語音合成（Edge-TTS／Azure 語音服務，同一聲音同一格式）。字幕已燒入影片，開啟 CC 可能重疊。\n",
+  "privacyStatus": "private",
+  "madeForKids": null,
+  "reviewStatus": "needs-parent-review",
+  "publicationMode": "manual-user-upload"
+}

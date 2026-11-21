@@ -1,0 +1,32 @@
+父子科技學院 量子電腦學程 Q072｜磁光阱與光鑷（v2・含 3D 動畫展示）
+
+這是依課綱製作的課前教學版，不是實際上課錄音。
+
+父子科技學院量子電腦學程 Q072「磁光阱與光鑷」新版（v2）：在原本的教學投影片之間，插入本學程 3D 互動動畫的實際操作示範。
+
+這一版新增的動畫展示
+・光學桌上的磁光阱與光鑷（https://pcpcchen-coder.github.io/QuantumComputing/animations/atoms.html#atomsys）
+・裝載光鑷，約一半有原子（https://pcpcchen-coder.github.io/QuantumComputing/animations/atoms.html#tweezer）
+・停車格和搬運車（https://pcpcchen-coder.github.io/QuantumComputing/animations/atoms.html#tweezer）
+
+動畫都可以在瀏覽器直接開啟，自己動手操作。
+
+章節
+00:00 陳犀牛系列片頭
+01:00 磁光阱與光鑷
+01:29 三步：冷、抓、排
+01:57 中性原子系統全景
+02:25 動畫展示：光學桌上的磁光阱與光鑷
+03:01 從原子氣體到單顆原子
+03:26 比一比：室溫和磁光阱
+03:51 磁光阱怎麼運作
+04:19 光鑷：用光把原子吸過去
+04:46 碰撞阻斷：一格零或一顆
+05:09 動畫展示：裝載光鑷，約一半有原子
+05:45 實驗：吹風機抓乒乓球
+06:12 換你改造：SLM 與 AOD
+06:42 動畫展示：停車格和搬運車
+07:22 兩小時的光鑷實驗室
+07:53 最後一關：教爸爸抓原子
+
+旁白：微軟 zh-TW-YunJheNeural 神經語音合成（Edge-TTS／Azure 語音服務，同一聲音同一格式）。字幕已燒入影片，開啟 CC 可能重疊。

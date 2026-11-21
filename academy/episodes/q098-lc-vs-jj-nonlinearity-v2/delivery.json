@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q098",
+  "version": "Q098-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-20",
+  "episodePath": "academy/episodes/q098-lc-vs-jj-nonlinearity-v2",
+  "basedOn": "academy/episodes/q098-lc-vs-jj-nonlinearity（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 483.818,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "tangent",
+      "title": "動畫展示：沿著正弦曲線走",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/lc-vs-jj.html#s1"
+    },
+    {
+      "key": "levels",
+      "title": "動畫展示：拋物線和餘弦的能階",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/lc-vs-jj.html#s3"
+    },
+    {
+      "key": "drive",
+      "title": "動畫展示：微波只打到零和一",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/lc-vs-jj.html#s4"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.4,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q098-lc-vs-jj-nonlinearity-v2-zh-TW.mp4": {
+      "bytes": 85175239,
+      "sha256": "f5fb1ed7d4b1fe394e30810e821a483b2a2000466cf574fd634f62a67d548797"
+    },
+    "q098-lc-vs-jj-nonlinearity-v2-master.mp4": {
+      "bytes": 87820338,
+      "sha256": "394379f1f1ab371ed4b194f0f66eaf26bdfd59d9ebebad2bd87ed79ec59f8ad2"
+    },
+    "narration-only.mp3": {
+      "bytes": 11613460,
+      "sha256": "b7931c1fc38fbd021403073c0fc2271166f6927cdb72cbdab0d613b879ce5362"
+    }
+  },
+  "package": {
+    "filename": "Q098-v2_量子電腦學程_電感電容與約瑟夫森接面_動畫展示版_2026-11-20.zip",
+    "bytes": 188477711,
+    "sha256": "59b744ee86b304f756070504e65d17a4307242bd177543f314921bfa2b1718f6",
+    "parts": [
+      {
+        "name": "Q098-v2_量子電腦學程_電感電容與約瑟夫森接面_動畫展示版_2026-11-20.zip.part01",
+        "bytes": 29360128,
+        "sha256": "8ddfe5525c4b9a83830b91741f081dda1e9f944cc19c05bbc48a9f472f493789"
+      },
+      {
+        "name": "Q098-v2_量子電腦學程_電感電容與約瑟夫森接面_動畫展示版_2026-11-20.zip.part02",
+        "bytes": 29360128,
+        "sha256": "a790d4192a165383876526c3a234ae8b59f21f78fdaffef6c632e1229706cce9"
+      },
+      {
+        "name": "Q098-v2_量子電腦學程_電感電容與約瑟夫森接面_動畫展示版_2026-11-20.zip.part03",
+        "bytes": 29360128,
+        "sha256": "69549f5e23d62c8cc887625dcc54e6ec50c92a1251a54e3f06c0010629c022f1"
+      },
+      {
+        "name": "Q098-v2_量子電腦學程_電感電容與約瑟夫森接面_動畫展示版_2026-11-20.zip.part04",
+        "bytes": 29360128,
+        "sha256": "981579fe26c4503c9904fd839759d60e58006cfcd23db250414b242fb162db45"
+      },
+      {
+        "name": "Q098-v2_量子電腦學程_電感電容與約瑟夫森接面_動畫展示版_2026-11-20.zip.part05",
+        "bytes": 29360128,
+        "sha256": "6bc9e10092bfcea39bcc1e11fa30764b313f59cd1aeae8ae88ac85be41bf81cb"
+      },
+      {
+        "name": "Q098-v2_量子電腦學程_電感電容與約瑟夫森接面_動畫展示版_2026-11-20.zip.part06",
+        "bytes": 29360128,
+        "sha256": "b9706dd80cd33867d6faf4a3372c8c5734f80562247cb2bac30bbeef47804a77"
+      },
+      {
+        "name": "Q098-v2_量子電腦學程_電感電容與約瑟夫森接面_動畫展示版_2026-11-20.zip.part07",
+        "bytes": 12316943,
+        "sha256": "88114f702256d065e4f073893f6f8f636e7bd9d62e1d0cf751e25ed2b509acec"
+      }
+    ],
+    "handedOver": "2026-11-20 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1ZOQEWjgkBnzg6-88LtQiSOgQeO2JG9Wx",
+    "uploadedAt": "2026-11-19",
+    "files": [
+      {
+        "name": "Q098 LC 與 JJ：線性和非線性的差別（動畫展示版）.mp4",
+        "id": "1Ivk-mQHNeEqD5bSy5w2PT8fxxFa_MLt-",
+        "bytes": 85175239,
+        "url": "https://drive.google.com/file/d/1Ivk-mQHNeEqD5bSy5w2PT8fxxFa_MLt-/view"
+      },
+      {
+        "name": "Q098 LC 與 JJ（動畫展示版）簡報.pptx",
+        "id": "1X5unZt_m3LEA0uSMAfuPh4-6eyeMTszB",
+        "bytes": 3058056,
+        "url": "https://docs.google.com/presentation/d/1X5unZt_m3LEA0uSMAfuPh4-6eyeMTszB/edit"
+      },
+      {
+        "name": "Q098 LC 與 JJ 教材.zip",
+        "id": "1q2kP3G53hqJlaRMLs8U4oIn4FKKoAiK5",
+        "bytes": 341558,
+        "url": "https://drive.google.com/file/d/1q2kP3G53hqJlaRMLs8U4oIn4FKKoAiK5/view"
+      }
+    ]
+  }
+}

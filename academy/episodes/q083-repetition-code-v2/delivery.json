@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q083",
+  "version": "Q083-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-20",
+  "episodePath": "academy/episodes/q083-repetition-code-v2",
+  "basedOn": "academy/episodes/q083-repetition-code（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 443.52,
+  "pages": 14,
+  "demos": [
+    {
+      "key": "syndrome",
+      "title": "動畫展示：一顆被翻，兩格亮起",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#surface"
+    },
+    {
+      "key": "fooled",
+      "title": "動畫展示：錯兩顆，解碼器被騙",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#surface"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.4,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q083-repetition-code-v2-zh-TW.mp4": {
+      "bytes": 80943793,
+      "sha256": "f51de711bf5bf389bb926eecdb8e570cb65e629c7354c88217f1e461ca75b6c9"
+    },
+    "q083-repetition-code-v2-master.mp4": {
+      "bytes": 83427258,
+      "sha256": "9134ac46615fed94e9530eaa2686d7be29e90dff9b7f276cf7ef3100279b59dd"
+    },
+    "narration-only.mp3": {
+      "bytes": 10645780,
+      "sha256": "dbf81f066065a0d1612de70ed6120e18e634e7ead564ac10d18d6db80efc1c0e"
+    }
+  },
+  "package": {
+    "filename": "Q083-v2_量子電腦學程_重複碼_動畫展示版_2026-11-20.zip",
+    "bytes": 178945235,
+    "sha256": "006687ef30d969d729d70e7fd72006ab3f993f89a174af57fdcd2471ec67920b",
+    "parts": [
+      {
+        "name": "Q083-v2_量子電腦學程_重複碼_動畫展示版_2026-11-20.zip.part01",
+        "bytes": 29360128,
+        "sha256": "6b549375f05420ccf47b36bf0b4009e5a576bdb2311f8c9d3b2255c3dd8c23ff"
+      },
+      {
+        "name": "Q083-v2_量子電腦學程_重複碼_動畫展示版_2026-11-20.zip.part02",
+        "bytes": 29360128,
+        "sha256": "97ad01cac9cfd83bf3a9e2f83d61ccfe5e22d94e60e45cb526f49597ca26acdb"
+      },
+      {
+        "name": "Q083-v2_量子電腦學程_重複碼_動畫展示版_2026-11-20.zip.part03",
+        "bytes": 29360128,
+        "sha256": "552809ac458c96c2a9297042760439651365212f401d44f41a71b9890dfdc266"
+      },
+      {
+        "name": "Q083-v2_量子電腦學程_重複碼_動畫展示版_2026-11-20.zip.part04",
+        "bytes": 29360128,
+        "sha256": "8bc77632e12c5255e11a5af3dcc3018abea2d9662a4e954536303c45d6068f47"
+      },
+      {
+        "name": "Q083-v2_量子電腦學程_重複碼_動畫展示版_2026-11-20.zip.part05",
+        "bytes": 29360128,
+        "sha256": "fdd59136d8702829acc50bd895b58c4656b4174b1c206d4af09ef938352a0ac7"
+      },
+      {
+        "name": "Q083-v2_量子電腦學程_重複碼_動畫展示版_2026-11-20.zip.part06",
+        "bytes": 29360128,
+        "sha256": "1a533165a21704ac9a0187510128d27cd67adb8648715d698c9334e38072a269"
+      },
+      {
+        "name": "Q083-v2_量子電腦學程_重複碼_動畫展示版_2026-11-20.zip.part07",
+        "bytes": 2784467,
+        "sha256": "e986464d31ddcfb6c103491b93645469f9c3b8c7baea4c91996a344b1937eb2e"
+      }
+    ],
+    "handedOver": "2026-11-20 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1ZOQEWjgkBnzg6-88LtQiSOgQeO2JG9Wx",
+    "uploadedAt": "2026-11-19",
+    "files": [
+      {
+        "name": "Q083 重複碼：重複碼：最簡單的錯誤更正（動畫展示版）.mp4",
+        "id": "16SPawqJxyGoHxEvyBpsL1CreHwrONPDz",
+        "bytes": 80943793,
+        "url": "https://drive.google.com/file/d/16SPawqJxyGoHxEvyBpsL1CreHwrONPDz/view"
+      },
+      {
+        "name": "Q083 重複碼（動畫展示版）簡報.pptx",
+        "id": "1AHXwP5vEkb02_1FnPDcnsHN5dXOYRRn5",
+        "bytes": 3260113,
+        "url": "https://docs.google.com/presentation/d/1AHXwP5vEkb02_1FnPDcnsHN5dXOYRRn5/edit"
+      },
+      {
+        "name": "Q083 重複碼 教材.zip",
+        "id": "17vyGpsuCoYq2pl8u1IXGFlJrxkQPzHyl",
+        "bytes": 314105,
+        "url": "https://drive.google.com/file/d/17vyGpsuCoYq2pl8u1IXGFlJrxkQPzHyl/view"
+      }
+    ]
+  }
+}

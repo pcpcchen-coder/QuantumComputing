@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q111",
+  "version": "Q111-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-19",
+  "episodePath": "academy/episodes/q111-software-stack-v2",
+  "basedOn": "academy/episodes/q111-software-stack（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 561.301,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "route",
+      "title": "動畫展示：直線晶片要搬家",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#stack"
+    },
+    {
+      "key": "pulse",
+      "title": "動畫展示：奈秒時間軸賽跑",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#stack"
+    },
+    {
+      "key": "workflow",
+      "title": "動畫展示：一次執行花多久？",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#workflow"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.6,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q111-software-stack-v2-zh-TW.mp4": {
+      "bytes": 92087954,
+      "sha256": "030446e767d055981c9102263c8f7f06f97f523a733469b362110e8c453505ad"
+    },
+    "q111-software-stack-v2-master.mp4": {
+      "bytes": 93043453,
+      "sha256": "8941a9eac5947574e5d36b0dd2cc1e4c1851307cda842c0d3d67790650a715b7"
+    },
+    "narration-only.mp3": {
+      "bytes": 13472788,
+      "sha256": "658bfeaea20889f6e3b73304da2cdb12f79d0d658d127cbd9aecf49428a8c9ee"
+    }
+  },
+  "package": {
+    "filename": "Q111-v2_量子電腦學程_七層軟體堆疊_動畫展示版_2026-11-19.zip",
+    "bytes": 202788771,
+    "sha256": "28b11ecf926d0fc91251cca7aebd27d0b0eba09f40d7896ce5ac31b5c25b8b2c",
+    "parts": [
+      {
+        "name": "Q111-v2_量子電腦學程_七層軟體堆疊_動畫展示版_2026-11-19.zip.part01",
+        "bytes": 29360128,
+        "sha256": "73181949f2befb2399973aedb29abe0d14dc06cbcc6a1d5a0fec53d167de22b1"
+      },
+      {
+        "name": "Q111-v2_量子電腦學程_七層軟體堆疊_動畫展示版_2026-11-19.zip.part02",
+        "bytes": 29360128,
+        "sha256": "dc3b43b7e54741774d8ec3f177d44395a0e50b9c2fc8ca3d0ad630f6573b1937"
+      },
+      {
+        "name": "Q111-v2_量子電腦學程_七層軟體堆疊_動畫展示版_2026-11-19.zip.part03",
+        "bytes": 29360128,
+        "sha256": "3277abee7d4a74ad818410a84cf9abd47ef547e30628c9c9a200e3fd55fb86b6"
+      },
+      {
+        "name": "Q111-v2_量子電腦學程_七層軟體堆疊_動畫展示版_2026-11-19.zip.part04",
+        "bytes": 29360128,
+        "sha256": "ea5ac74ca6ba9db10dd1cdc911ff3085c91dae8e9f083b3d75b8302942ef529c"
+      },
+      {
+        "name": "Q111-v2_量子電腦學程_七層軟體堆疊_動畫展示版_2026-11-19.zip.part05",
+        "bytes": 29360128,
+        "sha256": "03aca2c13d6981c891380276d5e2da6826abddd3cfdac97eaae32417160af617"
+      },
+      {
+        "name": "Q111-v2_量子電腦學程_七層軟體堆疊_動畫展示版_2026-11-19.zip.part06",
+        "bytes": 29360128,
+        "sha256": "cd8cac4fb0f63822e8d677bd034175e706d451433029d8098d932c1d6eef7458"
+      },
+      {
+        "name": "Q111-v2_量子電腦學程_七層軟體堆疊_動畫展示版_2026-11-19.zip.part07",
+        "bytes": 26628003,
+        "sha256": "8abdecb5e043055ed35f987bc57d3d9f2f524f5295ecdddf72c8d582e9435bda"
+      }
+    ],
+    "handedOver": "2026-11-19 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1bi-WOn7ipXPr978g1JqWu1DFCPwySyyb",
+    "uploaded": "2026-11-19",
+    "files": [
+      {
+        "name": "Q111 七層軟體堆疊：編譯與控制軟體堆疊（動畫展示版）.mp4",
+        "id": "1OlELr1yeaF10GN8GM0H-OEVbjTGH40i_",
+        "link": "https://drive.google.com/file/d/1OlELr1yeaF10GN8GM0H-OEVbjTGH40i_/view?usp=drivesdk"
+      },
+      {
+        "name": "Q111 七層軟體堆疊（動畫展示版）簡報.pptx",
+        "id": "1RVhkdZaaEKHKhOqGAatoJidA0rbgO5rh",
+        "link": "https://docs.google.com/presentation/d/1RVhkdZaaEKHKhOqGAatoJidA0rbgO5rh/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true"
+      },
+      {
+        "name": "Q111 七層軟體堆疊 教材.zip",
+        "id": "1d8z4L8ijzHA3qbDyTRu9lri2SYu5Gx0M",
+        "link": "https://drive.google.com/file/d/1d8z4L8ijzHA3qbDyTRu9lri2SYu5Gx0M/view?usp=drivesdk"
+      }
+    ],
+    "complete": true
+  }
+}

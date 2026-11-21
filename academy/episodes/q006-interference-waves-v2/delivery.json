@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q006",
+  "version": "Q006-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-18",
+  "episodePath": "academy/episodes/q006-interference-waves-v2",
+  "basedOn": "academy/episodes/q006-interference-waves（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 473.566667,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "hzh",
+      "title": "動畫展示：一個負號決定結果",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/basic-circuits.html#interference"
+    },
+    {
+      "key": "halfway",
+      "title": "動畫展示：轉到九十度，再轉到底",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#interference"
+    },
+    {
+      "key": "eightpaths",
+      "title": "動畫展示：八條路一起干涉",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#interference"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.4,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q006-interference-waves-v2-zh-TW.mp4": {
+      "bytes": 84123856,
+      "sha256": "ab81f33a3eea6582344c8410cb4a8000613cdc2e24325bf1d8cc76d05d359108"
+    },
+    "q006-interference-waves-v2-master.mp4": {
+      "bytes": 86899478,
+      "sha256": "b71929a8106ee4cc7b4763501809e23c66a045f77377f37b4bc7c1100661f956"
+    },
+    "narration-only.mp3": {
+      "bytes": 11366932,
+      "sha256": "8ecdac8c9c43c81b46ec67e3e08d0aa21bb0d748a1fa61368ba3044f69151137"
+    }
+  },
+  "package": {
+    "filename": "Q006-v2_量子電腦學程_干涉_動畫展示版_2026-11-18.zip",
+    "bytes": 186205747,
+    "sha256": "12afa28cefcd2e199b35ac789bb154a4ca756eaa254b40e04e0c73f8f01cf1c3",
+    "parts": [
+      {
+        "name": "Q006-v2_量子電腦學程_干涉_動畫展示版_2026-11-18.zip.part01",
+        "bytes": 29360128,
+        "sha256": "6fe72639a48e3bfc9b8e9c207ab17f9b22c0ef4fe32aa49a692586ced39b648d"
+      },
+      {
+        "name": "Q006-v2_量子電腦學程_干涉_動畫展示版_2026-11-18.zip.part02",
+        "bytes": 29360128,
+        "sha256": "6b0eab1e52f1a56d232c6911cb87e1c060dc19b64f11ee44bf3f25f2ef3a79f6"
+      },
+      {
+        "name": "Q006-v2_量子電腦學程_干涉_動畫展示版_2026-11-18.zip.part03",
+        "bytes": 29360128,
+        "sha256": "9aa3ba2bbcb8c5479019cae340465267354019b27daa61f957568f7d9898ac06"
+      },
+      {
+        "name": "Q006-v2_量子電腦學程_干涉_動畫展示版_2026-11-18.zip.part04",
+        "bytes": 29360128,
+        "sha256": "17b3f130359009e54b3e79e3159a50dbacb995e8d108908df8040d57596fb91c"
+      },
+      {
+        "name": "Q006-v2_量子電腦學程_干涉_動畫展示版_2026-11-18.zip.part05",
+        "bytes": 29360128,
+        "sha256": "e7d66d4c0a7f827cbafa90e8fb3f76cf023fa56589e91b8957829ce81fd9d066"
+      },
+      {
+        "name": "Q006-v2_量子電腦學程_干涉_動畫展示版_2026-11-18.zip.part06",
+        "bytes": 29360128,
+        "sha256": "f209ab626f3685e8e7c6b041a1210291371d38b9d1175060b713cd29a4c033ae"
+      },
+      {
+        "name": "Q006-v2_量子電腦學程_干涉_動畫展示版_2026-11-18.zip.part07",
+        "bytes": 10044979,
+        "sha256": "e07d50703ddab3accd2f8b8b302cd16b559e91e15e4c5e91d0823ca14cb0fb46"
+      }
+    ],
+    "handedOver": "2026-11-18 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1_4cP28v11Id8NhERnDYtpkPxw8055Y3l",
+    "folderName": "量子電腦學程 Q004–Q010 動畫展示版（v2）",
+    "uploadedAt": "2026-11-20",
+    "uploadedBy": "製作代理（Claude，Drive API，上傳後比對 md5）",
+    "files": [
+      {
+        "name": "Q006 干涉：波可以互相抵消 教材.zip",
+        "id": "1ts7mkJ_ZYx5WoXGZ75PHjSa1il4yoX7I",
+        "size": 425581,
+        "link": "https://drive.google.com/file/d/1ts7mkJ_ZYx5WoXGZ75PHjSa1il4yoX7I/view?usp=drivesdk"
+      },
+      {
+        "name": "Q006 干涉：波可以互相抵消（動畫展示版）.mp4",
+        "id": "1ENPjzY3z71p56pXLxbcT2mpQap1Qg05S",
+        "size": 84123856,
+        "link": "https://drive.google.com/file/d/1ENPjzY3z71p56pXLxbcT2mpQap1Qg05S/view?usp=drivesdk"
+      },
+      {
+        "name": "Q006 干涉：波可以互相抵消（動畫展示版）簡報.pptx",
+        "id": "1yyFFUTNDURWfpypYZs3aGBHXzabJ1wvi",
+        "size": 3116248,
+        "link": "https://docs.google.com/presentation/d/1yyFFUTNDURWfpypYZs3aGBHXzabJ1wvi/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true"
+      }
+    ]
+  }
+}

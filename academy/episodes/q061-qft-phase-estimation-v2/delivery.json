@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q061",
+  "version": "Q061-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-18",
+  "episodePath": "academy/episodes/q061-qft-phase-estimation-v2",
+  "basedOn": "academy/episodes/q061-qft-phase-estimation（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 543.066667,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "qft",
+      "title": "動畫展示：量子傅立葉轉換線路",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#circuit"
+    },
+    {
+      "key": "onebit",
+      "title": "動畫展示：一個位元的相位估計",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#interference"
+    },
+    {
+      "key": "comb",
+      "title": "動畫展示：梳子變尖峰",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#shor"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.5,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q061-qft-phase-estimation-v2-zh-TW.mp4": {
+      "bytes": 88075723,
+      "sha256": "2d6bd6e8afaa5bbbca344b7f0b5e422a4d41a79db3474b82473924a9dd70452b"
+    },
+    "q061-qft-phase-estimation-v2-master.mp4": {
+      "bytes": 89581093,
+      "sha256": "ebdf3a03d39b66f11ebafd51375d2b061cd816d6eda6b403a79cce7a13ffc98a"
+    },
+    "narration-only.mp3": {
+      "bytes": 13035028,
+      "sha256": "49a90905425a4fd15fc87fa7fef9bc5a8f1586d121956e58e45bb64e1106292d"
+    }
+  },
+  "package": {
+    "filename": "Q061-v2_量子電腦學程_QFT 與相位估計_動畫展示版_2026-11-18.zip",
+    "bytes": 194783065,
+    "sha256": "55f9e28a6feaa7606fd9a06116122d0d0974784873b0995c3ee7e7ae90c8d95d",
+    "parts": [
+      {
+        "name": "Q061-v2_量子電腦學程_QFT 與相位估計_動畫展示版_2026-11-18.zip.part01",
+        "bytes": 29360128,
+        "sha256": "657a4ff1cdb2d72bdfef1ed10b7d729cc83a21fe0b025fd50d7359216f8ed0d3"
+      },
+      {
+        "name": "Q061-v2_量子電腦學程_QFT 與相位估計_動畫展示版_2026-11-18.zip.part02",
+        "bytes": 29360128,
+        "sha256": "6ea7a96eb2f8cfe8a611f0acb02ced988b83950756b8cd421b85c51b50dcd352"
+      },
+      {
+        "name": "Q061-v2_量子電腦學程_QFT 與相位估計_動畫展示版_2026-11-18.zip.part03",
+        "bytes": 29360128,
+        "sha256": "bb421f3d31c722c673683c7be7c76d3ba06b56b81264d56e5f9e79e19f40731c"
+      },
+      {
+        "name": "Q061-v2_量子電腦學程_QFT 與相位估計_動畫展示版_2026-11-18.zip.part04",
+        "bytes": 29360128,
+        "sha256": "10de35cc2a928281c7f0de5702bece4d9eca4ad6c0ea5014d64dd807fea7be35"
+      },
+      {
+        "name": "Q061-v2_量子電腦學程_QFT 與相位估計_動畫展示版_2026-11-18.zip.part05",
+        "bytes": 29360128,
+        "sha256": "027d97987c26b274c21de7d599a93d2e8bc9830722b1d05daaed9dbdb4e2e099"
+      },
+      {
+        "name": "Q061-v2_量子電腦學程_QFT 與相位估計_動畫展示版_2026-11-18.zip.part06",
+        "bytes": 29360128,
+        "sha256": "c2a908420806cd088567e0f78b31a614365a98f4c9bf4a5d2e9c42c33a0cd5d3"
+      },
+      {
+        "name": "Q061-v2_量子電腦學程_QFT 與相位估計_動畫展示版_2026-11-18.zip.part07",
+        "bytes": 18622297,
+        "sha256": "3eb4683a53f7b0c531754f09d230315a9ce8b32033c615647c793c0c9f6da2d3"
+      }
+    ],
+    "handedOver": "2026-11-18 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1eZLiQdOHdFov3xfVLuJtqORZ4fjXzXXV",
+    "folderName": "量子電腦學程 Q041–Q070 動畫展示版（v2）",
+    "uploadedAt": "2026-11-18",
+    "uploadedBy": "製作代理（Claude，Drive API，上傳後比對 md5）",
+    "files": [
+      {
+        "name": "Q061 QFT 與相位估計：QFT 與相位估計（動畫展示版）.mp4",
+        "id": "1ti5dN8lkySR6N_ZTnGZspiLVlvJEMkId",
+        "size": 88075723,
+        "link": "https://drive.google.com/file/d/1ti5dN8lkySR6N_ZTnGZspiLVlvJEMkId/view?usp=drivesdk"
+      },
+      {
+        "name": "Q061 QFT 與相位估計（動畫展示版）簡報.pptx",
+        "id": "1ZuVxM2boufxVaq0hnnVU7RT7M5nAimBC",
+        "size": 3269794,
+        "link": "https://docs.google.com/presentation/d/1ZuVxM2boufxVaq0hnnVU7RT7M5nAimBC/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true"
+      },
+      {
+        "name": "Q061 QFT 與相位估計 教材.zip",
+        "id": "1Dr87O-Bdld7rc58oYODBHP3EAkLBwqqq",
+        "size": 424791,
+        "link": "https://drive.google.com/file/d/1Dr87O-Bdld7rc58oYODBHP3EAkLBwqqq/view?usp=drivesdk"
+      }
+    ]
+  }
+}

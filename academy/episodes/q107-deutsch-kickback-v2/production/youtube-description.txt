@@ -1,0 +1,32 @@
+父子科技學院 量子電腦學程 Q107｜Deutsch 演算法與相位回踢（v2・含 3D 動畫展示）
+
+這是依課綱製作的課前教學版，不是實際上課錄音。
+
+父子科技學院量子電腦學程 Q107「Deutsch 演算法與相位回踢」新版（v2）：在原本的教學投影片之間，插入本學程 3D 互動動畫的實際操作示範。
+
+這一版新增的動畫展示
+・負號搬了家（https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#deutsch-lab）
+・輸入位元的箭頭翻面（https://pcpcchen-coder.github.io/QuantumComputing/animations/basic-circuits.html#deutsch）
+・盲測一回合（https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#deutsch-lab）
+
+動畫都可以在瀏覽器直接開啟，自己動手操作。
+
+章節
+00:00 陳犀牛系列片頭
+01:00 Deutsch 演算法與相位回踢
+01:33 盲測：四種黑盒子
+01:59 紅綠球：常數還是平衡？
+02:32 量子黑盒子必須可逆
+03:07 相位回踢：負號跑回輸入位元
+03:38 動畫展示：負號搬了家
+04:22 三步：疊加、查詢、干涉
+04:51 四種黑盒判讀表
+05:22 動畫展示：輸入位元的箭頭翻面
+06:06 三個容易錯的地方
+06:41 盲測分工：黑盒主人和解碼者
+07:11 動畫展示：盲測一回合
+07:50 跑程式：忘了準備會怎樣
+08:21 兩小時的黑盒盲測
+08:50 最後一關：教爸爸相位回踢
+
+旁白：微軟 zh-TW-YunJheNeural 神經語音合成（Edge-TTS／Azure 語音服務，同一聲音同一格式）。字幕已燒入影片，開啟 CC 可能重疊。

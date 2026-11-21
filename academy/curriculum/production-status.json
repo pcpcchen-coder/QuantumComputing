@@ -5,484 +5,1588 @@
       "status": "verified",
       "publication": "awaiting_user_upload",
       "episodePath": "academy/episodes/q001-not-faster",
-      "evidence": "academy/episodes/q001-not-faster/delivery.json"
+      "evidence": "academy/episodes/q001-not-faster/delivery.json",
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q001-not-faster-v2",
+        "evidence": "academy/episodes/q001-not-faster-v2/delivery.json"
+      }
     },
     "Q002": {
       "status": "verified",
       "publication": "awaiting_user_upload",
       "episodePath": "academy/episodes/q002-coin-and-arrow",
-      "evidence": "academy/episodes/q002-coin-and-arrow/delivery.json"
+      "evidence": "academy/episodes/q002-coin-and-arrow/delivery.json",
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q002-coin-and-arrow-v2",
+        "evidence": "academy/episodes/q002-coin-and-arrow-v2/delivery.json"
+      }
     },
     "Q003": {
       "status": "verified",
       "publication": "awaiting_user_upload",
       "episodePath": "academy/episodes/q003-measure-and-shots",
-      "evidence": "academy/episodes/q003-measure-and-shots/delivery.json"
+      "evidence": "academy/episodes/q003-measure-and-shots/delivery.json",
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q003-measure-and-shots-v2",
+        "evidence": "academy/episodes/q003-measure-and-shots-v2/delivery.json"
+      }
     },
     "Q004": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q004-gates-rotate-v2",
+        "evidence": "academy/episodes/q004-gates-rotate-v2/delivery.json"
+      }
     },
     "Q005": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q005-phase-hidden-v2",
+        "evidence": "academy/episodes/q005-phase-hidden-v2/delivery.json"
+      }
     },
     "Q006": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q006-interference-waves-v2",
+        "evidence": "academy/episodes/q006-interference-waves-v2/delivery.json"
+      }
     },
     "Q007": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q007-two-to-the-n-v2",
+        "evidence": "academy/episodes/q007-two-to-the-n-v2/delivery.json"
+      }
     },
     "Q008": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q008-entangled-dice-v2",
+        "evidence": "academy/episodes/q008-entangled-dice-v2/delivery.json"
+      }
     },
     "Q009": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q009-circuit-score-v2",
+        "evidence": "academy/episodes/q009-circuit-score-v2/delivery.json"
+      }
     },
     "Q010": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q010-first-program-v2",
+        "evidence": "academy/episodes/q010-first-program-v2/delivery.json"
+      }
     },
     "Q011": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q011-teleportation-v2",
+        "evidence": "academy/episodes/q011-teleportation-v2/delivery.json"
+      }
     },
     "Q012": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q012-deutsch-jozsa-v2",
+        "evidence": "academy/episodes/q012-deutsch-jozsa-v2/delivery.json"
+      }
     },
     "Q013": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q013-grover-treasure-v2",
+        "evidence": "academy/episodes/q013-grover-treasure-v2/delivery.json"
+      }
     },
     "Q014": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q014-noise-decoherence-v2",
+        "evidence": "academy/episodes/q014-noise-decoherence-v2/delivery.json"
+      }
     },
     "Q015": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q015-quantum-escape-room-v2",
+        "evidence": "academy/episodes/q015-quantum-escape-room-v2/delivery.json"
+      }
     },
     "Q016": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q016-quantum-glossary-v2",
+        "evidence": "academy/episodes/q016-quantum-glossary-v2/delivery.json"
+      }
     },
     "Q017": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q017-artificial-atom-v2",
+        "evidence": "academy/episodes/q017-artificial-atom-v2/delivery.json"
+      }
     },
     "Q018": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q018-superconductivity-v2",
+        "evidence": "academy/episodes/q018-superconductivity-v2/delivery.json"
+      }
     },
     "Q019": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q019-cooper-pair-gap-v2",
+        "evidence": "academy/episodes/q019-cooper-pair-gap-v2/delivery.json"
+      }
     },
     "Q020": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q020-flux-quantization-v2",
+        "evidence": "academy/episodes/q020-flux-quantization-v2/delivery.json"
+      }
     },
     "Q021": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q021-spring-pendulum-lc-v2",
+        "evidence": "academy/episodes/q021-spring-pendulum-lc-v2/delivery.json"
+      }
     },
     "Q022": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q022-equal-ladder-v2",
+        "evidence": "academy/episodes/q022-equal-ladder-v2/delivery.json"
+      }
     },
     "Q023": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q023-josephson-junction-sandwich-v2",
+        "evidence": "academy/episodes/q023-josephson-junction-sandwich-v2/delivery.json"
+      }
     },
     "Q024": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q024-jj-nonlinear-inductor-v2",
+        "evidence": "academy/episodes/q024-jj-nonlinear-inductor-v2/delivery.json"
+      }
     },
     "Q025": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q025-ej-ec-two-energy-scales-v2",
+        "evidence": "academy/episodes/q025-ej-ec-two-energy-scales-v2/delivery.json"
+      }
     },
     "Q026": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q026-tilted-washboard-v2",
+        "evidence": "academy/episodes/q026-tilted-washboard-v2/delivery.json"
+      }
     },
     "Q027": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q027-squid-flux-tuning-v2",
+        "evidence": "academy/episodes/q027-squid-flux-tuning-v2/delivery.json"
+      }
     },
     "Q028": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q028-qubit-family-cards-v2",
+        "evidence": "academy/episodes/q028-qubit-family-cards-v2/delivery.json"
+      }
     },
     "Q029": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q029-double-angle-evaporation-v2",
+        "evidence": "academy/episodes/q029-double-angle-evaporation-v2/delivery.json"
+      }
     },
     "Q030": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q030-chip-layout-v2",
+        "evidence": "academy/episodes/q030-chip-layout-v2/delivery.json"
+      }
     },
     "Q031": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q031-decoherence-suspects-v2",
+        "evidence": "academy/episodes/q031-decoherence-suspects-v2/delivery.json"
+      }
     },
     "Q032": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q032-design-my-transmon-v2",
+        "evidence": "academy/episodes/q032-design-my-transmon-v2/delivery.json"
+      }
     },
     "Q033": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q033-readout-requirements-v2",
+        "evidence": "academy/episodes/q033-readout-requirements-v2/delivery.json"
+      }
     },
     "Q034": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q034-circuit-qed-v2",
+        "evidence": "academy/episodes/q034-circuit-qed-v2/delivery.json"
+      }
     },
     "Q035": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q035-dispersive-shift-v2",
+        "evidence": "academy/episodes/q035-dispersive-shift-v2/delivery.json"
+      }
     },
     "Q036": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q036-iq-plane-v2",
+        "evidence": "academy/episodes/q036-iq-plane-v2/delivery.json"
+      }
     },
     "Q037": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q037-single-shot-fidelity-v2",
+        "evidence": "academy/episodes/q037-single-shot-fidelity-v2/delivery.json"
+      }
     },
     "Q038": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q038-readout-chain-v2",
+        "evidence": "academy/episodes/q038-readout-chain-v2/delivery.json"
+      }
     },
     "Q039": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q039-readout-tradeoffs-v2",
+        "evidence": "academy/episodes/q039-readout-tradeoffs-v2/delivery.json"
+      }
     },
     "Q040": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q040-whole-machine-v2",
+        "evidence": "academy/episodes/q040-whole-machine-v2/delivery.json"
+      }
     },
     "Q041": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q041-why-10mk-v2",
+        "evidence": "academy/episodes/q041-why-10mk-v2/delivery.json"
+      }
     },
     "Q042": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q042-pulse-tube-v2",
+        "evidence": "academy/episodes/q042-pulse-tube-v2/delivery.json"
+      }
     },
     "Q043": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q043-dilution-refrigerator-v2",
+        "evidence": "academy/episodes/q043-dilution-refrigerator-v2/delivery.json"
+      }
     },
     "Q044": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q044-cooldown-days-v2",
+        "evidence": "academy/episodes/q044-cooldown-days-v2/delivery.json"
+      }
     },
     "Q045": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q045-cryo-wiring-v2",
+        "evidence": "academy/episodes/q045-cryo-wiring-v2/delivery.json"
+      }
     },
     "Q046": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q046-control-clock-v2",
+        "evidence": "academy/episodes/q046-control-clock-v2/delivery.json"
+      }
     },
     "Q047": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q047-software-monitor-v2",
+        "evidence": "academy/episodes/q047-software-monitor-v2/delivery.json"
+      }
     },
     "Q048": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q048-zero-to-online-v2",
+        "evidence": "academy/episodes/q048-zero-to-online-v2/delivery.json"
+      }
     },
     "Q049": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q049-job-lifecycle-v2",
+        "evidence": "academy/episodes/q049-job-lifecycle-v2/delivery.json"
+      }
     },
     "Q050": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q050-init-calibration-v2",
+        "evidence": "academy/episodes/q050-init-calibration-v2/delivery.json"
+      }
     },
     "Q051": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q051-backend-calibration-v2",
+        "evidence": "academy/episodes/q051-backend-calibration-v2/delivery.json"
+      }
     },
     "Q052": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q052-pulse-area-phase-v2",
+        "evidence": "academy/episodes/q052-pulse-area-phase-v2/delivery.json"
+      }
     },
     "Q053": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q053-drag-virtual-z-v2",
+        "evidence": "academy/episodes/q053-drag-virtual-z-v2/delivery.json"
+      }
     },
     "Q054": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q054-zyz-decomposition-v2",
+        "evidence": "academy/episodes/q054-zyz-decomposition-v2/delivery.json"
+      }
     },
     "Q055": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q055-cz-cross-resonance-v2",
+        "evidence": "academy/episodes/q055-cz-cross-resonance-v2/delivery.json"
+      }
     },
     "Q056": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q056-transpile-routing-v2",
+        "evidence": "academy/episodes/q056-transpile-routing-v2/delivery.json"
+      }
     },
     "Q057": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q057-qiskit-bell-ghz-v2",
+        "evidence": "academy/episodes/q057-qiskit-bell-ghz-v2/delivery.json"
+      }
     },
     "Q058": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q058-basis-expectation-v2",
+        "evidence": "academy/episodes/q058-basis-expectation-v2/delivery.json"
+      }
     },
     "Q059": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q059-shots-readout-mitigation-v2",
+        "evidence": "academy/episodes/q059-shots-readout-mitigation-v2/delivery.json"
+      }
     },
     "Q060": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q060-dynamic-circuits-v2",
+        "evidence": "academy/episodes/q060-dynamic-circuits-v2/delivery.json"
+      }
     },
     "Q061": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q061-qft-phase-estimation-v2",
+        "evidence": "academy/episodes/q061-qft-phase-estimation-v2/delivery.json"
+      }
     },
     "Q062": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q062-shor-period-v2",
+        "evidence": "academy/episodes/q062-shor-period-v2/delivery.json"
+      }
     },
     "Q063": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q063-speedup-levels-v2",
+        "evidence": "academy/episodes/q063-speedup-levels-v2/delivery.json"
+      }
     },
     "Q064": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q064-simulator-project-v2",
+        "evidence": "academy/episodes/q064-simulator-project-v2/delivery.json"
+      }
     },
     "Q065": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q065-artificial-vs-real-atoms-v2",
+        "evidence": "academy/episodes/q065-artificial-vs-real-atoms-v2/delivery.json"
+      }
     },
     "Q066": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q066-paul-trap-v2",
+        "evidence": "academy/episodes/q066-paul-trap-v2/delivery.json"
+      }
     },
     "Q067": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q067-ion-trap-system-v2",
+        "evidence": "academy/episodes/q067-ion-trap-system-v2/delivery.json"
+      }
     },
     "Q068": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q068-yb-qubit-cooling-v2",
+        "evidence": "academy/episodes/q068-yb-qubit-cooling-v2/delivery.json"
+      }
     },
     "Q069": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q069-ion-chain-modes-v2",
+        "evidence": "academy/episodes/q069-ion-chain-modes-v2/delivery.json"
+      }
     },
     "Q070": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q070-molmer-sorensen-gate-v2",
+        "evidence": "academy/episodes/q070-molmer-sorensen-gate-v2/delivery.json"
+      }
     },
     "Q071": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q071-fluorescence-qccd-v2",
+        "evidence": "academy/episodes/q071-fluorescence-qccd-v2/delivery.json"
+      }
     },
     "Q072": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q072-mot-optical-tweezers-v2",
+        "evidence": "academy/episodes/q072-mot-optical-tweezers-v2/delivery.json"
+      }
     },
     "Q073": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q073-loading-rearrangement-v2",
+        "evidence": "academy/episodes/q073-loading-rearrangement-v2/delivery.json"
+      }
     },
     "Q074": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q074-rydberg-blockade-cz-v2",
+        "evidence": "academy/episodes/q074-rydberg-blockade-cz-v2/delivery.json"
+      }
     },
     "Q075": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q075-zoned-imaging-v2",
+        "evidence": "academy/episodes/q075-zoned-imaging-v2/delivery.json"
+      }
     },
     "Q076": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q076-analog-quantum-simulation-v2",
+        "evidence": "academy/episodes/q076-analog-quantum-simulation-v2/delivery.json"
+      }
     },
     "Q077": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q077-photonic-quantum-computer-v2",
+        "evidence": "academy/episodes/q077-photonic-quantum-computer-v2/delivery.json"
+      }
     },
     "Q078": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q078-semiconductor-spin-qubits-v2",
+        "evidence": "academy/episodes/q078-semiconductor-spin-qubits-v2/delivery.json"
+      }
     },
     "Q079": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q079-topological-nv-v2",
+        "evidence": "academy/episodes/q079-topological-nv-v2/delivery.json"
+      }
     },
     "Q080": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q080-platform-comparison-power-v2",
+        "evidence": "academy/episodes/q080-platform-comparison-power-v2/delivery.json"
+      }
     },
     "Q081": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q081-error-budget-v2",
+        "evidence": "academy/episodes/q081-error-budget-v2/delivery.json"
+      }
     },
     "Q082": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q082-error-mitigation-v2",
+        "evidence": "academy/episodes/q082-error-mitigation-v2/delivery.json"
+      }
     },
     "Q083": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q083-repetition-code-v2",
+        "evidence": "academy/episodes/q083-repetition-code-v2/delivery.json"
+      }
     },
     "Q084": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q084-surface-code-v2",
+        "evidence": "academy/episodes/q084-surface-code-v2/delivery.json"
+      }
     },
     "Q085": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q085-below-threshold-v2",
+        "evidence": "academy/episodes/q085-below-threshold-v2/delivery.json"
+      }
     },
     "Q086": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q086-logical-gates-magic-states-v2",
+        "evidence": "academy/episodes/q086-logical-gates-magic-states-v2/delivery.json"
+      }
     },
     "Q087": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q087-vqe-qaoa-v2",
+        "evidence": "academy/episodes/q087-vqe-qaoa-v2/delivery.json"
+      }
     },
     "Q088": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q088-quantum-chemistry-materials-v2",
+        "evidence": "academy/episodes/q088-quantum-chemistry-materials-v2/delivery.json"
+      }
     },
     "Q089": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q089-optimization-ml-hype-v2",
+        "evidence": "academy/episodes/q089-optimization-ml-hype-v2/delivery.json"
+      }
     },
     "Q090": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q090-bb84-quantum-key-distribution-v2",
+        "evidence": "academy/episodes/q090-bb84-quantum-key-distribution-v2/delivery.json"
+      }
     },
     "Q091": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q091-post-quantum-cryptography-v2",
+        "evidence": "academy/episodes/q091-post-quantum-cryptography-v2/delivery.json"
+      }
     },
     "Q092": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q092-quantum-sensing-atomic-clock-v2",
+        "evidence": "academy/episodes/q092-quantum-sensing-atomic-clock-v2/delivery.json"
+      }
     },
     "Q093": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q093-industry-roadmap-v2",
+        "evidence": "academy/episodes/q093-industry-roadmap-v2/delivery.json"
+      }
     },
     "Q094": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q094-capstone-proposal-v2",
+        "evidence": "academy/episodes/q094-capstone-proposal-v2/delivery.json"
+      }
     },
     "Q095": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q095-capstone-build-v2",
+        "evidence": "academy/episodes/q095-capstone-build-v2/delivery.json"
+      }
     },
     "Q096": {
       "status": "planned",
       "episodePath": null,
-      "evidence": null
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q096-graduation-teach-back-v2",
+        "evidence": "academy/episodes/q096-graduation-teach-back-v2/delivery.json"
+      }
+    },
+    "Q097": {
+      "status": "planned",
+      "episodePath": null,
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q097-transmon-twelve-chapters-v2",
+        "evidence": "academy/episodes/q097-transmon-twelve-chapters-v2/delivery.json"
+      }
+    },
+    "Q098": {
+      "status": "planned",
+      "episodePath": null,
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q098-lc-vs-jj-nonlinearity-v2",
+        "evidence": "academy/episodes/q098-lc-vs-jj-nonlinearity-v2/delivery.json"
+      }
+    },
+    "Q099": {
+      "status": "planned",
+      "episodePath": null,
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q099-squid-flux-tuning-v2",
+        "evidence": "academy/episodes/q099-squid-flux-tuning-v2/delivery.json"
+      }
+    },
+    "Q100": {
+      "status": "planned",
+      "episodePath": null,
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q100-transmon-write-xy-z-v2",
+        "evidence": "academy/episodes/q100-transmon-write-xy-z-v2/delivery.json"
+      }
+    },
+    "Q101": {
+      "status": "planned",
+      "episodePath": null,
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q101-z-line-myth-v2",
+        "evidence": "academy/episodes/q101-z-line-myth-v2/delivery.json"
+      }
+    },
+    "Q102": {
+      "status": "planned",
+      "episodePath": null,
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q102-frequency-collisions-v2",
+        "evidence": "academy/episodes/q102-frequency-collisions-v2/delivery.json"
+      }
+    },
+    "Q103": {
+      "status": "planned",
+      "episodePath": null,
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q103-rabi-oscillation-v2",
+        "evidence": "academy/episodes/q103-rabi-oscillation-v2/delivery.json"
+      }
+    },
+    "Q104": {
+      "status": "planned",
+      "episodePath": null,
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q104-dispersive-readout-v2",
+        "evidence": "academy/episodes/q104-dispersive-readout-v2/delivery.json"
+      }
+    },
+    "Q105": {
+      "status": "planned",
+      "episodePath": null,
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q105-bv-secret-v2",
+        "evidence": "academy/episodes/q105-bv-secret-v2/delivery.json"
+      }
+    },
+    "Q106": {
+      "status": "planned",
+      "episodePath": null,
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q106-entanglement-grover-v2",
+        "evidence": "academy/episodes/q106-entanglement-grover-v2/delivery.json"
+      }
+    },
+    "Q107": {
+      "status": "planned",
+      "episodePath": null,
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q107-deutsch-kickback-v2",
+        "evidence": "academy/episodes/q107-deutsch-kickback-v2/delivery.json"
+      }
+    },
+    "Q108": {
+      "status": "planned",
+      "episodePath": null,
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q108-shor-period-v2",
+        "evidence": "academy/episodes/q108-shor-period-v2/delivery.json"
+      }
+    },
+    "Q109": {
+      "status": "planned",
+      "episodePath": null,
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q109-surface-code-v2",
+        "evidence": "academy/episodes/q109-surface-code-v2/delivery.json"
+      }
+    },
+    "Q110": {
+      "status": "planned",
+      "episodePath": null,
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q110-lattice-surgery-v2",
+        "evidence": "academy/episodes/q110-lattice-surgery-v2/delivery.json"
+      }
+    },
+    "Q111": {
+      "status": "planned",
+      "episodePath": null,
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q111-software-stack-v2",
+        "evidence": "academy/episodes/q111-software-stack-v2/delivery.json"
+      }
+    },
+    "Q112": {
+      "status": "planned",
+      "episodePath": null,
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q112-teach-back-v2",
+        "evidence": "academy/episodes/q112-teach-back-v2/delivery.json"
+      }
+    },
+    "Q113": {
+      "status": "planned",
+      "episodePath": null,
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q113-reading-conventions-v2",
+        "evidence": "academy/episodes/q113-reading-conventions-v2/delivery.json"
+      }
+    },
+    "Q114": {
+      "status": "planned",
+      "episodePath": null,
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q114-plus-minus-coin-v2",
+        "evidence": "academy/episodes/q114-plus-minus-coin-v2/delivery.json"
+      }
+    },
+    "Q115": {
+      "status": "planned",
+      "episodePath": null,
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q115-hzh-interference-v2",
+        "evidence": "academy/episodes/q115-hzh-interference-v2/delivery.json"
+      }
+    },
+    "Q116": {
+      "status": "planned",
+      "episodePath": null,
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q116-four-bell-states-v2",
+        "evidence": "academy/episodes/q116-four-bell-states-v2/delivery.json"
+      }
+    },
+    "Q117": {
+      "status": "planned",
+      "episodePath": null,
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q117-ghz-chain-v2",
+        "evidence": "academy/episodes/q117-ghz-chain-v2/delivery.json"
+      }
+    },
+    "Q118": {
+      "status": "planned",
+      "episodePath": null,
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q118-teleport-four-psi-v2",
+        "evidence": "academy/episodes/q118-teleport-four-psi-v2/delivery.json"
+      }
+    },
+    "Q119": {
+      "status": "planned",
+      "episodePath": null,
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q119-deutsch-ball-machine-v2",
+        "evidence": "academy/episodes/q119-deutsch-ball-machine-v2/delivery.json"
+      }
+    },
+    "Q120": {
+      "status": "planned",
+      "episodePath": null,
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q120-bv-one-query-v2",
+        "evidence": "academy/episodes/q120-bv-one-query-v2/delivery.json"
+      }
+    },
+    "Q121": {
+      "status": "planned",
+      "episodePath": null,
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q121-grover-mean-flip-v2",
+        "evidence": "academy/episodes/q121-grover-mean-flip-v2/delivery.json"
+      }
+    },
+    "Q122": {
+      "status": "planned",
+      "episodePath": null,
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q122-grover-overshoot-v2",
+        "evidence": "academy/episodes/q122-grover-overshoot-v2/delivery.json"
+      }
+    },
+    "Q123": {
+      "status": "planned",
+      "episodePath": null,
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q123-query-count-v2",
+        "evidence": "academy/episodes/q123-query-count-v2/delivery.json"
+      }
+    },
+    "Q124": {
+      "status": "planned",
+      "episodePath": null,
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q124-qiskit-eight-v2",
+        "evidence": "academy/episodes/q124-qiskit-eight-v2/delivery.json"
+      }
+    },
+    "Q125": {
+      "status": "planned",
+      "episodePath": null,
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q125-one-vs-thousand-v2",
+        "evidence": "academy/episodes/q125-one-vs-thousand-v2/delivery.json"
+      }
+    },
+    "Q126": {
+      "status": "planned",
+      "episodePath": null,
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q126-noisy-examples-v2",
+        "evidence": "academy/episodes/q126-noisy-examples-v2/delivery.json"
+      }
+    },
+    "Q127": {
+      "status": "planned",
+      "episodePath": null,
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q127-design-circuit-v2",
+        "evidence": "academy/episodes/q127-design-circuit-v2/delivery.json"
+      }
+    },
+    "Q128": {
+      "status": "planned",
+      "episodePath": null,
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q128-circuit-expo-v2",
+        "evidence": "academy/episodes/q128-circuit-expo-v2/delivery.json"
+      }
+    },
+    "Q129": {
+      "status": "planned",
+      "episodePath": null,
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q129-power-panorama-v2",
+        "evidence": "academy/episodes/q129-power-panorama-v2/delivery.json"
+      }
+    },
+    "Q130": {
+      "status": "planned",
+      "episodePath": null,
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q130-outage-cost-v2",
+        "evidence": "academy/episodes/q130-outage-cost-v2/delivery.json"
+      }
+    },
+    "Q131": {
+      "status": "planned",
+      "episodePath": null,
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q131-cooling-chain-ups-v2",
+        "evidence": "academy/episodes/q131-cooling-chain-ups-v2/delivery.json"
+      }
+    },
+    "Q132": {
+      "status": "planned",
+      "episodePath": null,
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q132-dc-noise-budget-v2",
+        "evidence": "academy/episodes/q132-dc-noise-budget-v2/delivery.json"
+      }
+    },
+    "Q133": {
+      "status": "planned",
+      "episodePath": null,
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q133-site-vibration-grounding-v2",
+        "evidence": "academy/episodes/q133-site-vibration-grounding-v2/delivery.json"
+      }
+    },
+    "Q134": {
+      "status": "planned",
+      "episodePath": null,
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q134-grounding-common-mode-v2",
+        "evidence": "academy/episodes/q134-grounding-common-mode-v2/delivery.json"
+      }
+    },
+    "Q135": {
+      "status": "planned",
+      "episodePath": null,
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q135-busbar-field-layout-v2",
+        "evidence": "academy/episodes/q135-busbar-field-layout-v2/delivery.json"
+      }
+    },
+    "Q136": {
+      "status": "planned",
+      "episodePath": null,
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q136-ion-trap-power-v2",
+        "evidence": "academy/episodes/q136-ion-trap-power-v2/delivery.json"
+      }
+    },
+    "Q137": {
+      "status": "planned",
+      "episodePath": null,
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q137-neutral-atom-power-v2",
+        "evidence": "academy/episodes/q137-neutral-atom-power-v2/delivery.json"
+      }
+    },
+    "Q138": {
+      "status": "planned",
+      "episodePath": null,
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q138-three-platform-ups-v2",
+        "evidence": "academy/episodes/q138-three-platform-ups-v2/delivery.json"
+      }
+    },
+    "Q139": {
+      "status": "planned",
+      "episodePath": null,
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q139-scale-calculator-v2",
+        "evidence": "academy/episodes/q139-scale-calculator-v2/delivery.json"
+      }
+    },
+    "Q140": {
+      "status": "planned",
+      "episodePath": null,
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q140-cryo-heat-budget-v2",
+        "evidence": "academy/episodes/q140-cryo-heat-budget-v2/delivery.json"
+      }
+    },
+    "Q141": {
+      "status": "planned",
+      "episodePath": null,
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q141-mw-cryo-conversion-v2",
+        "evidence": "academy/episodes/q141-mw-cryo-conversion-v2/delivery.json"
+      }
+    },
+    "Q142": {
+      "status": "planned",
+      "episodePath": null,
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q142-product-platform-matrix-v2",
+        "evidence": "academy/episodes/q142-product-platform-matrix-v2/delivery.json"
+      }
+    },
+    "Q143": {
+      "status": "planned",
+      "episodePath": null,
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q143-roadmap-11-projects-v2",
+        "evidence": "academy/episodes/q143-roadmap-11-projects-v2/delivery.json"
+      }
+    },
+    "Q144": {
+      "status": "planned",
+      "episodePath": null,
+      "evidence": null,
+      "v2": {
+        "status": "verified",
+        "publication": "awaiting_user_upload",
+        "episodePath": "academy/episodes/q144-power-spec-capstone-v2",
+        "evidence": "academy/episodes/q144-power-spec-capstone-v2/delivery.json"
+      }
     }
   }
 }

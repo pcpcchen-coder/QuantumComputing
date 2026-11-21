@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q041",
+  "version": "Q041-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-18",
+  "episodePath": "academy/episodes/q041-why-10mk-v2",
+  "basedOn": "academy/episodes/q041-why-10mk（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 495.68,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "energy",
+      "title": "動畫展示：一份能量相當幾度",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#readout"
+    },
+    {
+      "key": "cooldown",
+      "title": "動畫展示：一層一層降到十毫克耳文",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/peripherals.html#cooldown"
+    },
+    {
+      "key": "photons",
+      "title": "動畫展示：熱光子被壓到幾乎沒有",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#fridge"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.5,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q041-why-10mk-v2-zh-TW.mp4": {
+      "bytes": 86900071,
+      "sha256": "da803247ca0df5db07d985dcfe271d6d4761138e7d7ffffed8b9ccc0fe75e018"
+    },
+    "q041-why-10mk-v2-master.mp4": {
+      "bytes": 89002659,
+      "sha256": "dc8adca195af98562e3c1b931e2320e1cea9d377876e8202d70273f3250e1665"
+    },
+    "narration-only.mp3": {
+      "bytes": 11898004,
+      "sha256": "420a6f0b725dc57077bf4a4f61338444b8002187217918d8bd4f3b457ed1242f"
+    }
+  },
+  "package": {
+    "filename": "Q041-v2_量子電腦學程_為什麼要 10 mK_動畫展示版_2026-11-18.zip",
+    "bytes": 191869988,
+    "sha256": "eaf3c41fe9f264a2e73712d7c73655c6fead6a973546d11e99c7322f68644b84",
+    "parts": [
+      {
+        "name": "Q041-v2_量子電腦學程_為什麼要 10 mK_動畫展示版_2026-11-18.zip.part01",
+        "bytes": 29360128,
+        "sha256": "2ff1486395ca505b82316bc3c0783a3d1561296dec40e50a0a004032fbac06c2"
+      },
+      {
+        "name": "Q041-v2_量子電腦學程_為什麼要 10 mK_動畫展示版_2026-11-18.zip.part02",
+        "bytes": 29360128,
+        "sha256": "e0cd1b729e054f2a0a5f29a505c5a5676c3d16d659f47c034cfb12517d3f57c8"
+      },
+      {
+        "name": "Q041-v2_量子電腦學程_為什麼要 10 mK_動畫展示版_2026-11-18.zip.part03",
+        "bytes": 29360128,
+        "sha256": "6206d90e339edd74ea1febfd06cf107030e93c6b9991de623ed1f82650d47376"
+      },
+      {
+        "name": "Q041-v2_量子電腦學程_為什麼要 10 mK_動畫展示版_2026-11-18.zip.part04",
+        "bytes": 29360128,
+        "sha256": "9417635857550cb8ce706185a52f195243876841e3865670a76cae4b39c967b3"
+      },
+      {
+        "name": "Q041-v2_量子電腦學程_為什麼要 10 mK_動畫展示版_2026-11-18.zip.part05",
+        "bytes": 29360128,
+        "sha256": "fbb4eadb812166a969e2da759700078d0e1aeef48a61bc6a29a3d0bb2ecbcf23"
+      },
+      {
+        "name": "Q041-v2_量子電腦學程_為什麼要 10 mK_動畫展示版_2026-11-18.zip.part06",
+        "bytes": 29360128,
+        "sha256": "c9bc09528ae4d8db941d4ec443f3b8d1c7bfe8ee7e36c81a97b1b4e97fe2d6d4"
+      },
+      {
+        "name": "Q041-v2_量子電腦學程_為什麼要 10 mK_動畫展示版_2026-11-18.zip.part07",
+        "bytes": 15709220,
+        "sha256": "377b01b349d10c3179f5eb1cc7f80d804bdab3c3732ab205b8498f1c4d457f40"
+      }
+    ],
+    "handedOver": "2026-11-18 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1eZLiQdOHdFov3xfVLuJtqORZ4fjXzXXV",
+    "folderName": "量子電腦學程 Q041–Q070 動畫展示版（v2）",
+    "uploadedAt": "2026-11-18",
+    "uploadedBy": "製作代理（Claude，Drive API，上傳後比對 md5）",
+    "files": [
+      {
+        "name": "Q041 為什麼要 10 mK：為什麼要 10 mK（動畫展示版）.mp4",
+        "id": "1puiRqqQkyiRwprQ2dS9ldx-EKu19X13m",
+        "size": 86900071,
+        "link": "https://drive.google.com/file/d/1puiRqqQkyiRwprQ2dS9ldx-EKu19X13m/view?usp=drivesdk"
+      },
+      {
+        "name": "Q041 為什麼要 10 mK 教材.zip",
+        "id": "1UvxV8sF2mZB487wkvnHkUnPGPCSbH9e3",
+        "size": 376748,
+        "link": "https://drive.google.com/file/d/1UvxV8sF2mZB487wkvnHkUnPGPCSbH9e3/view?usp=drivesdk"
+      },
+      {
+        "name": "Q041 為什麼要 10 mK（動畫展示版）簡報.pptx",
+        "id": "1T_hHzHE8wKBOg1fS1aV-rGJYwDkP1X8X",
+        "size": 3436749,
+        "link": "https://docs.google.com/presentation/d/1T_hHzHE8wKBOg1fS1aV-rGJYwDkP1X8X/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true"
+      }
+    ]
+  }
+}

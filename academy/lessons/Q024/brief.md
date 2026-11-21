@@ -35,9 +35,11 @@ QM02 超導量子位元：從超導到 transmon｜第二階段 硬體怎麼做�
 ## 素材
 
 - 簡報：超導量子電腦的核心：JJ 與微波讀取（slides/JJ_Microwave_Readout_Talk.pptx）p14
-- 簡報：Transmon 筆記簡報（slides/transmon.pptx）p3–8
+- 簡報：Transmon 筆記簡報（27 頁，含 3D 十二章導覽）（slides/transmon.pptx）p3–8
 - 簡報：《量子超級英雄》#049 報告簡報（slides/output/ep049-superconducting-qubit.pptx）p11–12
 - 3D 場景：[`t3d`](../../../animations/transmon-3d.html)
+- 3D 場景：[`lj:s5`](../../../animations/lc-vs-jj.html#s5)
+- 3D 場景：[`tr:junction`](../../../animations/transmon-3d.html#junction)
 
 生活技能支線：注意「近似」什麼時候會失效。課後延伸：15–30 分鐘自由改造；寫三句學習日誌：我做了什麼、哪裡卡住、下次想加什麼。
 

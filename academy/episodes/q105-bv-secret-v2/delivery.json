@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q105",
+  "version": "Q105-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-19",
+  "episodePath": "academy/episodes/q105-bv-secret-v2",
+  "basedOn": "academy/episodes/q105-bv-secret（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 563.2,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "amps",
+      "title": "動畫展示：八根柱子的正負號",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#bv"
+    },
+    {
+      "key": "duel",
+      "title": "動畫展示：古典三次對量子一次",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#bv"
+    },
+    {
+      "key": "textbook",
+      "title": "動畫展示：換成自己的密碼",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/basic-circuits.html#bv"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.6,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q105-bv-secret-v2-zh-TW.mp4": {
+      "bytes": 90490297,
+      "sha256": "d590e4cfff5c224ec72745445548758343eb56b2e245e0e7c76384607323df0c"
+    },
+    "q105-bv-secret-v2-master.mp4": {
+      "bytes": 91852657,
+      "sha256": "f179b931e8b05951d4370e122c0c1c374b60d3b0577a2cb884b0450af676897b"
+    },
+    "narration-only.mp3": {
+      "bytes": 13518292,
+      "sha256": "bea00c8c166cf871df71f0c95965d1a21f670d3fc0765f9016414774df0f26f0"
+    }
+  },
+  "package": {
+    "filename": "Q105-v2_量子電腦學程_BV密碼對決_動畫展示版_2026-11-19.zip",
+    "bytes": 199708333,
+    "sha256": "f745298477c3364fcdeb8312beaa37e95c696fd8ba65dae5aa66bc7762d7a587",
+    "parts": [
+      {
+        "name": "Q105-v2_量子電腦學程_BV密碼對決_動畫展示版_2026-11-19.zip.part01",
+        "bytes": 29360128,
+        "sha256": "c8df73629bc074f4f4d3455c6395a0e41bd7a0a3e9dcfb72dc4f47a374a4bbac"
+      },
+      {
+        "name": "Q105-v2_量子電腦學程_BV密碼對決_動畫展示版_2026-11-19.zip.part02",
+        "bytes": 29360128,
+        "sha256": "06d7e548c0ca8c4cb53559294a42283658d06f8e800641eff2e15bb2970ea355"
+      },
+      {
+        "name": "Q105-v2_量子電腦學程_BV密碼對決_動畫展示版_2026-11-19.zip.part03",
+        "bytes": 29360128,
+        "sha256": "8438c9f37fb7351411d94c78e5959925bba6caa050444e14a1208a50adffb6fb"
+      },
+      {
+        "name": "Q105-v2_量子電腦學程_BV密碼對決_動畫展示版_2026-11-19.zip.part04",
+        "bytes": 29360128,
+        "sha256": "29bd3f5e9a14cc8a5d312affd4893ed9f6657fc57265bbee109b2ef9a0bac8c2"
+      },
+      {
+        "name": "Q105-v2_量子電腦學程_BV密碼對決_動畫展示版_2026-11-19.zip.part05",
+        "bytes": 29360128,
+        "sha256": "eb03e2e9df13426bff4f537f4486be17e22c9f105a76f12543af198c8c75e237"
+      },
+      {
+        "name": "Q105-v2_量子電腦學程_BV密碼對決_動畫展示版_2026-11-19.zip.part06",
+        "bytes": 29360128,
+        "sha256": "565c3aed412d2ec23df2d037b06b92aefa4db541cf3a99f017486b96f8f02385"
+      },
+      {
+        "name": "Q105-v2_量子電腦學程_BV密碼對決_動畫展示版_2026-11-19.zip.part07",
+        "bytes": 23547565,
+        "sha256": "65c549463b78e2f7428fc07c73d87f5b40df0039087eec3dab02c3e52b4893d0"
+      }
+    ],
+    "handedOver": "2026-11-19 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1bi-WOn7ipXPr978g1JqWu1DFCPwySyyb",
+    "uploaded": "2026-11-19",
+    "files": [
+      {
+        "name": "Q105 BV密碼對決：BV 密碼：一次猜中三位元（動畫展示版）.mp4",
+        "id": "1tKTUiGCRcVPe_6xRnvuxNWS8cISu7vjS",
+        "link": "https://drive.google.com/file/d/1tKTUiGCRcVPe_6xRnvuxNWS8cISu7vjS/view?usp=drivesdk"
+      },
+      {
+        "name": "Q105 BV密碼對決（動畫展示版）簡報.pptx",
+        "id": "1f7PvyB5DPrKgVS1L3veOV02ud15isjyS",
+        "link": "https://docs.google.com/presentation/d/1f7PvyB5DPrKgVS1L3veOV02ud15isjyS/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true"
+      },
+      {
+        "name": "Q105 BV密碼對決 教材.zip",
+        "id": "1syqCruEwsN2nxMt0MFwBC417TLa2uZQp",
+        "link": "https://drive.google.com/file/d/1syqCruEwsN2nxMt0MFwBC417TLa2uZQp/view?usp=drivesdk"
+      }
+    ],
+    "complete": true
+  }
+}

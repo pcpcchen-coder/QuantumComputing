@@ -1,0 +1,50 @@
+{
+  "lessonId": "Q121",
+  "sourceRow": {
+    "總課次": 121,
+    "學程": "量子電腦學程",
+    "階段": "第四階段 深化與產業",
+    "模組": "QM08 動手寫量子電路：從八個範例到自己的線路",
+    "模組內課次": 9,
+    "課程主題": "範例 8：Grover——對平均值翻轉",
+    "對象與上課方式": "國中以上；逐步播放振幅長條、量測 1000 次，再用本機 Qiskit 模擬器重現",
+    "學習目標": "用平均值虛線看擴散怎麼把答案拉高",
+    "2 小時課程流程": "00–10 任務開場：範例 8：Grover——對平均值翻轉\n10–25 概念示範：用平均值虛線看擴散怎麼把答案拉高\n25–65 父子共同實作：2 顆位元、選答案、跑 1 輪，觀察平均值與長條\n65–75 休息／走動／聊天\n75–105 孩子獨立改造：換另一個答案，預測一輪後的結果\n105–115 角色互換：孩子教爸爸操作與原理\n115–120 錄音總結、作品命名、版本存檔",
+    "動手任務": "2 顆位元、選答案、跑 1 輪，觀察平均值與長條",
+    "孩子獨立改造": "換另一個答案，預測一輪後的結果",
+    "好玩機制": "尋寶",
+    "作品／交付": "Grover 逐步圖",
+    "生活技能支線": "相對比較的力量",
+    "家長課前準備": "basic-circuits#grover",
+    "課後延伸": "15–30 分鐘自由改造；寫三句學習日誌：我做了什麼、哪裡卡住、下次想加什麼。",
+    "驗收標準": "完成「Grover 逐步圖」；能不用看稿說出核心原理；能指出至少一個錯誤、限制或注意事項（例如：擴散是對平均值翻轉；和閘電路差一個整體負號，不影響結果）。",
+    "常見誤解與安全提醒": "擴散是對平均值翻轉；和閘電路差一個整體負號，不影響結果",
+    "錄音重點": "請孩子回答：1. 範例 8：Grover——對平均值翻轉在解決什麼？2. 我怎麼做？3. 哪裡容易錯？4. 生活中或真實的量子電腦哪裡會用到？",
+    "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q121｜範例 8：Grover——對平均值翻轉",
+    "難度 1–5": 3,
+    "沿用簡報頁": [
+      "量子電路入門：八個範例（slides/output/basic-circuits.pptx）p23–24"
+    ],
+    "沿用 3D 場景": [
+      "bc:grover",
+      "o:grover"
+    ],
+    "需新增素材": [],
+    "沿用文件": [],
+    "YouTube 關鍵字 1": "範例 8：Grover——對平均值翻轉 quantum computing explained beginner",
+    "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E7%AF%84%E4%BE%8B+8%EF%BC%9AGrover%E2%80%94%E2%80%94%E5%B0%8D%E5%B9%B3%E5%9D%87%E5%80%BC%E7%BF%BB%E8%BD%89+quantum+computing+explained+beginner",
+    "影片用途 1": "課前暖身",
+    "YouTube 關鍵字 2": "範例 8：Grover——對平均值翻轉 用平均值虛線看擴散怎麼把答案拉高 hands on demo",
+    "YouTube 連結 2": "https://www.youtube.com/results?search_query=%E7%AF%84%E4%BE%8B+8%EF%BC%9AGrover%E2%80%94%E2%80%94%E5%B0%8D%E5%B9%B3%E5%9D%87%E5%80%BC%E7%BF%BB%E8%BD%89+%E7%94%A8%E5%B9%B3%E5%9D%87%E5%80%BC%E8%99%9B%E7%B7%9A%E7%9C%8B%E6%93%B4%E6%95%A3%E6%80%8E%E9%BA%BC%E6%8A%8A%E7%AD%94%E6%A1%88%E6%8B%89%E9%AB%98+hands+on+demo",
+    "影片用途 2": "課中實作參考",
+    "YouTube 關鍵字 3": "範例 8：Grover——對平均值翻轉 quantum computing lecture visualization",
+    "YouTube 連結 3": "https://www.youtube.com/results?search_query=%E7%AF%84%E4%BE%8B+8%EF%BC%9AGrover%E2%80%94%E2%80%94%E5%B0%8D%E5%B9%B3%E5%9D%87%E5%80%BC%E7%BF%BB%E8%BD%89+quantum+computing+lecture+visualization",
+    "影片用途 3": "課後延伸"
+  },
+  "curriculumSha256": "eb081f5848bd31bd8d734680a2d88f6821b6b30fa5d9ff1d813d06872e8f71c3",
+  "episodePaths": [
+    "academy/episodes/q121-grover-mean-flip-v2"
+  ],
+  "minutes": 120,
+  "status": "planned"
+}

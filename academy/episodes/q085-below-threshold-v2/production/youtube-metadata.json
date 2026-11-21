@@ -1,0 +1,8 @@
+{
+  "title": "父子科技學院 Q085｜低於門檻（動畫展示版）",
+  "description": "父子科技學院 量子電腦學程 Q085｜低於門檻（v2・含 3D 動畫展示）\n\n這是依課綱製作的課前教學版，不是實際上課錄音。\n\n父子科技學院量子電腦學程 Q085「低於門檻」新版（v2）：在原本的教學投影片之間，插入本學程 3D 互動動畫的實際操作示範。\n\n這一版新增的動畫展示\n・碼距越大，棋盤越大（https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#qec）\n・三條線在門檻交叉（https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#qec）\n・閾值約百分之一（https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#surface）\n\n動畫都可以在瀏覽器直接開啟，自己動手操作。\n\n章節\n00:00 陳犀牛系列片頭\n01:00 低於門檻\n01:32 三步：畫曲線、比碼距、讀實驗\n01:59 碼距和門檻：兩股力量拔河\n02:27 動畫展示：碼距越大，棋盤越大\n02:57 畫一條門檻曲線的四步\n03:23 比一比：低於門檻和高於門檻\n03:54 動畫展示：三條線在門檻交叉\n04:32 門檻定理：每加二就除一次\n05:00 真實硬體：柳樹晶片\n05:31 動畫展示：閾值約百分之一\n06:07 要多少位元才夠\n06:35 效能競賽：誰的邏輯錯誤少\n07:00 換你改造：解讀低於門檻實驗圖\n07:27 兩小時的門檻實驗室\n07:59 最後一關：教爸爸看門檻\n\n旁白：微軟 zh-TW-YunJheNeural 神經語音合成（Edge-TTS／Azure 語音服務，同一聲音同一格式）。字幕已燒入影片，開啟 CC 可能重疊。\n",
+  "privacyStatus": "private",
+  "madeForKids": null,
+  "reviewStatus": "needs-parent-review",
+  "publicationMode": "manual-user-upload"
+}

@@ -1,0 +1,399 @@
+{
+  "version": 2,
+  "opening": 60.277,
+  "scenes": [
+    {
+      "page": 1,
+      "kind": "slide",
+      "v1slide": 1,
+      "title": "範例 2：干涉——哈達瑪、相位翻轉、哈達瑪",
+      "duration": 30.84,
+      "sentences": [
+        {
+          "text": "歡迎回到父子科技學院的量子電腦學程，我是陳犀牛，今天是量子第一百一十五堂，範例二，干涉，這是依課綱製作的課前教學版，並非實際上課錄音。",
+          "start": 0.0,
+          "end": 12.424014
+        },
+        {
+          "text": "上一堂發現兩種疊加態量起來一模一樣；今天在兩個哈達瑪閘中間夾一個相位翻轉閘，看看那個量不到的負號會造成什麼。",
+          "start": 12.604014,
+          "end": 22.196032
+        },
+        {
+          "text": "今天要記住一句話：干涉發生在振幅，不是機率；只差一個負號，結果可以整個反過來。",
+          "start": 22.376032,
+          "end": 30.624037
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q115-hzh-interference/audio/slide_01.mp3"
+    },
+    {
+      "page": 2,
+      "kind": "slide",
+      "v1slide": 2,
+      "title": "科學實驗：只改一個變因",
+      "duration": 25.92,
+      "sentences": [
+        {
+          "text": "今天的玩法是科學實驗：同一條線路做兩次，一次有相位翻轉閘，一次把它拿掉，其他全部不動。",
+          "start": 0.0,
+          "end": 8.848005
+        },
+        {
+          "text": "分三步：先寫下預測，再一步一步播放、看振幅柱子怎麼變，最後兩組各量測一千次，比較結果。",
+          "start": 9.028005,
+          "end": 18.188005
+        },
+        {
+          "text": "今天的作品是一張路徑加總表，用最簡單的加法，把為什麼會抵消一格一格寫清楚。",
+          "start": 18.368005,
+          "end": 25.704014
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q115-hzh-interference/audio/slide_02.mp3"
+    },
+    {
+      "page": 3,
+      "kind": "slide",
+      "v1slide": 3,
+      "title": "範例 2：三個閘",
+      "duration": 25.824,
+      "sentences": [
+        {
+          "text": "先看簡報第七頁的範例二：一條線從零態出發，依序是哈達瑪閘、相位翻轉閘、哈達瑪閘，最後量測。",
+          "start": 0.0,
+          "end": 9.376009
+        },
+        {
+          "text": "第一個哈達瑪閘做出疊加，位元同時走零和一兩條路；相位翻轉閘只替一那條路加上負號。",
+          "start": 9.556009,
+          "end": 17.252018
+        },
+        {
+          "text": "第二個哈達瑪閘把兩條路重新混合：到零的互相抵消，到一的互相加強，所以百分之百量到一。",
+          "start": 17.432018,
+          "end": 25.608027
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q115-hzh-interference/audio/slide_03.mp3"
+    },
+    {
+      "page": 4,
+      "kind": "slide",
+      "v1slide": 4,
+      "title": "振幅逐步看：負號怎麼變成結果",
+      "duration": 25.536,
+      "sentences": [
+        {
+          "text": "簡報第八頁把振幅一步一步畫出來：第一個哈達瑪閘之後，零和一兩根柱子都是正的零點七零七。",
+          "start": 0.0,
+          "end": 8.224014
+        },
+        {
+          "text": "相位翻轉閘之後，一那根翻成負的，但大小沒變，所以機率還是各一半，這一步量測看不出任何差別。",
+          "start": 8.404014,
+          "end": 17.708028
+        },
+        {
+          "text": "第二個哈達瑪閘之後，零那根柱子消失，一那根變成正一，量到一的機率是百分之百。",
+          "start": 17.888028,
+          "end": 25.320045999999998
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q115-hzh-interference/audio/slide_04.mp3"
+    },
+    {
+      "page": 5,
+      "kind": "demo",
+      "demo": "hzh",
+      "title": "動畫展示：三步走完，負號變成結果",
+      "duration": 35.352,
+      "sentences": [
+        {
+          "text": "打開線路入門動畫的干涉範例，中間的閘選有相位翻轉；這次三步全部走完，同時盯著右邊布洛赫球的橘色箭頭。",
+          "start": 0.0,
+          "end": 9.616009
+        },
+        {
+          "text": "第一步做完哈達瑪閘，箭頭從北極倒到赤道；第二步做完相位翻轉閘，箭頭沿著赤道轉到另一邊，柱子下面仍是兩個百分之五十。",
+          "start": 9.796009,
+          "end": 20.468027
+        },
+        {
+          "text": "第三步做完第二個哈達瑪閘，零那根柱子縮到不見，一那根翻上來升到頂，箭頭停在南極。",
+          "start": 20.648027,
+          "end": 28.800044999999997
+        },
+        {
+          "text": "按量測一千次，綠色的次數條只有一這一列，一千次全部是一。",
+          "start": 28.980044999999997,
+          "end": 35.14004499999999
+        }
+      ],
+      "audio": "audio/demo_hzh.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/basic-circuits.html#interference"
+    },
+    {
+      "page": 6,
+      "kind": "slide",
+      "v1slide": 5,
+      "title": "拿掉相位翻轉閘",
+      "duration": 21.744,
+      "sentences": [
+        {
+          "text": "對照組是把中間的相位翻轉閘拿掉，線路上只剩兩個哈達瑪閘。",
+          "start": 0.0,
+          "end": 6.064014
+        },
+        {
+          "text": "哈達瑪閘做兩次等於什麼都沒做，第二個哈達瑪閘把狀態帶回零態，量到零是百分之百。",
+          "start": 6.244014,
+          "end": 13.724014
+        },
+        {
+          "text": "只差中間一個閘、一個量不到的負號，結果從全部是一變成全部是零，完全相反。",
+          "start": 13.904014,
+          "end": 21.528028
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q115-hzh-interference/audio/slide_05.mp3"
+    },
+    {
+      "page": 7,
+      "kind": "demo",
+      "demo": "noz",
+      "title": "動畫展示：拿掉中間的閘",
+      "duration": 29.904,
+      "sentences": [
+        {
+          "text": "現在做對照組：把中間的閘換成沒有相位翻轉，線路上只剩兩個藍色的哈達瑪閘，再回到起點。",
+          "start": 0.0,
+          "end": 8.56
+        },
+        {
+          "text": "第一步和剛才一模一樣，兩根藍色柱子一樣高，箭頭倒到赤道。",
+          "start": 8.74,
+          "end": 14.852018000000001
+        },
+        {
+          "text": "第二步直接做第二個哈達瑪閘，一那根柱子縮到不見，零那根升到頂，箭頭回到北極。",
+          "start": 15.032018,
+          "end": 22.704036000000002
+        },
+        {
+          "text": "量測一千次，這回一千次全部是零；只拿掉一個閘，結果整個翻了過來。",
+          "start": 22.884036000000002,
+          "end": 29.692041000000003
+        }
+      ],
+      "audio": "audio/demo_noz.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/basic-circuits.html#interference"
+    },
+    {
+      "page": 8,
+      "kind": "slide",
+      "v1slide": 6,
+      "title": "路徑加總：為什麼會抵消",
+      "duration": 25.632,
+      "sentences": [
+        {
+          "text": "簡報第九頁用路徑加總來算：每條路都帶一個振幅，最後把通往同一個結果的振幅加起來。",
+          "start": 0.0,
+          "end": 7.720000000000001
+        },
+        {
+          "text": "有相位翻轉閘時，通往零的兩條路一條是正二分之一、一條是負二分之一，加起來是零，這叫破壞性干涉。",
+          "start": 7.9,
+          "end": 17.156009
+        },
+        {
+          "text": "通往一的兩條路都是正二分之一，加起來是一，這叫建設性干涉；總和再平方，才是機率。",
+          "start": 17.336009,
+          "end": 25.416009000000003
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q115-hzh-interference/audio/slide_06.mp3"
+    },
+    {
+      "page": 9,
+      "kind": "demo",
+      "demo": "paths",
+      "title": "動畫展示：兩條路的箭頭相加",
+      "duration": 35.784,
+      "sentences": [
+        {
+          "text": "換到三維動畫的干涉場景：起點分成上下兩條路，下面那條路上的紫色方塊，負責替經過一的路加上相位。",
+          "start": 0.0,
+          "end": 9.280000000000001
+        },
+        {
+          "text": "相位放在零度，等於沒有相位翻轉閘；右下的結果一裡，藍色和橙色箭頭一正一反抵消，金色數字寫著機率零。",
+          "start": 9.46,
+          "end": 19.292018
+        },
+        {
+          "text": "把相位推到一百八十度，等於加上相位翻轉閘，下面那條路的橙色箭頭跟著轉向反方向。",
+          "start": 19.472018,
+          "end": 27.384036
+        },
+        {
+          "text": "這下換右上的結果零抵消成零，右下的兩支箭頭同向，接成一支白色箭頭，機率變成一。",
+          "start": 27.564035999999998,
+          "end": 35.572041
+        }
+      ],
+      "audio": "audio/demo_paths.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#interference"
+    },
+    {
+      "page": 10,
+      "kind": "slide",
+      "v1slide": 7,
+      "title": "作品：路徑加總表",
+      "duration": 27.192,
+      "sentences": [
+        {
+          "text": "把計算整理成路徑加總表：每一列寫一個結果，欄位是經過零的振幅、經過一的振幅、總和，還有機率。",
+          "start": 0.0,
+          "end": 9.304014
+        },
+        {
+          "text": "有相位翻轉閘的那一組，到零是正二分之一加負二分之一等於零，到一是兩個正二分之一加起來等於一。",
+          "start": 9.484014,
+          "end": 17.756032
+        },
+        {
+          "text": "沒有相位翻轉閘的那一組剛好相反：到零加起來是一，到一抵消成零；最下面再留一列寫量測一千次的結果。",
+          "start": 17.936032,
+          "end": 26.976032000000004
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q115-hzh-interference/audio/slide_07.mp3"
+    },
+    {
+      "page": 11,
+      "kind": "slide",
+      "v1slide": 8,
+      "title": "常見錯誤：拿機率去加",
+      "duration": 25.344,
+      "sentences": [
+        {
+          "text": "最容易錯的是拿機率去加：每條路的機率都是四分之一，兩條加起來是二分之一，永遠不會變成零。",
+          "start": 0.0,
+          "end": 8.392018
+        },
+        {
+          "text": "機率全都是正的，只會越加越多；要先把帶正負號的振幅加起來，再平方，才會出現抵消。",
+          "start": 8.572018,
+          "end": 16.796032
+        },
+        {
+          "text": "如果中途偷看位元走哪一條路，干涉就消失，結果變回一半一半，剛好就是機率相加的答案。",
+          "start": 16.976032,
+          "end": 25.12805
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q115-hzh-interference/audio/slide_08.mp3"
+    },
+    {
+      "page": 12,
+      "kind": "slide",
+      "v1slide": 9,
+      "title": "父子共同實作：有和沒有，各做一次",
+      "duration": 27.312,
+      "sentences": [
+        {
+          "text": "上半場一起實作：打開線路入門動畫的干涉範例，中間的閘先選有相位翻轉，從起點一步一步按到最後。",
+          "start": 0.0,
+          "end": 9.136009
+        },
+        {
+          "text": "每按一步都停下來，把兩根柱子的數字和顏色、布洛赫球箭頭的位置記下來，最後量測一千次。",
+          "start": 9.316009,
+          "end": 17.948027
+        },
+        {
+          "text": "接著把選項換成沒有相位翻轉，同樣從起點走一遍、量一千次；兩組並排，就是今天的實驗紀錄。",
+          "start": 18.128027,
+          "end": 27.096032
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q115-hzh-interference/audio/slide_09.mp3"
+    },
+    {
+      "page": 13,
+      "kind": "slide",
+      "v1slide": 10,
+      "title": "換你改造：用表格解釋抵消",
+      "duration": 27.024,
+      "sentences": [
+        {
+          "text": "下半場換你出手：不看動畫，只用路徑加總表，算出兩組線路最後的振幅，再說明哪裡抵消、哪裡加強。",
+          "start": 0.0,
+          "end": 9.592018
+        },
+        {
+          "text": "算完再跑教材的小程式核對；我們真的跑過：有相位翻轉閘一千次全部是一，拿掉之後一千次全部是零。",
+          "start": 9.772018,
+          "end": 18.836032
+        },
+        {
+          "text": "進階挑戰：把中間的相位翻轉閘換成翻轉閘，先用表格預測結果，再跑程式驗證。",
+          "start": 19.016032,
+          "end": 26.80805
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q115-hzh-interference/audio/slide_10.mp3"
+    },
+    {
+      "page": 14,
+      "kind": "slide",
+      "v1slide": 11,
+      "title": "兩小時的干涉實驗",
+      "duration": 29.136,
+      "sentences": [
+        {
+          "text": "兩小時的安排是：開場十分鐘，概念示範十五分鐘，接著四十分鐘逐步播放三個閘，再拿掉中間的閘比較，然後休息十分鐘。",
+          "start": 0.0,
+          "end": 10.552018
+        },
+        {
+          "text": "下半場三十分鐘，用路徑加總表解釋為什麼會抵消；接著十分鐘角色互換，由你教爸爸操作和原理。",
+          "start": 10.732018,
+          "end": 19.460023
+        },
+        {
+          "text": "最後五分鐘錄音總結、替作品命名、存一個版本；今天的生活技能是：小改變，可能造成大不同。",
+          "start": 19.640023,
+          "end": 28.920023
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q115-hzh-interference/audio/slide_11.mp3"
+    },
+    {
+      "page": 15,
+      "kind": "slide",
+      "v1slide": 12,
+      "title": "最後一關：教爸爸干涉",
+      "duration": 29.352,
+      "sentences": [
+        {
+          "text": "最後一關請不看稿說出：三個閘為什麼合起來等於翻轉閘？拿掉中間的相位翻轉閘，結果又會怎樣？",
+          "start": 0.0,
+          "end": 9.664014
+        },
+        {
+          "text": "再指出一個容易錯的地方：會互相抵消的是振幅，不是機率；只把機率相加的人，永遠算不出今天的結果。",
+          "start": 9.844014,
+          "end": 18.908028
+        },
+        {
+          "text": "今天的作品是路徑加總表，下一堂是範例三，貝爾態，四種糾纏；我是陳犀牛，保持好奇，我們下次見！",
+          "start": 19.088028,
+          "end": 29.136033
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q115-hzh-interference/audio/slide_12.mp3"
+    }
+  ]
+}

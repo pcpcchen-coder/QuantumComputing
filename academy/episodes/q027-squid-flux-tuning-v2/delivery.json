@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q027",
+  "version": "Q027-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-20",
+  "episodePath": "academy/episodes/q027-squid-flux-tuning-v2",
+  "basedOn": "academy/episodes/q027-squid-flux-tuning（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 540.245,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "tune",
+      "title": "動畫展示：闖關，調到五點五吉赫",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#squid"
+    },
+    {
+      "key": "sweet",
+      "title": "動畫展示：找到甜蜜點",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#squid"
+    },
+    {
+      "key": "asym",
+      "title": "動畫展示：不對稱的環",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#squid"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.6,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q027-squid-flux-tuning-v2-zh-TW.mp4": {
+      "bytes": 89070138,
+      "sha256": "5570550a297661b78214aa73169f4890bf9bb7249ae4d2c0a2ed826a4e1cc94a"
+    },
+    "q027-squid-flux-tuning-v2-master.mp4": {
+      "bytes": 90197187,
+      "sha256": "f8d9e1eaa78c668f807ea8eaf4865272364d79d29448fae24224c006f35963e1"
+    },
+    "narration-only.mp3": {
+      "bytes": 12967636,
+      "sha256": "31af9ea59a1ba1d62a495fbbea79bb22f1a016a8aded957ab5ea6a5588991e4c"
+    }
+  },
+  "package": {
+    "filename": "Q027-v2_量子電腦學程_磁通調頻_動畫展示版_2026-11-20.zip",
+    "bytes": 196734013,
+    "sha256": "f6ec8e0828b9fa1f82664b551e8ee8f98e72adeb5c04518624c9ed09941e6e3d",
+    "parts": [
+      {
+        "name": "Q027-v2_量子電腦學程_磁通調頻_動畫展示版_2026-11-20.zip.part01",
+        "bytes": 29360128,
+        "sha256": "4d2c09be407efcb0cf59f12fa5829f28158b0425d6bae0dad07b545cd6a9ad29"
+      },
+      {
+        "name": "Q027-v2_量子電腦學程_磁通調頻_動畫展示版_2026-11-20.zip.part02",
+        "bytes": 29360128,
+        "sha256": "97dc426fab75c60e913144721fc32ced1eaef044f4f5d1b5abc7a4fc32833b9e"
+      },
+      {
+        "name": "Q027-v2_量子電腦學程_磁通調頻_動畫展示版_2026-11-20.zip.part03",
+        "bytes": 29360128,
+        "sha256": "40a8972f855678e20fe1dcbb98b2e0791ec848bdb4a90ce043ac75142df75176"
+      },
+      {
+        "name": "Q027-v2_量子電腦學程_磁通調頻_動畫展示版_2026-11-20.zip.part04",
+        "bytes": 29360128,
+        "sha256": "ba5c5839b9971ec411d83b07ec1e8f100b161c5245e25be1a349ff7fe38654cb"
+      },
+      {
+        "name": "Q027-v2_量子電腦學程_磁通調頻_動畫展示版_2026-11-20.zip.part05",
+        "bytes": 29360128,
+        "sha256": "83c5e479861d0d9a00e78b292da4d25c3629333c3e825398411052b1dba73fcd"
+      },
+      {
+        "name": "Q027-v2_量子電腦學程_磁通調頻_動畫展示版_2026-11-20.zip.part06",
+        "bytes": 29360128,
+        "sha256": "4d1fd97baf00d61cbcdb93b0ce459b28d57766c6b08414ab9699ab2cd57fed57"
+      },
+      {
+        "name": "Q027-v2_量子電腦學程_磁通調頻_動畫展示版_2026-11-20.zip.part07",
+        "bytes": 20573245,
+        "sha256": "926273b3b8f29e53d117696d8ca8e111e2d6ce19cd8d670e04adc73e038da659"
+      }
+    ],
+    "handedOver": "2026-11-20 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1epfQVOXunbD9Vht37u62oOD9Dr-HKMSE",
+    "folder": "量子電腦學程 Q011–Q040 動畫展示版（v2）",
+    "files": [
+      {
+        "name": "Q027 磁通調頻：SQUID：用磁場轉頻率（動畫展示版）.mp4",
+        "id": "1-CnGu3o0BAL8aS2lrK7vgthcBP7Ee237",
+        "link": "https://drive.google.com/file/d/1-CnGu3o0BAL8aS2lrK7vgthcBP7Ee237/view?usp=drivesdk",
+        "bytes": 89070138
+      },
+      {
+        "name": "Q027 磁通調頻（動畫展示版）簡報.pptx",
+        "id": "1WkAcdl2iCyJ8B1XrBjZ2KbduqQojwbtE",
+        "link": "https://docs.google.com/presentation/d/1WkAcdl2iCyJ8B1XrBjZ2KbduqQojwbtE/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true",
+        "bytes": 3586520
+      },
+      {
+        "name": "Q027 磁通調頻 教材.zip",
+        "id": "178y_NeT5ZptJxFGSQ3C4sUZ8zgWrUQMt",
+        "link": "https://drive.google.com/file/d/178y_NeT5ZptJxFGSQ3C4sUZ8zgWrUQMt/view?usp=drivesdk",
+        "bytes": 306418
+      }
+    ]
+  }
+}

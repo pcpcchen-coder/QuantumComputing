@@ -3,10 +3,10 @@
     python3 academy/curriculum/build_curriculum.py
 
 輸出（全部可重複產生，不要手改）：
-  academy/curriculum/catalog.json        96 堂完整欄位（欄位名稱同父子科技學院 V2 課表）
+  academy/curriculum/catalog.json        全部課次完整欄位（欄位名稱同父子科技學院 V2 課表）
   academy/lessons/Qxxx/lesson.json       每堂一份
   academy/lessons/Qxxx/brief.md          每堂的 120 分鐘教案摘要
-  academy/CURRICULUM_INDEX.md            96 堂索引
+  academy/CURRICULUM_INDEX.md            課表索引
   academy/curriculum/production-status.json、academy/PRODUCTION_STATUS.md
     狀態表：既有狀態會保留，只補上新課次
 """
@@ -20,7 +20,17 @@ HERE = Path(__file__).resolve().parent
 ACADEMY = HERE.parent
 REPO = ACADEMY.parent
 sys.path.insert(0, str(HERE))
-from lessons_data import DECKS, L, MODULES, SCENE_PAGES  # noqa: E402
+from lessons_data import DECKS, DOCS, L, MODULES, SCENE_PAGES, UPDATES  # noqa: E402
+
+# 第二次擴充：把新素材補進既有課次（lessons_data.UPDATES）
+for _n, _u in UPDATES.items():
+    _r = L[_n - 1]
+    _r['deck'] = _r['deck'] + [x for x in _u.get('deck', []) if x not in _r['deck']]
+    _r['scn'] = _r['scn'] + [x for x in _u.get('scn', []) if x not in _r['scn']]
+    _r['new'] = [x for x in _r['new'] if x not in _u.get('drop', [])]
+    _r['doc'] = _r.get('doc', []) + _u.get('doc', [])
+    _r['added'] = {k: v for k, v in _u.items()}
+
 
 CN = '零一二三四五六七八九'
 FLOW_MINUTES = '10／15／40／10／30／10／5'
@@ -38,6 +48,11 @@ def scene_link(code, depth):
     page, _, scene = code.partition(':')
     path = SCENE_PAGES['t3d' if page == 't3d' else page]
     return ('../' * depth) + path + (f'#{scene}' if scene else '')
+
+
+def doc_text(ref):
+    key, _, sec = ref.partition(' ')
+    return f'{DOCS[key][1]}（{DOCS[key][0]}）{sec}'.rstrip()
 
 
 def deck_text(ref):
@@ -89,7 +104,13 @@ def build():
             '沿用簡報頁': [deck_text(x) for x in row['deck']],
             '沿用 3D 場景': row['scn'],
             '需新增素材': row['new'],
+            '沿用文件': [doc_text(x) for x in row.get('doc', [])],
         }
+        if row.get('added'):
+            a = row['added']
+            source['2026-11-18 補充素材'] = ([f'簡報 {x}' for x in a.get('deck', [])] + [f'場景 {x}' for x in a.get('scn', [])]
+                                         + [f'文件 {x}' for x in a.get('doc', [])] + [f'已有動畫，取消：{x}' for x in a.get('drop', [])]
+                                         + ([a['note']] if a.get('note') else []))
         for n in (1, 2, 3):
             words, url = search(row, n)
             source[f'YouTube 關鍵字 {n}'] = words
@@ -125,10 +146,11 @@ def build():
         st = status['lessons'][lid]
         (d / 'lesson.json').write_text(json.dumps({
             'lessonId': lid, 'sourceRow': s, 'curriculumSha256': sha,
-            'episodePaths': [st['episodePath']] if st.get('episodePath') else [],
+            'episodePaths': ([st['episodePath']] if st.get('episodePath') else []) + ([st['v2']['episodePath']] if st.get('v2') else []),
             'minutes': 120, 'status': st['status']}, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
         reuse = [f'- 簡報：{x}' for x in s['沿用簡報頁']] + \
-                [f'- 3D 場景：[`{c}`]({scene_link(c, 3)})' for c in s['沿用 3D 場景']]
+                [f'- 3D 場景：[`{c}`]({scene_link(c, 3)})' for c in s['沿用 3D 場景']] + \
+                [f'- 文件：{x}' for x in s['沿用文件']]
         brief = [
             f'# {lid} {s["課程主題"]}', '',
             f'{s["模組"]}｜{s["階段"]}｜難度 {s["難度 1–5"]}／5｜好玩機制：{s["好玩機制"]}', '',
@@ -147,7 +169,7 @@ def build():
         (d / 'brief.md').write_text('\n'.join(brief), encoding='utf-8')
 
     idx = ['# 量子電腦學程課表索引', '',
-           '父子科技學院的量子電腦學程，共 96 堂（6 模組 × 16 堂）。每堂 120 分鐘，'
+           f'父子科技學院的量子電腦學程，共 {len(lessons)} 堂（{len(MODULES)} 模組 × 16 堂）。每堂 120 分鐘，'
            f'分段 {FLOW_MINUTES} 分鐘。詳細欄位見 `curriculum/catalog.json` 與 `lessons/Qxxx/brief.md`。', '']
     for i, m in enumerate(MODULES):
         idx += [f'## {m[0]} {m[1]}（Q{i * 16 + 1:03d}–Q{i * 16 + 16:03d}）', '',
@@ -168,9 +190,13 @@ def build():
     for les in lessons:
         st = status['lessons'][les['lessonId']]
         ep = f'`{st["episodePath"]}`' if st.get('episodePath') else '—'
+        if st.get('v2'):
+            ep += f'<br>v2 動畫展示版：`{st["v2"]["episodePath"]}`'
         state = label.get(st['status'], st['status'])
         if st.get('publication'):
             state += f'／{label.get(st["publication"], st["publication"])}'
+        if st.get('v2'):
+            state += '；v2 動畫展示版已製作並驗收'
         rows.append(f'| {les["lessonId"]} | {les["sourceRow"]["課程主題"]} | {state} | {ep} |')
     (ACADEMY / 'PRODUCTION_STATUS.md').write_text('\n'.join(rows) + '\n', encoding='utf-8')
     print(f'{len(lessons)} lessons; catalog sha256 {sha[:12]}')

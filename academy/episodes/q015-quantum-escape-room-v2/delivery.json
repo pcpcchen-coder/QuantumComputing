@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q015",
+  "version": "Q015-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-19",
+  "episodePath": "academy/episodes/q015-quantum-escape-room-v2",
+  "basedOn": "academy/episodes/q015-quantum-escape-room（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 502.6,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "level1",
+      "title": "動畫展示：第一關怎麼驗證",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#qubit"
+    },
+    {
+      "key": "level3",
+      "title": "動畫展示：第三關怎麼驗證",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#register"
+    },
+    {
+      "key": "boss",
+      "title": "動畫展示：魔王關怎麼驗證",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#gates"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.5,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q015-quantum-escape-room-v2-zh-TW.mp4": {
+      "bytes": 85096520,
+      "sha256": "1b7dcd5faf7c4163d07e803632438425118252408bea54f0fb50cbb30505218d"
+    },
+    "q015-quantum-escape-room-v2-master.mp4": {
+      "bytes": 86931671,
+      "sha256": "6e3494a3d64bd9483a9c623aa925bc3fa6f5625b0a6a60ac4d30639282889647"
+    },
+    "narration-only.mp3": {
+      "bytes": 12063892,
+      "sha256": "06f6cafb897002ad0d45e6d99fc6351d6571a93d37672eb673b22715a7f1b833"
+    }
+  },
+  "package": {
+    "filename": "Q015-v2_量子電腦學程_量子逃脫室_動畫展示版_2026-11-19.zip",
+    "bytes": 188164575,
+    "sha256": "d19abb3e3775de836357d081fa7796341798384d7ceb04b64adbfe5d8a54d140",
+    "parts": [
+      {
+        "name": "Q015-v2_量子電腦學程_量子逃脫室_動畫展示版_2026-11-19.zip.part01",
+        "bytes": 29360128,
+        "sha256": "767e72b4e28c4dba53ff03776d563125a772fc94feab46c0f87d96040ed9c510"
+      },
+      {
+        "name": "Q015-v2_量子電腦學程_量子逃脫室_動畫展示版_2026-11-19.zip.part02",
+        "bytes": 29360128,
+        "sha256": "5dd01411f70839611a8c718da5a9346b79b03467bf4a50c62ca3c6e7dc5ce213"
+      },
+      {
+        "name": "Q015-v2_量子電腦學程_量子逃脫室_動畫展示版_2026-11-19.zip.part03",
+        "bytes": 29360128,
+        "sha256": "bd207be4a828103820052a122fe51fe8178ccf0e50fddf0d4f0b381daffb8edc"
+      },
+      {
+        "name": "Q015-v2_量子電腦學程_量子逃脫室_動畫展示版_2026-11-19.zip.part04",
+        "bytes": 29360128,
+        "sha256": "783f3f1ce4bf74fb1e2da4d5955ed9511a3024f18b61ee006abe87275f1b4f61"
+      },
+      {
+        "name": "Q015-v2_量子電腦學程_量子逃脫室_動畫展示版_2026-11-19.zip.part05",
+        "bytes": 29360128,
+        "sha256": "cae1b4bece485fe21157aebe501a9a4b496fa8c7d8ac5df8ef3012ce753bc52e"
+      },
+      {
+        "name": "Q015-v2_量子電腦學程_量子逃脫室_動畫展示版_2026-11-19.zip.part06",
+        "bytes": 29360128,
+        "sha256": "a932723aa1a179dec4dd7c6d802023798a6d31ab7f70247e20b27b2c39b16607"
+      },
+      {
+        "name": "Q015-v2_量子電腦學程_量子逃脫室_動畫展示版_2026-11-19.zip.part07",
+        "bytes": 12003807,
+        "sha256": "120b31cbf8d1727268e15afba338029e8f24d471f25eb2a5bd0efc104083eed6"
+      }
+    ],
+    "handedOver": "2026-11-19 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1epfQVOXunbD9Vht37u62oOD9Dr-HKMSE",
+    "folder": "量子電腦學程 Q011–Q040 動畫展示版（v2）",
+    "files": [
+      {
+        "name": "Q015 量子逃脫室：迷你專案：量子逃脫室（動畫展示版）.mp4",
+        "id": "1e2zfHdfdiiNbkaB0RHfhU9aESR7cpT7J",
+        "link": "https://drive.google.com/file/d/1e2zfHdfdiiNbkaB0RHfhU9aESR7cpT7J/view?usp=drivesdk",
+        "bytes": 85096520
+      },
+      {
+        "name": "Q015 量子逃脫室（動畫展示版）簡報.pptx",
+        "id": "1RMfU-WrJa12U_-twcly_GbeHfBrwBhJg",
+        "link": "https://docs.google.com/presentation/d/1RMfU-WrJa12U_-twcly_GbeHfBrwBhJg/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true",
+        "bytes": 3268809
+      },
+      {
+        "name": "Q015 量子逃脫室 教材.zip",
+        "id": "1uEGf4wYwW4WMcry_lmAZ6vtxh2td0Lu0",
+        "link": "https://drive.google.com/file/d/1uEGf4wYwW4WMcry_lmAZ6vtxh2td0Lu0/view?usp=drivesdk",
+        "bytes": 357692
+      }
+    ]
+  }
+}

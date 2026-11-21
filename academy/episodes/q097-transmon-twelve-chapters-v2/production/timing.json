@@ -1,0 +1,358 @@
+{
+  "version": 2,
+  "opening": 60.277,
+  "scenes": [
+    {
+      "page": 1,
+      "kind": "slide",
+      "v1slide": 1,
+      "title": "導覽：一顆 transmon 的十二章旅程",
+      "duration": 31.824,
+      "sentences": [
+        {
+          "text": "歡迎回到父子科技學院的量子電腦學程，我是陳犀牛，今天是量子第九十七堂，導覽：一顆超導量子位元的十二章旅程，這是依課綱製作的課前教學版，並非實際上課錄音。",
+          "start": 0.0,
+          "end": 13.96
+        },
+        {
+          "text": "上一堂換你當老師，把專題裡的一個原理教給爸爸，完成了學程的畢業回頭教。",
+          "start": 14.14,
+          "end": 21.044014
+        },
+        {
+          "text": "從今天起進入超導量子電腦深入模組，先不急著鑽細節，而是像拿到一張地圖，看清楚一顆傳輸子從晶片走到軟體的整條路。",
+          "start": 21.224014,
+          "end": 31.608028
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q097-transmon-twelve-chapters/audio/slide_01.mp3"
+    },
+    {
+      "page": 2,
+      "kind": "slide",
+      "v1slide": 2,
+      "title": "三步：看晶片、走十二章、畫地圖",
+      "duration": 25.128,
+      "sentences": [
+        {
+          "text": "今天分三步：先在三維動畫裡看一顆晶片的俯視圖，再把十二章逐章走一遍，最後把路線畫成自己的心智圖。",
+          "start": 0.0,
+          "end": 9.472018
+        },
+        {
+          "text": "今天的好玩機制是冒險任務：十二章就像十二個關卡，每過一關，都要說出這一關在回答什麼問題。",
+          "start": 9.652018,
+          "end": 18.332017999999998
+        },
+        {
+          "text": "今天的作品是一張十二章路線心智圖，上面還要標出你最想深入的三章。",
+          "start": 18.512017999999998,
+          "end": 24.912017999999996
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q097-transmon-twelve-chapters/audio/slide_02.mp3"
+    },
+    {
+      "page": 3,
+      "kind": "slide",
+      "v1slide": 3,
+      "title": "第一章：晶片上有什麼",
+      "duration": 28.224,
+      "sentences": [
+        {
+          "text": "第一章是晶片：中央那塊十字形的金屬板，就是傳輸子的大電容，它的下端經過兩個約瑟夫森接面接地。",
+          "start": 0.0,
+          "end": 9.016009
+        },
+        {
+          "text": "旁邊有三條線各司其職：驅動線送微波脈衝來控制狀態，磁通線用來調整頻率，彎彎曲曲的讀取共振腔負責把狀態讀出來。",
+          "start": 9.196009,
+          "end": 19.676009
+        },
+        {
+          "text": "十字板做得這麼大是有原因的：電容越大，位元就越不怕背景電荷的雜訊，頻率比較穩定。",
+          "start": 19.856009,
+          "end": 28.008027
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q097-transmon-twelve-chapters/audio/slide_03.mp3"
+    },
+    {
+      "page": 4,
+      "kind": "demo",
+      "demo": "chip",
+      "title": "動畫展示：一顆位元的俯視圖",
+      "duration": 33.168,
+      "sentences": [
+        {
+          "text": "打開超導晶片的三維動畫，停在第一章，從斜上方俯看一顆位元：灰色的接地面中央有一塊十字形的金屬板，後方是一條蜿蜒的共振腔，畫面下方是一整排十二個章節。",
+          "start": 0.0,
+          "end": 13.528005
+        },
+        {
+          "text": "按下送出脈衝的按鈕，一串青綠色的小點沿著驅動線跑向十字板，十字板接著亮起金色的光，代表位元被激發到一。",
+          "start": 13.708005,
+          "end": 23.564014
+        },
+        {
+          "text": "這道金光不會一直亮著，它會慢慢變暗，表示位元自己衰減回零，這段時間就是之後會學到的能量鬆弛時間。",
+          "start": 23.744014,
+          "end": 32.952019
+        }
+      ],
+      "audio": "audio/demo_chip.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#chip"
+    },
+    {
+      "page": 5,
+      "kind": "slide",
+      "v1slide": 4,
+      "title": "第二到五章：位元怎麼誕生",
+      "duration": 29.808,
+      "sentences": [
+        {
+          "text": "第二章走進約瑟夫森接面：兩層鋁中間夾著一到兩奈米的氧化鋁，庫柏對可以穿隧過去，它就像一個不耗能、而且不是線性的電感。",
+          "start": 0.0,
+          "end": 10.696009
+        },
+        {
+          "text": "第三章看位能井：接面的位能是餘弦形狀的井，能階越往上越密，所以零到一和一到二需要的頻率不一樣。",
+          "start": 10.876009,
+          "end": 19.940023
+        },
+        {
+          "text": "第四章用微波轉動布洛赫球上的箭頭；第五章用色散讀取，從共振腔頻率的微小偏移，讀出位元是零還是一。",
+          "start": 20.120023,
+          "end": 29.592041000000002
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q097-transmon-twelve-chapters/audio/slide_04.mp3"
+    },
+    {
+      "page": 6,
+      "kind": "slide",
+      "v1slide": 5,
+      "title": "比一比：先鑽細節和先看全貌",
+      "duration": 25.32,
+      "sentences": [
+        {
+          "text": "比一比兩種學法：一開始就鑽進某一章的公式，很容易迷路，不知道它和其他章有什麼關係。",
+          "start": 0.0,
+          "end": 8.128005
+        },
+        {
+          "text": "先看全貌的人，每走進一章，都知道它在地圖的哪個位置，前面接什麼，後面又通到哪裡。",
+          "start": 8.308005,
+          "end": 16.364013999999997
+        },
+        {
+          "text": "這就是今天的生活技能：先看全貌再鑽細節，不管是讀一本書，還是認識一台機器，都很好用。",
+          "start": 16.544013999999997,
+          "end": 25.104014
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q097-transmon-twelve-chapters/audio/slide_05.mp3"
+    },
+    {
+      "page": 7,
+      "kind": "slide",
+      "v1slide": 6,
+      "title": "第六到九章：多顆位元與演算法",
+      "duration": 27.744,
+      "sentences": [
+        {
+          "text": "第六章是案例：三顆可以調頻率的傳輸子排成一列，頻率要錯開，才不會互相碰撞或串擾。",
+          "start": 0.0,
+          "end": 7.960000000000001
+        },
+        {
+          "text": "第七章用振幅柱狀圖看糾纏、格羅弗搜尋和多伊奇演算法，柱子的高度就是振幅，可以是正的，也可以是負的。",
+          "start": 8.14,
+          "end": 17.852018
+        },
+        {
+          "text": "第八章用秀爾演算法找週期、分解十五；第九章用三顆位元，只查詢黑盒子一次，就猜中三位元的密碼。",
+          "start": 18.032018,
+          "end": 27.528027
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q097-transmon-twelve-chapters/audio/slide_06.mp3"
+    },
+    {
+      "page": 8,
+      "kind": "demo",
+      "demo": "arms",
+      "title": "動畫展示：十字板的四隻手臂",
+      "duration": 30.192,
+      "sentences": [
+        {
+          "text": "回到第一章，切到大十字電容的作用這一頁，鏡頭移近十字板，四隻手臂旁邊各出現一個說明標籤。",
+          "start": 0.0,
+          "end": 8.32
+        },
+        {
+          "text": "上臂接讀取共振腔，左臂接驅動線，下臂經過兩個約瑟夫森接面接地，右臂接到鄰近的位元或耦合器，多顆位元就是這樣連在一起。",
+          "start": 8.5,
+          "end": 19.724014
+        },
+        {
+          "text": "十字板和接地面之間的細縫裡出現青綠色的電場線，它和中間的接面輪流發亮，代表能量在電場和接面之間來回流動。",
+          "start": 19.904014,
+          "end": 29.976032
+        }
+      ],
+      "audio": "audio/demo_arms.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#chip"
+    },
+    {
+      "page": 9,
+      "kind": "slide",
+      "v1slide": 7,
+      "title": "第十到十二章：從實驗品到電腦",
+      "duration": 30.84,
+      "sentences": [
+        {
+          "text": "第十章是表面碼：把一顆邏輯位元分散在一整片實體位元上，靠相鄰位元的奇偶量測抓錯，再由解碼器推回錯誤的位置。",
+          "start": 0.0,
+          "end": 10.048005
+        },
+        {
+          "text": "第十一章講受保護的位元怎麼運算：縫合兩塊表面碼補丁做邏輯閘，再消耗蒸餾好的魔術態，完成真正帶來量子優勢的那一種閘。",
+          "start": 10.228005,
+          "end": 20.948005000000002
+        },
+        {
+          "text": "第十二章是軟體堆疊：編譯器把電路分解、對應到實體位元、排好時間，最後變成一串微波脈衝送進晶片。",
+          "start": 21.128005,
+          "end": 30.624014000000003
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q097-transmon-twelve-chapters/audio/slide_07.mp3"
+    },
+    {
+      "page": 10,
+      "kind": "slide",
+      "v1slide": 8,
+      "title": "師生對話的課程地圖",
+      "duration": 29.976,
+      "sentences": [
+        {
+          "text": "這十二章還有一份配套的師生對話紀錄，分成三篇十三課：第一篇硬體、第二篇演算法、第三篇容錯與系統。",
+          "start": 0.0,
+          "end": 9.544014
+        },
+        {
+          "text": "接下來的十三堂課，我們會照這份課程地圖一課一課往下走，每一課都對應動畫裡的一到兩章。",
+          "start": 9.724014,
+          "end": 17.492019
+        },
+        {
+          "text": "要注意：畫面上的數字，例如五點二一吉赫的位元頻率、大約七吉赫的讀取共振腔，都是本系列貫穿全課的範例參數，不是某一顆真實晶片的量測。",
+          "start": 17.672019,
+          "end": 29.760024
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q097-transmon-twelve-chapters/audio/slide_08.mp3"
+    },
+    {
+      "page": 11,
+      "kind": "slide",
+      "v1slide": 9,
+      "title": "冒險任務：逐章闖關",
+      "duration": 27.624,
+      "sentences": [
+        {
+          "text": "實作的時候玩冒險任務：爸爸當嚮導，在動畫下方的章節列點開一章，問你這一章在回答什麼問題。",
+          "start": 0.0,
+          "end": 8.8
+        },
+        {
+          "text": "你當冒險者，自己操作那一章的按鈕，看完之後用一句話回答，例如第五章在回答：讀取時要怎麼知道位元是零還是一。",
+          "start": 8.98,
+          "end": 19.148005
+        },
+        {
+          "text": "十二章都寫下一句話，就算闖關成功；卡住的章節先打個問號，之後的課還會再回來。",
+          "start": 19.328005,
+          "end": 27.408005000000003
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q097-transmon-twelve-chapters/audio/slide_09.mp3"
+    },
+    {
+      "page": 12,
+      "kind": "slide",
+      "v1slide": 10,
+      "title": "換你改造：十二章心智圖",
+      "duration": 27.168,
+      "sentences": [
+        {
+          "text": "下半場換你改造：把十二章排成一張心智圖，中間寫一顆傳輸子，外面分成硬體、演算法、容錯與系統三區。",
+          "start": 0.0,
+          "end": 10.144014
+        },
+        {
+          "text": "再用箭頭把章節連起來，例如在課程地圖裡，讀取與重設那一課，接下來就通往演算法篇的第一課。",
+          "start": 10.324014,
+          "end": 19.076031999999998
+        },
+        {
+          "text": "最後圈出你最想深入的三章，寫下理由，之後上到那幾課的時候，再回來對照一次。",
+          "start": 19.256031999999998,
+          "end": 26.952040999999998
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q097-transmon-twelve-chapters/audio/slide_10.mp3"
+    },
+    {
+      "page": 13,
+      "kind": "slide",
+      "v1slide": 11,
+      "title": "兩小時的晶片探險",
+      "duration": 31.32,
+      "sentences": [
+        {
+          "text": "兩小時的安排是：開場十分鐘，認識十二章和課程地圖十五分鐘，接著四十分鐘和爸爸逐章走一遍動畫，每章寫一句話，然後休息十分鐘。",
+          "start": 0.0,
+          "end": 11.536009
+        },
+        {
+          "text": "下半場三十分鐘畫十二章心智圖，接著十分鐘交換角色，由你教爸爸怎麼操作、每一章在講什麼。",
+          "start": 11.716009,
+          "end": 20.420023
+        },
+        {
+          "text": "最後五分鐘錄音總結，替心智圖取名字，存一個版本；就像出門旅行，先攤開地圖看全貌，再決定在哪一站多停留一會兒。",
+          "start": 20.600023,
+          "end": 31.104036999999998
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q097-transmon-twelve-chapters/audio/slide_11.mp3"
+    },
+    {
+      "page": 14,
+      "kind": "slide",
+      "v1slide": 12,
+      "title": "最後一關：教爸爸走一遍",
+      "duration": 31.392,
+      "sentences": [
+        {
+          "text": "最後一關，請不看稿說出：一顆傳輸子從晶片走到軟體，要經過哪幾段旅程？",
+          "start": 0.0,
+          "end": 7.264014
+        },
+        {
+          "text": "再指出一個注意事項：動畫是示意圖，不是照片，真正的晶片只有幾百微米大，畫面裡的大小和距離都沒有按比例。",
+          "start": 7.444014,
+          "end": 17.276032
+        },
+        {
+          "text": "今天的作品是十二章路線心智圖，下一堂我們從第一站出發，比較電感電容電路與約瑟夫森接面，看線性和非線性到底差在哪裡；我是陳犀牛，保持好奇，我們下次見！",
+          "start": 17.456032,
+          "end": 31.176032
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q097-transmon-twelve-chapters/audio/slide_12.mp3"
+    }
+  ]
+}

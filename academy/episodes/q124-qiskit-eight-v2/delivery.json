@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q124",
+  "version": "Q124-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-20",
+  "episodePath": "academy/episodes/q124-qiskit-eight-v2",
+  "basedOn": "academy/episodes/q124-qiskit-eight（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 501.077,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "tpcode",
+      "title": "動畫展示：隱形傳態的程式碼",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/basic-circuits.html#teleport"
+    },
+    {
+      "key": "grcode",
+      "title": "動畫展示：多出來的整體負號",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/basic-circuits.html#grover"
+    },
+    {
+      "key": "bvparam",
+      "title": "動畫展示：改一個參數，兩邊一起比",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/basic-circuits.html#bv"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.4,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q124-qiskit-eight-v2-zh-TW.mp4": {
+      "bytes": 84798117,
+      "sha256": "2bee2386c2782dd1b90c04dddef91d1d41a05ae8cc7cdc67ab49ca13b4b0819b"
+    },
+    "q124-qiskit-eight-v2-master.mp4": {
+      "bytes": 86856641,
+      "sha256": "56e6bf80008dcd3f66936f5722e5d94761e744eefea84b8f34c526306ff4550a"
+    },
+    "narration-only.mp3": {
+      "bytes": 12027604,
+      "sha256": "9b69f23a0ee0f58057ee51a0a66476391420bfed7a253b46398c37da9dbe368d"
+    }
+  },
+  "package": {
+    "filename": "Q124-v2_量子電腦學程_八範例重現_動畫展示版_2026-11-20.zip",
+    "bytes": 187461289,
+    "sha256": "d51d0cd9738eac9b57162ef5797c7dcea18cc22269753ebe17da865f069722fd",
+    "parts": [
+      {
+        "name": "Q124-v2_量子電腦學程_八範例重現_動畫展示版_2026-11-20.zip.part01",
+        "bytes": 29360128,
+        "sha256": "a29b93e3dd9b07e1c7a41b053e04633e20f4153523c34f9ffeec7ae12f30720c"
+      },
+      {
+        "name": "Q124-v2_量子電腦學程_八範例重現_動畫展示版_2026-11-20.zip.part02",
+        "bytes": 29360128,
+        "sha256": "3c3f5463cad7a4f2c1779e6d1bd1d0019927ca964704d4d8d6434dda2c2d9ae0"
+      },
+      {
+        "name": "Q124-v2_量子電腦學程_八範例重現_動畫展示版_2026-11-20.zip.part03",
+        "bytes": 29360128,
+        "sha256": "6f6de70ad3319e82987904c2c6394b82f42706cfac2f9c1326b29b5586f6443e"
+      },
+      {
+        "name": "Q124-v2_量子電腦學程_八範例重現_動畫展示版_2026-11-20.zip.part04",
+        "bytes": 29360128,
+        "sha256": "9e53c0915de4f813f632fdc22a344e77d6bcc9ca916db88be10514aebfaadbf7"
+      },
+      {
+        "name": "Q124-v2_量子電腦學程_八範例重現_動畫展示版_2026-11-20.zip.part05",
+        "bytes": 29360128,
+        "sha256": "b89a199ef2565f56606a48b1f60c902150cbc5268e65c3341224e8fd8234aa8e"
+      },
+      {
+        "name": "Q124-v2_量子電腦學程_八範例重現_動畫展示版_2026-11-20.zip.part06",
+        "bytes": 29360128,
+        "sha256": "16a0abd96f69fd688c3d4288db9bf49b404bfb43bddfabe7b0b1c2df375ac222"
+      },
+      {
+        "name": "Q124-v2_量子電腦學程_八範例重現_動畫展示版_2026-11-20.zip.part07",
+        "bytes": 11300521,
+        "sha256": "3c3da3756979f1a394004e552706eb32109921514cb31ef6fd0edad7b95d81b0"
+      }
+    ],
+    "handedOver": "2026-11-20 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1bi-WOn7ipXPr978g1JqWu1DFCPwySyyb",
+    "uploaded": "2026-11-20",
+    "files": [
+      {
+        "name": "Q124 八範例重現：用 Qiskit 重現八個範例（動畫展示版）.mp4",
+        "id": "1B4sUzyaHitNKhiiiR3mc7OIeLfqNLtDL",
+        "link": "https://drive.google.com/file/d/1B4sUzyaHitNKhiiiR3mc7OIeLfqNLtDL/view?usp=drivesdk"
+      },
+      {
+        "name": "Q124 八範例重現（動畫展示版）簡報.pptx",
+        "id": "1gTQv0tGLgvk3n-7WN9Pn6D_maNNnFGm4",
+        "link": "https://docs.google.com/presentation/d/1gTQv0tGLgvk3n-7WN9Pn6D_maNNnFGm4/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true"
+      },
+      {
+        "name": "Q124 八範例重現 教材.zip",
+        "id": "1E1fJFfZGlZw1hinmtPvCsG8HX7_9jUSr",
+        "link": "https://drive.google.com/file/d/1E1fJFfZGlZw1hinmtPvCsG8HX7_9jUSr/view?usp=drivesdk"
+      }
+    ],
+    "complete": true
+  }
+}

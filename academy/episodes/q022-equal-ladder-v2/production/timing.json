@@ -1,0 +1,399 @@
+{
+  "version": 2,
+  "opening": 60.277,
+  "scenes": [
+    {
+      "page": 1,
+      "kind": "slide",
+      "v1slide": 1,
+      "title": "量子諧振子：等距的梯子",
+      "duration": 29.256,
+      "sentences": [
+        {
+          "text": "歡迎回到父子科技學院的量子電腦學程，我是陳犀牛，今天是量子第二十二堂，量子諧振子：等距的梯子，這是依課綱製作的課前教學版，並非實際上課錄音。",
+          "start": 0.0,
+          "end": 12.952018
+        },
+        {
+          "text": "上一堂我們把彈簧和電感電容電路對了起來；今天把這個電路做得很小、冷到超導，看它變成量子之後是什麼樣子。",
+          "start": 13.132018,
+          "end": 22.724035999999998
+        },
+        {
+          "text": "答案是一把每一階一樣高的梯子，而這正是它不能直接當量子位元的原因。",
+          "start": 22.904035999999998,
+          "end": 29.040045
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q022-equal-ladder/audio/slide_01.mp3"
+    },
+    {
+      "page": 2,
+      "kind": "slide",
+      "v1slide": 2,
+      "title": "今天的三關",
+      "duration": 25.656,
+      "sentences": [
+        {
+          "text": "今天是闖關課，一共三關：第一關，認識量子諧振子的能量為什麼只能一階一階地變。",
+          "start": 0.0,
+          "end": 7.744014
+        },
+        {
+          "text": "第二關，看出電感電容電路的梯子每一階都等距，用微波一推就會一路往上爬；第三關，畫出一把不等距的梯子。",
+          "start": 7.924014,
+          "end": 17.612019
+        },
+        {
+          "text": "今天的作品是一張能階梯子圖，上面要標出每一階的間距，還要寫出等距為什麼不能用。",
+          "start": 17.792019,
+          "end": 25.440024
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q022-equal-ladder/audio/slide_02.mp3"
+    },
+    {
+      "page": 3,
+      "kind": "slide",
+      "v1slide": 3,
+      "title": "從彈簧到量子：能量分階",
+      "duration": 27.672,
+      "sentences": [
+        {
+          "text": "平常的彈簧可以振得大一點或小一點，能量要多少都行；可是做到夠小、夠冷，量子效應就出現了。",
+          "start": 0.0,
+          "end": 8.92
+        },
+        {
+          "text": "這時能量只能是一階一階的固定值，叫做能階；最低的一階叫基態，標成零，往上是一、二、三。",
+          "start": 9.1,
+          "end": 18.044014
+        },
+        {
+          "text": "有趣的是，最低那一階並不在位能山谷的最底下，而是高出半階，這叫零點能，所以它永遠不會完全靜止。",
+          "start": 18.224014,
+          "end": 27.456032
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q022-equal-ladder/audio/slide_03.mp3"
+    },
+    {
+      "page": 4,
+      "kind": "slide",
+      "v1slide": 4,
+      "title": "等距的梯子",
+      "duration": 26.592,
+      "sentences": [
+        {
+          "text": "電感電容電路的位能，畫出來是一條拋物線形的山谷，能階就像架在山谷裡的梯子。",
+          "start": 0.0,
+          "end": 7.408005
+        },
+        {
+          "text": "解出來的答案很整齊：相鄰兩階的能量差都一樣，等於普朗克常數乘上電路的振盪頻率，像樓梯一樣等距。",
+          "start": 7.588005,
+          "end": 16.724014
+        },
+        {
+          "text": "上一堂算過，一奈亨的電感配一皮法的電容大約是五吉赫；那麼這把梯子每往上一階，需要的微波頻率都是五吉赫。",
+          "start": 16.904014,
+          "end": 26.376032000000002
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q022-equal-ladder/audio/slide_04.mp3"
+    },
+    {
+      "page": 5,
+      "kind": "demo",
+      "demo": "ladder",
+      "title": "動畫展示：梯子每一階一樣高",
+      "duration": 47.568,
+      "sentences": [
+        {
+          "text": "打開約瑟夫森接面動畫的能階場景，先按第一個、寫著線性諧振子的按鈕，畫面換成一條拋物線形的山谷，裡面架著一階一階的能階。",
+          "start": 0.0,
+          "end": 10.864014000000001
+        },
+        {
+          "text": "左邊從下往上標著零、一、二、三，右邊金色的數字是相鄰兩階的間距：五點零零、五點零零、五點零零，三個完全一樣。",
+          "start": 11.044014,
+          "end": 22.676032
+        },
+        {
+          "text": "面板下方的讀數寫著：非諧性是零兆赫，意思是間距之間沒有差別，括號裡還寫著：等間距，所以沒辦法單獨挑出其中兩階。",
+          "start": 22.856032,
+          "end": 33.816032
+        },
+        {
+          "text": "再按寫著十的按鈕，等於把電感換大：金色數字一起變成二點二四吉赫；畫面重新縮放了，所以階看起來變寬、只剩三階，兩個間距還是一樣，非諧性仍然是零。",
+          "start": 33.996032,
+          "end": 47.356032
+        }
+      ],
+      "audio": "audio/demo_ladder.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#potential"
+    },
+    {
+      "page": 6,
+      "kind": "slide",
+      "v1slide": 5,
+      "title": "量子位元只要兩階",
+      "duration": 21.096,
+      "sentences": [
+        {
+          "text": "可是量子位元只要兩個狀態：最低的一階當零，第二階當一。",
+          "start": 0.0,
+          "end": 5.848005000000001
+        },
+        {
+          "text": "我們用微波來控制它：微波的頻率對準零到一的間距，就能把零推到一，或停在兩者的疊加。",
+          "start": 6.028005,
+          "end": 13.91601
+        },
+        {
+          "text": "理想的情況是，微波只在這兩階之間作用，上面的階梯完全不會被碰到。",
+          "start": 14.09601,
+          "end": 20.880024
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q022-equal-ladder/audio/slide_05.mp3"
+    },
+    {
+      "page": 7,
+      "kind": "slide",
+      "v1slide": 6,
+      "title": "一路往上爬",
+      "duration": 23.016,
+      "sentences": [
+        {
+          "text": "問題來了：等距的梯子，零到一、一到二、二到三的間距全部一樣。",
+          "start": 0.0,
+          "end": 6.7120180000000005
+        },
+        {
+          "text": "對準零到一的微波，也正好對準一到二、二到三，於是它推上一階之後，還會繼續往上推。",
+          "start": 6.892018,
+          "end": 14.804036
+        },
+        {
+          "text": "狀態就一路往上爬，散到很多階上，沒辦法只停在零和一之間，這就不是一個量子位元了。",
+          "start": 14.984036,
+          "end": 22.800045
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q022-equal-ladder/audio/slide_06.mp3"
+    },
+    {
+      "page": 8,
+      "kind": "demo",
+      "demo": "climb",
+      "title": "動畫展示：微波一路往上推",
+      "duration": 38.616,
+      "sentences": [
+        {
+          "text": "換到電感電容與約瑟夫森接面圖解的第四步：每一條直線代表往上跳一階需要的頻率，陰影帶是對準零到一的驅動微波。",
+          "start": 0.0,
+          "end": 9.64
+        },
+        {
+          "text": "上面那一行是電感電容電路，只有一條綠色的線，旁邊寫著零到一、一到二、二到三、三到四，全部疊在一起。",
+          "start": 9.82,
+          "end": 19.868005
+        },
+        {
+          "text": "綠色字的下一行寫著：驅動一路往上爬；微波推完零到一，也正好推得動上面每一階。",
+          "start": 20.048005,
+          "end": 27.600023
+        },
+        {
+          "text": "再看下面那一行，約瑟夫森接面做的量子位元：四條線是分開的，只有零到一那條是綠色，其他三條是灰色，微波打不到。",
+          "start": 27.780023,
+          "end": 38.404037
+        }
+      ],
+      "audio": "audio/demo_climb.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/lc-vs-jj.html#s4"
+    },
+    {
+      "page": 9,
+      "kind": "slide",
+      "v1slide": 7,
+      "title": "問題在等距，不在高低",
+      "duration": 23.544,
+      "sentences": [
+        {
+          "text": "很多人會以為，是能量太高或太低才不能用，其實不是。",
+          "start": 0.0,
+          "end": 5.7520180000000005
+        },
+        {
+          "text": "把電感或電容換大，振盪頻率變低，整把梯子的間距一起變小；換小，間距一起變大，可是每一階永遠一樣高。",
+          "start": 5.932018,
+          "end": 15.764036
+        },
+        {
+          "text": "所以不管頻率是多少，微波還是會一路往上推；要解決的是等距，不是能量的高低。",
+          "start": 15.944036,
+          "end": 23.32805
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q022-equal-ladder/audio/slide_07.mp3"
+    },
+    {
+      "page": 10,
+      "kind": "slide",
+      "v1slide": 8,
+      "title": "解法：讓梯子不等距",
+      "duration": 28.488,
+      "sentences": [
+        {
+          "text": "解法是讓梯子變得不等距：把電感換成約瑟夫森接面，山谷變成越往上越寬，梯子越往上越擠。",
+          "start": 0.0,
+          "end": 8.656009000000001
+        },
+        {
+          "text": "例如零到一約四點七四吉赫，一到二約四點四五吉赫，兩者的差叫做非諧性，大約負兩百九十兆赫；微波對準零到一，就碰不到一到二。",
+          "start": 8.836009,
+          "end": 20.012018
+        },
+        {
+          "text": "暫停影片想一想：如果每一階的間距都不一樣，微波要選哪一個頻率，才能只在零和一之間來回？",
+          "start": 20.192018,
+          "end": 28.272018000000003
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q022-equal-ladder/audio/slide_08.mp3"
+    },
+    {
+      "page": 11,
+      "kind": "demo",
+      "demo": "uneven",
+      "title": "動畫展示：不等距的梯子",
+      "duration": 37.968,
+      "sentences": [
+        {
+          "text": "回到圖解的第三步，左右兩張圖並排：左邊藍色是電感電容的拋物線，右邊橘色是約瑟夫森接面的餘弦山谷。",
+          "start": 0.0,
+          "end": 9.544014
+        },
+        {
+          "text": "左邊梯子旁的四個數字都是五點零零；右邊的數字從四點七四、四點四五、四點一三，一路變小。",
+          "start": 9.724014,
+          "end": 18.692019000000002
+        },
+        {
+          "text": "下面的讀數寫著，非諧性是負兩百八十七兆赫：一到二比零到一少了這麼多，所以微波可以只挑零和一。",
+          "start": 18.872019,
+          "end": 27.528028000000003
+        },
+        {
+          "text": "把圖下面的滑桿從五十拉到八十，左邊四個數字一起變成六點三二，右邊還是一階比一階小，讀數變成負兩百七十七兆赫。",
+          "start": 27.708028000000002,
+          "end": 37.756033
+        }
+      ],
+      "audio": "audio/demo_uneven.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/lc-vs-jj.html#s3"
+    },
+    {
+      "page": 12,
+      "kind": "slide",
+      "v1slide": 9,
+      "title": "實作：在場景裡看間距",
+      "duration": 23.76,
+      "sentences": [
+        {
+          "text": "實作的時候，爸爸打開能階場景，按下電感電容諧振子那一個按鈕，切到線性的模式。",
+          "start": 0.0,
+          "end": 7.912018
+        },
+        {
+          "text": "你負責記錄：每一階旁邊的數字是多少，一階一階抄下來，看看有沒有哪一階不一樣。",
+          "start": 8.092018,
+          "end": 15.788027
+        },
+        {
+          "text": "接著在紙上畫一把梯子，標出每一階的間距，再用幾支箭頭畫出微波怎麼一路往上爬。",
+          "start": 15.968027,
+          "end": 23.544036
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q022-equal-ladder/audio/slide_09.mp3"
+    },
+    {
+      "page": 13,
+      "kind": "slide",
+      "v1slide": 10,
+      "title": "換你改造：畫不等距梯子",
+      "duration": 21.648,
+      "sentences": [
+        {
+          "text": "下半場換你改造：畫一把不等距的梯子，越往上，每一階越窄。",
+          "start": 0.0,
+          "end": 6.424014000000001
+        },
+        {
+          "text": "在每一階旁邊寫上間距，例如零到一寫四點七四，一到二寫四點四五，二到三寫四點一三。",
+          "start": 6.604014,
+          "end": 14.756032000000001
+        },
+        {
+          "text": "最後用你自己的話說明：為什麼微波對準零到一時，不會把狀態推到二？",
+          "start": 14.936032,
+          "end": 21.432041
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q022-equal-ladder/audio/slide_10.mp3"
+    },
+    {
+      "page": 14,
+      "kind": "slide",
+      "v1slide": 11,
+      "title": "兩小時的闖關實驗室",
+      "duration": 27.648,
+      "sentences": [
+        {
+          "text": "兩小時的安排是：開場十分鐘，概念示範十五分鐘，接著四十分鐘在場景裡看間距、畫梯子圖，然後休息十分鐘。",
+          "start": 0.0,
+          "end": 9.976009
+        },
+        {
+          "text": "下半場三十分鐘，你自己畫不等距的梯子並寫出理由；接著十分鐘交換角色，由你教爸爸怎麼操作、為什麼等距不能用。",
+          "start": 10.156009,
+          "end": 20.684013999999998
+        },
+        {
+          "text": "最後五分鐘錄音總結，替你的能階梯子圖取個名字，再存一個版本。",
+          "start": 20.864013999999997,
+          "end": 27.432018999999997
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q022-equal-ladder/audio/slide_11.mp3"
+    },
+    {
+      "page": 15,
+      "kind": "slide",
+      "v1slide": 12,
+      "title": "最後一關：教爸爸看梯子",
+      "duration": 28.032,
+      "sentences": [
+        {
+          "text": "最後一關，請不看稿說出：電感電容電路的能階梯子是什麼形狀？為什麼它不能直接當量子位元？",
+          "start": 0.0,
+          "end": 8.968005
+        },
+        {
+          "text": "再指出一個要注意的地方：問題出在等距，不是能量太高或太低。",
+          "start": 9.148005,
+          "end": 15.164014
+        },
+        {
+          "text": "今天的作品是能階梯子圖，下一堂要認識讓梯子變得不等距的關鍵元件：約瑟夫森接面，一個超導的三明治；我是陳犀牛，保持好奇，我們下次見！",
+          "start": 15.344014,
+          "end": 27.816032
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q022-equal-ladder/audio/slide_12.mp3"
+    }
+  ]
+}

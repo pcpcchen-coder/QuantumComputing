@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q075",
+  "version": "Q075-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-19",
+  "episodePath": "academy/episodes/q075-zoned-imaging-v2",
+  "basedOn": "academy/episodes/q075-zoned-imaging（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 483.366667,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "zoned",
+      "title": "動畫展示：一層線路的搬運與並行閘",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/atoms.html#zoned"
+    },
+    {
+      "key": "imaging",
+      "title": "動畫展示：推出、成像、判讀相機影像",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/atoms.html#imaging"
+    },
+    {
+      "key": "midmeasure",
+      "title": "動畫展示：中途量測走一趟讀取區",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/atoms.html#zoned"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.4,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q075-zoned-imaging-v2-zh-TW.mp4": {
+      "bytes": 88373144,
+      "sha256": "2e2e4b4dbcad29e74ef09286948a75eb9351c0cca676a5619ce93e73bd493b31"
+    },
+    "q075-zoned-imaging-v2-master.mp4": {
+      "bytes": 90988734,
+      "sha256": "fae28f9205237c065d0ba71ad5adc58700d5ec0f15b0d36e6ee8c58ea7ae747f"
+    },
+    "narration-only.mp3": {
+      "bytes": 11601940,
+      "sha256": "756d7b84489bf8e60ed7058512be732dac82261eedeac51a6358b780b91e9e38"
+    }
+  },
+  "package": {
+    "filename": "Q075-v2_量子電腦學程_分區架構與成像讀取_動畫展示版_2026-11-19.zip",
+    "bytes": 195073910,
+    "sha256": "f924173d46e32067698063fbda3e353bc9b5d284dd19dd7523caa99beb8c7e96",
+    "parts": [
+      {
+        "name": "Q075-v2_量子電腦學程_分區架構與成像讀取_動畫展示版_2026-11-19.zip.part01",
+        "bytes": 29360128,
+        "sha256": "243bb3811318b3092f25b528b5bed69fffe62ac186801be1bf67d3f151f9b21f"
+      },
+      {
+        "name": "Q075-v2_量子電腦學程_分區架構與成像讀取_動畫展示版_2026-11-19.zip.part02",
+        "bytes": 29360128,
+        "sha256": "b456eaa5ad97a17bf83580abd05666873416a27616b55d3e889cd6dcd5f7395e"
+      },
+      {
+        "name": "Q075-v2_量子電腦學程_分區架構與成像讀取_動畫展示版_2026-11-19.zip.part03",
+        "bytes": 29360128,
+        "sha256": "767dda6b6312fdb712257b3bb85f42018bbfcf36e511268fc66afad90b4beb7a"
+      },
+      {
+        "name": "Q075-v2_量子電腦學程_分區架構與成像讀取_動畫展示版_2026-11-19.zip.part04",
+        "bytes": 29360128,
+        "sha256": "3689d880377215d260ad30f68395eb720d7eb76f84fb9ec792fb7ceefc1ba83b"
+      },
+      {
+        "name": "Q075-v2_量子電腦學程_分區架構與成像讀取_動畫展示版_2026-11-19.zip.part05",
+        "bytes": 29360128,
+        "sha256": "6db702636b500bdb95303bdd886e29e0c60f82699b8aff0482846fb7a1275930"
+      },
+      {
+        "name": "Q075-v2_量子電腦學程_分區架構與成像讀取_動畫展示版_2026-11-19.zip.part06",
+        "bytes": 29360128,
+        "sha256": "070d594321a63cbb604dc5964f2b01d89129d1300fbe64b3c265bb42b5df71e1"
+      },
+      {
+        "name": "Q075-v2_量子電腦學程_分區架構與成像讀取_動畫展示版_2026-11-19.zip.part07",
+        "bytes": 18913142,
+        "sha256": "4b9cde5192268451387c858f1f0d1eaab69a5190ad741abe9a0b448b879aa48b"
+      }
+    ],
+    "handedOver": "2026-11-19 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1ZOQEWjgkBnzg6-88LtQiSOgQeO2JG9Wx",
+    "uploadedAt": "2026-11-19",
+    "files": [
+      {
+        "name": "Q075 分區架構與成像讀取：分區架構與成像讀取（動畫展示版）.mp4",
+        "id": "1dis6Qfs4uwDIzsArVuvsGijaj0u1rR54",
+        "bytes": 88373144,
+        "url": "https://drive.google.com/file/d/1dis6Qfs4uwDIzsArVuvsGijaj0u1rR54/view"
+      },
+      {
+        "name": "Q075 分區架構與成像讀取（動畫展示版）簡報.pptx",
+        "id": "1Ay84Mj7BBmjr6dwp8-nA7Q6CDKeAUKn4",
+        "bytes": 3485803,
+        "url": "https://docs.google.com/presentation/d/1Ay84Mj7BBmjr6dwp8-nA7Q6CDKeAUKn4/edit"
+      },
+      {
+        "name": "Q075 分區架構與成像讀取 教材.zip",
+        "id": "1_l4m2jyDRwKZje5ZwYx1a-rqMUucQzBg",
+        "bytes": 324340,
+        "url": "https://drive.google.com/file/d/1_l4m2jyDRwKZje5ZwYx1a-rqMUucQzBg/view"
+      }
+    ]
+  }
+}

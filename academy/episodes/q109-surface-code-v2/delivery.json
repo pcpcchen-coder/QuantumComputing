@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q109",
+  "version": "Q109-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-19",
+  "episodePath": "academy/episodes/q109-surface-code-v2",
+  "basedOn": "academy/episodes/q109-surface-code（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 591.104,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "match",
+      "title": "動畫展示：兩個亮點配成一對",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#surface"
+    },
+    {
+      "key": "fool",
+      "title": "動畫展示：兩個錯誤騙過解碼器",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#surface"
+    },
+    {
+      "key": "threshold",
+      "title": "動畫展示：低於門檻才有用",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#qec"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.7,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q109-surface-code-v2-zh-TW.mp4": {
+      "bytes": 93000601,
+      "sha256": "3ae87df9ee97c1b57cb4b827ef5604a8f23afe3784e717056e8096477be6348f"
+    },
+    "q109-surface-code-v2-master.mp4": {
+      "bytes": 93745529,
+      "sha256": "9294896fa8e025995318b7e893ed7719cddccd36ffed9d1befe836222ff6b8ba"
+    },
+    "narration-only.mp3": {
+      "bytes": 14188180,
+      "sha256": "522c9532a94520ed0755fd1acfe655a1117504c3df42dc213f5ee9c5db2299d0"
+    }
+  },
+  "package": {
+    "filename": "Q109-v2_量子電腦學程_表面碼解碼_動畫展示版_2026-11-19.zip",
+    "bytes": 205135206,
+    "sha256": "965f35661d51443ab0e741a0a7f455c6dc7d38aae51218658f7c2fe288561a30",
+    "parts": [
+      {
+        "name": "Q109-v2_量子電腦學程_表面碼解碼_動畫展示版_2026-11-19.zip.part01",
+        "bytes": 29360128,
+        "sha256": "732c087da9c2bd7ede2889c93a7fb173103989baded66bc8b6b4ad07beb184c9"
+      },
+      {
+        "name": "Q109-v2_量子電腦學程_表面碼解碼_動畫展示版_2026-11-19.zip.part02",
+        "bytes": 29360128,
+        "sha256": "aa5db70264e2de4f7a39f6c3e8325d3fdb98fd621f9bf5430b0861f815ca244f"
+      },
+      {
+        "name": "Q109-v2_量子電腦學程_表面碼解碼_動畫展示版_2026-11-19.zip.part03",
+        "bytes": 29360128,
+        "sha256": "a031a92cdc01d5a6886bf9a3de6d575734237342485547d9fda61578e5263db4"
+      },
+      {
+        "name": "Q109-v2_量子電腦學程_表面碼解碼_動畫展示版_2026-11-19.zip.part04",
+        "bytes": 29360128,
+        "sha256": "00c0354ef2244f7b3dd80a064150888c19d34d820beb7189d2057b5e3983377d"
+      },
+      {
+        "name": "Q109-v2_量子電腦學程_表面碼解碼_動畫展示版_2026-11-19.zip.part05",
+        "bytes": 29360128,
+        "sha256": "e91d62c3621bc2e9ea3bbd18305977668c02f5a4d5146326b29a371d4b1bbc06"
+      },
+      {
+        "name": "Q109-v2_量子電腦學程_表面碼解碼_動畫展示版_2026-11-19.zip.part06",
+        "bytes": 29360128,
+        "sha256": "22133770dddccf2191cd6929a5514c5b8a40c80ca61158cb78819d9c6f570eb9"
+      },
+      {
+        "name": "Q109-v2_量子電腦學程_表面碼解碼_動畫展示版_2026-11-19.zip.part07",
+        "bytes": 28974438,
+        "sha256": "957039b17fe77a2dc16021a784ab53d84257c6352c32acfa8e14cc31063a1ff7"
+      }
+    ],
+    "handedOver": "2026-11-19 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1bi-WOn7ipXPr978g1JqWu1DFCPwySyyb",
+    "uploaded": "2026-11-19",
+    "files": [
+      {
+        "name": "Q109 表面碼解碼：表面碼：穩定子與匹配解碼（動畫展示版）.mp4",
+        "id": "1YIr79B5kRgSTKzwvO01OXd-NvCWMQ8Iq",
+        "link": "https://drive.google.com/file/d/1YIr79B5kRgSTKzwvO01OXd-NvCWMQ8Iq/view?usp=drivesdk"
+      },
+      {
+        "name": "Q109 表面碼解碼（動畫展示版）簡報.pptx",
+        "id": "19p93mdfyX_tCVfQGI1_K_k1qVAOjtQoT",
+        "link": "https://docs.google.com/presentation/d/19p93mdfyX_tCVfQGI1_K_k1qVAOjtQoT/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true"
+      },
+      {
+        "name": "Q109 表面碼解碼 教材.zip",
+        "id": "12q9jc_sU85JyMYKphqMtVlwqCo2J4SIV",
+        "link": "https://drive.google.com/file/d/12q9jc_sU85JyMYKphqMtVlwqCo2J4SIV/view?usp=drivesdk"
+      }
+    ],
+    "complete": true
+  }
+}

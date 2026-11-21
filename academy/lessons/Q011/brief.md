@@ -34,8 +34,9 @@ QM01 量子直覺：不用公式看懂量子｜第一階段 量子直覺｜難�
 
 ## 素材
 
+- 簡報：量子電路入門：八個範例（slides/output/basic-circuits.pptx）p15–17
 - 3D 場景：[`o:circuit`](../../../animations/operation.html#circuit)
-- 需新增：◆ 漫畫分鏡頁
+- 3D 場景：[`bc:teleport`](../../../animations/basic-circuits.html#teleport)
 
 生活技能支線：分清楚什麼要靠「通訊」才能完成。課後延伸：15–30 分鐘自由改造；寫三句學習日誌：我做了什麼、哪裡卡住、下次想加什麼。
 

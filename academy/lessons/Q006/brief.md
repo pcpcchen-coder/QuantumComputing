@@ -35,7 +35,9 @@ QM01 量子直覺：不用公式看懂量子｜第一階段 量子直覺｜難�
 ## 素材
 
 - 簡報：如何操作量子電腦（slides/QC_Operation_Talk.pptx）p38
+- 簡報：量子電路入門：八個範例（slides/output/basic-circuits.pptx）p7–9
 - 3D 場景：[`o:interference`](../../../animations/operation.html#interference)
+- 3D 場景：[`bc:interference`](../../../animations/basic-circuits.html#interference)
 - 需新增：★ 雙狹縫／Mach–Zehnder 干涉儀場景
 
 生活技能支線：安全使用光源：雷射不照眼睛。課後延伸：15–30 分鐘自由改造；寫三句學習日誌：我做了什麼、哪裡卡住、下次想加什麼。

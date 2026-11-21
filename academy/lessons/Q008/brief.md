@@ -35,7 +35,9 @@ CHSH 遊戲勝率表
 ## 素材
 
 - 簡報：如何操作量子電腦（slides/QC_Operation_Talk.pptx）p10
+- 簡報：量子電路入門：八個範例（slides/output/basic-circuits.pptx）p10–12
 - 3D 場景：[`o:register`](../../../animations/operation.html#register)
+- 3D 場景：[`bc:bell`](../../../animations/basic-circuits.html#bell)
 - 需新增：★ CHSH 遊戲場景
 
 生活技能支線：合作遊戲中先約定好策略。課後延伸：15–30 分鐘自由改造；寫三句學習日誌：我做了什麼、哪裡卡住、下次想加什麼。

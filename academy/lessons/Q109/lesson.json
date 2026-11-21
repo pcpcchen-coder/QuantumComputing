@@ -1,0 +1,53 @@
+{
+  "lessonId": "Q109",
+  "sourceRow": {
+    "總課次": 109,
+    "學程": "量子電腦學程",
+    "階段": "第四階段 深化與產業",
+    "模組": "QM07 超導量子電腦深入：師生對話十三課",
+    "模組內課次": 13,
+    "課程主題": "第 11 課：表面碼——穩定子與匹配解碼",
+    "對象與上課方式": "高中理組／大學／工程同仁；師生對話形式，transmon 3D 十二章逐章操作",
+    "學習目標": "理解 d = 3 表面碼的穩定子、CZ 順序、錯誤與邊界，以及最小權重完美匹配",
+    "2 小時課程流程": "00–10 任務開場：第 11 課：表面碼——穩定子與匹配解碼\n10–25 概念示範：理解 d = 3 表面碼的穩定子、CZ 順序、錯誤與邊界，以及最小權重完美匹配\n25–65 父子共同實作：在自由實驗點位元注入錯誤，看症狀與解碼器配對\n65–75 休息／走動／聊天\n75–105 孩子獨立改造：找出兩個錯誤造成邏輯錯誤的例子\n105–115 角色互換：孩子教爸爸操作與原理\n115–120 錄音總結、作品命名、版本存檔",
+    "動手任務": "在自由實驗點位元注入錯誤，看症狀與解碼器配對",
+    "孩子獨立改造": "找出兩個錯誤造成邏輯錯誤的例子",
+    "好玩機制": "Bug 獵人",
+    "作品／交付": "表面碼解碼練習單",
+    "生活技能支線": "從症狀推回原因",
+    "家長課前準備": "師生對話第 11 課；transmon-3d#surface",
+    "課後延伸": "15–30 分鐘自由改造；寫三句學習日誌：我做了什麼、哪裡卡住、下次想加什麼。",
+    "驗收標準": "完成「表面碼解碼練習單」；能不用看稿說出核心原理；能指出至少一個錯誤、限制或注意事項（例如：碼距越大越好，前提是物理錯誤率低於門檻）。",
+    "常見誤解與安全提醒": "碼距越大越好，前提是物理錯誤率低於門檻",
+    "錄音重點": "請孩子回答：1. 第 11 課：表面碼——穩定子與匹配解碼在解決什麼？2. 我怎麼做？3. 哪裡容易錯？4. 生活中或真實的量子電腦哪裡會用到？",
+    "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q109｜第 11 課：表面碼——穩定子與匹配解碼",
+    "難度 1–5": 5,
+    "沿用簡報頁": [
+      "Transmon 筆記簡報（27 頁，含 3D 十二章導覽）（slides/transmon.pptx）p25",
+      "如何操作量子電腦（slides/QC_Operation_Talk.pptx）p49–50"
+    ],
+    "沿用 3D 場景": [
+      "tr:surface",
+      "o:qec"
+    ],
+    "需新增素材": [],
+    "沿用文件": [
+      "超導量子電腦師生對話教學紀錄（docs/超導量子電腦師生對話教學紀錄.md）第 11 課"
+    ],
+    "YouTube 關鍵字 1": "第 11 課：表面碼——穩定子與匹配解碼 quantum computing explained beginner",
+    "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E7%AC%AC+11+%E8%AA%B2%EF%BC%9A%E8%A1%A8%E9%9D%A2%E7%A2%BC%E2%80%94%E2%80%94%E7%A9%A9%E5%AE%9A%E5%AD%90%E8%88%87%E5%8C%B9%E9%85%8D%E8%A7%A3%E7%A2%BC+quantum+computing+explained+beginner",
+    "影片用途 1": "課前暖身",
+    "YouTube 關鍵字 2": "第 11 課：表面碼——穩定子與匹配解碼 理解 d = 3 表面碼的穩定子、CZ  hands on demo",
+    "YouTube 連結 2": "https://www.youtube.com/results?search_query=%E7%AC%AC+11+%E8%AA%B2%EF%BC%9A%E8%A1%A8%E9%9D%A2%E7%A2%BC%E2%80%94%E2%80%94%E7%A9%A9%E5%AE%9A%E5%AD%90%E8%88%87%E5%8C%B9%E9%85%8D%E8%A7%A3%E7%A2%BC+%E7%90%86%E8%A7%A3+d+%3D+3+%E8%A1%A8%E9%9D%A2%E7%A2%BC%E7%9A%84%E7%A9%A9%E5%AE%9A%E5%AD%90%E3%80%81CZ++hands+on+demo",
+    "影片用途 2": "課中實作參考",
+    "YouTube 關鍵字 3": "第 11 課：表面碼——穩定子與匹配解碼 quantum computing lecture visualization",
+    "YouTube 連結 3": "https://www.youtube.com/results?search_query=%E7%AC%AC+11+%E8%AA%B2%EF%BC%9A%E8%A1%A8%E9%9D%A2%E7%A2%BC%E2%80%94%E2%80%94%E7%A9%A9%E5%AE%9A%E5%AD%90%E8%88%87%E5%8C%B9%E9%85%8D%E8%A7%A3%E7%A2%BC+quantum+computing+lecture+visualization",
+    "影片用途 3": "課後延伸"
+  },
+  "curriculumSha256": "eb081f5848bd31bd8d734680a2d88f6821b6b30fa5d9ff1d813d06872e8f71c3",
+  "episodePaths": [
+    "academy/episodes/q109-surface-code-v2"
+  ],
+  "minutes": 120,
+  "status": "planned"
+}

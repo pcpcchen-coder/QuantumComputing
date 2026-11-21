@@ -1,0 +1,8 @@
+{
+  "title": "父子科技學院 Q135｜磁場與配電佈局：母線離冷凍機多遠（動畫展示版）",
+  "description": "父子科技學院 量子電腦學程 Q135｜磁場與配電佈局：母線離冷凍機多遠（v2・含 3D 動畫展示）\n\n這是依課綱製作的課前教學版，不是實際上課錄音。\n\n父子科技學院量子電腦學程 Q135「磁場與配電佈局：母線離冷凍機多遠」新版（v2）：在原本的教學投影片之間，插入本學程 3D 互動動畫的實際操作示範。\n\n這一版新增的動畫展示\n・三種配線，三種衰減（https://pcpcchen-coder.github.io/QuantumComputing/animations/power1000.html#field）\n・電流加大，配線並緊（https://pcpcchen-coder.github.io/QuantumComputing/animations/power1000.html#field）\n・移動母線，記錄磁場（https://pcpcchen-coder.github.io/QuantumComputing/animations/power1000.html#field）\n\n動畫都可以在瀏覽器直接開啟，自己動手操作。\n\n章節\n00:00 陳犀牛系列片頭\n01:00 磁場與配電佈局：母線離冷凍機多遠\n01:34 設計三步：估算、移動、畫草圖\n02:05 為什麼磁場要管\n02:39 磁場的四個來源\n03:13 動畫展示：三種配線，三種衰減\n03:56 比一比：單根 vs 成對\n04:25 動畫展示：電流加大，配線並緊\n05:05 估算三步\n05:39 移動母線的紀錄\n06:10 動畫展示：移動母線，記錄磁場\n06:50 配電佈局的三個陷阱\n07:29 設計改造：設計師與量測員\n07:58 換你改造：配電佈局草圖\n08:30 兩小時的設計改造\n09:02 最後一關：教爸爸配電佈局\n\n旁白：微軟 zh-TW-YunJheNeural 神經語音合成（Edge-TTS／Azure 語音服務，同一聲音同一格式）。字幕已燒入影片，開啟 CC 可能重疊。\n",
+  "privacyStatus": "private",
+  "madeForKids": null,
+  "reviewStatus": "needs-parent-review",
+  "publicationMode": "manual-user-upload"
+}

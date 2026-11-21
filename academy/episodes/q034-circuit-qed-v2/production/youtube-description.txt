@@ -1,0 +1,32 @@
+父子科技學院 量子電腦學程 Q034｜電路 QED：量子位元＋諧振腔（v2・含 3D 動畫展示）
+
+這是依課綱製作的課前教學版，不是實際上課錄音。
+
+父子科技學院量子電腦學程 Q034「電路 QED：量子位元＋諧振腔」新版（v2）：在原本的教學投影片之間，插入本學程 3D 互動動畫的實際操作示範。
+
+這一版新增的動畫展示
+・晶片上的量子位元、讀取腔和饋線（https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#chip）
+・看讀取腔，間接知道量子位元（https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#chip）
+・一條饋線讀四顆（https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#chip）
+
+動畫都可以在瀏覽器直接開啟，自己動手操作。
+
+章節
+00:00 陳犀牛系列片頭
+01:00 電路 QED：量子位元＋諧振腔
+01:37 三個重點
+02:11 借自原子物理
+02:42 晶片上的三個零件
+03:17 動畫展示：晶片上的量子位元、讀取腔和饋線
+04:01 頻率要分開
+04:34 讀取的路線
+05:01 動畫展示：看讀取腔，間接知道量子位元
+05:43 一條饋線讀很多顆
+06:08 動畫展示：一條饋線讀四顆
+06:45 常見誤解：頻率要分得夠開
+07:15 實作：音叉與共鳴
+07:46 換你改造：畫連接圖
+08:19 兩小時的電路 QED
+08:46 最後一關：教爸爸讀取腔
+
+旁白：微軟 zh-TW-YunJheNeural 神經語音合成（Edge-TTS／Azure 語音服務，同一聲音同一格式）。字幕已燒入影片，開啟 CC 可能重疊。

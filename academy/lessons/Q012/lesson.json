@@ -23,13 +23,24 @@
     "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q012｜Deutsch–Jozsa：一次看穿",
     "難度 1–5": 2,
     "沿用簡報頁": [
-      "如何操作量子電腦（slides/QC_Operation_Talk.pptx）p39"
+      "如何操作量子電腦（slides/QC_Operation_Talk.pptx）p39",
+      "《量子金魚》008 Deutsch 演算法報告簡報（slides/output/qfish008-deutsch-algorithm.pptx）p3–25",
+      "量子電路入門：八個範例（slides/output/basic-circuits.pptx）p18–20"
     ],
     "沿用 3D 場景": [
       "o:interference",
-      "o:circuit"
+      "o:circuit",
+      "bc:deutsch",
+      "tr:deutsch"
     ],
     "需新增素材": [],
+    "沿用文件": [],
+    "2026-11-18 補充素材": [
+      "簡報 F p3–25",
+      "簡報 G p18–20",
+      "場景 bc:deutsch",
+      "場景 tr:deutsch"
+    ],
     "YouTube 關鍵字 1": "Deutsch–Jozsa：一次看穿 quantum computing explained beginner",
     "YouTube 連結 1": "https://www.youtube.com/results?search_query=Deutsch%E2%80%93Jozsa%EF%BC%9A%E4%B8%80%E6%AC%A1%E7%9C%8B%E7%A9%BF+quantum+computing+explained+beginner",
     "影片用途 1": "課前暖身",
@@ -40,8 +51,10 @@
     "YouTube 連結 3": "https://www.youtube.com/results?search_query=Deutsch%E2%80%93Jozsa%EF%BC%9A%E4%B8%80%E6%AC%A1%E7%9C%8B%E7%A9%BF+quantum+computing+lecture+visualization",
     "影片用途 3": "課後延伸"
   },
-  "curriculumSha256": "493446a21451c8a5c08a1723cfd04436e51cbfa4806049b55a765d22ecf2ba53",
-  "episodePaths": [],
+  "curriculumSha256": "eb081f5848bd31bd8d734680a2d88f6821b6b30fa5d9ff1d813d06872e8f71c3",
+  "episodePaths": [
+    "academy/episodes/q012-deutsch-jozsa-v2"
+  ],
   "minutes": 120,
   "status": "planned"
 }

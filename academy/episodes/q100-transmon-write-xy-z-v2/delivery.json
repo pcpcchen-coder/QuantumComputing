@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q100",
+  "version": "Q100-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-20",
+  "episodePath": "academy/episodes/q100-transmon-write-xy-z-v2",
+  "basedOn": "academy/episodes/q100-transmon-write-xy-z（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 532.266667,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "chip",
+      "title": "動畫展示：寫入走的是哪一條線",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#chip"
+    },
+    {
+      "key": "rotate",
+      "title": "動畫展示：轉幾度、繞哪一軸",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#control"
+    },
+    {
+      "key": "xyz",
+      "title": "動畫展示：調磁通和送脈衝的差別",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#case"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.5,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q100-transmon-write-xy-z-v2-zh-TW.mp4": {
+      "bytes": 88272117,
+      "sha256": "96b3de68784c480a58f651c7a3422b46c026ab9262226b2f71cc5b5b906e83f6"
+    },
+    "q100-transmon-write-xy-z-v2-master.mp4": {
+      "bytes": 90229253,
+      "sha256": "0ed03dee97970610e88e178dbeecee57c6692165dfe32e05d63626aa5c7e2285"
+    },
+    "narration-only.mp3": {
+      "bytes": 12775828,
+      "sha256": "23e2d559fa21a1b529c79da161da20ab73ace4eb387cfcf758b204ec070e3a1d"
+    }
+  },
+  "package": {
+    "filename": "Q100-v2_量子電腦學程_傳輸子怎麼寫入狀態_動畫展示版_2026-11-20.zip",
+    "bytes": 195493035,
+    "sha256": "a467ae7869ecabcebf6fe5245a9e2559f9743ac9e6bb88587430f8d97fb49e79",
+    "parts": [
+      {
+        "name": "Q100-v2_量子電腦學程_傳輸子怎麼寫入狀態_動畫展示版_2026-11-20.zip.part01",
+        "bytes": 29360128,
+        "sha256": "3585bc3ef06ad6685639d9bfe141176cbc219687d7ea0644605b89ee43148d45"
+      },
+      {
+        "name": "Q100-v2_量子電腦學程_傳輸子怎麼寫入狀態_動畫展示版_2026-11-20.zip.part02",
+        "bytes": 29360128,
+        "sha256": "90016e1b86e68304230eba325303fc7b6780a0e5a2a655dd4549cbd39ab68b22"
+      },
+      {
+        "name": "Q100-v2_量子電腦學程_傳輸子怎麼寫入狀態_動畫展示版_2026-11-20.zip.part03",
+        "bytes": 29360128,
+        "sha256": "357e8f6c55a84831228039e973eabfba2cfe69e11a65f87c7bb033ff452a6b12"
+      },
+      {
+        "name": "Q100-v2_量子電腦學程_傳輸子怎麼寫入狀態_動畫展示版_2026-11-20.zip.part04",
+        "bytes": 29360128,
+        "sha256": "a8a4326878aedbf8b9398b0b3ba1ec9af5db54dc87d6170b12a6e5b487d930fa"
+      },
+      {
+        "name": "Q100-v2_量子電腦學程_傳輸子怎麼寫入狀態_動畫展示版_2026-11-20.zip.part05",
+        "bytes": 29360128,
+        "sha256": "c68a7c9edf8e709ee9efcd669c4d02ebcef13f6f9f56141d32ac694e4a6bc1ce"
+      },
+      {
+        "name": "Q100-v2_量子電腦學程_傳輸子怎麼寫入狀態_動畫展示版_2026-11-20.zip.part06",
+        "bytes": 29360128,
+        "sha256": "23ab3a724e5d902cfa7e0636474e6fa7aee66e4c9481c386febb35cc038b7c4d"
+      },
+      {
+        "name": "Q100-v2_量子電腦學程_傳輸子怎麼寫入狀態_動畫展示版_2026-11-20.zip.part07",
+        "bytes": 19332267,
+        "sha256": "dd3d9ad5f6900c06a475c1ec7d32a40dc22e409999aeb63843907f72bb45cb80"
+      }
+    ],
+    "handedOver": "2026-11-20 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1ZOQEWjgkBnzg6-88LtQiSOgQeO2JG9Wx",
+    "uploadedAt": "2026-11-19",
+    "files": [
+      {
+        "name": "Q100 第 2 課：transmon 怎麼寫入狀態（動畫展示版）.mp4",
+        "id": "1YY5YXtIJ7G4yJudPHsybj1TO1jLSu0uN",
+        "bytes": 88272117,
+        "url": "https://drive.google.com/file/d/1YY5YXtIJ7G4yJudPHsybj1TO1jLSu0uN/view"
+      },
+      {
+        "name": "Q100 transmon 寫入狀態（動畫展示版）簡報.pptx",
+        "id": "1HsFS9Nix-SvOvmP6TljV3GCuTlxCXN0x",
+        "bytes": 3329874,
+        "url": "https://docs.google.com/presentation/d/1HsFS9Nix-SvOvmP6TljV3GCuTlxCXN0x/edit"
+      },
+      {
+        "name": "Q100 transmon 寫入狀態 教材.zip",
+        "id": "1uKj9ckjZWdPs0Pi7e5ssxvT93HLBbBDS",
+        "bytes": 360646,
+        "url": "https://drive.google.com/file/d/1uKj9ckjZWdPs0Pi7e5ssxvT93HLBbBDS/view"
+      }
+    ]
+  }
+}

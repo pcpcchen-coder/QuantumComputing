@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q128",
+  "version": "Q128-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-18",
+  "episodePath": "academy/episodes/q128-circuit-expo-v2",
+  "basedOn": "academy/episodes/q128-circuit-expo（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 501.568,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "tour",
+      "title": "動畫展示：一排分頁就是展品目錄",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/basic-circuits.html#superposition"
+    },
+    {
+      "key": "pipeline",
+      "title": "動畫展示：貝爾態送進真實機器",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#workflow"
+    },
+    {
+      "key": "presets",
+      "title": "動畫展示：下一次展覽的新展品",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#circuit"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.5,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q128-circuit-expo-v2-zh-TW.mp4": {
+      "bytes": 86025539,
+      "sha256": "b073896653ba5bac1f9857c39f4496c65974ab481721ff5fbe197612b91d97a7"
+    },
+    "q128-circuit-expo-v2-master.mp4": {
+      "bytes": 87963975,
+      "sha256": "eade8689fc065f34521c37b060d4f2e77224582439ef197222a359bd438ce909"
+    },
+    "narration-only.mp3": {
+      "bytes": 12039124,
+      "sha256": "67b9d05a3d388cafb481dbfe885e08ef3ff7f885db6b7aec3b54bfabcedc36f4"
+    }
+  },
+  "package": {
+    "filename": "Q128-v2_量子電腦學程_量子電路展_動畫展示版_2026-11-18.zip",
+    "bytes": 189876211,
+    "sha256": "795e107b46717a482991bac210c9dbb8b89c8c3f10db97ec9f72b1e003fd3205",
+    "parts": [
+      {
+        "name": "Q128-v2_量子電腦學程_量子電路展_動畫展示版_2026-11-18.zip.part01",
+        "bytes": 29360128,
+        "sha256": "3c5fbc44b2332d878bec54603c86cb356b31790d43e17aaeba7a5111ea0487f0"
+      },
+      {
+        "name": "Q128-v2_量子電腦學程_量子電路展_動畫展示版_2026-11-18.zip.part02",
+        "bytes": 29360128,
+        "sha256": "266a60e878f5be6a2ad76d73cd5d29d12887fbc0543bf3d74c5da8ed59490c91"
+      },
+      {
+        "name": "Q128-v2_量子電腦學程_量子電路展_動畫展示版_2026-11-18.zip.part03",
+        "bytes": 29360128,
+        "sha256": "1c8ef83bc955790cfee8e55fc3b71e32e98252722e73be864ba7cc3cea64fbf8"
+      },
+      {
+        "name": "Q128-v2_量子電腦學程_量子電路展_動畫展示版_2026-11-18.zip.part04",
+        "bytes": 29360128,
+        "sha256": "44241052b54b4384b490844154e20f7071b7d1dc56a0d37ee199287d56a6b41d"
+      },
+      {
+        "name": "Q128-v2_量子電腦學程_量子電路展_動畫展示版_2026-11-18.zip.part05",
+        "bytes": 29360128,
+        "sha256": "eec329d2b4c65dee1827758fa54e1815a1f6f54098e0be2d736ab9b42049497b"
+      },
+      {
+        "name": "Q128-v2_量子電腦學程_量子電路展_動畫展示版_2026-11-18.zip.part06",
+        "bytes": 29360128,
+        "sha256": "f87190102e0af3a01997b70101a021cc0c4c7fe4dcd2f07c8a5096a3319c2f80"
+      },
+      {
+        "name": "Q128-v2_量子電腦學程_量子電路展_動畫展示版_2026-11-18.zip.part07",
+        "bytes": 13715443,
+        "sha256": "02f04abf1e8aa76f28bdc80702db06722127c6d9fe2189518f80bd835915b4a0"
+      }
+    ],
+    "handedOver": "2026-11-18 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1bi-WOn7ipXPr978g1JqWu1DFCPwySyyb",
+    "folderName": "量子電腦學程 Q101–Q130 動畫展示版（v2）",
+    "uploadedAt": "2026-11-18",
+    "uploadedBy": "製作代理（Claude，Drive API，上傳後比對 md5）",
+    "files": [
+      {
+        "name": "Q128 量子電路展：模組發表：量子電路展（動畫展示版）.mp4",
+        "id": "16Sy89nmyk8hK-kQnx3PG7HlvQ_w7iOQC",
+        "size": 86025539,
+        "link": "https://drive.google.com/file/d/16Sy89nmyk8hK-kQnx3PG7HlvQ_w7iOQC/view?usp=drivesdk"
+      },
+      {
+        "name": "Q128 量子電路展（動畫展示版）簡報.pptx",
+        "id": "1dgVic7zl1VVmN7Cyj4TLtqmNDSiM_0J8",
+        "size": 3189099,
+        "link": "https://docs.google.com/presentation/d/1dgVic7zl1VVmN7Cyj4TLtqmNDSiM_0J8/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true"
+      },
+      {
+        "name": "Q128 量子電路展 教材.zip",
+        "id": "1GhFBfQ8GY2K3VDeDD-sohaICKMZn28id",
+        "size": 380301,
+        "link": "https://drive.google.com/file/d/1GhFBfQ8GY2K3VDeDD-sohaICKMZn28id/view?usp=drivesdk"
+      }
+    ]
+  }
+}

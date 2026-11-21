@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q021",
+  "version": "Q021-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-20",
+  "episodePath": "academy/episodes/q021-spring-pendulum-lc-v2",
+  "basedOn": "academy/episodes/q021-spring-pendulum-lc（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 491.925,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "smallangle",
+      "title": "動畫展示：小角度時，正弦像直線",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/lc-vs-jj.html#s1"
+    },
+    {
+      "key": "linear",
+      "title": "動畫展示：線性就是加倍得加倍",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/lc-vs-jj.html#s2"
+    },
+    {
+      "key": "overdrive",
+      "title": "動畫展示：推太大力就走樣",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/lc-vs-jj.html#s2"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.5,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q021-spring-pendulum-lc-v2-zh-TW.mp4": {
+      "bytes": 84017307,
+      "sha256": "8b0bfe695f41098599dadc87e0832ba76907ed95b3df402d99d87a123ed99396"
+    },
+    "q021-spring-pendulum-lc-v2-master.mp4": {
+      "bytes": 86260198,
+      "sha256": "c93ffc77465ec9da1f3fc5c8ce5b785162d2bca7f389a1c7117633d0938b1a92"
+    },
+    "narration-only.mp3": {
+      "bytes": 11807572,
+      "sha256": "40d8086964e1c6e522760b28aec40683d3ba6355830e8d01affb0c129b45b26a"
+    }
+  },
+  "package": {
+    "filename": "Q021-v2_量子電腦學程_彈簧單擺與電路_動畫展示版_2026-11-20.zip",
+    "bytes": 185868554,
+    "sha256": "384370b009beae6d45e96a61066c4cb366fd4dd4286c15138977456037a29da2",
+    "parts": [
+      {
+        "name": "Q021-v2_量子電腦學程_彈簧單擺與電路_動畫展示版_2026-11-20.zip.part01",
+        "bytes": 29360128,
+        "sha256": "febc5ac0426ed9eb132c6f7da212673aa71db2f3054546d88bf36636762e121e"
+      },
+      {
+        "name": "Q021-v2_量子電腦學程_彈簧單擺與電路_動畫展示版_2026-11-20.zip.part02",
+        "bytes": 29360128,
+        "sha256": "fddb2c0b4fbaa23c370f796ae992f7937409b734e622c7328348227bc138c08a"
+      },
+      {
+        "name": "Q021-v2_量子電腦學程_彈簧單擺與電路_動畫展示版_2026-11-20.zip.part03",
+        "bytes": 29360128,
+        "sha256": "d4279d7dd1304df6d89b022786659900c4829123c7517915c15f3d68bd6a973f"
+      },
+      {
+        "name": "Q021-v2_量子電腦學程_彈簧單擺與電路_動畫展示版_2026-11-20.zip.part04",
+        "bytes": 29360128,
+        "sha256": "a2d71c8b30b0dfd83c172a4050966341a92634ab5cdac05d25a3c04d65aeae90"
+      },
+      {
+        "name": "Q021-v2_量子電腦學程_彈簧單擺與電路_動畫展示版_2026-11-20.zip.part05",
+        "bytes": 29360128,
+        "sha256": "db62d1eb7903b8ad26630c32d1e3046485b36cd18d0f900bb44870680deb78c0"
+      },
+      {
+        "name": "Q021-v2_量子電腦學程_彈簧單擺與電路_動畫展示版_2026-11-20.zip.part06",
+        "bytes": 29360128,
+        "sha256": "789a6dfcaeee58d7767010b2acd29f47273454f077eb7d242348f9bf6bd23ce7"
+      },
+      {
+        "name": "Q021-v2_量子電腦學程_彈簧單擺與電路_動畫展示版_2026-11-20.zip.part07",
+        "bytes": 9707786,
+        "sha256": "d5b61cb60156928f255e6727359be4c4f9980aa61d1819a08f927a8d3c63f699"
+      }
+    ],
+    "handedOver": "2026-11-20 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1epfQVOXunbD9Vht37u62oOD9Dr-HKMSE",
+    "folder": "量子電腦學程 Q011–Q040 動畫展示版（v2）",
+    "files": [
+      {
+        "name": "Q021 彈簧單擺與電路：彈簧、單擺與 LC 電路（動畫展示版）.mp4",
+        "id": "1mpAR6YNxgn41b35YNsGNs14U659c8oIK",
+        "link": "https://drive.google.com/file/d/1mpAR6YNxgn41b35YNsGNs14U659c8oIK/view?usp=drivesdk",
+        "bytes": 84017307
+      },
+      {
+        "name": "Q021 彈簧單擺與電路（動畫展示版）簡報.pptx",
+        "id": "13qY95IEyBltkZhGzOCKf722NSfBpTXh1",
+        "link": "https://docs.google.com/presentation/d/13qY95IEyBltkZhGzOCKf722NSfBpTXh1/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true",
+        "bytes": 2966737
+      },
+      {
+        "name": "Q021 彈簧單擺與電路 教材.zip",
+        "id": "1FBjeMNkn3IfSNmPSBvR0RJuI7RSZypSm",
+        "link": "https://drive.google.com/file/d/1FBjeMNkn3IfSNmPSBvR0RJuI7RSZypSm/view?usp=drivesdk",
+        "bytes": 329490
+      }
+    ]
+  }
+}

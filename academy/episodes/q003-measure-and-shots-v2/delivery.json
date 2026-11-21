@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q003",
+  "version": "Q003-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-18",
+  "episodePath": "academy/episodes/q003-measure-and-shots-v2",
+  "basedOn": "academy/episodes/q003-measure-and-shots（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 385.066667,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "collapse",
+      "title": "動畫展示：塌縮",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#qubit"
+    },
+    {
+      "key": "converge",
+      "title": "動畫展示：次數越多越準",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#qubit"
+    },
+    {
+      "key": "experiment",
+      "title": "動畫展示：實驗二怎麼做",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#qubit"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.1,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q003-measure-and-shots-v2-zh-TW.mp4": {
+      "bytes": 77984715,
+      "sha256": "8ca32ed31cd0b993d4ea1dd0095741dadd89e43e63277a37e92a7da2bbf1930e"
+    },
+    "q003-measure-and-shots-v2-master.mp4": {
+      "bytes": 81368740,
+      "sha256": "89ebe6ac071327f91421ca475b80002aefc1ece30e82d35e21ae84f99e8be94d"
+    },
+    "narration-only.mp3": {
+      "bytes": 9242644,
+      "sha256": "5e3395612d94bd69d1cfcd6495a81f6e49b228ad969e1e3f6c1a12718f845bd1"
+    }
+  },
+  "package": {
+    "filename": "Q003-v2_量子電腦學程_一看就變_動畫展示版_2026-11-18.zip",
+    "bytes": 172279017,
+    "sha256": "8bf2ca41edb83fca43a478d7a4558c43239cf4accb1be9e058ff61ccbc939f4f",
+    "parts": [
+      {
+        "name": "Q003-v2_量子電腦學程_一看就變_動畫展示版_2026-11-18.zip.part01",
+        "bytes": 29360128,
+        "sha256": "3d3394d2511d0d8d66ea3561c9af9f4b550839c599a24e81434fdb4cbbbfaaaa"
+      },
+      {
+        "name": "Q003-v2_量子電腦學程_一看就變_動畫展示版_2026-11-18.zip.part02",
+        "bytes": 29360128,
+        "sha256": "5f09a9852d07db58b9d574de4247c410652094caa51e35d149b3e34f347f9fa4"
+      },
+      {
+        "name": "Q003-v2_量子電腦學程_一看就變_動畫展示版_2026-11-18.zip.part03",
+        "bytes": 29360128,
+        "sha256": "2e22b1e94e755c29ac632966ec89b1ce56d8634cf10f1fe8b16c2c67334ea2af"
+      },
+      {
+        "name": "Q003-v2_量子電腦學程_一看就變_動畫展示版_2026-11-18.zip.part04",
+        "bytes": 29360128,
+        "sha256": "ef4d8b48b4fb3373be08011d14698b357e6eecc44d684bf0de4b28c6e9d2061e"
+      },
+      {
+        "name": "Q003-v2_量子電腦學程_一看就變_動畫展示版_2026-11-18.zip.part05",
+        "bytes": 29360128,
+        "sha256": "cea68b992c807c13b3b080333d512292f8359fbdfaf4d49c834cf8696fca10cb"
+      },
+      {
+        "name": "Q003-v2_量子電腦學程_一看就變_動畫展示版_2026-11-18.zip.part06",
+        "bytes": 25478377,
+        "sha256": "a89ee146538a2fd900091a55e14e3a80df4829f53faa0e694d3c21562a8a6af8"
+      }
+    ],
+    "handedOver": "2026-11-18 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1o5DDOQHr7ytHWTPcHEvdVQN6mYQHsW0z",
+    "folderName": "量子電腦學程 Q001–Q003 動畫展示版（v2）",
+    "uploadedAt": "2026-11-18",
+    "uploadedBy": "製作代理（Claude，Drive API，上傳後比對 md5）",
+    "files": [
+      {
+        "name": "Q003 一看就變 教材.zip",
+        "id": "1l6Gl-mnSd0L5TQdM89RYj_BTU-uvXFiG",
+        "size": 325870,
+        "link": "https://drive.google.com/file/d/1l6Gl-mnSd0L5TQdM89RYj_BTU-uvXFiG/view?usp=drivesdk"
+      },
+      {
+        "name": "Q003 一看就變（動畫展示版）簡報.pptx",
+        "id": "157LieJvYjqgDSiKOF6lfq_5iNknGvRMA",
+        "size": 3107285,
+        "link": "https://docs.google.com/presentation/d/157LieJvYjqgDSiKOF6lfq_5iNknGvRMA/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true"
+      },
+      {
+        "name": "Q003 一看就變：測量與重複次數（動畫展示版）.mp4",
+        "id": "19qpQQbGftxcc52l6NyaQF1w6o7t95n0W",
+        "size": 77984715,
+        "link": "https://drive.google.com/file/d/19qpQQbGftxcc52l6NyaQF1w6o7t95n0W/view?usp=drivesdk"
+      }
+    ]
+  }
+}

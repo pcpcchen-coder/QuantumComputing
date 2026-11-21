@@ -35,7 +35,10 @@ operation.html#twoqubit
 ## 素材
 
 - 簡報：如何操作量子電腦（slides/QC_Operation_Talk.pptx）p22–24
+- 簡報：Transmon 筆記簡報（27 頁，含 3D 十二章導覽）（slides/transmon.pptx）p21
 - 3D 場景：[`o:twoqubit`](../../../animations/operation.html#twoqubit)
+- 3D 場景：[`tr:case`](../../../animations/transmon-3d.html#case)
+- 文件：超導量子電腦師生對話教學紀錄（docs/超導量子電腦師生對話教學紀錄.md）第 4 課
 
 生活技能支線：同一目標有不同做法。課後延伸：15–30 分鐘自由改造；寫三句學習日誌：我做了什麼、哪裡卡住、下次想加什麼。
 

@@ -24,12 +24,17 @@
     "難度 1–5": 3,
     "沿用簡報頁": [
       "超導量子電腦的核心：JJ 與微波讀取（slides/JJ_Microwave_Readout_Talk.pptx）p27",
-      "Transmon 筆記簡報（slides/transmon.pptx）p10–12"
+      "Transmon 筆記簡報（27 頁，含 3D 十二章導覽）（slides/transmon.pptx）p10–12"
     ],
     "沿用 3D 場景": [
-      "i:chip"
+      "i:chip",
+      "tr:chip"
     ],
     "需新增素材": [],
+    "沿用文件": [],
+    "2026-11-18 補充素材": [
+      "場景 tr:chip"
+    ],
     "YouTube 關鍵字 1": "晶片長什麼樣子 quantum computing explained beginner",
     "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E6%99%B6%E7%89%87%E9%95%B7%E4%BB%80%E9%BA%BC%E6%A8%A3%E5%AD%90+quantum+computing+explained+beginner",
     "影片用途 1": "課前暖身",
@@ -40,8 +45,10 @@
     "YouTube 連結 3": "https://www.youtube.com/results?search_query=%E6%99%B6%E7%89%87%E9%95%B7%E4%BB%80%E9%BA%BC%E6%A8%A3%E5%AD%90+quantum+computing+lecture+visualization",
     "影片用途 3": "課後延伸"
   },
-  "curriculumSha256": "493446a21451c8a5c08a1723cfd04436e51cbfa4806049b55a765d22ecf2ba53",
-  "episodePaths": [],
+  "curriculumSha256": "eb081f5848bd31bd8d734680a2d88f6821b6b30fa5d9ff1d813d06872e8f71c3",
+  "episodePaths": [
+    "academy/episodes/q030-chip-layout-v2"
+  ],
   "minutes": 120,
   "status": "planned"
 }

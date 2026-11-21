@@ -1,0 +1,32 @@
+父子科技學院 量子電腦學程 Q109｜表面碼：穩定子與匹配解碼（v2・含 3D 動畫展示）
+
+這是依課綱製作的課前教學版，不是實際上課錄音。
+
+父子科技學院量子電腦學程 Q109「表面碼：穩定子與匹配解碼」新版（v2）：在原本的教學投影片之間，插入本學程 3D 互動動畫的實際操作示範。
+
+這一版新增的動畫展示
+・兩個亮點配成一對（https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#surface）
+・兩個錯誤騙過解碼器（https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#surface）
+・低於門檻才有用（https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#qec）
+
+動畫都可以在瀏覽器直接開啟，自己動手操作。
+
+章節
+00:00 陳犀牛系列片頭
+01:00 表面碼：穩定子與匹配解碼
+01:36 Bug 獵人：看亮點抓錯誤
+02:05 量子錯誤更正為什麼難？
+02:38 先暖身：三位元重複碼
+03:11 d = 3 表面碼：17 顆存 1 顆
+03:47 一個週期：約 1 μs
+04:28 症狀與配對：最小權重完美匹配
+05:05 動畫展示：兩個亮點配成一對
+05:42 兩個錯誤騙過 d = 3
+06:19 動畫展示：兩個錯誤騙過解碼器
+06:54 抓蟲分工：放錯的人和解碼的人
+07:28 跑程式：兩個錯誤哪裡會騙過？
+07:57 動畫展示：低於門檻才有用
+08:42 兩小時的抓蟲任務
+09:16 最後一關：教爸爸表面碼
+
+旁白：微軟 zh-TW-YunJheNeural 神經語音合成（Edge-TTS／Azure 語音服務，同一聲音同一格式）。字幕已燒入影片，開啟 CC 可能重疊。

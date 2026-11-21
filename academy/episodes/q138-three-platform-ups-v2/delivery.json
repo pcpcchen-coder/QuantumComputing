@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q138",
+  "version": "Q138-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-19",
+  "episodePath": "academy/episodes/q138-three-platform-ups-v2",
+  "basedOn": "academy/episodes/q138-three-platform-ups（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 520.277,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "compare",
+      "title": "動畫展示：三個平台站一排",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/atoms.html#compare"
+    },
+    {
+      "key": "outage",
+      "title": "動畫展示：電池加大，只是延後",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/power1000.html#outage"
+    },
+    {
+      "key": "roadmap",
+      "title": "動畫展示：一個想法，三種零件",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/power1000.html#roadmap"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.5,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q138-three-platform-ups-v2-zh-TW.mp4": {
+      "bytes": 88840767,
+      "sha256": "cc44549e780364026dd9d61390a53ad93c6cb95c3759bcf39d5b030fac19c875"
+    },
+    "q138-three-platform-ups-v2-master.mp4": {
+      "bytes": 90619027,
+      "sha256": "90ac2f26e280ec221c5aee089e1e11c95cc35df5dc36360dadfc9027c1bc413e"
+    },
+    "narration-only.mp3": {
+      "bytes": 12488404,
+      "sha256": "dbddffc9fd1905df9e23405a9d8ecadb4732f69caa54a19483f4b6877bf81cc2"
+    }
+  },
+  "package": {
+    "filename": "Q138-v2_量子電腦學程_三平台比較_動畫展示版_2026-11-19.zip",
+    "bytes": 196061486,
+    "sha256": "aebeb87bb58b0634648930b741888434b08dad6402f166ff0999d2d175d6983c",
+    "parts": [
+      {
+        "name": "Q138-v2_量子電腦學程_三平台比較_動畫展示版_2026-11-19.zip.part01",
+        "bytes": 29360128,
+        "sha256": "b5bec06d61edff102f67b7836980e1c5cae65c20274ccbce67a7688e541e86a6"
+      },
+      {
+        "name": "Q138-v2_量子電腦學程_三平台比較_動畫展示版_2026-11-19.zip.part02",
+        "bytes": 29360128,
+        "sha256": "e135d2c35d443f33eaa2dfaf46f84bcc02cb8ce8778e576b663bdf3471307786"
+      },
+      {
+        "name": "Q138-v2_量子電腦學程_三平台比較_動畫展示版_2026-11-19.zip.part03",
+        "bytes": 29360128,
+        "sha256": "a6ef8652ee6ca1f74019ddcb931af0cae331457fee3df316991722a1179778b3"
+      },
+      {
+        "name": "Q138-v2_量子電腦學程_三平台比較_動畫展示版_2026-11-19.zip.part04",
+        "bytes": 29360128,
+        "sha256": "379bee4c76894ccbf7b5029a0ac8987e4582f8bfa94ccb92928e2adc492cfe68"
+      },
+      {
+        "name": "Q138-v2_量子電腦學程_三平台比較_動畫展示版_2026-11-19.zip.part05",
+        "bytes": 29360128,
+        "sha256": "d1e687b9f8aaaae7b3fb0a702903988d8ef3d157fb79890d787580f942ce04cf"
+      },
+      {
+        "name": "Q138-v2_量子電腦學程_三平台比較_動畫展示版_2026-11-19.zip.part06",
+        "bytes": 29360128,
+        "sha256": "4e3632a92feb96cdac37c05b8d1da2f26442ee760f83928494c5ba901beb44e1"
+      },
+      {
+        "name": "Q138-v2_量子電腦學程_三平台比較_動畫展示版_2026-11-19.zip.part07",
+        "bytes": 19900718,
+        "sha256": "a7259708e4c9b08a97ab0cd4dabab55f8a318258d97e9a3031ef91dde5dd2f57"
+      }
+    ],
+    "handedOver": "2026-11-19 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "19TfKYX25oeVvzZEsGfFYyF8D3W3tknd7",
+    "uploaded": "2026-11-18",
+    "md5Verified": true,
+    "files": [
+      {
+        "name": "Q138 三平台比較：三平台比較：三種 UPS 設計邏輯（動畫展示版）.mp4",
+        "id": "1xQsMb0beyvPU2HwWdSOA4WsWuv9mFE6l",
+        "link": "https://drive.google.com/file/d/1xQsMb0beyvPU2HwWdSOA4WsWuv9mFE6l/view?usp=drivesdk"
+      },
+      {
+        "name": "Q138 三平台比較（動畫展示版）簡報.pptx",
+        "id": "1m1XeAfq62S3u-2zwMEiYWzNIA1-HQFo1",
+        "link": "https://docs.google.com/presentation/d/1m1XeAfq62S3u-2zwMEiYWzNIA1-HQFo1/edit?usp=drivesdk"
+      },
+      {
+        "name": "Q138 三平台比較 教材.zip",
+        "id": "10-bJcsMps-bHcZk1uglHCK-g97GuX-tz",
+        "link": "https://drive.google.com/file/d/10-bJcsMps-bHcZk1uglHCK-g97GuX-tz/view?usp=drivesdk"
+      }
+    ]
+  }
+}

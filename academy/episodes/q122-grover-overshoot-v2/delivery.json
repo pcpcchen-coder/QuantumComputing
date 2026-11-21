@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q122",
+  "version": "Q122-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-20",
+  "episodePath": "academy/episodes/q122-grover-overshoot-v2",
+  "basedOn": "academy/episodes/q122-grover-overshoot（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 502.9,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "twobit",
+      "title": "動畫展示：兩顆位元也會轉過頭",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#grover"
+    },
+    {
+      "key": "curve",
+      "title": "動畫展示：成功機率一起一落",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#grover"
+    },
+    {
+      "key": "rounds3",
+      "title": "動畫展示：三輪一步一步看",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/basic-circuits.html#grover"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.5,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q122-grover-overshoot-v2-zh-TW.mp4": {
+      "bytes": 86635826,
+      "sha256": "44c6283fb7f2664f32fbc162e443c769a64790adba3a91703ed057e1520a9ed1"
+    },
+    "q122-grover-overshoot-v2-master.mp4": {
+      "bytes": 88757433,
+      "sha256": "c47cad9e3f71b0e586b367d6b2a38e8ee92cb5070b2156691b869054acbc1c54"
+    },
+    "narration-only.mp3": {
+      "bytes": 12070804,
+      "sha256": "9218f78336633d081b7775d01dc2c3920cb7fde2699c88cc511b897a408a408a"
+    }
+  },
+  "package": {
+    "filename": "Q122-v2_量子電腦學程_轉太多會轉過頭_動畫展示版_2026-11-20.zip",
+    "bytes": 191337317,
+    "sha256": "e3a91c0b88ad83808d2ab05d551c38738e922762f0f627b586924457b4a09fbe",
+    "parts": [
+      {
+        "name": "Q122-v2_量子電腦學程_轉太多會轉過頭_動畫展示版_2026-11-20.zip.part01",
+        "bytes": 29360128,
+        "sha256": "1ce7326267bd8a75aaa23849410fa76f145e7b9e647ad804cdd2728c7e05c64e"
+      },
+      {
+        "name": "Q122-v2_量子電腦學程_轉太多會轉過頭_動畫展示版_2026-11-20.zip.part02",
+        "bytes": 29360128,
+        "sha256": "a805792e404ac923b3f5886e1270e3da8aa9c760875b4084fc62ae06a51e1c31"
+      },
+      {
+        "name": "Q122-v2_量子電腦學程_轉太多會轉過頭_動畫展示版_2026-11-20.zip.part03",
+        "bytes": 29360128,
+        "sha256": "b8657c95b4d32d01919a2793fcaf3427a2d65a5ab1656626025b12ab7693f5f5"
+      },
+      {
+        "name": "Q122-v2_量子電腦學程_轉太多會轉過頭_動畫展示版_2026-11-20.zip.part04",
+        "bytes": 29360128,
+        "sha256": "c86a09ed85e3ea75dbcb49aad856ebe7ce086b836fa55cf792f811c63564395c"
+      },
+      {
+        "name": "Q122-v2_量子電腦學程_轉太多會轉過頭_動畫展示版_2026-11-20.zip.part05",
+        "bytes": 29360128,
+        "sha256": "85d80a64116446c4de2f9bab9e0e660f0b486175ed1ba29719771b58eb5ebe94"
+      },
+      {
+        "name": "Q122-v2_量子電腦學程_轉太多會轉過頭_動畫展示版_2026-11-20.zip.part06",
+        "bytes": 29360128,
+        "sha256": "06ed6c23199c3583bbc1c251d0fc02c1a98967d47cf04946e0ddf37840162119"
+      },
+      {
+        "name": "Q122-v2_量子電腦學程_轉太多會轉過頭_動畫展示版_2026-11-20.zip.part07",
+        "bytes": 15176549,
+        "sha256": "10a1ab450b8e5bd839392c6c1faa14c3e0e241953c6e0618f65dcd80c7d4638a"
+      }
+    ],
+    "handedOver": "2026-11-20 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1bi-WOn7ipXPr978g1JqWu1DFCPwySyyb",
+    "uploaded": "2026-11-19",
+    "files": [
+      {
+        "name": "Q122 轉太多會轉過頭：Grover 三位元：轉太多會轉過頭（動畫展示版）.mp4",
+        "id": "1vxdcH6iSVz3QkJIHu4bBQvIova-bxD4I",
+        "link": "https://drive.google.com/file/d/1vxdcH6iSVz3QkJIHu4bBQvIova-bxD4I/view?usp=drivesdk"
+      },
+      {
+        "name": "Q122 轉太多會轉過頭（動畫展示版）簡報.pptx",
+        "id": "1zZU2NBbHENcc_SuD9cjWsktp-EqqwH9n",
+        "link": "https://docs.google.com/presentation/d/1zZU2NBbHENcc_SuD9cjWsktp-EqqwH9n/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true"
+      },
+      {
+        "name": "Q122 轉太多會轉過頭 教材.zip",
+        "id": "1hkQlHSZ_jXP_byikXPRx_Mpo20JBZxYu",
+        "link": "https://drive.google.com/file/d/1hkQlHSZ_jXP_byikXPRx_Mpo20JBZxYu/view?usp=drivesdk"
+      }
+    ],
+    "complete": true
+  }
+}

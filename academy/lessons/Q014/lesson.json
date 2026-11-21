@@ -30,6 +30,7 @@
       "i:bloch"
     ],
     "需新增素材": [],
+    "沿用文件": [],
     "YouTube 關鍵字 1": "量子態很怕吵：雜訊與退相干 quantum computing explained beginner",
     "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E9%87%8F%E5%AD%90%E6%85%8B%E5%BE%88%E6%80%95%E5%90%B5%EF%BC%9A%E9%9B%9C%E8%A8%8A%E8%88%87%E9%80%80%E7%9B%B8%E5%B9%B2+quantum+computing+explained+beginner",
     "影片用途 1": "課前暖身",
@@ -40,8 +41,10 @@
     "YouTube 連結 3": "https://www.youtube.com/results?search_query=%E9%87%8F%E5%AD%90%E6%85%8B%E5%BE%88%E6%80%95%E5%90%B5%EF%BC%9A%E9%9B%9C%E8%A8%8A%E8%88%87%E9%80%80%E7%9B%B8%E5%B9%B2+quantum+computing+lecture+visualization",
     "影片用途 3": "課後延伸"
   },
-  "curriculumSha256": "493446a21451c8a5c08a1723cfd04436e51cbfa4806049b55a765d22ecf2ba53",
-  "episodePaths": [],
+  "curriculumSha256": "eb081f5848bd31bd8d734680a2d88f6821b6b30fa5d9ff1d813d06872e8f71c3",
+  "episodePaths": [
+    "academy/episodes/q014-noise-decoherence-v2"
+  ],
   "minutes": 120,
   "status": "planned"
 }

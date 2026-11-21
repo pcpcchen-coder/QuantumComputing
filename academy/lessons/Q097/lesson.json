@@ -1,0 +1,51 @@
+{
+  "lessonId": "Q097",
+  "sourceRow": {
+    "總課次": 97,
+    "學程": "量子電腦學程",
+    "階段": "第四階段 深化與產業",
+    "模組": "QM07 超導量子電腦深入：師生對話十三課",
+    "模組內課次": 1,
+    "課程主題": "導覽：一顆 transmon 的十二章旅程",
+    "對象與上課方式": "高中理組／大學／工程同仁；師生對話形式，transmon 3D 十二章逐章操作",
+    "學習目標": "用 transmon 3D 十二章與師生對話課程地圖，建立從晶片到軟體堆疊的整體路線",
+    "2 小時課程流程": "00–10 任務開場：導覽：一顆 transmon 的十二章旅程\n10–25 概念示範：用 transmon 3D 十二章與師生對話課程地圖，建立從晶片到軟體堆疊的整體路線\n25–65 父子共同實作：打開 transmon-3d 逐章走一遍，每章寫一句「這章在回答什麼問題」\n65–75 休息／走動／聊天\n75–105 孩子獨立改造：把十二章排成一張自己的心智圖，標出最想深入的三章\n105–115 角色互換：孩子教爸爸操作與原理\n115–120 錄音總結、作品命名、版本存檔",
+    "動手任務": "打開 transmon-3d 逐章走一遍，每章寫一句「這章在回答什麼問題」",
+    "孩子獨立改造": "把十二章排成一張自己的心智圖，標出最想深入的三章",
+    "好玩機制": "冒險任務",
+    "作品／交付": "十二章路線心智圖",
+    "生活技能支線": "先看全貌再鑽細節",
+    "家長課前準備": "transmon-3d.html；師生對話紀錄的課程地圖",
+    "課後延伸": "15–30 分鐘自由改造；寫三句學習日誌：我做了什麼、哪裡卡住、下次想加什麼。",
+    "驗收標準": "完成「十二章路線心智圖」；能不用看稿說出核心原理；能指出至少一個錯誤、限制或注意事項（例如：3D 模型未按比例，數值是本系列範例參數，不是某一顆實際晶片）。",
+    "常見誤解與安全提醒": "3D 模型未按比例，數值是本系列範例參數，不是某一顆實際晶片",
+    "錄音重點": "請孩子回答：1. 導覽：一顆 transmon 的十二章旅程在解決什麼？2. 我怎麼做？3. 哪裡容易錯？4. 生活中或真實的量子電腦哪裡會用到？",
+    "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q097｜導覽：一顆 transmon 的十二章旅程",
+    "難度 1–5": 4,
+    "沿用簡報頁": [
+      "Transmon 筆記簡報（27 頁，含 3D 十二章導覽）（slides/transmon.pptx）p18–19"
+    ],
+    "沿用 3D 場景": [
+      "tr:chip"
+    ],
+    "需新增素材": [],
+    "沿用文件": [
+      "超導量子電腦師生對話教學紀錄（docs/超導量子電腦師生對話教學紀錄.md）課程地圖"
+    ],
+    "YouTube 關鍵字 1": "導覽：一顆 transmon 的十二章旅程 quantum computing explained beginner",
+    "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E5%B0%8E%E8%A6%BD%EF%BC%9A%E4%B8%80%E9%A1%86+transmon+%E7%9A%84%E5%8D%81%E4%BA%8C%E7%AB%A0%E6%97%85%E7%A8%8B+quantum+computing+explained+beginner",
+    "影片用途 1": "課前暖身",
+    "YouTube 關鍵字 2": "導覽：一顆 transmon 的十二章旅程 用 transmon 3D 十二章與師生 hands on demo",
+    "YouTube 連結 2": "https://www.youtube.com/results?search_query=%E5%B0%8E%E8%A6%BD%EF%BC%9A%E4%B8%80%E9%A1%86+transmon+%E7%9A%84%E5%8D%81%E4%BA%8C%E7%AB%A0%E6%97%85%E7%A8%8B+%E7%94%A8+transmon+3D+%E5%8D%81%E4%BA%8C%E7%AB%A0%E8%88%87%E5%B8%AB%E7%94%9F+hands+on+demo",
+    "影片用途 2": "課中實作參考",
+    "YouTube 關鍵字 3": "導覽：一顆 transmon 的十二章旅程 quantum computing lecture visualization",
+    "YouTube 連結 3": "https://www.youtube.com/results?search_query=%E5%B0%8E%E8%A6%BD%EF%BC%9A%E4%B8%80%E9%A1%86+transmon+%E7%9A%84%E5%8D%81%E4%BA%8C%E7%AB%A0%E6%97%85%E7%A8%8B+quantum+computing+lecture+visualization",
+    "影片用途 3": "課後延伸"
+  },
+  "curriculumSha256": "eb081f5848bd31bd8d734680a2d88f6821b6b30fa5d9ff1d813d06872e8f71c3",
+  "episodePaths": [
+    "academy/episodes/q097-transmon-twelve-chapters-v2"
+  ],
+  "minutes": 120,
+  "status": "planned"
+}

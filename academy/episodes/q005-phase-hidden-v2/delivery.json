@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q005",
+  "version": "Q005-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-18",
+  "episodePath": "academy/episodes/q005-phase-hidden-v2",
+  "basedOn": "academy/episodes/q005-phase-hidden（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 419.264,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "hidden",
+      "title": "動畫展示：相位轉了，測量看不出來",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#qubit"
+    },
+    {
+      "key": "blindtest",
+      "title": "動畫展示：盲測的兩種答案",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#gates"
+    },
+    {
+      "key": "twostep",
+      "title": "動畫展示：兩步的關卡",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#gates"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.2,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q005-phase-hidden-v2-zh-TW.mp4": {
+      "bytes": 80295664,
+      "sha256": "d5f1a856bf31ed986d254c4e2326622e728c44dffb5ebcf2c13101006bd0ce05"
+    },
+    "q005-phase-hidden-v2-master.mp4": {
+      "bytes": 83206597,
+      "sha256": "bfa6da31ff56dd87c215531dfd4d9181e7c0c8805b0e3d56f9165320272d2312"
+    },
+    "narration-only.mp3": {
+      "bytes": 10064020,
+      "sha256": "739aced9147c02536d86bf426a8adc2767f71abbe8ebc0d926bab94e308800f1"
+    }
+  },
+  "package": {
+    "filename": "Q005-v2_量子電腦學程_相位_動畫展示版_2026-11-18.zip",
+    "bytes": 177272359,
+    "sha256": "f1d21abfbef7b8ff82f2cd5c81d2681ccefe409f35eac7f79d8f5d629491f99e",
+    "parts": [
+      {
+        "name": "Q005-v2_量子電腦學程_相位_動畫展示版_2026-11-18.zip.part01",
+        "bytes": 29360128,
+        "sha256": "6f91d2bb6aefe14cd1d158fcc20789d66316fd39b6ce298aa5d60dca97d8214b"
+      },
+      {
+        "name": "Q005-v2_量子電腦學程_相位_動畫展示版_2026-11-18.zip.part02",
+        "bytes": 29360128,
+        "sha256": "c08b2c51348edc16d3976e05d53645b9cae95b7809b3354ff4c62247865b0d4d"
+      },
+      {
+        "name": "Q005-v2_量子電腦學程_相位_動畫展示版_2026-11-18.zip.part03",
+        "bytes": 29360128,
+        "sha256": "47a846ff0c6022a57d5a7abb71fefb98ebc825389d27396738ae69005d60239d"
+      },
+      {
+        "name": "Q005-v2_量子電腦學程_相位_動畫展示版_2026-11-18.zip.part04",
+        "bytes": 29360128,
+        "sha256": "bf50ca8cc03e1445223240696f542e487d332d6dae6aa340e0b8922c3173903d"
+      },
+      {
+        "name": "Q005-v2_量子電腦學程_相位_動畫展示版_2026-11-18.zip.part05",
+        "bytes": 29360128,
+        "sha256": "0a7c26e9666a357f8e13830d34a23b075609b59517224e840fc36d78bfdcd5c5"
+      },
+      {
+        "name": "Q005-v2_量子電腦學程_相位_動畫展示版_2026-11-18.zip.part06",
+        "bytes": 29360128,
+        "sha256": "0c957bb05631896e577d91a6d4ae84de08e92f6e6797a477184d14935b22d46c"
+      },
+      {
+        "name": "Q005-v2_量子電腦學程_相位_動畫展示版_2026-11-18.zip.part07",
+        "bytes": 1111591,
+        "sha256": "741b678d07eb4a0feda8b100c4b67fa58ce50e22bcfd0853247f8d9991268ff6"
+      }
+    ],
+    "handedOver": "2026-11-18 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1_4cP28v11Id8NhERnDYtpkPxw8055Y3l",
+    "folderName": "量子電腦學程 Q004–Q010 動畫展示版（v2）",
+    "uploadedAt": "2026-11-20",
+    "uploadedBy": "製作代理（Claude，Drive API，上傳後比對 md5）",
+    "files": [
+      {
+        "name": "Q005 相位：看不見卻最重要 教材.zip",
+        "id": "1iYYDjxjK4m0A-HtlWLkCNAzQeAbxv0i3",
+        "size": 324409,
+        "link": "https://drive.google.com/file/d/1iYYDjxjK4m0A-HtlWLkCNAzQeAbxv0i3/view?usp=drivesdk"
+      },
+      {
+        "name": "Q005 相位：看不見卻最重要（動畫展示版）.mp4",
+        "id": "1b2WVQfoM6ZInHFJBhx_fqE7-zKBiqdGB",
+        "size": 80295664,
+        "link": "https://drive.google.com/file/d/1b2WVQfoM6ZInHFJBhx_fqE7-zKBiqdGB/view?usp=drivesdk"
+      },
+      {
+        "name": "Q005 相位：看不見卻最重要（動畫展示版）簡報.pptx",
+        "id": "1mTQ7xGqEEYpaBCe8-mbD0R7iqfIZk5qQ",
+        "size": 3117683,
+        "link": "https://docs.google.com/presentation/d/1mTQ7xGqEEYpaBCe8-mbD0R7iqfIZk5qQ/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true"
+      }
+    ]
+  }
+}

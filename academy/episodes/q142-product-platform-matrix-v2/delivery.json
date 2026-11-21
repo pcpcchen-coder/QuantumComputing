@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q142",
+  "version": "Q142-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-19",
+  "episodePath": "academy/episodes/q142-product-platform-matrix-v2",
+  "basedOn": "academy/episodes/q142-product-platform-matrix（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 496.666667,
+  "pages": 14,
+  "demos": [
+    {
+      "key": "platform",
+      "title": "動畫展示：代號背後是哪個平台",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/power1000.html#devplan"
+    },
+    {
+      "key": "codes",
+      "title": "動畫展示：同一個代號，不同階段",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/power1000.html#roadmap"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.5,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q142-product-platform-matrix-v2-zh-TW.mp4": {
+      "bytes": 85271399,
+      "sha256": "2b6ecb59d6579f602de812a5a936afaf9468a8e605b32b0bffeef269c2981359"
+    },
+    "q142-product-platform-matrix-v2-master.mp4": {
+      "bytes": 87064994,
+      "sha256": "90ed5682df67736827f1ef4d905479c225a3816eef6babc3e22dda975607bd7d"
+    },
+    "narration-only.mp3": {
+      "bytes": 11921620,
+      "sha256": "e7e33ccead5504cc6aa1a81144bdd63edb4869f514d4bb34d8f35d11bffe3341"
+    }
+  },
+  "package": {
+    "filename": "Q142-v2_量子電腦學程_產品平台矩陣_動畫展示版_2026-11-19.zip",
+    "bytes": 188161037,
+    "sha256": "0c8aea00666f819a155990c30f562d072cd46508a742bbef38ae70ee06abc513",
+    "parts": [
+      {
+        "name": "Q142-v2_量子電腦學程_產品平台矩陣_動畫展示版_2026-11-19.zip.part01",
+        "bytes": 29360128,
+        "sha256": "134178329b6cf067658c197c0725dba9f24b8022c29e5e78fd7519de4ee53f0f"
+      },
+      {
+        "name": "Q142-v2_量子電腦學程_產品平台矩陣_動畫展示版_2026-11-19.zip.part02",
+        "bytes": 29360128,
+        "sha256": "ebe5d577b585b6163750c53184d8770f68fb16ff948d14a901e75199ac28fb5f"
+      },
+      {
+        "name": "Q142-v2_量子電腦學程_產品平台矩陣_動畫展示版_2026-11-19.zip.part03",
+        "bytes": 29360128,
+        "sha256": "0f445783a7f4e6e7ed1e1d3bb118f67649c40a12d0d614e936b4cf1e775b2781"
+      },
+      {
+        "name": "Q142-v2_量子電腦學程_產品平台矩陣_動畫展示版_2026-11-19.zip.part04",
+        "bytes": 29360128,
+        "sha256": "3b8f7d2da48ed307d00f8aab137dcf14f88bf04c0b3844e14d198fb368e7ddb5"
+      },
+      {
+        "name": "Q142-v2_量子電腦學程_產品平台矩陣_動畫展示版_2026-11-19.zip.part05",
+        "bytes": 29360128,
+        "sha256": "f4ba966fbfb9dbd99eb188024d38a3d4d9351d31b60a09559058c0dd1c528501"
+      },
+      {
+        "name": "Q142-v2_量子電腦學程_產品平台矩陣_動畫展示版_2026-11-19.zip.part06",
+        "bytes": 29360128,
+        "sha256": "7e01cbe8d5fff87a22111f395a4f157a5970c058d89232d4574bec3ff6855167"
+      },
+      {
+        "name": "Q142-v2_量子電腦學程_產品平台矩陣_動畫展示版_2026-11-19.zip.part07",
+        "bytes": 12000269,
+        "sha256": "44821ce66feda16a8bfb5f34b8e046f51b4cab9765bba5c846212f93d76be79b"
+      }
+    ],
+    "handedOver": "2026-11-19 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "19TfKYX25oeVvzZEsGfFYyF8D3W3tknd7",
+    "uploaded": "2026-11-18",
+    "md5Verified": true,
+    "files": [
+      {
+        "name": "Q142 產品平台矩陣：我們的切入點：產品 × 平台矩陣（動畫展示版）.mp4",
+        "id": "1qh83Bv8X-tDTNyEU4Bx7nIDAPnysGcTp",
+        "link": "https://drive.google.com/file/d/1qh83Bv8X-tDTNyEU4Bx7nIDAPnysGcTp/view?usp=drivesdk"
+      },
+      {
+        "name": "Q142 產品平台矩陣（動畫展示版）簡報.pptx",
+        "id": "1Gbh5y8-bYjlHgIxLf-m5txocuFoz83oh",
+        "link": "https://docs.google.com/presentation/d/1Gbh5y8-bYjlHgIxLf-m5txocuFoz83oh/edit?usp=drivesdk"
+      },
+      {
+        "name": "Q142 產品平台矩陣 教材.zip",
+        "id": "1aLS-pKHfsSr-hy0SG1reQb6X-b6LoKGB",
+        "link": "https://drive.google.com/file/d/1aLS-pKHfsSr-hy0SG1reQb6X-b6LoKGB/view?usp=drivesdk"
+      }
+    ]
+  }
+}

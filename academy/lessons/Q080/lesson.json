@@ -23,13 +23,21 @@
     "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q080｜平台大比較與供電分析",
     "難度 1–5": 4,
     "沿用簡報頁": [
-      "離子阱與中性原子量子電腦（slides/Ion_NeutralAtom_Talk.pptx）p38–45"
+      "離子阱與中性原子量子電腦（slides/Ion_NeutralAtom_Talk.pptx）p38–45",
+      "技術分享：量子電腦的供電設計（slides/output/qc-power-supply.pptx）p44–46"
     ],
     "沿用 3D 場景": [
       "a:compare"
     ],
     "需新增素材": [
       "◆ 補光子、自旋、拓樸三欄"
+    ],
+    "沿用文件": [
+      "量子電腦供電設計：文獻回顧與我們的切入點（docs/量子電腦供電設計文獻回顧與我們切入點.md）§16–18"
+    ],
+    "2026-11-18 補充素材": [
+      "簡報 H p44–46",
+      "文件 PWR §16–18"
     ],
     "YouTube 關鍵字 1": "平台大比較與供電分析 quantum computing explained beginner",
     "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E5%B9%B3%E5%8F%B0%E5%A4%A7%E6%AF%94%E8%BC%83%E8%88%87%E4%BE%9B%E9%9B%BB%E5%88%86%E6%9E%90+quantum+computing+explained+beginner",
@@ -41,8 +49,10 @@
     "YouTube 連結 3": "https://www.youtube.com/results?search_query=%E5%B9%B3%E5%8F%B0%E5%A4%A7%E6%AF%94%E8%BC%83%E8%88%87%E4%BE%9B%E9%9B%BB%E5%88%86%E6%9E%90+quantum+computing+lecture+visualization",
     "影片用途 3": "課後延伸"
   },
-  "curriculumSha256": "493446a21451c8a5c08a1723cfd04436e51cbfa4806049b55a765d22ecf2ba53",
-  "episodePaths": [],
+  "curriculumSha256": "eb081f5848bd31bd8d734680a2d88f6821b6b30fa5d9ff1d813d06872e8f71c3",
+  "episodePaths": [
+    "academy/episodes/q080-platform-comparison-power-v2"
+  ],
   "minutes": 120,
   "status": "planned"
 }

@@ -1,0 +1,130 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q002",
+  "version": "Q002-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-18",
+  "episodePath": "academy/episodes/q002-coin-and-arrow-v2",
+  "basedOn": "academy/episodes/q002-coin-and-arrow（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 405.653,
+  "pages": 16,
+  "demos": [
+    {
+      "key": "positions",
+      "title": "動畫展示：箭頭的四個位置",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#qubit"
+    },
+    {
+      "key": "chip",
+      "title": "動畫展示：晶片裡的零和一",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#control"
+    },
+    {
+      "key": "angle",
+      "title": "動畫展示：角度決定機率",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#qubit"
+    },
+    {
+      "key": "phase",
+      "title": "動畫展示：相位轉了也看不出來",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#qubit"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.1,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q002-coin-and-arrow-v2-zh-TW.mp4": {
+      "bytes": 80228008,
+      "sha256": "c4333c3c94555347c34cac3ce6a9321489da2645749e752516a10b6a98d08d2b"
+    },
+    "q002-coin-and-arrow-v2-master.mp4": {
+      "bytes": 83331488,
+      "sha256": "6b4b32eb412d6a0d033d7c9107b1cea9392eb1a3736b05afebd1e01f1795ae6e"
+    },
+    "narration-only.mp3": {
+      "bytes": 9737428,
+      "sha256": "d7194068bf359dbd1297a4fed28f76df93f2c5ce7b348f2ae54fc4246a285b4a"
+    }
+  },
+  "package": {
+    "filename": "Q002-v2_量子電腦學程_硬幣與箭頭_動畫展示版_2026-11-18.zip",
+    "bytes": 177292107,
+    "sha256": "8ec4f0c58d10897fcfec72d75b55d5529b8c3c6f8f3ff69058aad5c6cb5a52a7",
+    "parts": [
+      {
+        "name": "Q002-v2_量子電腦學程_硬幣與箭頭_動畫展示版_2026-11-18.zip.part01",
+        "bytes": 29360128,
+        "sha256": "d3554822e95f4ba602ef419d3ab05d9b36450fea1342d25203a8d8102456e543"
+      },
+      {
+        "name": "Q002-v2_量子電腦學程_硬幣與箭頭_動畫展示版_2026-11-18.zip.part02",
+        "bytes": 29360128,
+        "sha256": "f9862c58b0bdd5651b5b6c8f9f76bd174c3217175f812e9066c1910674b34a2c"
+      },
+      {
+        "name": "Q002-v2_量子電腦學程_硬幣與箭頭_動畫展示版_2026-11-18.zip.part03",
+        "bytes": 29360128,
+        "sha256": "f000d47c35dca4927432fb607c1ba1fc0122a1ad376970143a1274fb542a19fc"
+      },
+      {
+        "name": "Q002-v2_量子電腦學程_硬幣與箭頭_動畫展示版_2026-11-18.zip.part04",
+        "bytes": 29360128,
+        "sha256": "3a2d7944759c5c8b9018bcc38f16b81ec3e26114eca4ce3a91bfbb299931ddb4"
+      },
+      {
+        "name": "Q002-v2_量子電腦學程_硬幣與箭頭_動畫展示版_2026-11-18.zip.part05",
+        "bytes": 29360128,
+        "sha256": "85012724eb77be8ad98c11b1d2f7d3a25fd343fb7c78d3e4d5baa222cd2cb532"
+      },
+      {
+        "name": "Q002-v2_量子電腦學程_硬幣與箭頭_動畫展示版_2026-11-18.zip.part06",
+        "bytes": 29360128,
+        "sha256": "031bc6eb96120d7a997f26d4968e80164f8339ce196c38785f675096f5804f7c"
+      },
+      {
+        "name": "Q002-v2_量子電腦學程_硬幣與箭頭_動畫展示版_2026-11-18.zip.part07",
+        "bytes": 1131339,
+        "sha256": "1510fdab671678be3324b423434a77d30c9b359475b7e65dfca3d33f0e88c033"
+      }
+    ],
+    "handedOver": "2026-11-18 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1o5DDOQHr7ytHWTPcHEvdVQN6mYQHsW0z",
+    "folderName": "量子電腦學程 Q001–Q003 動畫展示版（v2）",
+    "uploadedAt": "2026-11-18",
+    "uploadedBy": "製作代理（Claude，Drive API，上傳後比對 md5）",
+    "files": [
+      {
+        "name": "Q002 硬幣與箭頭 教材.zip",
+        "id": "19OLMIoLLneY7GEU9BnfvwAmzwzpDKxPF",
+        "size": 401191,
+        "link": "https://drive.google.com/file/d/19OLMIoLLneY7GEU9BnfvwAmzwzpDKxPF/view?usp=drivesdk"
+      },
+      {
+        "name": "Q002 硬幣與箭頭（動畫展示版）簡報.pptx",
+        "id": "1I8A0cZXCBheeGLRgWWJ0gaW5t3DQTJdX",
+        "size": 3346361,
+        "link": "https://docs.google.com/presentation/d/1I8A0cZXCBheeGLRgWWJ0gaW5t3DQTJdX/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true"
+      },
+      {
+        "name": "Q002 硬幣與箭頭：位元和量子位元（動畫展示版）.mp4",
+        "id": "1Igua5k63WzrRV9iZNIUWyQexxkwjP9Ev",
+        "size": 80228008,
+        "link": "https://drive.google.com/file/d/1Igua5k63WzrRV9iZNIUWyQexxkwjP9Ev/view?usp=drivesdk"
+      }
+    ]
+  }
+}

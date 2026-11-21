@@ -1,0 +1,8 @@
+{
+  "title": "父子科技學院 Q016｜成果發表：我的量子小百科（動畫展示版）",
+  "description": "父子科技學院 量子電腦學程 Q016｜成果發表：我的量子小百科（v2・含 3D 動畫展示）\n\n這是依課綱製作的課前教學版，不是實際上課錄音。\n\n父子科技學院量子電腦學程 Q016「成果發表：我的量子小百科」新版（v2）：在原本的教學投影片之間，插入本學程 3D 互動動畫的實際操作示範。\n\n這一版新增的動畫展示\n・疊加詞卡的畫面（https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#qubit）\n・干涉詞卡的畫面（https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#interference）\n・壞比喻差在哪裡（https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#gates）\n\n動畫都可以在瀏覽器直接開啟，自己動手操作。\n\n章節\n00:00 陳犀牛系列片頭\n01:00 成果發表：我的量子小百科\n01:31 三個重點\n01:57 發表模板：每個詞四格\n02:26 示範詞條：疊加\n02:55 動畫展示：疊加詞卡的畫面\n03:38 示範詞條：干涉\n04:09 動畫展示：干涉詞卡的畫面\n04:47 示範詞條：糾纏\n05:17 我的十個詞\n05:43 每個比喻都有限制\n06:07 動畫展示：壞比喻差在哪裡\n06:52 首映會：小百科發表\n07:17 換你改造：兩分鐘導覽\n07:42 兩小時的首映會\n08:10 最後一關：教爸爸\n\n旁白：微軟 zh-TW-YunJheNeural 神經語音合成（Edge-TTS／Azure 語音服務，同一聲音同一格式）。字幕已燒入影片，開啟 CC 可能重疊。\n",
+  "privacyStatus": "private",
+  "madeForKids": null,
+  "reviewStatus": "needs-parent-review",
+  "publicationMode": "manual-user-upload"
+}

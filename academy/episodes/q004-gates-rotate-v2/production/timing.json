@@ -1,0 +1,394 @@
+{
+  "version": 2,
+  "opening": 60.277,
+  "scenes": [
+    {
+      "page": 1,
+      "kind": "slide",
+      "v1slide": 1,
+      "title": "量子閘就是轉箭頭",
+      "duration": 28.032,
+      "sentences": [
+        {
+          "text": "歡迎回到父子科技學院的量子電腦學程，我是陳犀牛，今天是量子第四堂，量子閘就是轉箭頭，這是依課綱製作的課前教學版，並非實際上課錄音。",
+          "start": 0.0,
+          "end": 12.184014
+        },
+        {
+          "text": "上一堂我們發現，測量會讓箭頭跳到北極或南極，原本的方向就不見了。",
+          "start": 12.364014,
+          "end": 19.220022999999998
+        },
+        {
+          "text": "今天反過來問：如果想把箭頭轉到我們要的方向，該怎麼做？答案就是量子閘。",
+          "start": 19.400022999999997,
+          "end": 27.816032
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q004-gates-rotate/audio/slide_01.mp3"
+    },
+    {
+      "page": 2,
+      "kind": "slide",
+      "v1slide": 2,
+      "title": "三種閘，三條軸",
+      "duration": 19.944,
+      "sentences": [
+        {
+          "text": "今天認識三種量子閘：翻轉閘、哈達瑪閘和相位翻轉閘，每一種都繞著不同的軸轉動箭頭。",
+          "start": 0.0,
+          "end": 8.392018
+        },
+        {
+          "text": "學會之後，我們要闖六關，用最少的閘，把箭頭從北極轉到指定的方向。",
+          "start": 8.572018,
+          "end": 15.452017999999999
+        },
+        {
+          "text": "今天的作品，是一張闖關紀錄表。",
+          "start": 15.632017999999999,
+          "end": 19.728026999999997
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q004-gates-rotate/audio/slide_02.mp3"
+    },
+    {
+      "page": 3,
+      "kind": "slide",
+      "v1slide": 3,
+      "title": "量子閘就是旋轉",
+      "duration": 20.544,
+      "sentences": [
+        {
+          "text": "量子閘不會把箭頭變短，也不會讓它消失，只會讓箭頭繞著一條軸轉動。",
+          "start": 0.0,
+          "end": 6.8080050000000005
+        },
+        {
+          "text": "想預測閘的效果，先找到旋轉軸：剛好落在軸上的箭頭，轉完還在原地。",
+          "start": 6.988005,
+          "end": 14.204014
+        },
+        {
+          "text": "今天的三種閘，都是繞著自己的軸轉半圈，也就是一百八十度。",
+          "start": 14.384014,
+          "end": 20.328028
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q004-gates-rotate/audio/slide_03.mp3"
+    },
+    {
+      "page": 4,
+      "kind": "slide",
+      "v1slide": 4,
+      "title": "翻轉閘：北極和南極對調",
+      "duration": 21.096,
+      "sentences": [
+        {
+          "text": "第一種是翻轉閘，它的軸從球的正前方穿到正後方。",
+          "start": 0.0,
+          "end": 5.152018
+        },
+        {
+          "text": "北極的箭頭轉半圈，剛好到南極；南極的箭頭也會轉回北極，就像古典位元把零變成一、一變成零。",
+          "start": 5.332018,
+          "end": 14.564036
+        },
+        {
+          "text": "可是赤道正前方的箭頭剛好在軸上，翻轉閘對它完全沒有作用。",
+          "start": 14.744036,
+          "end": 20.880045
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q004-gates-rotate/audio/slide_04.mp3"
+    },
+    {
+      "page": 5,
+      "kind": "demo",
+      "demo": "xflip",
+      "title": "動畫展示：翻轉閘轉半圈",
+      "duration": 22.848,
+      "sentences": [
+        {
+          "text": "打開三維動畫的單位元閘場景，先按重設，讓箭頭回到北極的零態。",
+          "start": 0.0,
+          "end": 6.664014
+        },
+        {
+          "text": "按下翻轉閘，粉紅色的旋轉軸出現在正前方，箭頭繞著它翻了半圈，停在南極。",
+          "start": 6.844014,
+          "end": 14.324014
+        },
+        {
+          "text": "再按一次翻轉閘，箭頭繞著同一根軸再轉半圈，回到北極，插圖裡的線路紀錄多了兩個方塊。",
+          "start": 14.504014,
+          "end": 22.632019
+        }
+      ],
+      "audio": "audio/demo_xflip.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#gates"
+    },
+    {
+      "page": 6,
+      "kind": "slide",
+      "v1slide": 5,
+      "title": "哈達瑪閘和相位翻轉閘",
+      "duration": 26.904,
+      "sentences": [
+        {
+          "text": "第二種是哈達瑪閘，它的軸斜斜的，剛好在北極和赤道正前方的正中間，所以這兩個位置會互換。",
+          "start": 0.0,
+          "end": 8.416009
+        },
+        {
+          "text": "從北極出發按一次哈達瑪閘，箭頭就躺到赤道上，測量起來變成一半一半。",
+          "start": 8.596009,
+          "end": 15.548027000000001
+        },
+        {
+          "text": "第三種是相位翻轉閘，軸是穿過南北極的直立軸，兩極的箭頭都不動，赤道正前方的箭頭則轉到正後方，但測量的機率完全沒變。",
+          "start": 15.728027,
+          "end": 26.688027
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q004-gates-rotate/audio/slide_05.mp3"
+    },
+    {
+      "page": 7,
+      "kind": "demo",
+      "demo": "hz",
+      "title": "動畫展示：哈達瑪閘和相位翻轉閘",
+      "duration": 28.92,
+      "sentences": [
+        {
+          "text": "回到北極，這次按哈達瑪閘，旋轉軸變成斜斜的一條，箭頭轉到赤道正前方。",
+          "start": 0.0,
+          "end": 7.48
+        },
+        {
+          "text": "下面的讀數顯示，得到零和得到一的機率都變成零點五。",
+          "start": 7.66,
+          "end": 13.172018000000001
+        },
+        {
+          "text": "接著按相位翻轉閘，軸變成直立的，箭頭沿著赤道轉到正後方，可是兩個機率仍然都是零點五。",
+          "start": 13.352018000000001,
+          "end": 21.696032000000002
+        },
+        {
+          "text": "再按一次相位翻轉閘，箭頭又轉回正前方，同一顆閘做兩次就回到原狀。",
+          "start": 21.876032000000002,
+          "end": 28.708050000000004
+        }
+      ],
+      "audio": "audio/demo_hz.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#gates"
+    },
+    {
+      "page": 8,
+      "kind": "slide",
+      "v1slide": 6,
+      "title": "倒回去：閘可以，測量不行",
+      "duration": 27.864,
+      "sentences": [
+        {
+          "text": "每一種閘都是轉半圈，所以同一個閘連做兩次，就轉滿一整圈，回到原狀；例如哈達瑪閘做兩次，箭頭又回到北極。",
+          "start": 0.0,
+          "end": 10.456009
+        },
+        {
+          "text": "一整串這三種閘，只要從最後一顆開始倒著再做一次，箭頭就會回到起點，所以量子閘是可以倒回去的。",
+          "start": 10.636009,
+          "end": 19.628027
+        },
+        {
+          "text": "測量就不一樣了，箭頭跳到極點之後，原本的方向已經不見，再怎麼轉都找不回來。",
+          "start": 19.808027,
+          "end": 27.648027
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q004-gates-rotate/audio/slide_06.mp3"
+    },
+    {
+      "page": 9,
+      "kind": "slide",
+      "v1slide": 7,
+      "title": "闖關：第一到第三關",
+      "duration": 21.216,
+      "sentences": [
+        {
+          "text": "開始闖關，每一關都從北極出發，先在紙上預測路線，再到三維動畫按按鈕驗證。",
+          "start": 0.0,
+          "end": 7.432018
+        },
+        {
+          "text": "第一關到南極，第二關到赤道正前方，第三關到赤道正後方。",
+          "start": 7.612018,
+          "end": 13.508027
+        },
+        {
+          "text": "前兩關各一顆閘就能過；第三關至少要兩顆，暫停影片，想想看要按哪兩顆。",
+          "start": 13.688027,
+          "end": 21.000045
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q004-gates-rotate/audio/slide_07.mp3"
+    },
+    {
+      "page": 10,
+      "kind": "slide",
+      "v1slide": 8,
+      "title": "闖關：第四到第六關",
+      "duration": 29.592,
+      "sentences": [
+        {
+          "text": "後面三關更難：第四關不准用翻轉閘，也要到南極；第五關要預測，依序按翻轉、哈達瑪、相位翻轉、哈達瑪之後，箭頭停在哪裡。",
+          "start": 0.0,
+          "end": 12.232018
+        },
+        {
+          "text": "第六關是陷阱關：只准用翻轉閘和相位翻轉閘，要到赤道正前方，過不了的話，要說出理由。",
+          "start": 12.412018,
+          "end": 20.996032
+        },
+        {
+          "text": "三維動畫的單位元閘場景裡，粉紅色的線就是旋轉軸，每按一顆閘，就看箭頭繞著它轉。",
+          "start": 21.176032,
+          "end": 29.376032000000002
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q004-gates-rotate/audio/slide_08.mp3"
+    },
+    {
+      "page": 11,
+      "kind": "demo",
+      "demo": "undo",
+      "title": "動畫展示：倒著做就回到起點",
+      "duration": 31.44,
+      "sentences": [
+        {
+          "text": "再試試倒回去：從北極出發，我們要依序按哈達瑪、翻轉和相位翻轉三顆閘。",
+          "start": 0.0,
+          "end": 7.336009000000001
+        },
+        {
+          "text": "箭頭先躺到赤道正前方，翻轉閘的軸剛好穿過它，所以它不動，最後被轉到赤道正後方。",
+          "start": 7.516009,
+          "end": 15.212018
+        },
+        {
+          "text": "現在倒著做：先按相位翻轉，再按翻轉，最後按哈達瑪，箭頭一步一步回到北極。",
+          "start": 15.392018,
+          "end": 23.424036
+        },
+        {
+          "text": "每一關驗證完，先按清除軌跡，再按重設，箭頭回到北極，才開始下一關。",
+          "start": 23.604036,
+          "end": 31.22805
+        }
+      ],
+      "audio": "audio/demo_undo.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#gates"
+    },
+    {
+      "page": 12,
+      "kind": "slide",
+      "v1slide": 9,
+      "title": "闖關遊戲：關主和挑戰者",
+      "duration": 21.576,
+      "sentences": [
+        {
+          "text": "闖關時分工：爸爸當關主，說出目標，也可以規定哪些閘不能用。",
+          "start": 0.0,
+          "end": 6.376009000000001
+        },
+        {
+          "text": "你當挑戰者，先畫路線、數一數要幾顆閘，再按按鈕驗證，用的閘越少越厲害。",
+          "start": 6.556009,
+          "end": 14.348027000000002
+        },
+        {
+          "text": "答錯也沒關係，把箭頭實際轉到哪裡記下來，找出是哪一顆閘轉錯了方向。",
+          "start": 14.528027000000002,
+          "end": 21.360045000000003
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q004-gates-rotate/audio/slide_09.mp3"
+    },
+    {
+      "page": 13,
+      "kind": "slide",
+      "v1slide": 10,
+      "title": "換你當關主",
+      "duration": 17.592,
+      "sentences": [
+        {
+          "text": "下半場換你當關主，自己出兩關給爸爸破。",
+          "start": 0.0,
+          "end": 4.816009
+        },
+        {
+          "text": "每一關都要寫下目標、可以用哪些閘，還有你的參考解，以及最少要幾顆。",
+          "start": 4.996009,
+          "end": 11.924014
+        },
+        {
+          "text": "出完先用三維動畫自己試一次，確定這一關真的過得了。",
+          "start": 12.104014,
+          "end": 17.376032
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q004-gates-rotate/audio/slide_10.mp3"
+    },
+    {
+      "page": 14,
+      "kind": "slide",
+      "v1slide": 11,
+      "title": "兩小時的闖關營",
+      "duration": 27.48,
+      "sentences": [
+        {
+          "text": "兩小時的安排是：開場十分鐘，認識三種閘十五分鐘，接著四十分鐘和爸爸一起闖六關，然後休息十分鐘。",
+          "start": 0.0,
+          "end": 9.136009
+        },
+        {
+          "text": "下半場三十分鐘出兩關給爸爸破；接著十分鐘交換角色，由你教爸爸三種閘怎麼轉。",
+          "start": 9.316009,
+          "end": 17.060023
+        },
+        {
+          "text": "最後五分鐘錄音總結，替闖關紀錄表取名字，存一個版本；把大目標拆成一步一步的小動作，就是今天的生活技能。",
+          "start": 17.240023,
+          "end": 27.264037000000002
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q004-gates-rotate/audio/slide_11.mp3"
+    },
+    {
+      "page": 15,
+      "kind": "slide",
+      "v1slide": 12,
+      "title": "最後一關：教爸爸轉箭頭",
+      "duration": 27.216,
+      "sentences": [
+        {
+          "text": "最後一關，請不看稿說出：三種閘各繞哪一條軸轉？從北極出發，連按兩顆閘之後，箭頭會在哪裡？",
+          "start": 0.0,
+          "end": 9.784014
+        },
+        {
+          "text": "再指出一個限制：量子閘可以倒回去，測量卻不行。",
+          "start": 9.964014,
+          "end": 15.524014000000001
+        },
+        {
+          "text": "今天的作品是闖關紀錄表，下一堂要認識相位，它看不見，卻是量子計算最重要的關鍵；我是陳犀牛，保持好奇，我們下次見！",
+          "start": 15.704014,
+          "end": 27.000023
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q004-gates-rotate/audio/slide_12.mp3"
+    }
+  ]
+}

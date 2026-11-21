@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q107",
+  "version": "Q107-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-19",
+  "episodePath": "academy/episodes/q107-deutsch-kickback-v2",
+  "basedOn": "academy/episodes/q107-deutsch-kickback（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 561.792,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "kick",
+      "title": "動畫展示：負號搬了家",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#deutsch-lab"
+    },
+    {
+      "key": "bloch",
+      "title": "動畫展示：輸入位元的箭頭翻面",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/basic-circuits.html#deutsch"
+    },
+    {
+      "key": "blind",
+      "title": "動畫展示：盲測一回合",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#deutsch-lab"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.6,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q107-deutsch-kickback-v2-zh-TW.mp4": {
+      "bytes": 88895915,
+      "sha256": "119e7a215c89e6046ed2e599783321c288eaa86820e032c5a920aa2924d70f90"
+    },
+    "q107-deutsch-kickback-v2-master.mp4": {
+      "bytes": 90200301,
+      "sha256": "2e0a2e4fd2693bacab9dc52e8b9a865bea3fa5e927bff528e932a0507ff6e7be"
+    },
+    "narration-only.mp3": {
+      "bytes": 13484308,
+      "sha256": "8087220a24d43391d61cbd1d5abaccd135f3cca1dd0d8edf7df363267307eefd"
+    }
+  },
+  "package": {
+    "filename": "Q107-v2_量子電腦學程_相位回踢盲測_動畫展示版_2026-11-19.zip",
+    "bytes": 196340586,
+    "sha256": "a1ea30ce747134d19e08697191ac29abe883a10322845c3aa74013adfe0fd7dc",
+    "parts": [
+      {
+        "name": "Q107-v2_量子電腦學程_相位回踢盲測_動畫展示版_2026-11-19.zip.part01",
+        "bytes": 29360128,
+        "sha256": "8ab12218ac20949850acc05bf5315cd59f6a8ba86c8426d99f0ec836b8a6c314"
+      },
+      {
+        "name": "Q107-v2_量子電腦學程_相位回踢盲測_動畫展示版_2026-11-19.zip.part02",
+        "bytes": 29360128,
+        "sha256": "acd8a81834fd4bda2cec01f5f8461852fe4d869709e6a2aba9ef0543997af500"
+      },
+      {
+        "name": "Q107-v2_量子電腦學程_相位回踢盲測_動畫展示版_2026-11-19.zip.part03",
+        "bytes": 29360128,
+        "sha256": "a5a5b3277126bf20b086dead68358981fcbe17e056c142d73ceb8a1163fb363c"
+      },
+      {
+        "name": "Q107-v2_量子電腦學程_相位回踢盲測_動畫展示版_2026-11-19.zip.part04",
+        "bytes": 29360128,
+        "sha256": "e1670c639e1773d8836b5da31d01f795ec32926334bc497d2a615cbc5aca3fcd"
+      },
+      {
+        "name": "Q107-v2_量子電腦學程_相位回踢盲測_動畫展示版_2026-11-19.zip.part05",
+        "bytes": 29360128,
+        "sha256": "040244e556becc2e22865d32b6a47032de97abcf6f732d2006747780639a39d7"
+      },
+      {
+        "name": "Q107-v2_量子電腦學程_相位回踢盲測_動畫展示版_2026-11-19.zip.part06",
+        "bytes": 29360128,
+        "sha256": "ea4772d0414f26ff4b87fd95e9d4eb4d53a849becb74e2773923bd0d1feafe23"
+      },
+      {
+        "name": "Q107-v2_量子電腦學程_相位回踢盲測_動畫展示版_2026-11-19.zip.part07",
+        "bytes": 20179818,
+        "sha256": "9e1f99e821729f3f38092da4323b7caa0411f793926e834152749c3221576cba"
+      }
+    ],
+    "handedOver": "2026-11-19 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1bi-WOn7ipXPr978g1JqWu1DFCPwySyyb",
+    "uploaded": "2026-11-19",
+    "files": [
+      {
+        "name": "Q107 相位回踢盲測：Deutsch 演算法與相位回踢（動畫展示版）.mp4",
+        "id": "1lC_PS6s7I7qbWhtzA3rtOvI8NfSCNAyH",
+        "link": "https://drive.google.com/file/d/1lC_PS6s7I7qbWhtzA3rtOvI8NfSCNAyH/view?usp=drivesdk"
+      },
+      {
+        "name": "Q107 相位回踢盲測（動畫展示版）簡報.pptx",
+        "id": "11jh_iZVBUUqx7i4jKsnOBSjX1Cm_6Tq7",
+        "link": "https://docs.google.com/presentation/d/11jh_iZVBUUqx7i4jKsnOBSjX1Cm_6Tq7/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true"
+      },
+      {
+        "name": "Q107 相位回踢盲測 教材.zip",
+        "id": "14-l-nhCu1f311HF8YUoQVO-_lYfqfGU8",
+        "link": "https://drive.google.com/file/d/14-l-nhCu1f311HF8YUoQVO-_lYfqfGU8/view?usp=drivesdk"
+      }
+    ],
+    "complete": true
+  }
+}

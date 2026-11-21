@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q004",
+  "version": "Q004-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-18",
+  "episodePath": "academy/episodes/q004-gates-rotate-v2",
+  "basedOn": "academy/episodes/q004-gates-rotate（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 432.554,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "xflip",
+      "title": "動畫展示：翻轉閘轉半圈",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#gates"
+    },
+    {
+      "key": "hz",
+      "title": "動畫展示：哈達瑪閘和相位翻轉閘",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#gates"
+    },
+    {
+      "key": "undo",
+      "title": "動畫展示：倒著做就回到起點",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#gates"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.3,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q004-gates-rotate-v2-zh-TW.mp4": {
+      "bytes": 80970002,
+      "sha256": "85a4abcadb087f0270daf5f9d9bbfbe2edacc810842ccd2ec7c72013ad4e8517"
+    },
+    "q004-gates-rotate-v2-master.mp4": {
+      "bytes": 83846255,
+      "sha256": "53bf39c64cd5dc9a2bd6291f460662acb00b9a5c7dc424c0815373b1a00fbec9"
+    },
+    "narration-only.mp3": {
+      "bytes": 10383124,
+      "sha256": "d1253e424ebd6d76a933195df38b7eb5f67786e42104c6ebdae01db3a0e54cb0"
+    }
+  },
+  "package": {
+    "filename": "Q004-v2_量子電腦學程_量子閘轉箭頭_動畫展示版_2026-11-18.zip",
+    "bytes": 178943699,
+    "sha256": "f0867aca43ba33fa819f5590377ad928ac9382ca38c253cec782d6f21fa39e11",
+    "parts": [
+      {
+        "name": "Q004-v2_量子電腦學程_量子閘轉箭頭_動畫展示版_2026-11-18.zip.part01",
+        "bytes": 29360128,
+        "sha256": "7567ae532bd171b84b7284debd643e837385b1bbdf9ccefd272e6886cb5b4003"
+      },
+      {
+        "name": "Q004-v2_量子電腦學程_量子閘轉箭頭_動畫展示版_2026-11-18.zip.part02",
+        "bytes": 29360128,
+        "sha256": "d3cd8edf2da6e87e12c34d45e86efd6c21ca2fd201f83d3382dab684d4f8f888"
+      },
+      {
+        "name": "Q004-v2_量子電腦學程_量子閘轉箭頭_動畫展示版_2026-11-18.zip.part03",
+        "bytes": 29360128,
+        "sha256": "cbb4a62b755302faa522ff12b0db5087d31708b46ff2f9be02ee57f3d5c66c2e"
+      },
+      {
+        "name": "Q004-v2_量子電腦學程_量子閘轉箭頭_動畫展示版_2026-11-18.zip.part04",
+        "bytes": 29360128,
+        "sha256": "56596c5f0cc4bb5fe3f4e0e5fb3768bd3d2dcfcf7a80c2ef2b52e349bbab31cc"
+      },
+      {
+        "name": "Q004-v2_量子電腦學程_量子閘轉箭頭_動畫展示版_2026-11-18.zip.part05",
+        "bytes": 29360128,
+        "sha256": "2b1424c9c8883ff7890a407db91574c3bbef4c938e51de89851ef125f6e0183e"
+      },
+      {
+        "name": "Q004-v2_量子電腦學程_量子閘轉箭頭_動畫展示版_2026-11-18.zip.part06",
+        "bytes": 29360128,
+        "sha256": "07d59a73de04b2ee82c13a71c277c797b40052d0ddcce685c148f14256614be5"
+      },
+      {
+        "name": "Q004-v2_量子電腦學程_量子閘轉箭頭_動畫展示版_2026-11-18.zip.part07",
+        "bytes": 2782931,
+        "sha256": "0fd94c9c91d6dc52b860e3716dc24514352e242fc576308862df63b220857d23"
+      }
+    ],
+    "handedOver": "2026-11-18 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1_4cP28v11Id8NhERnDYtpkPxw8055Y3l",
+    "folderName": "量子電腦學程 Q004–Q010 動畫展示版（v2）",
+    "uploadedAt": "2026-11-20",
+    "uploadedBy": "製作代理（Claude，Drive API，上傳後比對 md5）",
+    "files": [
+      {
+        "name": "Q004 量子閘就是轉箭頭 教材.zip",
+        "id": "1YPtgMan7h91KklnvPAFrKg00rJgZUODu",
+        "size": 355222,
+        "link": "https://drive.google.com/file/d/1YPtgMan7h91KklnvPAFrKg00rJgZUODu/view?usp=drivesdk"
+      },
+      {
+        "name": "Q004 量子閘就是轉箭頭（動畫展示版）.mp4",
+        "id": "1FwErUVHFfNSuQUNUDWhFX1KRInRBNJaZ",
+        "size": 80970002,
+        "link": "https://drive.google.com/file/d/1FwErUVHFfNSuQUNUDWhFX1KRInRBNJaZ/view?usp=drivesdk"
+      },
+      {
+        "name": "Q004 量子閘就是轉箭頭（動畫展示版）簡報.pptx",
+        "id": "1FDTnWHcglplbgN7YOMQ3C3_jSMZLNEX5",
+        "size": 3129887,
+        "link": "https://docs.google.com/presentation/d/1FDTnWHcglplbgN7YOMQ3C3_jSMZLNEX5/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true"
+      }
+    ]
+  }
+}

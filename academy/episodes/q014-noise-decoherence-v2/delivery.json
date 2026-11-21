@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q014",
+  "version": "Q014-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-19",
+  "episodePath": "academy/episodes/q014-noise-decoherence-v2",
+  "basedOn": "academy/episodes/q014-noise-decoherence（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 503.274,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "t1",
+      "title": "動畫展示：一態掉回零態",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#bloch"
+    },
+    {
+      "key": "ramsey",
+      "title": "動畫展示：箭頭在赤道上縮短",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#bloch"
+    },
+    {
+      "key": "cards",
+      "title": "動畫展示：用動畫對照雜訊卡",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#bloch"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.5,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q014-noise-decoherence-v2-zh-TW.mp4": {
+      "bytes": 90884054,
+      "sha256": "2fc0f8c85c7b7aebc7be01b1889c21ca82e683bc782bec2370e363988e2c52ff"
+    },
+    "q014-noise-decoherence-v2-master.mp4": {
+      "bytes": 93045354,
+      "sha256": "7a6479d8bcdcd05a2493a869e66c1653c5b6068846b6e2b32909f62351904715"
+    },
+    "narration-only.mp3": {
+      "bytes": 12080020,
+      "sha256": "6eefb9b8df82b23c38a774fb9689134249a2b1cdf708eadb915ae97b91939a39"
+    }
+  },
+  "package": {
+    "filename": "Q014-v2_量子電腦學程_雜訊與退相干_動畫展示版_2026-11-19.zip",
+    "bytes": 200626375,
+    "sha256": "d1456d7c0424fee51a7ea3019b23a21b653a9f72f3ae6d45f86d97145990e517",
+    "parts": [
+      {
+        "name": "Q014-v2_量子電腦學程_雜訊與退相干_動畫展示版_2026-11-19.zip.part01",
+        "bytes": 29360128,
+        "sha256": "c3deba2763c59dfc62dc69d5dfe3db5815ef2e60122ce9143cd2d03e0fe066e2"
+      },
+      {
+        "name": "Q014-v2_量子電腦學程_雜訊與退相干_動畫展示版_2026-11-19.zip.part02",
+        "bytes": 29360128,
+        "sha256": "2fb4795cc96daeed0a1a78f929faf30f2b6356d87414a0d7d22ca9103ba0e8e3"
+      },
+      {
+        "name": "Q014-v2_量子電腦學程_雜訊與退相干_動畫展示版_2026-11-19.zip.part03",
+        "bytes": 29360128,
+        "sha256": "eaeb44423fec712195a7d6798cf8811eb4f7b004debd48d1dc6ea5b902bf39a0"
+      },
+      {
+        "name": "Q014-v2_量子電腦學程_雜訊與退相干_動畫展示版_2026-11-19.zip.part04",
+        "bytes": 29360128,
+        "sha256": "80ac3c545185c248804093975b3e3c644b0048b14d03d09cf2e68d08fb0649eb"
+      },
+      {
+        "name": "Q014-v2_量子電腦學程_雜訊與退相干_動畫展示版_2026-11-19.zip.part05",
+        "bytes": 29360128,
+        "sha256": "88e370be208a08844214531ed2e22cb42024676c58c5a870a0ef01cab3debf50"
+      },
+      {
+        "name": "Q014-v2_量子電腦學程_雜訊與退相干_動畫展示版_2026-11-19.zip.part06",
+        "bytes": 29360128,
+        "sha256": "940bb8296787a51a08183e943726d2190f50c9483e95ce3ca238f00545e595dc"
+      },
+      {
+        "name": "Q014-v2_量子電腦學程_雜訊與退相干_動畫展示版_2026-11-19.zip.part07",
+        "bytes": 24465607,
+        "sha256": "cc60957fd6b3eee2e9d4cc46a0998d01603ccd28b6e085242415f6f904b7d146"
+      }
+    ],
+    "handedOver": "2026-11-19 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1epfQVOXunbD9Vht37u62oOD9Dr-HKMSE",
+    "folder": "量子電腦學程 Q011–Q040 動畫展示版（v2）",
+    "files": [
+      {
+        "name": "Q014 雜訊與退相干：量子態很怕吵：雜訊與退相干（動畫展示版）.mp4",
+        "id": "1psFjU7b4A3CJthfT69t_PQOJiX_TYTn7",
+        "link": "https://drive.google.com/file/d/1psFjU7b4A3CJthfT69t_PQOJiX_TYTn7/view?usp=drivesdk",
+        "bytes": 90884054
+      },
+      {
+        "name": "Q014 雜訊與退相干（動畫展示版）簡報.pptx",
+        "id": "1NXerTX-uhVhuaw699fv26eOsjPT3Xnqs",
+        "link": "https://docs.google.com/presentation/d/1NXerTX-uhVhuaw699fv26eOsjPT3Xnqs/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true",
+        "bytes": 3838305
+      },
+      {
+        "name": "Q014 雜訊與退相干 教材.zip",
+        "id": "1Vn-9_F8QCCQf617p9jJzlSiwd96xVYmL",
+        "link": "https://drive.google.com/file/d/1Vn-9_F8QCCQf617p9jJzlSiwd96xVYmL/view?usp=drivesdk",
+        "bytes": 394576
+      }
+    ]
+  }
+}

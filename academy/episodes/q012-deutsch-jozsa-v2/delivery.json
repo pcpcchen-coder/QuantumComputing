@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q012",
+  "version": "Q012-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-18",
+  "episodePath": "academy/episodes/q012-deutsch-jozsa-v2",
+  "basedOn": "academy/episodes/q012-deutsch-jozsa（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 521.0,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "onebit",
+      "title": "動畫展示：最小的案子只有兩張卡",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/basic-circuits.html#deutsch"
+    },
+    {
+      "key": "circuit",
+      "title": "動畫展示：三步判案的線路",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#circuit"
+    },
+    {
+      "key": "arrows",
+      "title": "動畫展示：八支箭頭的相長與相消",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#interference"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.5,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q012-deutsch-jozsa-v2-zh-TW.mp4": {
+      "bytes": 86462237,
+      "sha256": "436fd16adad4c13523b014e90779e53e867a9bf0ee3f5015109099276c23b61c"
+    },
+    "q012-deutsch-jozsa-v2-master.mp4": {
+      "bytes": 88209835,
+      "sha256": "199ef01b538eb87757a6dcd51e1127d958694f88792f0255660179830fb5b45c"
+    },
+    "narration-only.mp3": {
+      "bytes": 12505108,
+      "sha256": "c0ea4b1526d81ccf74a5aff7e5ba9bbf37a52d9e20f03b06b430d038eb3d7572"
+    }
+  },
+  "package": {
+    "filename": "Q012-v2_量子電腦學程_多伊奇喬薩_動畫展示版_2026-11-18.zip",
+    "bytes": 191076348,
+    "sha256": "55d91f188d66b804d9ff227fd0c11b1bed4fdb2468503c5f0fd1420abdb40ea6",
+    "parts": [
+      {
+        "name": "Q012-v2_量子電腦學程_多伊奇喬薩_動畫展示版_2026-11-18.zip.part01",
+        "bytes": 29360128,
+        "sha256": "9735d78fe6d67fe21306a0c0852db2944ec36293f44f14be282f38a6d443d1a7"
+      },
+      {
+        "name": "Q012-v2_量子電腦學程_多伊奇喬薩_動畫展示版_2026-11-18.zip.part02",
+        "bytes": 29360128,
+        "sha256": "a0a109e5448d3f7f9ac0b36a9638c9c5f47eab1d16fd3b375a297e9ab76a928d"
+      },
+      {
+        "name": "Q012-v2_量子電腦學程_多伊奇喬薩_動畫展示版_2026-11-18.zip.part03",
+        "bytes": 29360128,
+        "sha256": "1ffec0ff8244b2221bb1fa36c5ca5452b1c14f883935772a5d1b4753d076c6ab"
+      },
+      {
+        "name": "Q012-v2_量子電腦學程_多伊奇喬薩_動畫展示版_2026-11-18.zip.part04",
+        "bytes": 29360128,
+        "sha256": "9422a2a3d11dfdb1acd7e2a0294f8addfb5e45f4da644e05c816b967938f375e"
+      },
+      {
+        "name": "Q012-v2_量子電腦學程_多伊奇喬薩_動畫展示版_2026-11-18.zip.part05",
+        "bytes": 29360128,
+        "sha256": "75355016a2f94a0d0396d1762700e491a65c9d37c843a27635b14f428ca9743a"
+      },
+      {
+        "name": "Q012-v2_量子電腦學程_多伊奇喬薩_動畫展示版_2026-11-18.zip.part06",
+        "bytes": 29360128,
+        "sha256": "252c1b8352a9c231489dab6b2e5152a11c2d3201a4b2adf2a5c879282c4e71a4"
+      },
+      {
+        "name": "Q012-v2_量子電腦學程_多伊奇喬薩_動畫展示版_2026-11-18.zip.part07",
+        "bytes": 14915580,
+        "sha256": "93f9f11a9059e56213f3341ad1d3a8703c548449116cfd1dc4e94ce9a8e5c3f4"
+      }
+    ],
+    "handedOver": "2026-11-18 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1epfQVOXunbD9Vht37u62oOD9Dr-HKMSE",
+    "folder": "量子電腦學程 Q011–Q040 動畫展示版（v2）",
+    "files": [
+      {
+        "name": "Q012 多伊奇喬薩：多伊奇–喬薩：一次看穿（動畫展示版）.mp4",
+        "id": "1QwNIj8CQcz3-vOs424v6ZZAH5DlqAs1Z",
+        "link": "https://drive.google.com/file/d/1QwNIj8CQcz3-vOs424v6ZZAH5DlqAs1Z/view?usp=drivesdk",
+        "bytes": 86462237
+      },
+      {
+        "name": "Q012 多伊奇喬薩（動畫展示版）簡報.pptx",
+        "id": "1OItVExUEjCae-15w6DszpR1dsDbpG6Ow",
+        "link": "https://docs.google.com/presentation/d/1OItVExUEjCae-15w6DszpR1dsDbpG6Ow/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true",
+        "bytes": 3185503
+      },
+      {
+        "name": "Q012 多伊奇喬薩 教材.zip",
+        "id": "1BtVQ2y8p1JTkf8bF-o5rVXNgvojE-AYX",
+        "link": "https://drive.google.com/file/d/1BtVQ2y8p1JTkf8bF-o5rVXNgvojE-AYX/view?usp=drivesdk",
+        "bytes": 428303
+      }
+    ]
+  }
+}

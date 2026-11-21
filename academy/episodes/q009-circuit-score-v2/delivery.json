@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q009",
+  "version": "Q009-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-18",
+  "episodePath": "academy/episodes/q009-circuit-score-v2",
+  "basedOn": "academy/episodes/q009-circuit-score（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 416.133333,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "read",
+      "title": "動畫展示：讀一張最簡單的線路圖",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/basic-circuits.html#superposition"
+    },
+    {
+      "key": "step",
+      "title": "動畫展示：一欄一欄往右走",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#circuit"
+    },
+    {
+      "key": "column",
+      "title": "動畫展示：同一欄同時執行",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#circuit"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.2,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q009-circuit-score-v2-zh-TW.mp4": {
+      "bytes": 78851101,
+      "sha256": "ef8d4b7f4ccea707bf5561bdff0b5ec8c50b23cec2689254bf2e25cb625eddd2"
+    },
+    "q009-circuit-score-v2-master.mp4": {
+      "bytes": 81672088,
+      "sha256": "40080a513ecfb55abbedaa4b3c3088ae60bf51727fd71418a7f29559053436d8"
+    },
+    "narration-only.mp3": {
+      "bytes": 9988564,
+      "sha256": "816277c91e71e7f4b11c290e8d9bd897432c1a2367083bda94f8c8a009e45188"
+    }
+  },
+  "package": {
+    "filename": "Q009-v2_量子電腦學程_線路像樂譜_動畫展示版_2026-11-18.zip",
+    "bytes": 174108442,
+    "sha256": "b3d929d800bdc99154982ecebe6987fe8d83592db2c4b2ef97a85ea5e32d1afe",
+    "parts": [
+      {
+        "name": "Q009-v2_量子電腦學程_線路像樂譜_動畫展示版_2026-11-18.zip.part01",
+        "bytes": 29360128,
+        "sha256": "cca40bf165a46a31d51b0166a4edd1989ff6b7f1926d9dc5b7c5f63d931ace47"
+      },
+      {
+        "name": "Q009-v2_量子電腦學程_線路像樂譜_動畫展示版_2026-11-18.zip.part02",
+        "bytes": 29360128,
+        "sha256": "6c2c56b78522cc28d5fc3487263b3a7b3dcd165f14ad4a04488fea530811f0e1"
+      },
+      {
+        "name": "Q009-v2_量子電腦學程_線路像樂譜_動畫展示版_2026-11-18.zip.part03",
+        "bytes": 29360128,
+        "sha256": "20ab87e255c1850ee90dcf7727281c5159a1eede9c6e04cb63d1e884c4b5b97a"
+      },
+      {
+        "name": "Q009-v2_量子電腦學程_線路像樂譜_動畫展示版_2026-11-18.zip.part04",
+        "bytes": 29360128,
+        "sha256": "8fdd89c7ef9c69f652e063df64ef592b8586ad34ed0d4e1e4b8d68b240e29c69"
+      },
+      {
+        "name": "Q009-v2_量子電腦學程_線路像樂譜_動畫展示版_2026-11-18.zip.part05",
+        "bytes": 29360128,
+        "sha256": "b77ce08820615f7044d33da4b54596c0ffd8b96a4b75b8f826b7494805cdbfc3"
+      },
+      {
+        "name": "Q009-v2_量子電腦學程_線路像樂譜_動畫展示版_2026-11-18.zip.part06",
+        "bytes": 27307802,
+        "sha256": "a14b7e8040ee9403e7dca9aae49798a737078f6b3f8c13f009e5040df2334f17"
+      }
+    ],
+    "handedOver": "2026-11-18 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1_4cP28v11Id8NhERnDYtpkPxw8055Y3l",
+    "folderName": "量子電腦學程 Q004–Q010 動畫展示版（v2）",
+    "uploadedAt": "2026-11-20",
+    "uploadedBy": "製作代理（Claude，Drive API，上傳後比對 md5）",
+    "files": [
+      {
+        "name": "Q009 量子線路像樂譜 教材.zip",
+        "id": "1YfDh_i0Vhk9-VmWPDafhlEilzYd8N48e",
+        "size": 319144,
+        "link": "https://drive.google.com/file/d/1YfDh_i0Vhk9-VmWPDafhlEilzYd8N48e/view?usp=drivesdk"
+      },
+      {
+        "name": "Q009 量子線路像樂譜（動畫展示版）.mp4",
+        "id": "1d0FTMhn7PE90M4_OZpXYyAQl1JCu_yIZ",
+        "size": 78851101,
+        "link": "https://drive.google.com/file/d/1d0FTMhn7PE90M4_OZpXYyAQl1JCu_yIZ/view?usp=drivesdk"
+      },
+      {
+        "name": "Q009 量子線路像樂譜（動畫展示版）簡報.pptx",
+        "id": "1xcxLqdIO451u3hz5mLb7swagkDmt9uYb",
+        "size": 3010406,
+        "link": "https://docs.google.com/presentation/d/1xcxLqdIO451u3hz5mLb7swagkDmt9uYb/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true"
+      }
+    ]
+  }
+}

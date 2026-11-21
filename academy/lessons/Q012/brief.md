@@ -35,8 +35,12 @@ QM01 量子直覺：不用公式看懂量子｜第一階段 量子直覺｜難�
 ## 素材
 
 - 簡報：如何操作量子電腦（slides/QC_Operation_Talk.pptx）p39
+- 簡報：《量子金魚》008 Deutsch 演算法報告簡報（slides/output/qfish008-deutsch-algorithm.pptx）p3–25
+- 簡報：量子電路入門：八個範例（slides/output/basic-circuits.pptx）p18–20
 - 3D 場景：[`o:interference`](../../../animations/operation.html#interference)
 - 3D 場景：[`o:circuit`](../../../animations/operation.html#circuit)
+- 3D 場景：[`bc:deutsch`](../../../animations/basic-circuits.html#deutsch)
+- 3D 場景：[`tr:deutsch`](../../../animations/transmon-3d.html#deutsch)
 
 生活技能支線：先想清楚要回答的問題，再決定要查多少資料。課後延伸：15–30 分鐘自由改造；寫三句學習日誌：我做了什麼、哪裡卡住、下次想加什麼。
 

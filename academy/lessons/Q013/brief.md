@@ -35,7 +35,10 @@ QM01 量子直覺：不用公式看懂量子｜第一階段 量子直覺｜難�
 ## 素材
 
 - 簡報：如何操作量子電腦（slides/QC_Operation_Talk.pptx）p40
+- 簡報：量子電路入門：八個範例（slides/output/basic-circuits.pptx）p23–27
 - 3D 場景：[`o:grover`](../../../animations/operation.html#grover)
+- 3D 場景：[`bc:grover`](../../../animations/basic-circuits.html#grover)
+- 3D 場景：[`tr:grover`](../../../animations/transmon-3d.html#grover)
 
 生活技能支線：知道「多做」不一定「更好」。課後延伸：15–30 分鐘自由改造；寫三句學習日誌：我做了什麼、哪裡卡住、下次想加什麼。
 

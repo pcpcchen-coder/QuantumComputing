@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q099",
+  "version": "Q099-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-20",
+  "episodePath": "academy/episodes/q099-squid-flux-tuning-v2",
+  "basedOn": "academy/episodes/q099-squid-flux-tuning（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 522.88,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "flux",
+      "title": "動畫展示：磁通一加，頻率就變",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#squid"
+    },
+    {
+      "key": "sweetspot",
+      "title": "動畫展示：甜蜜點和不對稱接面",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#squid"
+    },
+    {
+      "key": "chip",
+      "title": "動畫展示：用磁通把頻率往下調",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#case"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.5,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q099-squid-flux-tuning-v2-zh-TW.mp4": {
+      "bytes": 89496956,
+      "sha256": "812f3256035fec387e46a2cf225f93758ae502c17a7693f61fa796455181cf0b"
+    },
+    "q099-squid-flux-tuning-v2-master.mp4": {
+      "bytes": 91602757,
+      "sha256": "4c9d8829f3837e7093b007aa725c25bccf06c28f8c117697dafa90d62d774312"
+    },
+    "narration-only.mp3": {
+      "bytes": 12550612,
+      "sha256": "a274d0ea9ab94a79dfcfd978dac0d1277b4ae9e5d35347a1c5a94870dca38c1d"
+    }
+  },
+  "package": {
+    "filename": "Q099-v2_量子電腦學程_超導量子干涉元件調頻_動畫展示版_2026-11-20.zip",
+    "bytes": 198090817,
+    "sha256": "7e1d921edeb7c4509a29a6e2c3db4623a10a56faf6a55d163516585e6b13428d",
+    "parts": [
+      {
+        "name": "Q099-v2_量子電腦學程_超導量子干涉元件調頻_動畫展示版_2026-11-20.zip.part01",
+        "bytes": 29360128,
+        "sha256": "c1a2b3ee438caa0be725f9f2238f93651fbf855b043ed1eb105a35d09b4cd846"
+      },
+      {
+        "name": "Q099-v2_量子電腦學程_超導量子干涉元件調頻_動畫展示版_2026-11-20.zip.part02",
+        "bytes": 29360128,
+        "sha256": "4e3ea3e899d3f54778161be2ba9be122db96a76d7e6caa8e5e14bcfa7a20f1c6"
+      },
+      {
+        "name": "Q099-v2_量子電腦學程_超導量子干涉元件調頻_動畫展示版_2026-11-20.zip.part03",
+        "bytes": 29360128,
+        "sha256": "457472bee1c226e9e80848b0c2603a831cdeee955874ea0df3a2050c4f979460"
+      },
+      {
+        "name": "Q099-v2_量子電腦學程_超導量子干涉元件調頻_動畫展示版_2026-11-20.zip.part04",
+        "bytes": 29360128,
+        "sha256": "18c7b8892959f659d5cc789312287dd916412e17691e9f64c46c899f5583a025"
+      },
+      {
+        "name": "Q099-v2_量子電腦學程_超導量子干涉元件調頻_動畫展示版_2026-11-20.zip.part05",
+        "bytes": 29360128,
+        "sha256": "6b3d05dcd11ca79558b24545282b366c98962a253724033c19dadd9bafc162df"
+      },
+      {
+        "name": "Q099-v2_量子電腦學程_超導量子干涉元件調頻_動畫展示版_2026-11-20.zip.part06",
+        "bytes": 29360128,
+        "sha256": "b1483be7cc81eee14d367b6982f3fa6a83f8217e979cd1d790aa3a5e7806c989"
+      },
+      {
+        "name": "Q099-v2_量子電腦學程_超導量子干涉元件調頻_動畫展示版_2026-11-20.zip.part07",
+        "bytes": 21930049,
+        "sha256": "13aebfa9707b25fb5cd84f845154b939a0570eecef89a10d2fe09e7c5cc1b78e"
+      }
+    ],
+    "handedOver": "2026-11-20 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1ZOQEWjgkBnzg6-88LtQiSOgQeO2JG9Wx",
+    "uploadedAt": "2026-11-19",
+    "files": [
+      {
+        "name": "Q099 第 1 課：SQUID 干涉之後能做什麼（動畫展示版）.mp4",
+        "id": "1mOt7khedJuKrNYmfHfincrYVaSLQLFmR",
+        "bytes": 89496956,
+        "url": "https://drive.google.com/file/d/1mOt7khedJuKrNYmfHfincrYVaSLQLFmR/view"
+      },
+      {
+        "name": "Q099 SQUID 干涉之後（動畫展示版）簡報.pptx",
+        "id": "1xvK3kWOnp8PTSobwtubFHsjKv5jxFzNQ",
+        "bytes": 3507117,
+        "url": "https://docs.google.com/presentation/d/1xvK3kWOnp8PTSobwtubFHsjKv5jxFzNQ/edit"
+      },
+      {
+        "name": "Q099 SQUID 干涉之後 教材.zip",
+        "id": "1PMgsoOoMEQgfj19Auy6OSm_xCsd4r5g8",
+        "bytes": 406198,
+        "url": "https://drive.google.com/file/d/1PMgsoOoMEQgfj19Auy6OSm_xCsd4r5g8/view"
+      }
+    ]
+  }
+}

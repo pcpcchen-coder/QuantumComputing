@@ -1,0 +1,32 @@
+{
+  "masterDuration": 424.682,
+  "zhDuration": 424.682,
+  "opening": {
+    "file": "/home/user/xinewvideogpt/academy/assets/opening/開場影片-v2.mp4",
+    "seconds": 60.277
+  },
+  "pages": 13,
+  "demos": 1,
+  "cues": 40,
+  "fadeSeconds": 0.55,
+  "fps": 30,
+  "loudness": {
+    "analysis": {
+      "input_i": "-17.35",
+      "input_tp": "-1.66",
+      "input_lra": "8.80",
+      "input_thresh": "-27.71",
+      "output_i": "-17.56",
+      "output_tp": "-2.48",
+      "output_lra": "6.50",
+      "output_thresh": "-27.91",
+      "normalization_type": "dynamic",
+      "target_offset": "1.56"
+    },
+    "gainDb": 0.059999999999999915,
+    "predictedIntegratedLUFS": -17.290000000000003
+  },
+  "backgroundMusic": "none",
+  "subtitleStyle": "FontName=Noto Sans CJK TC,FontSize=16,Bold=1,PrimaryColour=&H00FFFFFF,OutlineColour=&H7A000000,BackColour=&H7A000000,BorderStyle=1,Outline=1.2,Shadow=0,Alignment=2,MarginV=20,MarginL=24,MarginR=24",
+  "captionLineBreak": "kinsoku"
+}

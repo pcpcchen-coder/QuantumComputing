@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q049",
+  "version": "Q049-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-18",
+  "episodePath": "academy/episodes/q049-job-lifecycle-v2",
+  "basedOn": "academy/episodes/q049-job-lifecycle（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 559.966667,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "stations",
+      "title": "動畫展示：一站一站走",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#workflow"
+    },
+    {
+      "key": "timemachine",
+      "title": "動畫展示：一個 shot 的時間帳",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#workflow"
+    },
+    {
+      "key": "gate",
+      "title": "動畫展示：四十奈秒和零秒",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#pulse"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.6,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q049-job-lifecycle-v2-zh-TW.mp4": {
+      "bytes": 90532971,
+      "sha256": "b82a8685b786fb13e95ee3da3259b334e6fb79b4cb8127d25a5a28df53127be0"
+    },
+    "q049-job-lifecycle-v2-master.mp4": {
+      "bytes": 91844569,
+      "sha256": "759806d68157e80dbab4e0d41770976c513b86ced148d4413314dfd2f62cddb9"
+    },
+    "narration-only.mp3": {
+      "bytes": 13440532,
+      "sha256": "b58b2d32ed5051b8b7051a3f271bc920e03791b50a25e7329d3b45245b6e5624"
+    }
+  },
+  "package": {
+    "filename": "Q049-v2_量子電腦學程_量子工作的一生_動畫展示版_2026-11-18.zip",
+    "bytes": 199905926,
+    "sha256": "57f5c4b6a138eaf785d6a1a6d14c776829c734549a120b82c3519febef2f1895",
+    "parts": [
+      {
+        "name": "Q049-v2_量子電腦學程_量子工作的一生_動畫展示版_2026-11-18.zip.part01",
+        "bytes": 29360128,
+        "sha256": "5d1ebb7eadb5f9c25f3eddaf07da79708545d8697cbbc1857c974a304b7a447b"
+      },
+      {
+        "name": "Q049-v2_量子電腦學程_量子工作的一生_動畫展示版_2026-11-18.zip.part02",
+        "bytes": 29360128,
+        "sha256": "0aa7d496ec3429185a0898d468e42151d590bc6550536e8b746785b42d213499"
+      },
+      {
+        "name": "Q049-v2_量子電腦學程_量子工作的一生_動畫展示版_2026-11-18.zip.part03",
+        "bytes": 29360128,
+        "sha256": "3fb25207974fc20d75d7a3e29bb22f02a4181622e03ffe81e22298e0fa03b4a6"
+      },
+      {
+        "name": "Q049-v2_量子電腦學程_量子工作的一生_動畫展示版_2026-11-18.zip.part04",
+        "bytes": 29360128,
+        "sha256": "a8af791221e34857c96d6492333a5c769ed1ddd85a6c514c783974889f23d3a8"
+      },
+      {
+        "name": "Q049-v2_量子電腦學程_量子工作的一生_動畫展示版_2026-11-18.zip.part05",
+        "bytes": 29360128,
+        "sha256": "dc22984ed4cad92b5b81bbd2e88041fa07d0dcbe3e175e5805e900afe5e36dff"
+      },
+      {
+        "name": "Q049-v2_量子電腦學程_量子工作的一生_動畫展示版_2026-11-18.zip.part06",
+        "bytes": 29360128,
+        "sha256": "9db1dc7dbfb1ebefac0e1a3c77ba1399d63dd8ef65eddc4f5f7d34067be84aee"
+      },
+      {
+        "name": "Q049-v2_量子電腦學程_量子工作的一生_動畫展示版_2026-11-18.zip.part07",
+        "bytes": 23745158,
+        "sha256": "73295eb5ae638220ab67505debe859b53da00af2e790efdf5903983fd5240022"
+      }
+    ],
+    "handedOver": "2026-11-18 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1eZLiQdOHdFov3xfVLuJtqORZ4fjXzXXV",
+    "folderName": "量子電腦學程 Q041–Q070 動畫展示版（v2）",
+    "uploadedAt": "2026-11-18",
+    "uploadedBy": "製作代理（Claude，Drive API，上傳後比對 md5）",
+    "files": [
+      {
+        "name": "Q049 量子工作的一生：一次量子計算的生命週期（動畫展示版）.mp4",
+        "id": "1ThQ2ddgyNJwJHEkIRY_D7SmBVyxnmyep",
+        "size": 90532971,
+        "link": "https://drive.google.com/file/d/1ThQ2ddgyNJwJHEkIRY_D7SmBVyxnmyep/view?usp=drivesdk"
+      },
+      {
+        "name": "Q049 量子工作的一生（動畫展示版）簡報.pptx",
+        "id": "1IYkJdBlA76vYFy3cxqyEz9BAJ-Tb6fq1",
+        "size": 3341011,
+        "link": "https://docs.google.com/presentation/d/1IYkJdBlA76vYFy3cxqyEz9BAJ-Tb6fq1/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true"
+      },
+      {
+        "name": "Q049 量子工作的一生 教材.zip",
+        "id": "15fOXcPkNfb6CdbxSCbLtoAMjG83n3jlE",
+        "size": 461753,
+        "link": "https://drive.google.com/file/d/15fOXcPkNfb6CdbxSCbLtoAMjG83n3jlE/view?usp=drivesdk"
+      }
+    ]
+  }
+}

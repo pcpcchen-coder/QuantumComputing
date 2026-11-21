@@ -36,7 +36,9 @@ index.html#potential
 
 - 簡報：《量子超級英雄》#049 報告簡報（slides/output/ep049-superconducting-qubit.pptx）p7
 - 簡報：《量子超級英雄》#049 報告簡報（slides/output/ep049-superconducting-qubit.pptx）p10
+- 簡報：Transmon 筆記簡報（27 頁，含 3D 十二章導覽）（slides/transmon.pptx）p14
 - 3D 場景：[`i:potential`](../../../animations/index.html#potential)
+- 3D 場景：[`lj:s3`](../../../animations/lc-vs-jj.html#s3)
 
 生活技能支線：找出設計失敗的根本原因。課後延伸：15–30 分鐘自由改造；寫三句學習日誌：我做了什麼、哪裡卡住、下次想加什麼。
 

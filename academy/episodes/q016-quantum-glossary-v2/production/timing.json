@@ -1,0 +1,399 @@
+{
+  "version": 2,
+  "opening": 60.277,
+  "scenes": [
+    {
+      "page": 1,
+      "kind": "slide",
+      "v1slide": 1,
+      "title": "成果發表：我的量子小百科",
+      "duration": 31.296,
+      "sentences": [
+        {
+          "text": "歡迎回到父子科技學院的量子電腦學程，我是陳犀牛，今天是量子第十六堂，成果發表：我的量子小百科，這是依課綱製作的課前教學版，並非實際上課錄音。",
+          "start": 0.0,
+          "end": 12.928005
+        },
+        {
+          "text": "上一堂我們蓋了一間五關的量子逃脫室；今天是第一階段量子直覺的最後一堂，要把學過的東西整理成一本書。",
+          "start": 13.108005,
+          "end": 21.932019
+        },
+        {
+          "text": "這本書叫做量子小百科：挑十個量子名詞，用你自己的話說清楚，最後辦一場首映會，發表給家人聽。",
+          "start": 22.112019,
+          "end": 31.080024
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q016-quantum-glossary/audio/slide_01.mp3"
+    },
+    {
+      "page": 2,
+      "kind": "slide",
+      "v1slide": 2,
+      "title": "三個重點",
+      "duration": 25.824,
+      "sentences": [
+        {
+          "text": "今天有三個重點：第一，每個名詞先用一句自己的話說清楚，不背課本上的句子。",
+          "start": 0.0,
+          "end": 7.36
+        },
+        {
+          "text": "第二，替每個名詞找一個比喻，而且一定要說出這個比喻哪裡不像；第三，指出三維動畫裡哪一個畫面可以看到它。",
+          "start": 7.54,
+          "end": 16.844014
+        },
+        {
+          "text": "今天的作品是一本十個詞的量子小百科，下半場還要錄一段兩分鐘的導覽，介紹你最喜歡的動畫場景。",
+          "start": 17.024014,
+          "end": 25.608028
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q016-quantum-glossary/audio/slide_02.mp3"
+    },
+    {
+      "page": 3,
+      "kind": "slide",
+      "v1slide": 3,
+      "title": "發表模板：每個詞四格",
+      "duration": 29.112,
+      "sentences": [
+        {
+          "text": "動手寫之前，先準備發表模板：每個名詞一張卡，卡上有四格，分別是一句話、一個比喻、哪裡不像、一個場景畫面。",
+          "start": 0.0,
+          "end": 10.84
+        },
+        {
+          "text": "一句話要短，最好在二十個字以內；比喻要用生活裡摸得到、看得到的東西，例如硬幣、水波、樂譜。",
+          "start": 11.02,
+          "end": 20.348005
+        },
+        {
+          "text": "場景畫面要寫得夠清楚，讓別人照著做就能在動畫裡看到，例如打開哪一個場景、按哪一個按鈕。",
+          "start": 20.528005,
+          "end": 28.89601
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q016-quantum-glossary/audio/slide_03.mp3"
+    },
+    {
+      "page": 4,
+      "kind": "slide",
+      "v1slide": 4,
+      "title": "示範詞條：疊加",
+      "duration": 29.256,
+      "sentences": [
+        {
+          "text": "先看第一張示範卡：疊加。一句話是：箭頭不在北極、也不在南極，而是指向球面上另一個方向。",
+          "start": 0.0,
+          "end": 10.072018
+        },
+        {
+          "text": "比喻是一支指向東北方的風向標：它不是正北，也不是正東，而是一個新的方向。",
+          "start": 10.252018,
+          "end": 17.588027
+        },
+        {
+          "text": "哪裡不像？風向標看一眼就知道方向，量子位元一量只會得到零或一；場景畫面是量子位元場景裡，躺在赤道上的箭頭。",
+          "start": 17.768027,
+          "end": 29.040045
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q016-quantum-glossary/audio/slide_04.mp3"
+    },
+    {
+      "page": 5,
+      "kind": "demo",
+      "demo": "superposition",
+      "title": "動畫展示：疊加詞卡的畫面",
+      "duration": 42.432,
+      "sentences": [
+        {
+          "text": "打開三維動畫的量子位元場景，按下第三顆狀態按鈕，也就是加號態，箭頭就躺到赤道上，這就是疊加詞卡上的場景畫面。",
+          "start": 0.0,
+          "end": 10.408005000000001
+        },
+        {
+          "text": "右邊得到零和得到一上方的兩條青色細線一樣高，代表理論機率各一半；柱子還是平的，因為還沒測量。",
+          "start": 10.588005,
+          "end": 19.244014
+        },
+        {
+          "text": "按測量一次，箭頭一下子跳到北極或南極，測量器同時閃一下燈；一秒多以後，動畫重新準備同一個狀態，箭頭又回到赤道。",
+          "start": 19.424014,
+          "end": 30.480023
+        },
+        {
+          "text": "這就是風向標比喻哪裡不像：一次測量只得到零或一；先清除統計，再跑一千次，藍色和紅色柱子才差不多一樣高，數字都在五百左右。",
+          "start": 30.660023,
+          "end": 42.220023
+        }
+      ],
+      "audio": "audio/demo_superposition.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#qubit"
+    },
+    {
+      "page": 6,
+      "kind": "slide",
+      "v1slide": 5,
+      "title": "示範詞條：干涉",
+      "duration": 31.128,
+      "sentences": [
+        {
+          "text": "第二張示範卡是干涉。一句話：不同路線的振幅要先加起來，方向相同會變強，方向相反會抵消。",
+          "start": 0.0,
+          "end": 10.048005
+        },
+        {
+          "text": "比喻是水波：兩道水波相遇，波峰碰到波峰會疊得更高，波峰碰到波谷就互相抵消。",
+          "start": 10.228005,
+          "end": 17.900023
+        },
+        {
+          "text": "哪裡不像？水波是很多水一起動，量子干涉卻是電子一次只送一顆，累積起來也會排出條紋；場景畫面是干涉場景，把相位調到一百八十度。",
+          "start": 18.080023,
+          "end": 30.912041000000002
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q016-quantum-glossary/audio/slide_05.mp3"
+    },
+    {
+      "page": 7,
+      "kind": "demo",
+      "demo": "interference",
+      "title": "動畫展示：干涉詞卡的畫面",
+      "duration": 37.848,
+      "sentences": [
+        {
+          "text": "干涉詞卡的場景畫面在干涉場景：零態被哈達瑪閘分成上下兩條路，下面那條路多加一個相位，最後再合起來。",
+          "start": 0.0,
+          "end": 9.64
+        },
+        {
+          "text": "相位是零度的時候，右上方寫著得到零的機率是一，右下方通往一的兩支小箭頭方向相反，加起來是零。",
+          "start": 9.82,
+          "end": 18.644014
+        },
+        {
+          "text": "把相位慢慢拖到一百八十度，上下兩邊交換：右上方的機率變成零，右下方變成一。",
+          "start": 18.824014,
+          "end": 26.640023
+        },
+        {
+          "text": "這裡還藏著水波比喻的另一個不像：看水波不會讓波紋消失，可是打開中途偵測路徑，白色的總和箭頭不見了，兩邊都變成零點五。",
+          "start": 26.820023,
+          "end": 37.636032
+        }
+      ],
+      "audio": "audio/demo_interference.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#interference"
+    },
+    {
+      "page": 8,
+      "kind": "slide",
+      "v1slide": 6,
+      "title": "示範詞條：糾纏",
+      "duration": 30.216,
+      "sentences": [
+        {
+          "text": "第三張示範卡是糾纏。一句話：兩顆量子位元的結果互相關聯；以貝爾態來說，單看一顆是隨機的，對照兩顆卻永遠一樣。",
+          "start": 0.0,
+          "end": 11.776009
+        },
+        {
+          "text": "比喻是一對神祕骰子，分開來擲，點數總是一樣；哪裡不像？糾纏不能用來比光還快地傳訊息。",
+          "start": 11.956009,
+          "end": 21.788027
+        },
+        {
+          "text": "場景畫面是多量子位元場景：按下貝爾態，下排只剩零零和一一兩根柱子，各占一半。",
+          "start": 21.968027,
+          "end": 30.000045
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q016-quantum-glossary/audio/slide_06.mp3"
+    },
+    {
+      "page": 9,
+      "kind": "slide",
+      "v1slide": 7,
+      "title": "我的十個詞",
+      "duration": 26.304,
+      "sentences": [
+        {
+          "text": "示範完三張，換你挑十個詞；建議清單的前五個是量子位元、疊加、測量、量子閘和相位，都和一顆量子位元有關。",
+          "start": 0.0,
+          "end": 10.552018
+        },
+        {
+          "text": "後五個是干涉、糾纏、量子線路、格羅弗搜尋，還有第十四堂學的退相干。",
+          "start": 10.732018,
+          "end": 18.260023
+        },
+        {
+          "text": "你也可以換成自己更喜歡的詞，例如隱形傳態；重點是每一個詞，四格都要填滿。",
+          "start": 18.440023,
+          "end": 26.088028
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q016-quantum-glossary/audio/slide_07.mp3"
+    },
+    {
+      "page": 10,
+      "kind": "slide",
+      "v1slide": 8,
+      "title": "每個比喻都有限制",
+      "duration": 23.736,
+      "sentences": [
+        {
+          "text": "為什麼一定要說哪裡不像？因為比喻只能幫忙記，用過頭了，反而會把人帶到錯的方向。",
+          "start": 0.0,
+          "end": 8.488005000000001
+        },
+        {
+          "text": "最常見的壞例子是：疊加就是同時是零又是一；這樣說，會讓人以為量子電腦可以同時試所有答案。",
+          "start": 8.668005,
+          "end": 16.772019
+        },
+        {
+          "text": "暫停影片想一想：把量子位元比喻成一枚硬幣，哪裡像，哪裡不像？",
+          "start": 16.952019,
+          "end": 23.520024
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q016-quantum-glossary/audio/slide_08.mp3"
+    },
+    {
+      "page": 11,
+      "kind": "demo",
+      "demo": "phase",
+      "title": "動畫展示：壞比喻差在哪裡",
+      "duration": 44.64,
+      "sentences": [
+        {
+          "text": "用三維動畫的單一量子位元閘場景，看看同時是零又是一這個說法差在哪裡；先重設，箭頭指著北極。",
+          "start": 0.0,
+          "end": 9.040000000000001
+        },
+        {
+          "text": "按哈達瑪閘，箭頭倒到赤道上，讀數是零和一各一半；再按相位翻轉閘，箭頭繞著直立的軸轉半圈，跑到赤道的另一邊，讀數還是各一半。",
+          "start": 9.22,
+          "end": 20.78
+        },
+        {
+          "text": "如果疊加只是同時是零又是一，相位翻轉閘前後這兩個方向應該沒有差別；可是再按一次哈達瑪閘，箭頭轉到南極，讀數寫著得到一的機率是一。",
+          "start": 20.96,
+          "end": 32.64
+        },
+        {
+          "text": "重設以後重來一次：按哈達瑪閘到赤道上，這次不按相位翻轉閘，同樣再按哈達瑪閘，箭頭會回到北極；相位看不見，卻決定了答案。",
+          "start": 32.82,
+          "end": 44.428005
+        }
+      ],
+      "audio": "audio/demo_phase.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#gates"
+    },
+    {
+      "page": 12,
+      "kind": "slide",
+      "v1slide": 9,
+      "title": "首映會：小百科發表",
+      "duration": 25.56,
+      "sentences": [
+        {
+          "text": "實作的時候，父子一起把十張卡寫完，然後辦一場首映會：你是發表的人，家人當觀眾。",
+          "start": 0.0,
+          "end": 8.464014
+        },
+        {
+          "text": "每個詞用大約三十秒，不看稿說出一句話、比喻和哪裡不像，再打開動畫指出那個畫面。",
+          "start": 8.644014,
+          "end": 16.868028000000002
+        },
+        {
+          "text": "觀眾每聽完一個詞，就給一個讚和一個問題；把問題記下來、修改卡片，這就是接受回饋。",
+          "start": 17.048028000000002,
+          "end": 25.344037
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q016-quantum-glossary/audio/slide_09.mp3"
+    },
+    {
+      "page": 13,
+      "kind": "slide",
+      "v1slide": 10,
+      "title": "換你改造：兩分鐘導覽",
+      "duration": 24.96,
+      "sentences": [
+        {
+          "text": "下半場換你改造：挑一個最喜歡的三維動畫場景，錄一段兩分鐘的導覽，介紹給沒看過的人。",
+          "start": 0.0,
+          "end": 8.224014
+        },
+        {
+          "text": "導覽分三段：先說畫面上看到什麼，再示範按哪一個按鈕，最後說這個變化代表哪一個量子名詞。",
+          "start": 8.404014,
+          "end": 16.964014
+        },
+        {
+          "text": "錄完自己從頭聽一次，找出一個說不清楚的地方，改好再錄一次，存成第二個版本。",
+          "start": 17.144014,
+          "end": 24.744014
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q016-quantum-glossary/audio/slide_10.mp3"
+    },
+    {
+      "page": 14,
+      "kind": "slide",
+      "v1slide": 11,
+      "title": "兩小時的首映會",
+      "duration": 28.104,
+      "sentences": [
+        {
+          "text": "兩小時的安排是：開場十分鐘，看示範詞條、練習說哪裡不像十五分鐘，接著四十分鐘父子一起寫十張卡、辦首映會，然後休息十分鐘。",
+          "start": 0.0,
+          "end": 11.704014
+        },
+        {
+          "text": "下半場三十分鐘錄兩分鐘的導覽；接著十分鐘交換角色，由你教爸爸怎麼操作，每個畫面背後的原理是什麼。",
+          "start": 11.884014,
+          "end": 21.044014
+        },
+        {
+          "text": "最後五分鐘錄音總結，替你的量子小百科取一個名字，再存一個版本。",
+          "start": 21.224014,
+          "end": 27.888028
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q016-quantum-glossary/audio/slide_11.mp3"
+    },
+    {
+      "page": 15,
+      "kind": "slide",
+      "v1slide": 12,
+      "title": "最後一關：教爸爸",
+      "duration": 30.6,
+      "sentences": [
+        {
+          "text": "最後一關，請不看稿，挑三個名詞，各用一句話說給爸爸聽，再打開動畫指出它的畫面。",
+          "start": 0.0,
+          "end": 8.224014
+        },
+        {
+          "text": "再指出一個要注意的地方：每個比喻都有限制，說完比喻，一定要接著說它哪裡不像。",
+          "start": 8.404014,
+          "end": 16.076032
+        },
+        {
+          "text": "今天的作品是十個詞的量子小百科，下一堂進入第二階段，看量子電腦的硬體，問一個問題：為什麼要做人造原子？我是陳犀牛，保持好奇，我們下次見！",
+          "start": 16.256032,
+          "end": 30.384037
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q016-quantum-glossary/audio/slide_12.mp3"
+    }
+  ]
+}

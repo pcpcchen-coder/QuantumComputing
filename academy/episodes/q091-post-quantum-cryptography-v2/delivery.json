@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q091",
+  "version": "Q091-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-20",
+  "episodePath": "academy/episodes/q091-post-quantum-cryptography-v2",
+  "basedOn": "academy/episodes/q091-post-quantum-cryptography（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 471.445,
+  "pages": 13,
+  "demos": [
+    {
+      "key": "period",
+      "title": "動畫展示：用干涉找出週期",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#shor"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.4,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q091-post-quantum-cryptography-v2-zh-TW.mp4": {
+      "bytes": 81714413,
+      "sha256": "c1387a2dd725d8ffad92fdf211733be340fac5e9c5828aa5e3c8ebc7ee4f665f"
+    },
+    "q091-post-quantum-cryptography-v2-master.mp4": {
+      "bytes": 83543375,
+      "sha256": "67af1f83442d3d5a387d91ca2a6449facb623505b2e25d5a56981bb06c323ac6"
+    },
+    "narration-only.mp3": {
+      "bytes": 11316244,
+      "sha256": "e908422558e6fd2823ce9c1aaa8fb468da44333967b81baa16981c0b6c8b55a1"
+    }
+  },
+  "package": {
+    "filename": "Q091-v2_量子電腦學程_後量子密碼_動畫展示版_2026-11-20.zip",
+    "bytes": 180155770,
+    "sha256": "cc3072c42768a3e46ca74fe0060c235bfff987b3d4966c44e746f278b5f4f39d",
+    "parts": [
+      {
+        "name": "Q091-v2_量子電腦學程_後量子密碼_動畫展示版_2026-11-20.zip.part01",
+        "bytes": 29360128,
+        "sha256": "67ac14b3315b44cf381259d25a897cc63231693f000e082703991bb98507dc10"
+      },
+      {
+        "name": "Q091-v2_量子電腦學程_後量子密碼_動畫展示版_2026-11-20.zip.part02",
+        "bytes": 29360128,
+        "sha256": "7891d027c209a143d48cb0f504a485a9e5fec19a5bea44ea6b49830499900ff7"
+      },
+      {
+        "name": "Q091-v2_量子電腦學程_後量子密碼_動畫展示版_2026-11-20.zip.part03",
+        "bytes": 29360128,
+        "sha256": "2ae7d569c66406f0541b4073468e8e1064a42aa0fb4d2036d3e23428931614a3"
+      },
+      {
+        "name": "Q091-v2_量子電腦學程_後量子密碼_動畫展示版_2026-11-20.zip.part04",
+        "bytes": 29360128,
+        "sha256": "6cf4db6b97f33f62fbe116e1fc4917f00fffd793e235a0f4eef1285b5dac90e2"
+      },
+      {
+        "name": "Q091-v2_量子電腦學程_後量子密碼_動畫展示版_2026-11-20.zip.part05",
+        "bytes": 29360128,
+        "sha256": "3697f1c00d26e5e5ced5e41df476b90d23527ca7066b942f8818ec5d9ed990dc"
+      },
+      {
+        "name": "Q091-v2_量子電腦學程_後量子密碼_動畫展示版_2026-11-20.zip.part06",
+        "bytes": 29360128,
+        "sha256": "8d346abcdcec4de21dc94182641ab26220973ec78559c4f865330a992ed12595"
+      },
+      {
+        "name": "Q091-v2_量子電腦學程_後量子密碼_動畫展示版_2026-11-20.zip.part07",
+        "bytes": 3995002,
+        "sha256": "4330c0f7a2585a7886d4a259c6a8711bc604418a35255a32d3aac76477a4bc35"
+      }
+    ],
+    "handedOver": "2026-11-20 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1ZOQEWjgkBnzg6-88LtQiSOgQeO2JG9Wx",
+    "uploadedAt": "2026-11-19",
+    "files": [
+      {
+        "name": "Q091 Shor 之後：後量子密碼（動畫展示版）.mp4",
+        "id": "1W1uKmrt23tM5lmu8DiSWczKijWUZSnT7",
+        "bytes": 81714413,
+        "url": "https://drive.google.com/file/d/1W1uKmrt23tM5lmu8DiSWczKijWUZSnT7/view"
+      },
+      {
+        "name": "Q091 後量子密碼（動畫展示版）簡報.pptx",
+        "id": "1HK0NoDoD9y9oxzwkRMNTB5VqZ_xmIHLe",
+        "bytes": 2750269,
+        "url": "https://docs.google.com/presentation/d/1HK0NoDoD9y9oxzwkRMNTB5VqZ_xmIHLe/edit"
+      },
+      {
+        "name": "Q091 後量子密碼 教材.zip",
+        "id": "1izaiiyLk1vlWARs_I6_R2a4pNtqjHu8I",
+        "bytes": 388109,
+        "url": "https://drive.google.com/file/d/1izaiiyLk1vlWARs_I6_R2a4pNtqjHu8I/view"
+      }
+    ]
+  }
+}

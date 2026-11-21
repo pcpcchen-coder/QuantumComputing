@@ -23,13 +23,20 @@
     "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q006｜干涉：波可以互相抵消",
     "難度 1–5": 2,
     "沿用簡報頁": [
-      "如何操作量子電腦（slides/QC_Operation_Talk.pptx）p38"
+      "如何操作量子電腦（slides/QC_Operation_Talk.pptx）p38",
+      "量子電路入門：八個範例（slides/output/basic-circuits.pptx）p7–9"
     ],
     "沿用 3D 場景": [
-      "o:interference"
+      "o:interference",
+      "bc:interference"
     ],
     "需新增素材": [
       "★ 雙狹縫／Mach–Zehnder 干涉儀場景"
+    ],
+    "沿用文件": [],
+    "2026-11-18 補充素材": [
+      "簡報 G p7–9",
+      "場景 bc:interference"
     ],
     "YouTube 關鍵字 1": "干涉：波可以互相抵消 quantum computing explained beginner",
     "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E5%B9%B2%E6%B6%89%EF%BC%9A%E6%B3%A2%E5%8F%AF%E4%BB%A5%E4%BA%92%E7%9B%B8%E6%8A%B5%E6%B6%88+quantum+computing+explained+beginner",
@@ -41,8 +48,10 @@
     "YouTube 連結 3": "https://www.youtube.com/results?search_query=%E5%B9%B2%E6%B6%89%EF%BC%9A%E6%B3%A2%E5%8F%AF%E4%BB%A5%E4%BA%92%E7%9B%B8%E6%8A%B5%E6%B6%88+quantum+computing+lecture+visualization",
     "影片用途 3": "課後延伸"
   },
-  "curriculumSha256": "493446a21451c8a5c08a1723cfd04436e51cbfa4806049b55a765d22ecf2ba53",
-  "episodePaths": [],
+  "curriculumSha256": "eb081f5848bd31bd8d734680a2d88f6821b6b30fa5d9ff1d813d06872e8f71c3",
+  "episodePaths": [
+    "academy/episodes/q006-interference-waves-v2"
+  ],
   "minutes": 120,
   "status": "planned"
 }

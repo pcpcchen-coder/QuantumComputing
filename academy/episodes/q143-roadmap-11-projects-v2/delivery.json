@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q143",
+  "version": "Q143-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-19",
+  "episodePath": "academy/episodes/q143-roadmap-11-projects-v2",
+  "basedOn": "academy/episodes/q143-roadmap-11-projects（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 541.909,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "roadmap",
+      "title": "動畫展示：卡片背後的痛點",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/power1000.html#roadmap"
+    },
+    {
+      "key": "autotour",
+      "title": "動畫展示：誰先開工？",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/power1000.html#devplan"
+    },
+    {
+      "key": "checks",
+      "title": "動畫展示：判準與時間機器",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/power1000.html#devplan"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.5,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q143-roadmap-11-projects-v2-zh-TW.mp4": {
+      "bytes": 89703021,
+      "sha256": "4e5e45a735595d66165040b70a8c04907b581d8684e053d3c6373e346748bb20"
+    },
+    "q143-roadmap-11-projects-v2-master.mp4": {
+      "bytes": 90922687,
+      "sha256": "d21a2478cfa8effc9bba5f23a6f47c24a0c3b7795d860429b833b7e22a04149b"
+    },
+    "narration-only.mp3": {
+      "bytes": 13007380,
+      "sha256": "1a466353b3993328f05c00ba90254782ea3042f7057b5821003fc64171e96552"
+    }
+  },
+  "package": {
+    "filename": "Q143-v2_量子電腦學程_三階段路線圖_動畫展示版_2026-11-19.zip",
+    "bytes": 197907565,
+    "sha256": "8e407f80e7d681120c581006af1022a8d94126a5a4e93cdda2f464bced1544fc",
+    "parts": [
+      {
+        "name": "Q143-v2_量子電腦學程_三階段路線圖_動畫展示版_2026-11-19.zip.part01",
+        "bytes": 29360128,
+        "sha256": "cc21375fcb7f2637d53e1ca306122ab72926b74c702cbb1508006b2e2483179a"
+      },
+      {
+        "name": "Q143-v2_量子電腦學程_三階段路線圖_動畫展示版_2026-11-19.zip.part02",
+        "bytes": 29360128,
+        "sha256": "ea70c036e4cb00f68422903adeec5031cb016ae893e8a3a8474731af440ac89d"
+      },
+      {
+        "name": "Q143-v2_量子電腦學程_三階段路線圖_動畫展示版_2026-11-19.zip.part03",
+        "bytes": 29360128,
+        "sha256": "1dc8a2c56e3090b9f9d62ab18f567c5bed5bb9b9b6953e4ebbb3455db7891755"
+      },
+      {
+        "name": "Q143-v2_量子電腦學程_三階段路線圖_動畫展示版_2026-11-19.zip.part04",
+        "bytes": 29360128,
+        "sha256": "abffe274548ec77e6208f5a3fa6650fdd50137b24c355e687e41ea686a388386"
+      },
+      {
+        "name": "Q143-v2_量子電腦學程_三階段路線圖_動畫展示版_2026-11-19.zip.part05",
+        "bytes": 29360128,
+        "sha256": "de2016506bae5910bbe667637bc39e98f4fcdef5cdef588bb4ea8ca60d163a27"
+      },
+      {
+        "name": "Q143-v2_量子電腦學程_三階段路線圖_動畫展示版_2026-11-19.zip.part06",
+        "bytes": 29360128,
+        "sha256": "85c943856b1382729960db0e0a3af6be9bbbf43e064fbdc814ef5a1b697e7208"
+      },
+      {
+        "name": "Q143-v2_量子電腦學程_三階段路線圖_動畫展示版_2026-11-19.zip.part07",
+        "bytes": 21746797,
+        "sha256": "3b14e8d8387834bb3ee07dc743908bcd8929f2758cf17b3dae42287a8d970b06"
+      }
+    ],
+    "handedOver": "2026-11-19 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "19TfKYX25oeVvzZEsGfFYyF8D3W3tknd7",
+    "uploaded": "2026-11-18",
+    "md5Verified": true,
+    "files": [
+      {
+        "name": "Q143 三階段路線圖：三階段路線圖與 11 個開發項目（動畫展示版）.mp4",
+        "id": "1qPslgzMjELndHfSDJyvVqdhy-yjq8pj-",
+        "link": "https://drive.google.com/file/d/1qPslgzMjELndHfSDJyvVqdhy-yjq8pj-/view?usp=drivesdk"
+      },
+      {
+        "name": "Q143 三階段路線圖（動畫展示版）簡報.pptx",
+        "id": "11lBQVMHacHmZyIEadLk2wUHUCFFmQ7H3",
+        "link": "https://docs.google.com/presentation/d/11lBQVMHacHmZyIEadLk2wUHUCFFmQ7H3/edit?usp=drivesdk"
+      },
+      {
+        "name": "Q143 三階段路線圖 教材.zip",
+        "id": "1sjk2HUn57xY4qmfEzaYjNLiZWnTJmqjB",
+        "link": "https://drive.google.com/file/d/1sjk2HUn57xY4qmfEzaYjNLiZWnTJmqjB/view?usp=drivesdk"
+      }
+    ]
+  }
+}

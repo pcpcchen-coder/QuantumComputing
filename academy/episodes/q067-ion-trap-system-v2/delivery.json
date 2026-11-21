@@ -1,0 +1,130 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q067",
+  "version": "Q067-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-18",
+  "episodePath": "academy/episodes/q067-ion-trap-system-v2",
+  "basedOn": "academy/episodes/q067-ion-trap-system（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 512.405,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "lasers",
+      "title": "動畫展示：尋寶開始——找雷射",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/atoms.html#ionsys"
+    },
+    {
+      "key": "signals",
+      "title": "動畫展示：追電線、找設施",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/atoms.html#ionsys"
+    },
+    {
+      "key": "compare",
+      "title": "動畫展示：超導機房比一比",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/peripherals.html#overview"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.5,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q067-ion-trap-system-v2-zh-TW.mp4": {
+      "bytes": 96648502,
+      "sha256": "b432ebdc95d2f5df3834af79d0281ff276c5a4255a9da9314363bf4b87a29bca"
+    },
+    "q067-ion-trap-system-v2-master.mp4": {
+      "bytes": 99211819,
+      "sha256": "96c1d8ee73c9d1d343a1e3ae8d70a0c491fc279df20764ab438ef91cfdcc61a7"
+    },
+    "narration-only.mp3": {
+      "bytes": 12299476,
+      "sha256": "bb60d4a78b0251ff218f2ec03a0f8380fc53b324beafbc1cc10e76a2bdf49982"
+    }
+  },
+  "package": {
+    "filename": "Q067-v2_量子電腦學程_離子阱尋寶_動畫展示版_2026-11-18.zip",
+    "bytes": 213130598,
+    "sha256": "74d74f26751dd7d5687ec9d310b659bd317d90073afe2eb95c30398c5dd0c989",
+    "parts": [
+      {
+        "name": "Q067-v2_量子電腦學程_離子阱尋寶_動畫展示版_2026-11-18.zip.part01",
+        "bytes": 29360128,
+        "sha256": "20b7a491c1eff39ffa44558d9e94abcf689b7b77a56a5b6a802fb4cf78a16369"
+      },
+      {
+        "name": "Q067-v2_量子電腦學程_離子阱尋寶_動畫展示版_2026-11-18.zip.part02",
+        "bytes": 29360128,
+        "sha256": "d85c7c9a8d133dea112a821477a094d721f769bad85c4a330f1a4f2b667a6fc0"
+      },
+      {
+        "name": "Q067-v2_量子電腦學程_離子阱尋寶_動畫展示版_2026-11-18.zip.part03",
+        "bytes": 29360128,
+        "sha256": "680de676cebcd291f92e875d7364c624d597b3581bdcbe83829c74fa019c7411"
+      },
+      {
+        "name": "Q067-v2_量子電腦學程_離子阱尋寶_動畫展示版_2026-11-18.zip.part04",
+        "bytes": 29360128,
+        "sha256": "5b657a649eb5d9055117dfbcf01f3d6afe348d79ac45bd3c0ed1a1b0b303cddf"
+      },
+      {
+        "name": "Q067-v2_量子電腦學程_離子阱尋寶_動畫展示版_2026-11-18.zip.part05",
+        "bytes": 29360128,
+        "sha256": "b654d4eafd5453efff14aad8e29bdfcf0f7c688e14bd8f9b83c55664cefb4b15"
+      },
+      {
+        "name": "Q067-v2_量子電腦學程_離子阱尋寶_動畫展示版_2026-11-18.zip.part06",
+        "bytes": 29360128,
+        "sha256": "beefcaf83c0ba912f013040cd8c79cfb46060f30d20ccd3b4879d69a7181c2bc"
+      },
+      {
+        "name": "Q067-v2_量子電腦學程_離子阱尋寶_動畫展示版_2026-11-18.zip.part07",
+        "bytes": 29360128,
+        "sha256": "46490753e864ec16338c2a96be88d33aeb9a2d3574c18b2824afde90f4faf614"
+      },
+      {
+        "name": "Q067-v2_量子電腦學程_離子阱尋寶_動畫展示版_2026-11-18.zip.part08",
+        "bytes": 7609702,
+        "sha256": "5d88893f67a9c6366bc13520839ecf854d6e81346da0954d923d39bba7b76bed"
+      }
+    ],
+    "handedOver": "2026-11-18 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1eZLiQdOHdFov3xfVLuJtqORZ4fjXzXXV",
+    "folderName": "量子電腦學程 Q041–Q070 動畫展示版（v2）",
+    "uploadedAt": "2026-11-18",
+    "uploadedBy": "製作代理（Claude，Drive API，上傳後比對 md5）",
+    "files": [
+      {
+        "name": "Q067 離子阱尋寶：離子阱系統全景（動畫展示版）.mp4",
+        "id": "1Ul2_h8qSaI22OHRf7rFNz-sz7eCKlAhd",
+        "size": 96648502,
+        "link": "https://drive.google.com/file/d/1Ul2_h8qSaI22OHRf7rFNz-sz7eCKlAhd/view?usp=drivesdk"
+      },
+      {
+        "name": "Q067 離子阱尋寶（動畫展示版）簡報.pptx",
+        "id": "1pmTaPdqbdIbtCZ2-EpEb7MrZ3nPVRjOM",
+        "size": 3997164,
+        "link": "https://docs.google.com/presentation/d/1pmTaPdqbdIbtCZ2-EpEb7MrZ3nPVRjOM/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true"
+      },
+      {
+        "name": "Q067 離子阱尋寶 教材.zip",
+        "id": "1X6_4PBiMDfjE-lwU0cfr4wqmlHp-zVpx",
+        "size": 568548,
+        "link": "https://drive.google.com/file/d/1X6_4PBiMDfjE-lwU0cfr4wqmlHp-zVpx/view?usp=drivesdk"
+      }
+    ]
+  }
+}

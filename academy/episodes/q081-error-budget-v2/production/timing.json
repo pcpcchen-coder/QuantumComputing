@@ -1,0 +1,368 @@
+{
+  "version": 2,
+  "opening": 60.277,
+  "scenes": [
+    {
+      "page": 1,
+      "kind": "slide",
+      "v1slide": 1,
+      "title": "錯誤預算：線路能跑多深",
+      "duration": 29.88,
+      "sentences": [
+        {
+          "text": "歡迎回到父子科技學院的量子電腦學程，我是陳犀牛，今天是量子第八十一堂，錯誤預算：線路能跑多深，這是依課綱製作的課前教學版，並非實際上課錄音。",
+          "start": 0.0,
+          "end": 12.928005
+        },
+        {
+          "text": "上一堂我們當產品評審，用好幾把尺比較各種平台，其中一把尺就是錯誤率。",
+          "start": 13.108005,
+          "end": 20.27601
+        },
+        {
+          "text": "今天要把錯誤率變成一個實用的問題：每個閘都有一點點出錯的機會，一條線路最多能疊幾層，結果還靠得住？",
+          "start": 20.45601,
+          "end": 29.664015
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q081-error-budget/audio/slide_01.mp3"
+    },
+    {
+      "page": 2,
+      "kind": "slide",
+      "v1slide": 2,
+      "title": "三步：連乘、畫線、算深度",
+      "duration": 22.584,
+      "sentences": [
+        {
+          "text": "今天分三步：先把每個閘的保真度乘起來，再畫一條成功率的底線，最後算出能跑幾層。",
+          "start": 0.0,
+          "end": 8.176009
+        },
+        {
+          "text": "今天的好玩機制是基準測試：先用紙筆估，再讓模擬器實際跑一次，看估得準不準。",
+          "start": 8.356009,
+          "end": 16.028027
+        },
+        {
+          "text": "今天的作品，是一張錯誤預算表，列出三種保真度各能跑多深。",
+          "start": 16.208027,
+          "end": 22.368027
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q081-error-budget/audio/slide_02.mp3"
+    },
+    {
+      "page": 3,
+      "kind": "slide",
+      "v1slide": 3,
+      "title": "一個閘的成績單：保真度",
+      "duration": 25.248,
+      "sentences": [
+        {
+          "text": "保真度可以想成一個閘做對的機率，百分之九十九點九的保真度，就表示大約每一千次會錯一次。",
+          "start": 0.0,
+          "end": 8.056009
+        },
+        {
+          "text": "錯誤率就是一減掉保真度；兩位元閘的錯誤率大約在千分之一到百分之一，是目前最主要的錯誤來源。",
+          "start": 8.236009,
+          "end": 16.844014
+        },
+        {
+          "text": "除了閘，最後的讀取也會出錯，所以預算表裡要把單位元閘、兩位元閘和讀取分開記。",
+          "start": 17.024014,
+          "end": 25.032019000000002
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q081-error-budget/audio/slide_03.mp3"
+    },
+    {
+      "page": 4,
+      "kind": "slide",
+      "v1slide": 4,
+      "title": "連乘：每一步都要做對",
+      "duration": 24.192,
+      "sentences": [
+        {
+          "text": "一條線路要成功，每一個閘、每一次讀取都得做對，所以要把所有的保真度乘在一起。",
+          "start": 0.0,
+          "end": 7.432018
+        },
+        {
+          "text": "寫成算式：線路的成功率，大約等於單位元閘保真度的閘數次方，乘上兩位元閘的，再乘上讀取的。",
+          "start": 7.612018,
+          "end": 16.580023
+        },
+        {
+          "text": "就像連續投籃，每一球的命中率都很高，可是要連進一百球，難度就一下子變大。",
+          "start": 16.760023,
+          "end": 23.976032
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q081-error-budget/audio/slide_04.mp3"
+    },
+    {
+      "page": 5,
+      "kind": "demo",
+      "demo": "compound",
+      "title": "動畫展示：雜訊就是連乘",
+      "duration": 41.352,
+      "sentences": [
+        {
+          "text": "打開量子線路場景，選格羅弗搜尋按播放，亮起的閘一欄一欄往右移，這條線路有八欄、一共十二個閘，大約要走十秒。",
+          "start": 0.0,
+          "end": 10.312018
+        },
+        {
+          "text": "走到測量欄後，右下小圖只有一一這根柱子，剛好頂到青色的理想線；現在打開加入雜訊的開關，每個閘有百分之一、讀取有百分之三的機會出錯。",
+          "start": 10.492018,
+          "end": 22.220022999999998
+        },
+        {
+          "text": "一一那根柱子立刻變矮，另外三個結果冒出小柱子；這個開關的算法正是連乘，零點九九自乘十二次，大約百分之八十九。",
+          "start": 22.400022999999997,
+          "end": 32.832041
+        },
+        {
+          "text": "做錯的那一成多會隨機落在四個結果之一，再加上讀取出錯，所以一一的柱子比青線矮了一截。",
+          "start": 33.012040999999996,
+          "end": 41.140046
+        }
+      ],
+      "audio": "audio/demo_compound.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#circuit"
+    },
+    {
+      "page": 6,
+      "kind": "slide",
+      "v1slide": 5,
+      "title": "比一比：差一個九",
+      "duration": 24.312,
+      "sentences": [
+        {
+          "text": "比一比：同樣跑一百個閘，保真度百分之九十九的話，全部做對的機會只剩大約三成七。",
+          "start": 0.0,
+          "end": 7.816009
+        },
+        {
+          "text": "保真度提高到百分之九十九點九，同樣一百個閘，全部做對的機會還有大約九成。",
+          "start": 7.996009,
+          "end": 15.500023
+        },
+        {
+          "text": "錯誤率只差零點九個百分點，乘了一百次以後，結果就差了一大截，小錯累積起來就變成大錯。",
+          "start": 15.680023,
+          "end": 24.096032
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q081-error-budget/audio/slide_05.mp3"
+    },
+    {
+      "page": 7,
+      "kind": "slide",
+      "v1slide": 6,
+      "title": "畫一條底線：剩一半",
+      "duration": 22.896,
+      "sentences": [
+        {
+          "text": "要說能跑多深，得先畫一條底線，這條線可以自己定，今天先用成功率還剩一半。",
+          "start": 0.0,
+          "end": 7.48
+        },
+        {
+          "text": "有個好記的估法：成功率剩一半的閘數，大約是零點六九除以錯誤率。",
+          "start": 7.66,
+          "end": 14.108005
+        },
+        {
+          "text": "簡報上的例子：兩位元閘錯誤率百分之零點三，大約兩百三十個兩位元閘之後，成功率就只剩一半。",
+          "start": 14.288005,
+          "end": 22.680023
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q081-error-budget/audio/slide_06.mp3"
+    },
+    {
+      "page": 8,
+      "kind": "slide",
+      "v1slide": 7,
+      "title": "多一個九，深十倍",
+      "duration": 23.568,
+      "sentences": [
+        {
+          "text": "照這個估法，保真度百分之九十九，大約六十九個閘，成功率就剩一半。",
+          "start": 0.0,
+          "end": 6.784014
+        },
+        {
+          "text": "百分之九十九點九，大約六百九十三個閘；百分之九十九點九九，大約六千九百三十一個閘。",
+          "start": 6.964014,
+          "end": 15.260023
+        },
+        {
+          "text": "保真度每多一個九，能跑的閘數就大約多十倍；如果一層有十個閘，再除以十就是層數。",
+          "start": 15.440023,
+          "end": 23.352041
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q081-error-budget/audio/slide_07.mp3"
+    },
+    {
+      "page": 9,
+      "kind": "demo",
+      "demo": "deeper",
+      "title": "動畫展示：閘越多，越模糊",
+      "duration": 38.496,
+      "sentences": [
+        {
+          "text": "再開一次量子線路場景，先打開雜訊，選只有三個閘的干涉線路按播放，走到測量欄時，小圖裡一的柱子幾乎頂到青線，零只冒出一點。",
+          "start": 0.0,
+          "end": 11.584014
+        },
+        {
+          "text": "換成十二個閘的格羅弗搜尋同樣按播放，這次要走八欄，亮起的閘一欄一欄往右移，大約十秒才會走到測量欄。",
+          "start": 11.764014,
+          "end": 21.140023
+        },
+        {
+          "text": "走到測量欄後，一一的柱子離青線明顯遠了一截，其他三個結果也冒出小柱子。",
+          "start": 21.320023,
+          "end": 28.584037
+        },
+        {
+          "text": "閘從三個變成十二個，連乘起來的成功率就從大約九成七掉到不到九成，線路越深，正確答案就越被雜訊淹沒。",
+          "start": 28.764037,
+          "end": 38.284037
+        }
+      ],
+      "audio": "audio/demo_deeper.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#circuit"
+    },
+    {
+      "page": 10,
+      "kind": "slide",
+      "v1slide": 8,
+      "title": "為什麼還不夠：數十億個閘",
+      "duration": 22.944,
+      "sentences": [
+        {
+          "text": "可是有用的演算法要跑很深，例如用秀爾演算法分解兩千零四十八位元的密碼金鑰，需要數十億個閘。",
+          "start": 0.0,
+          "end": 8.584014
+        },
+        {
+          "text": "要讓這麼多閘一路做對，錯誤率得降到大約百億分之一以下。",
+          "start": 8.764014,
+          "end": 14.156032
+        },
+        {
+          "text": "光靠改善硬體，錯誤率大約只能做到千分之一到萬分之一，剩下的差距，要靠量子錯誤更正來補。",
+          "start": 14.336032,
+          "end": 22.72805
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q081-error-budget/audio/slide_08.mp3"
+    },
+    {
+      "page": 11,
+      "kind": "slide",
+      "v1slide": 9,
+      "title": "基準測試：先估再跑",
+      "duration": 23.976,
+      "sentences": [
+        {
+          "text": "實作的時候玩基準測試：爸爸指定一條線路，你先數出有幾個閘，用計算機連乘，寫下預測的成功率。",
+          "start": 0.0,
+          "end": 9.544014
+        },
+        {
+          "text": "接著爸爸在動畫的量子線路場景打開雜訊，跑一千次，看理想答案實際出現幾次。",
+          "start": 9.724014,
+          "end": 17.228028000000002
+        },
+        {
+          "text": "把預測和實測寫在一起，差得多的時候，想一想是哪裡沒有算進去。",
+          "start": 17.408028,
+          "end": 23.760046000000003
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q081-error-budget/audio/slide_09.mp3"
+    },
+    {
+      "page": 12,
+      "kind": "slide",
+      "v1slide": 10,
+      "title": "換你改造：用模擬器驗證",
+      "duration": 25.296,
+      "sentences": [
+        {
+          "text": "下半場換你改造：動畫的雜訊設定是每個閘百分之一、每次讀取百分之三，先用它們做出預算表。",
+          "start": 0.0,
+          "end": 8.104014000000001
+        },
+        {
+          "text": "例如貝爾態有兩個閘，零點九九的平方大約九成八，再乘上兩次讀取的零點九七，大約剩九成二。",
+          "start": 8.284014,
+          "end": 16.580023
+        },
+        {
+          "text": "實際跑出來常常比預算高一點，因為模擬器裡做錯的那幾次會亂跳，有時剛好又落在正確答案上。",
+          "start": 16.760023,
+          "end": 25.080023
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q081-error-budget/audio/slide_10.mp3"
+    },
+    {
+      "page": 13,
+      "kind": "slide",
+      "v1slide": 11,
+      "title": "兩小時的錯誤預算實驗室",
+      "duration": 28.896,
+      "sentences": [
+        {
+          "text": "兩小時的安排是：開場十分鐘，認識保真度和連乘十五分鐘，接著四十分鐘一起算出三種保真度能跑幾層，然後休息十分鐘。",
+          "start": 0.0,
+          "end": 10.504014
+        },
+        {
+          "text": "下半場三十分鐘用模擬器驗證預算，接著十分鐘交換角色，由你教爸爸怎麼用連乘估深度。",
+          "start": 10.684014,
+          "end": 18.908028
+        },
+        {
+          "text": "最後五分鐘錄音總結，替錯誤預算表取名字，存一個版本；記得小錯會累積成大錯，寫作業的時候也一樣。",
+          "start": 19.088028,
+          "end": 28.680046
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q081-error-budget/audio/slide_11.mp3"
+    },
+    {
+      "page": 14,
+      "kind": "slide",
+      "v1slide": 12,
+      "title": "最後一關：教爸爸算預算",
+      "duration": 31.008,
+      "sentences": [
+        {
+          "text": "最後一關，請不看稿說出：為什麼要把保真度連乘？保真度多一個九，能跑的深度大約變成幾倍？",
+          "start": 0.0,
+          "end": 9.496009
+        },
+        {
+          "text": "再指出一個限制：連乘只是粗估，真實的錯誤可能好幾個一起發生，還可能漏到零和一以外的能階。",
+          "start": 9.676009,
+          "end": 17.900023
+        },
+        {
+          "text": "今天的作品是錯誤預算表，下一堂我們學錯誤緩解，在還沒有錯誤更正之前，先用統計的方法把估計值修得更準；我是陳犀牛，保持好奇，我們下次見！",
+          "start": 18.080023,
+          "end": 30.792041
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q081-error-budget/audio/slide_12.mp3"
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q082",
+  "version": "Q082-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-19",
+  "episodePath": "academy/episodes/q082-error-mitigation-v2",
+  "basedOn": "academy/episodes/q082-error-mitigation（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 493.3,
+  "pages": 14,
+  "demos": [
+    {
+      "key": "noise",
+      "title": "動畫展示：理想結果和帶雜訊的結果",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#circuit"
+    },
+    {
+      "key": "readout",
+      "title": "動畫展示：讀錯是怎麼發生的",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#readout"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.5,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q082-error-mitigation-v2-zh-TW.mp4": {
+      "bytes": 84608367,
+      "sha256": "2639fc97719f1d5c8356b8641cb1ad6a05caaf864c20791d20c153ee9accd244"
+    },
+    "q082-error-mitigation-v2-master.mp4": {
+      "bytes": 86667095,
+      "sha256": "72f69133e9e48c416360dbe968b17ddf1353f3f495da7b8b55d990c82df4a603"
+    },
+    "narration-only.mp3": {
+      "bytes": 11840404,
+      "sha256": "904add0b49f5c6efe1f8f56ad1f4d8454e95d13e87be21b8b9ff20097525522f"
+    }
+  },
+  "package": {
+    "filename": "Q082-v2_量子電腦學程_錯誤緩解_動畫展示版_2026-11-19.zip",
+    "bytes": 186753288,
+    "sha256": "41b370a0384606a59b9f07ca847996387b7825ec4828173626470d5b88c55941",
+    "parts": [
+      {
+        "name": "Q082-v2_量子電腦學程_錯誤緩解_動畫展示版_2026-11-19.zip.part01",
+        "bytes": 29360128,
+        "sha256": "18edc44d895be89c10a99d15377447eff740d8548beeee56aee168b6ca653427"
+      },
+      {
+        "name": "Q082-v2_量子電腦學程_錯誤緩解_動畫展示版_2026-11-19.zip.part02",
+        "bytes": 29360128,
+        "sha256": "a67fb7c422d988180ede28e8c531fbac7a2ad8fca103c26a57c23af4878a4526"
+      },
+      {
+        "name": "Q082-v2_量子電腦學程_錯誤緩解_動畫展示版_2026-11-19.zip.part03",
+        "bytes": 29360128,
+        "sha256": "4cbdb586fd6c405ebdb087314b4db1b4ee8ba2927929f82e5e5164ac4c653f09"
+      },
+      {
+        "name": "Q082-v2_量子電腦學程_錯誤緩解_動畫展示版_2026-11-19.zip.part04",
+        "bytes": 29360128,
+        "sha256": "a88ae71863ac0cc272fd39a905276c9db9c0e869f013add06f043e4529e068c2"
+      },
+      {
+        "name": "Q082-v2_量子電腦學程_錯誤緩解_動畫展示版_2026-11-19.zip.part05",
+        "bytes": 29360128,
+        "sha256": "f21820c26e8f915f96decfac7408009366c8a4f6f76fedca2d2b6225475f96eb"
+      },
+      {
+        "name": "Q082-v2_量子電腦學程_錯誤緩解_動畫展示版_2026-11-19.zip.part06",
+        "bytes": 29360128,
+        "sha256": "1c3ea0c4ad4e1f210924d3f4d1f655a64acdd6c4e37d46deaac8efde3066ae45"
+      },
+      {
+        "name": "Q082-v2_量子電腦學程_錯誤緩解_動畫展示版_2026-11-19.zip.part07",
+        "bytes": 10592520,
+        "sha256": "c8fe4475597444887aea0dd2bf3885383cbc978c4b7d6b1f08066120abfa3c20"
+      }
+    ],
+    "handedOver": "2026-11-19 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1ZOQEWjgkBnzg6-88LtQiSOgQeO2JG9Wx",
+    "uploadedAt": "2026-11-19",
+    "files": [
+      {
+        "name": "Q082 錯誤緩解：錯誤緩解（動畫展示版）.mp4",
+        "id": "1dVg3lTMbRCwAppKI9_5jugYoZ9X2zpX7",
+        "bytes": 84608367,
+        "url": "https://drive.google.com/file/d/1dVg3lTMbRCwAppKI9_5jugYoZ9X2zpX7/view"
+      },
+      {
+        "name": "Q082 錯誤緩解（動畫展示版）簡報.pptx",
+        "id": "1gRxdGUaHdsrdWD0QUfNvf0RgaM4BaOlD",
+        "bytes": 3001874,
+        "url": "https://docs.google.com/presentation/d/1gRxdGUaHdsrdWD0QUfNvf0RgaM4BaOlD/edit"
+      },
+      {
+        "name": "Q082 錯誤緩解 教材.zip",
+        "id": "1taGpn7XDI8_6vdaKa-BrgLVJeaI6ZIp8",
+        "bytes": 285683,
+        "url": "https://drive.google.com/file/d/1taGpn7XDI8_6vdaKa-BrgLVJeaI6ZIp8/view"
+      }
+    ]
+  }
+}

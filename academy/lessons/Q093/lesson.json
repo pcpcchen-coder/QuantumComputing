@@ -31,6 +31,7 @@
     "需新增素材": [
       "◆ 年度更新頁"
     ],
+    "沿用文件": [],
     "YouTube 關鍵字 1": "產業地圖與發展路線 quantum computing explained beginner",
     "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E7%94%A2%E6%A5%AD%E5%9C%B0%E5%9C%96%E8%88%87%E7%99%BC%E5%B1%95%E8%B7%AF%E7%B7%9A+quantum+computing+explained+beginner",
     "影片用途 1": "課前暖身",
@@ -41,8 +42,10 @@
     "YouTube 連結 3": "https://www.youtube.com/results?search_query=%E7%94%A2%E6%A5%AD%E5%9C%B0%E5%9C%96%E8%88%87%E7%99%BC%E5%B1%95%E8%B7%AF%E7%B7%9A+quantum+computing+lecture+visualization",
     "影片用途 3": "課後延伸"
   },
-  "curriculumSha256": "493446a21451c8a5c08a1723cfd04436e51cbfa4806049b55a765d22ecf2ba53",
-  "episodePaths": [],
+  "curriculumSha256": "eb081f5848bd31bd8d734680a2d88f6821b6b30fa5d9ff1d813d06872e8f71c3",
+  "episodePaths": [
+    "academy/episodes/q093-industry-roadmap-v2"
+  ],
   "minutes": 120,
   "status": "planned"
 }

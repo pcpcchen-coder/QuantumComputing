@@ -1,0 +1,399 @@
+{
+  "version": 2,
+  "opening": 60.277,
+  "scenes": [
+    {
+      "page": 1,
+      "kind": "slide",
+      "v1slide": 1,
+      "title": "超導：電阻消失、磁鐵懸浮",
+      "duration": 32.424,
+      "sentences": [
+        {
+          "text": "歡迎回到父子科技學院的量子電腦學程，我是陳犀牛，今天是量子第十八堂，超導：電阻消失、磁鐵懸浮，這是依課綱製作的課前教學版，並非實際上課錄音。",
+          "start": 0.0,
+          "end": 13.456009
+        },
+        {
+          "text": "上一堂我們知道，超導量子電腦要用超導電路做出人造原子；今天先回頭看看，超導到底是什麼。",
+          "start": 13.636009,
+          "end": 22.268027
+        },
+        {
+          "text": "超導有兩個神奇的現象：電阻消失，還有磁鐵懸浮；今天我們要像科學家一樣，把看到的現象一條一條記下來。",
+          "start": 22.448027,
+          "end": 32.208027
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q018-superconductivity/audio/slide_01.mp3"
+    },
+    {
+      "page": 2,
+      "kind": "slide",
+      "v1slide": 2,
+      "title": "三個重點",
+      "duration": 25.68,
+      "sentences": [
+        {
+          "text": "今天有三個重點：第一，超導體冷到臨界溫度以下，電阻會變成零。",
+          "start": 0.0,
+          "end": 6.664014
+        },
+        {
+          "text": "第二，超導體會把磁場推出去，所以磁鐵可以浮在它上方；第三，寫實驗紀錄時，要分清楚哪些是觀察、哪些是推論。",
+          "start": 6.844014,
+          "end": 17.468028
+        },
+        {
+          "text": "今天的作品是一本超導觀察筆記，下半場還要查三種超導材料的臨界溫度，排出順序。",
+          "start": 17.648028,
+          "end": 25.464037
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q018-superconductivity/audio/slide_02.mp3"
+    },
+    {
+      "page": 3,
+      "kind": "slide",
+      "v1slide": 3,
+      "title": "超導是什麼",
+      "duration": 27.144,
+      "sentences": [
+        {
+          "text": "超導是材料的一種狀態：某些材料冷到一個特定溫度以下，性質會突然改變，這個溫度叫做臨界溫度。",
+          "start": 0.0,
+          "end": 8.824014
+        },
+        {
+          "text": "一九一一年，物理學家昂內斯把汞冷到大約四點二克耳文，也就是只比絕對零度高四度多一點，發現它的電阻突然消失了。",
+          "start": 9.004014,
+          "end": 18.836032
+        },
+        {
+          "text": "關鍵在「突然」兩個字：電阻不是隨著溫度慢慢降到零，而是一到臨界溫度，就一下子掉下去。",
+          "start": 19.016032,
+          "end": 26.92805
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q018-superconductivity/audio/slide_03.mp3"
+    },
+    {
+      "page": 4,
+      "kind": "slide",
+      "v1slide": 4,
+      "title": "特徵一：零電阻",
+      "duration": 26.616,
+      "sentences": [
+        {
+          "text": "第一個特徵是零電阻。一般的電線裡，電子往前走時會被晶格的振動撞來撞去，能量變成熱，這就是電阻。",
+          "start": 0.0,
+          "end": 10.288005
+        },
+        {
+          "text": "超導體冷到臨界溫度以下，電子兩兩成對、整齊地一起前進，不再被撞散；電阻不是很小，而是零。",
+          "start": 10.468005,
+          "end": 19.844014
+        },
+        {
+          "text": "投影片上說，電流可以在超導環裡一直繞，流好幾年都不會衰減。",
+          "start": 20.024014,
+          "end": 26.400023
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q018-superconductivity/audio/slide_04.mp3"
+    },
+    {
+      "page": 5,
+      "kind": "demo",
+      "demo": "states",
+      "title": "動畫展示：超導態和正常態",
+      "duration": 43.848,
+      "sentences": [
+        {
+          "text": "打開三維動畫的超導場景，一開始溫度是零點三克耳文：金色小球是鋁的離子，藍色和紫色的小球是電子，兩兩用一條青色的線連在一起，整齊地往右流。",
+          "start": 0.0,
+          "end": 12.832018
+        },
+        {
+          "text": "畫面下方的青色字寫著超導態，電子對同步流動、沒有散射；右下角的小圖上，青色的點停在電阻是零的那條線上。",
+          "start": 13.012018,
+          "end": 23.156032
+        },
+        {
+          "text": "按下正常態的按鈕，溫度跳到二點五克耳文：青色的連線全部消失，電子各自亂跑、到處亂撞，金色的離子也抖得更厲害。",
+          "start": 23.336032,
+          "end": 33.88805
+        },
+        {
+          "text": "小圖上的點已經跳到上面那條線，代表有電阻；下方的字也換成粉紅色：正常態，電子被晶格振動撞散。",
+          "start": 34.06805,
+          "end": 43.636055
+        }
+      ],
+      "audio": "audio/demo_states.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#cooper"
+    },
+    {
+      "page": 6,
+      "kind": "slide",
+      "v1slide": 5,
+      "title": "特徵二：排斥磁場",
+      "duration": 29.712,
+      "sentences": [
+        {
+          "text": "第二個特徵是排斥磁場，叫做邁斯納效應：一九三三年，邁斯納和奧克森菲爾德發現，超導體會把內部的磁場推出去。",
+          "start": 0.0,
+          "end": 10.216009
+        },
+        {
+          "text": "就算先把材料放進磁場，再冷到臨界溫度以下，磁場也會在變成超導的時候被趕出去；這一點，光靠電阻是零解釋不了。",
+          "start": 10.396009,
+          "end": 20.804014000000002
+        },
+        {
+          "text": "投影片也寫到，磁場其實還能鑽進表面薄薄的一層，大約五十到一百奈米，再往裡面就沒有磁場了。",
+          "start": 20.984014000000002,
+          "end": 29.496032
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q018-superconductivity/audio/slide_05.mp3"
+    },
+    {
+      "page": 7,
+      "kind": "slide",
+      "v1slide": 6,
+      "title": "磁鐵為什麼會浮起來",
+      "duration": 27.24,
+      "sentences": [
+        {
+          "text": "磁鐵靠近超導體時，超導體的表面會流起電流，這股電流就像一塊電磁鐵，正好把磁鐵往上推。",
+          "start": 0.0,
+          "end": 8.8
+        },
+        {
+          "text": "往上推的力和磁鐵的重量一樣大時，磁鐵就停在半空中，看起來像在飄。",
+          "start": 8.98,
+          "end": 15.764014
+        },
+        {
+          "text": "不過維基百科提醒：磁鐵浮在已經是超導的材料上方，嚴格說還不能證明邁斯納效應；要看材料冷下來的那一刻，磁場有沒有被推出去。",
+          "start": 15.944014,
+          "end": 27.024014
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q018-superconductivity/audio/slide_06.mp3"
+    },
+    {
+      "page": 8,
+      "kind": "slide",
+      "v1slide": 7,
+      "title": "臨界溫度：每種材料不一樣",
+      "duration": 29.472,
+      "sentences": [
+        {
+          "text": "每種超導材料都有自己的臨界溫度：投影片列出鋁大約一點二克耳文、鉭四點五、鈮九點二。",
+          "start": 0.0,
+          "end": 8.512018
+        },
+        {
+          "text": "維基百科寫，汞是四點二克耳文；一種叫釔鋇銅氧的陶瓷大約九十三克耳文，比液態氮的沸點七十七克耳文還高，用液態氮就能讓它超導。",
+          "start": 8.692018,
+          "end": 19.916032
+        },
+        {
+          "text": "三維動畫裡的超導體就是鋁；超導量子晶片在大約十毫克耳文的冷凍機裡工作，比鋁的臨界溫度低了一百倍以上。",
+          "start": 20.096032,
+          "end": 29.256032
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q018-superconductivity/audio/slide_07.mp3"
+    },
+    {
+      "page": 9,
+      "kind": "demo",
+      "demo": "sweep",
+      "title": "動畫展示：慢慢升溫跨過臨界溫度",
+      "duration": 40.224,
+      "sentences": [
+        {
+          "text": "這一次改用溫度滑桿一段一段升溫：從零點三克耳文拉到零點九，左邊的讀數寫著配對比例大約百分之六十八，有三對電子拆開、開始亂跑。",
+          "start": 0.0,
+          "end": 10.96
+        },
+        {
+          "text": "再拉到一點一克耳文，只剩三對還連在一起，配對比例掉到百分之二十九左右，青色的點還是貼在零上。",
+          "start": 11.14,
+          "end": 20.012018
+        },
+        {
+          "text": "最後拉過一點二克耳文，到一點三：最後三對也拆散了，下面的字變成正常態，小圖上的點也已經跳到上面那條線。",
+          "start": 20.192018,
+          "end": 30.168027000000002
+        },
+        {
+          "text": "這就是臨界溫度：動畫裡的鋁大約在一點二克耳文，跨過它，零電阻就沒了；降回來，電子又會重新配對。",
+          "start": 30.348027000000002,
+          "end": 40.012041
+        }
+      ],
+      "audio": "audio/demo_sweep.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#cooper"
+    },
+    {
+      "page": 10,
+      "kind": "slide",
+      "v1slide": 8,
+      "title": "觀察和推論要分開",
+      "duration": 27.144,
+      "sentences": [
+        {
+          "text": "做實驗紀錄最要緊的一件事，是把觀察和推論分開：觀察是眼睛真的看到的，推論是用道理想出來的原因。",
+          "start": 0.0,
+          "end": 8.848005
+        },
+        {
+          "text": "例如：磁鐵浮在一塊黑色圓片上方，這是觀察；圓片變成超導體、把磁場推出去，這是推論。",
+          "start": 9.028005,
+          "end": 18.068005
+        },
+        {
+          "text": "暫停影片想一想：圓片旁邊冒出一陣白白的霧，這是觀察還是推論？它可能代表什麼？",
+          "start": 18.248005,
+          "end": 26.928005
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q018-superconductivity/audio/slide_08.mp3"
+    },
+    {
+      "page": 11,
+      "kind": "slide",
+      "v1slide": 9,
+      "title": "科學實驗：超導觀察筆記",
+      "duration": 29.928,
+      "sentences": [
+        {
+          "text": "實作的時候，爸爸先播一段安全的超導懸浮影片，你當紀錄員，把看到的現象一條一條寫進觀察筆記。",
+          "start": 0.0,
+          "end": 8.992018
+        },
+        {
+          "text": "爸爸當提問官，每一條都追問：這是你看到的，還是你猜的？猜的就移到推論那一欄。",
+          "start": 9.172018,
+          "end": 17.948027
+        },
+        {
+          "text": "接著打開三維動畫的超導場景，用溫度滑桿對照正常態和超導態；提醒一件事：液態氮會凍傷皮膚，這堂課只看影片，不在家裡操作。",
+          "start": 18.128027,
+          "end": 29.712041
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q018-superconductivity/audio/slide_09.mp3"
+    },
+    {
+      "page": 12,
+      "kind": "demo",
+      "demo": "notes",
+      "title": "動畫展示：用動畫練習寫筆記",
+      "duration": 38.136,
+      "sentences": [
+        {
+          "text": "寫觀察筆記時，也可以拿動畫來練習：把溫度拉到最低的零點零五克耳文，讀數的配對比例還是百分之百。",
+          "start": 0.0,
+          "end": 9.112018
+        },
+        {
+          "text": "觀察欄可以寫：電子兩兩用青色的線連著，往同一個方向走；推論欄才寫：它們沒有被撞散，所以沒有電阻。",
+          "start": 9.292018,
+          "end": 19.052018
+        },
+        {
+          "text": "再按正常態的按鈕，觀察欄寫：連線不見了，電子到處亂撞；推論欄寫：電子被撞散，所以有電阻。",
+          "start": 19.232018,
+          "end": 28.872018
+        },
+        {
+          "text": "也要記下這個動畫的限制：畫面裡沒有磁鐵，看不到懸浮；磁鐵浮起來的樣子，要從影片裡觀察。",
+          "start": 29.052018,
+          "end": 37.924036
+        }
+      ],
+      "audio": "audio/demo_notes.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#cooper"
+    },
+    {
+      "page": 13,
+      "kind": "slide",
+      "v1slide": 10,
+      "title": "換你改造：臨界溫度排行榜",
+      "duration": 23.76,
+      "sentences": [
+        {
+          "text": "下半場換你改造：挑三種超導材料，查出它們的臨界溫度，從低排到高。",
+          "start": 0.0,
+          "end": 7.024014
+        },
+        {
+          "text": "每個數字都要寫下出處，例如哪一本書或哪一個網頁；不同資料的數字差一點點，是正常的。",
+          "start": 7.204014,
+          "end": 15.596032000000001
+        },
+        {
+          "text": "排好以後，再畫一條液態氮七十七克耳文的線，看看哪些材料只用液態氮就能變成超導。",
+          "start": 15.776032,
+          "end": 23.544037000000003
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q018-superconductivity/audio/slide_10.mp3"
+    },
+    {
+      "page": 14,
+      "kind": "slide",
+      "v1slide": 11,
+      "title": "兩小時的超導實驗室",
+      "duration": 30.408,
+      "sentences": [
+        {
+          "text": "兩小時的安排是：開場十分鐘，認識兩個特徵十五分鐘，接著四十分鐘父子一起看懸浮影片、寫觀察筆記、操作溫度滑桿，然後休息十分鐘。",
+          "start": 0.0,
+          "end": 11.968005
+        },
+        {
+          "text": "下半場三十分鐘，你自己查三種材料的臨界溫度、排出順序；接著十分鐘交換角色，由你教爸爸怎麼操作，背後的原理是什麼。",
+          "start": 12.148005,
+          "end": 23.180023
+        },
+        {
+          "text": "最後五分鐘錄音總結，替你的超導觀察筆記取一個名字，再存一個版本。",
+          "start": 23.360022999999998,
+          "end": 30.192041
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q018-superconductivity/audio/slide_11.mp3"
+    },
+    {
+      "page": 15,
+      "kind": "slide",
+      "v1slide": 12,
+      "title": "最後一關：教爸爸看超導",
+      "duration": 30.192,
+      "sentences": [
+        {
+          "text": "最後一關，請不看稿說出：超導的兩個特徵是什麼？為什麼一定要冷到臨界溫度以下？",
+          "start": 0.0,
+          "end": 8.152018
+        },
+        {
+          "text": "再指出一個要注意的地方：液態氮會凍傷，懸浮實驗只看影片，不在家裡自己做。",
+          "start": 8.332018,
+          "end": 15.596032000000001
+        },
+        {
+          "text": "今天的作品是超導觀察筆記，下一堂要問：電子為什麼會兩兩成對？我們要全家一起當晶格，認識庫柏對和能隙；我是陳犀牛，保持好奇，我們下次見！",
+          "start": 15.776032,
+          "end": 29.976032000000004
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q018-superconductivity/audio/slide_12.mp3"
+    }
+  ]
+}

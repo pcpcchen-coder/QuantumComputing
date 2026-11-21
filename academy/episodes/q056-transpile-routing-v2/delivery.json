@@ -1,0 +1,130 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q056",
+  "version": "Q056-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-18",
+  "episodePath": "academy/episodes/q056-transpile-routing-v2",
+  "basedOn": "academy/episodes/q056-transpile-routing（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 610.41,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "decompose",
+      "title": "動畫展示：拆成原生閘",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#stack"
+    },
+    {
+      "key": "route",
+      "title": "動畫展示：不相鄰就插交換閘",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#stack"
+    },
+    {
+      "key": "grid",
+      "title": "動畫展示：換成方格晶片",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#stack"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.7,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q056-transpile-routing-v2-zh-TW.mp4": {
+      "bytes": 93166127,
+      "sha256": "b1da23142fa6567f5928a81d16406eb72ad9e3b09184eba19a7372a6a18c891b"
+    },
+    "q056-transpile-routing-v2-master.mp4": {
+      "bytes": 93560058,
+      "sha256": "b904588116cdd92bf16d058eaba0b8baf53aab993186b4c607efe3369318c8ce"
+    },
+    "narration-only.mp3": {
+      "bytes": 14651284,
+      "sha256": "db18bba1ecbf85fc8b85d1bdd6219ac0f18b040801adae0ff7ae0d5a111a1969"
+    }
+  },
+  "package": {
+    "filename": "Q056-v2_量子電腦學程_轉譯與最少交換閘_動畫展示版_2026-11-18.zip",
+    "bytes": 205526941,
+    "sha256": "4810a1251776fb2f9ddaac9c192286ebe5454864f65dd1e4d3477ef4b6691ef9",
+    "parts": [
+      {
+        "name": "Q056-v2_量子電腦學程_轉譯與最少交換閘_動畫展示版_2026-11-18.zip.part01",
+        "bytes": 29360128,
+        "sha256": "374d583e56821184f42d44bc93374b64b64438ba5149ed57b09b8a34d8bd6732"
+      },
+      {
+        "name": "Q056-v2_量子電腦學程_轉譯與最少交換閘_動畫展示版_2026-11-18.zip.part02",
+        "bytes": 29360128,
+        "sha256": "3ea550f4d92653ee7462b3d540cba9d628544488070b434ea0728a02a96f9f61"
+      },
+      {
+        "name": "Q056-v2_量子電腦學程_轉譯與最少交換閘_動畫展示版_2026-11-18.zip.part03",
+        "bytes": 29360128,
+        "sha256": "70a1e665bb774b9e01ac3b9f0c12981a14f8ff5ca3fd5b9e3ee362b2b0e72381"
+      },
+      {
+        "name": "Q056-v2_量子電腦學程_轉譯與最少交換閘_動畫展示版_2026-11-18.zip.part04",
+        "bytes": 29360128,
+        "sha256": "7146b1e472e1b10c3756ddd97a278bc0f2844628791747c428cb88fda1a8b86e"
+      },
+      {
+        "name": "Q056-v2_量子電腦學程_轉譯與最少交換閘_動畫展示版_2026-11-18.zip.part05",
+        "bytes": 29360128,
+        "sha256": "45d568f1c3472824c4fbfd82fac8b269e6a2ca5be66abbabc1c995c80a4b1f0b"
+      },
+      {
+        "name": "Q056-v2_量子電腦學程_轉譯與最少交換閘_動畫展示版_2026-11-18.zip.part06",
+        "bytes": 29360128,
+        "sha256": "b259558ed5a49ef30e6036ebcbdac85f0ab132e727996b262da75bac11fccc5f"
+      },
+      {
+        "name": "Q056-v2_量子電腦學程_轉譯與最少交換閘_動畫展示版_2026-11-18.zip.part07",
+        "bytes": 29360128,
+        "sha256": "e4d2c60e11cefeae3207e5cfdcba402558c60d633d49adcf39c683a712d10959"
+      },
+      {
+        "name": "Q056-v2_量子電腦學程_轉譯與最少交換閘_動畫展示版_2026-11-18.zip.part08",
+        "bytes": 6045,
+        "sha256": "ae9d932178853884f5d6aeaba133e2fac756b4b87829b40710d0296d3ba014c0"
+      }
+    ],
+    "handedOver": "2026-11-18 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1eZLiQdOHdFov3xfVLuJtqORZ4fjXzXXV",
+    "folderName": "量子電腦學程 Q041–Q070 動畫展示版（v2）",
+    "uploadedAt": "2026-11-18",
+    "uploadedBy": "製作代理（Claude，Drive API，上傳後比對 md5）",
+    "files": [
+      {
+        "name": "Q056 轉譯與最少交換閘：轉譯：邏輯線路到硬體（動畫展示版）.mp4",
+        "id": "1ug7Q5p-n_cZ0cFWJRdOWz3irGJ6nBIrJ",
+        "size": 93166127,
+        "link": "https://drive.google.com/file/d/1ug7Q5p-n_cZ0cFWJRdOWz3irGJ6nBIrJ/view?usp=drivesdk"
+      },
+      {
+        "name": "Q056 轉譯與最少交換閘（動畫展示版）簡報.pptx",
+        "id": "1448-62L9TwFswWIDQ8anLx6iITU4eyBg",
+        "size": 3384640,
+        "link": "https://docs.google.com/presentation/d/1448-62L9TwFswWIDQ8anLx6iITU4eyBg/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true"
+      },
+      {
+        "name": "Q056 轉譯與最少交換閘 教材.zip",
+        "id": "1C7LU_zvoxZ3hRE2XaDXXZdnGvpJTSaBS",
+        "size": 410719,
+        "link": "https://drive.google.com/file/d/1C7LU_zvoxZ3hRE2XaDXXZdnGvpJTSaBS/view?usp=drivesdk"
+      }
+    ]
+  }
+}

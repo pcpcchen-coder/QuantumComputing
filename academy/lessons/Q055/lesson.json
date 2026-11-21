@@ -23,12 +23,22 @@
     "建議 YouTube 標題": "父子科技課 量子電腦學程 #Q055｜兩位元閘：CZ 與交叉共振",
     "難度 1–5": 4,
     "沿用簡報頁": [
-      "如何操作量子電腦（slides/QC_Operation_Talk.pptx）p22–24"
+      "如何操作量子電腦（slides/QC_Operation_Talk.pptx）p22–24",
+      "Transmon 筆記簡報（27 頁，含 3D 十二章導覽）（slides/transmon.pptx）p21"
     ],
     "沿用 3D 場景": [
-      "o:twoqubit"
+      "o:twoqubit",
+      "tr:case"
     ],
     "需新增素材": [],
+    "沿用文件": [
+      "超導量子電腦師生對話教學紀錄（docs/超導量子電腦師生對話教學紀錄.md）第 4 課"
+    ],
+    "2026-11-18 補充素材": [
+      "簡報 T p21",
+      "場景 tr:case",
+      "文件 DLG 第 4 課"
+    ],
     "YouTube 關鍵字 1": "兩位元閘：CZ 與交叉共振 quantum computing explained beginner",
     "YouTube 連結 1": "https://www.youtube.com/results?search_query=%E5%85%A9%E4%BD%8D%E5%85%83%E9%96%98%EF%BC%9ACZ+%E8%88%87%E4%BA%A4%E5%8F%89%E5%85%B1%E6%8C%AF+quantum+computing+explained+beginner",
     "影片用途 1": "課前暖身",
@@ -39,8 +49,10 @@
     "YouTube 連結 3": "https://www.youtube.com/results?search_query=%E5%85%A9%E4%BD%8D%E5%85%83%E9%96%98%EF%BC%9ACZ+%E8%88%87%E4%BA%A4%E5%8F%89%E5%85%B1%E6%8C%AF+quantum+computing+lecture+visualization",
     "影片用途 3": "課後延伸"
   },
-  "curriculumSha256": "493446a21451c8a5c08a1723cfd04436e51cbfa4806049b55a765d22ecf2ba53",
-  "episodePaths": [],
+  "curriculumSha256": "eb081f5848bd31bd8d734680a2d88f6821b6b30fa5d9ff1d813d06872e8f71c3",
+  "episodePaths": [
+    "academy/episodes/q055-cz-cross-resonance-v2"
+  ],
   "minutes": 120,
   "status": "planned"
 }

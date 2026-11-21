@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q072",
+  "version": "Q072-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-18",
+  "episodePath": "academy/episodes/q072-mot-optical-tweezers-v2",
+  "basedOn": "academy/episodes/q072-mot-optical-tweezers（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 502.833333,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "system",
+      "title": "動畫展示：光學桌上的磁光阱與光鑷",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/atoms.html#atomsys"
+    },
+    {
+      "key": "loading",
+      "title": "動畫展示：裝載光鑷，約一半有原子",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/atoms.html#tweezer"
+    },
+    {
+      "key": "aod",
+      "title": "動畫展示：停車格和搬運車",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/atoms.html#tweezer"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.5,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q072-mot-optical-tweezers-v2-zh-TW.mp4": {
+      "bytes": 94113781,
+      "sha256": "3cd668cbb8437ffd26b77030ee626bf1e5b84007d639467ed3c076468ffc8188"
+    },
+    "q072-mot-optical-tweezers-v2-master.mp4": {
+      "bytes": 96460544,
+      "sha256": "60b5854be062bb88ada6d6166d104f58ce2b75c015f850e632a4589ab035baa1"
+    },
+    "narration-only.mp3": {
+      "bytes": 12069652,
+      "sha256": "d1b29ac3a3c6d8a2afa347c9b0e6040a3ae3fe0f245f6b673f56b3f9e6431624"
+    }
+  },
+  "package": {
+    "filename": "Q072-v2_量子電腦學程_磁光阱與光鑷_動畫展示版_2026-11-18.zip",
+    "bytes": 207486814,
+    "sha256": "cae33c17c94346b7433223bd6cb9491791b14cd1905523bb7458668ed5bed9d4",
+    "parts": [
+      {
+        "name": "Q072-v2_量子電腦學程_磁光阱與光鑷_動畫展示版_2026-11-18.zip.part01",
+        "bytes": 29360128,
+        "sha256": "a661c05414147f4c57571416aca97c2ef303c640f162dcf5ef6489101035bbae"
+      },
+      {
+        "name": "Q072-v2_量子電腦學程_磁光阱與光鑷_動畫展示版_2026-11-18.zip.part02",
+        "bytes": 29360128,
+        "sha256": "fa17717be1ac489ef89d143209e5006bf09bbcb15a9b661091faccf33f118540"
+      },
+      {
+        "name": "Q072-v2_量子電腦學程_磁光阱與光鑷_動畫展示版_2026-11-18.zip.part03",
+        "bytes": 29360128,
+        "sha256": "e63ff99077f3f4e6128f00a5865c5728847006292dedfab9c58041e033adcfed"
+      },
+      {
+        "name": "Q072-v2_量子電腦學程_磁光阱與光鑷_動畫展示版_2026-11-18.zip.part04",
+        "bytes": 29360128,
+        "sha256": "05521fb08bd433351fd014beb8a97e0d7cb1a62d230bd80700ac943add5a6d72"
+      },
+      {
+        "name": "Q072-v2_量子電腦學程_磁光阱與光鑷_動畫展示版_2026-11-18.zip.part05",
+        "bytes": 29360128,
+        "sha256": "10e0857fa5740af0787e076b86b3a0c86829a7ec071fc5b8a22ff653478e4395"
+      },
+      {
+        "name": "Q072-v2_量子電腦學程_磁光阱與光鑷_動畫展示版_2026-11-18.zip.part06",
+        "bytes": 29360128,
+        "sha256": "104a78b50e92c35b18bee88c2cda816ec49b2e881f0981132c007f10ac71bd05"
+      },
+      {
+        "name": "Q072-v2_量子電腦學程_磁光阱與光鑷_動畫展示版_2026-11-18.zip.part07",
+        "bytes": 29360128,
+        "sha256": "abc6dc741db41466aefc6351ae28d40d21dfd9785b36bd08fc6fff8cacdaf5a5"
+      },
+      {
+        "name": "Q072-v2_量子電腦學程_磁光阱與光鑷_動畫展示版_2026-11-18.zip.part08",
+        "bytes": 1965918,
+        "sha256": "b8bd8d4f4b52f99722a6e7f25aa909a608b61252630797530179080fe1f6970a"
+      }
+    ],
+    "handedOver": "2026-11-18 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1ZOQEWjgkBnzg6-88LtQiSOgQeO2JG9Wx",
+    "uploadedAt": "2026-11-19",
+    "files": [
+      {
+        "name": "Q072 磁光阱與光鑷：磁光阱與光鑷（動畫展示版）.mp4",
+        "id": "1jO4dcDJIDFab_o0Gr5aHSWanTdDdYyxT",
+        "bytes": 94113781,
+        "url": "https://drive.google.com/file/d/1jO4dcDJIDFab_o0Gr5aHSWanTdDdYyxT/view"
+      },
+      {
+        "name": "Q072 磁光阱與光鑷（動畫展示版）簡報.pptx",
+        "id": "1bxnY_Jvg3QTs6JiOa5Rk0FjBjvozfMay",
+        "bytes": 4151283,
+        "url": "https://docs.google.com/presentation/d/1bxnY_Jvg3QTs6JiOa5Rk0FjBjvozfMay/edit"
+      },
+      {
+        "name": "Q072 磁光阱與光鑷 教材.zip",
+        "id": "1xsjvuyX7f6p9hYqfCuVqemyMxuKrjuk3",
+        "bytes": 425212,
+        "url": "https://drive.google.com/file/d/1xsjvuyX7f6p9hYqfCuVqemyMxuKrjuk3/view"
+      }
+    ]
+  }
+}

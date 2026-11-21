@@ -1,0 +1,389 @@
+{
+  "version": 2,
+  "opening": 60.277,
+  "scenes": [
+    {
+      "page": 1,
+      "kind": "slide",
+      "v1slide": 1,
+      "title": "量子線路像樂譜",
+      "duration": 28.44,
+      "sentences": [
+        {
+          "text": "歡迎回到父子科技學院的量子電腦學程，我是陳犀牛，今天是量子第九堂，量子線路像樂譜，這是依課綱製作的課前教學版，並非實際上課錄音。",
+          "start": 0.0,
+          "end": 11.944014000000001
+        },
+        {
+          "text": "上一堂我們玩了一對神祕骰子，認識了糾纏；再往前，我們學過量子閘就是轉動箭頭。",
+          "start": 12.124014,
+          "end": 20.276032
+        },
+        {
+          "text": "今天要學一種新的語言：量子線路圖，看懂它，就能讀懂科學家寫給量子電腦的樂譜。",
+          "start": 20.456032,
+          "end": 28.224037000000003
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q009-circuit-score/audio/slide_01.mp3"
+    },
+    {
+      "page": 2,
+      "kind": "slide",
+      "v1slide": 2,
+      "title": "三個重點",
+      "duration": 19.992,
+      "sentences": [
+        {
+          "text": "今天有三個重點：一條線代表一個量子位元；線上的方塊是量子閘；最右邊的儀表代表測量。",
+          "start": 0.0,
+          "end": 8.488005000000001
+        },
+        {
+          "text": "讀的方向和看樂譜一樣，從左邊開始，一步一步往右。",
+          "start": 8.668005,
+          "end": 14.348005
+        },
+        {
+          "text": "今天的作品，是你親手畫在方格紙上的三條線路。",
+          "start": 14.528005,
+          "end": 19.77601
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q009-circuit-score/audio/slide_02.mp3"
+    },
+    {
+      "page": 3,
+      "kind": "slide",
+      "v1slide": 3,
+      "title": "線路圖的讀法",
+      "duration": 19.248,
+      "sentences": [
+        {
+          "text": "線路圖上每一條橫線，代表一個量子位元，有幾條線，就有幾個量子位元。",
+          "start": 0.0,
+          "end": 7.24
+        },
+        {
+          "text": "橫的方向是時間，越左邊越早發生，越右邊越晚發生。",
+          "start": 7.42,
+          "end": 12.788005
+        },
+        {
+          "text": "習慣上，每條線一開始都是狀態零，也就是箭頭指向北極。",
+          "start": 12.968005,
+          "end": 19.032019
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q009-circuit-score/audio/slide_03.mp3"
+    },
+    {
+      "page": 4,
+      "kind": "demo",
+      "demo": "read",
+      "title": "動畫展示：讀一張最簡單的線路圖",
+      "duration": 24.312,
+      "sentences": [
+        {
+          "text": "打開線路入門動畫的疊加範例，上面這張圖只有一條橫線，代表一個量子位元，最左邊寫著它從狀態零出發。",
+          "start": 0.0,
+          "end": 9.136009
+        },
+        {
+          "text": "線上有一個方塊，最右邊是一個像儀表的符號；按下一步，游標往右走過方塊，箭頭被轉到赤道。",
+          "start": 9.316009,
+          "end": 18.188026999999998
+        },
+        {
+          "text": "走到儀表就是測量，按量測一千次，零和一大約各一半。",
+          "start": 18.368026999999998,
+          "end": 24.096031999999997
+        }
+      ],
+      "audio": "audio/demo_read.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/basic-circuits.html#superposition"
+    },
+    {
+      "page": 5,
+      "kind": "slide",
+      "v1slide": 4,
+      "title": "跟著箭頭讀一遍",
+      "duration": 26.616,
+      "sentences": [
+        {
+          "text": "我們來讀一條線路：一條線上依序有哈達瑪閘、相位翻轉閘、再一個哈達瑪閘，最後是測量儀表。",
+          "start": 0.0,
+          "end": 8.92
+        },
+        {
+          "text": "第一個哈達瑪閘把箭頭從北極轉到赤道；相位翻轉閘讓箭頭繞著赤道轉半圈，到了對面；第二個哈達瑪閘再把它轉到南極。",
+          "start": 9.1,
+          "end": 19.172018
+        },
+        {
+          "text": "所以走到儀表的時候，箭頭在南極，在理想的情況下，測量一定得到一。",
+          "start": 19.352018,
+          "end": 26.400023
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q009-circuit-score/audio/slide_04.mp3"
+    },
+    {
+      "page": 6,
+      "kind": "demo",
+      "demo": "step",
+      "title": "動畫展示：一欄一欄往右走",
+      "duration": 28.704,
+      "sentences": [
+        {
+          "text": "換到三維動畫的量子線路場景，選干涉這一條：一條線上有三個方塊，最後是測量。",
+          "start": 0.0,
+          "end": 8.032018
+        },
+        {
+          "text": "按一次單步，第一個方塊發光，下方兩根柱子變成一樣高，代表零和一的機率各一半。",
+          "start": 8.212018,
+          "end": 15.692018000000001
+        },
+        {
+          "text": "再按一次，相位翻轉只讓柱子換了顏色；第三步之後，只剩下狀態一的柱子。",
+          "start": 15.872018,
+          "end": 23.352018
+        },
+        {
+          "text": "最後走到測量欄，跑一千次的結果全部都是一。",
+          "start": 23.532018,
+          "end": 28.492018
+        }
+      ],
+      "audio": "audio/demo_step.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#circuit"
+    },
+    {
+      "page": 7,
+      "kind": "slide",
+      "v1slide": 5,
+      "title": "比一比：樂譜和線路圖",
+      "duration": 23.376,
+      "sentences": [
+        {
+          "text": "樂團的總譜上，每一行是一個樂器，大家從左往右一起演奏；線路圖也一樣，每一條線是一個量子位元。",
+          "start": 0.0,
+          "end": 9.232018
+        },
+        {
+          "text": "上下對齊在同一欄的閘，就像同一拍上的音符，可以同時執行。",
+          "start": 9.412018,
+          "end": 15.668027
+        },
+        {
+          "text": "不過比喻只能幫忙記憶：線路圖上的閘不會發出聲音，它們是在轉動量子位元的狀態。",
+          "start": 15.848027,
+          "end": 23.160045
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q009-circuit-score/audio/slide_05.mp3"
+    },
+    {
+      "page": 8,
+      "kind": "demo",
+      "demo": "column",
+      "title": "動畫展示：同一欄同時執行",
+      "duration": 22.728,
+      "sentences": [
+        {
+          "text": "再選一條比較寬的線路，這裡有三條橫線，所以是三個量子位元。",
+          "start": 0.0,
+          "end": 6.448005
+        },
+        {
+          "text": "按單步，第一欄只有最下面那條線上有一個方塊，其他兩條線這一拍休息。",
+          "start": 6.628005,
+          "end": 13.796009999999999
+        },
+        {
+          "text": "再按一次，三條線上的方塊排在同一欄，一起發光，就像總譜上同一拍的三個音符同時演奏。",
+          "start": 13.976009999999999,
+          "end": 22.512019
+        }
+      ],
+      "audio": "audio/demo_column.mp3",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/operation.html#circuit"
+    },
+    {
+      "page": 9,
+      "kind": "slide",
+      "v1slide": 6,
+      "title": "順序不能亂換",
+      "duration": 22.416,
+      "sentences": [
+        {
+          "text": "同一條線上的閘，順序不能隨便交換。",
+          "start": 0.0,
+          "end": 4.432018
+        },
+        {
+          "text": "先哈達瑪、再相位翻轉、再哈達瑪，結果一定是一；可是先做相位翻轉，再連做兩個哈達瑪，結果卻一定是零。",
+          "start": 4.612018,
+          "end": 14.780023
+        },
+        {
+          "text": "同樣是三個閘，只是換了位置，答案就完全不同，所以讀線路一定要照順序。",
+          "start": 14.960023,
+          "end": 22.200023
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q009-circuit-score/audio/slide_06.mp3"
+    },
+    {
+      "page": 10,
+      "kind": "slide",
+      "v1slide": 7,
+      "title": "臨摹挑戰：三條線路",
+      "duration": 21.672,
+      "sentences": [
+        {
+          "text": "今天的好玩任務是臨摹挑戰：照著場景，把三條線路畫在方格紙上。",
+          "start": 0.0,
+          "end": 6.640000000000001
+        },
+        {
+          "text": "第一條是翻轉閘接測量，第二條是哈達瑪閘接測量，第三條就是剛才的夾心干涉線路。",
+          "start": 6.82,
+          "end": 14.684014000000001
+        },
+        {
+          "text": "每畫完一條，都要用手指沿著線往右走，說出每一步箭頭轉到哪裡。",
+          "start": 14.864014000000001,
+          "end": 21.456032
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q009-circuit-score/audio/slide_07.mp3"
+    },
+    {
+      "page": 11,
+      "kind": "slide",
+      "v1slide": 8,
+      "title": "動畫：一步一步執行",
+      "duration": 20.736,
+      "sentences": [
+        {
+          "text": "三維動畫的量子線路場景，可以一步一步執行一條線路。",
+          "start": 0.0,
+          "end": 5.416009
+        },
+        {
+          "text": "選干涉的那一條，按一次單步，發光的方塊就是正在執行的那一步，下方的柱子也跟著改變。",
+          "start": 5.596009,
+          "end": 14.012018000000001
+        },
+        {
+          "text": "暫停影片，先猜猜看：走完第三步的時候，箭頭會指向哪裡？",
+          "start": 14.192018000000001,
+          "end": 20.520023000000002
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q009-circuit-score/audio/slide_08.mp3"
+    },
+    {
+      "page": 12,
+      "kind": "slide",
+      "v1slide": 9,
+      "title": "臨摹挑戰：畫圖員和核對員",
+      "duration": 21.624,
+      "sentences": [
+        {
+          "text": "臨摹的時候分工：你是畫圖員，照著場景畫，並且說出箭頭的變化。",
+          "start": 0.0,
+          "end": 6.856009
+        },
+        {
+          "text": "爸爸是核對員，對照場景檢查，有沒有漏掉一條線、一個方塊，或最後的儀表。",
+          "start": 7.036009,
+          "end": 14.756009
+        },
+        {
+          "text": "畫錯了沒關係，擦掉重畫；工程師也會一再檢查自己畫的線路圖。",
+          "start": 14.936009,
+          "end": 21.408027
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q009-circuit-score/audio/slide_09.mp3"
+    },
+    {
+      "page": 13,
+      "kind": "slide",
+      "v1slide": 10,
+      "title": "換你作曲：三步線路",
+      "duration": 22.368,
+      "sentences": [
+        {
+          "text": "下半場換你當作曲家：自己畫一條有三個閘的線路，閘可以從翻轉、哈達瑪和相位翻轉裡選。",
+          "start": 0.0,
+          "end": 8.368005
+        },
+        {
+          "text": "畫好之後交給爸爸，請他預測測量的結果是零、是一，還是一半一半。",
+          "start": 8.548005,
+          "end": 15.452019
+        },
+        {
+          "text": "最後兩個人拿出紙做的布洛赫球，一步一步轉動箭頭，看看誰的預測對。",
+          "start": 15.632019,
+          "end": 22.152019
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q009-circuit-score/audio/slide_10.mp3"
+    },
+    {
+      "page": 14,
+      "kind": "slide",
+      "v1slide": 11,
+      "title": "兩小時的線路臨摹課",
+      "duration": 24.312,
+      "sentences": [
+        {
+          "text": "兩小時的安排是：開場和認識線路圖二十五分鐘，接著四十分鐘臨摹三條線路，然後休息十分鐘。",
+          "start": 0.0,
+          "end": 8.584014
+        },
+        {
+          "text": "下半場三十分鐘自己畫三步線路、請爸爸預測；接著十分鐘交換角色，由你教爸爸怎麼讀線路圖。",
+          "start": 8.764014,
+          "end": 17.948028
+        },
+        {
+          "text": "最後五分鐘錄音總結，替三條線路取名字，存一個版本。",
+          "start": 18.128028,
+          "end": 24.096033000000002
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q009-circuit-score/audio/slide_11.mp3"
+    },
+    {
+      "page": 15,
+      "kind": "slide",
+      "v1slide": 12,
+      "title": "最後一關：教爸爸讀線路圖",
+      "duration": 29.304,
+      "sentences": [
+        {
+          "text": "最後一關，請不看稿說出：線、方塊和儀表各代表什麼？線路要從哪一邊開始讀？",
+          "start": 0.0,
+          "end": 8.512018
+        },
+        {
+          "text": "再挑一條線路說出箭頭怎麼變，並指出一個注意事項：同一條線上的閘，順序不能隨便交換。",
+          "start": 8.692018,
+          "end": 16.868026999999998
+        },
+        {
+          "text": "今天的作品是手繪的三條線路，下一堂我們要寫第一個量子程式，讓兩個量子位元變成一對糾纏的貝爾態；我是陳犀牛，保持好奇，我們下次見！",
+          "start": 17.048026999999998,
+          "end": 29.088026999999997
+        }
+      ],
+      "audio": "/home/user/xinewvideogpt/academy/specials/q009-circuit-score/audio/slide_12.mp3"
+    }
+  ]
+}

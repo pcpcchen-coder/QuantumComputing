@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q028",
+  "version": "Q028-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-20",
+  "episodePath": "academy/episodes/q028-qubit-family-cards-v2",
+  "basedOn": "academy/episodes/q028-qubit-family-cards（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 561.365,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "charge",
+      "title": "動畫展示：電荷型和大電容型差在哪",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#potential"
+    },
+    {
+      "key": "phase",
+      "title": "動畫展示：相位型用的山谷",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#washboard"
+    },
+    {
+      "key": "tradeoff",
+      "title": "動畫展示：顧了這頭，顧不了那頭",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#capacitor"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.6,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q028-qubit-family-cards-v2-zh-TW.mp4": {
+      "bytes": 91024873,
+      "sha256": "fbb599453d6f2767beb18ba3fc67ff422846b3a39885926b66ba51d54a977003"
+    },
+    "q028-qubit-family-cards-v2-master.mp4": {
+      "bytes": 92369016,
+      "sha256": "bf40882a9b48931d49dd9c085dfd92e00aac08453d7ae224e8a7c6a45af4def4"
+    },
+    "narration-only.mp3": {
+      "bytes": 13474516,
+      "sha256": "a642c04720dd5b2e51b9a1f59f6003d7ec857d61ddb7ce49055c27c9953e2140"
+    }
+  },
+  "package": {
+    "filename": "Q028-v2_量子電腦學程_量子位元家族_動畫展示版_2026-11-20.zip",
+    "bytes": 201266598,
+    "sha256": "00adf3ea6e815a19f3719549a374b054edf71bee6d182f8c37611ad1c50374a6",
+    "parts": [
+      {
+        "name": "Q028-v2_量子電腦學程_量子位元家族_動畫展示版_2026-11-20.zip.part01",
+        "bytes": 29360128,
+        "sha256": "7d5c88783654a3f1f7be0dd66dac094ff892d2ca736d53cb520916890ee7cecd"
+      },
+      {
+        "name": "Q028-v2_量子電腦學程_量子位元家族_動畫展示版_2026-11-20.zip.part02",
+        "bytes": 29360128,
+        "sha256": "6dce489cef31bc0d70711575409a147af649995eed3e0343d26ca046156b9977"
+      },
+      {
+        "name": "Q028-v2_量子電腦學程_量子位元家族_動畫展示版_2026-11-20.zip.part03",
+        "bytes": 29360128,
+        "sha256": "db22f6da6810d10a40682c55d90245c047945e5dcc585281dabd40e2dd641fd3"
+      },
+      {
+        "name": "Q028-v2_量子電腦學程_量子位元家族_動畫展示版_2026-11-20.zip.part04",
+        "bytes": 29360128,
+        "sha256": "a6ba4b46d442b6fe0c7a03b7b83f7c1e36eb3fd9226a43ce5f5f131030f30c26"
+      },
+      {
+        "name": "Q028-v2_量子電腦學程_量子位元家族_動畫展示版_2026-11-20.zip.part05",
+        "bytes": 29360128,
+        "sha256": "e6f252ae0c93abeb79db391ed6655812767bec1ada6950fdf88a3f908be32f8d"
+      },
+      {
+        "name": "Q028-v2_量子電腦學程_量子位元家族_動畫展示版_2026-11-20.zip.part06",
+        "bytes": 29360128,
+        "sha256": "1886ddcab8594b6116da34a55f518fc5a66ce3fe2ad2999e2283345c8fb82e19"
+      },
+      {
+        "name": "Q028-v2_量子電腦學程_量子位元家族_動畫展示版_2026-11-20.zip.part07",
+        "bytes": 25105830,
+        "sha256": "c8f5e1b09a3bbde34e4049677fd7185ed510d92437d7e14c84230dfe3fd5b05b"
+      }
+    ],
+    "handedOver": "2026-11-20 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1epfQVOXunbD9Vht37u62oOD9Dr-HKMSE",
+    "folder": "量子電腦學程 Q011–Q040 動畫展示版（v2）",
+    "files": [
+      {
+        "name": "Q028 量子位元家族：量子位元家族圖鑑（動畫展示版）.mp4",
+        "id": "1wr0oj2uI4BHLI4tnLq32Y9O_h7r4d8Lz",
+        "link": "https://drive.google.com/file/d/1wr0oj2uI4BHLI4tnLq32Y9O_h7r4d8Lz/view?usp=drivesdk",
+        "bytes": 91024873
+      },
+      {
+        "name": "Q028 量子位元家族（動畫展示版）簡報.pptx",
+        "id": "1zGKkVaPrF-_ez4znPr5G8VQS7ixzsf4l",
+        "link": "https://docs.google.com/presentation/d/1zGKkVaPrF-_ez4znPr5G8VQS7ixzsf4l/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true",
+        "bytes": 3370371
+      },
+      {
+        "name": "Q028 量子位元家族 教材.zip",
+        "id": "1TeopijEAFKLy9VrR8i2laC03UTulRAAf",
+        "link": "https://drive.google.com/file/d/1TeopijEAFKLy9VrR8i2laC03UTulRAAf/view?usp=drivesdk",
+        "bytes": 426124
+      }
+    ]
+  }
+}

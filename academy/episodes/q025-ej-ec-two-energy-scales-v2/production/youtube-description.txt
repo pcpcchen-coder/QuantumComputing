@@ -1,0 +1,32 @@
+父子科技學院 量子電腦學程 Q025｜E_J 與 E_C：兩個能量尺度（v2・含 3D 動畫展示）
+
+這是依課綱製作的課前教學版，不是實際上課錄音。
+
+父子科技學院量子電腦學程 Q025「E_J 與 E_C：兩個能量尺度」新版（v2）：在原本的教學投影片之間，插入本學程 3D 互動動畫的實際操作示範。
+
+這一版新增的動畫展示
+・背景電荷一變，能階跟著動（https://pcpcchen-coder.github.io/QuantumComputing/animations/index.html#potential）
+・電容加大，非諧性變小（https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#capacitor）
+・找一個折衷點（https://pcpcchen-coder.github.io/QuantumComputing/animations/transmon-3d.html#capacitor）
+
+動畫都可以在瀏覽器直接開啟，自己動手操作。
+
+章節
+00:00 陳犀牛系列片頭
+01:00 E_J 與 E_C：兩個能量尺度
+01:34 三個重點
+02:02 約瑟夫森能量
+02:28 充電能量
+02:52 比值決定性格
+03:18 背景電荷與電荷色散
+03:46 動畫展示：背景電荷一變，能階跟著動
+04:30 電荷色散被壓下來
+05:01 越大不是越好
+05:29 動畫展示：電容加大，非諧性變小
+06:09 實作：掃描比值
+06:37 換你改造：找折衷點
+07:01 動畫展示：找一個折衷點
+07:40 兩小時的比值掃描工坊
+08:06 最後一關：教爸爸兩個能量
+
+旁白：微軟 zh-TW-YunJheNeural 神經語音合成（Edge-TTS／Azure 語音服務，同一聲音同一格式）。字幕已燒入影片，開啟 CC 可能重疊。

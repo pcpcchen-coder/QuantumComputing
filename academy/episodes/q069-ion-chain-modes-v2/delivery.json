@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "Q069",
+  "version": "Q069-v2",
+  "edition": "動畫展示版",
+  "createdAt": "2026-11-18",
+  "episodePath": "academy/episodes/q069-ion-chain-modes-v2",
+  "basedOn": "academy/episodes/q069-ion-chain-modes（v1 的 12 頁旁白與音訊沿用）",
+  "producedBy": "Claude (cloud Linux session): academy/authoring/v2/build_v2.py on the XiNewVideoGPT portable runtime",
+  "status": "verified",
+  "publicationStatus": "awaiting_user_upload",
+  "durationSeconds": 506.048,
+  "pages": 15,
+  "demos": [
+    {
+      "key": "combreath",
+      "title": "動畫展示：質心模和呼吸模",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/atoms.html#modes"
+    },
+    {
+      "key": "radial",
+      "title": "動畫展示：上下擺的徑向模",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/atoms.html#modes"
+    },
+    {
+      "key": "crowd",
+      "title": "動畫展示：離子越多，模越擠",
+      "animation": "https://pcpcchen-coder.github.io/QuantumComputing/animations/atoms.html#modes"
+    }
+  ],
+  "validation": {
+    "passed": 13,
+    "total": 13,
+    "integratedLufs": -17.4,
+    "records": [
+      "qc/verify-v2.json",
+      "qc/manual-review.md",
+      "qc/asr-review.json"
+    ]
+  },
+  "largeFiles": {
+    "q069-ion-chain-modes-v2-zh-TW.mp4": {
+      "bytes": 90101649,
+      "sha256": "735ebe5eb8f8165181af66f1dcebc62bbda05c60dea770f3de9b675484e43509"
+    },
+    "q069-ion-chain-modes-v2-master.mp4": {
+      "bytes": 92394879,
+      "sha256": "dcdea2f04b9661574b86aff75457a36b5dc5a9766559ed25e3ea792c98eb0185"
+    },
+    "narration-only.mp3": {
+      "bytes": 12146836,
+      "sha256": "9dddb97c6eb06e59f1d33f4a76c49646d4383d03a16279691941744860de6840"
+    }
+  },
+  "package": {
+    "filename": "Q069-v2_量子電腦學程_離子鏈集體振動_動畫展示版_2026-11-18.zip",
+    "bytes": 198893807,
+    "sha256": "142097272978636b30a559c214f77026c8f9975a11467cbd718c23a9baea91e8",
+    "parts": [
+      {
+        "name": "Q069-v2_量子電腦學程_離子鏈集體振動_動畫展示版_2026-11-18.zip.part01",
+        "bytes": 29360128,
+        "sha256": "aee2a9dc1ef0e452a1e8bf233ba0ba90b85ffa1caf9de98b03860d58f483419a"
+      },
+      {
+        "name": "Q069-v2_量子電腦學程_離子鏈集體振動_動畫展示版_2026-11-18.zip.part02",
+        "bytes": 29360128,
+        "sha256": "6dc0b90ba47653a917e26b69b646c4eb3248cbf39dd5351d301c77e4c71280f0"
+      },
+      {
+        "name": "Q069-v2_量子電腦學程_離子鏈集體振動_動畫展示版_2026-11-18.zip.part03",
+        "bytes": 29360128,
+        "sha256": "c6f02fab5969d85a4516a9dd372a099e7b4056b4fb106f83d5cf56a0256b560e"
+      },
+      {
+        "name": "Q069-v2_量子電腦學程_離子鏈集體振動_動畫展示版_2026-11-18.zip.part04",
+        "bytes": 29360128,
+        "sha256": "3e3f304da5ced6e64ee78dd861450ce49c53113d738de99d351d60bae064fcd1"
+      },
+      {
+        "name": "Q069-v2_量子電腦學程_離子鏈集體振動_動畫展示版_2026-11-18.zip.part05",
+        "bytes": 29360128,
+        "sha256": "629fa2c33cad931c1993549985502b17d974afc7b053d1930adc9bd36ceb7657"
+      },
+      {
+        "name": "Q069-v2_量子電腦學程_離子鏈集體振動_動畫展示版_2026-11-18.zip.part06",
+        "bytes": 29360128,
+        "sha256": "ad1c8108f6e51a95aa8e518f927c0a11beea101add599407c64e319166763c45"
+      },
+      {
+        "name": "Q069-v2_量子電腦學程_離子鏈集體振動_動畫展示版_2026-11-18.zip.part07",
+        "bytes": 22733039,
+        "sha256": "c708ffa1b78ea34f4c4c00efe1525bb270c0ea2f60b3590a5f7dff87a7eeb53e"
+      }
+    ],
+    "handedOver": "2026-11-18 以對話附件交給使用者（分段＋還原說明），另附重新壓縮的預覽版 MP4（非上傳用）"
+  },
+  "notInGit": "MP4、錄影原檔（webm）與純旁白 MP3 不進 Git；檔名、大小與 SHA-256 記於本檔",
+  "drive": {
+    "folderId": "1eZLiQdOHdFov3xfVLuJtqORZ4fjXzXXV",
+    "folderName": "量子電腦學程 Q041–Q070 動畫展示版（v2）",
+    "uploadedAt": "2026-11-18",
+    "uploadedBy": "製作代理（Claude，Drive API，上傳後比對 md5）",
+    "files": [
+      {
+        "name": "Q069 離子鏈集體振動：離子鏈的集體振動（動畫展示版）.mp4",
+        "id": "18LJ4JvyEt9HcsY2iTYIAavb2stKpKifD",
+        "size": 90101649,
+        "link": "https://drive.google.com/file/d/18LJ4JvyEt9HcsY2iTYIAavb2stKpKifD/view?usp=drivesdk"
+      },
+      {
+        "name": "Q069 離子鏈集體振動（動畫展示版）簡報.pptx",
+        "id": "1gwrPOHl9lWOs6Yz9cbpwttXtyAEIV7cD",
+        "size": 3404986,
+        "link": "https://docs.google.com/presentation/d/1gwrPOHl9lWOs6Yz9cbpwttXtyAEIV7cD/edit?usp=drivesdk&ouid=102290526600411011607&rtpof=true&sd=true"
+      },
+      {
+        "name": "Q069 離子鏈集體振動 教材.zip",
+        "id": "1TM9s2JbdspDCoG4onc0wNEJ5BxAtGHtv",
+        "size": 400047,
+        "link": "https://drive.google.com/file/d/1TM9s2JbdspDCoG4onc0wNEJ5BxAtGHtv/view?usp=drivesdk"
+      }
+    ]
+  }
+}

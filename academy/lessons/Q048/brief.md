@@ -35,8 +35,12 @@ peripherals.html#infra、#bringup；方格紙
 ## 素材
 
 - 簡報：量子電腦的周邊系統（slides/QC_Peripheral_Systems_Talk.pptx）p30–38
+- 簡報：技術分享：量子電腦的供電設計（slides/output/qc-power-supply.pptx）p18–25
 - 3D 場景：[`p:infra`](../../../animations/peripherals.html#infra)
 - 3D 場景：[`p:bringup`](../../../animations/peripherals.html#bringup)
+- 3D 場景：[`pw:ground`](../../../animations/power1000.html#ground)
+- 3D 場景：[`pw:field`](../../../animations/power1000.html#field)
+- 文件：量子電腦供電設計：文獻回顧與我們的切入點（docs/量子電腦供電設計文獻回顧與我們切入點.md）§3
 
 生活技能支線：用檢查表避免遺漏。課後延伸：15–30 分鐘自由改造；寫三句學習日誌：我做了什麼、哪裡卡住、下次想加什麼。
 
