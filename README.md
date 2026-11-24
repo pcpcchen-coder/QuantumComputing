@@ -41,7 +41,7 @@
 10. [課程擴充規劃：量子電腦學院（參考父子科技學院格式，9 模組 × 16 堂 = 144 堂）](docs/量子電腦學院_課程擴充規劃.md)（現有簡報與 3D 場景的盤點、Q001–Q144 課表、新增動畫與簡報清單；第 7 節為 2026-11-18 第二次擴充）
    - 學程資料夾：[`academy/`](academy/README.md)（144 堂課綱、每堂教案、製作指南、製作狀態；Q001–Q003 已有 v1 與 v2 動畫展示版）
 11. [量子電腦供電設計：文獻回顧與我們的切入點](docs/量子電腦供電設計文獻回顧與我們切入點.md)（超導、離子阱、中性原子三平台分篇細部分析：精密電源、不斷電與分層備援、低干擾設計、能耗擴展，以及我們的產品 × 平台矩陣）
-    - 簡報：[`slides/output/qc-power-supply.pptx`](slides/output/qc-power-supply.pptx)（99 頁，含講稿；第 73–94 頁是併入的 QGP 量測規範章節）；PDF：[`slides/pdf/QC_Power_Supply.pdf`](slides/pdf/QC_Power_Supply.pdf)
+    - 簡報：[`slides/output/qc-power-supply.pptx`](slides/output/qc-power-supply.pptx)（101 頁，含講稿；第 73–94 頁是併入的 QGP 量測規範章節）；PDF：[`slides/pdf/QC_Power_Supply.pdf`](slides/pdf/QC_Power_Supply.pdf)
     - 簡報內容檔：[`slides/reports/qc-power.js`](slides/reports/qc-power.js)（`cd slides && node build_deck.js reports/qc-power.js` 重新產生）
     - 1,000 位元系統供電設計：[`docs/1000量子位元系統供電設計.md`](docs/1000量子位元系統供電設計.md)（線路與熱預算估算、設施用電與備援、接地與磁場、七層技術、我們三階段路線圖；簡報第 47–59 頁）
     - 互動動畫：[`animations/power1000.html`](animations/power1000.html)（8 個 2D 互動場景：全景、規模計算器、低溫熱預算、接地與共模、斷電時間軸、磁場與配電佈局、路線圖、開發計畫；離線可用）
