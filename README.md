@@ -41,12 +41,12 @@
 10. [課程擴充規劃：量子電腦學院（參考父子科技學院格式，9 模組 × 16 堂 = 144 堂）](docs/量子電腦學院_課程擴充規劃.md)（現有簡報與 3D 場景的盤點、Q001–Q144 課表、新增動畫與簡報清單；第 7 節為 2026-11-18 第二次擴充）
    - 學程資料夾：[`academy/`](academy/README.md)（144 堂課綱、每堂教案、製作指南、製作狀態；Q001–Q003 已有 v1 與 v2 動畫展示版）
 11. [量子電腦供電設計：文獻回顧與我們的切入點](docs/量子電腦供電設計文獻回顧與我們切入點.md)（超導、離子阱、中性原子三平台分篇細部分析：精密電源、不斷電與分層備援、低干擾設計、能耗擴展，以及我們的產品 × 平台矩陣）
-    - 簡報：[`slides/output/qc-power-supply.pptx`](slides/output/qc-power-supply.pptx)（77 頁，含講稿）；PDF：[`slides/pdf/QC_Power_Supply.pdf`](slides/pdf/QC_Power_Supply.pdf)
+    - 簡報：[`slides/output/qc-power-supply.pptx`](slides/output/qc-power-supply.pptx)（99 頁，含講稿；第 73–94 頁是併入的 QGP 量測規範章節）；PDF：[`slides/pdf/QC_Power_Supply.pdf`](slides/pdf/QC_Power_Supply.pdf)
     - 簡報內容檔：[`slides/reports/qc-power.js`](slides/reports/qc-power.js)（`cd slides && node build_deck.js reports/qc-power.js` 重新產生）
     - 1,000 位元系統供電設計：[`docs/1000量子位元系統供電設計.md`](docs/1000量子位元系統供電設計.md)（線路與熱預算估算、設施用電與備援、接地與磁場、七層技術、我們三階段路線圖；簡報第 47–59 頁）
     - 互動動畫：[`animations/power1000.html`](animations/power1000.html)（8 個 2D 互動場景：全景、規模計算器、低溫熱預算、接地與共模、斷電時間軸、磁場與配電佈局、路線圖、開發計畫；離線可用）
     - 產品開發計畫：[`docs/我們量子供電產品開發計畫.md`](docs/我們量子供電產品開發計畫.md)（三階段路線圖 11 個項目：要做出什麼、開發步驟、困難與解法、檢查點）
-    - QGP 量測規範草案：[`docs/QGP量測規範草案.md`](docs/QGP量測規範草案.md)（量子等級電源的 10 個量測項目、配置、報告格式與分級提案；v0.1，尚未實測驗證）；Word 版：[`docs/QGP量測規範草案.docx`](docs/QGP量測規範草案.docx)；對外介紹簡報：[`slides/output/qgp-measurement-spec.pptx`](slides/output/qgp-measurement-spec.pptx)（24 頁，含講稿；PDF：[`slides/pdf/QGP_Measurement_Spec.pdf`](slides/pdf/QGP_Measurement_Spec.pdf)；內容檔 [`slides/reports/qgp-spec.js`](slides/reports/qgp-spec.js)）
+    - QGP 量測規範草案：[`docs/QGP量測規範草案.md`](docs/QGP量測規範草案.md)（量子等級電源的 10 個量測項目、配置、報告格式與分級提案；v0.1，尚未實測驗證）；Word 版：[`docs/QGP量測規範草案.docx`](docs/QGP量測規範草案.docx)；單獨的對外介紹簡報（內容與上面簡報的 QGP 章節同一份來源）：[`slides/output/qgp-measurement-spec.pptx`](slides/output/qgp-measurement-spec.pptx)（24 頁，含講稿；PDF：[`slides/pdf/QGP_Measurement_Spec.pdf`](slides/pdf/QGP_Measurement_Spec.pdf)；內容檔 [`slides/reports/qgp-spec.js`](slides/reports/qgp-spec.js)）
 
 12. 基礎量子電路互動動畫：[`animations/basic-circuits.html`](animations/basic-circuits.html)（線上版 https://pcpcchen-coder.github.io/QuantumComputing/animations/basic-circuits.html）
     - 先備理論：[`animations/quantum-basics.html`](animations/quantum-basics.html)〈量子理論基礎：看電路前的 6 堂課〉（量子位元與振幅、相位、量測與 Born 規則、量子閘＝么正矩陣、張量積與糾纏、干涉；每堂都有可拖拉的互動圖，網址加 `#qubit`、`#phase`、`#measure`、`#gates`、`#tensor`、`#interference`）
