@@ -10,7 +10,7 @@
 
 《量子金魚》008 Deutsch 演算法：`episodes/qfish008.js` → `output/qfish008-deutsch-algorithm.pptx`（30 張，含講稿；PDF：`pdf/QFISH008_Deutsch_Algorithm.pdf`）。依影片逐字稿整理，並加上「案例實算（補充）」：振幅逐步計算、四種黑盒子、現場猜謎，每頁都有紫色按鈕直接開啟對應的 3D 動畫（`animations/transmon-3d.html#deutsch`、`#deutsch-lab`、`animations/operation.html#interference`）。3D 截圖以 `node capture_3d_deutsch.js` 重新擷取到 `figures/3d_deutsch/`。
 
-引擎也可以用在非影片的報告：`reports/qc-power.js` → `output/qc-power-supply.pptx`（量子電腦供電設計，超導／離子阱／中性原子三平台，77 張，含講稿）。這類內容不需要 `time` 欄位。
+引擎也可以用在非影片的報告：`reports/qc-power.js` → `output/qc-power-supply.pptx`（量子電腦供電設計，超導／離子阱／中性原子三平台，99 張；QGP 量測規範章節由 `reports/qgp-spec.js` 匯入，改那個檔案後兩份簡報都要重新產生，含講稿）。這類內容不需要 `time` 欄位。
 
 《十個基礎量子電路》：`reports/basic-circuits.js` → `output/basic-circuits.pptx`（49 張，含講稿；PDF：`pdf/Basic_Quantum_Circuits.pdf`）。開頭「理論基礎」6 堂課（右上角「▶ 互動」連到 `animations/quantum-basics.html` 各課），接著疊加、干涉、Bell、GHZ、隱形傳態、Deutsch、BV、Grover、QFT、Shor 各有電路圖、振幅逐步長條或表格，右上角「▶ 動畫」按鈕開到 `animations/basic-circuits.html` 的對應範例；振幅數值都和動畫頁的模擬器一致。截圖以 `node capture_basic_circuits.js` 重新擷取到 `figures/basic_circuits/`。
 
