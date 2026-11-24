@@ -2,7 +2,7 @@
 
 > 整理日期：2026-11-19
 > 狀態：**草案，尚未經過任何實測驗證**
-> 對外介紹簡報：[`slides/output/qgp-measurement-spec.pptx`](../slides/output/qgp-measurement-spec.pptx)（20 頁）
+> 對外介紹簡報：[`slides/output/qgp-measurement-spec.pptx`](../slides/output/qgp-measurement-spec.pptx)（22 頁）
 > 上層文件：[`我們量子供電產品開發計畫.md`](我們量子供電產品開發計畫.md) 第 3 章；背景見 [`量子電腦供電設計文獻回顧與我們切入點.md`](量子電腦供電設計文獻回顧與我們切入點.md) §3.1.2–3.1.3、§3.4
 
 **閱讀前請先知道：**
@@ -453,7 +453,7 @@
 2. **中性原子陣列**：學術展示到 3,000–6,100 個原子；商用系統約 1,200–1,600 個。
 3. **超導閘式處理器**：單晶片最多 1,121 位元（IBM Condor，2023）；目前實際提供服務、品質較好的是 100–160 位元等級。
 
-離子阱目前最大約 98 位元（Quantinuum Helios）。
+離子阱目前最大約 98 位元（Quantinuum Helios）。光子平台（PsiQuantum、Xanadu）還沒有可運算的大型系統。
 
 ### B.2 各系統一覽
 
@@ -468,7 +468,8 @@
 | Infleqtion Sqale | 中性原子（銫） | 1,600 個（廠商宣稱，未確認） | 商用平台 | 光鑷陣列 | 未公布 |
 | Pasqal | 中性原子（銣） | 曾捕捉超過 1,000 個原子；可運算的處理器約 250 位元 | 商用 | 光鑷陣列 | 廠商稱 2.6–7 kW |
 | QuEra Aquila | 中性原子（銣） | 256 位元 | 商用 | 光鑷陣列，室溫，無低溫設備 | 廠商稱 < 7 kW；預估 10,000 位元約 10 kW（預估值，非實測） |
-| 對照：Google Willow | 超導閘式 | 105 位元 | 研究用 | 每位元有專屬控制線 | 未公布 |
+| Google Willow | 超導閘式 | 105 位元 | 研究用。沒有找到已公布的後繼晶片；2026 年 3 月宣布增設中性原子硬體團隊 | 每位元有專屬控制線；另開發 3 K 的低溫 CMOS 控制器（每位元 < 2 mW） | 未公布。Google 自述室溫 DAC 每位元約 1 W 廢熱 |
+| PsiQuantum | 光子 | 尚無可運算的大型系統；目標是百萬位元級 | 建廠中。芝加哥廠房興建中，人員預計 2027 年初進駐；布里斯本改到 Moreton Bay，報導稱時程延後到接近 2030 年 | 晶片在 2–4 K 運作，用工業級氦氣低溫廠取代稀釋冷凍機；已有約 100 W 冷卻力的低溫機櫃；在 SLAC 取得 2.4 K、100–300 W 的冷卻能力 | 未公布 |
 | 對照：Quantinuum Helios | 離子阱 | 98 位元 | 商用 | QCCD（在晶片上搬動離子） | 未公布 |
 | 對照：富士通／理研 | 超導閘式 | 256 位元；1,000 位元目標列在 2026，未見交付確認 | 研究用 | — | 未公布 |
 
@@ -492,7 +493,28 @@
    - 每位元專屬控制線的超導閘式系統：最接近附錄 A 的情況，M2、M3 的加總問題最嚴重。
 4. **用電數字多為廠商自述**，沒有獨立量測。引用時請註明。
 
-### B.5 資料來源
+### B.5 這些系統怎麼處理附錄 A 的供電議題
+
+**先說限制：各家幾乎都沒有公開電源、接地與共模的設計細節。** IBM、Google、Atom Computing、Infleqtion 的公開資料只談晶片、低溫與佈線。下表把「查得到的做法」和「沒有公開」分開；「通用做法」指學術文獻與上層報告整理的作法，不代表該公司確實這樣做。
+
+| 議題（對應項目） | 查得到的做法 | 沒有公開的部分 |
+|---|---|---|
+| 隔離與共模（M1、M2） | D-Wave：控制線少，而且磁通 DAC 把設定值以超導持續電流存在晶片上，運算時不依賴室溫電源持續供應。通用做法：每條線在低溫端加衰減器與濾波器 | 各家室溫電子的隔離方式、共模電流的實際數值 |
+| 漏電流與接地（M3） | 只有 LRZ／IQM 的整合文獻談到機房接地（上層報告 §3.4） | 各家的接地架構與交流入口數 |
+| 磁場（M4） | D-Wave：射頻屏蔽室加磁屏蔽子系統。中性原子與離子阱：磁場雜訊主要來自線圈電流，用低雜訊電流源加 50 Hz 前饋補償；實驗週期與市電同步 | 配電設備與機台的實際距離規定 |
+| 低頻雜訊（M5） | D-Wave：同上，設定值存在晶片上。超導閘式通用做法：低溫濾波 | 前級電源的雜訊規格 |
+| 高頻雜散與同步（M6、M8） | 沒有找到任何一家談電源切換頻率的規劃 | 全部 |
+| 漂移（M7） | 各家都靠定期自動校正補償，不是靠電源本身夠穩 | 校正佔用的時間比例 |
+| 備援（M9） | 只有 LRZ 公開了冷卻中斷的後果（約 2 分鐘升溫超過 1 K，恢復要 2–5 天） | 各家的 UPS 配置 |
+| 效率與熱（M10） | D-Wave：整機平均 12.5 kW，冷卻水負載 15 kW。Google：把控制器搬到 3 K，每位元 < 2 mW。PsiQuantum：改在 2–4 K 運作，冷卻力比稀釋冷凍機高數千倍 | 室溫電子的效率 |
+
+**觀察（推論）**
+
+1. 目前的千位元級系統主要靠**架構**避開問題（減少線數、把設定值存在晶片上、用光定址），不是靠更好的電源。
+2. 沒避開的部分靠**濾波、屏蔽與重新校正**吸收。這些做法在規模放大後成本會升高：濾波佔低溫空間，校正佔運算時間。
+3. 沒有任何一家公開談 M2、M3、M6、M8。這可能表示問題還不嚴重，也可能表示各家視為內部機密；從公開資料無法分辨。這正是第 9 章問題 1 需要驗證平台的原因。
+
+### B.6 資料來源
 
 - D-Wave 系統規格書：<https://docs.dwavequantum.com/en/latest/_downloads/17252e863c11eccaba303903f1416c0e/09-1313A-A_System_Specifications_for_D-Wave_Quantum_Computers.pdf>
 - D-Wave 晶片上多工定址：<https://www.arxiv.org/pdf/1401.5504>；Advantage 架構：<https://arxiv.org/pdf/2108.02322.pdf>
@@ -504,6 +526,10 @@
 - 中性原子廠商整理（含 Infleqtion、Pasqal）：<https://quantumzeitgeist.com/top-neutral-atom-quantum-computing-companies/>
 - 中性原子用電：<https://www.quera.com/blog-posts/the-dual-pronged-energy-saving-potential-of-quantum-computers>、<https://www.pasqal.com/blog/quantum-computing-rethinking-energy-consumption/>、<https://arxiv.org/pdf/2608.02815>
 - 各家位元數追蹤：<https://thequantuminsider.com/2026/06/05/how-many-quantum-chip-companies-are-there/>
+- Google Willow：<https://en.wikipedia.org/wiki/Willow_processor>、<https://en.wikipedia.org/wiki/Google_Quantum_AI>；低溫 CMOS 控制器：<https://research.google/blog/on-the-path-to-cryogenic-control-of-quantum-processors/>
+- PsiQuantum：<https://en.wikipedia.org/wiki/PsiQuantum>、<https://psiquantum.com/blueprint>；SLAC 低溫合作：<https://indico.cern.ch/event/1431974/contributions/6396982>；芝加哥廠房：<https://www.chicagobusiness.com/technology/ccb-quantum-construction-psiquantum-iqmp-20260630/>；布里斯本時程：<https://www.startupdaily.net/topic/global-tech/psiquantums-brisbane-build-is-already-running-very-late/>
+- D-Wave 磁通 DAC 控制系統：<https://arxiv.org/pdf/0907.3757>
+- 線圈電流前饋與市電同步：<https://arxiv.org/pdf/1808.03310>
 
 ---
 
@@ -514,3 +540,4 @@
 | v0.1 | 2026-11-19 | 初版草案：量測項目 M1–M10、報告格式、分級提案 |
 | v0.1（增補） | 2026-11-24 | 新增附錄 A：從實驗室到營運規模的差異與難點；量測方法本身未改 |
 | v0.1（增補 2） | 2026-11-24 | 新增附錄 B：現有千位元級系統的數量、公司與架構做法 |
+| v0.1（增補 3） | 2026-11-24 | 附錄 B 補 Google 與 PsiQuantum；新增 B.5：各系統怎麼處理供電議題 |
